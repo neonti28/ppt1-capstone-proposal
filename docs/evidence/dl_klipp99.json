@@ -1,0 +1,8 @@
+{
+  "skema": "clip p99 per kolom + DL [64,32] 10 epoch + fold_column wellbore 6 fold + standardize",
+  "hasil_xval": {
+    "pr_auc": 0.08,
+    "logloss": 0.4645
+  },
+  "catatan": "DeepLearning konvergen setelah clip p99; tanpa perlakuan model gagal 'unstable model'"
+}

@@ -153,6 +153,21 @@ Rekap sub-status: DESAIN=3, DIHITUNG-ULANG=37, DIHITUNG-ULANG-SEBAGIAN=23, DILAP
 | D09 | TOPSIS closeness 0,8306 / 0,5213 / 0,4255 / 0,3251 / 0,1731 | TOPSIS sejati dengan bobot dan nilai yang sama | python3 scratch/ppt1/arith_audit.py | TERUKUR | DIHITUNG-ULANG | python3 scratch/ppt1/arith_audit.py -> topsis_cc | TEMUAN: peringkat A2 (0,52) di atas A3 (0,43), sedangkan draft menaruh A3 lebih tinggi. Pemenang A1 tetap |
 | D10 | RPN 378/280/324/245/240 cocok 5/5 | Uji aritmetika SxOxD | python3 scratch/ppt1/arith_audit.py | TERUKUR | DIHITUNG-ULANG | python3 scratch/ppt1/arith_audit.py -> fmea[*].cocok | Aritmetika FMEA benar; yang belum terjustifikasi adalah skala S/O/D |
 
+### 2.E Angka ablation AutoML lawan Random Forest (6 Nov 2026)
+
+Sumber utama: `docs/evidence/h2o_kontrol.json`, `docs/evidence/baseline_only.json`, `docs/evidence/dl_klipp99.json`. Naskah lengkap: `docs/PPT1_ABLAT_AUTOML.md`.
+
+| ID | Angka | Konteks | Sumber | Status | Sub | Cara verifikasi | Temuan |
+|---|---|---|---|---|---|---|---|
+| E01 | 4.619 baris, 480 fitur, 243 positif (5,3%) | Dataset uji ablation (kontrol + kejadian, 7 sumur) | docs/evidence/h2o_kontrol.json bagian `data` | TERUKUR | DIHITUNG-ULANG | baca `data.baris`, `data.fitur`, `data.positif` pada JSON | Prevalensi 5,3%; lantai AUPRC per sumur berkisar 0,029 sampai 0,080 |
+| E02 | AUPRC AutoML 2 dari 7 sumur menang; rata-rata 0,1319 lawan RF 0,1392 | Hasil AutoML vs RF pada skema leave-one-well-out | docs/evidence/h2o_kontrol.json bagian `hasil` | TERUKUR | DIHITUNG-ULANG | rata-rata kolom `h2o.auprc` dan `baseline.rf.auprc` | Pemilihan RF di Bab III menjadi teruji, bukan preferensi |
+| E03 | F-14 0,0848 lawan RF 0,1008; F-15_S 0,1164 lawan 0,1063; F-9 0,4643 lawan 0,4729 | Pasangan AUPRC AutoML dan RF pada tiga sumur terbesar | idem E02 | TERUKUR | DIHITUNG-ULANG | kolom `hasil.<sumur>.h2o.auprc` dan `hasil.<sumur>.baseline.rf.auprc` | Hanya dua sumur AutoML menang, keduanya dengan selisih di bawah 0,02 |
+| E04 | −0,39 | Korelasi Spearman AUPRC CV internal leader dengan AUPRC uji | docs/evidence/h2o_kontrol.json kolom `leaderboard[].aucpr` dan `h2o.auprc` | TERUKUR | DIHITUNG-ULANG | sklearn/scipy dihitung ulang dari 7 pasang angka | Sinyal pemilihan internal berkorelasi berbalik arah dengan hasil uji |
+| E05 | 0,0055 dan 0,0793 | Sebaran AUPRC lima kandidat teratas dan jarak CV leader ke AUPRC uji | idem E04 | TERUKUR | DIHITUNG-ULANG | selisih maksimum-minimum top-5, lalu rerata | Pemenang leaderboard ditentukan di dalam noise, 14 kali lebih kecil dari jarak ke hasil uji |
+| E06 | 9,524e+30 (5 sel); 188.872 NaN (9,9%) pada 438 kolom | Cacat data penyebab DeepLearning gagal | npz fitur, skrip `scratch/diag_ekstrem.py` dan `scratch/diag_nan.py` | TERUKUR | DIHITUNG-ULANG | jalankan kedua skrip diagnostik | Glitch sensor SPPA, bukan masalah engine |
+| E07 | Tahap A gagal, B gagal, C berhasil (pr_auc 0,08) | Uji sebab-akibat kegagalan DeepLearning | scratch/uji_dl_sebab.py, scratch/uji_dl_c.py, docs/evidence/dl_klipp99.json | TERUKUR | DIHITUNG-ULANG | jalankan ketiga skrip dengan cluster H2O aktif | Clip p99 per kolom membuat DL konvergen; tanpa itu selalu gagal |
+| E08 | 0 dari 7 run menghasilkan model DeepLearning | Keluarga DL tidak pernah masuk leaderboard | docs/evidence/h2o_kontrol.json (leaderboard tiap sumur) | TERUKUR | DIHITUNG-ULANG | cari awalan `DeepLearning` pada seluruh `leaderboard[].model` | Keluarga DL tidak dapat dipakai pada data mentah |
+
 ## 3. Fokus khusus yang diminta kartu
 
 ### 3.1 FMEA S/O/D/RPN
@@ -223,6 +238,9 @@ Aturan yang mengikat setiap penulisan angka di proposal PPT I:
 - EDM 10.650 `CD_ASSEMBLY_COMP` dan 632 `CD_BHA_COMP_BIT`: belum dihitung ulang.
 - Himpunan angka B3 (lapisan B) dan 402 titik uji: dilaporkan MD, belum saya reproduksi dari JSON.
 - Angka verdict berupa penilaian skenario (55%, 15%) adalah judgement internal, bukan probabilitas terukur.
+- Kombinasi antar kandidat AutoML (rata-rata probabilitas, rank-average, StackedEnsemble) belum diuji pada run ini karena prediksi kandidat non-leader tidak tersimpan; mengujinya butuh run baru yang menyimpan prediksi seluruh kandidat (lihat bagian 9 `docs/PPT1_ABLAT_AUTOML.md`).
+- Anggaran AutoML lebih panjang dari 600 detik (misalnya 1.800 detik) belum diuji; yang terukur baru 400 dan 600 detik.
+- Korelasi Spearman E04 hanya bertumpu pada 7 titik, jadi arah negatifnya konsisten pada seluruh pasangan, tetapi sebagai estimasi ia lemah.
 
 ## 7. Berkas bukti
 
@@ -232,3 +250,7 @@ Aturan yang mengikat setiap penulisan angka di proposal PPT I:
 - `scratch/ppt1/arith_audit.py` (RPN 5/5 cocok, weighted-sum vs skor draft, TOPSIS closeness coefficient).
 - `scratch/ppt1/verify_leak.py` (6 dataset latih, 292.954 baris, 37 fold LOWO, 0 pelanggaran anti-bocor).
 - `scratch/ppt1/verify_out.json` dan `scratch/ppt1/arith_audit.json` (keluaran mentah).
+- `docs/evidence/h2o_kontrol.json` (hasil AutoML 7 sumur: leaderboard internal, prediksi leader, metrik uji, setelan).
+- `docs/evidence/baseline_only.json` (RF, reglog, mayoritas per sumur pada skema leave-one-well-out).
+- `docs/evidence/dl_klipp99.json` (uji C: DeepLearning konvergen setelah clip p99).
+- `docs/PPT1_ABLAT_AUTOML.md` (naskah temuan E01 sampai E08 beserta perintah reproduksi).
