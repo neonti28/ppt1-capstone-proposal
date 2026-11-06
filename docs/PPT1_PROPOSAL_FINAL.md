@@ -6,6 +6,12 @@ Bab I sampai Bab IV lalu Daftar Pustaka. Setiap angka memiliki jejak di
 `PPT1_LEDGER_ANGKA.md`; setiap gambar dibuat ulang oleh `assets/make_figures.py`
 dari data primer. Sumber data: dataset publik Equinor Volve.
 
+Catatan revisi 2026-11-06: rumusan masalah diberi kode RM1 sampai RM3 pada 1.1.6;
+tabel 3.1.2 dipisahkan menjadi kondisi pengikat dan celah teknis, bukan rumusan masalah;
+Bab III memuat tabel pemetaan RM1 sampai RM3 ke alternatif beserta status jawabannya;
+Bab IV kini memuat tiga kesimpulan yang memetakan satu lawan satu ke RM1 sampai RM3,
+dengan batasan dipisahkan ke subbab tersendiri.
+
 ---
 # BAB I PENDAHULUAN
 
@@ -186,11 +192,11 @@ Ukuran dampak yang dapat dipertanggungjawabkan disajikan pada tabel berikut. Sem
 | Sasaran yang belum tercapai | recall 0,70 sampai 0,80 dan lead 10 sampai 30 menit | Keduanya berstatus target desain, bukan hasil | [L:A17] [L:A08] |
 | Rujukan pihak ketiga | efisiensi lebih dari 15 persen pada operasi closed-loop Eni | Milik vendor dan milik operasi pihak lain, tidak boleh menjadi janji luaran proyek | [L:A07] [L:A06] |
 
-Dengan bahan tersebut, permasalahan dirumuskan dalam tiga pertanyaan yang menjadi batas kajian:
+Dengan bahan tersebut, permasalahan dirumuskan dalam tiga pertanyaan yang menjadi batas kajian. Ketiganya diberi kode RM1, RM2, dan RM3 supaya dapat dirujuk ulang di Bab III dan Bab IV. Ketiga kode itu adalah pertanyaan riset. Hal-hal yang mengikat ruang lingkup jawaban, misalnya jumlah sumur, kualitas label, dan ketersediaan kanal, bukan pertanyaan riset dan diletakkan terpisah pada paragraf batasan di bawah serta pada subbab 1.4:
 
-1. Bagaimana merancang lapisan peringatan dini yang memakai data pengeboran yang benar-benar tersedia pada grid 60 detik dan kanal yang terisi 37 sampai 48 per sumur, tanpa mengklaim resolusi yang tidak dimiliki [S:docs/V10_D1_BAB_DATA.md §3.2.1]?
-2. Bagaimana memilih titik operasi per engine sehingga peringatan cukup awal untuk ditindaklanjuti, sedangkan beban alarm palsu tetap dapat diterima pengawas, mengingat sebaran alarm palsu mencapai 119 kali antar sumur [L:B33]?
-3. Bagaimana menyajikan keluaran yang dapat dijelaskan kepada drilling engineer, sehingga rekomendasi dipakai dan bukan diabaikan, ketika kapasitas alat baru sampai pada peringatan berpengawasan pada 3 dari 7 engine [L:B04]?
+**RM1.** Bagaimana merancang lapisan peringatan dini yang memakai data pengeboran yang benar-benar tersedia pada grid 60 detik dan kanal yang terisi 37 sampai 48 per sumur, tanpa mengklaim resolusi yang tidak dimiliki [S:docs/V10_D1_BAB_DATA.md §3.2.1]?
+**RM2.** Bagaimana memilih titik operasi per engine sehingga peringatan cukup awal untuk ditindaklanjuti, sedangkan beban alarm palsu tetap dapat diterima pengawas, mengingat sebaran alarm palsu mencapai 119 kali antar sumur [L:B33]?
+**RM3.** Bagaimana menyajikan keluaran yang dapat dijelaskan kepada drilling engineer, sehingga rekomendasi dipakai dan bukan diabaikan, ketika kapasitas alat baru sampai pada peringatan berpengawasan pada 3 dari 7 engine [L:B04]?
 
 Batasan realistis yang mengikat jawaban tersebut ada empat. Pertama, batas teknik: data hanya 10 wellbore dengan rentang 2007 sampai 2015 dan tanpa rating motor pada 192 dari 192 berkas tubular [S:docs/V10_D1_BAB_DATA.md §3.2.4]. Kedua, batas kualitas data: 571 kejadian berstatus uncertain dan hanya 582 kejadian yang rentang waktunya bertaut ke CSV terparse [S:docs/V10_D1_BAB_DATA.md §3.2.3]. Ketiga, batas metode: seluruh evaluasi memakai leave-one-well-out dengan 37 lipatan [L:B25], sehingga klaim berlaku untuk sumur baru dalam lapangan yang sama, bukan untuk lapangan lain. Keempat, batas pemanfaatan: keluaran bersifat advisory karena syarat alarm otomatis belum terpenuhi pada engine mana pun [L:B42].
 
@@ -1005,9 +1011,11 @@ Aturan bukti yang dipakai pada seluruh subbab:
 2. Angka yang belum dihitung ditulis eksplisit sebagai asumsi atau perkiraan desain, dan tidak disamarkan sebagai hasil pengukuran.
 3. Status pelaksanaan hanya memakai tiga nilai baku: Selesai, Berjalan, dan Rencana (belum terealisasi).
 
-### 3.1.2 Permasalahan yang dirujuk
+### 3.1.2 Kondisi pengikat dan celah teknis yang dirujuk
 
-| Kode | Permasalahan | Uraian ringkas dan angka | Jejak |
+Tabel berikut memuat sembilan kode rujukan P1 sampai P9. Kode ini bukan rumusan masalah. Rumusan masalah hanya tiga, yaitu RM1, RM2, dan RM3 pada 1.1.6. Sebagian besar kode di bawah adalah keadaan yang mengikat ruang lingkup, misalnya jumlah alat, jumlah positif per fold, dan ketiadaan atribut pada berkas sumber, sehingga tidak dijawab sebagai temuan melainkan diakomodasi sebagai batasan. Sisanya adalah celah teknis yang menjadi prasyarat bagi RM1 atau RM2.
+
+| Kode | Kondisi pengikat atau celah teknis | Uraian ringkas dan angka | Jejak |
 |---|---|---|---|
 | P1 | Label stuck berbentuk status, bukan peristiwa | Label STUCK_RT bertahan sebagai blok panjang sehingga jendela sebelumnya menjadi prediktor hampir sempurna. Prevalensi F-9_A 66,9%, persistence 0,787 mengalahkan Random Forest 0,651, dan lift F-9_A turun ke 0,97. | `docs/V7_R1_SOLUTIONS.md:66-70 (angka turunan docs/V6_E1_ML_DESIGN.md 4.4)` |
 | P2 | Jumlah positif shk terlalu sedikit per fold | Gate G1 lolos 3 dari 7 fold sedangkan G2 lolos 6 dari 7, sehingga akarnya bukan mutu fitur melainkan jumlah informasi positif: F-9_A 30 positif dan F-9 45 positif, dibanding F-14 760 positif. | `docs/V7_R1_SOLUTIONS.md:97-99` |
@@ -1018,6 +1026,22 @@ Aturan bukti yang dipakai pada seluruh subbab:
 | P7 | Validitas label lintas sumur belum terbukti | Kontrol-positif stuck 0 dari 10, label hyd masih berupa proksi residual, dan campuran severitas berbeda antar sumur. Cacat ini mengancam seluruh lapisan onset sebelum model apa pun dipercaya. | `docs/V8_PM_VERDICT.md:202; docs/V4_MAINTENANCE_ML_OPTIONS.md:145-155` |
 | P8 | Ambang global tidak portabel antar sumur | Pada titik operasi yang sama, false alarm rate vib menyebar 4,15 sampai 496,09 per 24 jam, yaitu rasio 119,6 kali antar sumur, sehingga satu ambang global tidak dapat dipakai. | `docs/V9_PM2_VERDICT.md:114` |
 | P9 | Tidak ada label keausan fisik dari rig | Seluruh 77 berkas bhaRun tidak memuat dullingInfo, dullGrade, maupun bitName, sehingga label yang tersedia hanya batas waktu run, bukan tingkat keausan. Prediksi onset keausan bit (K-2) belum dijalankan sama sekali. | `docs/V4_MAINTENANCE_ML_OPTIONS.md:62; docs/V9_PM2_VERDICT.md:176` |
+
+Peta asal setiap kode, supaya tidak ada yang dibaca sebagai pertanyaan riset baru:
+
+| Kode | Asal di Bab I | Peran |
+|---|---|---|
+| P1 | RM1, mutu label | kondisi pengikat bentuk label |
+| P2 | Kendala 1.4.4 butir 3 | jumlah positif per fold terbatas |
+| P3 | RM1, mutu label | kondisi pengikat bentuk label |
+| P4 | Kendala 1.4.4 butir 5 | cakupan domain bengkel |
+| P5 | RM1 | celah teknis, baseline mengalahkan model |
+| P6 | Kendala 1.4.4 butir 3 | jumlah sampel per fold terbatas |
+| P7 | Kendala 1.4.4 butir 1 | validitas lintas sumur |
+| P8 | RM2 | gejala yang harus dijawab pemilihan titik operasi |
+| P9 | Kendala 1.4.4 butir 4 | atribut keausan tidak tersedia |
+
+Konsekuensi pembacaan: P1 sampai P9 tidak menambah jumlah rumusan masalah. Yang bertambah hanya rincian mengapa ketiga pertanyaan riset itu sulit dijawab dengan data yang ada.
 
 ### 3.1.3 Tabel rekap sembilan alternatif
 
@@ -2462,6 +2486,18 @@ Satu hal perlu dinyatakan supaya tabel di atas tidak dibaca keliru: A3 berada di
 
 Satu catatan metodologis perlu disampaikan karena berkaitan dengan batas MCDM itu sendiri: matriks pada subbab ini memeringkat alternatif secara terpisah, sehingga kombinasi antaralternatif tidak dihitung. Kenyataan bahwa A1 dan A2 dapat dijalankan bersamaan, seperti terlihat pada klaster dan relasi prasyarat subbab 3.2, tidak diwakili oleh satu sel pun pada matriks. Karena itu keputusan di atas dibaca sebagai urutan prioritas, bukan sebagai larangan menjalankan alternatif lain secara paralel.
 
+### Pemetaan rumusan masalah ke alternatif dan status jawaban
+
+Tabel ini menjawab pertanyaan yang mudah terlewat saat membaca matriks MCDM: alternatif mana yang menjawab pertanyaan riset mana, dan sejauh mana jawabannya sudah ada.
+
+| Kode | Pertanyaan (1.1.6) | Alternatif yang menjawab | Status jawaban di Bab III |
+|---|---|---|---|
+| RM1 | merancang lapisan peringatan dini pada data yang benar-benar tersedia | A1, dibantu A2 dan A3 | dijawab sebagian. A1 peringkat satu dengan koefisien kedekatan 0,8465, juara pada 25 dari 25 kasus uji, dan memberi delta terukur positif pada kelas stuck. Hasil negatif pada kelas hyd tetap dinyatakan pada 3.4.11 dan tidak ditutupi. |
+| RM2 | memilih titik operasi per engine dengan beban alarm palsu yang dapat diterima | A9 | belum dijawab. A9 satu-satunya alternatif yang menyentuh langsung gejala sebaran 119,6 kali, tetapi peringkat sembilan karena rancangan kalibrasi belum diuji. Titik operasi per engine belum ditetapkan, dan pekerjaan itu dipindahkan ke Saran 1 dengan alasan yang dinyatakan terbuka. |
+| RM3 | menyajikan keluaran yang dapat dijelaskan kepada drilling engineer | belum ada alternatif | belum dijawab. Kriteria C8 belum dapat dinilai karena antarmuka peringatan belum dirancang (3.3.6 butir 8), sehingga pertanyaan ini berstatus pekerjaan PPT II dan tidak boleh dibaca sebagai sudah selesai. |
+
+Catatan pembacaan: dua dari tiga pertanyaan riset belum terjawab penuh. Matriks MCDM memilih sumbu rancangan, bukan menyatakan bahwa seluruh pertanyaan sudah tuntas. Menyatakan sebaliknya akan melebihkan capaian Bab III.
+
 ### 3.4.11 Hasil negatif dan batas yang harus dinyatakan
 
 1. Bobot berstatus asumsi karena belum ada wawancara mitra. Yang dapat diklaim bukan bahwa bobot ini benar, melainkan bahwa keputusan tidak berubah pada sembilan skenario, enam belas uji satu per satu, dan satu sapuan penuh.
@@ -2549,69 +2585,44 @@ Pemeriksa `check_mcdm.py` menolak dokumen bila ada angka yang berbeda dari JSON,
 
 # BAB IV KESIMPULAN DAN SARAN
 
-## 4.1 Kesimpulan
+## 4.1 Temuan dasar
 
-**Kesimpulan 1: masalah teridentifikasi.** Masalah utama pada layanan pengeboran yang
-dikaji bukanlah ketiadaan data, melainkan tidak adanya satu titik keputusan yang
-menggabungkan data kondisi dengan hasil kalkulasi risiko. Data dan hasil kalkulasi keduanya
-sudah tersedia: telemetri 118 kanal per wellbore dan 27 head hasil evaluasi berlapis.
-Yang belum ada adalah jembatan antara keduanya, sehingga 388 kejadian interupsi selama
-1.212 jam window terkurasi masih ditangani reaktif, dengan median 45 menit dan p90 180 menit
-per kejadian. Akar masalah ini diperinci pada fishbone 6M di 1.2 dan dibuktikan dengan
-tiga alat analisis di Bab II: VSM menunjukkan lebih separuh waktu terkunci pada status
-menunggu kejelasan, MIFC menunjukkan putusnya alur informasi, dan FTA menunjukkan cabang
-yang paling menumpuk adalah cabang keputusan manusia, bukan ketiadaan alat ukur.
+Dua temuan berikut adalah hasil tahap Investigate. Keduanya bukan jawaban atas rumusan masalah, melainkan bahan yang dipakai untuk menjawabnya, sehingga diletakkan di depan kesimpulan.
 
-**Kesimpulan 2: peringkat risiko terbentuk.** FMECA menghasilkan empat mode ber-RPN
-tinggi: kegagalan fluida sumur (490), stuck pipe (400), kegagalan BHA (378), dan kegagalan
-mesin permukaan (320). Dua di antaranya justru sudah memiliki engine yang diuji, sehingga
-celah yang perlu ditutup adalah keandalan deteksi dan penyajian keputusan, bukan penambahan
-alat ukur semata.
+**Temuan 1: masalah bukan ketiadaan data.** Masalah utama pada layanan pengeboran yang dikaji bukanlah ketiadaan data, melainkan tidak adanya satu titik keputusan yang menggabungkan data kondisi dengan hasil kalkulasi risiko. Data dan hasil kalkulasi keduanya sudah tersedia: telemetri 118 kanal per wellbore dan 27 head hasil evaluasi berlapis. Yang belum ada adalah jembatan antara keduanya, sehingga 388 kejadian interupsi selama 1.212 jam window terkurasi masih ditangani reaktif, dengan median 45 menit dan p90 180 menit per kejadian. Akar masalah ini diperinci pada fishbone 6M di 1.2 dan dibuktikan dengan tiga alat analisis di Bab II: VSM menunjukkan lebih separuh waktu terkunci pada status menunggu kejelasan, MIFC menunjukkan putusnya alur informasi, dan FTA menunjukkan cabang yang paling menumpuk adalah cabang keputusan manusia, bukan ketiadaan alat ukur.
 
-**Kesimpulan 3: solusi terpilih.** Dari sembilan alternatif yang diusulkan tiga anggota,
-solusi terpilih adalah **sistem pemantauan kondisi pengeboran berbasis dashboard dengan
-7 engine dan 27 head, berstatus advisory dengan 0 slot alarm otomatis**, dipadukan dengan
-tiga pendukung wajib: kendali mutu data WITSML, SOP eskalasi berjenjang, dan kalibrasi
-ambang per sumur. Pemilihan dilakukan dengan TOPSIS atas enam kriteria dan diuji
-sensitivitasnya pada sembilan skenario bobot. Tiga pendamping itu dipilih bukan sebagai
-solusi pengganti, melainkan sebagai syarat agar solusi utama benar-benar dapat
-dipertanggungjawabkan.
+**Temuan 2: peringkat risiko terbentuk.** FMECA menghasilkan empat mode ber-RPN tinggi: kegagalan fluida sumur (490), stuck pipe (400), kegagalan BHA (378), dan kegagalan mesin permukaan (320). Dua di antaranya sudah memiliki engine yang diuji, sehingga celah yang perlu ditutup adalah keandalan deteksi dan penyajian keputusan, bukan penambahan alat ukur semata.
 
-**Kesimpulan 4: batas yang diakui.** Sistem ini tidak menggantikan keputusan manusia.
-Seluruh head berada di bawah tinjauan engineer, false alarm rate pada beberapa engine
-masih menyebar hingga hampir 120 kali antar sumur, dan tidak ada klaim penghematan biaya
-yang sudah terukur pada tahap ini.
+## 4.2 Kesimpulan: jawaban atas RM1, RM2, dan RM3
 
-## 4.2 Saran
+Ketiga rumusan masalah dirujuk dengan kode dari 1.1.6. Jumlah butir kesimpulan di bawah sama dengan jumlah pertanyaan, dan setiap butir hanya menjawab satu pertanyaan.
 
-**Saran 1: untuk kelanjutan proyek (PPT II).** Kalibrasi ambang per sumur pada tiga
-engine terdepan (`stuck`, `hyd K-i`, `vib`) dengan target false alarm rate di bawah 6 per
-24 jam pada mayoritas sumur, karena titik itu menjadi syarat agar sebuah head layak naik
-dari peringatan berpengawas menjadi peringatan sungguhan.
+**Kesimpulan RM1: dijawab sebagian.** Lapisan peringatan dini dirancang di atas data yang benar-benar ada, yaitu grid 60 detik dan 37 sampai 48 kanal terisi per sumur, tanpa mengklaim resolusi yang tidak dimiliki. Sumbu rancangan terpilih adalah A1, relabeling onset dari status menjadi peristiwa, dengan koefisien kedekatan 0,8465, juara pada 25 dari 25 kasus uji, dan delta terukur positif pada kelas stuck. Hasil negatifnya dinyatakan terbuka pada 3.4.11: pada kelas hyd, mekanisme ini belum memberi delta positif. Rancangan itu dibungkus sebagai sistem pemantauan kondisi pengeboran berbasis dashboard dengan 7 engine dan 27 head, berstatus advisory dengan 0 slot alarm otomatis, dipadukan tiga pendukung wajib: kendali mutu data WITSML, SOP eskalasi berjenjang, dan kalibrasi ambang per sumur. Pemilihan dilakukan dengan TOPSIS atas enam kriteria dan diuji sensitivitasnya pada sembilan skenario bobot. Kata sebagian dipakai karena klausa kedua pertanyaan, yaitu tanpa mengklaim resolusi yang tidak dimiliki, baru terpenuhi pada satu kelas kegagalan.
 
-**Saran 2: untuk penutupan celah deteksi.** Mengembangkan `hyd K-ii` untuk mode kegagalan
-fluida sumur. Mode ini memperoleh RPN tertinggi justru karena deteksinya paling buruk,
-sedangkan dampaknya menyentuh aspek keselamatan.
+**Kesimpulan RM2: belum dijawab.** Pertanyaan tentang pemilihan titik operasi per engine sehingga peringatan cukup awal dan beban alarm palsu tetap dapat diterima belum memperoleh jawaban berupa angka. Satu-satunya alternatif yang menyentuh langsung gejala sebaran false alarm rate 119,6 kali antar sumur adalah A9, dan A9 berperingkat sembilan karena rancangan kalibrasi belum diuji. Yang dapat dinyatakan sebagai hasil adalah batas persoalannya: pada titik operasi yang sama, false alarm rate menyebar 4,15 sampai 496,09 per 24 jam antar sumur, sehingga satu ambang global tidak dapat dipakai. Penetapan titik operasi per engine dipindahkan ke Saran 1 sebagai pekerjaan yang harus diselesaikan lebih dahulu sebelum head mana pun naik dari peringatan berpengawas menjadi peringatan sungguhan. Menyatakan pertanyaan ini terjawab akan melebihkan capaian Bab III.
 
-**Saran 3: untuk kerja sama data.** Membangun pemetaan antara jam berhenti dan work
-order. Pada build sekarang jam berhenti tercatat (2.739,667 jam untuk kegagalan
-peralatan) tetapi belum terikat pada satu peristiwa alarm, sehingga dampak finansial tidak
-bisa dihitung sampai hubungan itu ada.
+**Kesimpulan RM3: belum dijawab.** Pertanyaan tentang penyajian keluaran yang dapat dijelaskan kepada drilling engineer belum memperoleh jawaban rancangan. Kriteria C8 belum dapat dinilai untuk alternatif mana pun karena antarmuka peringatan belum dirancang, seperti dinyatakan pada 3.3.6 butir 8. Yang sudah ada adalah arahnya: keluaran berstatus advisory, seluruh head berada di bawah tinjauan engineer, dan SOP eskalasi berjenjang ditetapkan sebagai pendukung wajib. Penyelesaian antarmuka masuk ruang lingkup Proyek Perancangan Terpadu II sesuai batas tahap pada 1.4.5.
 
-**Saran 4: untuk angka ekonomi.** Mengganti seluruh angka biaya asumsi dengan data
-kontrak sebenarnya begitu ruang lingkupnya diizinkan, karena pada tahap ini seluruh
-perhitungan kerugian berdiri di atas literatur publik, bukan pada nilai yang berlaku di
-lapangan.
+## 4.3 Batasan yang menyertai kesimpulan
 
-**Saran 5: untuk perbaikan metodologis.** Menguji stabilitas hasil antar sumur dengan
-skema leave-one-well-out pada seluruh head yang kini baru diuji pada segmen tunggal.
-Hasil AUPRC pada engine getaran sebesar 0,9117 wajib diuji ulang karena labelnya
-diturunkan dari kanal yang sama, sehingga berisiko sirkular.
+Butir-butir berikut adalah batasan, bukan temuan, dan tidak menjawab pertanyaan mana pun. Tempatnya di sini supaya tidak terbaca sebagai kesimpulan tambahan.
 
-**Saran 6: untuk dokumen lanjutan.** Menyelesaikan prototipe antarmuka yang dapat
-dibuka dan diuji bersama pemilik masalah, lalu melakukan validasi silang rancangan dengan
-mereka sebelum tahap pemodelan sistem dimulai, sesuai kegiatan re-evaluate pada setiap
-akhir tahap dalam model SIMILAR.
+1. Sistem ini tidak menggantikan keputusan manusia. Seluruh head berada di bawah tinjauan engineer dan tidak ada slot alarm otomatis.
+2. Tidak ada klaim penghematan biaya yang sudah terukur pada tahap ini. Seluruh angka ekonomi berasal dari publikasi luar dan berlabel ASUMSI sesuai 1.4.3.
+3. Jam berhenti tercatat 2.739,667 jam untuk kegagalan peralatan, tetapi belum terikat pada satu peristiwa alarm maupun work order, sehingga dampak finansial per kejadian belum dapat dihitung.
+4. Sebaran false alarm rate antar sumur mencapai hampir 120 kali, sehingga ambang yang berlaku pada satu sumur tidak otomatis berlaku pada sumur lain.
+
+## 4.4 Saran
+
+Saran di bawah hanya memuat tindak lanjut di luar lingkup PPT I. Batasan yang sudah diketahui tidak diulang sebagai saran.
+
+**Saran 1: melunasi RM2.** Menetapkan titik operasi per engine dan menguji kalibrasi ambang per sumur pada tiga engine terdepan (`stuck`, `hyd K-i`, `vib`) dengan target false alarm rate di bawah 6 per 24 jam pada mayoritas sumur. Pekerjaan ini melanjutkan pertanyaan yang belum terjawab di Kesimpulan RM2, bukan pertanyaan baru.
+
+**Saran 2: menutup celah deteksi fluida sumur.** Mengembangkan `hyd K-ii` untuk mode kegagalan fluida sumur. Mode ini memperoleh RPN tertinggi justru karena deteksinya paling buruk, sedangkan dampaknya menyentuh aspek keselamatan.
+
+**Saran 3: menguji stabilitas dan sirkularitas.** Menguji seluruh head yang kini baru diuji pada segmen tunggal dengan skema leave-one-well-out. Hasil AUPRC pada engine getaran sebesar 0,9117 wajib diuji ulang karena labelnya diturunkan dari kanal yang sama, sehingga berisiko sirkular.
+
+**Saran 4: menyelesaikan RM3.** Merancang dan menguji prototipe antarmuka peringatan bersama pemilik masalah, lalu memvalidasi silang rancangan dengan mereka sebelum tahap pemodelan sistem dimulai, sesuai kegiatan re-evaluate pada setiap akhir tahap dalam model SIMILAR.
 
 
 ---

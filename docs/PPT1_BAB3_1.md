@@ -28,9 +28,11 @@ Aturan bukti yang dipakai pada seluruh subbab:
 2. Angka yang belum dihitung ditulis eksplisit sebagai asumsi atau perkiraan desain, dan tidak disamarkan sebagai hasil pengukuran.
 3. Status pelaksanaan hanya memakai tiga nilai baku: Selesai, Berjalan, dan Rencana (belum terealisasi).
 
-### 3.1.2 Permasalahan yang dirujuk
+### 3.1.2 Kondisi pengikat dan celah teknis yang dirujuk
 
-| Kode | Permasalahan | Uraian ringkas dan angka | Jejak |
+Tabel berikut memuat sembilan kode rujukan P1 sampai P9. Kode ini bukan rumusan masalah. Rumusan masalah hanya tiga, yaitu RM1, RM2, dan RM3 pada 1.1.6. Sebagian besar kode di bawah adalah keadaan yang mengikat ruang lingkup, misalnya jumlah alat, jumlah positif per fold, dan ketiadaan atribut pada berkas sumber, sehingga tidak dijawab sebagai temuan melainkan diakomodasi sebagai batasan. Sisanya adalah celah teknis yang menjadi prasyarat bagi RM1 atau RM2.
+
+| Kode | Kondisi pengikat atau celah teknis | Uraian ringkas dan angka | Jejak |
 |---|---|---|---|
 | P1 | Label stuck berbentuk status, bukan peristiwa | Label STUCK_RT bertahan sebagai blok panjang sehingga jendela sebelumnya menjadi prediktor hampir sempurna. Prevalensi F-9_A 66,9%, persistence 0,787 mengalahkan Random Forest 0,651, dan lift F-9_A turun ke 0,97. | `docs/V7_R1_SOLUTIONS.md:66-70 (angka turunan docs/V6_E1_ML_DESIGN.md 4.4)` |
 | P2 | Jumlah positif shk terlalu sedikit per fold | Gate G1 lolos 3 dari 7 fold sedangkan G2 lolos 6 dari 7, sehingga akarnya bukan mutu fitur melainkan jumlah informasi positif: F-9_A 30 positif dan F-9 45 positif, dibanding F-14 760 positif. | `docs/V7_R1_SOLUTIONS.md:97-99` |
@@ -41,6 +43,22 @@ Aturan bukti yang dipakai pada seluruh subbab:
 | P7 | Validitas label lintas sumur belum terbukti | Kontrol-positif stuck 0 dari 10, label hyd masih berupa proksi residual, dan campuran severitas berbeda antar sumur. Cacat ini mengancam seluruh lapisan onset sebelum model apa pun dipercaya. | `docs/V8_PM_VERDICT.md:202; docs/V4_MAINTENANCE_ML_OPTIONS.md:145-155` |
 | P8 | Ambang global tidak portabel antar sumur | Pada titik operasi yang sama, false alarm rate vib menyebar 4,15 sampai 496,09 per 24 jam, yaitu rasio 119,6 kali antar sumur, sehingga satu ambang global tidak dapat dipakai. | `docs/V9_PM2_VERDICT.md:114` |
 | P9 | Tidak ada label keausan fisik dari rig | Seluruh 77 berkas bhaRun tidak memuat dullingInfo, dullGrade, maupun bitName, sehingga label yang tersedia hanya batas waktu run, bukan tingkat keausan. Prediksi onset keausan bit (K-2) belum dijalankan sama sekali. | `docs/V4_MAINTENANCE_ML_OPTIONS.md:62; docs/V9_PM2_VERDICT.md:176` |
+
+Peta asal setiap kode, supaya tidak ada yang dibaca sebagai pertanyaan riset baru:
+
+| Kode | Asal di Bab I | Peran |
+|---|---|---|
+| P1 | RM1, mutu label | kondisi pengikat bentuk label |
+| P2 | Kendala 1.4.4 butir 3 | jumlah positif per fold terbatas |
+| P3 | RM1, mutu label | kondisi pengikat bentuk label |
+| P4 | Kendala 1.4.4 butir 5 | cakupan domain bengkel |
+| P5 | RM1 | celah teknis, baseline mengalahkan model |
+| P6 | Kendala 1.4.4 butir 3 | jumlah sampel per fold terbatas |
+| P7 | Kendala 1.4.4 butir 1 | validitas lintas sumur |
+| P8 | RM2 | gejala yang harus dijawab pemilihan titik operasi |
+| P9 | Kendala 1.4.4 butir 4 | atribut keausan tidak tersedia |
+
+Konsekuensi pembacaan: P1 sampai P9 tidak menambah jumlah rumusan masalah. Yang bertambah hanya rincian mengapa ketiga pertanyaan riset itu sulit dijawab dengan data yang ada.
 
 ### 3.1.3 Tabel rekap sembilan alternatif
 

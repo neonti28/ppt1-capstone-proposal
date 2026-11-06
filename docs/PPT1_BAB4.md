@@ -1,65 +1,40 @@
 # BAB IV KESIMPULAN DAN SARAN
 
-## 4.1 Kesimpulan
+## 4.1 Temuan dasar
 
-**Kesimpulan 1: masalah teridentifikasi.** Masalah utama pada layanan pengeboran yang
-dikaji bukanlah ketiadaan data, melainkan tidak adanya satu titik keputusan yang
-menggabungkan data kondisi dengan hasil kalkulasi risiko. Data dan hasil kalkulasi keduanya
-sudah tersedia: telemetri 118 kanal per wellbore dan 27 head hasil evaluasi berlapis.
-Yang belum ada adalah jembatan antara keduanya, sehingga 388 kejadian interupsi selama
-1.212 jam window terkurasi masih ditangani reaktif, dengan median 45 menit dan p90 180 menit
-per kejadian. Akar masalah ini diperinci pada fishbone 6M di 1.2 dan dibuktikan dengan
-tiga alat analisis di Bab II: VSM menunjukkan lebih separuh waktu terkunci pada status
-menunggu kejelasan, MIFC menunjukkan putusnya alur informasi, dan FTA menunjukkan cabang
-yang paling menumpuk adalah cabang keputusan manusia, bukan ketiadaan alat ukur.
+Dua temuan berikut adalah hasil tahap Investigate. Keduanya bukan jawaban atas rumusan masalah, melainkan bahan yang dipakai untuk menjawabnya, sehingga diletakkan di depan kesimpulan.
 
-**Kesimpulan 2: peringkat risiko terbentuk.** FMECA menghasilkan empat mode ber-RPN
-tinggi: kegagalan fluida sumur (490), stuck pipe (400), kegagalan BHA (378), dan kegagalan
-mesin permukaan (320). Dua di antaranya justru sudah memiliki engine yang diuji, sehingga
-celah yang perlu ditutup adalah keandalan deteksi dan penyajian keputusan, bukan penambahan
-alat ukur semata.
+**Temuan 1: masalah bukan ketiadaan data.** Masalah utama pada layanan pengeboran yang dikaji bukanlah ketiadaan data, melainkan tidak adanya satu titik keputusan yang menggabungkan data kondisi dengan hasil kalkulasi risiko. Data dan hasil kalkulasi keduanya sudah tersedia: telemetri 118 kanal per wellbore dan 27 head hasil evaluasi berlapis. Yang belum ada adalah jembatan antara keduanya, sehingga 388 kejadian interupsi selama 1.212 jam window terkurasi masih ditangani reaktif, dengan median 45 menit dan p90 180 menit per kejadian. Akar masalah ini diperinci pada fishbone 6M di 1.2 dan dibuktikan dengan tiga alat analisis di Bab II: VSM menunjukkan lebih separuh waktu terkunci pada status menunggu kejelasan, MIFC menunjukkan putusnya alur informasi, dan FTA menunjukkan cabang yang paling menumpuk adalah cabang keputusan manusia, bukan ketiadaan alat ukur.
 
-**Kesimpulan 3: solusi terpilih.** Dari sembilan alternatif yang diusulkan tiga anggota,
-solusi terpilih adalah **sistem pemantauan kondisi pengeboran berbasis dashboard dengan
-7 engine dan 27 head, berstatus advisory dengan 0 slot alarm otomatis**, dipadukan dengan
-tiga pendukung wajib: kendali mutu data WITSML, SOP eskalasi berjenjang, dan kalibrasi
-ambang per sumur. Pemilihan dilakukan dengan TOPSIS atas enam kriteria dan diuji
-sensitivitasnya pada sembilan skenario bobot. Tiga pendamping itu dipilih bukan sebagai
-solusi pengganti, melainkan sebagai syarat agar solusi utama benar-benar dapat
-dipertanggungjawabkan.
+**Temuan 2: peringkat risiko terbentuk.** FMECA menghasilkan empat mode ber-RPN tinggi: kegagalan fluida sumur (490), stuck pipe (400), kegagalan BHA (378), dan kegagalan mesin permukaan (320). Dua di antaranya sudah memiliki engine yang diuji, sehingga celah yang perlu ditutup adalah keandalan deteksi dan penyajian keputusan, bukan penambahan alat ukur semata.
 
-**Kesimpulan 4: batas yang diakui.** Sistem ini tidak menggantikan keputusan manusia.
-Seluruh head berada di bawah tinjauan engineer, false alarm rate pada beberapa engine
-masih menyebar hingga hampir 120 kali antar sumur, dan tidak ada klaim penghematan biaya
-yang sudah terukur pada tahap ini.
+## 4.2 Kesimpulan: jawaban atas RM1, RM2, dan RM3
 
-## 4.2 Saran
+Ketiga rumusan masalah dirujuk dengan kode dari 1.1.6. Jumlah butir kesimpulan di bawah sama dengan jumlah pertanyaan, dan setiap butir hanya menjawab satu pertanyaan.
 
-**Saran 1: untuk kelanjutan proyek (PPT II).** Kalibrasi ambang per sumur pada tiga
-engine terdepan (`stuck`, `hyd K-i`, `vib`) dengan target false alarm rate di bawah 6 per
-24 jam pada mayoritas sumur, karena titik itu menjadi syarat agar sebuah head layak naik
-dari peringatan berpengawas menjadi peringatan sungguhan.
+**Kesimpulan RM1: dijawab sebagian.** Lapisan peringatan dini dirancang di atas data yang benar-benar ada, yaitu grid 60 detik dan 37 sampai 48 kanal terisi per sumur, tanpa mengklaim resolusi yang tidak dimiliki. Sumbu rancangan terpilih adalah A1, relabeling onset dari status menjadi peristiwa, dengan koefisien kedekatan 0,8465, juara pada 25 dari 25 kasus uji, dan delta terukur positif pada kelas stuck. Hasil negatifnya dinyatakan terbuka pada 3.4.11: pada kelas hyd, mekanisme ini belum memberi delta positif. Rancangan itu dibungkus sebagai sistem pemantauan kondisi pengeboran berbasis dashboard dengan 7 engine dan 27 head, berstatus advisory dengan 0 slot alarm otomatis, dipadukan tiga pendukung wajib: kendali mutu data WITSML, SOP eskalasi berjenjang, dan kalibrasi ambang per sumur. Pemilihan dilakukan dengan TOPSIS atas enam kriteria dan diuji sensitivitasnya pada sembilan skenario bobot. Kata sebagian dipakai karena klausa kedua pertanyaan, yaitu tanpa mengklaim resolusi yang tidak dimiliki, baru terpenuhi pada satu kelas kegagalan.
 
-**Saran 2: untuk penutupan celah deteksi.** Mengembangkan `hyd K-ii` untuk mode kegagalan
-fluida sumur. Mode ini memperoleh RPN tertinggi justru karena deteksinya paling buruk,
-sedangkan dampaknya menyentuh aspek keselamatan.
+**Kesimpulan RM2: belum dijawab.** Pertanyaan tentang pemilihan titik operasi per engine sehingga peringatan cukup awal dan beban alarm palsu tetap dapat diterima belum memperoleh jawaban berupa angka. Satu-satunya alternatif yang menyentuh langsung gejala sebaran false alarm rate 119,6 kali antar sumur adalah A9, dan A9 berperingkat sembilan karena rancangan kalibrasi belum diuji. Yang dapat dinyatakan sebagai hasil adalah batas persoalannya: pada titik operasi yang sama, false alarm rate menyebar 4,15 sampai 496,09 per 24 jam antar sumur, sehingga satu ambang global tidak dapat dipakai. Penetapan titik operasi per engine dipindahkan ke Saran 1 sebagai pekerjaan yang harus diselesaikan lebih dahulu sebelum head mana pun naik dari peringatan berpengawas menjadi peringatan sungguhan. Menyatakan pertanyaan ini terjawab akan melebihkan capaian Bab III.
 
-**Saran 3: untuk kerja sama data.** Membangun pemetaan antara jam berhenti dan work
-order. Pada build sekarang jam berhenti tercatat (2.739,667 jam untuk kegagalan
-peralatan) tetapi belum terikat pada satu peristiwa alarm, sehingga dampak finansial tidak
-bisa dihitung sampai hubungan itu ada.
+**Kesimpulan RM3: belum dijawab.** Pertanyaan tentang penyajian keluaran yang dapat dijelaskan kepada drilling engineer belum memperoleh jawaban rancangan. Kriteria C8 belum dapat dinilai untuk alternatif mana pun karena antarmuka peringatan belum dirancang, seperti dinyatakan pada 3.3.6 butir 8. Yang sudah ada adalah arahnya: keluaran berstatus advisory, seluruh head berada di bawah tinjauan engineer, dan SOP eskalasi berjenjang ditetapkan sebagai pendukung wajib. Penyelesaian antarmuka masuk ruang lingkup Proyek Perancangan Terpadu II sesuai batas tahap pada 1.4.5.
 
-**Saran 4: untuk angka ekonomi.** Mengganti seluruh angka biaya asumsi dengan data
-kontrak sebenarnya begitu ruang lingkupnya diizinkan, karena pada tahap ini seluruh
-perhitungan kerugian berdiri di atas literatur publik, bukan pada nilai yang berlaku di
-lapangan.
+## 4.3 Batasan yang menyertai kesimpulan
 
-**Saran 5: untuk perbaikan metodologis.** Menguji stabilitas hasil antar sumur dengan
-skema leave-one-well-out pada seluruh head yang kini baru diuji pada segmen tunggal.
-Hasil AUPRC pada engine getaran sebesar 0,9117 wajib diuji ulang karena labelnya
-diturunkan dari kanal yang sama, sehingga berisiko sirkular.
+Butir-butir berikut adalah batasan, bukan temuan, dan tidak menjawab pertanyaan mana pun. Tempatnya di sini supaya tidak terbaca sebagai kesimpulan tambahan.
 
-**Saran 6: untuk dokumen lanjutan.** Menyelesaikan prototipe antarmuka yang dapat
-dibuka dan diuji bersama pemilik masalah, lalu melakukan validasi silang rancangan dengan
-mereka sebelum tahap pemodelan sistem dimulai, sesuai kegiatan re-evaluate pada setiap
-akhir tahap dalam model SIMILAR.
+1. Sistem ini tidak menggantikan keputusan manusia. Seluruh head berada di bawah tinjauan engineer dan tidak ada slot alarm otomatis.
+2. Tidak ada klaim penghematan biaya yang sudah terukur pada tahap ini. Seluruh angka ekonomi berasal dari publikasi luar dan berlabel ASUMSI sesuai 1.4.3.
+3. Jam berhenti tercatat 2.739,667 jam untuk kegagalan peralatan, tetapi belum terikat pada satu peristiwa alarm maupun work order, sehingga dampak finansial per kejadian belum dapat dihitung.
+4. Sebaran false alarm rate antar sumur mencapai hampir 120 kali, sehingga ambang yang berlaku pada satu sumur tidak otomatis berlaku pada sumur lain.
+
+## 4.4 Saran
+
+Saran di bawah hanya memuat tindak lanjut di luar lingkup PPT I. Batasan yang sudah diketahui tidak diulang sebagai saran.
+
+**Saran 1: melunasi RM2.** Menetapkan titik operasi per engine dan menguji kalibrasi ambang per sumur pada tiga engine terdepan (`stuck`, `hyd K-i`, `vib`) dengan target false alarm rate di bawah 6 per 24 jam pada mayoritas sumur. Pekerjaan ini melanjutkan pertanyaan yang belum terjawab di Kesimpulan RM2, bukan pertanyaan baru.
+
+**Saran 2: menutup celah deteksi fluida sumur.** Mengembangkan `hyd K-ii` untuk mode kegagalan fluida sumur. Mode ini memperoleh RPN tertinggi justru karena deteksinya paling buruk, sedangkan dampaknya menyentuh aspek keselamatan.
+
+**Saran 3: menguji stabilitas dan sirkularitas.** Menguji seluruh head yang kini baru diuji pada segmen tunggal dengan skema leave-one-well-out. Hasil AUPRC pada engine getaran sebesar 0,9117 wajib diuji ulang karena labelnya diturunkan dari kanal yang sama, sehingga berisiko sirkular.
+
+**Saran 4: menyelesaikan RM3.** Merancang dan menguji prototipe antarmuka peringatan bersama pemilik masalah, lalu memvalidasi silang rancangan dengan mereka sebelum tahap pemodelan sistem dimulai, sesuai kegiatan re-evaluate pada setiap akhir tahap dalam model SIMILAR.
