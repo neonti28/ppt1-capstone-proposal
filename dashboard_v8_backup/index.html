@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dashboard Alat PdM Advisory — Volve BHA</title>
+<style>
+ :root{--bg:#0f172a;--card:#1e293b;--tx:#e2e8f0;--mut:#94a3b8;--acc:#38bdf8}
+ *{box-sizing:border-box}
+ body{margin:0;background:var(--bg);color:var(--tx);font:15px/1.55 system-ui,Segoe UI,Roboto,sans-serif}
+ header{padding:26px 30px 18px;background:linear-gradient(135deg,#0f172a,#1e3a5f);border-bottom:2px solid var(--acc)}
+ h1{margin:0 0 6px;font-size:24px}
+ .sub{color:var(--mut);font-size:13px}
+ main{padding:22px 30px;max-width:1200px;margin:auto}
+ .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:8px 0 26px}
+ .card{background:var(--card);border-radius:12px;padding:14px;text-align:center;border:1px solid #334155}
+ .card .num{font-size:30px;font-weight:800;color:var(--acc)}
+ .card div:last-child{color:var(--mut);font-size:12px;margin-top:4px}
+ .card.peringatan .num{color:#fb923c} .card.tren .num{color:#34d399}
+ .card.belum .num{color:#a78bfa} .card.alarm .num{color:#f472b6}
+ h2{font-size:18px;margin:34px 0 10px;border-left:4px solid var(--acc);padding-left:10px}
+ h3{font-size:15px;margin:26px 0 8px;color:#cbd5e1}
+ table{width:100%;border-collapse:collapse;background:var(--card);border-radius:10px;overflow:hidden;font-size:13px}
+ th{background:#0ea5e9;color:#082f49;text-align:left;padding:8px 10px;font-size:12px}
+ td{padding:7px 10px;border-top:1px solid #334155;vertical-align:top}
+ tr.belum td{color:#a78bfa;opacity:.75}
+ .chip{display:inline-block;padding:2px 8px;border-radius:999px;font-size:11px;font-weight:600;margin:1px 2px}
+ .chip.peringatan{background:#7c2d12;color:#fdba74}
+ .chip.tren{background:#064e3b;color:#6ee7b7}
+ .chip.belum{background:#2e1065;color:#c4b5fd}
+ .sm{font-size:11.5px;color:#b6c2d2}
+ .viz img{width:100%;border-radius:10px;border:1px solid #334155;background:#fff}
+ .ket{color:var(--mut);font-size:12.5px;margin-top:6px}
+ code{background:#0b1220;padding:1px 5px;border-radius:4px;font-size:12px}
+ footer{color:var(--mut);font-size:12px;padding:24px 30px 40px;border-top:1px solid #334155;margin-top:36px}
+ .tw{overflow-x:auto;border-radius:10px;max-width:100%}
+ .tw table{min-width:760px}
+ .note{background:#1e3a5f;border:1px solid #2563eb;padding:10px 14px;border-radius:10px;font-size:13.5px;margin:14px 0}
+</style>
+</head>
+<body>
+<header>
+  <h1>Dashboard Alat PdM Advisory — Prediksi Kegagalan BHA, Lapangan Volve</h1>
+  <div class="sub">Prototipe V9-I1 · segmen F-14 · seed 42 · dibuat 2026-10-29 11:21 · integrasi keputusan S6 (H1p) · sumber: JSON primer scratch/v9_i1</div>
+</header>
+<main>
+<div class="note"><b>Cara membaca:</b> alat ini <b>advisory</b>. Keluarannya bukan hanya alarm: status kondisi, peringatan berpengawas, skor tren, beban tinjauan per shift, dan bahan rencana inspeksi. Keputusan tetap pada insinyur pengeboran.</div>
+
+<div class="cards">
+  <div class="card"><div class="num">7</div><div>mesin (kelas kegagalan)</div></div>
+  <div class="card"><div class="num">11</div><div>klaim tugas</div></div>
+  <div class="card"><div class="num">27</div><div>head / metode</div></div>
+  <div class="card peringatan"><div class="num">11</div><div>peringatan berpengawas</div></div>
+  <div class="card tren"><div class="num">13</div><div>skor tren</div></div>
+  <div class="card belum"><div class="num">2</div><div>belum tersedia</div></div>
+  <div class="card"><div class="num">39.398</div><div>jam aktivitas tercatat (DDR)</div></div>
+  <div class="card"><div class="num">23.447</div><div>record aktivitas</div></div>
+  <div class="card"><div class="num">5/11/9/2</div><div>L0/L1/L2/L3</div></div>
+</div>
+
+<h2>11 klaim tugas (apa yang dideteksi + tingkat pemakaian)</h2>
+<div class="tw"><table>
+<tr><th>#</th><th>Mesin</th><th>Klaim</th><th>Jenis tugas</th><th>Head</th><th>Tier</th><th>Lapisan</th><th>Badge FAR</th><th>Batas</th></tr>
+<tr>
+<td>1</td><td><b>bit_wear</b></td><td>K-1</td><td>deteksi kondisi (K-1); K-2 onset = BELUM DIJALANKAN</td>
+<td><code>persistence</code></td><td><span class="chip tren">TREN</span></td><td>L2</td>
+<td class="sm">P/R/FAR = BELUM TERUKUR (field tidak ada di JSON EVAL_A §2.6)</td><td class="sm">ranking/tren saja; hibrida degradasi ke persistence (label Teale = kanal terlarang); dataset USROP ≠ rig Volve</td></tr><tr>
+<td>2</td><td><b>bit_wear</b></td><td>K-2</td><td>deteksi kondisi (K-1); K-2 onset = BELUM DIJALANKAN</td>
+<td><code>k2_onset_belum</code></td><td><span class="chip belum">BELUM LAYAK PAKAI</span></td><td>L3</td>
+<td class="sm">nol angka (kampanye belum jalan)</td><td class="sm">K-2 BELUM boleh dipakai di tingkat apa pun sebelum kampanye berangka</td></tr><tr>
+<td>3</td><td><b>hyd</b></td><td>K-i</td><td>deteksi kondisi (K-i) + prediksi kejadian mendatang (K-ii)</td>
+<td><code>rule_display</code>, <code>persistence</code>, <code>hybrid_rule_and_persistence</code></td><td><span class="chip peringatan">PERINGATAN-BERPENGAWAS</span></td><td>L0, L1</td>
+<td class="sm">H1p = rule DAN persistence (head utama): FP 927, presisi 0,8243, recall 0,6519, FAR 4,10/24jam, lead 8,0 mnt, 7/9 fold (S6 §4.1)</td><td class="sm">lapisan B belum terukur; cakupan &gt;50% hanya F-10</td></tr><tr>
+<td>4</td><td><b>hyd</b></td><td>K-ii</td><td>deteksi kondisi (K-i) + prediksi kejadian mendatang (K-ii)</td>
+<td><code>k2_tidak_tersedia</code></td><td><span class="chip belum">BELUM LAYAK PAKAI</span></td><td>L3</td>
+<td class="sm">q95: P=R=0 (0 TP, FP 177); fisher CI memuat prev (EVAL_C §2.5)</td><td class="sm">TIDAK DIJALANKAN di prototipe (data pit/GAINLOSSTOT belum diparse) — bukan kegagalan metode; RF V8 = referensi</td></tr><tr>
+<td>5</td><td><b>shk</b></td><td>deteksi anomali/dysfunction bit bounce (SHKRSK_RT &gt;= 1)</td><td>deteksi anomali sedang berlangsung</td>
+<td><code>rule_display</code>, <code>persistence</code>, <code>hybrid_rule_and_persistence</code>, <code>rf_lowo</code></td><td><span class="chip peringatan">PERINGATAN-BERPENGAWAS</span> <span class="chip tren">TREN</span></td><td>L0, L1, L2</td>
+<td class="sm">FAR 0,67-6,6/24jam; &lt;=6 di 7/9 well (EVAL_C §2.3)</td><td class="sm">badge FAR wajib tampil; B3 EVAL_B negatif → periksa dulu, jangan auto</td></tr><tr>
+<td>6</td><td><b>ssi</b></td><td>deteksi kondisi stick-slip torsional (SSI(CRPM_RT) &gt;= 1)</td><td>deteksi kondisi</td>
+<td><code>rule_display</code>, <code>persistence</code>, <code>hybrid_rule_and_persistence</code>, <code>rf_lowo</code></td><td><span class="chip peringatan">PERINGATAN-BERPENGAWAS</span> <span class="chip tren">TREN</span></td><td>L0, L1, L2</td>
+<td class="sm">FP rule total 26 lintas fold (E_RULE §2.2)</td><td class="sm">nodata CRPM 62,3% baris — deteksi bergantung ketersediaan sensor</td></tr><tr>
+<td>7</td><td><b>stuck</b></td><td>K-i</td><td>deteksi kondisi (K-i) + prediksi kejadian mendatang (K-ii)</td>
+<td><code>rule_display</code>, <code>persistence</code>, <code>hybrid_rule_and_persistence</code></td><td><span class="chip peringatan">PERINGATAN-BERPENGAWAS</span> <span class="chip tren">TREN</span></td><td>L0, L1</td>
+<td class="sm">rule P 0,92-0,97; FAR 8,3-61,0 (hanya 2 well: F-14, F-9_A)</td><td class="sm">hanya layak di well yang diuji; replikasi F-9/F-10/F-15 diperlukan</td></tr><tr>
+<td>8</td><td><b>stuck</b></td><td>K-ii</td><td>deteksi kondisi (K-i) + prediksi kejadian mendatang (K-ii)</td>
+<td><code>e1_2of3</code>, <code>persistence_event</code>, <code>rf_lowo</code></td><td><span class="chip tren">TREN</span></td><td>L2</td>
+<td class="sm">E1 FAR 2,1-29,0 (13,9x); B1 0-0,066; FP 422 (EVAL_C §2.4)</td><td class="sm">TRIAGE/riset ranking — belum layak peringatan (B1 di bawah 0,5)</td></tr><tr>
+<td>9</td><td><b>tool_wear</b></td><td>K-i</td><td>deteksi perubahan-regime (K-i); K-ii = ranking</td>
+<td><code>calib_5of27</code>, <code>op_far_calibrated</code></td><td><span class="chip peringatan">PERINGATAN-BERPENGAWAS</span> <span class="chip tren">TREN</span></td><td>L1, L2</td>
+<td class="sm">engine 5/27 (E_STAT §B): FP_R01 27-41 jendela (71-98% jendela evaluasi) — terlalu sensitif utk peringatan; deteksi R02 4/4 alat, TLead 20-36 dtk</td><td class="sm">dipakai sbg GATING inspeksi + skor perubahan-regime sahaja; JANGAN jadi peringatan (FP besar); titik operasi layak = op_far_calibrated</td></tr><tr>
+<td>10</td><td><b>tool_wear</b></td><td>K-ii</td><td>deteksi perubahan-regime (K-i); K-ii = ranking</td>
+<td><code>canary_3rms</code></td><td><span class="chip tren">TREN</span></td><td>L2</td>
+<td class="sm">canary 3-RMS AUPRC 0,516-0,612 (1,19x); identity-majority = prev (plafon lift 2,0)</td><td class="sm">ranking lintas-alat saja; precision biner V8 0,50-0,56 ≈ peluang → jangan sbg alarm</td></tr><tr>
+<td>11</td><td><b>vib</b></td><td>deteksi kondisi getaran lateral (status VIBLAT_RT &gt;= 32,17405 ft/s2)</td><td>deteksi kondisi (bukan prediksi onset — TLead tidak berlaku)</td>
+<td><code>rule_display</code>, <code>persistence</code>, <code>hybrid_rule_and_persistence</code>, <code>rf_lowo</code></td><td><span class="chip peringatan">PERINGATAN-BERPENGAWAS</span> <span class="chip tren">TREN</span></td><td>L0, L1, L2</td>
+<td class="sm">FAR 10,0-49,9/24jam di 4 well (E_RULE §2.1); P 0,87-0,95</td><td class="sm">jangan klaim lead-time menit; ambang wajib kalibrasi per-well (D-A4) sebelum dipakai sbg alarm</td></tr>
+</table></div>
+
+<h2>Hasil run prototipe (segmen F-14 + 4 alat bengkel)</h2>
+<div class="tw"><table>
+<tr><th>Mesin</th><th>Head</th><th>Lapisan</th><th>Aktivitas</th><th>Butuh manusia</th><th>Badge FAR</th></tr>
+<tr class=''><td>vib</td><td><code>rule_display</code></td><td>L1</td><td>540 menit aktif</td><td>WAJIB</td><td class='sm'>FAR 10,0-49,9/24jam di 4 well (E_RULE §2.1); P 0,87-0,95</td></tr><tr class=''><td>vib</td><td><code>persistence</code></td><td>L0</td><td>1142 menit aktif</td><td>—</td><td class='sm'>persistence = baseline konfirmasi-status (AUPRC V8 0,517-0,796)</td></tr><tr class=''><td>vib</td><td><code>hybrid_rule_and_persistence</code></td><td>L1</td><td>540 menit aktif</td><td>WAJIB</td><td class='sm'>hibrida ≡ rule utk kelas ini (E_RULE §2.1: FP = rule)</td></tr><tr class=''><td>vib</td><td><code>rf_lowo</code></td><td>L2</td><td>1271 menit aktif</td><td>—</td><td class='sm'>FAR τ0,5 menyebar 4,1-496 (119x) — TIDAK PORTABEL (EVAL_C C3)</td></tr><tr class=''><td>ssi</td><td><code>rule_display</code></td><td>L1</td><td>0 menit aktif</td><td>WAJIB</td><td class='sm'>FP rule total 26 lintas fold (E_RULE §2.2)</td></tr><tr class=''><td>ssi</td><td><code>persistence</code></td><td>L0</td><td>31 menit aktif</td><td>—</td><td class='sm'>persistence kalah 0/5 vs RF (angka V8)</td></tr><tr class=''><td>ssi</td><td><code>hybrid_rule_and_persistence</code></td><td>L1</td><td>0 menit aktif</td><td>WAJIB</td><td class='sm'>FP 26 -&gt; 7 (-73,1%) konsisten 7/7 well; FAR hybrid 0-3,7 (EVAL_C §2.2)</td></tr><tr class=''><td>ssi</td><td><code>rf_lowo</code></td><td>L2</td><td>0 menit aktif</td><td>—</td><td class='sm'>τ0,3 FAR 0-15,6; well FAR&lt;=6 hanya 2/7 (EVAL_C C3)</td></tr><tr class=''><td>shk</td><td><code>rule_display</code></td><td>L1</td><td>103 menit aktif</td><td>WAJIB</td><td class='sm'>FAR 0,67-6,6/24jam; &lt;=6 di 7/9 well (EVAL_C §2.3)</td></tr><tr class=''><td>shk</td><td><code>persistence</code></td><td>L0</td><td>623 menit aktif</td><td>—</td><td class='sm'>persistence ≥ prevalence-random 7/9 (E_RULE §2.3)</td></tr><tr class=''><td>shk</td><td><code>hybrid_rule_and_persistence</code></td><td>L1</td><td>103 menit aktif</td><td>WAJIB</td><td class='sm'>hibrida ≡ rule (E_RULE §2.3)</td></tr><tr class=''><td>shk</td><td><code>rf_lowo</code></td><td>L2</td><td>0 menit aktif</td><td>—</td><td class='sm'>τ0,3 FAR 0-96,5; well &lt;=6 hanya 1/9 (EVAL_C C3)</td></tr><tr class=''><td>stuck</td><td><code>rule_display</code></td><td>L1</td><td>210 menit aktif</td><td>WAJIB</td><td class='sm'>rule P 0,92-0,97; FAR 8,3-61,0 (hanya 2 well: F-14, F-9_A)</td></tr><tr class=''><td>stuck</td><td><code>persistence</code></td><td>L0</td><td>451 menit aktif</td><td>—</td><td class='sm'>persistence 0,787 (F-9_A, kutipan V6)</td></tr><tr class=''><td>stuck</td><td><code>hybrid_rule_and_persistence</code></td><td>L1</td><td>210 menit aktif</td><td>WAJIB</td><td class='sm'>hibrida stuck_k1 = E_RULE §2.4 (2 fold)</td></tr><tr class=''><td>stuck</td><td><code>e1_2of3</code></td><td>L2</td><td>313 menit aktif</td><td>—</td><td class='sm'>E1 FAR 2,1-29,0 (13,9x); B1 0-0,066; FP 422 (EVAL_C §2.4)</td></tr><tr class=''><td>stuck</td><td><code>persistence_event</code></td><td>L2</td><td>4 menit aktif</td><td>—</td><td class='sm'>FAR 0-2,9; FP alarm total 11 (EVAL_C §2.4)</td></tr><tr class=''><td>stuck</td><td><code>rf_lowo</code></td><td>L2</td><td>42 menit aktif</td><td>—</td><td class='sm'>RF τ0,5 B1 0-0,045; signifikan CI hanya 1/4 (EVAL_C §2.4)</td></tr><tr class=''><td>hyd</td><td><code>rule_display</code></td><td>L1</td><td>975 menit aktif</td><td>WAJIB</td><td class='sm'>rule t0-1 FP total 2.091 lintas fold (E_RULE §2.5)</td></tr><tr class=''><td>hyd</td><td><code>persistence</code></td><td>L0</td><td>876 menit aktif</td><td>—</td><td class='sm'>persistence P 0,615-0,793; FAR_t 32,2-109,7/24jam</td></tr><tr class=''><td>hyd</td><td><code>hybrid_rule_and_persistence</code></td><td>L1</td><td>626 menit aktif</td><td>WAJIB</td><td class='sm'>FAR 14,6-58,4 (9/9 well &gt; 6); FP-cut -55,7% konsisten 9/9</td></tr><tr class='belum'><td>hyd</td><td><code>k2_tidak_tersedia</code></td><td>L3</td><td>BELUM TERSEDIA DI PROTOTIPE</td><td>WAJIB</td><td class='sm'>q95: P=R=0 (0 TP, FP 177); fisher CI memuat prev (EVAL_C §2.5)</td></tr><tr class=''><td>bit_wear</td><td><code>persistence</code></td><td>L2</td><td>4917 menit aktif</td><td>—</td><td class='sm'>P/R/FAR = BELUM TERUKUR (field tidak ada di JSON EVAL_A §2.6)</td></tr><tr class='belum'><td>bit_wear</td><td><code>k2_onset_belum</code></td><td>L3</td><td>BELUM DIJALANKAN</td><td>WAJIB</td><td class='sm'>nol angka (kampanye belum jalan)</td></tr><tr class=''><td>tool_wear</td><td><code>calib_5of27</code></td><td>L2</td><td>305 menit aktif</td><td>—</td><td class='sm'>engine 5/27 (E_STAT §B): FP_R01 27-41 jendela (71-98% jendela evaluasi) — terlalu sensitif utk peringatan; deteksi R02 4/4 alat, TLead 20-36 dtk</td></tr><tr class=''><td>tool_wear</td><td><code>op_far_calibrated</code></td><td>L1</td><td>21 menit aktif</td><td>WAJIB</td><td class='sm'>FAR-terkalibrasi target &lt;=1 alarm/menit: FP_R01 1-3/alat; deteksi R02 4/4; TLead 20-36 dtk (E_STAT §C, EVAL_C §2.7)</td></tr><tr class=''><td>tool_wear</td><td><code>canary_3rms</code></td><td>L2</td><td>282 menit aktif</td><td>—</td><td class='sm'>canary 3-RMS AUPRC 0,516-0,612 (1,19x); identity-majority = prev (plafon lift 2,0)</td></tr>
+</table></div>
+
+
+<h2>Nilai maintenance (lapisan B) — dari data aktivitas DDR, bukan asumsi</h2>
+<div class="tw"><table>
+<tr><th>Ukuran</th><th>Angka</th><th>Sumber</th></tr>
+<tr><td>Record aktivitas</td><td>23.447</td><td>data/volve/ddr.parquet kolom activity</td></tr>
+<tr><td>Total jam tercatat</td><td>39.397,986 jam</td><td>hitung ulang d30_start dan dTimEnd tiap record</td></tr>
+<tr><td>Interruption other</td><td>2.680,917 jam</td><td>proprietaryCode "interruption -- other"</td></tr>
+<tr><td>Interruption waiting on weather</td><td>1.925,5 jam</td><td>proprietaryCode "interruption -- waiting on weather"</td></tr>
+<tr><td>Henti karena equipment failure</td><td>2.739,667 jam</td><td>stateDetailActivity pada kode interruption</td></tr>
+<tr><td>Henti karena stuck equipment</td><td>212,0 jam</td><td>stateDetailActivity pada kode interruption</td></tr>
+<tr><td>Henti karena circulation loss</td><td>195,0 jam</td><td>stateDetailActivity pada kode interruption</td></tr>
+</table></div>
+<p class="ket">Jam henti tidak dapat dipetakan ke satu alarm tertentu: tidak ada kunci bit atau nomor work order yang menghubungkan alarm ke record DDR. Karena itu angka ini dipakai sebagai besaran konteks, bukan klaim penghematan.</p>
+
+<h2>Beban tinjauan per shift 8 jam (head peringatan)</h2>
+<div class="tw"><table>
+<tr><th>Mesin</th><th>Head</th><th>FAR per 24 jam</th><th>Tinjauan per shift</th></tr>
+<tr><td>vib</td><td><code>rule_display</code></td><td>49,942</td><td>17</td></tr>
+<tr><td>hyd</td><td><code>rule_display</code></td><td>55,570</td><td>19</td></tr>
+<tr><td>hyd</td><td><code>hybrid_rule_and_persistence</code> (head utama)</td><td>16,611</td><td>6</td></tr>
+<tr><td>stuck</td><td><code>rule_display</code></td><td>8,321</td><td>3</td></tr>
+<tr><td>shk</td><td><code>rule_display</code></td><td>6,618</td><td>3</td></tr>
+<tr><td>tool_wear</td><td><code>op_far_calibrated</code></td><td>2,096</td><td>1</td></tr>
+<tr><td>ssi</td><td><code>rule_display</code></td><td>0,000</td><td>0</td></tr>
+</table></div>
+<p class="ket">Beban tinjauan = FAR per 24 jam dibagi 3 shift, dibulatkan ke atas. Angka FAR di sini adalah FAR segmen F-14 dari run prototipe, bukan median lintas fold.</p>
+
+<h2>Visualisasi hasil</h2>
+<section class="viz">
+<h3>Peta 27 head per mesin</h3>
+<img src="viz1_peta_27_head.png" alt="Peta 27 head per mesin">
+<p class="ket">Tiap batang = satu mesin, warna = tier pemakaian. Peringatan (jingga) = siap memberi peringatan berpengawas; tren (hijau) = hanya skor urutan; ungu = kepala yang memang belum tersedia.</p>
+</section><section class="viz">
+<h3>Susunan output untuk pengguna</h3>
+<img src="viz2_lapisan_keputusan.png" alt="Susunan output untuk pengguna">
+<p class="ket">Alat membagi output ke 4 lapisan: status otomatis, peringatan berpengawas, skor tren, dan keputusan manusia. Keputusan akhir selalu di tangan insinyur pengeboran.</p>
+</section><section class="viz">
+<h3>Daya deteksi model vs baseline</h3>
+<img src="viz3_auprc_per_fold.png" alt="Daya deteksi model vs baseline">
+<p class="ket">Kotak = sebaran AUPRC antar fold LOWO. Tiap model dibandingkan ke baseline yang relevan dengannya (persistence, canary-kedalaman, prevalensi acak). Garis putus-putus = prevalensi kelas.</p>
+</section><section class="viz">
+<h3>Sebaran alarm palsu antar sumur</h3>
+<img src="viz4_far_spread.png" alt="Sebaran alarm palsu antar sumur">
+<p class="ket">FAR RF pada tau yang sama berbeda tajam antar sumur (skala log). Garis jingga = batas FAR≤6/24jam. Inilah alasan ambang tidak boleh diseragamkan lintas sumur.</p>
+</section><section class="viz">
+<h3>Nilai konfirmasi dua langkah</h3>
+<img src="viz5_pemangkasan_fp.png" alt="Nilai konfirmasi dua langkah">
+<p class="ket">Hibrida (rule AND persistence) memotong alarm palsu dibanding rule saja. Persentase = pemotongan FP kumulatif pada 5 kelas status.</p>
+</section><section class="viz">
+<h3>Kualitas peringatan dini stuck</h3>
+<img src="viz6_waktu_peringatan.png" alt="Kualitas peringatan dini stuck">
+<p class="ket">Kiri: fraksi onset tertangkap (B1). Kanan: waktu peringatan vs anchor preseden 2,67–7,37 menit. Batang abu = hindsight (bukan peringatan sah).</p>
+</section>
+</main>
+<footer>
+Sumber data: <code>scratch/v9_i1/v9_i1_RESULTS.json</code>, <code>scratch/v9_e_ml/*_RESULTS.json</code>,
+<code>scratch/v9_e_rule/*.json</code>. Semua angka dari eksekusi nyata (seed 42, verifier 13/13 PASS).
+Dashboard statis: hasil run tersimpan, bukan live feed.
+</footer>
+</body>
+</html>

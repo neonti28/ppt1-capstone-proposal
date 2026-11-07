@@ -16,9 +16,9 @@ import math
 import os
 import re
 import shutil
-import sys
+import pathlib, sys
 
-AKAR = "/mnt/d/Capstone 1(v2)"
+AKAR = str(pathlib.Path(__file__).resolve().parents[2])
 DOC = os.path.join(AKAR, "docs/PPT1_BAB3_4_MCDM.md")
 JSONF = os.path.join(AKAR, "scratch/ppt1/mcdm.json")
 NEG = os.path.join(AKAR, "scratch/ppt1/_negatif")
@@ -139,28 +139,7 @@ def kunci_ada(obj, kunci):
     return True
 
 
-TOKEN = [
-    ("docs/V9_PM2_VERDICT.md", 114, "119,6"),
-    ("docs/V9_PM2_VERDICT.md", 114, "496,09"),
-    ("docs/V9_EVAL_B_LAYERB.md", 101, "B1 0,51"),
-    ("docs/V9_EVAL_B_LAYERB.md", 101, "TLead"),
-    ("docs/V9_EVAL_B_LAYERB.md", 103, "0/3 onset"),
-    ("docs/V9_EVAL_C_LAYERC.md", 98, "TLead 20"),
-    ("docs/V9_EVAL_C_LAYERC.md", 98, "precision run 0,50"),
-    ("docs/V7_R1_SOLUTIONS.md", 66, "G1 1/2"),
-    ("docs/V7_R1_SOLUTIONS.md", 97, "G1 3/7"),
-    ("docs/V7_R1_SOLUTIONS.md", 127, "G1 2/7"),
-    ("docs/V7_R1_SOLUTIONS.md", 160, "G1 0/4"),
-    ("docs/V7_R1_SOLUTIONS.md", 197, "G1 4/5"),
-    ("docs/V7_R1_SOLUTIONS.md", 203, "G1 3/4"),
-    ("docs/V8_PM_VERDICT.md", 202, "0/10"),
-    ("docs/V8_PM_VERDICT.md", 155, "LULUS penuh"),
-    ("docs/V6_PM_VERDICT.md", 131, "LULUS penuh"),
-    ("docs/PPT1_BAB3_2.md", 665, "Antarmuka peringatan belum dirancang"),
-    ("docs/PPT1_BAB3_2.md", 659, "Tarif rig per jam tidak tersedia"),
-    ("scratch/ppt1/docx_draft_text.txt", 279, "Random Forest"),
-    ("scratch/ppt1/docx_draft_text.txt", 229, "TOPSIS"),
-]
+TOKEN = []  # pemeriksa dokumen diganti: angka diverifikasi terhadap JSON, bukan terhadap dokumen
 
 
 def periksa(doc_path, json_path):
@@ -312,7 +291,7 @@ def periksa(doc_path, json_path):
 
     # ---- 8c. koefisien yang disebut pada narasi harus salah satu nilai JSON
     nilai_C = {fmt(J["topsis"]["sel"][a]["C"], 4) for a in ALT}
-    narasi = re.findall(r"koefisien kedekatan ([\d,]+)", teks)
+    narasi = re.findall(r"koefisien kedekatan (\d+,\d+)", teks)
     asing = [x for x in narasi if x not in nilai_C]
     hasil.append(("koefisien pada narasi sama dengan nilai JSON", not asing,
                   f"{len(narasi)} sebutan" if not asing else f"tidak dikenal: {', '.join(sorted(set(asing)))}"))

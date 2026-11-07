@@ -2,16 +2,9 @@
 
 ## Subbab 3.2 Analisis Alternatif Solusi dan Subbab 3.3 Kriteria dan Batasan
 
-| Kendali dokumen | Keterangan |
-|---|---|
-| Dokumen | Proposal Proyek Perancangan Terpadu I, BAB III subbab 3.2 dan 3.3 |
-| Mitra | PT Halliburton Indonesia, divisi Sperry Drilling |
-| Versi | 1.0, 25 Oktober 2026 |
-| Status | Berjalan. Subbab 3.1 sudah selesai, subbab 3.4 belum disusun. |
-| Acuan format | Buku Pedoman PPT Tahap I subbab 3.2 Format Proposal, halaman 33 sampai 36 |
-| Acuan rubrik | Rubrik Penilaian PPT oleh Dosen, halaman 38 dan berikutnya, butir 2.2, 3.1, 3.2, 3.3 |
-| Acuan BoK | Buku Pedoman PPT Tahap I Tabel 2.1, empat belas IEBoK, selaras IISE ISEBoK 2021 |
-| Identitas anggota | Diisi tim. Dokumen ini tidak mengarang nama maupun NIM. |
+- Acuan format: Buku Pedoman PPT Tahap I subbab 3.2 Format Proposal, halaman 33 sampai 36
+- Acuan BoK: Buku Pedoman PPT Tahap I Tabel 2.1, empat belas IEBoK, selaras IISE ISEBoK 2021
+
 
 ### 3.2.1 Dasar analisis dan aturan bukti
 
@@ -43,13 +36,13 @@ Hasil akhirnya empat klaster, dengan sebaran tiga, dua, dua, dan dua alternatif.
 ### 3.2.3 Peta afinitas empat klaster
 
 | Klaster | Nama klaster | Prinsip pengelompokan | Anggota | Masalah | BoK | Status |
-|---|---|---|---|---|---|---|
+| --- | --- | --- | --- | --- | --- | --- |
 | K1 | Definisi target dan mutu label | Ketiga alternatif mengubah apa yang dihitung sebagai kejadian positif, atau menguji kebenaran label yang sudah ada. Tidak ada yang mengubah model dan tidak ada yang menambah data baru. | A1, A3, A8 | P1, P3, P5, P7 | 14, 11, 5, 10 | A1 Berjalan, A3 Rencana, A8 Rencana |
 | K2 | Basis bukti dan unit analisis | Kedua alternatif mengubah jumlah dan satuan bukti, yaitu berapa sumur yang masuk dan satu unit analisis sama dengan apa. Definisi label dan bentuk model tidak diubah. | A2, A4 | P2, P6 | 5, 7, 11, 14 | A2 Berjalan, A4 Rencana |
 | K3 | Formulasi model dan evaluasi | Kedua alternatif mempertahankan himpunan data dan label, lalu mengubah bentuk hipotesis dan cara evaluasinya. Gate biner tetap dihitung pada ambang yang sama. | A5, A6 | P6, P7, P9, P3 | 2, 3, 5, 11 | A5 Rencana, A6 Rencana |
 | K4 | Sinyal fisik dan titik operasi keputusan | Kedua alternatif bekerja pada sinyal dan pada titik tempat keluaran menyala, yaitu ambang, kalibrasi, purwarupa peringatan, dan urutan prioritas. Definisi label global tidak diubah. | A7, A9 | P8, P1, P4 | 1, 3, 5, 6, 12, 14 | A7 Berjalan, A9 Rencana |
 
-Tabel di atas memuat seluruh sembilan alternatif tepat satu kali. Pemeriksaan otomatis pada `scratch/ppt1/check_bab3_2.py` menolak dokumen ini bila ada alternatif yang tidak masuk klaster atau masuk lebih dari satu klaster.
+Tabel di atas memuat seluruh sembilan alternatif tepat satu kali. Pemeriksaan otomatis pada  menolak dokumen ini bila ada alternatif yang tidak masuk klaster atau masuk lebih dari satu klaster.
 
 ### 3.2.4 Rincian setiap klaster
 
@@ -70,18 +63,18 @@ Tabel di atas memuat seluruh sembilan alternatif tepat satu kali. Pemeriksaan ot
 **Angka penentu.**
 
 | Keterangan | Nilai | Jejak |
-|---|---|---|
-| B1 dan TLead stuck K-ii setelah label onset | B1 0,51 sampai 1,00 dan TLead 10 sampai 11,5 menit pada titik operasi 0,05 | `docs/V9_EVAL_B_LAYERB.md:101` |
-| Hasil negatif label onset pada hyd | 0 dari 3 onset terdeteksi, TLead nol | `docs/V9_EVAL_B_LAYERB.md:103` |
-| Kontrol-positif label stuck | 0 dari 10 | `docs/V8_PM_VERDICT.md:202` |
-| Kanal sumber label fisika | GAINLOSSTOT 575 dan 517 berkas, PITTOT 565 dan 506, FLOWOUT 688, FLOWOUTPC 949 | `docs/V7_R1_SOLUTIONS.md:37-38` |
-| Basis label kurasi | 884 kejadian, 50 relevan BHA, total durasi 73.500 menit atau 1.225 jam | `docs/PPT1_LEDGER_ANGKA.md:145, 193` |
+| --- | --- | --- |
+| B1 dan TLead stuck K-ii setelah label onset | B1 0,51 sampai 1,00 dan TLead 10 sampai 11,5 menit pada titik operasi 0,05 |  |
+| Hasil negatif label onset pada hyd | 0 dari 3 onset terdeteksi, TLead nol |  |
+| Kontrol-positif label stuck | 0 dari 10 |  |
+| Kanal sumber label fisika | GAINLOSSTOT 575 dan 517 berkas, PITTOT 565 dan 506, FLOWOUT 688, FLOWOUTPC 949 |  |
+| Basis label kurasi | 884 kejadian, 50 relevan BHA, total durasi 73.500 menit atau 1.225 jam |  |
 
 **Relasi dengan klaster lain.**
 
-- Keluar ke K4 dengan jenis prasyarat. Kalibrasi ambang menyetel keluaran terhadap kebenaran label. Bila label salah, hasil kalibrasi berupa presisi palsu. Jejak: `docs/V4_MAINTENANCE_ML_OPTIONS.md:164`.
-- Keluar ke K3 dengan jenis prasyarat. Skala severitas 0 sampai 3 dan label waktu hanya bermakna bila semantik label sudah dikunci lebih dahulu. Jejak: `docs/V4_MAINTENANCE_ML_OPTIONS.md:145`.
-- Masuk dari K2. Sumur baru memasok jumlah positif yang dipakai untuk mengaudit dan mengunci varian label. Jejak: `docs/V7_R1_SOLUTIONS.md:43-48`.
+- Keluar ke K4 dengan jenis prasyarat. Kalibrasi ambang menyetel keluaran terhadap kebenaran label. Bila label salah, hasil kalibrasi berupa presisi palsu. Jejak: .
+- Keluar ke K3 dengan jenis prasyarat. Skala severitas 0 sampai 3 dan label waktu hanya bermakna bila semantik label sudah dikunci lebih dahulu. Jejak: .
+- Masuk dari K2. Sumur baru memasok jumlah positif yang dipakai untuk mengaudit dan mengunci varian label. Jejak: .
 
 **Risiko bila klaster dipilih sendirian.** Bila klaster ini dipilih sendirian, label menjadi benar tetapi tidak ada titik operasi yang dipakai, sehingga tidak ada keluaran yang bisa dipakai di rig. Perbaikan label tanpa kalibrasi hanya memperbaiki angka evaluasi.
 
@@ -103,17 +96,17 @@ Tabel di atas memuat seluruh sembilan alternatif tepat satu kali. Pemeriksaan ot
 **Angka penentu.**
 
 | Keterangan | Nilai | Jejak |
-|---|---|---|
-| Kanal disfungsi pada empat wellbore yang belum diparse | F-10 SHKRSK_RT 188, CRPM_RT 186, STKSLP 125, VIBLAT_RT 66, STUCK_RT 18; F-4 135/135/135/86; F-12 91/90/52/6; F-15 77/76/76/76 | `docs/V7_R1_SOLUTIONS.md:45-48` |
-| Baris CRPM hasil parse | 281.030 / 42.010 / 178.430 / 57.846 baris, re-run 11 fold belum dijalankan | `docs/V9_PM1_ARCHITECTURE.md:186` |
-| Fold underpowered yang diserang | F-7 tiga positif, F-9 dua belas positif, F-9_A lift 1,47 gagal tipis | `docs/V9_PM1_ARCHITECTURE.md:186` |
-| Prevalensi unit stand | 10 sampai 40 persen, berstatus perkiraan desain dan belum dihitung | `docs/V7_R1_SOLUTIONS.md:111` |
-| Batas stand tanpa akuisisi baru | Dapat diturunkan dari BPOS dan celah waktu pada CSV yang sudah ada | `docs/V7_R1_SOLUTIONS.md:112` |
+| --- | --- | --- |
+| Kanal disfungsi pada empat wellbore yang belum diparse | F-10 SHKRSK_RT 188, CRPM_RT 186, STKSLP 125, VIBLAT_RT 66, STUCK_RT 18; F-4 135/135/135/86; F-12 91/90/52/6; F-15 77/76/76/76 |  |
+| Baris CRPM hasil parse | 281.030 / 42.010 / 178.430 / 57.846 baris, re-run 11 fold belum dijalankan |  |
+| Fold underpowered yang diserang | F-7 tiga positif, F-9 dua belas positif, F-9_A lift 1,47 gagal tipis |  |
+| Prevalensi unit stand | 10 sampai 40 persen, berstatus perkiraan desain dan belum dihitung |  |
+| Batas stand tanpa akuisisi baru | Dapat diturunkan dari BPOS dan celah waktu pada CSV yang sudah ada |  |
 
 **Relasi dengan klaster lain.**
 
-- Keluar ke K1 dengan jenis penyuplai bukti. Sumur baru memasok jumlah positif yang dipakai untuk mengaudit dan mengunci varian label. Jejak: `docs/V7_R1_SOLUTIONS.md:43-48`.
-- Keluar ke K3 dengan jenis penyuplai bukti. Jumlah positif per fold menentukan lebar selang kepercayaan, sehingga menentukan apakah estimasi ordinal dan survival layak dilaporkan. Jejak: `docs/V7_R1_SOLUTIONS.md:197`.
+- Keluar ke K1 dengan jenis penyuplai bukti. Sumur baru memasok jumlah positif yang dipakai untuk mengaudit dan mengunci varian label. Jejak: .
+- Keluar ke K3 dengan jenis penyuplai bukti. Jumlah positif per fold menentukan lebar selang kepercayaan, sehingga menentukan apakah estimasi ordinal dan survival layak dilaporkan. Jejak: .
 
 **Risiko bila klaster dipilih sendirian.** A2 sudah menghasilkan baris data terukur tetapi dampaknya terhadap gate belum terukur karena re-run fold belum dijalankan. A4 berisiko mengubah arti gate secara diam-diam, karena horizon prediksi melebar dari sepuluh menit menjadi stand berikutnya.
 
@@ -135,17 +128,17 @@ Tabel di atas memuat seluruh sembilan alternatif tepat satu kali. Pemeriksaan ot
 **Angka penentu.**
 
 | Keterangan | Nilai | Jejak |
-|---|---|---|
-| Kinerja ssi dan dua fold underpowered | G1 4 dari 5, G2 5 dari 5, persistence 0 dari 5, F-7 tiga positif, F-9 dua belas positif | `docs/V7_R1_SOLUTIONS.md:197` |
-| Posisi survival menurut penulis solusi | Mengubah formulasi tanpa menambah informasi, sehingga diposisikan sebagai opsi pembanding dan bukan solusi primer | `docs/V7_R1_SOLUTIONS.md:152` |
-| Berkas bhaRun tanpa label keausan fisik | 77 berkas tanpa dullingInfo, dullGrade, maupun bitName | `docs/V4_MAINTENANCE_ML_OPTIONS.md:62` |
-| Klasifikasi severitas stick-slip sudah mapan | Sitasi Hegde 2019, doi 10.1016/j.petrol.2019.05.021 | `docs/V7_R1_SOLUTIONS.md:197` |
-| Ambang underpowered | Fold dengan kurang dari 30 positif dilabeli UNDERPOWERED dan tidak dihitung sebagai mayoritas | `docs/ML_PROJECT_PROPOSAL_TECHNICAL_DESIGN.md:158` |
+| --- | --- | --- |
+| Kinerja ssi dan dua fold underpowered | G1 4 dari 5, G2 5 dari 5, persistence 0 dari 5, F-7 tiga positif, F-9 dua belas positif |  |
+| Posisi survival menurut penulis solusi | Mengubah formulasi tanpa menambah informasi, sehingga diposisikan sebagai opsi pembanding dan bukan solusi primer |  |
+| Berkas bhaRun tanpa label keausan fisik | 77 berkas tanpa dullingInfo, dullGrade, maupun bitName |  |
+| Klasifikasi severitas stick-slip sudah mapan | Sitasi Hegde 2019, doi 10.1016/j.petrol.2019.05.021 |  |
+| Ambang underpowered | Fold dengan kurang dari 30 positif dilabeli UNDERPOWERED dan tidak dihitung sebagai mayoritas |  |
 
 **Relasi dengan klaster lain.**
 
-- Masuk dari K2. Jumlah positif per fold menentukan lebar selang kepercayaan, sehingga menentukan apakah estimasi ordinal dan survival layak dilaporkan. Jejak: `docs/V7_R1_SOLUTIONS.md:197`.
-- Masuk dari K1. Skala severitas 0 sampai 3 dan label waktu hanya bermakna bila semantik label sudah dikunci lebih dahulu. Jejak: `docs/V4_MAINTENANCE_ML_OPTIONS.md:145`.
+- Masuk dari K2. Jumlah positif per fold menentukan lebar selang kepercayaan, sehingga menentukan apakah estimasi ordinal dan survival layak dilaporkan. Jejak: .
+- Masuk dari K1. Skala severitas 0 sampai 3 dan label waktu hanya bermakna bila semantik label sudah dikunci lebih dahulu. Jejak: .
 
 **Risiko bila klaster dipilih sendirian.** A6 berisiko menjadi pengulangan berbiaya, karena mengubah formulasi tanpa menambah informasi. A5 tidak menambah kelas, sehingga tidak dapat menggantikan A1 atau A2 sebagai perbaikan akar.
 
@@ -167,20 +160,20 @@ Tabel di atas memuat seluruh sembilan alternatif tepat satu kali. Pemeriksaan ot
 **Angka penentu.**
 
 | Keterangan | Nilai | Jejak |
-|---|---|---|
-| Deteksi titik ubah alat bengkel | 4 dari 4 alat, TLead 20 sampai 36 detik atau 1,8 kali, presisi run 0,50 | `docs/V9_EVAL_C_LAYERC.md:98` |
-| False alarm terkalibrasi per alat | 1 sampai 3 per alat | `docs/V9_EVAL_C_LAYERC.md:98` |
-| Baseline ranking lintas alat | AUPRC 0,516 sampai 0,612 atau 1,19 kali, engine Random Forest belum dijalankan | `docs/V9_EVAL_C_LAYERC.md:99` |
-| Sebaran false alarm antar sumur pada ambang global | 4,15 sampai 496,09 per 24 jam, rasio 119,6 kali | `docs/V9_PM2_VERDICT.md:114` |
-| Kanal permukaan frekuensi tinggi yang tersedia | TSPP 52.905 baris pada empat berkas | `docs/V10_D1_BAB_DATA.md:86, 296` |
-| Kelayakan pemantauan menurut ambang operator | FAR maksimal 6 per 24 jam, setara satu pemeriksaan driller per empat jam | `docs/V8_R1_ABC_SPEC.md:240` |
-| Keluaran screening shk saat ini | FAR 18 sampai 63 per 24 jam pada titik operasi 0,05 sampai 0,10, presisi 0,00 sampai 0,12 | `docs/V8_E_shk_CAPABILITY.md:106` |
+| --- | --- | --- |
+| Deteksi titik ubah alat bengkel | 4 dari 4 alat, TLead 20 sampai 36 detik atau 1,8 kali, presisi run 0,50 |  |
+| False alarm terkalibrasi per alat | 1 sampai 3 per alat |  |
+| Baseline ranking lintas alat | AUPRC 0,516 sampai 0,612 atau 1,19 kali, engine Random Forest belum dijalankan |  |
+| Sebaran false alarm antar sumur pada ambang global | 4,15 sampai 496,09 per 24 jam, rasio 119,6 kali |  |
+| Kanal permukaan frekuensi tinggi yang tersedia | TSPP 52.905 baris pada empat berkas |  |
+| Kelayakan pemantauan menurut ambang operator | FAR maksimal 6 per 24 jam, setara satu pemeriksaan driller per empat jam |  |
+| Keluaran screening shk saat ini | FAR 18 sampai 63 per 24 jam pada titik operasi 0,05 sampai 0,10, presisi 0,00 sampai 0,12 |  |
 
 **Kasus batas.** A7 menyentuh dua klaster. Mekanisme label progresi di dalam A7 membentuk label dari titik ubah, sehingga ia juga menyentuh K1. Penempatan pada K4 memakai mekanisme dominan, yaitu titik operasi dan anggaran alarm, dan hubungan silang ini dinyatakan terbuka, bukan disembunyikan.
 
 **Relasi dengan klaster lain.**
 
-- Masuk dari K1. Kalibrasi ambang menyetel keluaran terhadap kebenaran label. Bila label salah, hasil kalibrasi berupa presisi palsu. Jejak: `docs/V4_MAINTENANCE_ML_OPTIONS.md:164`.
+- Masuk dari K1. Kalibrasi ambang menyetel keluaran terhadap kebenaran label. Bila label salah, hasil kalibrasi berupa presisi palsu. Jejak: .
 
 **Risiko bila klaster dipilih sendirian.** Bila dipilih sebelum label dibereskan, klaster ini menghasilkan alarm yang rapi secara statistik tetapi menunjuk peristiwa yang salah. Bukti pendukungnya sudah ada pada tingkat label, yaitu kontrol-positif 0 dari 10.
 
@@ -191,7 +184,7 @@ Tabel di atas memuat seluruh sembilan alternatif tepat satu kali. Pemeriksaan ot
 **Cakupan masalah.**
 
 | Masalah | K1 | K2 | K3 | K4 | Jumlah klaster |
-|---|---|---|---|---|---|
+| --- | --- | --- | --- | --- | --- |
 | P1 | ya | - | - | ya | 2 |
 | P2 | - | ya | - | - | 1 |
 | P3 | ya | - | ya | - | 2 |
@@ -207,7 +200,7 @@ Sembilan masalah P1 sampai P9 seluruhnya tercakup oleh empat klaster, yaitu 9 ma
 **Cakupan BoK per klaster.**
 
 | Klaster | BoK 1 | BoK 2 | BoK 3 | BoK 4 | BoK 5 | BoK 6 | BoK 7 | BoK 8 | BoK 9 | BoK 10 | BoK 11 | BoK 12 | BoK 13 | BoK 14 |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | K1 | - | - | - | - | ya | - | - | - | - | ya | ya | - | - | ya |
 | K2 | - | - | - | - | ya | - | ya | - | - | - | ya | - | - | ya |
 | K3 | - | ya | ya | - | ya | - | - | - | - | - | ya | - | - | - |
@@ -218,7 +211,7 @@ Sepuluh dari empat belas BoK tersentuh, yaitu 10 BoK. Empat BoK yang belum terse
 **Lapisan intervensi.** Lapisan memakai pembagian yang sama dengan subbab 3.1, supaya pembacaan tetap konsisten.
 
 | Lapisan | Nama lapisan | Klaster | Anggota lapisan |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | L1 | Data dan label | K1, K2 | A1, A3, A8, A2, A4 |
 | L2 | Formulasi model dan evaluasi | K2, K3 | A2, A4, A5, A6 |
 | L3 | Sinyal fisik dan operasi | K4 | A7, A9 |
@@ -227,14 +220,14 @@ K1 seluruhnya berada pada lapisan data dan label. K3 seluruhnya berada pada lapi
 
 ### 3.2.6 Struktur klaster untuk diagram G1
 
-Bagian ini adalah serahan untuk kartu diagram, supaya gambar tidak mengarang isi. Seluruh nilainya juga tersedia sebagai JSON pada `scratch/ppt1/affinity.json` dengan kunci `g1`.
+Bagian ini adalah serahan untuk kartu diagram, supaya gambar tidak mengarang isi. Seluruh nilainya juga tersedia sebagai JSON pada  dengan kunci `g1`.
 
 Kanvas: A4 landscape, 11,69 kali 8,27 inci, 200 dpi.
 
 **Node klaster.**
 
 | Id | Label | Warna | Anggota | Teks ringkas | Posisi x | Posisi y |
-|---|---|---|---|---|---|---|
+| --- | --- | --- | --- | --- | --- | --- |
 | K1 | Target dan mutu label | #2563eb | A1, A3, A8 | Mengubah apa yang dihitung sebagai kejadian atau menguji kebenaran label | 0.5 | 3.2 |
 | K2 | Basis bukti dan unit analisis | #059669 | A2, A4 | Mengubah jumlah sumur dan satuan unit analisis | 6.3 | 3.2 |
 | K3 | Formulasi model dan evaluasi | #7c3aed | A5, A6 | Mengubah bentuk hipotesis dan rigor evaluasi | 0.5 | 6.6 |
@@ -243,7 +236,7 @@ Kanvas: A4 landscape, 11,69 kali 8,27 inci, 200 dpi.
 **Node alternatif.**
 
 | Id | Label pendek | Klaster | Status |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | A1 | Onset peristiwa | K1 | Berjalan |
 | A3 | Audit mutu label | K1 | Rencana |
 | A8 | Label fisika | K1 | Rencana |
@@ -257,7 +250,7 @@ Kanvas: A4 landscape, 11,69 kali 8,27 inci, 200 dpi.
 **Edge antar klaster.**
 
 | Dari | Ke | Label | Gaya garis |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | K1 | K4 | prasyarat label sebelum kalibrasi | putus-putus |
 | K2 | K1 | penyuplai positif | putus-putus |
 | K2 | K3 | penyuplai positif per fold | putus-putus |
@@ -280,7 +273,7 @@ Kanvas: A4 landscape, 11,69 kali 8,27 inci, 200 dpi.
 Empat BoK didalami, bukan sepuluh. Alasannya: BoK 14 dan BoK 3 wajib muncul karena pedoman menetapkan rantai BoK dimulai dari BoK 14 dan berakhir pada BoK 3, sedangkan BoK 5 dan BoK 11 dipilih karena frekuensi pemakaiannya paling tinggi pada sembilan alternatif. Empat BoK yang didalami ini masing-masing membawa peran, keputusan, standar, angka, dan batas. BoK lain yang hanya muncul sekali dicatat pada 3.2.8 dan tidak dipaksakan menjadi pendalaman semu.
 
 | BoK | Nama | Peran satu baris | Jumlah alternatif | Status pendalaman |
-|---|---|---|---|---|
+| --- | --- | --- | --- | --- |
 | 14 | Systems Design & Engineering | Menetapkan batas sistem, fungsi yang diprediksi, dan arsitektur keputusan sebelum satu alternatif pun dipilih. | 4 | didalami |
 | 11 | Information Engineering | Mengelola rantai data menjadi label menjadi fitur menjadi keluaran informasi, dan menetapkan bahwa akurasi sistem informasi diukur dari kebenaran label, bukan hanya dari metrik model. | 6 | didalami |
 | 5 | Quality & Reliability Engineering | Menetapkan metrik, baseline pembanding, dan aturan pengujian yang dikunci sebelum eksekusi, lalu melaporkan hasil negatif tanpa menghapusnya. | 8 | didalami |
@@ -305,12 +298,12 @@ Empat BoK didalami, bukan sepuluh. Alasannya: BoK 14 dan BoK 3 wajib muncul kare
 **Angka penentu.**
 
 | Keterangan | Nilai | Jejak |
-|---|---|---|
-| Tiga angka pengikat alat | 7 mode, 11 klaim, 27 head | `docs/ML_PROJECT_PROPOSAL_TECHNICAL_DESIGN.md:57` |
-| Lapisan keputusan L0 sampai L3 | 5 / 11 / 9 / 2 sama dengan 27 | `docs/ML_PROJECT_PROPOSAL_TECHNICAL_DESIGN.md:3142` |
-| Head dengan review manusia wajib | 13 dari 27 | `scratch/v9_i1/v9_i1_RESULTS.json kunci engines, dalam daftar heads, kunci human_review_required` |
-| Head yang berstatus belum layak pakai | 2 dari 27 | `scratch/v9_i1/v9_i1_RESULTS.json kunci engines, nilai tier BELUM LAYAK PAKAI` |
-| Sumber terpetakan tepat satu kali | 22 sumber ke 9 alternatif, nol duplikat | `scratch/ppt1/alternatif.json kunci peta_sumber` |
+| --- | --- | --- |
+| Tiga angka pengikat alat | 7 mode, 11 klaim, 27 head |  |
+| Lapisan keputusan L0 sampai L3 | 5 / 11 / 9 / 2 sama dengan 27 |  |
+| Head dengan review manusia wajib | 13 dari 27 |  |
+| Head yang berstatus belum layak pakai | 2 dari 27 |  |
+| Sumber terpetakan tepat satu kali | 22 sumber ke 9 alternatif, nol duplikat |  |
 
 **Alternatif yang memakai BoK ini.** Seluruh alternatif A1 sampai A9 memakai BoK ini. Beban terberat ada pada A1 yang mendefinisikan ulang target, dan pada A2 serta A7 yang harus mengintegrasikan domain berbeda ke satu protokol evaluasi.
 
@@ -340,13 +333,13 @@ Empat BoK didalami, bukan sepuluh. Alasannya: BoK 14 dan BoK 3 wajib muncul kare
 **Angka penentu.**
 
 | Keterangan | Nilai | Jejak |
-|---|---|---|
-| Baris CRPM hasil parse empat wellbore | 281.030 / 42.010 / 178.430 / 57.846 baris | `docs/V9_PM1_ARCHITECTURE.md:186` |
-| Volume TSPP | 52.905 baris pada empat berkas | `docs/V10_D1_BAB_DATA.md:86, 296` |
-| Basis label kurasi | 884 kejadian, 50 relevan BHA, 73.500 menit atau 1.225 jam | `docs/PPT1_LEDGER_ANGKA.md:145, 193` |
-| Kontrol-positif label stuck | 0 dari 10 | `docs/V8_PM_VERDICT.md:202` |
-| Sumber data keseluruhan | Lapangan Volve terbuka dan empat set data eksternal terverifikasi | `docs/ML_PROJECT_PROPOSAL_TECHNICAL_DESIGN.md:12` |
-| Batas muktamad cakupan data | Satu lapangan, domain bengkel berbeda dari rig, label hyd K-ii masih proksi | `docs/ML_PROJECT_PROPOSAL_TECHNICAL_DESIGN.md:327` |
+| --- | --- | --- |
+| Baris CRPM hasil parse empat wellbore | 281.030 / 42.010 / 178.430 / 57.846 baris |  |
+| Volume TSPP | 52.905 baris pada empat berkas |  |
+| Basis label kurasi | 884 kejadian, 50 relevan BHA, 73.500 menit atau 1.225 jam |  |
+| Kontrol-positif label stuck | 0 dari 10 |  |
+| Sumber data keseluruhan | Lapangan Volve terbuka dan empat set data eksternal terverifikasi |  |
+| Batas muktamad cakupan data | Satu lapangan, domain bengkel berbeda dari rig, label hyd K-ii masih proksi |  |
 
 **Alternatif yang memakai BoK ini.** A1, A2, A3, A4, A5, dan A8 memakai BoK ini. A2 adalah pekerjaan akuisisi dan pengelolaan data. A3 adalah audit kebenaran label. A8 adalah penurunan label dari kanal fisika. A1, A4, dan A5 memakainya karena setiap perubahan label atau agregasi mengubah keluaran informasi.
 
@@ -374,16 +367,16 @@ Empat BoK didalami, bukan sepuluh. Alasannya: BoK 14 dan BoK 3 wajib muncul kare
 **Angka penentu.**
 
 | Keterangan | Nilai | Jejak |
-|---|---|---|
-| Gate shk | G1 3 dari 7, G2 6 dari 7 | `docs/V7_R1_SOLUTIONS.md:97` |
-| Gate hyd | G1 2 dari 7, G2 4 dari 7, persistence menang pada 7 dari 7 fold | `docs/V7_R1_SOLUTIONS.md:127` |
-| Gate tool_wear | G1 0 dari 4, G2 4 dari 4 | `docs/V7_R1_SOLUTIONS.md:160` |
-| Gate ssi | G1 4 dari 5, G2 5 dari 5, F-7 tiga positif, F-9 dua belas positif | `docs/V7_R1_SOLUTIONS.md:197` |
-| Gate bit_wear | G1 3 dari 4, G2 4 dari 4, persistence menang pada 4 dari 4 fold | `docs/V7_R1_SOLUTIONS.md:203` |
-| Stuck K-ii pada titik operasi 0,05 | B1 0,51 sampai 1,00, TLead 10 sampai 11,5 menit | `docs/V9_EVAL_B_LAYERB.md:101` |
-| Hyd K-ii | 0 dari 3 onset, TLead nol | `docs/V9_EVAL_B_LAYERB.md:103` |
-| Tool_wear K-i | 4 dari 4 alat, TLead 20 sampai 36 detik, false positive 1 sampai 3 per alat | `docs/V9_EVAL_C_LAYERC.md:98` |
-| Sebaran false alarm antar sumur | 4,15 sampai 496,09 per 24 jam, rasio 119,6 kali | `docs/V9_PM2_VERDICT.md:114` |
+| --- | --- | --- |
+| Gate shk | G1 3 dari 7, G2 6 dari 7 |  |
+| Gate hyd | G1 2 dari 7, G2 4 dari 7, persistence menang pada 7 dari 7 fold |  |
+| Gate tool_wear | G1 0 dari 4, G2 4 dari 4 |  |
+| Gate ssi | G1 4 dari 5, G2 5 dari 5, F-7 tiga positif, F-9 dua belas positif |  |
+| Gate bit_wear | G1 3 dari 4, G2 4 dari 4, persistence menang pada 4 dari 4 fold |  |
+| Stuck K-ii pada titik operasi 0,05 | B1 0,51 sampai 1,00, TLead 10 sampai 11,5 menit |  |
+| Hyd K-ii | 0 dari 3 onset, TLead nol |  |
+| Tool_wear K-i | 4 dari 4 alat, TLead 20 sampai 36 detik, false positive 1 sampai 3 per alat |  |
+| Sebaran false alarm antar sumur | 4,15 sampai 496,09 per 24 jam, rasio 119,6 kali |  |
 
 **Alternatif yang memakai BoK ini.** Seluruh sembilan alternatif memakai BoK ini, karena gate dan baseline berlaku untuk semua. Beban terberat ada pada A5 yang menambah rigor evaluasi, dan pada A9 yang harus mengukur false alarm setelah kalibrasi.
 
@@ -410,23 +403,23 @@ Empat BoK didalami, bukan sepuluh. Alasannya: BoK 14 dan BoK 3 wajib muncul kare
 **Angka penentu.**
 
 | Keterangan | Nilai | Jejak |
-|---|---|---|
-| Basis durasi kejadian | 884 kejadian, 73.500 menit atau 1.225 jam | `docs/PPT1_LEDGER_ANGKA.md:145` |
-| Peringatan kalimat yang benar | 884 kejadian operasi, 50 relevan BHA, bukan 884 kejadian kerusakan | `docs/PPT1_LEDGER_ANGKA.md:193` |
-| Ambang kelayakan pemantauan | FAR maksimal 6 per 24 jam, setara satu pemeriksaan per empat jam | `docs/V8_R1_ABC_SPEC.md:240` |
-| Berkas bhaRun tanpa label keausan | 77 berkas tanpa dullingInfo, dullGrade, dan bitName | `docs/V4_MAINTENANCE_ML_OPTIONS.md:62` |
-| Posisi survival menurut penulis solusi | Mengubah formulasi tanpa menambah informasi | `docs/V7_R1_SOLUTIONS.md:152` |
+| --- | --- | --- |
+| Basis durasi kejadian | 884 kejadian, 73.500 menit atau 1.225 jam |  |
+| Peringatan kalimat yang benar | 884 kejadian operasi, 50 relevan BHA, bukan 884 kejadian kerusakan |  |
+| Ambang kelayakan pemantauan | FAR maksimal 6 per 24 jam, setara satu pemeriksaan per empat jam |  |
+| Berkas bhaRun tanpa label keausan | 77 berkas tanpa dullingInfo, dullGrade, dan bitName |  |
+| Posisi survival menurut penulis solusi | Mengubah formulasi tanpa menambah informasi |  |
 
 **Alternatif yang memakai BoK ini.** A6 memakai BoK ini secara langsung karena keputusan penarikan bit adalah keputusan biaya. A9 memakainya untuk menilai biaya false alarm dan penghematan rig time. A7 memakainya untuk memutuskan kapan penggantian alat bengkel layak.
 
 **Kegagalan yang terjadi bila BoK ini diabaikan.** Tanpa BoK 3, alternatif dipilih karena paling canggih. Contoh terukur: A6 menambah formulasi tanpa menambah informasi, sehingga biaya naik tanpa manfaat yang dapat ditunjukkan.
 
-**Batas pendalaman.** Tarif rig per jam tidak tersedia pada seluruh tiga belas dataset dan tidak ada pada dokumen keuangan mana pun di proyek ini. Karena itu nilai rupiah pada subbab 3.4 wajib diperlakukan sebagai asumsi dengan uji sensitivitas, dan tidak boleh ditulis sebagai hasil hitung.
+**Batas pendalaman.** Tarif rig per jam tidak tersedia pada seluruh tiga belas dataset dan tidak ada pada dokumen keuangan mana pun di proyek ini. Karena itu nilai rupiah pada 3.4 adalah asumsi: isinya adalah tarif dan kalangan biaya; dasarnya adalah angka dari publikasi luas karena tidak ada dokumen keuangan proyek; alasannya dipakai adalah agar ranking biaya dapat dibandingkan dengan manfaat; ujinya adalah analisis sensitivitas pada 3.4 yang menggeser tarif dan memeriksa apakah urutan ranking berubah.
 
 ### 3.2.8 Cakupan BoK terhadap alternatif
 
 | BoK | Nama | Jumlah alternatif | Alternatif |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | 1 | Work Design & Measurement | 1 | A9 |
 | 2 | Operations Research & Analysis | 2 | A5, A6 |
 | 3 | Engineering Economic Analysis | 2 | A6, A9 |
@@ -447,7 +440,7 @@ Rubrik penilaian memuat frasa bahwa alternatif solusi minimal tiga per BoK yang 
 ### 3.2.9 BoK yang belum disentuh dan alasan tidak dipaksakan
 
 | BoK | Nama | Alasan belum disentuh | Kandidat pengaitan | Rekomendasi |
-|---|---|---|---|---|
+| --- | --- | --- | --- | --- |
 | 4 | Facilities Engineering & Energy Management | Menuntut data tata letak rig atau bengkel, aliran material di lantai kerja, dan konsumsi energi. Tiga hal itu tidak ada pada tiga belas dataset yang diinventaris, sehingga pengaitan akan berupa definisi tanpa peran. | Tata letak area bengkel alat pada A7, bila foto atau denah bengkel tersedia dari mitra. | Dibiarkan terbuka. Jangan dipaksakan sampai ada data denah yang dapat dijejak. |
 | 8 | Supply Chain Management | Menuntut data persediaan bit dan alat, waktu pengadaan, dan hubungan pemasok. Tidak ada satu pun dari ketiganya di proyek ini. | Kebijakan penggantian bit pada A6, bila mitra memberi data persediaan dan waktu pengiriman. | Dibiarkan terbuka. Ini BoK yang paling lemah untuk dipaksakan karena nol data pendukung. |
 | 9 | Engineering Management | Sebenarnya ada bahan nyata, yaitu jadwal satu semester pada Tabel 3.1, pembagian tiga anggota, dan gate pra-registrasi. Yang belum ada adalah artefak manajemen proyek formal seperti register risiko dan jadwal rinci berbasis tonggak. | Register risiko proyek dan jadwal tonggak sebagai artefak pendukung, bukan sebagai alternatif solusi baru. | Kandidat paling jujur bila mentor menuntut BoK tambahan. Tambahkan hanya bersama artefaknya, yaitu register risiko dan jadwal tonggak, supaya tidak menjadi dekorasi. |
@@ -461,27 +454,27 @@ Subbab ini menyiapkan bahan untuk subbab 3.4, dan sengaja tidak menetapkan bobot
 
 ### 3.3.1 Kriteria pemilihan
 
-| Kode | Kriteria | Arah | Satuan | Status angka |
-|---|---|---|---|---|
-| C1 | Efektivitas deteksi pada gate yang sudah dikunci | benefit | lift dalam kali dan AUPRC | TERUKUR untuk baseline, sebagian untuk alternatif |
-| C2 | Kecukupan bukti per fold | benefit | jumlah fold teruji dan jumlah positif per fold | TERUKUR |
-| C3 | Portabilitas antar sumur | benefit | rasio false alarm rate maksimum dibagi minimum per 24 jam | TERUKUR sebelum kalibrasi, belum terukur sesudah kalibrasi |
-| C4 | Kepatuhan mode advisory tanpa alarm otomatis | benefit | jumlah slot alarm otomatis, target nol, dan jumlah head dengan review manusia | TERUKUR |
-| C5 | Kebutuhan akuisisi data baru | cost | jumlah wellbore atau berkas yang harus diproses | TERUKUR untuk kebutuhan data, jam kerja berstatus asumsi |
-| C6 | Waktu penyelesaian dalam satu semester | cost | minggu kerja | BAKU menurut pedoman, jam kerja per alternatif berstatus asumsi |
-| C7 | Ketertelusuran dan reproduksibilitas angka | benefit | jumlah klaim tanpa jejak, target nol | TERUKUR |
-| C8 | Beban kognitif keluaran | benefit | rubrik tiga tingkat | ASUMSI, karena rubrik ini disusun kartu ini dan belum divalidasi mitra |
+| Kode | Kriteria | Arah | Satuan | Dasar angka |
+| --- | --- | --- | --- | --- |
+| C1 | Efektivitas deteksi pada gate yang sudah dikunci | benefit | lift dalam kali dan AUPRC | terukur pada baseline, sebagian untuk alternatif |
+| C2 | Kecukupan bukti per fold | benefit | jumlah fold teruji dan jumlah positif per fold | terukur dari hasil uji |
+| C3 | Portabilitas antar sumur | benefit | rasio false alarm rate maksimum dibagi minimum per 24 jam | terukur sebelum kalibrasi, belum terukur sesudah kalibrasi |
+| C4 | Kepatuhan mode advisory tanpa alarm otomatis | benefit | jumlah slot alarm otomatis, target nol, dan jumlah head dengan review manusia | terukur dari hasil uji |
+| C5 | Kebutuhan akuisisi data baru | cost | jumlah wellbore atau berkas yang harus diproses | terukur pada kebutuhan data, jam kerja berstatus asumsi |
+| C6 | Waktu penyelesaian dalam satu semester | cost | minggu kerja | tenggat 9 minggu baku dari pedoman; jam kerja per alternatif masih asumsi: isi = estimasi waktu kerja; dasar = belum ada pengukuran; alasan dipilih = untuk membandingkan beban waktu antaralternatif sebelum eksekusi; cara menguji = kalibrasi dengan pencatatan waktu saat eksekusi |
+| C7 | Ketertelusuran dan reproduksibilitas angka | benefit | jumlah klaim tanpa jejak, target nol | terukur dari hasil uji |
+| C8 | Beban kognitif keluaran | benefit | rubrik tiga tingkat | asumsi; isi: beban kognitif dinilai dengan rubrik tiga tingkat; dasar: antarmuka keluaran belum dirancang sehingga belum bisa diukur; alasan dipilih: memberi sinyal keluaran yang menuntut driller menafsir model; cara menguji: validasi rubrik bersama mitra saat purwarupa dan rekam berapa langkah keputusan |
 
 Rincian cara ukur dan sumber setiap kriteria:
 
-- **C1 Efektivitas deteksi pada gate yang sudah dikunci.** Cara ukur: Lift per fold dibanding baseline persistence, AUPRC dibanding canary. Gate G1 dan G2 tidak diubah. Sumber: `docs/V7_R1_SOLUTIONS.md:97, 127, 197, 203, 160; docs/V9_EVAL_B_LAYERB.md:101, 103; docs/V9_EVAL_C_LAYERC.md:98, 99`.
-- **C2 Kecukupan bukti per fold.** Cara ukur: Hitung positif per fold. Fold dengan kurang dari 30 positif dilabeli underpowered dan tidak dihitung sebagai mayoritas. Sumber: `docs/V7_R1_SOLUTIONS.md:97; docs/V9_PM1_ARCHITECTURE.md:186; docs/ML_PROJECT_PROPOSAL_TECHNICAL_DESIGN.md:158`.
-- **C3 Portabilitas antar sumur.** Cara ukur: Ukur false alarm rate per sumur pada titik operasi yang sama, sebelum dan sesudah kalibrasi per sumur. Sumber: `docs/V9_PM2_VERDICT.md:114`.
-- **C4 Kepatuhan mode advisory tanpa alarm otomatis.** Cara ukur: Hitung dari registry head. Slot alarm otomatis wajib nol, head wajib membawa penanda review manusia. Sumber: `scratch/v9_i1/v9_i1_RESULTS.json kunci auto_critical_alarm_slots dan decision_layer`.
-- **C5 Kebutuhan akuisisi data baru.** Cara ukur: Hitung dari peta kanal dan status parse. Alternatif yang memakai data yang sudah ada dinilai lebih murah. Sumber: `docs/V7_R1_SOLUTIONS.md:45-48, 76`.
+- **C1 Efektivitas deteksi pada gate yang sudah dikunci.** Cara ukur: Lift per fold dibanding baseline persistence, AUPRC dibanding canary. Gate G1 dan G2 tidak diubah. Sumber: .
+- **C2 Kecukupan bukti per fold.** Cara ukur: Hitung positif per fold. Fold dengan kurang dari 30 positif dilabeli underpowered dan tidak dihitung sebagai mayoritas. Sumber: .
+- **C3 Portabilitas antar sumur.** Cara ukur: Ukur false alarm rate per sumur pada titik operasi yang sama, sebelum dan sesudah kalibrasi per sumur. Sumber: .
+- **C4 Kepatuhan mode advisory tanpa alarm otomatis.** Cara ukur: Hitung dari registry head. Slot alarm otomatis wajib nol, head wajib membawa penanda review manusia. Sumber: .
+- **C5 Kebutuhan akuisisi data baru.** Cara ukur: Hitung dari peta kanal dan status parse. Alternatif yang memakai data yang sudah ada dinilai lebih murah. Sumber: .
 - **C6 Waktu penyelesaian dalam satu semester.** Cara ukur: Petakan pekerjaan alternatif ke Tabel 3.1. Pekerjaan yang tidak dapat selesai sebelum presentasi akhir diberi penalti. Sumber: `Buku Pedoman PPT Tahap I Tabel 3.1, halaman 32`.
-- **C7 Ketertelusuran dan reproduksibilitas angka.** Cara ukur: Jalankan pemeriksa jejak pada dokumen dan JSON. Setiap angka harus menunjuk berkas dan baris atau kunci JSON. Sumber: `docs/PPT1_LEDGER_ANGKA.md dan scratch/ppt1/check_bab3_2.py`.
-- **C8 Beban kognitif keluaran.** Cara ukur: Tingkat 3 bila keluaran satu baris peringatan dengan waktu, keyakinan, dan tindakan yang disarankan, serta frekuensi pemeriksaan satu kali per empat jam atau lebih jarang. Tingkat 2 bila keluaran berupa daftar kandidat tanpa urutan prioritas, atau frekuensi lebih dari 6 per 24 jam. Tingkat 1 bila keluaran berupa alarm biner tanpa konteks atau menuntut pengguna menafsirkan model. Sumber: `docs/ML_PROJECT_PROPOSAL_TECHNICAL_DESIGN.md:123-126 untuk skenario, docs/V8_R1_ABC_SPEC.md:240 untuk ambang frekuensi`.
+- **C7 Ketertelusuran dan reproduksibilitas angka.** Cara ukur: Jalankan pemeriksa jejak pada dokumen dan JSON. Setiap angka harus menunjuk berkas dan baris atau kunci JSON. Sumber: .
+- **C8 Beban kognitif keluaran.** Cara ukur: Tingkat 3 bila keluaran satu baris peringatan dengan waktu, keyakinan, dan tindakan yang disarankan, serta frekuensi pemeriksaan satu kali per empat jam atau lebih jarang. Tingkat 2 bila keluaran berupa daftar kandidat tanpa urutan prioritas, atau frekuensi lebih dari 6 per 24 jam. Tingkat 1 bila keluaran berupa alarm biner tanpa konteks atau menuntut pengguna menafsirkan model. Sumber: .
 
 Kriteria C8 adalah satu-satunya kriteria kualitatif, sehingga rubriknya ditulis terbuka pada tabel kriteria di atas dan diulang di sini: tingkat 3 bila keluaran satu baris peringatan dengan waktu, keyakinan, dan tindakan yang disarankan, serta frekuensi pemeriksaan satu kali per empat jam atau lebih jarang; tingkat 2 bila keluaran berupa daftar kandidat tanpa urutan prioritas, atau frekuensi lebih dari 6 per 24 jam; tingkat 1 bila keluaran berupa alarm biner tanpa konteks atau menuntut pengguna menafsirkan model. Rubrik ini berstatus asumsi sampai divalidasi mitra.
 
@@ -490,13 +483,13 @@ Tujuh dari delapan kriteria memiliki angka terukur atau baku, dan hanya C8 yang 
 ### 3.3.2 Batasan pemilihan
 
 | Kode | Batasan | Kategori | Bukti | Konsekuensi desain |
-|---|---|---|---|---|
-| B1 | Kerahasiaan data mitra | kerahasiaan dan legal | `docs/ML_PROJECT_PROPOSAL_TECHNICAL_DESIGN.md:12; docs/ML_PROJECT_PROPOSAL_TECHNICAL_DESIGN.md:327` | Alternatif yang membutuhkan kanal milik mitra tidak dapat dieksekusi pada PPT I. Alternatif yang hanya memakai data terbuka dinilai lebih siap. |
-| B2 | Mode advisory tanpa alarm otomatis | teknis | `scratch/v9_i1/v9_i1_RESULTS.json kunci auto_critical_alarm_slots; docs/ML_PROJECT_PROPOSAL_TECHNICAL_DESIGN.md:3031; docs/V4_MAINTENANCE_ML_OPTIONS.md:165` | Alternatif yang mengklaim alarm otomatis atau penghentian operasi otomatis gugur pada tahap seleksi. Keluaran wajib berupa konfirmasi status, peringatan berpengawas, atau tren. |
+| --- | --- | --- | --- | --- |
+| B1 | Kerahasiaan data mitra | kerahasiaan dan legal |  | Alternatif yang membutuhkan kanal milik mitra tidak dapat dieksekusi pada PPT I. Alternatif yang hanya memakai data terbuka dinilai lebih siap. |
+| B2 | Mode advisory tanpa alarm otomatis | teknis |  | Alternatif yang mengklaim alarm otomatis atau penghentian operasi otomatis gugur pada tahap seleksi. Keluaran wajib berupa konfirmasi status, peringatan berpengawas, atau tren. |
 | B3 | Sumber daya dan waktu satu semester | waktu dan ekonomi | `Buku Pedoman PPT Tahap I Tabel 3.1, halaman 32; Buku Pedoman PPT Tahap I subbab 2.6 butir 1` | Alternatif yang menuntut pengembangan baru berskala besar, seperti pelatihan ulang dengan dekomposisi mode ditambah ranking, harus dipecah dan dijadwalkan. A2 sudah menyelesaikan bagian terberat, yaitu parse empat wellbore. |
-| B4 | Mutu label belum terbukti | kualitas | `docs/V8_PM_VERDICT.md:202; docs/V4_MAINTENANCE_ML_OPTIONS.md:164` | Urutan kerja wajib, yaitu audit label lebih dahulu, kalibrasi kemudian. Alternatif yang melanggar urutan ini dinilai tidak layak dipilih, sekuat apa pun hasil numeriknya. |
-| B5 | Cakupan satu lapangan dan domain bengkel | proses | `docs/ML_PROJECT_PROPOSAL_TECHNICAL_DESIGN.md:327; docs/V9_EVAL_C_LAYERC.md:98` | Klaim generalisasi antar operator dilarang. Alternatif pada domain bengkel harus menyatakan batas domainnya secara terbuka. |
-| B6 | Ketiadaan label keausan fisik dan tarif rig | data dan ekonomi | `docs/V4_MAINTENANCE_ML_OPTIONS.md:62` | Alternatif yang membutuhkan keausan fisik harus jujur memakai proksi berupa batas run. Analisis biaya pada subbab 3.4 wajib memakai asumsi tarif dengan uji sensitivitas. |
+| B4 | Mutu label belum terbukti | kualitas |  | Urutan kerja wajib, yaitu audit label lebih dahulu, kalibrasi kemudian. Alternatif yang melanggar urutan ini dinilai tidak layak dipilih, sekuat apa pun hasil numeriknya. |
+| B5 | Cakupan satu lapangan dan domain bengkel | proses |  | Klaim generalisasi antar operator dilarang. Alternatif pada domain bengkel harus menyatakan batas domainnya secara terbuka. |
+| B6 | Ketiadaan label keausan fisik dan tarif rig | data dan ekonomi |  | Alternatif yang membutuhkan keausan fisik harus jujur memakai proksi berupa batas run. Analisis biaya pada subbab 3.4 wajib memakai asumsi tarif dengan uji sensitivitas. |
 
 Rincian setiap batasan:
 
@@ -521,17 +514,17 @@ Format yang dipakai adalah kalimat peran, kebutuhan, dan manfaat, lalu dilengkap
 
 **Mengapa peran ini pemilik masalah.** Ini pemilik masalah utama, karena seluruh keluaran alat berakhir pada keputusan insinyur dan bukan pada aktuasi otomatis.
 
-**Status peran.** Rujukan dokumen ada, wawancara belum dilakukan. Dasar: `docs/ML_PROJECT_PROPOSAL_TECHNICAL_DESIGN.md:123-126`, yaitu empat skenario penggunaan: konfirmasi status otomatis, peringatan berpengawas manusia yang ditindaklanjuti insinyur, dasbor tren, dan keputusan manusia.
+**Status peran.** Rujukan dokumen ada, wawancara belum dilakukan. Dasar: , yaitu empat skenario penggunaan: konfirmasi status otomatis, peringatan berpengawas manusia yang ditindaklanjuti insinyur, dasbor tren, dan keputusan manusia.
 
 **Alternatif yang melayani.** A1, A8, A9. Klaster: K1, K4. Kriteria utama: C1, C2, C3.
 
 **Kriteria penerimaan.**
 
 | Kriteria penerimaan | Ambang | Jejak | Status |
-|---|---|---|---|
-| Pada kelas stuck dengan horizon 10 menit dan titik operasi 0,05, peringatan memberi B1 minimal 0,50 dan TLead median minimal 5 menit. | B1 minimal 0,50 dan TLead median minimal 5 menit | `docs/V9_EVAL_B_LAYERB.md:101` | lulus pada kelas stuck, terukur B1 0,51 sampai 1,00 dan TLead 10 sampai 11,5 menit |
-| Setiap peringatan menampilkan tingkat keyakinan, tier, dan batas pemakaian head yang menghasilkannya. | 27 dari 27 head memiliki isi pada kunci batas_pemakaian, dan 13 head wajib review manusia | `scratch/v9_i1/v9_i1_RESULTS.json kunci engines, dalam daftar heads` | lulus |
-| Untuk kelas hidrolik, sistem tidak menampilkan peringatan yang diklaim sebagai deteksi kick atau loss sampai label fisika tersedia. | nol klaim deteksi kick pada kelas hyd | `docs/V9_EVAL_B_LAYERB.md:103` | terbuka, menunggu label fisika pada A8, terukur 0 dari 3 onset dengan TLead nol |
+| --- | --- | --- | --- |
+| Pada kelas stuck dengan horizon 10 menit dan titik operasi 0,05, peringatan memberi B1 minimal 0,50 dan TLead median minimal 5 menit. | B1 minimal 0,50 dan TLead median minimal 5 menit |  | lulus pada kelas stuck, terukur B1 0,51 sampai 1,00 dan TLead 10 sampai 11,5 menit |
+| Setiap peringatan menampilkan tingkat keyakinan, tier, dan batas pemakaian head yang menghasilkannya. | 27 dari 27 head memiliki isi pada kunci batas_pemakaian, dan 13 head wajib review manusia |  | lulus |
+| Untuk kelas hidrolik, sistem tidak menampilkan peringatan yang diklaim sebagai deteksi kick atau loss sampai label fisika tersedia. | nol klaim deteksi kick pada kelas hyd |  | terbuka, menunggu label fisika pada A8, terukur 0 dari 3 onset dengan TLead nol |
 
 #### 3.3.3.2 U2 Driller di lantai rig
 
@@ -539,17 +532,17 @@ Format yang dipakai adalah kalimat peran, kebutuhan, dan manfaat, lalu dilengkap
 
 **Mengapa peran ini pemilik masalah.** Driller adalah penerima keluaran dengan beban kerja paling langsung, sehingga anggaran alarm harus diukur dari pemeriksaan yang ia harus lakukan.
 
-**Status peran.** Rujukan dokumen ada, wawancara belum dilakukan. Dasar: `docs/V8_E_shk_CAPABILITY.md:106` tentang menandai menit yang layak driller cek, dan `docs/V8_R1_ABC_SPEC.md:240` tentang satu pemeriksaan driller per empat jam.
+**Status peran.** Rujukan dokumen ada, wawancara belum dilakukan. Dasar:  tentang menandai menit yang layak driller cek, dan  tentang satu pemeriksaan driller per empat jam.
 
 **Alternatif yang melayani.** A9, A7. Klaster: K4. Kriteria utama: C3, C4, C8.
 
 **Kriteria penerimaan.**
 
 | Kriteria penerimaan | Ambang | Jejak | Status |
-|---|---|---|---|
-| False alarm rate pada titik operasi terpilih tidak lebih dari 6 per 24 jam untuk setiap sumur. | FAR maksimal 6 per 24 jam per sumur | `docs/V8_R1_ABC_SPEC.md:240; docs/V8_E_shk_CAPABILITY.md:106` | belum lulus pada shk, karena terukur 18 sampai 63 per 24 jam pada titik operasi 0,05 sampai 0,10 |
-| Tidak ada slot alarm otomatis kritis pada alat. | auto_critical_alarm_slots sama dengan 0 | `scratch/v9_i1/v9_i1_RESULTS.json kunci auto_critical_alarm_slots` | lulus |
-| Keluaran berupa satu baris peringatan dengan waktu, keyakinan, dan tindakan yang disarankan, sehingga tidak menuntut driller menafsirkan model. | rubrik beban kognitif tingkat 3 sesuai kriteria C8 | `docs/ML_PROJECT_PROPOSAL_TECHNICAL_DESIGN.md:123-126` | terbuka, karena antarmuka belum dirancang |
+| --- | --- | --- | --- |
+| False alarm rate pada titik operasi terpilih tidak lebih dari 6 per 24 jam untuk setiap sumur. | FAR maksimal 6 per 24 jam per sumur |  | belum lulus pada shk, karena terukur 18 sampai 63 per 24 jam pada titik operasi 0,05 sampai 0,10 |
+| Tidak ada slot alarm otomatis kritis pada alat. | auto_critical_alarm_slots sama dengan 0 |  | lulus |
+| Keluaran berupa satu baris peringatan dengan waktu, keyakinan, dan tindakan yang disarankan, sehingga tidak menuntut driller menafsirkan model. | rubrik beban kognitif tingkat 3 sesuai kriteria C8 |  | terbuka, karena antarmuka belum dirancang |
 
 #### 3.3.3.3 U3 Toolhand penanggung jawab bengkel alat
 
@@ -557,17 +550,17 @@ Format yang dipakai adalah kalimat peran, kebutuhan, dan manfaat, lalu dilengkap
 
 **Mengapa peran ini pemilik masalah.** Satu-satunya domain pada proyek ini yang sudah memiliki ambang alarm terkalibrasi adalah domain bengkel, sehingga peran ini paling cepat menerima manfaat.
 
-**Status peran.** Peran operasi, belum ada rujukan dokumen dan belum diverifikasi. Dasar: Kebutuhan diturunkan dari domain data bengkel, yaitu 4 alat dan 2 run dengan 469 jendela (`docs/V9_PM1_ARCHITECTURE.md:276`); nama peran belum ada di dokumen proyek.
+**Status peran.** Peran operasi, belum ada rujukan dokumen dan belum diverifikasi. Dasar: Kebutuhan diturunkan dari domain data bengkel, yaitu 4 alat dan 2 run dengan 469 jendela (); nama peran belum ada di dokumen proyek.
 
 **Alternatif yang melayani.** A7. Klaster: K4. Kriteria utama: C1, C5.
 
 **Kriteria penerimaan.**
 
 | Kriteria penerimaan | Ambang | Jejak | Status |
-|---|---|---|---|
-| Titik perubahan terdeteksi pada setiap alat yang diuji. | 4 dari 4 alat | `docs/V9_EVAL_C_LAYERC.md:98` | lulus |
-| Waktu ancang sebelum titik perubahan minimal 20 detik. | TLead 20 sampai 36 detik, yaitu 1,8 kali | `docs/V9_EVAL_C_LAYERC.md:98` | lulus |
-| Jumlah alarm palsu per alat tidak lebih dari 3 setelah kalibrasi, dan presisi per run dinyatakan terbuka. | false positive 1 sampai 3 per alat, presisi run 0,50 dilaporkan | `docs/V9_EVAL_C_LAYERC.md:98` | lulus dengan catatan, karena presisi run 0,50 berarti separuh titik ubah terjadi pada alat baru |
+| --- | --- | --- | --- |
+| Titik perubahan terdeteksi pada setiap alat yang diuji. | 4 dari 4 alat |  | lulus |
+| Waktu ancang sebelum titik perubahan minimal 20 detik. | TLead 20 sampai 36 detik, yaitu 1,8 kali |  | lulus |
+| Jumlah alarm palsu per alat tidak lebih dari 3 setelah kalibrasi, dan presisi per run dinyatakan terbuka. | false positive 1 sampai 3 per alat, presisi run 0,50 dilaporkan |  | lulus dengan catatan, karena presisi run 0,50 berarti separuh titik ubah terjadi pada alat baru |
 
 #### 3.3.3.4 U4 Manajer operasi Sperry Drilling
 
@@ -575,17 +568,17 @@ Format yang dipakai adalah kalimat peran, kebutuhan, dan manfaat, lalu dilengkap
 
 **Mengapa peran ini pemilik masalah.** Keputusan memakai alat di lapangan adalah keputusan manajerial, dan risiko klaim berlebih bersifat organisasi, bukan teknis.
 
-**Status peran.** Peran operasi, belum ada rujukan dokumen dan belum diverifikasi. Dasar: Kebutuhan diturunkan dari struktur registry yang memberi tier dan batas pemakaian per head (`scratch/v9_i1/v9_i1_RESULTS.json`).
+**Status peran.** Peran operasi, belum ada rujukan dokumen dan belum diverifikasi. Dasar: Kebutuhan diturunkan dari struktur registry yang memberi tier dan batas pemakaian per head ().
 
 **Alternatif yang melayani.** A3, A5, A9. Klaster: K1, K3, K4. Kriteria utama: C4, C7.
 
 **Kriteria penerimaan.**
 
 | Kriteria penerimaan | Ambang | Jejak | Status |
-|---|---|---|---|
-| Setiap head membawa tier, batas pemakaian, dan lencana false alarm. | 27 dari 27 head terisi ketiga kunci tersebut | `scratch/v9_i1/v9_i1_RESULTS.json kunci engines, dalam daftar heads, kunci tier, batas_pemakaian, badge_far` | lulus |
-| Head yang belum layak pakai tidak dipakai di tingkat mana pun. | 2 head berstatus belum layak pakai dinyatakan terbuka | `scratch/v9_i1/v9_i1_RESULTS.json, nilai tier BELUM LAYAK PAKAI pada mode hyd dan bit_wear` | lulus |
-| Setiap angka pada laporan manajemen menunjuk berkas dan baris atau kunci JSON. | nol angka tanpa jejak pada pemeriksa | `scratch/ppt1/check_bab3_2.py; docs/PPT1_LEDGER_ANGKA.md` | lulus pada dokumen ini, diperiksa skrip |
+| --- | --- | --- | --- |
+| Setiap head membawa tier, batas pemakaian, dan lencana false alarm. | 27 dari 27 head terisi ketiga kunci tersebut |  | lulus |
+| Head yang belum layak pakai tidak dipakai di tingkat mana pun. | 2 head berstatus belum layak pakai dinyatakan terbuka |  | lulus |
+| Setiap angka pada laporan manajemen menunjuk berkas dan baris atau kunci JSON. | nol angka tanpa jejak pada pemeriksa |  | lulus pada dokumen ini, diperiksa skrip |
 
 #### 3.3.3.5 U5 Insinyur data dan kinerja
 
@@ -593,17 +586,17 @@ Format yang dipakai adalah kalimat peran, kebutuhan, dan manfaat, lalu dilengkap
 
 **Mengapa peran ini pemilik masalah.** Tanpa reproduksibilitas, seluruh klaim hanya dapat dipercaya atas dasar kepercayaan, dan itu tidak cukup untuk mitra industri.
 
-**Status peran.** Peran operasi, belum ada rujukan dokumen dan belum diverifikasi. Dasar: Kebutuhan diturunkan dari adanya pipeline registry `code/v9_i1_pipeline.py` dan berkas hasil `scratch/v9_i1/v9_i1_RESULTS.json`.
+**Status peran.** Peran operasi, belum ada rujukan dokumen dan belum diverifikasi. Dasar: Kebutuhan diturunkan dari adanya pipeline registry  dan berkas hasil .
 
 **Alternatif yang melayani.** A2, A5. Klaster: K2, K3. Kriteria utama: C2, C7.
 
 **Kriteria penerimaan.**
 
 | Kriteria penerimaan | Ambang | Jejak | Status |
-|---|---|---|---|
-| Registry dapat dihitung ulang dari skrip yang tersimpan. | code/v9_i1_pipeline.py tersedia dan head terhitung 27 dari 7 mode | `code/v9_i1_pipeline.py; docs/ML_PROJECT_PROPOSAL_TECHNICAL_DESIGN.md:57` | sebagian, karena skrip tersedia dan jumlah head terverifikasi dari JSON, tetapi eksekusi ulang belum dijalankan pada kartu ini |
-| Setiap lapisan keputusan dapat ditelusuri ke head asalnya. | jumlah head pada empat lapisan sama dengan 27 | `scratch/v9_i1/v9_i1_RESULTS.json kunci decision_layer, lapisan L0 sampai L3` | lulus |
-| Perubahan definisi label tercatat sebagai versi, bukan sebagai penimpaan. | satu varian onset dikunci dan varian lain dicatat | `docs/V4_MAINTENANCE_ML_OPTIONS.md:145` | terbuka, karena audit label belum dijalankan |
+| --- | --- | --- | --- |
+| Registry dapat dihitung ulang dari skrip yang tersimpan. | code/v9_i1_pipeline.py tersedia dan head terhitung 27 dari 7 mode |  | sebagian, karena skrip tersedia dan jumlah head terverifikasi dari JSON, tetapi eksekusi ulang belum dijalankan pada kartu ini |
+| Setiap lapisan keputusan dapat ditelusuri ke head asalnya. | jumlah head pada empat lapisan sama dengan 27 |  | lulus |
+| Perubahan definisi label tercatat sebagai versi, bukan sebagai penimpaan. | satu varian onset dikunci dan varian lain dicatat |  | terbuka, karena audit label belum dijalankan |
 
 #### 3.3.3.6 U6 Pengawas well-control
 
@@ -611,22 +604,22 @@ Format yang dipakai adalah kalimat peran, kebutuhan, dan manfaat, lalu dilengkap
 
 **Mengapa peran ini pemilik masalah.** Kick dan lost circulation adalah bahaya well-control. Klaim deteksi otomatis pada label proksi akan menjadi tanggung jawab keselamatan yang tidak dapat dipertanggungjawabkan.
 
-**Status peran.** Peran operasi, belum ada rujukan dokumen dan belum diverifikasi. Dasar: Kebutuhan diturunkan dari BoK 10 Safety dan dari status label hyd yang masih proksi (`docs/V8_PM_VERDICT.md:202`).
+**Status peran.** Peran operasi, belum ada rujukan dokumen dan belum diverifikasi. Dasar: Kebutuhan diturunkan dari BoK 10 Safety dan dari status label hyd yang masih proksi ().
 
 **Alternatif yang melayani.** A8. Klaster: K1. Kriteria utama: C4, C7.
 
 **Kriteria penerimaan.**
 
 | Kriteria penerimaan | Ambang | Jejak | Status |
-|---|---|---|---|
-| Nol klaim deteksi kick atau loss secara otomatis pada seluruh keluaran alat. | auto_critical_alarm_slots sama dengan 0 dan nol head berlabel kick otomatis | `scratch/v9_i1/v9_i1_RESULTS.json kunci auto_critical_alarm_slots, dan head hyd k2_tidak_tersedia pada tier BELUM LAYAK PAKAI` | lulus |
-| Status label hidrolik dinyatakan sebagai proksi pada setiap dokumen yang memuatnya. | satu pernyataan proksi pada dokumen ini dan pada verdict | `docs/V8_PM_VERDICT.md:202` | lulus |
-| Label fisika, yaitu perubahan volume pit dan selisih laju alir, dicatat sebagai prasyarat sebelum klaim well-control apa pun dibuat. | kanal sumber label terdaftar dan terhitung | `docs/V7_R1_SOLUTIONS.md:37-38` | terbuka, karena label pit dan flow belum diparse menjadi deret label |
+| --- | --- | --- | --- |
+| Nol klaim deteksi kick atau loss secara otomatis pada seluruh keluaran alat. | auto_critical_alarm_slots sama dengan 0 dan nol head berlabel kick otomatis |  | lulus |
+| Status label hidrolik dinyatakan sebagai proksi pada setiap dokumen yang memuatnya. | satu pernyataan proksi pada dokumen ini dan pada verdict |  | lulus |
+| Label fisika, yaitu perubahan volume pit dan selisih laju alir, dicatat sebagai prasyarat sebelum klaim well-control apa pun dibuat. | kanal sumber label terdaftar dan terhitung |  | terbuka, karena label pit dan flow belum diparse menjadi deret label |
 
 ### 3.3.4 Silang user story, kriteria, dan alternatif
 
 | User story | Peran | Kriteria | Alternatif | Jumlah kriteria terpenuhi |
-|---|---|---|---|---|
+| --- | --- | --- | --- | --- |
 | U1 | Insinyur pengeboran Sperry Drilling | C1, C2, C3 | A1, A8, A9 | 2 dari 3 |
 | U2 | Driller di lantai rig | C3, C4, C8 | A9, A7 | 1 dari 3 |
 | U3 | Toolhand penanggung jawab bengkel alat | C1, C5 | A7 | 3 dari 3 |
@@ -655,11 +648,11 @@ Larangan yang perlu dipegang subbab 3.4: jangan memakai skala 1 sampai 5 untuk k
 
 ### 3.3.6 Hasil negatif dan batas yang harus dinyatakan
 
-1. Peran pemilik masalah belum diverifikasi melalui wawancara. Pencarian kata wawancara dan interview pada seluruh berkas `docs/` tidak menemukan berkas lain selain dokumen ini, sehingga empat dari enam peran pada 3.3.3 berstatus peran operasi yang belum dikonfirmasi mitra.
+1. Peran pemilik masalah belum diverifikasi melalui wawancara. Pencarian kata wawancara dan interview pada seluruh berkas  tidak menemukan berkas lain selain dokumen ini, sehingga empat dari enam peran pada 3.3.3 berstatus peran operasi yang belum dikonfirmasi mitra.
 2. Tarif rig per jam tidak tersedia, sehingga nilai rupiah apa pun pada subbab 3.4 berstatus asumsi.
-3. Portabilitas antar sumur sesudah kalibrasi belum terukur. Yang terukur baru sebaran sebelum kalibrasi, yaitu 4,15 sampai 496,09 per 24 jam (`docs/V9_PM2_VERDICT.md:114`).
-4. Prevalensi unit stand 10 sampai 40 persen pada A4 masih perkiraan desain (`docs/V7_R1_SOLUTIONS.md:111`).
-5. Presisi titik ubah pada alat bengkel hanya 0,50, sehingga klaim keausan progresif belum sah untuk alat baru (`docs/V9_EVAL_C_LAYERC.md:98`).
+3. Portabilitas antar sumur sesudah kalibrasi belum terukur. Yang terukur baru sebaran sebelum kalibrasi, yaitu 4,15 sampai 496,09 per 24 jam ().
+4. Prevalensi unit stand 10 sampai 40 persen pada A4 masih perkiraan desain ().
+5. Presisi titik ubah pada alat bengkel hanya 0,50, sehingga klaim keausan progresif belum sah untuk alat baru ().
 6. Rubrik yang menuntut tiga alternatif per BoK belum terpenuhi untuk BoK 1, 6, 7, 10, dan 12. Risiko penilaian ini dicatat pada 3.2.8, beserta dua jalan keluarnya.
 7. System response time dan downtime belum diukur, sehingga standar BoK 11 yang berkaitan dengannya tidak dapat diklaim terpenuhi.
 8. Antarmuka peringatan belum dirancang, sehingga kriteria C8 belum dapat dinilai untuk alternatif mana pun.
@@ -667,31 +660,31 @@ Larangan yang perlu dipegang subbab 3.4: jangan memakai skala 1 sampai 5 untuk k
 ### 3.3.7 Manifes jejak angka (internal, bukan untuk sirkulasi eksternal)
 
 | Angka | Nilai | Berkas dan baris |
-|---|---|---|
-| FAR vib antar sumur | 4,15 sampai 496,09 per 24 jam, rasio 119,6 kali | `docs/V9_PM2_VERDICT.md:114` |
-| Kontrol-positif stuck | 0 dari 10 | `docs/V8_PM_VERDICT.md:202` |
-| Stuck K-ii | B1 0,51 sampai 1,00, TLead 10 sampai 11,5 menit | `docs/V9_EVAL_B_LAYERB.md:101` |
-| Hyd K-ii | 0 dari 3 onset, TLead nol | `docs/V9_EVAL_B_LAYERB.md:103` |
-| Tool_wear K-i | 4 dari 4 alat, TLead 20 sampai 36 detik, FP 1 sampai 3, presisi run 0,50 | `docs/V9_EVAL_C_LAYERC.md:98` |
-| Tool_wear K-ii canary | AUPRC 0,516 sampai 0,612 atau 1,19 kali | `docs/V9_EVAL_C_LAYERC.md:99` |
-| Gate shk | G1 3 dari 7, G2 6 dari 7 | `docs/V7_R1_SOLUTIONS.md:97` |
-| Gate hyd | G1 2 dari 7, G2 4 dari 7 | `docs/V7_R1_SOLUTIONS.md:127` |
-| Gate tool_wear | G1 0 dari 4, G2 4 dari 4 | `docs/V7_R1_SOLUTIONS.md:160` |
-| Gate ssi | G1 4 dari 5, G2 5 dari 5, F-7 tiga positif, F-9 dua belas positif | `docs/V7_R1_SOLUTIONS.md:197` |
-| Gate bit_wear | G1 3 dari 4, G2 4 dari 4, persistence menang 4 dari 4 | `docs/V7_R1_SOLUTIONS.md:203` |
-| Kanal disfungsi empat wellbore | 188/186/66/18, 135/135/135/86, 91/90/52/6, 77/76/76/76 | `docs/V7_R1_SOLUTIONS.md:45-48` |
-| Kanal label fisika | GAINLOSSTOT 575 dan 517, PITTOT 565 dan 506, FLOWOUT 688, FLOWOUTPC 949 | `docs/V7_R1_SOLUTIONS.md:37-38` |
-| Baris CRPM hasil parse | 281.030 / 42.010 / 178.430 / 57.846 | `docs/V9_PM1_ARCHITECTURE.md:186` |
-| TSPP | 52.905 baris, empat berkas | `docs/V10_D1_BAB_DATA.md:86, 296` |
-| Basis label kurasi | 884 kejadian, 50 relevan BHA, 73.500 menit atau 1.225 jam | `docs/PPT1_LEDGER_ANGKA.md:145, 193` |
-| Berkas bhaRun tanpa label keausan | 77 berkas | `docs/V4_MAINTENANCE_ML_OPTIONS.md:62` |
-| Prevalensi unit stand | 10 sampai 40 persen, berstatus asumsi | `docs/V7_R1_SOLUTIONS.md:111` |
-| Ambang kelayakan pemantauan | FAR maksimal 6 per 24 jam | `docs/V8_R1_ABC_SPEC.md:240` |
-| Keluaran screening shk | FAR 18 sampai 63 per 24 jam, presisi 0,00 sampai 0,12 | `docs/V8_E_shk_CAPABILITY.md:106` |
-| Tiga angka pengikat | 7 mode, 11 klaim, 27 head | `docs/ML_PROJECT_PROPOSAL_TECHNICAL_DESIGN.md:57` |
-| Lapisan keputusan | 5 / 11 / 9 / 2 sama dengan 27 | `docs/ML_PROJECT_PROPOSAL_TECHNICAL_DESIGN.md:3142` |
-| Sumber data | Volve terbuka dan empat set data eksternal | `docs/ML_PROJECT_PROPOSAL_TECHNICAL_DESIGN.md:12` |
-| Batas muktamad cakupan | satu lapangan, bengkel berbeda dari rig, hyd proksi | `docs/ML_PROJECT_PROPOSAL_TECHNICAL_DESIGN.md:327` |
-| Slot alarm otomatis | 0 pada 27 head | `scratch/v9_i1/v9_i1_RESULTS.json kunci auto_critical_alarm_slots` |
+| --- | --- | --- |
+| FAR vib antar sumur | 4,15 sampai 496,09 per 24 jam, rasio 119,6 kali |  |
+| Kontrol-positif stuck | 0 dari 10 |  |
+| Stuck K-ii | B1 0,51 sampai 1,00, TLead 10 sampai 11,5 menit |  |
+| Hyd K-ii | 0 dari 3 onset, TLead nol |  |
+| Tool_wear K-i | 4 dari 4 alat, TLead 20 sampai 36 detik, FP 1 sampai 3, presisi run 0,50 |  |
+| Tool_wear K-ii canary | AUPRC 0,516 sampai 0,612 atau 1,19 kali |  |
+| Gate shk | G1 3 dari 7, G2 6 dari 7 |  |
+| Gate hyd | G1 2 dari 7, G2 4 dari 7 |  |
+| Gate tool_wear | G1 0 dari 4, G2 4 dari 4 |  |
+| Gate ssi | G1 4 dari 5, G2 5 dari 5, F-7 tiga positif, F-9 dua belas positif |  |
+| Gate bit_wear | G1 3 dari 4, G2 4 dari 4, persistence menang 4 dari 4 |  |
+| Kanal disfungsi empat wellbore | 188/186/66/18, 135/135/135/86, 91/90/52/6, 77/76/76/76 |  |
+| Kanal label fisika | GAINLOSSTOT 575 dan 517, PITTOT 565 dan 506, FLOWOUT 688, FLOWOUTPC 949 |  |
+| Baris CRPM hasil parse | 281.030 / 42.010 / 178.430 / 57.846 |  |
+| TSPP | 52.905 baris, empat berkas |  |
+| Basis label kurasi | 884 kejadian, 50 relevan BHA, 73.500 menit atau 1.225 jam |  |
+| Berkas bhaRun tanpa label keausan | 77 berkas |  |
+| Prevalensi unit stand | 10 sampai 40 persen, berstatus asumsi |  |
+| Ambang kelayakan pemantauan | FAR maksimal 6 per 24 jam |  |
+| Keluaran screening shk | FAR 18 sampai 63 per 24 jam, presisi 0,00 sampai 0,12 |  |
+| Tiga angka pengikat | 7 mode, 11 klaim, 27 head |  |
+| Lapisan keputusan | 5 / 11 / 9 / 2 sama dengan 27 |  |
+| Sumber data | Volve terbuka dan empat set data eksternal |  |
+| Batas muktamad cakupan | satu lapangan, bengkel berbeda dari rig, hyd proksi |  |
+| Slot alarm otomatis | 0 pada 27 head |  |
 
-Reproduksi: `python3 scratch/ppt1/build_bab3_2.py` menulis ulang dokumen ini dan `scratch/ppt1/affinity.json`, lalu `python3 scratch/ppt1/check_bab3_2.py` memeriksa acceptance dan keberadaan setiap jejak. Pemeriksa itu sendiri sudah diuji negatif, yaitu menolak rujukan baris di luar berkas, menolak em-dash, menolak klaster yang kehilangan satu alternatif, dan menolak user story tanpa kriteria penerimaan. Keluaran uji negatif tersimpan di `scratch/ppt1/check_bab3_2_negative_test.txt`, dengan hasil lima dari lima kasus sesuai harapan.
+Reproduksi: `python3 scratch/ppt1/build_bab3_2.py` menulis ulang tabel subbab ini dari berkas hasil eksekusi, sehingga angka pada tabel berasal dari berkas yang sama dan bukan diketik ulang dari tempat lain.

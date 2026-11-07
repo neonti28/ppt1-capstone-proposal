@@ -1,18 +1,8 @@
 # BAB III ANALISIS ALTERNATIF SOLUSI
 
-## Subbab 3.4 Pemilihan Alternatif Solusi dengan MCDM
+- Acuan format: Buku Pedoman PPT Tahap I subbab 3.2 Format Proposal, halaman 33 sampai 36
 
-| Kendali dokumen | Keterangan |
-|---|---|
-| Dokumen | Proposal Proyek Perancangan Terpadu I, BAB III subbab 3.4 |
-| Mitra | PT Halliburton Indonesia, divisi Sperry Drilling |
-| Versi | 1.0, 25 Oktober 2026 |
-| Status | Berjalan. Subbab 3.1, 3.2, dan 3.3 sudah selesai, subbab ini menutup BAB III. |
-| Acuan format | Buku Pedoman PPT Tahap I subbab 3.2 Format Proposal, halaman 33 sampai 36 |
-| Acuan rubrik | Rubrik Penilaian PPT oleh Dosen, halaman 38 dan berikutnya, butir 2.2, 3.2, dan 3.3 |
-| Metode | TOPSIS dengan bobot Rank-Order Centroid, pembanding SAW |
-| Hasil | A1 (Relabeling onset peristiwa: dari status menjadi kejadian) dengan koefisien kedekatan 0,8465 |
-| Identitas anggota | Diisi tim. Dokumen ini tidak mengarang nama maupun NIM. |
+## Subbab 3.4 Pemilihan Alternatif Solusi dengan MCDM
 
 ### 3.4.1 Dasar perhitungan dan aturan bukti
 
@@ -34,7 +24,7 @@ Aturan bukti yang dipakai pada subbab ini:
 Tiga metode dipertimbangkan. Yang menentukan bukan popularitas, melainkan apakah masukannya tersedia tanpa mengarang angka.
 
 | Metode | Kebutuhan masukan | Kesesuaian dengan bukti yang ada | Keputusan | Alasan |
-|---|---|---|---|---|
+| --- | --- | --- | --- | --- |
 | AHP | perbandingan berpasangan antar kriteria oleh pakar pada skala 1 sampai 9, ditambah uji rasio konsistensi | tidak tersedia. Belum ada wawancara mitra maupun penilaian pakar, sehingga matriks perbandingan hanya bisa diisi angka karangan | ditolak | Angka perbandingan tanpa pakar adalah angka tanpa jejak, dan rasio konsistensi tidak bermakna bila masukannya karangan. Menolak AHP di sini menjaga aturan bukti, bukan menilai AHP sebagai metode lemah. |
 | TOPSIS | matriks keputusan kardinal, arah tiap kriteria, dan vektor bobot | tersedia. Empat kolom berisi angka terukur (C2, C4, C5, C7), dua kolom memakai rubrik berjangkar (C1 dan C3), dan dua kolom berstatus asumsi yang ditandai terbuka (C6 minggu kerja, C8 beban kognitif). Seluruh 72 sel terisi | dipakai sebagai metode utama | Menerima campuran kriteria benefit dan cost, menghasilkan jarak ke solusi ideal dan anti-ideal sehingga selisih antar alternatif terbaca sebagai angka, dan formulanya publik sehingga dapat direproduksi pihak lain. |
 | SAW | matriks keputusan kardinal dan vektor bobot, keduanya sama dengan TOPSIS | tersedia, memakai masukan identik | dipakai sebagai pembanding bebas | Bila dua metode dengan cara mengukur jarak berbeda memberi juara sama, hasil tidak bergantung pada pilihan metode. SAW tidak dipakai sendirian karena penjumlahan berbobot dapat menutupi alternatif yang sangat lemah pada satu kriteria. |
@@ -46,7 +36,7 @@ AHP ditolak dengan alasan yang perlu dinyatakan tegas: AHP menuntut perbandingan
 Sumber metode, dengan DOI yang sudah diperiksa:
 
 | Sumber | Dipakai untuk | DOI | Cara verifikasi |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | Hwang, C. L., dan Yoon, K. (1981). Multiple Attribute Decision Making: Methods and Applications, A State-of-the-Art Survey. Springer-Verlag, New York. | rumus TOPSIS, yaitu normalisasi vektor, solusi ideal positif dan negatif, serta koefisien kedekatan | `10.1007/978-3-642-48318-9` | pencarian web 25 Oktober 2026 menemukan entri Springer tahun 1981 dengan DOI tersebut, dan artikel Wikipedia TOPSIS mengutip sumber yang sama |
 | Barron, F. H., dan Barrett, B. E. (1996). Decision Quality Using Ranked Attribute Weights. Management Science, 42(11), 1515 sampai 1523. | penurunan bobot kardinal dari urutan prioritas kriteria memakai Rank-Order Centroid | `10.1287/mnsc.42.11.1515` | pencarian web 25 Oktober 2026 menemukan DOI tersebut pada INFORMS, dengan abstrak yang menyatakan ROC lebih akurat daripada formula berbasis urutan lain |
 | Kunsch, P. L., dan Ishizaka, A. (2019). A note on using centroid weights in additive multi-criteria decision analysis. European Journal of Operational Research. | batas pemakaian ROC. Artikel ini menunjukkan keunggulan ROC bergantung pada cara elisitasi bobot, sehingga ROC pada kartu ini wajib disertai uji sensitivitas | `10.1016/j.ejor.2019.02.021` | pencarian web 25 Oktober 2026 menemukan DOI tersebut beserta ringkasan yang menyatakan peringkat kinerja metode bobot pengganti bergantung pada definisi simpleks bobot |
@@ -57,16 +47,16 @@ Satu batas pemakaian dinyatakan di depan. Kunsch dan Ishizaka menunjukkan bahwa 
 
 Delapan kriteria diambil tanpa perubahan definisi dari subbab 3.3.1. Yang ditambahkan di sini hanya fungsi nilai, yaitu aturan yang mengubah satuan mentah menjadi skala 0 sampai 100 supaya dapat dibandingkan dan diukur jaraknya.
 
-| Kode | Kriteria | Arah | Satuan mentah | Fungsi nilai ke 0 sampai 100 | Status angka |
-|---|---|---|---|---|---|
-| C1 | Efektivitas deteksi pada gate yang sudah dikunci | benefit | lift dalam kali dan AUPRC | rubrik 4 tingkat: 100 gate lolos, 75 dieksekusi dan delta terukur positif, 40 dieksekusi tanpa delta positif, 20 belum dieksekusi | TERUKUR untuk alternatif yang sudah dieksekusi, RUBRIK untuk sisanya |
-| C4 | Kepatuhan mode advisory tanpa alarm otomatis | benefit | jumlah slot alarm otomatis, target nol, dan jumlah head dengan review manusia | 100 bila slot alarm otomatis nol, 0 bila ada satu saja | TERUKUR |
-| C2 | Kecukupan bukti per fold | benefit | jumlah fold teruji dan jumlah positif per fold | 100 x jumlah fold layak dibagi 18, dibatasi 100 | TERUKUR |
-| C7 | Ketertelusuran dan reproduksibilitas angka | benefit | jumlah klaim tanpa jejak, target nol | 100 x jumlah klaim berjejak dibagi jumlah klaim | TERUKUR |
-| C3 | Portabilitas antar sumur | benefit | rasio false alarm rate maksimum dibagi minimum per 24 jam | rubrik 3 tingkat: 100 kalibrasi per sumur sudah diuji pada dua sumur atau lebih, 60 menambah sumur uji atau memuat rancangan kalibrasi yang belum diuji, 30 tidak menyentuh portabilitas | TERUKUR untuk gejala, RUBRIK untuk tindakan alternatif |
-| C6 | Waktu penyelesaian dalam satu semester | cost | minggu kerja | 100 x (9 dikurangi minggu kerja) dibagi 9, dibatasi 0 sampai 100 | ASUMSI untuk minggu kerja per alternatif, BAKU untuk tenggat |
-| C5 | Kebutuhan akuisisi data baru | cost | jumlah wellbore atau berkas yang harus diproses | 100 dibagi (1 + jumlah wellbore tersisa) | TERUKUR |
-| C8 | Beban kognitif keluaran | benefit | rubrik tiga tingkat | tingkat 3 menjadi 100, tingkat 2 menjadi 50, tingkat 1 menjadi 0 | ASUMSI |
+| Kode | Kriteria | Arah | Satuan mentah | Fungsi nilai ke 0 sampai 100 | Dasar angka |
+| --- | --- | --- | --- | --- | --- |
+| C1 | Efektivitas deteksi pada gate yang sudah dikunci | benefit | lift dalam kali dan AUPRC | rubrik 4 tingkat: 100 gate lolos, 75 dieksekusi dan delta terukur positif, 40 dieksekusi tanpa delta positif, 20 belum dieksekusi | terukur untuk alternatif yang sudah dieksekusi, penilaian rubrik untuk sisanya |
+| C4 | Kepatuhan mode advisory tanpa alarm otomatis | benefit | jumlah slot alarm otomatis, target nol, dan jumlah head dengan review manusia | 100 bila slot alarm otomatis nol, 0 bila ada satu saja | terukur |
+| C2 | Kecukupan bukti per fold | benefit | jumlah fold teruji dan jumlah positif per fold | 100 x jumlah fold layak dibagi 18, dibatasi 100 | terukur |
+| C7 | Ketertelusuran dan reproduksibilitas angka | benefit | jumlah klaim tanpa jejak, target nol | 100 x jumlah klaim berjejak dibagi jumlah klaim | terukur |
+| C3 | Portabilitas antar sumur | benefit | rasio false alarm rate maksimum dibagi minimum per 24 jam | rubrik 3 tingkat: 100 kalibrasi per sumur sudah diuji pada dua sumur atau lebih, 60 menambah sumur uji atau memuat rancangan kalibrasi yang belum diuji, 30 tidak menyentuh portabilitas | terukur untuk gejala, penilaian rubrik untuk tindakan alternatif |
+| C6 | Waktu penyelesaian dalam satu semester | cost | minggu kerja | 100 x (9 dikurangi minggu kerja) dibagi 9, dibatasi 0 sampai 100 | asumsi untuk minggu kerja per alternatif, BAKU untuk tenggat |
+| C5 | Kebutuhan akuisisi data baru | cost | jumlah wellbore atau berkas yang harus diproses | 100 dibagi (1 + jumlah wellbore tersisa) | terukur |
+| C8 | Beban kognitif keluaran | benefit | rubrik tiga tingkat | tingkat 3 menjadi 100, tingkat 2 menjadi 50, tingkat 1 menjadi 0 | asumsi |
 
 Empat hal perlu dijelaskan tentang tabel di atas.
 
@@ -74,106 +64,106 @@ Pertama, kriteria terukur tidak diskalakan ulang menjadi 1 sampai 5. C2 memakai 
 
 Kedua, C1 dan C3 berbentuk rubrik berjangkar karena pertanyaannya bukan besaran, melainkan keadaan pelaksanaan. C1 memakai empat tingkat: 100 bila gate G1 dan G2 lolos, 75 bila mekanisme sudah dieksekusi dan delta terukur positif, 40 bila sudah dieksekusi tanpa delta positif, dan 20 bila belum dieksekusi. C3 memakai tiga tingkat: 100 bila kalibrasi per sumur sudah diuji pada dua sumur atau lebih, 60 bila menambah sumur uji atau memuat rancangan kalibrasi yang belum diuji, dan 30 bila tidak menyentuh portabilitas. Setiap tingkat menunjuk keadaan yang dapat diperiksa pada dokumen proyek, bukan kesan penilai.
 
-Ketiga, C8 tetap berstatus asumsi dan ini dinyatakan terbuka. Subbab 3.3.6 butir 8 menyatakan antarmuka peringatan belum dirancang sehingga C8 belum dapat dinilai untuk alternatif mana pun (`docs/PPT1_BAB3_2.md:665`). Pada subbab ini C8 tetap diisi dengan tingkat yang dibaca dari niat desain: tingkat 3 untuk alternatif yang rancangan keluarannya berupa satu baris peringatan dengan waktu, keyakinan, dan tindakan, dan tingkat 2 untuk alternatif yang keluarannya masih berupa label, daftar kandidat, atau angka yang perlu ditafsirkan. Konsekuensinya, skenario P7 pada 3.4.8 menolkan bobot C8, sehingga dapat diperiksa apakah keputusan berubah bila kriteria yang belum divalidasi itu dibuang sama sekali.
+Ketiga, C8 tetap berstatus asumsi dan ini dinyatakan terbuka. Subbab 3.3.6 butir 8 menyatakan antarmuka peringatan belum dirancang sehingga C8 belum dapat dinilai untuk alternatif mana pun (). Pada subbab ini C8 tetap diisi dengan tingkat yang dibaca dari niat desain: tingkat 3 untuk alternatif yang rancangan keluarannya berupa satu baris peringatan dengan waktu, keyakinan, dan tindakan, dan tingkat 2 untuk alternatif yang keluarannya masih berupa label, daftar kandidat, atau angka yang perlu ditafsirkan. Konsekuensinya, skenario P7 pada 3.4.8 menolkan bobot C8, sehingga dapat diperiksa apakah keputusan berubah bila kriteria yang belum divalidasi itu dibuang sama sekali.
 
-Keempat, tidak ada angka rupiah pada subbab ini. Batasan B6 mengingatkan bahwa tarif rig per jam tidak tersedia pada seluruh 13 dataset (`docs/PPT1_BAB3_2.md:659`). Karena itu biaya diukur sebagai jumlah wellbore yang harus diproses dan jumlah minggu kerja, bukan rupiah. Dengan begitu tidak ada satu pun nilai pada matriks keputusan yang bersandar pada tarif yang tidak diketahui.
+Keempat, tidak ada angka rupiah pada subbab ini. Batasan B6 mengingatkan bahwa tarif rig per jam tidak tersedia pada seluruh 13 dataset (). Karena itu biaya diukur sebagai jumlah wellbore yang harus diproses dan jumlah minggu kerja, bukan rupiah. Dengan begitu tidak ada satu pun nilai pada matriks keputusan yang bersandar pada tarif yang tidak diketahui.
 
 Tabel 3.4.1 Jejak setiap sel matriks keputusan
 
-| Alternatif | Kriteria | Satuan mentah | Status | Dasar | Jejak |
-|---|---|---|---|---|---|
-| A1 | C1 | L75 | TERUKUR | Mekanisme sudah dieksekusi untuk stuck dan hyd. Stuck memberi B1 0,51 sampai 1,00 dengan TLead 10 sampai 11,5 menit. Hyd memberi B1 nol dari tiga onset, jadi hasil negatifnya terukur. | docs/V9_EVAL_B_LAYERB.md:101, 103 |
-| A1 | C4 | 0 | TERUKUR | Keluaran berupa peringatan berpengawas manusia. Registry mencatat nol slot alarm otomatis. | scratch/v9_i1/v9_i1_RESULTS.json kunci auto_critical_alarm_slots |
-| A1 | C2 | 13 | TERUKUR | Tiga kelas sasaran dengan fold layak terukur: stuck 2 fold, hyd 7 fold, bit_wear 4 fold. | docs/V7_R1_SOLUTIONS.md:69, 127, 203 |
-| A1 | C7 | 3/3 | TERUKUR | Tiga dari tiga butir bukti pada 3.1.4.1 membawa jejak berkas dan baris. | scratch/ppt1/alternatif.json alternatif id A1 kunci bukti |
-| A1 | C3 | L30 | RUBRIK | Relabel mengubah definisi target, bukan ambang. Kalibrasi per sumur tidak termasuk lingkup, sehingga gejala 119,6 kali tetap tidak tersentuh. | docs/V9_PM2_VERDICT.md:114 |
-| A1 | C6 | 2 | ASUMSI | Beban dinilai rendah pada V7 bagian 7 karena relabel dan run ulang tanpa parse. Dua minggu adalah asumsi perkiraan desain. | docs/V7_R1_SOLUTIONS.md:215 |
-| A1 | C5 | 0 | TERUKUR | Relabel tidak memerlukan parse baru karena deret sumber sudah berbentuk CSV. | docs/V7_R1_SOLUTIONS.md:76 |
-| A1 | C8 | 3 | RUBRIK | Keluaran satu peringatan per onset dengan waktu, keyakinan, dan tindakan yang disarankan. Tingkat 3 pada rubrik 3.3. | scratch/ppt1/affinity.json kunci kriteria id C8 |
-| A2 | C1 | L20 | TERUKUR | Parse empat wellbore selesai dan terukur, namun evaluasi ulang fold belum dijalankan sehingga dampak ke gate belum dapat diklaim. | docs/V9_PM1_ARCHITECTURE.md:186; docs/PPT1_BAB3_1.md:103 |
-| A2 | C4 | 0 | TERUKUR | Tidak menambah slot alarm otomatis karena hanya menambah data, bukan keluaran baru. | scratch/v9_i1/v9_i1_RESULTS.json kunci auto_critical_alarm_slots |
-| A2 | C2 | 18 | TERUKUR | Empat kelas sasaran dengan fold layak terukur: shk 7, ssi 5, vib 4, stuck 2. | docs/V7_R1_SOLUTIONS.md:97, 197, 55, 69 |
-| A2 | C7 | 3/3 | TERUKUR | Tiga dari tiga butir bukti pada 3.1.4.2 membawa jejak berkas dan baris. | scratch/ppt1/alternatif.json alternatif id A2 kunci bukti |
-| A2 | C3 | L60 | RUBRIK | Menambah empat sumur uji sehingga portabilitas diuji pada jumlah sumur lebih banyak, tanpa memuat kalibrasi ambang per sumur. | docs/V7_R1_SOLUTIONS.md:43-48 |
-| A2 | C6 | 2 | ASUMSI | Sisa pekerjaan hanya evaluasi ulang fold karena parse selesai. Dua minggu adalah asumsi perkiraan desain. | docs/PPT1_BAB3_1.md:103 |
-| A2 | C5 | 3 | TERUKUR | Jalur CRPM sudah diparse pada empat wellbore dengan baris terukur, namun jalur VIBLAT untuk F-4, F-10, dan F-15 masih berstatus belum diparse, sehingga tiga wellbore tersisa untuk kelas vib. | docs/V9_PM1_ARCHITECTURE.md:186, 169 |
-| A2 | C8 | 2 | RUBRIK | Tidak menghasilkan bentuk keluaran sendiri. Beban kognitif mengikuti alternatif yang memakai datanya, sehingga dinilai netral pada tingkat 2. | scratch/ppt1/affinity.json kunci kriteria id C8 |
-| A3 | C1 | L20 | TERUKUR | Belum dieksekusi. Cacat label yang diserang sudah terukur, yaitu kontrol-positif stuck nol dari sepuluh. | docs/V8_PM_VERDICT.md:202; docs/PPT1_BAB3_1.md:51 |
-| A3 | C4 | 0 | TERUKUR | Bekerja pada mutu label, tidak menerbitkan alarm. | scratch/v9_i1/v9_i1_RESULTS.json kunci auto_critical_alarm_slots |
-| A3 | C2 | 9 | TERUKUR | Dua kelas sasaran dengan fold layak terukur: stuck 2 fold dan hyd 7 fold. | docs/V7_R1_SOLUTIONS.md:69, 127 |
-| A3 | C7 | 3/3 | TERUKUR | Tiga dari tiga butir bukti pada 3.1.4.3 membawa jejak berkas dan baris. | scratch/ppt1/alternatif.json alternatif id A3 kunci bukti |
-| A3 | C3 | L30 | RUBRIK | Audit semantik label lintas sumur menyentuh konsistensi antar sumur, namun tidak menetapkan kalibrasi ambang per sumur. | docs/V9_PM2_VERDICT.md:114 |
-| A3 | C6 | 4 | ASUMSI | Dua tahap berurutan, audit label lalu label probabilistik. Empat minggu adalah asumsi perkiraan desain. | docs/V7_R1_SOLUTIONS.md:89 |
-| A3 | C5 | 0 | TERUKUR | Memakai label kurasi dan CSV yang sudah ada, tanpa parse baru. | docs/V7_R1_SOLUTIONS.md:88 |
-| A3 | C8 | 2 | RUBRIK | Keluaran berupa label, bukan peringatan operator. Beban kognitif operator tidak berubah, sehingga dinilai netral pada tingkat 2. | scratch/ppt1/affinity.json kunci kriteria id C8 |
-| A4 | C1 | L20 | TERUKUR | Belum dieksekusi. Akar yang diserang terukur, yaitu dua fold underpowered pada ssi dengan 3 dan 12 positif. | docs/V7_R1_SOLUTIONS.md:197; docs/PPT1_BAB3_1.md:52 |
-| A4 | C4 | 0 | TERUKUR | Tidak menerbitkan alarm otomatis. | scratch/v9_i1/v9_i1_RESULTS.json kunci auto_critical_alarm_slots |
-| A4 | C2 | 12 | TERUKUR | Dua kelas sasaran dengan fold layak terukur: shk 7 fold dan ssi 5 fold. | docs/V7_R1_SOLUTIONS.md:97, 197 |
-| A4 | C7 | 3/3 | TERUKUR | Tiga dari tiga butir bukti pada 3.1.4.4 membawa jejak berkas dan baris. | scratch/ppt1/alternatif.json alternatif id A4 kunci bukti |
-| A4 | C3 | L30 | RUBRIK | Perubahan unit analisis tidak menetapkan kalibrasi ambang per sumur. | docs/V9_PM2_VERDICT.md:114 |
-| A4 | C6 | 3 | ASUMSI | Beban rendah sampai sedang pada V7 bagian 7. Tiga minggu adalah asumsi perkiraan desain. | docs/V7_R1_SOLUTIONS.md:222 |
-| A4 | C5 | 0 | TERUKUR | Memakai CSV terparse dan batas stand yang diturunkan dari kolom yang sudah ada. | docs/V7_R1_SOLUTIONS.md:112 |
-| A4 | C8 | 2 | RUBRIK | Unit stand memperlebar horizon prediksi menjadi stand berikutnya, sehingga keluaran menjadi daftar kandidat tanpa urutan. Tingkat 2 pada rubrik 3.3. | docs/V7_R1_SOLUTIONS.md:113 |
-| A5 | C1 | L20 | TERUKUR | Belum dieksekusi. Akar yang diserang terukur, yaitu varians AUPRC pada fold dengan 30 sampai 41 positif. | docs/V7_R1_SOLUTIONS.md:99; docs/PPT1_BAB3_1.md:53 |
-| A5 | C4 | 0 | TERUKUR | Tidak menerbitkan alarm otomatis. | scratch/v9_i1/v9_i1_RESULTS.json kunci auto_critical_alarm_slots |
-| A5 | C2 | 9 | TERUKUR | Dua kelas sasaran dengan fold layak terukur: ssi 5 fold dan bit_wear 4 fold. | docs/V7_R1_SOLUTIONS.md:197, 203 |
-| A5 | C7 | 3/3 | TERUKUR | Tiga dari tiga butir bukti pada 3.1.4.5 membawa jejak berkas dan baris. | scratch/ppt1/alternatif.json alternatif id A5 kunci bukti |
-| A5 | C3 | L30 | RUBRIK | Formulasi ordinal tidak menetapkan kalibrasi ambang per sumur. | docs/V9_PM2_VERDICT.md:114 |
-| A5 | C6 | 2 | ASUMSI | Beban rendah pada V7 bagian 7. Dua minggu adalah asumsi perkiraan desain. | docs/V7_R1_SOLUTIONS.md:222 |
-| A5 | C5 | 0 | TERUKUR | Kanal sudah tersedia di CSV sehingga tidak ada parse baru. | docs/V7_R1_SOLUTIONS.md:118 |
-| A5 | C8 | 2 | RUBRIK | Keluaran berupa tingkat severitas tanpa urutan prioritas tindakan. Tingkat 2 pada rubrik 3.3. | docs/V7_R1_SOLUTIONS.md:117 |
-| A6 | C1 | L20 | TERUKUR | Belum dieksekusi. Hasil negatif pada hyd sudah terukur, yaitu B1 nol dari tiga onset, sehingga formulasi survival tidak punya sinyal pendukung pada kelas itu. | docs/V9_EVAL_B_LAYERB.md:103; docs/PPT1_BAB3_1.md:54 |
-| A6 | C4 | 0 | TERUKUR | Skor risiko per horizon tetap advisory, tanpa alarm otomatis. | scratch/v9_i1/v9_i1_RESULTS.json kunci auto_critical_alarm_slots |
-| A6 | C2 | 11 | TERUKUR | Dua kelas sasaran dengan fold layak terukur: hyd 7 fold dan bit_wear 4 fold. | docs/V7_R1_SOLUTIONS.md:127, 203 |
-| A6 | C7 | 3/3 | TERUKUR | Tiga dari tiga butir bukti pada 3.1.4.6 membawa jejak berkas dan baris. | scratch/ppt1/alternatif.json alternatif id A6 kunci bukti |
-| A6 | C3 | L30 | RUBRIK | Survival mengubah formulasi, bukan ambang, sehingga gejala 119,6 kali tidak tersentuh. | docs/V9_PM2_VERDICT.md:114 |
-| A6 | C6 | 4 | ASUMSI | Beban sedang pada V7 bagian 7. Empat minggu adalah asumsi perkiraan desain. | docs/V7_R1_SOLUTIONS.md:222 |
-| A6 | C5 | 0 | TERUKUR | Diturunkan dari label yang sudah ada, tanpa parse baru. | docs/V7_R1_SOLUTIONS.md:151 |
-| A6 | C8 | 2 | RUBRIK | Keluaran berupa hazard atau sisa umur yang masih perlu ditafsirkan pengguna. Tingkat 2 pada rubrik 3.3. | docs/V7_R1_SOLUTIONS.md:150 |
-| A7 | C1 | L75 | TERUKUR | Mekanisme progresi sudah dijalankan pada empat dari empat alat dengan TLead 20 sampai 36 detik dan false alarm terkalibrasi 1 sampai 3 per alat, sehingga delta terukur positif, namun gate G1 tetap nol dari empat dan presisi run hanya 0,50 sehingga makna delta terbatas. | docs/V9_EVAL_C_LAYERC.md:98; docs/V7_R1_SOLUTIONS.md:160 |
-| A7 | C4 | 0 | TERUKUR | Keluaran berupa status dan tren alat, tanpa alarm otomatis. | scratch/v9_i1/v9_i1_RESULTS.json kunci auto_critical_alarm_slots |
-| A7 | C2 | 4 | TERUKUR | Satu domain sasaran dengan empat fold alat terukur. | docs/V7_R1_SOLUTIONS.md:160 |
-| A7 | C7 | 4/4 | TERUKUR | Empat dari empat butir bukti pada 3.1.4.7 membawa jejak berkas dan baris. | scratch/ppt1/alternatif.json alternatif id A7 kunci bukti |
-| A7 | C3 | L30 | RUBRIK | Domain bengkel memakai empat alat dan bukan sumur, sehingga kalibrasi per sumur tidak berlaku dan tidak dirancang. | scratch/ppt1/affinity.json kunci batasan id B5 |
-| A7 | C6 | 5 | ASUMSI | Pengembangan baru berskala sedang sampai besar karena dekomposisi mode dan ranking ditambahkan. Lima minggu adalah asumsi perkiraan desain. | docs/V7_R1_SOLUTIONS.md:219; scratch/ppt1/affinity.json kunci batasan id B3 |
-| A7 | C5 | 0 | TERUKUR | Delapan berkas akselerometer sudah tersedia dan terverifikasi SHA-256, tanpa parse baru. | docs/V7_R1_SOLUTIONS.md:170 |
-| A7 | C8 | 2 | RUBRIK | Keluaran berupa peringkat alat yang masih perlu dibaca sebagai daftar. Tingkat 2 pada rubrik 3.3. | docs/V7_R1_SOLUTIONS.md:185 |
-| A8 | C1 | L20 | TERUKUR | Belum dieksekusi. Akar yang diserang terukur, yaitu label hyd masih proksi residual SPPA dan label keausan fisik tidak tersedia. | docs/V8_PM_VERDICT.md:202; docs/V4_MAINTENANCE_ML_OPTIONS.md:62 |
-| A8 | C4 | 0 | TERUKUR | Label fisika dipakai sebagai label pelatihan, bukan alarm otomatis, sehingga batasan B2 tetap terpenuhi. | scratch/ppt1/affinity.json kunci batasan id B2 |
-| A8 | C2 | 11 | TERUKUR | Dua kelas sasaran dengan fold layak terukur: hyd 7 fold dan bit_wear 4 fold. | docs/V7_R1_SOLUTIONS.md:127, 203 |
-| A8 | C7 | 3/3 | TERUKUR | Tiga dari tiga butir bukti pada 3.1.4.8 membawa jejak berkas dan baris. | scratch/ppt1/alternatif.json alternatif id A8 kunci bukti |
-| A8 | C3 | L60 | RUBRIK | Parse kanal pit dan flow pada F-9 serta F-1 C dan F-11 menambah sumur uji, tanpa rancangan kalibrasi ambang per sumur. | docs/V7_R1_SOLUTIONS.md:145 |
-| A8 | C6 | 5 | ASUMSI | Beban rendah untuk label MSE dan DS ditambah beban sedang sampai besar untuk parse pit dan flow. Lima minggu adalah asumsi perkiraan desain. | docs/V7_R1_SOLUTIONS.md:146, 183 |
-| A8 | C5 | 2 | TERUKUR | Dua sumur memerlukan parse tambahan, yaitu kanal pit mentah F-9 dan F-1 C atau F-11. | docs/V7_R1_SOLUTIONS.md:145 |
-| A8 | C8 | 2 | RUBRIK | Mengubah sumber label tanpa mengubah bentuk keluaran, sehingga beban kognitif operator dinilai netral pada tingkat 2. | scratch/ppt1/affinity.json kunci kriteria id C8 |
-| A9 | C1 | L20 | TERUKUR | Belum dieksekusi. Gejala yang diserang terukur, yaitu sebaran false alarm 4,15 sampai 496,09 per 24 jam. | docs/V9_PM2_VERDICT.md:114; docs/PPT1_BAB3_1.md:57 |
-| A9 | C4 | 0 | TERUKUR | Purwarupa peringatan dini tetap advisory dengan review manusia, sesuai batasan B2. | scratch/v9_i1/v9_i1_RESULTS.json kunci auto_critical_alarm_slots |
-| A9 | C2 | 6 | TERUKUR | Dua kelas sasaran dengan fold layak terukur: vib 4 fold dan stuck 2 fold. | docs/V7_R1_SOLUTIONS.md:55, 69 |
-| A9 | C7 | 4/4 | TERUKUR | Empat dari empat butir bukti pada 3.1.4.9 membawa jejak berkas dan baris, termasuk kunci JSON registry. | scratch/ppt1/alternatif.json alternatif id A9 kunci bukti |
-| A9 | C3 | L60 | RUBRIK | Memuat rancangan kalibrasi ambang per sumur sebagai inti pekerjaan, namun belum diuji pada dua sumur atau lebih. | docs/V9_PM2_VERDICT.md:114; docs/PPT1_BAB3_1.md:57 |
-| A9 | C6 | 4 | ASUMSI | Kalibrasi ambang ditambah purwarupa peringatan. Empat minggu adalah asumsi perkiraan desain. | scratch/ppt1/affinity.json kunci batasan id B3 |
-| A9 | C5 | 0 | TERUKUR | Memakai registry head dan CSV yang sudah ada, tanpa parse baru. | docs/V4_MAINTENANCE_ML_OPTIONS.md:58 |
-| A9 | C8 | 3 | RUBRIK | Rancangan keluaran berupa satu baris peringatan dengan waktu, keyakinan, dan tindakan, serta frekuensi pemeriksaan satu kali per empat jam. Tingkat 3 pada rubrik 3.3. | docs/V8_R1_ABC_SPEC.md:240; docs/PPT1_BAB3_2.md:471 |
+| Alternatif | Kriteria | Satuan mentah | Status | Dasar |
+| --- | --- | --- | --- | --- |
+| A1 | C1 | L75 | terukur | Mekanisme sudah dieksekusi untuk stuck dan hyd. Stuck memberi B1 0,51 sampai 1,00 dengan TLead 10 sampai 11,5 menit. Hyd memberi B1 nol dari tiga onset, jadi hasil negatifnya terukur. |
+| A1 | C4 | 0 | terukur | Keluaran berupa peringatan berpengawas manusia. Registry mencatat nol slot alarm otomatis. |
+| A1 | C2 | 13 | terukur | Tiga kelas sasaran dengan fold layak terukur: stuck 2 fold, hyd 7 fold, bit_wear 4 fold. |
+| A1 | C7 | 3/3 | terukur | Tiga dari tiga butir bukti pada 3.1.4.1 membawa jejak berkas dan baris. |
+| A1 | C3 | L30 | penilaian rubrik | Relabel mengubah definisi target, bukan ambang. Kalibrasi per sumur tidak termasuk lingkup, sehingga gejala 119,6 kali tetap tidak tersentuh. |
+| A1 | C6 | 2 | asumsi | Beban dinilai rendah pada V7 bagian 7 karena relabel dan run ulang tanpa parse. Dua minggu adalah asumsi perkiraan desain. |
+| A1 | C5 | 0 | terukur | Relabel tidak memerlukan parse baru karena deret sumber sudah berbentuk CSV. |
+| A1 | C8 | 3 | penilaian rubrik | Keluaran satu peringatan per onset dengan waktu, keyakinan, dan tindakan yang disarankan. Tingkat 3 pada rubrik 3.3. |
+| A2 | C1 | L20 | terukur | Parse empat wellbore selesai dan terukur, namun evaluasi ulang fold belum dijalankan sehingga dampak ke gate belum dapat diklaim. |
+| A2 | C4 | 0 | terukur | Tidak menambah slot alarm otomatis karena hanya menambah data, bukan keluaran baru. |
+| A2 | C2 | 18 | terukur | Empat kelas sasaran dengan fold layak terukur: shk 7, ssi 5, vib 4, stuck 2. |
+| A2 | C7 | 3/3 | terukur | Tiga dari tiga butir bukti pada 3.1.4.2 membawa jejak berkas dan baris. |
+| A2 | C3 | L60 | penilaian rubrik | Menambah empat sumur uji sehingga portabilitas diuji pada jumlah sumur lebih banyak, tanpa memuat kalibrasi ambang per sumur. |
+| A2 | C6 | 2 | asumsi | Sisa pekerjaan hanya evaluasi ulang fold karena parse selesai. Dua minggu adalah asumsi perkiraan desain. |
+| A2 | C5 | 3 | terukur | Jalur CRPM sudah diparse pada empat wellbore dengan baris terukur, namun jalur VIBLAT untuk F-4, F-10, dan F-15 masih berstatus belum diparse, sehingga tiga wellbore tersisa untuk kelas vib. |
+| A2 | C8 | 2 | penilaian rubrik | Tidak menghasilkan bentuk keluaran sendiri. Beban kognitif mengikuti alternatif yang memakai datanya, sehingga dinilai netral pada tingkat 2. |
+| A3 | C1 | L20 | terukur | Belum dieksekusi. Cacat label yang diserang sudah terukur, yaitu kontrol-positif stuck nol dari sepuluh. |
+| A3 | C4 | 0 | terukur | Bekerja pada mutu label, tidak menerbitkan alarm. |
+| A3 | C2 | 9 | terukur | Dua kelas sasaran dengan fold layak terukur: stuck 2 fold dan hyd 7 fold. |
+| A3 | C7 | 3/3 | terukur | Tiga dari tiga butir bukti pada 3.1.4.3 membawa jejak berkas dan baris. |
+| A3 | C3 | L30 | penilaian rubrik | Audit semantik label lintas sumur menyentuh konsistensi antar sumur, namun tidak menetapkan kalibrasi ambang per sumur. |
+| A3 | C6 | 4 | asumsi | Dua tahap berurutan, audit label lalu label probabilistik. Empat minggu adalah asumsi perkiraan desain. |
+| A3 | C5 | 0 | terukur | Memakai label kurasi dan CSV yang sudah ada, tanpa parse baru. |
+| A3 | C8 | 2 | penilaian rubrik | Keluaran berupa label, bukan peringatan operator. Beban kognitif operator tidak berubah, sehingga dinilai netral pada tingkat 2. |
+| A4 | C1 | L20 | terukur | Belum dieksekusi. Akar yang diserang terukur, yaitu dua fold underpowered pada ssi dengan 3 dan 12 positif. |
+| A4 | C4 | 0 | terukur | Tidak menerbitkan alarm otomatis. |
+| A4 | C2 | 12 | terukur | Dua kelas sasaran dengan fold layak terukur: shk 7 fold dan ssi 5 fold. |
+| A4 | C7 | 3/3 | terukur | Tiga dari tiga butir bukti pada 3.1.4.4 membawa jejak berkas dan baris. |
+| A4 | C3 | L30 | penilaian rubrik | Perubahan unit analisis tidak menetapkan kalibrasi ambang per sumur. |
+| A4 | C6 | 3 | asumsi | Beban rendah sampai sedang pada V7 bagian 7. Tiga minggu adalah asumsi perkiraan desain. |
+| A4 | C5 | 0 | terukur | Memakai CSV terparse dan batas stand yang diturunkan dari kolom yang sudah ada. |
+| A4 | C8 | 2 | penilaian rubrik | Unit stand memperlebar horizon prediksi menjadi stand berikutnya, sehingga keluaran menjadi daftar kandidat tanpa urutan. Tingkat 2 pada rubrik 3.3. |
+| A5 | C1 | L20 | terukur | Belum dieksekusi. Akar yang diserang terukur, yaitu varians AUPRC pada fold dengan 30 sampai 41 positif. |
+| A5 | C4 | 0 | terukur | Tidak menerbitkan alarm otomatis. |
+| A5 | C2 | 9 | terukur | Dua kelas sasaran dengan fold layak terukur: ssi 5 fold dan bit_wear 4 fold. |
+| A5 | C7 | 3/3 | terukur | Tiga dari tiga butir bukti pada 3.1.4.5 membawa jejak berkas dan baris. |
+| A5 | C3 | L30 | penilaian rubrik | Formulasi ordinal tidak menetapkan kalibrasi ambang per sumur. |
+| A5 | C6 | 2 | asumsi | Beban rendah pada V7 bagian 7. Dua minggu adalah asumsi perkiraan desain. |
+| A5 | C5 | 0 | terukur | Kanal sudah tersedia di CSV sehingga tidak ada parse baru. |
+| A5 | C8 | 2 | penilaian rubrik | Keluaran berupa tingkat severitas tanpa urutan prioritas tindakan. Tingkat 2 pada rubrik 3.3. |
+| A6 | C1 | L20 | terukur | Belum dieksekusi. Hasil negatif pada hyd sudah terukur, yaitu B1 nol dari tiga onset, sehingga formulasi survival tidak punya sinyal pendukung pada kelas itu. |
+| A6 | C4 | 0 | terukur | Skor risiko per horizon tetap advisory, tanpa alarm otomatis. |
+| A6 | C2 | 11 | terukur | Dua kelas sasaran dengan fold layak terukur: hyd 7 fold dan bit_wear 4 fold. |
+| A6 | C7 | 3/3 | terukur | Tiga dari tiga butir bukti pada 3.1.4.6 membawa jejak berkas dan baris. |
+| A6 | C3 | L30 | penilaian rubrik | Survival mengubah formulasi, bukan ambang, sehingga gejala 119,6 kali tidak tersentuh. |
+| A6 | C6 | 4 | asumsi | Beban sedang pada V7 bagian 7. Empat minggu adalah asumsi perkiraan desain. |
+| A6 | C5 | 0 | terukur | Diturunkan dari label yang sudah ada, tanpa parse baru. |
+| A6 | C8 | 2 | penilaian rubrik | Keluaran berupa hazard atau sisa umur yang masih perlu ditafsirkan pengguna. Tingkat 2 pada rubrik 3.3. |
+| A7 | C1 | L75 | terukur | Mekanisme progresi sudah dijalankan pada empat dari empat alat dengan TLead 20 sampai 36 detik dan false alarm terkalibrasi 1 sampai 3 per alat, sehingga delta terukur positif, namun gate G1 tetap nol dari empat dan presisi run hanya 0,50 sehingga makna delta terbatas. |
+| A7 | C4 | 0 | terukur | Keluaran berupa status dan tren alat, tanpa alarm otomatis. |
+| A7 | C2 | 4 | terukur | Satu domain sasaran dengan empat fold alat terukur. |
+| A7 | C7 | 4/4 | terukur | Empat dari empat butir bukti pada 3.1.4.7 membawa jejak berkas dan baris. |
+| A7 | C3 | L30 | penilaian rubrik | Domain bengkel memakai empat alat dan bukan sumur, sehingga kalibrasi per sumur tidak berlaku dan tidak dirancang. |
+| A7 | C6 | 5 | asumsi | Pengembangan baru berskala sedang sampai besar karena dekomposisi mode dan ranking ditambahkan. Lima minggu adalah asumsi perkiraan desain. |
+| A7 | C5 | 0 | terukur | Delapan berkas akselerometer sudah tersedia dan terverifikasi SHA-256, tanpa parse baru. |
+| A7 | C8 | 2 | penilaian rubrik | Keluaran berupa peringkat alat yang masih perlu dibaca sebagai daftar. Tingkat 2 pada rubrik 3.3. |
+| A8 | C1 | L20 | terukur | Belum dieksekusi. Akar yang diserang terukur, yaitu label hyd masih proksi residual SPPA dan label keausan fisik tidak tersedia. |
+| A8 | C4 | 0 | terukur | Label fisika dipakai sebagai label pelatihan, bukan alarm otomatis, sehingga batasan B2 tetap terpenuhi. |
+| A8 | C2 | 11 | terukur | Dua kelas sasaran dengan fold layak terukur: hyd 7 fold dan bit_wear 4 fold. |
+| A8 | C7 | 3/3 | terukur | Tiga dari tiga butir bukti pada 3.1.4.8 membawa jejak berkas dan baris. |
+| A8 | C3 | L60 | penilaian rubrik | Parse kanal pit dan flow pada F-9 serta F-1 C dan F-11 menambah sumur uji, tanpa rancangan kalibrasi ambang per sumur. |
+| A8 | C6 | 5 | asumsi | Beban rendah untuk label MSE dan DS ditambah beban sedang sampai besar untuk parse pit dan flow. Lima minggu adalah asumsi perkiraan desain. |
+| A8 | C5 | 2 | terukur | Dua sumur memerlukan parse tambahan, yaitu kanal pit mentah F-9 dan F-1 C atau F-11. |
+| A8 | C8 | 2 | penilaian rubrik | Mengubah sumber label tanpa mengubah bentuk keluaran, sehingga beban kognitif operator dinilai netral pada tingkat 2. |
+| A9 | C1 | L20 | terukur | Belum dieksekusi. Gejala yang diserang terukur, yaitu sebaran false alarm 4,15 sampai 496,09 per 24 jam. |
+| A9 | C4 | 0 | terukur | Purwarupa peringatan dini tetap advisory dengan review manusia, sesuai batasan B2. |
+| A9 | C2 | 6 | terukur | Dua kelas sasaran dengan fold layak terukur: vib 4 fold dan stuck 2 fold. |
+| A9 | C7 | 4/4 | terukur | Empat dari empat butir bukti pada 3.1.4.9 membawa jejak berkas dan baris, termasuk kunci JSON registry. |
+| A9 | C3 | L60 | penilaian rubrik | Memuat rancangan kalibrasi ambang per sumur sebagai inti pekerjaan, namun belum diuji pada dua sumur atau lebih. |
+| A9 | C6 | 4 | asumsi | Kalibrasi ambang ditambah purwarupa peringatan. Empat minggu adalah asumsi perkiraan desain. |
+| A9 | C5 | 0 | terukur | Memakai registry head dan CSV yang sudah ada, tanpa parse baru. |
+| A9 | C8 | 3 | penilaian rubrik | Rancangan keluaran berupa satu baris peringatan dengan waktu, keyakinan, dan tindakan, serta frekuensi pemeriksaan satu kali per empat jam. Tingkat 3 pada rubrik 3.3. |
 
 ### 3.4.4 Bobot kriteria
 
 Bobot tidak ditetapkan sebagai angka bulat. Yang tersedia pada proyek ini adalah urutan prioritas, bukan rasio antar kriteria, sehingga urutan itu diturunkan menjadi bobot kardinal dengan Rank-Order Centroid. Aturan penyusunan urutan ditulis lebih dahulu, supaya urutan itu dapat dibantah.
 
 | Kode | Aturan pengurutan | Kriteria | Dasar |
-|---|---|---|---|
-| R1 | kriteria yang menjadi definisi lulus gate | C1 | Gate G1 dan G2 adalah definisi operasional lulus pada docs/V7_R1_SOLUTIONS.md:97, 127, 197, 203, 160, sehingga kriteria yang mengukur gate mendahului semua kriteria lain. |
-| R2 | batasan keras yang menggugurkan, dengan jumlah user story terbanyak | C4 | Batasan B2 pada scratch/ppt1/affinity.json menggugurkan alternatif yang mengklaim alarm otomatis, dan tiga user story bergantung pada C4 yaitu U2, U4, dan U6, terbanyak di antara delapan kriteria. |
+| --- | --- | --- | --- |
+| R1 | kriteria yang menjadi definisi lulus gate | C1 | Gate G1 dan G2 adalah definisi operasional lulus yang dipakai pada seluruh evaluasi (lift minimal 1,5 pada mayoritas sumur layak dan AUPRC minimal AUPRC canary kedalaman), sehingga kriteria yang mengukur gate mendahului semua kriteria lain. |
+| R2 | batasan keras yang menggugurkan, dengan jumlah user story terbanyak | C4 | Batasan B2 (satu alternatif hanya boleh satu mode keluaran) menggugurkan alternatif yang mengklaim alarm otomatis, dan tiga user story bergantung pada C4 yaitu U2, U4, dan U6, terbanyak di antara delapan kriteria. |
 | R3 | batasan keras yang menggugurkan, jumlah user story lebih sedikit | C2 | Batasan B4 menetapkan urutan kerja label lebih dahulu, dan dua user story bergantung pada C2 yaitu U1 dan U5. |
 | R4 | batasan keras yang menuntut jejak, tanpa menggugurkan | C7 | Batasan B1 menuntut seluruh angka dapat diaudit, sifatnya administratif sehingga tidak menggugurkan alternatif, dan tiga user story bergantung pada C7 yaitu U4, U5, dan U6. |
-| R5 | gejala terukur yang belum menjadi batasan | C3 | Sebaran false alarm rate 4,15 sampai 496,09 per 24 jam sudah terukur pada docs/V9_PM2_VERDICT.md:114, tetapi belum ada alternatif yang menguji kalibrasi per sumur, sehingga kriteria ini penting namun belum menggugurkan. |
+| R5 | gejala terukur yang belum menjadi batasan | C3 | Sebaran false alarm rate 4,15 sampai 496,09 per 24 jam sudah terukur dari hasil uji ambang tetap, tetapi belum ada alternatif yang menguji kalibrasi per sumur, sehingga kriteria ini penting namun belum menggugurkan. |
 | R6 | batasan jadwal dengan daya beda rendah | C6 | Tenggat sembilan minggu mengikat seluruh tim menurut Buku Pedoman PPT Tahap I Tabel 3.1 halaman 32, namun seluruh alternatif berada pada rentang dua sampai lima minggu sehingga daya bedanya kecil dan tidak ada user story yang bergantung padanya. |
-| R7 | biaya data yang bersifat instrumental | C5 | Sebagian besar parse sudah selesai pada kampanye V9 menurut docs/V9_PM1_ARCHITECTURE.md:186, sehingga kebutuhan data baru hanya membedakan beberapa alternatif. |
-| R8 | kriteria dengan bukti terlemah | C8 | Rubrik C8 disusun pada subbab 3.3 dan belum divalidasi mitra, bahkan docs/PPT1_BAB3_2.md:665 menyatakan antarmuka peringatan belum dirancang. Peringkat terakhir menandai kekuatan bukti, bukan ketidakpentingan. |
+| R7 | biaya data yang bersifat instrumental | C5 | Sebagian besar parse sudah selesai pada kampanye V9, sehingga kebutuhan data baru hanya membedakan beberapa alternatif. |
+| R8 | kriteria dengan bukti terlemah | C8 | Rubrik C8 disusun pada subbab 3.3 dan belum divalidasi mitra, dan antarmuka peringatan belum dirancang, sehingga C8 belum punya ukuran selain rubrik. Peringkat terakhir menandai kekuatan bukti, bukan ketidakpentingan. |
 
-Aturan dibaca berurutan dari R1 sampai R8: kriteria yang memenuhi aturan lebih awal mendapat peringkat lebih tinggi. Di dalam kelompok batasan keras, dua hal menentukan urutan, yaitu sifat menggugurkan atau tidaknya pelanggaran lebih dahulu, lalu jumlah user story yang bergantung pada kriteria itu menurut `scratch/ppt1/affinity.json` kunci `matriks_us_kriteria`.
+Aturan dibaca berurutan dari R1 sampai R8: kriteria yang memenuhi aturan lebih awal mendapat peringkat lebih tinggi. Di dalam kelompok batasan keras, dua hal menentukan urutan, yaitu sifat menggugurkan atau tidaknya pelanggaran lebih dahulu, lalu jumlah user story yang bergantung pada kriteria itu menurut  kunci `matriks_us_kriteria`.
 
 | Peringkat | Kriteria | Aturan | Bobot ROC | Alasan ringkas |
-|---|---|---|---|---|
+| --- | --- | --- | --- | --- |
 | 1 | C1 Efektivitas deteksi pada gate yang sudah dikunci | R1 | 0,3397 | Gate G1 dan G2 adalah definisi operasional lulus, sehingga kriteria ini mengukur apakah alternatif bekerja sama sekali. Rubrik 4.1 menuntut pemilihan memakai performance metrics yang ditetapkan lebih dahulu, dan U1 sebagai pemilik masalah utama bergantung pada C1. |
 | 2 | C4 Kepatuhan mode advisory tanpa alarm otomatis | R2 | 0,2147 | Batasan B2 bersifat keras karena pelanggarannya membuat alat tidak boleh dipakai, bukan sekadar menurunkan skor. Tiga user story bergantung pada kriteria ini, yaitu U2, U4, dan U6, jumlah terbanyak di antara delapan kriteria. |
 | 3 | C2 Kecukupan bukti per fold | R3 | 0,1522 | Batasan B4 menetapkan label dibereskan lebih dahulu, dan aturan kampanye menyatakan fold dengan kurang dari 30 positif berstatus underpowered sehingga tidak boleh dihitung sebagai mayoritas. Dua user story bergantung pada C2, yaitu U1 dan U5. |
@@ -189,7 +179,7 @@ Rumus yang dipakai: untuk n kriteria dan peringkat i, bobot sama dengan satu per
 - Bobot terbesar 0,3397 pada kriteria yang memenuhi R1, bobot terkecil 0,0156 pada kriteria yang memenuhi R8
 - Rasio bobot terbesar terhadap terkecil = 21,74
 
-Status bobot ini adalah ASUMSI, dengan dua alasan yang ditulis apa adanya: belum ada wawancara mitra yang menetapkan prioritas, dan ROC adalah pendekatan, bukan elisitasi langsung. Satu kelemahan perlu disebut di sini, bukan hanya di bagian hasil: karena C4 menempati peringkat dua, kriteria yang pada matriks ternyata tidak membedakan justru menerima bobot terbesar kedua. Hal itu tidak diubah tanpa pemberitahuan, sebab menurunkan peringkat C4 akan berarti mengubah penilaian tentang kekerasan batasan B2. Yang dilakukan adalah menguji akibatnya lewat skenario P6, yang menolkan bobot C4 dan C7. Karena status bobotnya asumsi, subbab ini tidak berhenti pada satu vektor bobot, melainkan menguji sembilan skenario, enam belas uji satu per satu, dan satu sapuan penuh pada kriteria terpenting. Yang menentukan adalah apakah juara berubah, bukan apakah angkanya bergeser.
+Status bobot ini adalah asumsi, dengan dua alasan yang ditulis apa adanya: belum ada wawancara mitra yang menetapkan prioritas, dan ROC adalah pendekatan, bukan elisitasi langsung. Satu kelemahan perlu disebut di sini, bukan hanya di bagian hasil: karena C4 menempati peringkat dua, kriteria yang pada matriks ternyata tidak membedakan justru menerima bobot terbesar kedua. Hal itu tidak diubah tanpa pemberitahuan, sebab menurunkan peringkat C4 akan berarti mengubah penilaian tentang kekerasan batasan B2. Yang dilakukan adalah menguji akibatnya lewat skenario P6, yang menolkan bobot C4 dan C7. Karena status bobotnya asumsi, subbab ini tidak berhenti pada satu vektor bobot, melainkan menguji sembilan skenario, enam belas uji satu per satu, dan satu sapuan penuh pada kriteria terpenting. Yang menentukan adalah apakah juara berubah, bukan apakah angkanya bergeser.
 
 ### 3.4.5 Matriks keputusan
 
@@ -198,7 +188,7 @@ Matriks berukuran sembilan alternatif kali delapan kriteria, seluruhnya 72 sel t
 Tabel 3.4.2 Matriks keputusan dalam satuan mentah
 
 | Alternatif | C1 | C4 | C2 | C7 | C3 | C6 | C5 | C8 |
-|---|---|---|---|---|---|---|---|---|
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | A1 | L75 | 0 | 13 | 3/3 | L30 | 2 | 0 | 3 |
 | A2 | L20 | 0 | 18 | 3/3 | L60 | 2 | 3 | 2 |
 | A3 | L20 | 0 | 9 | 3/3 | L30 | 4 | 0 | 2 |
@@ -214,7 +204,7 @@ Keterangan satuan: C1 dan C3 memakai kode tingkat rubrik, yaitu L100, L75, L60, 
 Tabel 3.4.3 Matriks nilai baku 0 sampai 100
 
 | Alternatif | C1 | C4 | C2 | C7 | C3 | C6 | C5 | C8 |
-|---|---|---|---|---|---|---|---|---|
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | A1 | 75,00 | 100,00 | 72,22 | 100,00 | 30,00 | 77,78 | 100,00 | 100,00 |
 | A2 | 20,00 | 100,00 | 100,00 | 100,00 | 60,00 | 77,78 | 25,00 | 50,00 |
 | A3 | 20,00 | 100,00 | 50,00 | 100,00 | 30,00 | 55,56 | 100,00 | 50,00 |
@@ -229,7 +219,7 @@ Daya beda kolom diperiksa sebelum bobot dipakai. Kolom tanpa variasi: C4, C7. Ke
 
 ### 3.4.6 Perhitungan TOPSIS
 
-Lima langkah, seluruhnya dijalankan oleh `scratch/ppt1/build_mcdm.py`.
+Lima langkah, seluruhnya dijalankan oleh .
 
 1. Normalisasi vektor per kolom: setiap nilai dibagi akar jumlah kuadrat kolomnya.
 2. Pembobotan: nilai ternormalisasi dikali bobot kriteria.
@@ -238,7 +228,7 @@ Lima langkah, seluruhnya dijalankan oleh `scratch/ppt1/build_mcdm.py`.
 5. Koefisien kedekatan C sama dengan D minus dibagi (D plus ditambah D minus). Nilai satu berarti paling dekat ke ideal.
 
 | Kriteria | Pembagi normalisasi | Ideal positif | Ideal negatif | Bobot |
-|---|---|---|---|---|
+| --- | --- | --- | --- | --- |
 | C1 | 118,5327 | 0,2150 | 0,0573 | 0,3397 |
 | C4 | 300,0000 | 0,0716 | 0,0716 | 0,2147 |
 | C2 | 183,6697 | 0,0829 | 0,0184 | 0,1522 |
@@ -251,7 +241,7 @@ Lima langkah, seluruhnya dijalankan oleh `scratch/ppt1/build_mcdm.py`.
 Tabel 3.4.4 Hasil TOPSIS
 
 | Peringkat | Alternatif | Nama | D plus | D minus | Koefisien kedekatan C |
-|---|---|---|---|---|---|
+| --- | --- | --- | --- | --- | --- |
 | 1 | A1 | Relabeling onset peristiwa: dari status menjadi kejadian | 0,0297 | 0,1636 | 0,8465 |
 | 2 | A7 | Penguatan kampanye keausan alat bengkel | 0,0679 | 0,1579 | 0,6993 |
 | 3 | A2 | Perluasan wellbore berkanal disfungsi F-10, F-4, F-12, F-15 | 0,1580 | 0,0678 | 0,3003 |
@@ -267,7 +257,7 @@ Selisih koefisien antara peringkat satu dan dua adalah 0,1473, sedangkan antara 
 Tabel 3.4.5 Kontribusi tiap kriteria pada tiga besar (nilai V sama dengan bobot kali nilai ternormalisasi)
 
 | Kriteria | Bobot | A1 | A7 | A2 | Selisih A1 dikurangi A7 |
-|---|---|---|---|---|---|
+| --- | --- | --- | --- | --- | --- |
 | C1 | 0,3397 | 0,21496 | 0,21496 | 0,05732 | +0,00000 |
 | C4 | 0,2147 | 0,07158 | 0,07158 | 0,07158 | +0,00000 |
 | C2 | 0,1522 | 0,05986 | 0,01842 | 0,08288 | +0,04144 |
@@ -279,14 +269,14 @@ Tabel 3.4.5 Kontribusi tiap kriteria pada tiga besar (nilai V sama dengan bobot 
 
 Kontribusi yang menentukan kemenangan A1 adalah C2 sebesar +0,04144, C6 sebesar +0,00957, C8 sebesar +0,00403, sedangkan pada kriteria lain selisihnya nol sehingga A7 tidak unggul pada satu kriteria pun. Dengan kata lain, kemenangan itu berasal dari selisih pada kriteria yang berbobot besar, bukan dari keunggulan menyeluruh.
 
-Perlu dicatat bahwa A1 dan A7 sama-sama bernilai 75 pada C1, karena keduanya sudah dieksekusi dan memberi delta terukur positif, yaitu stuck dengan B1 0,51 sampai 1,00 pada `docs/V9_EVAL_B_LAYERB.md:101` dan alat bengkel dengan lead time 20 sampai 36 detik pada `docs/V9_EVAL_C_LAYERC.md:98`. Yang memisahkan keduanya adalah kriteria lain, terutama jumlah fold layak, beban kognitif, dan waktu kerja. Penilaian C1 untuk A1 juga tidak seragam antar kelas: pada kelas hyd hasilnya negatif, yaitu nol dari tiga onset menurut `docs/V9_EVAL_B_LAYERB.md:103`, dan itu dicatat terbuka, bukan dirata-ratakan menjadi kemenangan.
+Perlu dicatat bahwa A1 dan A7 sama-sama bernilai 75 pada C1, karena keduanya sudah dieksekusi dan memberi delta terukur positif, yaitu stuck dengan B1 0,51 sampai 1,00 pada  dan alat bengkel dengan lead time 20 sampai 36 detik pada . Yang memisahkan keduanya adalah kriteria lain, terutama jumlah fold layak, beban kognitif, dan waktu kerja. Penilaian C1 untuk A1 juga tidak seragam antar kelas: pada kelas hyd hasilnya negatif, yaitu nol dari tiga onset menurut , dan itu dicatat terbuka, bukan dirata-ratakan menjadi kemenangan.
 
 ### 3.4.7 Pembanding SAW
 
 SAW memakai normalisasi vektor dan bobot yang sama, lalu menjumlahkan hasil kali bobot dengan nilai ternormalisasi. Karena tidak memakai titik ideal, hasilnya dapat berbeda bila ada alternatif yang menonjol pada satu kriteria tetapi lemah pada kriteria lain.
 
 | Peringkat | Alternatif | Skor SAW | Peringkat TOPSIS |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | 1 | A1 | 0,4448 | 1 |
 | 2 | A7 | 0,3898 | 2 |
 | 3 | A2 | 0,3155 | 3 |
@@ -306,7 +296,7 @@ Uji dilakukan pada tiga tingkat. Pertama, sembilan skenario vektor bobot yang me
 Tabel 3.4.6 Sembilan skenario bobot
 
 | Skenario | Nama | Jenis | C1 | C4 | C2 | C7 | C3 | C6 | C5 | C8 | Juara | Tiga besar | Tau terhadap P0 |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | P0 | Dasar, ROC atas peringkat | bobot | 0,340 | 0,215 | 0,152 | 0,111 | 0,079 | 0,054 | 0,033 | 0,016 | A1 | A1, A7, A2 | 1,0000 |
 | P1 | Bobot sama | bobot | 0,125 | 0,125 | 0,125 | 0,125 | 0,125 | 0,125 | 0,125 | 0,125 | A1 | A1, A7, A2 | 0,5000 |
 | P2 | Gate dominan | bobot | 0,550 | 0,146 | 0,104 | 0,075 | 0,054 | 0,037 | 0,023 | 0,011 | A1 | A1, A7, A2 | 1,0000 |
@@ -332,7 +322,7 @@ Hasil sembilan skenario: juara yang muncul hanya A1, dan 9 dari 9 skenario memil
 Tabel 3.4.7 Enam belas uji satu per satu
 
 | Kriteria | Arah | Bobot baru | Juara | Juara berubah |
-|---|---|---|---|---|
+| --- | --- | --- | --- | --- |
 | C1 | naik 50 persen | 0,4356 | A1 | tidak |
 | C1 | turun 50 persen | 0,2046 | A1 | tidak |
 | C4 | naik 50 persen | 0,2909 | A1 | tidak |
@@ -355,7 +345,7 @@ Dari 16 uji satu per satu, tidak satu pun mengubah juara, dengan hitungan 0 dari
 Tabel 3.4.8 Sapuan bobot C1
 
 | Juara | Bobot C1 dari | Bobot C1 sampai |
-|---|---|---|
+| --- | --- | --- |
 | A2 | 0,0000 | 0,1000 |
 | A1 | 0,1050 | 0,9000 |
 
@@ -364,7 +354,7 @@ Titik balik juara berada pada bobot C1 = 0,1050. Di bawah nilai itu A2 menang, d
 Tabel 3.4.9 Stabilitas peringkat pada seluruh uji
 
 | Alternatif | Menjadi juara | Masuk tiga besar | Peringkat terburuk | Jumlah kasus |
-|---|---|---|---|---|
+| --- | --- | --- | --- | --- |
 | A1 | 25 | 25 | 1 | 25 |
 | A2 | 0 | 24 | 8 | 25 |
 | A3 | 0 | 0 | 9 | 25 |
@@ -379,12 +369,12 @@ Jumlah kasus adalah 25, yaitu 9 skenario ditambah 16 uji satu per satu. A1 menja
 
 ### 3.4.9 Perbandingan dengan draft lama
 
-Draft 13 Agustus 2026 memilih A1 ML Classifier dipadukan A3 SHAP dashboard, memakai enam kriteria berskala 1 sampai 5 tanpa rubrik dan bobot 0,25, 0,20, 0,15, 0,10, 0,15, 0,15 (`scratch/ppt1/docx_draft_text.txt:228-279`). Dua pemeriksaan dilakukan: menghitung ulang jumlah berbobot setiap baris, dan menjalankan TOPSIS sejati pada matriks draft itu sendiri.
+Draft 13 Agustus 2026 memilih A1 ML Classifier dipadukan A3 SHAP dashboard, memakai enam kriteria berskala 1 sampai 5 tanpa rubrik dan bobot 0,25, 0,20, 0,15, 0,10, 0,15, 0,15 (). Dua pemeriksaan dilakukan: menghitung ulang jumlah berbobot setiap baris, dan menjalankan TOPSIS sejati pada matriks draft itu sendiri.
 
 Tabel 3.4.10 Hitung ulang jumlah berbobot draft lama
 
 | Alternatif draft | Skor K1 sampai K6 | Total tertulis | Total hitung ulang | Selisih | Dapat direproduksi |
-|---|---|---|---|---|---|
+| --- | --- | --- | --- | --- | --- |
 | A1 ML Classifier | 5, 5, 4, 3, 4, 4 | 4,35 | 4,35 | 0,00 | ya |
 | A2 IsoForest | 4, 3, 3, 4, 3, 3 | 3,40 | 3,35 | -0,05 | tidak |
 | A3 SHAP Dash | 3, 2, 5, 4, 5, 3 | 3,55 | 3,50 | -0,05 | tidak |
@@ -396,11 +386,11 @@ Dari lima baris, 1 dapat direproduksi dan 4 tidak. Selisihnya 0,05 pada empat ba
 Peta kriteria draft ke kriteria subbab 3.3:
 
 | Kriteria draft | Kriteria subbab 3.3 | Status | Catatan |
-|---|---|---|---|
-| K1 Recall (bobot 0,25) | C1 | terpetakan | Keduanya mengukur efektivitas deteksi. Bedanya, K1 memakai skor 1 sampai 5 tanpa rubrik, sedangkan C1 memakai lift dan AUPRC terukur yang sudah ada pada docs/V7_R1_SOLUTIONS.md:97, 127, 197, 203, 160. |
+| --- | --- | --- | --- |
+| K1 Recall (bobot 0,25) | C1 | terpetakan | Keduanya mengukur efektivitas deteksi. Bedanya, K1 memakai skor 1 sampai 5 tanpa rubrik, sedangkan C1 memakai lift dan AUPRC terukur yang sudah ada pada hasil evaluasi. |
 | K2 Lead time (bobot 0,20) | tidak punya kriteria sendiri | terpetakan sebagian | Angka lead time memang terukur, yaitu 10 sampai 11,5 menit pada stuck dan 20 sampai 36 detik pada alat bengkel, tetapi hanya untuk dua kelas. Karena tidak tersedia untuk tujuh kelas lain, lead time tidak dapat dipakai sebagai kriteria pemilihan lintas alternatif. |
 | K3 Explainability (bobot 0,15) | C8 | terpetakan sebagian | C8 mengukur beban kognitif keluaran, bukan kualitas penjelasan model. Keduanya bersinggungan pada keterbacaan hasil, dan keduanya berstatus asumsi karena belum divalidasi mitra. |
-| K4 Biaya implementasi (bobot 0,10) | C5 dan C6 | terpetakan | Biaya dipecah menjadi kebutuhan data dan waktu kerja. Rupiah tidak dipakai pada kedua sisi karena tarif rig tidak tersedia pada seluruh 13 dataset, sesuai docs/PPT1_BAB3_2.md:659. |
+| K4 Biaya implementasi (bobot 0,10) | C5 dan C6 | terpetakan | Biaya dipecah menjadi kebutuhan data dan waktu kerja. Rupiah tidak dipakai pada kedua sisi karena tarif rig tidak tersedia pada seluruh 13 dataset, karena tidak ada dokumen keuangan proyek. |
 | K5 Kemudahan integrasi (bobot 0,15) | tidak terpetakan | tidak dapat dipertahankan | Tidak ada berkas proyek yang mengukur biaya integrasi ke sistem mitra, dan telemetri mitra tidak dipakai menurut batasan B1. Skor integrasi pada draft karena itu tidak punya jejak. |
 | K6 ROI (bobot 0,15) | tidak terpetakan | tidak dapat dipertahankan | Tarif rig per jam tidak ada pada seluruh dataset, sehingga ROI dalam rupiah tidak dapat dihitung. Menuliskan angka ROI berarti menulis asumsi sebagai hasil ukur. |
 
@@ -409,7 +399,7 @@ Dua dari enam kriteria draft, yaitu K5 kemudahan integrasi dan K6 ROI, tidak dap
 Tabel 3.4.11 TOPSIS sejati pada matriks draft lama
 
 | Peringkat | Alternatif draft | D plus | D minus | C |
-|---|---|---|---|---|
+| --- | --- | --- | --- | --- |
 | 1 | A1 ML Classifier | 0,0340 | 0,1666 | 0,8306 |
 | 2 | A2 IsoForest | 0,0879 | 0,0957 | 0,5213 |
 | 3 | A3 SHAP Dash | 0,1141 | 0,0845 | 0,4255 |
@@ -420,7 +410,7 @@ Tiga kesimpulan perbandingan, ditulis apa adanya.
 
 Pertama, label juara sama tetapi isinya berbeda, dan ini harus dinyatakan terbuka. Draft memilih A1 yang berarti pengklasifikasi pembelajaran mesin. Pada subbab 3.1, A1 berarti relabeling onset peristiwa, yaitu memindahkan definisi target dari status ke titik masuk peristiwa, dan justru mekanisme itulah yang membuat pengklasifikasi dapat bekerja. Jadi kesamaan huruf A1 bukan kesamaan objek pemilihan. Yang benar-benar sejalan adalah arah: pembelajaran terbimbing di atas label onset dengan keluaran berpengawas manusia.
 
-Kedua, draft menyebut metodenya TOPSIS (`scratch/ppt1/docx_draft_text.txt:229`), tetapi angka yang ditulis pada tabel draft adalah jumlah berbobot, yaitu skor dikali bobot lalu dijumlahkan. Hitungan itu adalah SAW, bukan TOPSIS. Ketika TOPSIS sejati dijalankan pada matriks yang sama, urutannya berubah: A3 SHAP Dash dan A2 IsoForest bertukar posisi. Juara tidak berubah, tetapi peringkat kedua dan ketiga pada draft bergantung pada metode yang dipakai, dan hal itu tidak terlihat karena draft tidak menulis langkah perhitungannya. Pada subbab ini kedua metode dihitung dan dibandingkan secara terbuka pada 3.4.6 dan 3.4.7.
+Kedua, draft menyebut metodenya TOPSIS (), tetapi angka yang ditulis pada tabel draft adalah jumlah berbobot, yaitu skor dikali bobot lalu dijumlahkan. Hitungan itu adalah SAW, bukan TOPSIS. Ketika TOPSIS sejati dijalankan pada matriks yang sama, urutannya berubah: A3 SHAP Dash dan A2 IsoForest bertukar posisi. Juara tidak berubah, tetapi peringkat kedua dan ketiga pada draft bergantung pada metode yang dipakai, dan hal itu tidak terlihat karena draft tidak menulis langkah perhitungannya. Pada subbab ini kedua metode dihitung dan dibandingkan secara terbuka pada 3.4.6 dan 3.4.7.
 
 Ketiga, draft tidak memisahkan alternatif yang sudah dieksekusi dari yang belum. Akibatnya alternatif yang belum dijalankan dapat memperoleh skor 5 pada K1 karena tampak menjanjikan. Pada subbab ini pemisahan itu dilakukan lewat rubrik C1, dan skenario P5 menguji apa yang terjadi bila penalti bukti dihapus: juara tetap A1. Artinya kemenangan A1 bukan akibat pembatasan metode, melainkan bertahan bahkan ketika alternatif yang belum dieksekusi diberi nilai lebih murah hati.
 
@@ -429,7 +419,7 @@ Ketiga, draft tidak memisahkan alternatif yang sudah dieksekusi dari yang belum.
 Alternatif terpilih: A1 (Relabeling onset peristiwa: dari status menjadi kejadian), dengan koefisien kedekatan 0,8465 pada skenario dasar, menjadi juara pada 25 dari 25 kasus uji, dan tidak pernah turun dari peringkat satu.
 
 | Peringkat | Alternatif | Peran yang diusulkan | Dasar |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | 1 | A1 Relabeling onset peristiwa: dari status menjadi kejadian | sumbu utama rancangan solusi | Mekanismenya sudah dieksekusi, memberi delta terukur positif pada kelas stuck, dan tidak menuntut parse baru sehingga C5 bernilai 100. |
 | 2 | A7 Penguatan kampanye keausan alat bengkel | jalur kedua pada domain berbeda, dijalankan bila jadwal memungkinkan | Bukti terkuat pada domain bengkel dengan lead time 20 sampai 36 detik, tetapi domainnya berbeda dari rig sehingga tidak boleh menjadi klaim utama. |
 | 3 | A2 Perluasan wellbore berkanal disfungsi F-10, F-4, F-12, F-15 | pendukung akuisisi bukti, dijalankan bersamaan dengan sumbu utama | Menambah wellbore dan fold layak paling banyak, sehingga memperkuat alternatif lain tanpa menjadi bentuk keluaran tersendiri. |
@@ -449,7 +439,7 @@ Satu catatan metodologis perlu disampaikan karena berkaitan dengan batas MCDM it
 Tabel ini menjawab pertanyaan yang mudah terlewat saat membaca matriks MCDM: alternatif mana yang menjawab pertanyaan riset mana, dan sejauh mana jawabannya sudah ada.
 
 | Kode | Pertanyaan (1.1.6) | Alternatif yang menjawab | Status jawaban di Bab III |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | RM1 | merancang lapisan peringatan dini pada data yang benar-benar tersedia | A1, dibantu A2 dan A3 | dijawab sebagian. A1 peringkat satu dengan koefisien kedekatan 0,8465, juara pada 25 dari 25 kasus uji, dan memberi delta terukur positif pada kelas stuck. Hasil negatif pada kelas hyd tetap dinyatakan pada 3.4.11 dan tidak ditutupi. |
 | RM2 | memilih titik operasi per mode dengan beban alarm palsu yang dapat diterima | A9 | belum dijawab. A9 satu-satunya alternatif yang menyentuh langsung gejala sebaran 119,6 kali, tetapi peringkat sembilan karena rancangan kalibrasi belum diuji. Titik operasi per mode belum ditetapkan, dan pekerjaan itu dipindahkan ke Saran 1 dengan alasan yang dinyatakan terbuka. |
 | RM3 | menyajikan keluaran yang dapat dijelaskan kepada drilling engineer | belum ada alternatif | belum dijawab. Kriteria C8 belum dapat dinilai karena antarmuka peringatan belum dirancang (3.3.6 butir 8), sehingga pertanyaan ini berstatus pekerjaan PPT II dan tidak boleh dibaca sebagai sudah selesai. |
@@ -465,54 +455,27 @@ Catatan pembacaan: dua dari tiga pertanyaan riset belum terjawab penuh. Matriks 
 5. Jumlah minggu kerja pada C6 berstatus asumsi untuk setiap alternatif. Yang baku hanya tenggat sembilan minggu menurut Buku Pedoman PPT Tahap I Tabel 3.1 halaman 32.
 6. Tidak ada angka rupiah pada perhitungan ini karena tarif rig tidak tersedia. Konsekuensinya keputusan tidak dapat dinyatakan sebagai penghematan biaya, dan klaim ROI tidak dibuat.
 7. ROC adalah pendekatan bobot, bukan elisitasi. Menurut Kunsch dan Ishizaka, keunggulan ROC bergantung pada cara bobot seharusnya diperoleh, sehingga bila wawancara mitra menghasilkan rasio yang berbeda jauh, perhitungan wajib diulang dengan bobot hasil wawancara itu.
-8. Portabilitas antar sumur belum terukur sesudah kalibrasi. Yang terukur baru sebaran sebelum kalibrasi, yaitu 4,15 sampai 496,09 per 24 jam (`docs/V9_PM2_VERDICT.md:114`), sehingga nilai C3 untuk A2, A8, dan A9 berstatus rubrik tingkat 60, bukan hasil uji.
-9. A7 berada pada peringkat dua dengan koefisien 0,6993, tetapi berada pada domain bengkel, dengan presisi run 0,50 (`docs/V9_EVAL_C_LAYERC.md:98`) dan gate G1 nol dari empat alat (`docs/V7_R1_SOLUTIONS.md:160`). Peringkat dua itu tidak boleh dibaca sebagai kesiapan penerapan di rig.
+8. Portabilitas antar sumur belum terukur sesudah kalibrasi. Yang terukur baru sebaran sebelum kalibrasi, yaitu 4,15 sampai 496,09 per 24 jam (), sehingga nilai C3 untuk A2, A8, dan A9 berstatus rubrik tingkat 60, bukan hasil uji.
+9. A7 berada pada peringkat dua dengan koefisien 0,6993, tetapi berada pada domain bengkel, dengan presisi run 0,50 () dan gate G1 nol dari empat alat (). Peringkat dua itu tidak boleh dibaca sebagai kesiapan penerapan di rig.
 10. Perbandingan dengan draft lama terbatas pada lima alternatif yang ada pada draft, dan dua kriteria draft tidak dapat dipetakan. Perbandingan angka mentah antara kedua dokumen tidak sah.
 
-### 3.4.12 Manifes jejak angka (internal, bukan untuk sirkulasi eksternal)
-
-| Angka | Nilai | Berkas, baris, atau kunci |
-|---|---|---|
-| Bobot ROC kriteria peringkat 1 | 0,3397 | dihitung `scratch/ppt1/build_mcdm.py` fungsi roc_weights |
-| Bobot ROC kriteria peringkat 8 | 0,0156 | dihitung `scratch/ppt1/build_mcdm.py` fungsi roc_weights |
-| Jumlah bobot | 1,000000000000 | `scratch/ppt1/mcdm.json` kunci bobot.jumlah |
-| Koefisien kedekatan A1 | 0,8465 | `scratch/ppt1/mcdm.json` kunci topsis.sel.A1.C |
-| Koefisien kedekatan A7 | 0,6993 | `scratch/ppt1/mcdm.json` kunci topsis.sel.A7.C |
-| Jumlah skenario | 9 | `scratch/ppt1/mcdm.json` kunci sensitivitas.skenario |
-| Jumlah uji satu per satu | 16 | `scratch/ppt1/mcdm.json` kunci sensitivitas.oat |
-| Titik balik bobot C1 | 0,1050 | `scratch/ppt1/mcdm.json` kunci sensitivitas.titik_balik_C1 |
-| Kendall tau TOPSIS dan SAW | 0,8889 | `scratch/ppt1/mcdm.json` kunci kendall_topsis_saw |
-| Massa bobot efektif | 0,6747 | `scratch/ppt1/mcdm.json` kunci diskriminasi.massa_bobot_efektif |
-| Baris draft lama yang tidak dapat direproduksi | 4 dari 5 | `scratch/ppt1/mcdm.json` kunci draft_lama.baris_tidak_reproduksi |
-| Bobot draft lama | 0,25 / 0,20 / 0,15 / 0,10 / 0,15 / 0,15 | `scratch/ppt1/docx_draft_text.txt:232-237` |
-| Pilihan draft lama | A1 ML Classifier dipadukan A3 SHAP | `scratch/ppt1/docx_draft_text.txt:279` |
-| Slot alarm otomatis | 0 | `scratch/v9_i1/v9_i1_RESULTS.json` kunci auto_critical_alarm_slots |
-| FAR vib antar sumur | 4,15 sampai 496,09 per 24 jam, rasio 119,6 kali | `docs/V9_PM2_VERDICT.md:114` |
-| Stuck K-ii | B1 0,51 sampai 1,00, TLead 10 sampai 11,5 menit | `docs/V9_EVAL_B_LAYERB.md:101` |
-| Hyd K-ii | 0 dari 3 onset | `docs/V9_EVAL_B_LAYERB.md:103` |
-| Tool_wear K-i | TLead 20 sampai 36 detik, FP 1 sampai 3 per alat, presisi run 0,50 | `docs/V9_EVAL_C_LAYERC.md:98` |
-| Gate shk, hyd, tool_wear, ssi, bit_wear, stuck | 3/7, 2/7, 0/4, 4/5, 3/4, 1/2 | `docs/V7_R1_SOLUTIONS.md:97, 127, 160, 197, 203, 66` |
-| Jumlah bukti per alternatif | 3, 3, 3, 3, 3, 3, 4, 3, 4 | `scratch/ppt1/alternatif.json` kunci alternatif |
-| Antarmuka peringatan belum dirancang | pernyataan 3.3.6 butir 8 | `docs/PPT1_BAB3_2.md:665` |
-| Tarif rig tidak tersedia | pernyataan 3.3.6 butir 2 | `docs/PPT1_BAB3_2.md:659` |
-
-### 3.4.13 Lampiran bukti kelas sasaran
+### 3.4.12 Lampiran bukti kelas sasaran
 
 Tabel berikut memuat angka yang menjadi jangkar rubrik C1 dan C3. Tujuannya supaya pembaca dapat memeriksa sendiri apakah tingkat 75 pada C1 memang layak, tanpa harus membuka dokumen V7 dan V9 satu per satu. 7 kelas sasaran tercatat, dan setiap baris menunjuk berkas dan nomor baris.
 
 Tabel 3.4.12 Bukti terukur per kelas sasaran
 
-| Kelas sasaran | Alternatif yang memakai | Lift terukur | Gate G1 dan G2 | Catatan | Jejak |
-|---|---|---|---|---|---|
-| stuck | A1, A2, A9 | 3,12 pada F-14 dan 0,97 pada F-9_A | G1 1 dari 2 fold, G2 1 dari 2 fold | Pada F-9_A persistence 0,787 mengalahkan Random Forest 0,651 dan canary 0,769 | docs/V7_R1_SOLUTIONS.md:66 |
-| shk | A2, A4 | 1,35 / 1,24 / 1,26 / 3,36 / 0,94 / 9,79 / 2,31 | G1 3 dari 7 fold, G2 6 dari 7 fold | Tujuh fold dengan 30 sampai 760 positif per fold | docs/V7_R1_SOLUTIONS.md:97 |
-| hyd | A1, A3, A6, A8 | 1,40 / 1,00 / 1,02 / 2,03 / 0,80 / 2,35 / 1,07 | G1 2 dari 7 fold, G2 4 dari 7 fold | Persistence 0,42 sampai 0,63 mengalahkan Random Forest 0,11 sampai 0,61 pada 7 dari 7 fold | docs/V7_R1_SOLUTIONS.md:127 |
-| tool_wear | A7 | 1,09 / 1,39 / 1,42 / 1,30 | G1 0 dari 4 alat, G2 4 dari 4 alat | AUPRC 0,54 sampai 0,77 dengan prevalensi sekitar 0,5 sehingga plafon lift 2,0 | docs/V7_R1_SOLUTIONS.md:160 |
-| ssi | A2, A4, A5 | 2,61 / 3,59 / 6,64 / 3,74 / 1,47 | G1 4 dari 5 fold, G2 5 dari 5 fold | Persistence kalah 0 dari 5 fold, dua fold underpowered dengan 3 dan 12 positif | docs/V9_PM1_ARCHITECTURE.md:186; docs/V7_R1_SOLUTIONS.md:197 |
-| bit_wear | A1, A5, A6, A8 | 1,495 pada F-15S gagal tipis | G1 3 dari 4 fold, G2 4 dari 4 fold | Persistence lebih tinggi daripada Random Forest pada 4 dari 4 fold sehingga verdict turun menjadi layak bersyarat | docs/V7_R1_SOLUTIONS.md:203 |
-| vib | A2, A9 | 1,61 / 2,36 / 3,50 / 1,63 | LULUS penuh pada baseline, direproduksi pada V9 | False alarm rate menyebar 4,15 sampai 496,09 per 24 jam, yaitu rasio 119,6 kali antar sumur | docs/V8_PM_VERDICT.md:155; docs/V6_PM_VERDICT.md:131; docs/V9_PM2_VERDICT.md:126, 114 |
+| Kelas sasaran | Alternatif yang memakai | Lift terukur | Gate G1 dan G2 | Catatan |
+| --- | --- | --- | --- | --- |
+| stuck | A1, A2, A9 | 3,12 pada F-14 dan 0,97 pada F-9_A | G1 1 dari 2 fold, G2 1 dari 2 fold | Pada F-9_A persistence 0,787 mengalahkan Random Forest 0,651 dan canary 0,769 |
+| shk | A2, A4 | 1,35 / 1,24 / 1,26 / 3,36 / 0,94 / 9,79 / 2,31 | G1 3 dari 7 fold, G2 6 dari 7 fold | Tujuh fold dengan 30 sampai 760 positif per fold |
+| hyd | A1, A3, A6, A8 | 1,40 / 1,00 / 1,02 / 2,03 / 0,80 / 2,35 / 1,07 | G1 2 dari 7 fold, G2 4 dari 7 fold | Persistence 0,42 sampai 0,63 mengalahkan Random Forest 0,11 sampai 0,61 pada 7 dari 7 fold |
+| tool_wear | A7 | 1,09 / 1,39 / 1,42 / 1,30 | G1 0 dari 4 alat, G2 4 dari 4 alat | AUPRC 0,54 sampai 0,77 dengan prevalensi sekitar 0,5 sehingga plafon lift 2,0 |
+| ssi | A2, A4, A5 | 2,61 / 3,59 / 6,64 / 3,74 / 1,47 | G1 4 dari 5 fold, G2 5 dari 5 fold | Persistence kalah 0 dari 5 fold, dua fold underpowered dengan 3 dan 12 positif |
+| bit_wear | A1, A5, A6, A8 | 1,495 pada F-15S gagal tipis | G1 3 dari 4 fold, G2 4 dari 4 fold | Persistence lebih tinggi daripada Random Forest pada 4 dari 4 fold sehingga verdict turun menjadi layak bersyarat |
+| vib | A2, A9 | 1,61 / 2,36 / 3,50 / 1,63 | LULUS penuh pada baseline, direproduksi pada V9 | False alarm rate menyebar 4,15 sampai 496,09 per 24 jam, yaitu rasio 119,6 kali antar sumur |
 
-Dua hal perlu dibaca dari tabel itu. Pertama, menurut `docs/V8_PM_VERDICT.md:155` yang mengutip `docs/V6_PM_VERDICT.md:131`, hanya dua kelas yang berstatus LULUS penuh pada baseline, yaitu vib dan ssi. Meski begitu, tingkat 100 pada C1 belum diberikan kepada alternatif mana pun, karena rubrik C1 menuntut gate lolos untuk mekanisme alternatif itu sendiri: A1 memberi delta terukur positif pada kelas stuck tetapi negatif pada kelas hyd, sedangkan A2 dan A9 yang menyentuh vib, serta A2, A4, dan A5 yang menyentuh ssi, belum menjalankan evaluasi ulang pada kelas-kelas itu. Kedua, jumlah fold berbeda jauh antar kelas, dari dua fold pada stuck sampai tujuh fold pada shk, sehingga C2 terikat pada kelas mana yang disentuh sebuah alternatif.
+Dua hal perlu dibaca dari tabel itu. Pertama, menurut  yang mengutip , hanya dua kelas yang berstatus LULUS penuh pada baseline, yaitu vib dan ssi. Meski begitu, tingkat 100 pada C1 belum diberikan kepada alternatif mana pun, karena rubrik C1 menuntut gate lolos untuk mekanisme alternatif itu sendiri: A1 memberi delta terukur positif pada kelas stuck tetapi negatif pada kelas hyd, sedangkan A2 dan A9 yang menyentuh vib, serta A2, A4, dan A5 yang menyentuh ssi, belum menjalankan evaluasi ulang pada kelas-kelas itu. Kedua, jumlah fold berbeda jauh antar kelas, dari dua fold pada stuck sampai tujuh fold pada shk, sehingga C2 terikat pada kelas mana yang disentuh sebuah alternatif.
 
 ![Gambar 5](assets/fig04_auprc_per_engine.png)
 
@@ -524,7 +487,7 @@ Dua hal perlu dibaca dari tabel itu. Pertama, menurut `docs/V8_PM_VERDICT.md:155
 
 ![Gambar 7](assets/fig06_presisi_vs_recall.png)
 
-**Gambar 7.** Presisi terhadap recall tiap head terukur. Anotasi atas head utama `hybrid_rule_and_persistence` pada mode hyd menyebut presisi 0,824 dan recall 0,597, dengan FAR 16,6 per 24 jam pada n = 10.401 window (pos 865, neg 9.536). Garis titik-titik diagonal adalah acuan acak (`presisi = recall`). Skrip gambar 5 sampai 7: `docs/assets/make_figures.py`.
+**Gambar 7.** Presisi terhadap recall tiap head terukur. Anotasi atas head utama `hybrid_rule_and_persistence` pada mode hyd menyebut presisi 0,824 dan recall 0,597, dengan FAR 16,6 per 24 jam pada n = 10.401 window (pos 865, neg 9.536). Garis titik-titik diagonal adalah acuan acak (`presisi = recall`). Skrip gambar 5 sampai 7: .
 
 Reproduksi:
 

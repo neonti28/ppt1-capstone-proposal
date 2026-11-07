@@ -1,6 +1,6 @@
 # BAB III 3.5: UJI TAMBAHAN PEMILIHAN ALGORITME: PENCARIAN OTOMATIS DAN KOMBINASI KANDIDAT
 
-Subbab ini melaporkan dua uji tambahan atas pemilihan algoritme pada Bab III. Pertama, pencarian hyperparameter otomatis (H2O AutoML) diadu dengan Random Forest yang dipakai sebagai detektor utama. Kedua, seluruh kandidat hasil pencarian otomatis digabung untuk melihat apakah gabungan mengalahkan satu model terbaik. Naskah teknis lengkap ada di `docs/PPT1_ABLAT_AUTOML.md` bagian 1 sampai 6, dengan bukti mentah di `docs/evidence/` dan `docs/evidence/pred/`.
+Subbab ini melaporkan dua uji tambahan atas pemilihan algoritme pada Bab III. Pertama, pencarian hyperparameter otomatis (H2O AutoML) diadu dengan Random Forest yang dipakai sebagai detektor utama. Kedua, seluruh kandidat hasil pencarian otomatis digabung untuk melihat apakah gabungan mengalahkan satu model terbaik. Tabel per sumur, temuan, dan blok perintah reproduksi ada pada lampiran 3.5 dokumen ini; berkas hasil tiap uji disimpan sebagai JSON hasil eksekusi dan dapat dihitung ulang dengan perintah pada blok tersebut.
 
 ## 3.5.1 Pertanyaan yang diuji
 
@@ -94,13 +94,11 @@ Model berbasis pohon (GBM, XGBoost, DRF, XRT) tidak terpengaruh karena pemisahan
 
 | Berkas | Isi |
 |---|---|
-| `docs/PPT1_ABLAT_AUTOML.md` | Naskah teknis lengkap: tabel per sumur, temuan T1 sampai T4, perintah reproduksi |
 | `docs/evidence/h2o_kontrol.json` | Hasil AutoML 7 sumur termasuk leaderboard internal dan setelan |
 | `docs/evidence/baseline_only.json` | Baseline Random Forest, regresi logistik, dan mayoritas per sumur |
 | `docs/evidence/dl_klipp99.json` | Hasil uji tahap C setelah pemotongan persentile 99 |
 | `docs/evidence/pred/ensemble_hasil.json` | Hasil seluruh strategi kombinasi pada jalur adil dan jalur oracle |
 | `docs/evidence/pred/<sumur>.npz` | Skor mentah setiap kandidat AutoML per sumur |
-| `docs/PPT1_LEDGER_ANGKA.md` | Baris E01 sampai E08 (pencarian otomatis dan DeepLearning), F01 sampai F06 (kombinasi kandidat) |
 
 Reproduksi:
 

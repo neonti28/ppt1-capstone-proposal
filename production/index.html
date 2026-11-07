@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0c1321">
+  <meta name="description" content="Volve Advisory: alat bantu keputusan predictive maintenance untuk sumur Volve. Angka membawa sumber, keputusan tetap di manusia.">
+  <title>Volve Advisory · Alat bantu keputusan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-state="normal">
+
+<a class="skip-link" href="#main">Lewati ke konten</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 10.5 12 3l9 7.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M5.5 9.5V21h13V9.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M9.5 21v-6h5v6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 20 6v5.5c0 5-3.4 8.2-8 9.5-4.6-1.3-8-4.5-8-9.5V6l8-3Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="m8.5 12 2.3 2.3 4.7-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M3.5 9.5h17M8 3v4M16 3v4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M7.5 13h3M13.5 13h3M7.5 16.5h3M13.5 16.5h3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></symbol>
+  <symbol id="i-database" viewBox="0 0 24 24"><ellipse cx="12" cy="5.5" rx="7.5" ry="3" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M4.5 5.5v13c0 1.7 3.4 3 7.5 3s7.5-1.3 7.5-3v-13" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M4.5 12c0 1.7 3.4 3 7.5 3s7.5-1.3 7.5-3" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+  <symbol id="i-cpu" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6"/><rect x="9.5" y="9.5" width="5" height="5" rx=".8" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M9 3v3M15 3v3M9 18v3M15 18v3M3 9h3M3 15h3M18 9h3M18 15h3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 7v5.2l3.4 2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-file" viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6V3Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M14 3v4h4M9 12h6M9 15.5h6M9 19h4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15.5H6.5A2.5 2.5 0 0 0 4 21V5.5Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M4 18.5A2.5 2.5 0 0 1 6.5 16H20M8 7.5h8M8 11h6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></symbol>
+  <symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M9.6 9.2a2.5 2.5 0 1 1 3.6 2.2c-.8.5-1.2 1-1.2 1.9" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="12" cy="16.6" r=".9" fill="currentColor"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="m15.5 15.5 5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
+  <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M4 12h15M14 7l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-arrow-left" viewBox="0 0 24 24"><path d="M20 12H5M10 7l-5 5 5 5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m7 9 5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3 22 21H2L12 3Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M12 9v5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="17.4" r="1" fill="currentColor"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+  <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M16 8V5.5A1.5 1.5 0 0 0 14.5 4h-9A1.5 1.5 0 0 0 4 5.5v9A1.5 1.5 0 0 0 5.5 16H8" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+  <symbol id="i-filter" viewBox="0 0 24 24"><path d="M3 5h18l-7 8v6l-4 2v-8L3 5Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12M7 10l5 5 5-5M4 20h16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-external" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 14v5.5A1.5 1.5 0 0 1 16.5 21h-11A1.5 1.5 0 0 1 4 19.5v-11A1.5 1.5 0 0 1 5.5 7H11" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
+  <symbol id="i-wrench" viewBox="0 0 24 24"><path d="M14.5 6.5a4.5 4.5 0 0 0 5.8 5.8L21 21l-2 1-8.4-8.4A4.5 4.5 0 1 1 5 8.2L8.2 11l2.8-2.8L8.2 5a4.5 4.5 0 0 1 6.3 1.5Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></symbol>
+</svg>
+
+<div class="app">
+
+  <header class="topbar">
+    <div class="brand" aria-label="Volve Advisory">
+      <svg class="brand-mark" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 5h5.4l4.6 12.4L16.6 5H22l-7 16h-6L2 5Z" fill="#fff"/><path d="M9.2 5h3.1l2.3 6.2L16.9 5H20l-5.8 14h-4.4L9.2 5Z" fill="#c5041c" opacity=".55"/></svg>
+      <div class="brand-text"><strong>VOLVE</strong><span>ADVISORY</span></div>
+    </div>
+
+    <div class="topbar-title">
+      <h1>Ruang keputusan perawatan</h1>
+      <p>Prediksi kegagalan sumur, bukti angka, dan keputusan yang tetap di tangan manusia</p>
+    </div>
+
+    <div class="topbar-spacer"></div>
+
+    <div class="topbar-date">
+      <span>Minggu, 1 November 2026</span>
+      <span>Potong data 29 Okt 2026</span>
+    </div>
+
+    <div class="search">
+      <svg width="14" height="14" aria-hidden="true"><use href="#i-search"/></svg>
+      <input id="global-search" type="search" placeholder="Cari kartu" title="Cari kartu, sumur, atau angka" aria-label="Cari di seluruh halaman" autocomplete="off">
+    </div>
+
+    <button class="icon-btn" id="help-btn" type="button" aria-label="Buka bantuan dan legenda" title="Bantuan dan legenda">
+      <svg width="18" height="18" aria-hidden="true"><use href="#i-help"/></svg>
+    </button>
+  </header>
+
+  <aside class="sidebar" aria-label="Navigasi utama">
+    <div class="side-label">Ruang kerja</div>
+    <nav class="nav" id="nav">
+      <a href="#beranda" data-route="beranda">
+        <svg width="18" height="18" aria-hidden="true"><use href="#i-home"/></svg><span>Beranda</span>
+      </a>
+      <a href="#prediksi" data-route="prediksi" aria-label="Prediksi, 3 tugas" title="Prediksi, 3 tugas">
+        <svg width="18" height="18" aria-hidden="true"><use href="#i-cpu"/></svg><span>Prediksi</span><span class="count">3</span>
+      </a>
+      <a href="#kepercayaan" data-route="kepercayaan" aria-label="Kepercayaan, 11 kelas klaim" title="11 kelas klaim">
+        <svg width="18" height="18" aria-hidden="true"><use href="#i-shield"/></svg><span>Kepercayaan</span><span class="count">11</span>
+      </a>
+      <a href="#perencanaan" data-route="perencanaan" aria-label="Perencanaan, 10 baris antrean" title="10 baris antrean">
+        <svg width="18" height="18" aria-hidden="true"><use href="#i-calendar"/></svg><span>Perencanaan</span><span class="count">10</span>
+      </a>
+      <a href="#data" data-route="data" aria-label="Data, 6 kanal" title="6 kanal">
+        <svg width="18" height="18" aria-hidden="true"><use href="#i-database"/></svg><span>Data</span><span class="count">6</span>
+      </a>
+      <a href="#mesin" data-route="mesin" aria-label="Mesin, 7 mesin" title="7 mesin">
+        <svg width="18" height="18" aria-hidden="true"><use href="#i-cpu"/></svg><span>Mesin</span><span class="count">7</span>
+      </a>
+      <a href="#linimasa" data-route="linimasa" aria-label="Linimasa, 4 gerbang keputusan" title="4 gerbang keputusan">
+        <svg width="18" height="18" aria-hidden="true"><use href="#i-clock"/></svg><span>Linimasa</span><span class="count">4</span>
+      </a>
+      <a href="#bukti" data-route="bukti" aria-label="Bukti, 10 dokumen" title="10 dokumen">
+        <svg width="18" height="18" aria-hidden="true"><use href="#i-file"/></svg><span>Bukti</span><span class="count">10</span>
+      </a>
+      <a href="#batas" data-route="batas">
+        <svg width="18" height="18" aria-hidden="true"><use href="#i-alert"/></svg><span>Batas</span>
+      </a>
+      <a href="#kamus" data-route="kamus">
+        <svg width="18" height="18" aria-hidden="true"><use href="#i-book"/></svg><span>Kamus</span>
+      </a>
+      <a href="#alat-bantu" data-route="alat-bantu">
+        <svg width="18" height="18" aria-hidden="true"><use href="#i-wrench"/></svg><span>Alat bantu</span>
+      </a>
+    </nav>
+
+    <div class="side-foot">
+      <div class="side-status">
+        <div class="k">Slot alarm otomatis</div>
+        <div class="v"><strong>0</strong><span>dari 27 kepala</span></div>
+        <p class="note">Tidak ada kepala yang boleh memicu alarm sendiri. Keputusan akhir di manusia.</p>
+      </div>
+      <div class="side-version"><span>v1.0 · produksi</span><span>data uji</span></div>
+    </div>
+  </aside>
+
+  <main id="main" class="main" tabindex="-1">
+    <div class="state-banner" id="state-banner" role="status">
+      <svg width="16" height="16" aria-hidden="true"><use href="#i-alert"/></svg>
+      <div class="grow"><span class="state-title" id="state-title">Memuat</span> <span id="state-desc">Data sedang dimuat.</span></div>
+      <button class="btn sm" id="state-reset" type="button">Kembali normal</button>
+    </div>
+
+    <div id="view" class="view-host"></div>
+
+    <footer class="foot">
+      <span>0 slot alarm otomatis</span>
+      <span class="sep"></span>
+      <span class="hide-sm">7 mesin · 27 kepala · 11 kelas klaim</span>
+      <span class="sep hide-sm"></span>
+      <a href="#alat-bantu">Alat bantu</a>
+      <a href="#batas">Batas data</a>
+      <a href="#kamus">Kamus</a>
+      <span class="grow"></span>
+      <label for="state-select" class="muted">Keadaan data</label>
+      <select id="state-select" aria-label="Simulasi keadaan data">
+        <option value="normal">Normal</option>
+        <option value="loading">Memuat</option>
+        <option value="empty">Kosong</option>
+        <option value="error">Galat</option>
+      </select>
+      <span class="sep"></span>
+      <span class="mono">2026-10-29</span>
+    </footer>
+  </main>
+
+</div>
+
+<div class="modal" id="modal" hidden>
+  <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-head">
+      <div>
+        <h2 id="modal-title">Detail</h2>
+        <p id="modal-sub">Rincian baris</p>
+      </div>
+      <button class="icon-btn" id="modal-close" type="button" aria-label="Tutup dialog">
+        <svg width="18" height="18" aria-hidden="true"><use href="#i-x"/></svg>
+      </button>
+    </div>
+    <div class="modal-body" id="modal-body"></div>
+    <div class="modal-foot" id="modal-foot"></div>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<noscript>
+  <div style="padding:24px;border:1px solid #5a1d27;background:#2a1116;margin:16px;border-radius:8px">
+    Halaman ini membutuhkan JavaScript untuk berpindah antar ruang dan menghitung kalkulator. Aktifkan JavaScript, lalu muat ulang.
+  </div>
+</noscript>
+
+<script src="js/data.js"></script>
+<script src="js/prediksi.js"></script>
+<script src="js/views.js"></script>
+<script src="js/prediksi_view.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

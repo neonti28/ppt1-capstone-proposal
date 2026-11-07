@@ -1,0 +1,39 @@
+Okay, konteksnya kita tahu adalah PREDICTIVE MAINTENANCE (anda bisa cari di internet apa itu predictive maintenance). Dan terpenting, anda sudah berhasil mendeteksi dengan engine machine learning, tapi beberapa gagal dengan machine learning. Jadi, kalau kita berbicara predictive maintenance, memang sewajarnya kita menggunakan machine learning, tapi kali ini anda tidak saya haruskan untuk pakai machine learning. Dalam machine learning pun, saya persilahkan anda menggunakan metode yang berbeda beda (misalnya random forest, regresi, atau lainnya, terserah anda, intinya yang performanya terbaik). Apakah standar anda terlalu ketat? Saya rasa iya. jika gate tersebut dipakai untuk memutuskan apakah suatu engine boleh digunakan sama sekali, pendekatannya terlalu kaku. Jika dipakai untuk menilai apakah engine tertentu sudah terbukti memberikan kemampuan prediksi yang kuat, pendekatan itu lebih masuk akal. Anda bisa menggunakan rule based detection, statistical detection, persistance, anomaly detection, supervised ML, atau bahkan hybrid engine (campuran beberapa engine, gabungan rule, stats, atau ML). Tidak semua engine perlu melewati gate yang identik karena tidak semua engine mengerjakan tugas yang sama. Untuk kasus kerusakan x, anda bisa menggunakan engine a; untuk kerusakan y, anda boleh menggunakan engine a juga, tapi juga boleh pakai engine lain (intinya sesuaikan saja). Tidak semua engine perlu melewati gate yang identik karena tidak semua engine mengerjakan tugas yang sama. Misalnya, aturan sederhana yang mampu mendeteksi tekanan abnormal secara konsisten dapat sangat berguna tanpa pernah mengalahkan suatu model ML pada lift 1,5. Begitu pula metode statistik yang mendeteksi perubahan pola operasi bisa membantu pemeriksaan peralatan meskipun belum mampu memprediksi tanggal kerusakan. Empat kelas yang gagal tadi tidak seharusnya langsung dibuang. stuck: meskipun persistence mengalahkan ML untuk klasifikasi status, engine tersebut masih bisa berguna untuk mendeteksi onset, durasi abnormal, atau kegagalan kembali ke kondisi normal. Tetapi target itu harus diuji secara terpisah.
+
+
+
+hyd: jika labelnya berasal dari SPPA dan aliran, engine mungkin tetap berguna untuk mendeteksi atau merekonstruksi kondisi yang didefinisikan oleh variabel tersebut. Namun, itu berbeda dari membuktikan prediksi kegagalan hidraulik independen.
+
+
+
+shk: kelas positif yang langka bukan alasan untuk menolak detektor. Pertanyaan praktisnya adalah apakah ia menemukan kejadian relevan dengan tingkat alarm palsu yang dapat ditangani. Penambahan data perlu disertai pemeriksaan kualitas label dan pembagian data.
+
+
+
+tool_wear: model yang belum terbukti dapat melakukan generalisasi ke alat yang belum pernah dilihat mungkin tetap bermanfaat untuk pemantauan alat yang sudah dikenal. Kemampuan lintas alat merupakan klaim tambahan yang membutuhkan pengujian tersendiri.
+
+Jadi, saya tidak akan memberi label sederhana seperti gagal, buang hanya berdasarkan satu ambang lift. Saya akan menyimpan hasil evaluasinya sebagai informasi mengenai kemampuan, batas penggunaan, dan kekuatan bukti masing-masing engine.
+
+Standar yang menurut saya cocok dipakai adalah, Lapisan A: Apakah deteksi bekerja?
+Apakah engine mendeteksi penyimpangan, kondisi abnormal, atau kejadian target dengan benar? Ukur precision, recall, false alarm, dan waktu deteksi sesuai kebutuhan.
+
+
+
+Lapisan B: Apakah deteksi memberikan nilai maintenance?
+Apakah sistem memberi peringatan sebelum kondisi memburuk, menyediakan waktu untuk bertindak, dan membantu mengurangi pemeriksaan yang tidak perlu? Untuk ini, waktu peringatan terhadap kejadian nyata sangat penting.
+
+
+
+Lapisan C: Apakah hasilnya cukup tepercaya untuk penggunaannya?
+Apakah hasil bertahan pada periode berbeda, kondisi operasi berbeda, dan peralatan yang relevan? Apakah kualitas sensor, perubahan kondisi operasi, dan ketidakpastian ditangani dengan benar? 
+
+Tidak semua fitur harus sempurna untuk lolos pada setiap lapisan. Satu engine dapat layak digunakan untuk pemantauan tren, tetapi belum layak untuk mengeluarkan alarm kritis secara otomatis. Itu keputusan yang masuk akal, bukan kegagalan sistem.
+
+Anda tidak sedang mencoba membuktikan bahwa ML adalah solusi terbaik untuk setiap jenis masalah. Anda sedang membangun alat predictive maintenance, dan ML merupakan salah satu komponen yang dapat dipilih apabila memberi nilai tambah.
+Karena itu, prinsip desain yang tepat adalah:
+1. Pertahankan setiap metode yang menunjukkan kegunaan yang terukur untuk tugas tertentu.
+2. Bandingkan setiap metode dengan baseline yang relevan, bukan hanya satu baseline universal.
+3. Bedakan deteksi anomali, deteksi kondisi, diagnosis, dan prediksi kejadian mendatang.
+4. Jangan menuntut lift atau jumlah fold yang sama untuk semua jenis engine tanpa alasan operasional yang jelas.
+5. Tetap tuntut validitas data, pengujian temporal yang benar, dan transparansi mengenai ketidakpastian.
+6. Nilai keberhasilan pada tingkat alat predictive maintenance secara keseluruhan, bukan hanya dari jumlah model ML yang melewati gate.

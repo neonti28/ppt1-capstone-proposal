@@ -1,4 +1,4 @@
-# Verdict Audit Bab IV — PPT1_BAB4.md
+# Verdict Audit Bab IV - PPT1_BAB4.md
 
 Audit dijalankan sebagai sub agent berpikir sendiri, empat putaran berturut-turut terhadap
 Bab IV, membandingkan setiap klaim ke Bab I sampai III dengan kutipan path:baris.
