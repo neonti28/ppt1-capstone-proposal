@@ -215,8 +215,9 @@ mode teratas (Kegagalan fluida sumur 490, Stuck pipe & fishing 400, Kegagalan BH
 Kegagalan mesin permukaan 320) menyumbang 72,7 persen dari total RPN dan semuanya
 berada di atas garis ambang prioritas 300 sehingga diwarnai merah. Kurva hitam menunjukkan
 risiko kumulatif pada sumbu kanan: batas 80 persen baru terlewati pada mode kelima
-(82,3 persen). Empat mode sisanya diwarnai karena berada di bawah ambang 300. Skrip
-sumber: `docs/assets/make_figures.py`, fungsi `fig07_fmea_pareto`.
+(82,3 persen). Empat mode sisanya diwarnai karena berada di bawah ambang 300. Angka pada gambar
+menghitung tabel RPN pada subbab sebelumnya: pembilangnya daftar sebab
+per mode, penyebutnya total RPN seluruh mode.
 
 ---
 

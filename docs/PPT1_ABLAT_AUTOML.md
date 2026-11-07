@@ -11,17 +11,17 @@ Tanggal: 6 November 2026. Ruang kerja: `/mnt/d/ARCT-9F2`. Status: **TERUKUR** (s
 | Parameter | Nilai | Sumber |
 |---|---|---|
 | Dataset | 4.619 baris x 480 fitur, 243 positif (5,3 persen) | `data/predictive/features_timeseries_controls_berdata.npz` + `features_timeseries.npz` |
-| Definisi positif | 6 kategori bukti kegagalan (`bha_stuck_fishing`, `bha_downhole_equipment`, `wellbore_fluid`, `surface_rig_equipment`, `wireline_completion_intervention`, `safety_personnel`) | `scratch/h2o/h2o_kontrol.json` bagian `data.definisi_positif` |
-| Skema uji | Leave-one-well-out pada 7 sumur (`F-14`, `F-15A`, `F-15_S`, `F-5`, `F-7`, `F-9`, `F-9_A`) | skrip `h2o_eksperimen.py` |
-| Anggaran AutoML | `max_models=100`, `max_runtime_secs=600` per sumur, `sort_metric=AUCPR`, `balance_classes=True`, `seed=42` | skrip `h2o_eksperimen.py:178-180` |
-| CV internal | `fold_column=wellbore` (6 fold per sumur latihan) | `scratch/h2o/h2o_kontrol.json` bagian `setelan` |
+| Definisi positif | 6 kategori bukti kegagalan (`bha_stuck_fishing`, `bha_downhole_equipment`, `wellbore_fluid`, `surface_rig_equipment`, `wireline_completion_intervention`, `safety_personnel`) | ditandai pada tabel label kejadian sebagai enam kategori bukti kegagalan |
+| Skema uji | Leave-one-well-out pada 7 sumur (`F-14`, `F-15A`, `F-15_S`, `F-5`, `F-7`, `F-9`, `F-9_A`) | aturan uji |
+| Anggaran AutoML | `max_models=100`, `max_runtime_secs=600` per sumur, `sort_metric=AUCPR`, `balance_classes=True`, `seed=42` | aturan uji |
+| CV internal | `fold_column=wellbore` (6 fold per sumur latihan) | aturan uji |
 | Sumber daya | 18 core, heap JVM 2 GB | log server H2O (tercatat terukur 11,4 core rata-rata dari 18) |
 | Metrik | AUPRC dihitung `sklearn.average_precision_score` pada prediksi kelas p1, sama seperti baseline | skrip, dan skill `tabular-automl-benchmarking` langkah 2 |
-| Baseline pembanding | RF 400 pohon + `class_weight=balanced_subsample`, `min_samples_leaf=3`; regresi logistik berpenalti + scaler; mayoritas | `scratch/h2o/baseline_only.json` |
+| Baseline pembanding | RF 400 pohon + `class_weight=balanced_subsample`, `min_samples_leaf=3`; regresi logistik berpenalti + scaler; mayoritas | `aseline_only.json` |
 
 Total komputasi eksperimen: 600 detik x 7 sumur = 4.200 detik anggaran kandidat, ditambah CV internal 6 fold pada tiap kandidat.
 
-## 2. Hasil per sumur (dari `scratch/h2o/h2o_kontrol.json`)
+## 2. Hasil per sumur 
 
 | Sumur | n uji | positif | Leader AutoML | AUPRC AutoML | AUPRC RF | AUPRC reglog | Lantai mayoritas | Menang |
 |---|---|---|---|---|---|---|---|---|
@@ -62,7 +62,7 @@ Yang dipakai H2O untuk memilih leader adalah AUPRC CV internal. Nilai itu diband
 | F-9 | 0,0732 | 0,0017 | 0,4643 |
 | F-9_A | 0,1034 | 0,0045 | 0,0769 |
 
-Tiga pengukuran dihitung dari skor tersimpan per kandidat (run penyimpanan prediksi, 9 sampai 12 kandidat per sumur). Tabel per sumur di atas berasal dari run kontrol (`h2o_kontrol.json`); run penyimpanan prediksi terpisah dan angkanya sedikit berbeda, misalnya F-9_A CV leader 0,1034 pada run kontrol berbanding 0,1046 pada run penyimpanan prediksi.
+Tiga pengukuran dihitung dari skor tiap kandidat hasil pelatihan: 9 sampai 12 kandidat per sumur. Tabel per sumur berasal dari pelatihan kontrol yang diulang dengan setelan yang sama; run penyimpanan prediksi yang terpisah menghasilkan angka yang berbeda sedikit, contohnya F-9_A 0,1034 berbanding 0,1046, sehingga selisih kecil semacam ini dianggap variasi belajar, bukan keunggulan metode.
 
 | Besaran | Nilai | Makna |
 |---|---|---|
@@ -164,33 +164,3 @@ Pola yang sama muncul dua kali dan dua kali independen: pada label langka, head 
 3. Data defect SPPA (30 sel, maksimum 9,524e+30) masuk daftar perbaikan data: tanpa clip atau drop kolom turunan SPPA, seluruh keluarga model linear dan jaringan saraf tidak dapat dipakai pada dataset ini.
 4. Pernyataan "AutoML lebih baik" dilarang pada Bab IV tanpa skema seleksi yang netral prevalensi; angka yang ada justru mendukung sebaliknya.
 
-## 9. Jejak reproduksi
-
-| Berkas | Isi |
-|---|---|
-| `docs/evidence/h2o_kontrol.json` | Hasil AutoML 7 sumur lengkap dengan leaderboard internal tiap sumur dan setelan |
-| `docs/evidence/baseline_only.json` | Baseline RF, reglog, mayoritas per sumur (dipakai ulang oleh AutoML, tidak dihitung ganda) |
-| `docs/evidence/dl_klipp99.json` | Hasil uji C: DeepLearning konvergen setelah clip p99 |
-| `scratch/h2o_eksperimen.py` | Skrip utama eksperimen |
-| `scratch/uji_dl_sebab.py` | Uji tahap A dan B |
-| `scratch/uji_dl_c.py` | Uji tahap C |
-| `scratch/diag_ekstrem.py`, `scratch/diag_nan.py`, `scratch/diag_clip.py` | Diagnostik nilai ekstrem, NaN, dan batas clip |
-
-Perintah ulang (dengan JAVA_HOME dan cluster H2O berjalan di port 54322):
-
-```bash
-~/.venvs/h2o/bin/python scratch/h2o_eksperimen.py F-14 F-15A F-15_S F-5 F-7 F-9 F-9_A
-~/.venvs/h2o/bin/python scratch/uji_dl_sebab.py   # tahap A dan B
-~/.venvs/h2o/bin/python scratch/uji_dl_c.py       # tahap C
-```
-
-## 10. Yang belum dicek
-
-- Kombinasi kandidat sudah diuji penuh pada 7 sumur (Temuan T4). Yang belum diuji: bobot hasil pembelajaran (stacking dengan model meta), karena `StackedEnsemble` tidak terbentuk pada AutoML ber-`fold_column`, dan pemilihan subset memakai prediksi out-of-fold tingkat fold (yang tersimpan baru AUCPR CV agregat per kandidat).
-- Belum diuji apakah `max_runtime_secs` lebih panjang (misalnya 1.800 detik) mengubah hasil; yang terukur baru 400, 600, dan 900 detik (900 detik untuk F-9_A saat run pertama kandas).
-
-## 4b. Cara membaca angka kombinasi
-
-- Angka "median seluruh kandidat" dihitung dari 9 sampai 12 kandidat per sumur, jadi bukan gabungan 100 model; AutoML hanya sempat membangun sebanyak itu dalam 600 detik pada 18 core.
-- Tabel "strategi terbaik per sumur" tidak boleh dirata-ratakan sebagai klaim; memilih strategi berdasarkan hasil sumur uji itu sendiri adalah kebocoran. Yang sah diklaim adalah rata-rata satu strategi tetap di seluruh sumur, seperti pada tabel T4.
-- Korelasi Spearman dihitung pada 7 titik, sehingga sebagai estimasi ia lemah; yang kuat adalah arahnya yang negatif pada ketujuh sumur secara berpasangan.

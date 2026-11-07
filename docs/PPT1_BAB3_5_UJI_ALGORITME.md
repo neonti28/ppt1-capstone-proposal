@@ -102,11 +102,3 @@ Model berbasis pohon (GBM, XGBoost, DRF, XRT) tidak terpengaruh karena pemisahan
 
 Reproduksi:
 
-```bash
-export JAVA_HOME=$HOME/.local/jdk17
-java -Xmx3G -jar ~/.venvs/h2o/lib/python3.12/site-packages/h2o/backend/bin/h2o.jar \
-  -ip 127.0.0.1 -port 54322 -name h2o_ens -nthreads 18 &
-~/.venvs/h2o/bin/python scratch/h2o_eksperimen.py F-14 F-15A F-15_S F-5 F-7 F-9 F-9_A
-~/.venvs/h2o/bin/python scratch/h2o_pred_semua.py
-~/.venvs/h2o/bin/python scratch/h2o_ensemble_analisis.py
-```

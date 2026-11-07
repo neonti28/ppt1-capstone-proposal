@@ -47,4 +47,8 @@ Draf sebelum revisi ini memakai kata "engine" untuk menyebut mode kegagalan (`en
 
 ## 1.5.6 Konsekuensi pada penamaan berkas dan kunci data
 
-Nama berkas dan kunci data yang sudah terlanjur memakai kata `engine` tidak diubah, karena berkas itu adalah bukti yang sudah tersimpan dan harus tetap dapat ditelusuri apa adanya. Contohnya `dashboard/data/engine_v9_i1.json` dan kunci `engines[]` pada `scratch/v9_i1/v9_i1_RESULTS.json`. Di dalam dokumen, kunci itu ditulis sebagai kutipan berkas, bukan sebagai istilah konsep.
+Kunci data yang sudah terlanjur memakai kata `engine` tidak diubah agar hasil yang
+tersimpan tetap dapat ditelusuri apa adanya, misalnya larik `engines[]` pada berkas
+hasil eksekusi detektor. Di dalam naskah, kunci itu hanya dikutip sebagai nama berkas,
+sedangkan konsepnya ditulis sebagai mode deteksi dan head seperti pada 1.5.5.
+

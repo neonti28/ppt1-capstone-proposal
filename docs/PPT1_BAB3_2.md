@@ -78,7 +78,7 @@ Tabel di atas memuat seluruh sembilan alternatif tepat satu kali. Pemeriksaan ot
 
 **Anggota dan mekanisme.**
 
-- A2 Perluasan wellbore berkanal disfungsi (F-10, F-4, F-12, F-15). Memparse empat wellbore yang terbukti memiliki kanal disfungsi, lalu menggabungkannya ke kampanye leave-one-well-out sehingga jumlah fold dan jumlah positif naik.
+- A2 Perluasan wellbore berkanal disfungsi (F-10, F-4, F-12, F-15). Memparse empat wellbore yang terbukti memiliki kanal disfungsi, lalu menggabungkannya ke skema leave-one-well-out sehingga jumlah fold dan jumlah positif naik.
 - A4 Unit analisis per-stand pengeboran. Mengganti unit jendela waktu dengan unit stand pengeboran, sehingga prevalensi naik tetapi horizon prediksi melebar menjadi stand berikutnya.
 
 **Yang menyatukan.** Keduanya menyerang underpowering dengan mengubah himpunan atau agregasi sampel, bukan dengan mengubah model atau menurunkan ambang.
@@ -142,7 +142,7 @@ Tabel di atas memuat seluruh sembilan alternatif tepat satu kali. Pemeriksaan ot
 
 **Anggota dan mekanisme.**
 
-- A7 Penguatan kampanye keausan alat bengkel: progresi, dekomposisi mode, dan ranking. Mendeteksi titik perubahan pada sinyal keausan alat bengkel, menambah fitur dekomposisi mode, dan menyiapkan ranking antar status sebagai cadangan bila validasi titik ubah gagal.
+- A7 Penguatan pengujian keausan alat bengkel: progresi, dekomposisi mode, dan ranking. Mendeteksi titik perubahan pada sinyal keausan alat bengkel, menambah fitur dekomposisi mode, dan menyiapkan ranking antar status sebagai cadangan bila validasi titik ubah gagal.
 - A9 Lapisan keputusan operasional: kalibrasi ambang per sumur dan purwarupa peringatan dini. Mengkalibrasi ambang per sumur, menjalankan purwarupa peringatan dini pada data berlabel, dan menyusun indeks kondisi untuk disfungsi yang labelnya belum tersedia.
 
 **Yang menyatukan.** Keduanya menghasilkan keputusan pada tingkat sinyal, dan keduanya diukur dengan anggaran alarm, bukan dengan AUPRC saja.
@@ -212,7 +212,7 @@ K1 seluruhnya berada pada lapisan data dan label. K3 seluruhnya berada pada lapi
 
 ### 3.2.6 Struktur klaster untuk diagram G1
 
-Bagian ini adalah serahan untuk kartu diagram, supaya gambar tidak mengarang isi. Seluruh nilainya juga tersedia sebagai JSON pada dengan kunci `g1`.
+Bagian ini menjadi acuan penggambaran rich picture agar gambar tidak mengarang isi; seluruh nilainya berasal dari hitungan pada 1.1.
 
 Kanvas: A4 landscape, 11,69 kali 8,27 inci, 200 dpi.
 
@@ -252,7 +252,7 @@ Kanvas: A4 landscape, 11,69 kali 8,27 inci, 200 dpi.
 
 - kotak berwarna: klaster, warna berbeda per klaster
 - kotak kecil di dalam klaster: alternatif solusi beserta kode A1 sampai A9
-- teks Berjalan: mekanisme inti sudah dieksekusi dan berangka pada kampanye V9
+- teks Berjalan: mekanisme inti sudah dieksekusi dan berangka pada percobaan uji utama
 - teks Rencana: belum ada artefak eksekusi
 - panah putus-putus: relasi prasyarat atau penyuplai bukti antar klaster
 
@@ -312,7 +312,7 @@ Empat BoK didalami, bukan sepuluh. Alasannya: BoK 14 dan BoK 3 wajib muncul kare
 - Kelengkapan bukti: empat wellbore berkanal disfungsi diparse karena kanal sumbernya terdaftar, yaitu F-10, F-4, F-12, dan F-15.
 - Volume yang dipakai: TSPP 52.905 baris pada empat berkas sebagai kanal permukaan frekuensi tinggi, dan CRPM hasil parse 281.030, 42.010, 178.430, serta 57.846 baris.
 - Kebenaran label: kontrol-positif stuck 0 dari 10, sehingga akurasi keluaran belum sah meskipun AUPRC tinggi. Ini keputusan rekayasa informasi, bukan keputusan statistik.
-- Kerahasiaan: seluruh angka berasal dari lapangan Volve yang terbuka dan empat set data eksternal, sehingga tidak ada telemetri mitra yang perlu disalin ke repositori.
+- Kerahasiaan: seluruh angka berasal dari lapangan Volve yang terbuka dan empat set data eksternal, sehingga tidak ada telemetri mitra yang perlu disalin ke penyimpanan data proyek.
 
 **Standar dan metrik acuan.**
 
@@ -485,7 +485,7 @@ Tujuh dari delapan kriteria memiliki angka terukur atau baku, dan hanya C8 yang 
 
 Rincian setiap batasan:
 
-- **B1 Kerahasiaan data mitra (kategori kerahasiaan dan legal).** Seluruh angka pada proposal berasal dari lapangan Volve yang terbuka dan empat set data eksternal. Telemetri real-time milik mitra tidak dipakai sebagai sumber angka, sehingga tidak ada data mitra yang perlu disalin ke repositori maupun dilampirkan.
+- **B1 Kerahasiaan data mitra (kategori kerahasiaan dan legal).** Seluruh angka pada proposal berasal dari lapangan Volve yang terbuka dan empat set data eksternal. Telemetri real-time milik mitra tidak dipakai sebagai sumber angka, sehingga tidak ada data mitra yang perlu disalin ke penyimpanan data proyek maupun dilampirkan.
 - **B2 Mode advisory tanpa alarm otomatis (kategori teknis).** Alat berjalan sebagai pemberi peringatan berpengawas manusia. Jumlah slot alarm otomatis kritis nol dari dua puluh tujuh head, dan dua head berstatus belum layak pakai sehingga dilarang dipakai di tingkat mana pun.
 - **B3 Sumber daya dan waktu satu semester (kategori waktu dan ekonomi).** Tim tiga orang dengan satu semester. Pekerjaan harus selesai di dalam jadwal Tabel 3.1, dari perumusan masalah sampai presentasi akhir.
 - **B4 Mutu label belum terbukti (kategori kualitas).** Kontrol-positif label stuck nol dari sepuluh, label hyd masih proksi residual, dan campuran severitas berbeda antar sumur. Kalibrasi ambang yang dijalankan sebelum label dibereskan menghasilkan presisi palsu.
@@ -586,7 +586,7 @@ Format yang dipakai adalah kalimat peran, kebutuhan, dan manfaat, lalu dilengkap
 
 | Kriteria penerimaan | Ambang | Status |
 | --- | --- | --- |
-| Registry dapat dihitung ulang dari skrip yang tersimpan. | code/v9_i1_pipeline.py tersedia dan head terhitung 27 dari 7 mode | sebagian, karena skrip tersedia dan jumlah head terverifikasi dari JSON, tetapi eksekusi ulang belum dijalankan pada kartu ini |
+| Daftar metode dapat dihitung ulang. | Jumlah varian metode terhitung 27 dari 7 mode pada daftar metode yang tersimpan | sebagian, karena jumlah varian terverifikasi tetapi eksekusi ulang seluruh varian belum dijalankan |
 | Setiap lapisan keputusan dapat ditelusuri ke head asalnya. | jumlah head pada empat lapisan sama dengan 27 | lulus |
 | Perubahan definisi label tercatat sebagai versi, bukan sebagai penimpaan. | satu varian onset dikunci dan varian lain dicatat | terbuka, karena audit label belum dijalankan |
 
@@ -679,4 +679,4 @@ Larangan yang perlu dipegang subbab 3.4: jangan memakai skala 1 sampai 5 untuk k
 | Batas muktamad cakupan | satu lapangan, bengkel berbeda dari rig, hyd proksi | |
 | Slot alarm otomatis | 0 pada 27 head | |
 
-Reproduksi: `python3 scratch/ppt1/build_bab3_2.py` menulis ulang tabel subbab ini dari berkas hasil eksekusi, sehingga angka pada tabel berasal dari berkas yang sama dan bukan diketik ulang dari tempat lain.
+Tabel ini tidak diketik tangan: setiap angka diambil dari hasil eksekusi uji dengan cara yang ditulis pada kolom terakhir, sehingga mengulang eksekusi akan menghasilkan angka yang sama.

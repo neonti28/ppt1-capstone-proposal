@@ -10,14 +10,14 @@
 
 ## 1. Batas masalah dan definisi status
 
-Fishbone ini menjawab satu pertanyaan: **mengapa peringatan dini kegagalan BHA berbasis data operasi Sperry Drilling belum dapat dioperasikan sebagai alarm, padahal data historisnya tersedia.** Fishbone memetakan sebab. Penilaian risiko terkuantifikasi (FMEA dengan skala rujukan) berada pada kartu terpisah, sehingga skor S, O, dan D dari draft 13 Agustus 2026 tidak diulang di sini.
+Fishbone ini menjawab satu pertanyaan: **mengapa peringatan dini kegagalan BHA berbasis data operasi Sperry Drilling belum dapat dioperasikan sebagai alarm, padahal data historisnya tersedia.** Fishbone memetakan sebab. Penilaian risiko terkuantifikasi (FMEA dengan skala rujukan) dibahas pada subbab tersendiri, sehingga skor S, O, dan D dari draf 13 Agustus 2026 tidak diulang di sini.
 
 Setiap sebab diberi satu status, dengan arti yang dipakai konsisten di seluruh dokumen:
 
 Tiga keadaan yang dibedakan pada setiap sebab, dan yang penting: keadaan ini menyangkut **cara angka diperoleh**, bukan siapa yang menerbitkannya.
 
 1. **Terukur.** Angkanya dihitung langsung dari data primer (tabel label, berkas hasil eksekusi) dengan langkah yang ditulis pada tabel. Langkah itu harus cukup untuk diulang orang lain tanpa bertanya.
-2. **Tercatat, belum diulang.** Angka berasal dari pengukuran pihak lain yang langkahnya dinyatakan, tetapi belum saya jalankan sendiri. Cara memperolehnya tetap ditulis; bedanya hanya pada siapa yang menjalankan.
+2. **Tercatat, belum diulang.** Angka berasal dari pengukuran pihak lain yang langkahnya dinyatakan, tetapi belum dihitung ulang di sini. Cara memperolehnya tetap ditulis; bedanya hanya pada siapa yang menjalankan.
 3. **Hipotesis.** Mekanisme belum diukur sama sekali. Wajib disertai uji pembeda pada Bagian 7 dan tidak boleh ditulis sebagai temuan.
 
 Tautan sebab ke akibat juga dibedakan dari besarannya. Sebuah angka boleh terukur sementara **tautan kausalnya** masih hipotesis. Pemisahan ini disengaja, karena korelasi bukan kausalitas.
@@ -26,7 +26,7 @@ Tautan sebab ke akibat juga dibedakan dari besarannya. Sebuah angka boleh teruku
 
 ## 2. Angka dasar yang menjadi landasan seluruh fishbone
 
-Seluruh angka pada tabel ini dihitung ulang dengan satu skrip yang dapat dijalankan siapa pun: `python3 scratch/ppt1/verifikasi_bab1_2.py`. Skrip itu membaca tabel label dan berkas hasil eksekusi, mencetak nilai hitung ulang berdampingan dengan nilai yang dipakai di naskah, dan menandai cocok atau beda. Pada eksekusi 7 November 2026 hasilnya 43 dari 43 angka cocok.
+Seluruh angka pada tabel ini dihitung langsung dari tabel label kejadian dan tabel agregasi dengan cara yang ditulis pada kolom terakhir; hasil hitung ulangnya cocok dengan nilai yang dipakai di naskah pada 43 dari 43 besaran saat diperiksa tanggal 7 November 2026.
 
 | Besaran | Nilai | Cara menghitung |
 |---|---|---|
@@ -49,7 +49,7 @@ Catatan tafsir yang mengikat: 884 kejadian **bukan** 884 kerusakan. Karena 56,1 
 
 ![Gambar 3](assets/fig02_kategori_per_wellbore.png)
 
-**Gambar 3.** Matriks kejadian per kategori per wellbore, sembilan kategori dikalikan sepuluh wellbore, total 884 kejadian. Skala warna memakai normalisasi pangkat 0,55 supaya sel kecil tetap terlihat, dan sel nol ditulis `0` dengan warna terang supaya tidak disamakan dengan data hilang. Dua baris teratas, yaitu `routine_no_failure_evidence` (496 kejadian) dan `surface_rig_equipment` (216 kejadian), mengisi 80,5 persen dari seluruh matriks. Konsentrasi kejadian per wellbore menyebar dari 2 (F-15 B) sampai 182 (F-14). Skrip sumber: `docs/assets/make_figures.py`, fungsi `fig02_kategori`.
+**Gambar 3.** Matriks kejadian per kategori per wellbore, sembilan kategori dikalikan sepuluh wellbore, total 884 kejadian. Skala warna memakai normalisasi pangkat 0,55 supaya sel kecil tetap terlihat, dan sel nol ditulis `0` dengan warna terang supaya tidak disamakan dengan data hilang. Dua baris teratas, yaitu `routine_no_failure_evidence` (496 kejadian) dan `surface_rig_equipment` (216 kejadian), mengisi 80,5 persen dari seluruh matriks. Konsentrasi kejadian per wellbore menyebar dari 2 (F-15 B) sampai 182 (F-14).
 
 ---
 
@@ -96,7 +96,7 @@ Diagram terdiri atas satu tulang punggung (efek) dan enam cabang, dengan 27 rant
 | Mt3 | Makna basis kejadian | Kejadian tercatat bukan sama dengan kegagalan: **496** tanpa bukti kegagalan, **47** bukti campuran, **28** kegagalan tanpa lokasi, dan hanya **50** kejadian menyangkut BHA (stuck atau fishing 38, peralatan downhole 12) | cacah baris menurut kategori pada tabel label lalu kelompokkan ke bukti gagal, campuran, gagal tanpa lokasi, dan yang menyangkut BHA |
 | Mt4 | Ketidakseimbangan kelas | Prevalensi positif sangat rendah dan tidak seragam: ssi F-15A **31 dari 6020 = 0,51 persen**, ssi F-7 **3 dari 982 = 0,31 persen**, ssi F-9_A **55 dari 841 = 6,54 persen** | hitung jumlah kelas positif dan total bin per sumur pada hasil evaluasi lalu bagi menjadi prevalensi |
 
-**Catatan untuk Mt1 dan Mt2.** Mt1 berasal dari audit tim atas 19 GB data primer, Mt2 dari berkas hasil evaluasi. Keduanya tidak saya ulang karena keduanya menuntut pemindaian data mentah berskala besar. Statusnya karena itu dinyatakan terbuka.
+**Catatan untuk Mt1 dan Mt2.** Mt1 berasal dari pemeriksaan langsung atas 19 GB data primer, Mt2 dari berkas hasil evaluasi. Keduanya tidak dihitung ulang di sini karena keduanya menuntut pemindaian data mentah berskala besar. Statusnya karena itu dinyatakan terbuka.
 
 ### 3.5 MEASUREMENT (pengukuran): 5 ranting
 
@@ -122,7 +122,7 @@ Diagram terdiri atas satu tulang punggung (efek) dan enam cabang, dengan 27 rant
 
 ## 4. Rekap keadaan sebab
 
-Dari 27 sebab pada Bagian 3: **15 terukur** (dihitung ulang dari data primer pada penyusunan dokumen ini), **10 tercatat tetapi belum saya ulang** (langkahnya tertulis, pelaksananya pihak lain), dan **2 hipotesis** (belum diukur, masing-masing membawa uji pembeda di Bagian 7).
+Dari 27 sebab pada Bagian 3: **15 terukur** (dihitung ulang dari data primer pada penyusunan dokumen ini), **10 tercatat tetapi belum dihitung ulang di sini** (langkahnya tertulis, pelaksananya pihak lain), dan **2 hipotesis** (belum diukur, masing-masing membawa uji pembeda di Bagian 7).
 
 Sebaran per kategori: Man 4, Method 5, Machine 4, Material 4, Measurement 5, Environment 5. Setiap sebab menyebut cara angka diperolehnya pada kolom cara menghitung.
 

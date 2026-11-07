@@ -7,7 +7,7 @@ satu pemilik dan tidak ada pekerjaan yang jatuh di antara dua orang.
 | Anggota | Tanggung jawab utama | Titik kritis | Bukti penyelesaian |
 |---|---|---|---|
 | A | Bab I 1.1 latar belakang sistem; Bab I 1.2 akar penyebab; skala Severity FMEA di 2.4 | Rumusan masalah dinilai jujur terhadap data; jika fishbone tidak menjawab data, seluruh bab III jadi menjawab masalah yang salah | Fishbone 6M dan 5W1H terbit di 1.2 dengan angka 388 dan 611 jam sebagai landasan |
-| B | Bab II 2.1 VSM; 2.2 MIFC; 2.3 OPC; ledger angka dan provenance seluruh dokumen | Setiap angka di proposal harus punya baris sumber; angka tanpa jejak dilarang masuk naskah | `PPT1_LEDGER_ANGKA.md` (111 angka, 72 terukur) dan tabel sumber di tiap bab |
+| B | Bab II 2.1 VSM; 2.2 MIFC; 2.3 OPC; pencatatan sumber setiap angka | Setiap angka di proposal harus punya baris sumber; angka tanpa dasar dilarang masuk naskah | 111 angka tercatat, 72 di antaranya sudah dihitung ulang, dan setiap bab memuat tabel cara memperoleh angkanya |
 | C | Bab III 3.1 alternatif; 3.2 affinity dan BoK; 3.3 kriteria dan user stories; 3.4 MCDM | Pemenang MCDM harus menang pada bukan hanya satu set bobot; kalau menang hanya pada bobot tunggal, hasilnya lemah | Delapan belas uji bobot dan sapuan C1 di 3.4 |
 
 **Kontribusi individual yang disyaratkan.** Pedoman §3.2 dan rubrik kriteria 3

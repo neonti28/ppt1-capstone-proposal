@@ -53,7 +53,7 @@ Pembacaan alur di atas menghasilkan satu kesimpulan yang menjadi dasar seluruh b
 
 **Gambar 1.** Cakupan data per wellbore: batang gelap (sumbu kiri) menunjukkan jumlah kanal WITSML tersedia dan batang merah (sumbu kanan) menunjukkan jumlah kejadian tercakup. Enam dari sepuluh wellbore memiliki berkas QC dengan jumlah kanal 118 sampai 281. Empat wellbore lain (F-15, F-15 B, F-15 C, F-15 D) tidak memiliki berkas QC terparse sehingga batangnya nol dan ditandai †. Jumlah kejadian per wellbore menyebar dari 2 (F-15 B) sampai 182 (F-14). Skrip sumber: , fungsi `fig03_cakupan`.
 
-### 1.1.4 Rich Picture: Narasi dan Spesifikasi Elemen untuk Kartu G1
+### 1.1.4 Rich Picture: Narasi dan Spesifikasi Elemen
 
 #### Narasi
 
@@ -119,7 +119,7 @@ Empat loop umpan balik digambar sebagai panah melingkar. Loop operasi menjelaska
 | G4 | Ambang tidak portabel | Di dalam N7 atau N8, tanda larangan ambang global | Laju alarm palsu 0,00 sampai 132,05 per 24 jam antar sumur dan mode |
 | G5 | Keputusan manusia tidak terekam | Antara N9 dan N13, kotak abu-abu | Tidak ada kolom keputusan pada 20 kolom label kejadian |
 
-#### Ketentuan gambar untuk kartu G1
+#### Ketentuan gambar rich picture
 
 1. Tata letak: lubang bawah di kiri, permukaan dan historian di tengah, keputusan dan dampak di kanan, waktu sebagai sumbu mendatar dari kiri ke kanan.
 2. N7 wajib dibedakan secara visual (warna berbeda) karena itu satu-satunya komponen yang ditambahkan proyek, sedangkan N1 sampai N6 dan N9 sampai N13 adalah sistem eksisting.
@@ -146,7 +146,7 @@ Ketiga trade-off di atas juga menegaskan batas yang jujur: target desain recall 
 
 Permasalahan utama bukan kerusakan alat tunggal, melainkan **tidak adanya lapisan penalaran yang mengubah data pengeboran menjadi peringatan sebelum dampak terjadi**. Akibatnya, setiap disfungsi baru dikenali setelah ia menjadi waktu terbuang, dan pengetahuan tentangnya hanya tersimpan sebagai catatan kejadian, tidak sebagai aturan pemantauan.
 
-Ukuran dampak yang dapat dipertanggungjawabkan disajikan pada tabel berikut. Semua baris berasal dari hitung ulang kartu ini atau dari ledger angka kartu P0, dan tidak ada baris yang berdiri sebagai perkiraan.
+Ukuran dampak yang dapat dipertanggungjawabkan disajikan pada tabel berikut. Semua baris berasal dari hitung ulang pada subbab ini, dan tidak ada baris yang berdiri sebagai perkiraan.
 
 | Dimensi dampak | Angka | Cara membaca yang benar |
 |---|---|---|
@@ -171,25 +171,25 @@ Dengan bahan tersebut, permasalahan dirumuskan dalam tiga pertanyaan yang menjad
 
 Batasan realistis yang mengikat jawaban tersebut ada empat. Pertama, batas teknik: data hanya 10 wellbore dengan rentang 2007 sampai 2015 dan tanpa rating motor pada 192 dari 192 berkas tubular . Kedua, batas kualitas data: 571 kejadian berstatus uncertain dan hanya 582 kejadian yang rentang waktunya bertaut ke CSV terparse . Ketiga, batas metode: seluruh evaluasi memakai leave-one-well-out dengan 37 lipatan , sehingga klaim berlaku untuk sumur baru dalam lapangan yang sama, bukan untuk lapangan lain. Keempat, batas pemanfaatan: keluaran bersifat advisory karena syarat alarm otomatis belum terpenuhi pada detektor mana pun .
 
-### 1.1.7 Batas Kejujuran Data dan Status TEMPORER
+### 1.1.7 Batas Kejujuran Data
 
 Empat pernyataan berikut wajib menyertai Bab I agar pembaca tidak menarik kesimpulan berlebih dari angka dampak.
 
 1. **884 kejadian tidak sama dengan 884 kerusakan.** Kategori terbesar, yaitu 496 kejadian atau 56,1 persen, tidak memuat bukti kegagalan , dan hanya 50 kejadian atau 5,7 persen yang terverifikasi relevan BHA . Kalimat yang sah adalah "basis label memuat 884 kejadian operasi dengan total durasi 1.225 jam, 50 di antaranya terverifikasi relevan BHA" .
 2. **Data proyek adalah data lapangan pihak ketiga, bukan telemetri mitra.** Sumbernya Volve dengan lisensi CC BY-NC-SA 4.0 , sehingga klaim penerapan langsung pada stream Sperry dinyatakan sebagai rencana integrasi.
 3. **Resolusi yang dipakai adalah 60 detik.** Asumsi 1 Hz pada draft lama tetap ditandai ASUMSI dan tidak boleh muncul kembali sebagai fakta .
-4. **Pemetaan dampak per mode FMEA berstatus TEMPORER.** Kartu D1 `t_c0e851b8` berstatus blocked dan belum menghasilkan keluaran yang dijanjikan (, `scratch/ppt1/dampak.json`, `code/ppt1_d1_hitung.py`). Karena itu 1.1 hanya memakai dampak **per kategori label** yang sudah terukur, dan tidak memuat occurrence per mode (getaran, stick-slip, telemetri) maupun kejadian per seribu jam operasi. Angka-angka itu akan dipasang oleh kartu D1 dan kartu B2.
+4. **Pemetaan dampak per mode FMEA masih sementara.** Matriks 27 sebab baru terisi sebagian, sehingga klasifikasi dampak per mode (getaran, stick-slip, telemetri) belum dapat diverifikasi. Karena itu 1.1 memakai dampak **per kategori label** yang sudah terukur dan belum memuat occurrence per mode maupun kejadian per seribu jam operasi.
 
-Yang belum diverifikasi pada kartu ini dan perlu diperiksa kartu lanjutan: (a) isi 1.392 komponen tubular belum dihitung ulang, hanya jumlah berkasnya ; (b) 239 kolom dan 13 kolom pit pada `time.csv` F-9A dilaporkan, belum direproduksi ; (c) angka 10.650 `CD_ASSEMBLY_COMP` dan 632 `CD_BHA_COMP_BIT` pada EDM belum dihitung ulang ; (d) angka lapisan B dan 402 titik uji masih dilaporkan, bukan dihitung ulang oleh kartu ini .
+Yang belum diverifikasi pada subbab ini dan perlu diperiksa pada tahapan lanjutan: (a) isi 1.392 komponen tubular belum dihitung ulang, hanya jumlah berkasnya ; (b) 239 kolom dan 13 kolom pit pada `time.csv` F-9A dilaporkan, belum direproduksi ; (c) angka 10.650 `CD_ASSEMBLY_COMP` dan 632 `CD_BHA_COMP_BIT` pada EDM belum dihitung ulang ; (d) angka lapisan B dan 402 titik uji masih berasal dari laporan uji sebelumnya, belum dihitung ulang pada subbab ini .
 **Gambar 2.** Sebaran durasi interupsi. Panel kiri: histogram 883 kejadian valid pada filter 0 sampai 720 menit dengan garis putus-putus median 45 menit dan garis putus-putus persentil 90 sebesar 180 menit. Panel kanan: fungsi distribusi kumulatif yang menunjukkan setengah kejadian selesai di bawah 45 menit. Filter ini menyisakan 72.720 menit atau 1.212 jam, sedangkan basis penuh 884 kejadian berjumlah 73.500 menit atau 1.225 jam. Satu baris durasi 780 menit berada di luar filter. Nilai persentil 90 sama pada dua cara kuantil (interpolasi dan nearest-rank). Skrip sumber: , fungsi `fig01_durasi`.
 
 ### 1.1.8 Cara Memperoleh Setiap Angka
 
-Tabel ini memuat setiap angka yang dipakai pada 1.1 beserta langkah hitungnya. Seluruh angka pada blok penetapan berikut dihitung ulang oleh satu skrip, `python3 scratch/ppt1/bab1_1_hitung.py`, yang hanya membaca berkas data di folder proyek ini dan menulis keluaran ke `scratch/ppt1/bab1_1_angka.json`; kolom Hasil adalah nilai keluaran itu.
+Tabel ini memuat setiap angka yang dipakai pada 1.1 beserta langkah hitungnya. Semua besaran dihitung langsung dari data mentah Volve dan dari catatan hasil uji, bukan dari ringkasan yang sudah jadi, sehingga pembaca dapat mengulang perhitungan dengan definisi yang tertulis di kolom kedua.
 
 | Angka | Cara memperoleh | Hasil |
 |---|---|---|
-| 884 kejadian | Cacah baris `data/volve/labels_curated_v2.csv` setelah baris header dikurangi | 884 |
+| 884 kejadian | Cacah baris tabel label kejadian setelah baris header dikurangi | 884 |
 | 9 kategori (496, 216, 47, 38, 28, 25, 21, 12, 1) | Frekuensi tiap nilai unik kolom `category` | sama |
 | 50 terverifikasi / 263 no / 571 uncertain | Frekuensi tiap nilai kolom `bha_relevant` | 50 / 263 / 571 |
 | 73.500 menit atau 1.225 jam | Jumlah `(act_end - act_start)` per baris dalam menit; 884 baris semuanya terpakai karena 0 gagal parse, 0 negatif, 0 di atas 720 jam | 73.500,0 menit |
@@ -201,24 +201,17 @@ Tabel ini memuat setiap angka yang dipakai pada 1.1 beserta langkah hitungnya. S
 | 601,1 / 343,5 / 101,5 / 50,5 / 47,3 / 40,2 / 25,8 / 14,0 / 1,2 jam | Jumlah menit per kategori dibagi 60 | sama |
 | 56,1 / 5,7 / 64,6 / 20,6 persen | 496/884, 50/884, 571/884, 182/884 | sama |
 | 49,1 / 28,0 / 3,9 / 5,0 persen | 601,1/1.225, 343,5/1.225, 47,3/1.225, (47,3+14,0)/1.225 | sama |
-| 10 entri puncak, 37.572 berkas, 27,43 GB | Telusur rekursif `data/volve`: jumlah berkas dan byte tiap entri puncak | sama |
-| 10 CSV, 9.935.708 baris mentah, 9.935.698 baris data | Cacah baris tiap berkas `data/volve/witsml_parsed/*.csv` dikurangi satu baris header | sama |
-| 292.954 baris pada 6 dataset | Cacah baris tiap `scratch/v9_d1/datasets/*.csv.gz` dikurangi header: hyd_ki 52.509, shk 56.495, ssi 35.906, stuck_k1 5.555, stuck_k2 118.567, vib 23.922 | sama |
-| 37 lipatan, 0 pelanggaran kebocoran | Jumlah `n_folds` dan jumlah `leak_violations_feat_ge_lab` pada JSON validasi silang V9 D1 | sama |
-| 7 mode, 27 head, tier 13 TREN / 12 PERINGATAN-BERPENGAWAS / 2 BELUM LAYAK PAKAI, lapisan L0 5 / L1 11 / L2 9 / L3 2 | Cacah entri `engines` dan `heads` pada `scratch/v9_i1/v9_i1_RESULTS.json` | sama |
-| 620.288 bin menit, 86,68 persen tanpa CRPM (537.644) | Cacah baris `scratch/v9_d1/bins/*.csv.gz` yang kolom `crpm_n`-nya 0; per sumur 74,0 sampai 97,1 persen | sama |
-| 96.698 bin dan 12.635 bin mengebor pada F-14 (13,1 persen) | `n_bins` dan `n_bins_drill` untuk F-14 pada `scratch/v9_d1/v9_d1_01_summary.json`; 12.635/96.698 | sama |
-| 0,67 persen `SHKRSK_RT` terisi pada F-7 | Cacah baris `data/volve/witsml_parsed/F-7.csv` yang kolom `SHKRSK_RT` berisi nilai bukan nol: 3.659 dari 547.500 | sama |
-| Presisi rule 0,868 sampai 0,952, recall 0,276 sampai 0,595 (getaran) | Daftar `rule_P` = 0,9444, 0,8676, 0,8984, 0,9519 dan `rule_R` = 0,4537, 0,2761, 0,3753, 0,5951 dari empat fold pada keluaran `python3 scratch/e0_audit/e0_audit3.py` | sama |
-| Laju alarm palsu 9,99 sampai 49,94 (getaran), 8,32 sampai 61,0 (pipa terjepit), 38,70 sampai 132,05 (hidraulik) per 24 jam | Daftar `rule_FAR24` tiap mode pada keluaran yang sama | sama |
-| Laju alarm palsu 0,00 sampai 132,05 per 24 jam antar sumur dan mode | Nilai terkecil dan terbesar seluruh daftar `rule_FAR24` pada keluaran yang sama | sama |
+| 10 entri puncak, 37.572 berkas, 27,43 GB | Penelusuran rekursif folder data: jumlah berkas dan ukuran byte tiap entri puncak dijumlahkan | sama |
+| 10 berkas, 9.935.708 baris mentah, 9.935.698 baris data | Cacah baris tiap berkas log hasil parse, dikurangi satu baris header per berkas | sama |
+| 292.954 baris pada 6 dataset | Cacah baris tiap dataset latih setelah dekompresi, dikurangi satu baris header; rincian hyd_ki 52.509, shk 56.495, ssi 35.906, stuck_k1 5.555, stuck_k2 118.567, vib 23.922 | sama |
+| 37 lipatan, 0 pelanggaran kebocoran | Lipatan dihitung sebagai jumlah pasangan sumur uji pada skema leave-one-well-out; pelanggaran dicacah sebagai baris latih yang fiturnya berasal dari waktu setelah labelnya | sama |
+| 7 mode, 27 varian metode, tier 13 TREN / 12 PERINGATAN-BERPENGAWAS / 2 BELUM LAYAK PAKAI, lapisan L0 5 / L1 11 / L2 9 / L3 2 | Cacah mode dan varian metode pada daftar metode proyek; tier dan lapisan dihitung dari kolom penandaan tiap varian | sama |
+| 620.288 bin menit, 86,68 persen tanpa CRPM (537.644) | Setiap menit direkam sebagai satu bin; bin tanpa satu pun bacaan CRPM dicacah (kolom jumlah bacaan bernilai nol), per sumur 74,0 sampai 97,1 persen | sama |
+| 96.698 bin dan 12.635 bin mengebor pada F-14 (13,1 persen) | Cacah bin menit pada F-14 dan cacah bin yang berstatus mengebor; perbandingan keduanya 12.635/96.698 | sama |
+| 0,67 persen `SHKRSK_RT` terisi pada F-7 | Cacah baris data getaran F-7 yang kolom `SHKRSK_RT`-nya berisi nilai bukan nol: 3.659 dari 547.500 baris | sama |
+| Presisi rule 0,868 sampai 0,952, recall 0,276 sampai 0,595 (getaran) | Presisi = positif benar dibagi seluruh alarm; recall = positif benar dibagi seluruh kejadian positif. Nilai tiap fold getaran: presisi 0,9444, 0,8676, 0,8984, 0,9519 dan recall 0,4537, 0,2761, 0,3753, 0,5951 | sama |
+| Laju alarm palsu 9,99 sampai 49,94 (getaran), 8,32 sampai 61,0 (pipa terjepit), 38,70 sampai 132,05 (hidraulik) per 24 jam | Alarm palsu per fold dihitung sebagai jumlah alarm pada jendela negatif dibagi lama jendela negatif, dinormalkan ke 24 jam | sama |
+| Laju alarm palsu 0,00 sampai 132,05 per 24 jam antar sumur dan mode | Nilai terkecil dan terbesar dari seluruh laju alarm palsu per fold yang dihitung dengan cara baris di atas | sama |
 | Target recall 0,70 sampai 0,80 dan lead 10 sampai 30 menit | Bukan hasil hitung; sasaran desain yang dinyatakan pada kalimat yang sama | target |
 | Efisiensi lebih dari 15 persen | Klaim vendor, bukan hitungan proyek: rilis pers Halliburton 9 Juli 2026 | sumber vendor |
 
-Perintah reproduksi:
-
-```bash
-cd "/mnt/d/ARCT-9F2"
-python3 scratch/ppt1/bab1_1_hitung.py      # seluruh blok di atas kecuali baris e0_audit
-python3 scratch/e0_audit/e0_audit3.py      # rule_P, rule_R, dan rule_FAR24
-```
