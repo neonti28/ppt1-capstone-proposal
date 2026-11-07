@@ -164,3 +164,39 @@ Pola yang sama muncul dua kali dan dua kali independen: pada label langka, head 
 3. Data defect SPPA (30 sel, maksimum 9,524e+30) masuk daftar perbaikan data: tanpa clip atau drop kolom turunan SPPA, seluruh keluarga model linear dan jaringan saraf tidak dapat dipakai pada dataset ini.
 4. Pernyataan "AutoML lebih baik" dilarang pada Bab IV tanpa skema seleksi yang netral prevalensi; angka yang ada justru mendukung sebaliknya.
 
+## 9. Cara membaca angka kombinasi
+
+Angka "median seluruh kandidat" dihitung dari 9 sampai 12 kandidat per sumur, jadi bukan
+gabungan seratus model; dalam batas waktu 600 detik pada 18 prosesor, pencarian otomatis
+hanya sempat membangun sebanyak itu. Tabel "strategi terbaik per sumur" tidak boleh
+dirata-ratakan sebagai klaim, karena memilih strategi berdasarkan hasil sumur uji itu
+sendiri merupakan kebocoran informasi; yang sah diklaim adalah rata-rata satu strategi
+tetap di seluruh sumur, seperti pada tabel T4. Korelasi Spearman dihitung pada 7 titik,
+sehingga sebagai estimasi ia lemah; yang kuat adalah arahnya yang negatif pada ketujuh
+sumur secara berpasangan.
+
+## 10. Bahan dan langkah pengulangan uji
+
+Bahan yang dipakai ada tiga kelompok. Kelompok pertama adalah hasil pencarian otomatis
+pada tujuh sumur, lengkap dengan papan peringkat internal tiap sumur beserta setelannya.
+Kelompok kedua adalah baseline pada fold yang sama, yaitu Random Forest, regresi logistik,
+dan prediksi kelas mayoritas, yang dipakai ulang oleh pencarian otomatis sehingga tidak
+dihitung ganda. Kelompok ketiga adalah hasil uji DeepLearning setelah kolom SPPA dipotong
+pada persentil 99.
+
+Langkah pengulangan. Pencarian otomatis dijalankan per sumur dengan batas waktu 600 detik,
+18 prosesor, dan kolom fold berisi identitas sumur, sehingga validasi tetap lintas sumur.
+Baseline dihitung pada fold yang sama lalu dibandingkan dengan papan peringkat internal.
+Untuk menguji sebab kegagalan DeepLearning, dipakai tiga tahap berurutan: tahap A tanpa
+pemotongan, tahap B dengan pembuangan baris bermasalah, dan tahap C dengan pemotongan
+pada persentil 99; hanya tahap C yang konvergen.
+
+## 11. Batas yang belum diuji
+
+Kombinasi kandidat sudah diuji penuh pada tujuh sumur (Temuan T4). Yang belum diuji adalah
+bobot hasil pembelajaran (stacking dengan model meta), karena `StackedEnsemble` tidak
+terbentuk pada pencarian otomatis yang memakai kolom fold, dan pemilihan subset masih
+memakai prediksi luar-fold tingkat fold, sedangkan yang tersimpan baru AUCPR validasi
+silang agregat per kandidat. Belum diuji pula apakah batas waktu lebih panjang, misalnya
+1.800 detik, mengubah hasil; yang terukur baru 400, 600, dan 900 detik, dengan 900 detik
+untuk F-9_A pada saat eksekusi pertama gagal.

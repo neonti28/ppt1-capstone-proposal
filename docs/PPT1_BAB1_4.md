@@ -35,7 +35,7 @@ jauh dari rentang yang dipakai di sini.
 
 1. **Kalibrasi per sumur.** Ambang deteksi pada data ini memiliki false alarm rate yang
    menyebar 4,1 sampai 496 per 24 jam antar sumur. Angka yang sama pada sumur lain tidak
-   dijamin, sehingga calibrasi per sumur menjadi prasyarat sebelum alat dipakai.
+   dijamin, sehingga kalibrasi per sumur menjadi prasyarat sebelum alat dipakai.
 2. **Bukan bukti penurunan kerugian.** Proposal ini menawarkan rancangan, bukan klaim
    penghematan. Tidak ada pengurangan NPT yang terukur dalam kondisi nyata pada tahap ini.
 3. **Kelas kegagalan tidak seimbang.** 496 dari 884 baris label adalah operasi wajar
@@ -51,12 +51,12 @@ jauh dari rentang yang dipakai di sini.
    di atas 10^20 dengan maksimum 9,524e+30 (25 sel pada berkas kontrol, 5 sel pada berkas
    kejadian), yang 35 orde di atas rentang fitur lain. Model berbasis pohon tidak terpengaruh,
    tetapi keluarga model linear dan jaringan saraf gagal dilatih sampai nilai itu
-   dipotong. Klaim apapun tentang keluarga ini harus menyertakan syarat pemotongan.md` bagian 3.5.5.
+   dipotong. Klaim apapun tentang keluarga ini harus menyertakan syarat pemotongan kolom SPPA pada persentil 99, sebagaimana diuji pada 3.5.5.
 7. **Pencarian otomatis belum menutup pemilihan algoritme.** Pada 7 sumur, satu model
    hasil pencarian otomatis kalah dari Random Forest antar hiperparameter, sedangkan
    gabungan median seluruh kandidatnya menang. Penggabungan berbobot hasil pembelajaran
    (stacking) belum diuji, sehingga urutan keunggulan antar strategi gabungan masih
-   terbatas pada yang sudah diuji.5.7.
+   terbatas pada yang sudah diuji.
 
 ## 1.4.5 Ruang lingkup
 

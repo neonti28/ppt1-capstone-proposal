@@ -1,6 +1,6 @@
 # BAB III 3.5: UJI TAMBAHAN PEMILIHAN ALGORITME: PENCARIAN OTOMATIS DAN KOMBINASI KANDIDAT
 
-Subbab ini melaporkan dua uji tambahan atas pemilihan algoritme pada Bab III. Pertama, pencarian hyperparameter otomatis (H2O AutoML) diadu dengan Random Forest yang dipakai sebagai detektor utama. Kedua, seluruh kandidat hasil pencarian otomatis digabung untuk melihat apakah gabungan mengalahkan satu model terbaik. Tabel per sumur, temuan, dan blok perintah reproduksi ada pada lampiran 3.5 dokumen ini; berkas hasil tiap uji disimpan sebagai JSON hasil eksekusi dan dapat dihitung ulang dengan perintah pada blok tersebut.
+Subbab ini melaporkan dua uji tambahan atas pemilihan algoritme pada Bab III. Pertama, pencarian hyperparameter otomatis (H2O AutoML) diadu dengan Random Forest yang dipakai sebagai detektor utama. Kedua, seluruh kandidat hasil pencarian otomatis digabung untuk melihat apakah gabungan mengalahkan satu model terbaik. Tabel per sumur, temuan, dan langkah mengulang uji ada pada subbab ini, beserta setelannya; berkas hasil tiap uji disimpan sebagai catatan eksekusi dan dapat dihitung ulang dengan langkah pada 3.5.8.
 
 ## 3.5.1 Pertanyaan yang diuji
 
@@ -90,15 +90,22 @@ Model berbasis pohon (GBM, XGBoost, DRF, XRT) tidak terpengaruh karena pemisahan
 3. **Cakupan**: hanya 7 sumur data mitra. Hasil ini tidak boleh diperluas menjadi klaim tentang sumur lain atau tentang data di luar lingkup 1.4.
 4. **Aturan pelaporan**: memilih strategi gabungan berdasarkan hasil sumur uji lalu merata-ratakannya adalah kebocoran. Yang sah dilaporkan adalah rata-rata satu strategi tetap di seluruh sumur, seperti pada tabel 3.5.3.
 
-## 3.5.8 Rujukan jejak
+## 3.5.8 Bahan yang disimpan dan langkah mengulang uji
 
-| Berkas | Isi |
-|---|---|
-| `docs/evidence/h2o_kontrol.json` | Hasil AutoML 7 sumur termasuk leaderboard internal dan setelan |
-| `docs/evidence/baseline_only.json` | Baseline Random Forest, regresi logistik, dan mayoritas per sumur |
-| `docs/evidence/dl_klipp99.json` | Hasil uji tahap C setelah pemotongan persentile 99 |
-| `docs/evidence/pred/ensemble_hasil.json` | Hasil seluruh strategi kombinasi pada jalur adil dan jalur oracle |
-| `docs/evidence/pred/<sumur>.npz` | Skor mentah setiap kandidat AutoML per sumur |
+Catatan eksekusi yang disimpan memuat lima kelompok bahan, masing-masing dipakai langsung
+oleh tabel pada 3.5.1 sampai 3.5.7. Kelompok pertama adalah papan peringkat pencarian
+otomatis pada tujuh sumur beserta setelan waktunya. Kelompok kedua adalah baseline pada
+fold yang sama, yaitu Random Forest, regresi logistik, dan prediksi kelas mayoritas, yang
+dipakai ulang oleh pencarian otomatis sehingga tidak dihitung ganda. Kelompok ketiga
+adalah hasil uji tahap C, yaitu latihan ulang setelah kolom SPPA dipotong pada persentil
+99. Kelompok keempat adalah hasil seluruh strategi penggabungan pada jalur adil dan jalur
+oracle. Kelompok kelima adalah skor mentah setiap kandidat per sumur, yang menjadi bahan
+hitung median kandidat pada T4.
 
-Reproduksi:
-
+Langkah mengulang. Pencarian otomatis dijalankan per sumur dengan batas waktu 600 detik,
+18 prosesor, dan kolom fold berisi identitas sumur. Baseline dihitung pada fold yang sama.
+Penggabungan dihitung dengan dua jalur: jalur adil, yaitu pemilihan strategi hanya dari
+AUCPR validasi silang internal, dan jalur oracle, yaitu pemilihan memakai hasil sumur uji,
+yang dilaporkan sebagai batas atas dan bukan klaim. Untuk uji sebab kegagalan DeepLearning,
+dipakai tiga tahap berurutan: A tanpa pemotongan, B dengan pembuangan baris bermasalah, dan
+C dengan pemotongan pada persentil 99; hanya tahap C yang konvergen.

@@ -67,7 +67,7 @@ Tabel 3.4.1 Jejak setiap sel matriks keputusan
 | A1 | C1 | L75 | terukur | Mekanisme sudah dieksekusi untuk stuck dan hyd. Stuck memberi B1 0,51 sampai 1,00 dengan TLead 10 sampai 11,5 menit. Hyd memberi B1 nol dari tiga onset, jadi hasil negatifnya terukur. |
 | A1 | C4 | 0 | terukur | Keluaran berupa peringatan berpengawas manusia. Registry mencatat nol slot alarm otomatis. |
 | A1 | C2 | 13 | terukur | Tiga kelas sasaran dengan fold layak terukur: stuck 2 fold, hyd 7 fold, bit_wear 4 fold. |
-| A1 | C7 | 3/3 | terukur | Tiga dari tiga butir bukti pada 3.1.4.1 membawa jejak berkas dan baris. |
+| A1 | C7 | 3/3 | terukur | Tiga dari tiga butir bukti pada 3.1.4.1 menyebut dasar angkanya dengan langkah hitung yang tertulis. |
 | A1 | C3 | L30 | penilaian rubrik | Relabel mengubah definisi target, bukan ambang. Kalibrasi per sumur tidak termasuk lingkup, sehingga gejala 119,6 kali tetap tidak tersentuh. |
 | A1 | C6 | 2 | asumsi | Beban dinilai rendah pada penilaian pendahulu karena relabel dan run ulang tanpa parse. Dua minggu adalah asumsi perkiraan desain. |
 | A1 | C5 | 0 | terukur | Relabel tidak memerlukan parse baru karena deret sumber sudah berbentuk CSV. |
@@ -75,7 +75,7 @@ Tabel 3.4.1 Jejak setiap sel matriks keputusan
 | A2 | C1 | L20 | terukur | Parse empat wellbore selesai dan terukur, namun evaluasi ulang fold belum dijalankan sehingga dampak ke gate belum dapat diklaim. |
 | A2 | C4 | 0 | terukur | Tidak menambah slot alarm otomatis karena hanya menambah data, bukan keluaran baru. |
 | A2 | C2 | 18 | terukur | Empat kelas sasaran dengan fold layak terukur: shk 7, ssi 5, vib 4, stuck 2. |
-| A2 | C7 | 3/3 | terukur | Tiga dari tiga butir bukti pada 3.1.4.2 membawa jejak berkas dan baris. |
+| A2 | C7 | 3/3 | terukur | Tiga dari tiga butir bukti pada 3.1.4.2 menyebut dasar angkanya dengan langkah hitung yang tertulis. |
 | A2 | C3 | L60 | penilaian rubrik | Menambah empat sumur uji sehingga portabilitas diuji pada jumlah sumur lebih banyak, tanpa memuat kalibrasi ambang per sumur. |
 | A2 | C6 | 2 | asumsi | Sisa pekerjaan hanya evaluasi ulang fold karena parse selesai. Dua minggu adalah asumsi perkiraan desain. |
 | A2 | C5 | 3 | terukur | Jalur CRPM sudah diparse pada empat wellbore dengan baris terukur, namun jalur VIBLAT untuk F-4, F-10, dan F-15 masih berstatus belum diparse, sehingga tiga wellbore tersisa untuk kelas vib. |
@@ -83,7 +83,7 @@ Tabel 3.4.1 Jejak setiap sel matriks keputusan
 | A3 | C1 | L20 | terukur | Belum dieksekusi. Cacat label yang diserang sudah terukur, yaitu kontrol-positif stuck nol dari sepuluh. |
 | A3 | C4 | 0 | terukur | Bekerja pada mutu label, tidak menerbitkan alarm. |
 | A3 | C2 | 9 | terukur | Dua kelas sasaran dengan fold layak terukur: stuck 2 fold dan hyd 7 fold. |
-| A3 | C7 | 3/3 | terukur | Tiga dari tiga butir bukti pada 3.1.4.3 membawa jejak berkas dan baris. |
+| A3 | C7 | 3/3 | terukur | Tiga dari tiga butir bukti pada 3.1.4.3 menyebut dasar angkanya dengan langkah hitung yang tertulis. |
 | A3 | C3 | L30 | penilaian rubrik | Audit semantik label lintas sumur menyentuh konsistensi antar sumur, namun tidak menetapkan kalibrasi ambang per sumur. |
 | A3 | C6 | 4 | asumsi | Dua tahap berurutan, audit label lalu label probabilistik. Empat minggu adalah asumsi perkiraan desain. |
 | A3 | C5 | 0 | terukur | Memakai label kurasi dan CSV yang sudah ada, tanpa parse baru. |
@@ -91,7 +91,7 @@ Tabel 3.4.1 Jejak setiap sel matriks keputusan
 | A4 | C1 | L20 | terukur | Belum dieksekusi. Akar yang diserang terukur, yaitu dua fold underpowered pada ssi dengan 3 dan 12 positif. |
 | A4 | C4 | 0 | terukur | Tidak menerbitkan alarm otomatis. |
 | A4 | C2 | 12 | terukur | Dua kelas sasaran dengan fold layak terukur: shk 7 fold dan ssi 5 fold. |
-| A4 | C7 | 3/3 | terukur | Tiga dari tiga butir bukti pada 3.1.4.4 membawa jejak berkas dan baris. |
+| A4 | C7 | 3/3 | terukur | Tiga dari tiga butir bukti pada 3.1.4.4 menyebut dasar angkanya dengan langkah hitung yang tertulis. |
 | A4 | C3 | L30 | penilaian rubrik | Perubahan unit analisis tidak menetapkan kalibrasi ambang per sumur. |
 | A4 | C6 | 3 | asumsi | Beban rendah sampai sedang pada penilaian pendahulu. Tiga minggu adalah asumsi perkiraan desain. |
 | A4 | C5 | 0 | terukur | Memakai CSV terparse dan batas stand yang diturunkan dari kolom yang sudah ada. |
@@ -99,7 +99,7 @@ Tabel 3.4.1 Jejak setiap sel matriks keputusan
 | A5 | C1 | L20 | terukur | Belum dieksekusi. Akar yang diserang terukur, yaitu varians AUPRC pada fold dengan 30 sampai 41 positif. |
 | A5 | C4 | 0 | terukur | Tidak menerbitkan alarm otomatis. |
 | A5 | C2 | 9 | terukur | Dua kelas sasaran dengan fold layak terukur: ssi 5 fold dan bit_wear 4 fold. |
-| A5 | C7 | 3/3 | terukur | Tiga dari tiga butir bukti pada 3.1.4.5 membawa jejak berkas dan baris. |
+| A5 | C7 | 3/3 | terukur | Tiga dari tiga butir bukti pada 3.1.4.5 menyebut dasar angkanya dengan langkah hitung yang tertulis. |
 | A5 | C3 | L30 | penilaian rubrik | Formulasi ordinal tidak menetapkan kalibrasi ambang per sumur. |
 | A5 | C6 | 2 | asumsi | Beban rendah pada penilaian pendahulu. Dua minggu adalah asumsi perkiraan desain. |
 | A5 | C5 | 0 | terukur | Kanal sudah tersedia di CSV sehingga tidak ada parse baru. |
@@ -107,7 +107,7 @@ Tabel 3.4.1 Jejak setiap sel matriks keputusan
 | A6 | C1 | L20 | terukur | Belum dieksekusi. Hasil negatif pada hyd sudah terukur, yaitu B1 nol dari tiga onset, sehingga formulasi survival tidak punya sinyal pendukung pada kelas itu. |
 | A6 | C4 | 0 | terukur | Skor risiko per horizon tetap advisory, tanpa alarm otomatis. |
 | A6 | C2 | 11 | terukur | Dua kelas sasaran dengan fold layak terukur: hyd 7 fold dan bit_wear 4 fold. |
-| A6 | C7 | 3/3 | terukur | Tiga dari tiga butir bukti pada 3.1.4.6 membawa jejak berkas dan baris. |
+| A6 | C7 | 3/3 | terukur | Tiga dari tiga butir bukti pada 3.1.4.6 menyebut dasar angkanya dengan langkah hitung yang tertulis. |
 | A6 | C3 | L30 | penilaian rubrik | Survival mengubah formulasi, bukan ambang, sehingga gejala 119,6 kali tidak tersentuh. |
 | A6 | C6 | 4 | asumsi | Beban sedang pada penilaian pendahulu. Empat minggu adalah asumsi perkiraan desain. |
 | A6 | C5 | 0 | terukur | Diturunkan dari label yang sudah ada, tanpa parse baru. |
@@ -115,7 +115,7 @@ Tabel 3.4.1 Jejak setiap sel matriks keputusan
 | A7 | C1 | L75 | terukur | Mekanisme progresi sudah dijalankan pada empat dari empat alat dengan TLead 20 sampai 36 detik dan false alarm terkalibrasi 1 sampai 3 per alat, sehingga delta terukur positif, namun gate G1 tetap nol dari empat dan presisi run hanya 0,50 sehingga makna delta terbatas. |
 | A7 | C4 | 0 | terukur | Keluaran berupa status dan tren alat, tanpa alarm otomatis. |
 | A7 | C2 | 4 | terukur | Satu domain sasaran dengan empat fold alat terukur. |
-| A7 | C7 | 4/4 | terukur | Empat dari empat butir bukti pada 3.1.4.7 membawa jejak berkas dan baris. |
+| A7 | C7 | 4/4 | terukur | Empat dari empat butir bukti pada 3.1.4.7 menyebut dasar angkanya dengan langkah hitung yang tertulis. |
 | A7 | C3 | L30 | penilaian rubrik | Domain bengkel memakai empat alat dan bukan sumur, sehingga kalibrasi per sumur tidak berlaku dan tidak dirancang. |
 | A7 | C6 | 5 | asumsi | Pengembangan baru berskala sedang sampai besar karena dekomposisi mode dan ranking ditambahkan. Lima minggu adalah asumsi perkiraan desain. |
 | A7 | C5 | 0 | terukur | Delapan berkas akselerometer sudah tersedia dan terverifikasi SHA-256, tanpa parse baru. |
@@ -123,7 +123,7 @@ Tabel 3.4.1 Jejak setiap sel matriks keputusan
 | A8 | C1 | L20 | terukur | Belum dieksekusi. Akar yang diserang terukur, yaitu label hyd masih proksi residual SPPA dan label keausan fisik tidak tersedia. |
 | A8 | C4 | 0 | terukur | Label fisika dipakai sebagai label pelatihan, bukan alarm otomatis, sehingga batasan B2 tetap terpenuhi. |
 | A8 | C2 | 11 | terukur | Dua kelas sasaran dengan fold layak terukur: hyd 7 fold dan bit_wear 4 fold. |
-| A8 | C7 | 3/3 | terukur | Tiga dari tiga butir bukti pada 3.1.4.8 membawa jejak berkas dan baris. |
+| A8 | C7 | 3/3 | terukur | Tiga dari tiga butir bukti pada 3.1.4.8 menyebut dasar angkanya dengan langkah hitung yang tertulis. |
 | A8 | C3 | L60 | penilaian rubrik | Parse kanal pit dan flow pada F-9 serta F-1 C dan F-11 menambah sumur uji, tanpa rancangan kalibrasi ambang per sumur. |
 | A8 | C6 | 5 | asumsi | Beban rendah untuk label MSE dan DS ditambah beban sedang sampai besar untuk parse pit dan flow. Lima minggu adalah asumsi perkiraan desain. |
 | A8 | C5 | 2 | terukur | Dua sumur memerlukan parse tambahan, yaitu kanal pit mentah F-9 dan F-1 C atau F-11. |
@@ -131,7 +131,7 @@ Tabel 3.4.1 Jejak setiap sel matriks keputusan
 | A9 | C1 | L20 | terukur | Belum dieksekusi. Gejala yang diserang terukur, yaitu sebaran false alarm 4,15 sampai 496,09 per 24 jam. |
 | A9 | C4 | 0 | terukur | Purwarupa peringatan dini tetap advisory dengan review manusia, sesuai batasan B2. |
 | A9 | C2 | 6 | terukur | Dua kelas sasaran dengan fold layak terukur: vib 4 fold dan stuck 2 fold. |
-| A9 | C7 | 4/4 | terukur | Empat dari empat butir bukti pada 3.1.4.9 membawa jejak berkas dan baris, termasuk kunci JSON registry. |
+| A9 | C7 | 4/4 | terukur | Empat dari empat butir bukti pada 3.1.4.9 menyebut dasar angkanya dengan langkah hitung yang tertulis, termasuk registry head. |
 | A9 | C3 | L60 | penilaian rubrik | Memuat rancangan kalibrasi ambang per sumur sebagai inti pekerjaan, namun belum diuji pada dua sumur atau lebih. |
 | A9 | C6 | 4 | asumsi | Kalibrasi ambang ditambah purwarupa peringatan. Empat minggu adalah asumsi perkiraan desain. |
 | A9 | C5 | 0 | terukur | Memakai registry head dan CSV yang sudah ada, tanpa parse baru. |
@@ -168,7 +168,7 @@ Aturan dibaca berurutan dari R1 sampai R8: kriteria yang memenuhi aturan lebih a
 Rumus yang dipakai: untuk n kriteria dan peringkat i, bobot sama dengan satu per n dikali jumlah satu per k untuk k dari i sampai n. Untuk delapan kriteria, peringkat satu menghasilkan 0,3397 dan peringkat delapan menghasilkan 0,0156. Pemeriksaan jumlah:
 
 - Jumlah delapan bobot = 1,000000000000
-- Bobot terbesar 0,3397 pada kriteria yang memenuhi R1, bobot terkecil 0,0156 pada kriteria yang memenuhi R8
+- Bobot terbesar 0,3397 pada kriteria yang memenuhi R1, bobot terkecil 0,0156 pada kriteria yang memenuhi R8.
 - Rasio bobot terbesar terhadap terkecil = 21,74
 
 Status bobot ini adalah asumsi, dengan dua alasan yang ditulis apa adanya: belum ada wawancara mitra yang menetapkan prioritas, dan ROC adalah pendekatan, bukan elisitasi langsung. Satu kelemahan perlu disebut di sini, bukan hanya di bagian hasil: karena C4 menempati peringkat dua, kriteria yang pada matriks ternyata tidak membedakan justru menerima bobot terbesar kedua. Hal itu tidak diubah tanpa pemberitahuan, sebab menurunkan peringkat C4 akan berarti mengubah penilaian tentang kekerasan batasan B2. Yang dilakukan adalah menguji akibatnya lewat skenario P6, yang menolkan bobot C4 dan C7. Karena status bobotnya asumsi, subbab ini tidak berhenti pada satu vektor bobot, melainkan menguji sembilan skenario, enam belas uji satu per satu, dan satu sapuan penuh pada kriteria terpenting. Yang menentukan adalah apakah juara berubah, bukan apakah angkanya bergeser.
@@ -211,7 +211,7 @@ Daya beda kolom diperiksa sebelum bobot dipakai. Kolom tanpa variasi: C4, C7. Ke
 
 ### 3.4.6 Perhitungan TOPSIS
 
-Lima langkah, seluruhnya dijalankan oleh.
+Lima langkah berikut dijalankan secara berurutan dan dapat dihitung ulang sendiri oleh pembaca.
 
 1. Normalisasi vektor per kolom: setiap nilai dibagi akar jumlah kuadrat kolomnya.
 2. Pembobotan: nilai ternormalisasi dikali bobot kriteria.
@@ -261,7 +261,7 @@ Tabel 3.4.5 Kontribusi tiap kriteria pada tiga besar (nilai V sama dengan bobot 
 
 Kontribusi yang menentukan kemenangan A1 adalah C2 sebesar +0,04144, C6 sebesar +0,00957, C8 sebesar +0,00403, sedangkan pada kriteria lain selisihnya nol sehingga A7 tidak unggul pada satu kriteria pun. Dengan kata lain, kemenangan itu berasal dari selisih pada kriteria yang berbobot besar, bukan dari keunggulan menyeluruh.
 
-Perlu dicatat bahwa A1 dan A7 sama-sama bernilai 75 pada C1, karena keduanya sudah dieksekusi dan memberi delta terukur positif, yaitu stuck dengan B1 0,51 sampai 1,00 pada dan alat bengkel dengan lead time 20 sampai 36 detik pada. Yang memisahkan keduanya adalah kriteria lain, terutama jumlah fold layak, beban kognitif, dan waktu kerja. Penilaian C1 untuk A1 juga tidak seragam antar kelas: pada kelas hyd hasilnya negatif, yaitu nol dari tiga onset menurut, dan itu dicatat terbuka, bukan dirata-ratakan menjadi kemenangan.
+Perlu dicatat bahwa A1 dan A7 sama-sama bernilai 75 pada C1, karena keduanya sudah dieksekusi dan memberi delta terukur positif, yaitu kelas stuck dengan B1 0,51 sampai 1,00 pada pelabelan onset, dan kelas alat bengkel dengan lead time 20 sampai 36 detik pada pengujian keausan. Yang memisahkan keduanya adalah kriteria lain, terutama jumlah fold layak, beban kognitif, dan waktu kerja. Penilaian C1 untuk A1 juga tidak seragam antar kelas: pada kelas hyd hasilnya negatif, yaitu nol dari tiga onset menurut evaluasi onset, dan itu dicatat terbuka, bukan dirata-ratakan menjadi kemenangan.
 
 ### 3.4.7 Pembanding SAW
 

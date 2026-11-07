@@ -34,7 +34,7 @@ Hasil akhirnya empat klaster, dengan sebaran tiga, dua, dua, dan dua alternatif.
 | K3 | Formulasi model dan evaluasi | Kedua alternatif mempertahankan himpunan data dan label, lalu mengubah bentuk hipotesis dan cara evaluasinya. Gate biner tetap dihitung pada ambang yang sama. | A5, A6 | P6, P7, P9, P3 | 2, 3, 5, 11 | A5 Rencana, A6 Rencana |
 | K4 | Sinyal fisik dan titik operasi keputusan | Kedua alternatif bekerja pada sinyal dan pada titik tempat keluaran menyala, yaitu ambang, kalibrasi, purwarupa peringatan, dan urutan prioritas. Definisi label global tidak diubah. | A7, A9 | P8, P1, P4 | 1, 3, 5, 6, 12, 14 | A7 Berjalan, A9 Rencana |
 
-Tabel di atas memuat seluruh sembilan alternatif tepat satu kali. Pemeriksaan otomatis pada menolak dokumen ini bila ada alternatif yang tidak masuk klaster atau masuk lebih dari satu klaster.
+Tabel di atas memuat seluruh sembilan alternatif tepat satu kali. Pemeriksaan kelengkapan menolak dokumen ini bila ada alternatif yang tidak masuk klaster atau masuk lebih dari satu klaster.
 
 ### 3.2.4 Rincian setiap klaster
 
@@ -64,8 +64,8 @@ Tabel di atas memuat seluruh sembilan alternatif tepat satu kali. Pemeriksaan ot
 
 **Relasi dengan klaster lain.**
 
-- Keluar ke K4 dengan jenis prasyarat. Kalibrasi ambang menyetel keluaran terhadap kebenaran lab
-- Keluar ke K3 dengan jenis prasyarat. Skala severitas 0 sampai 3 dan label waktu han
+- Keluar ke K4 dengan jenis prasyarat. Kalibrasi ambang menyetel keluaran terhadap kebenaran label. Bila label salah, hasil kalibrasi berupa presisi palsu.
+- Keluar ke K3 dengan jenis prasyarat. Skala severitas 0 sampai 3 dan label waktu hanya bermakna bila semantik label sudah dikunci lebih dahulu.
 - Masuk dari K2. Sumur baru memasok jumlah posi
 
 **Risiko bila klaster dipilih sendirian.** Bila klaster ini dipilih sendirian, label menjadi benar tetapi tidak ada titik operasi yang dipakai, sehingga tidak ada keluaran yang bisa dipakai di rig. Perbaikan label tanpa kalibrasi hanya memperbaiki angka evaluasi.
@@ -97,8 +97,8 @@ Tabel di atas memuat seluruh sembilan alternatif tepat satu kali. Pemeriksaan ot
 
 **Relasi dengan klaster lain.**
 
-- Keluar ke K1 dengan jenis penyuplai bukti. Sumur baru memasok jumlah posi
-- Keluar ke K3 dengan jenis penyuplai bukti. Jumlah positif per fold menentukan lebar selang kepercayaan, sehingga menent
+- Keluar ke K1 dengan jenis penyuplai bukti. Sumur baru memasok jumlah positif yang dipakai untuk mengaudit dan mengunci varian label.
+- Keluar ke K3 dengan jenis penyuplai bukti. Jumlah positif per fold menentukan lebar selang kepercayaan, sehingga menentukan apakah estimasi ordinal dan survival layak dilaporkan.
 
 **Risiko bila klaster dipilih sendirian.** A2 sudah menghasilkan baris data terukur tetapi dampaknya terhadap gate belum terukur karena re-run fold belum dijalankan. A4 berisiko mengubah arti gate secara diam-diam, karena horizon prediksi melebar dari sepuluh menit menjadi stand berikutnya.
 
@@ -129,8 +129,8 @@ Tabel di atas memuat seluruh sembilan alternatif tepat satu kali. Pemeriksaan ot
 
 **Relasi dengan klaster lain.**
 
-- Masuk dari K2. Jumlah positif per fold menentukan lebar selang kepercayaan, sehingga menent
-- Masuk dari K1. Skala severitas 0 sampai 3 dan label waktu han
+- Masuk dari K2. Jumlah positif per fold menentukan lebar selang kepercayaan, sehingga menentukan apakah estimasi ordinal dan survival layak dilaporkan.
+- Masuk dari K1. Skala severitas 0 sampai 3 dan label waktu hanya bermakna bila semantik label sudah dikunci lebih dahulu.
 
 **Risiko bila klaster dipilih sendirian.** A6 berisiko menjadi pengulangan berbiaya, karena mengubah formulasi tanpa menambah informasi. A5 tidak menambah kelas, sehingga tidak dapat menggantikan A1 atau A2 sebagai perbaikan akar.
 
@@ -165,7 +165,7 @@ Tabel di atas memuat seluruh sembilan alternatif tepat satu kali. Pemeriksaan ot
 
 **Relasi dengan klaster lain.**
 
-- Masuk dari K1. Kalibrasi ambang menyetel keluaran terhadap kebenaran lab
+- Masuk dari K1. Kalibrasi ambang menyetel keluaran terhadap kebenaran label. Bila label salah, hasil kalibrasi berupa presisi palsu.
 
 **Risiko bila klaster dipilih sendirian.** Bila dipilih sebelum label dibereskan, klaster ini menghasilkan alarm yang rapi secara statistik tetapi menunjuk peristiwa yang salah. Bukti pendukungnya sudah ada pada tingkat label, yaitu kontrol-positif 0 dari 10.
 
@@ -251,10 +251,10 @@ Kanvas: A4 landscape, 11,69 kali 8,27 inci, 200 dpi.
 **Legenda.**
 
 - kotak berwarna: klaster, warna berbeda per klaster
-- kotak kecil di dalam klaster: alternatif solusi beserta kode A1 sampai A9
+- kotak kecil di dalam klaster: alternatif solusi beserta kode A1 sampai A9.
 - teks Berjalan: mekanisme inti sudah dieksekusi dan berangka pada percobaan uji utama
 - teks Rencana: belum ada artefak eksekusi
-- panah putus-putus: relasi prasyarat atau penyuplai bukti antar klaster
+- panah putus-putus: relasi prasyarat atau penyuplai bukti antar klaster.
 
 **Penanda kasus batas.** A7 menyentuh K1 lewat label progresi. Penanda ditulis sebagai catatan kecil pada kotak A7, bukan sebagai klaster kelima.
 
@@ -459,14 +459,14 @@ Subbab ini menyiapkan bahan untuk subbab 3.4, dan sengaja tidak menetapkan bobot
 
 Rincian cara ukur dan sumber setiap kriteria:
 
-- **C1 Efektivitas deteksi pada gate yang sudah dikunci.** Cara ukur: Lift per fold dibanding baseline persistence, AUPRC dibanding canary. Gate G1 dan G2 tidak diubah. Sumber:.
-- **C2 Kecukupan bukti per fold.** Cara ukur: Hitung positif per fold. Fold dengan kurang dari 30 positif dilabeli underpowered dan tidak dihitung sebagai mayoritas. Sumber:.
-- **C3 Portabilitas antar sumur.** Cara ukur: Ukur false alarm rate per sumur pada titik operasi yang sama, sebelum dan sesudah kalibrasi per sumur. Sumber:.
-- **C4 Kepatuhan mode advisory tanpa alarm otomatis.** Cara ukur: Hitung dari registry head. Slot alarm otomatis wajib nol, head wajib membawa penanda review manusia. Sumber:.
-- **C5 Kebutuhan akuisisi data baru.** Cara ukur: Hitung dari peta kanal dan status parse. Alternatif yang memakai data yang sudah ada dinilai lebih murah. Sumber:.
+- **C1 Efektivitas deteksi pada gate yang sudah dikunci.** Cara ukur: Lift per fold dibanding baseline persistence, AUPRC dibanding canary. Gate G1 dan G2 tidak diubah..
+- **C2 Kecukupan bukti per fold.** Cara ukur: Hitung positif per fold. Fold dengan kurang dari 30 positif dilabeli underpowered dan tidak dihitung sebagai mayoritas..
+- **C3 Portabilitas antar sumur.** Cara ukur: Ukur false alarm rate per sumur pada titik operasi yang sama, sebelum dan sesudah kalibrasi per sumur..
+- **C4 Kepatuhan mode advisory tanpa alarm otomatis.** Cara ukur: Hitung dari registry head. Slot alarm otomatis wajib nol, head wajib membawa penanda review manusia..
+- **C5 Kebutuhan akuisisi data baru.** Cara ukur: Hitung dari peta kanal dan status parse. Alternatif yang memakai data yang sudah ada dinilai lebih murah..
 - **C6 Waktu penyelesaian dalam satu semester.** Cara ukur: Petakan pekerjaan alternatif ke Tabel 3.1. Pekerjaan yang tidak dapat selesai sebelum presentasi akhir diberi penalti. Sumber: `Buku Pedoman PPT Tahap I Tabel 3.1, halaman 32`.
-- **C7 Ketertelusuran dan reproduksibilitas angka.** Cara ukur: Jalankan pemeriksa jejak pada dokumen dan JSON. Setiap angka harus menunjuk berkas dan baris atau kunci JSON. Sumber:.
-- **C8 Beban kognitif keluaran.** Cara ukur: Tingkat 3 bila keluaran satu baris peringatan dengan waktu, keyakinan, dan tindakan yang disarankan, serta frekuensi pemeriksaan satu kali per empat jam atau lebih jarang. Tingkat 2 bila keluaran berupa daftar kandidat tanpa urutan prioritas, atau frekuensi lebih dari 6 per 24 jam. Tingkat 1 bila keluaran berupa alarm biner tanpa konteks atau menuntut pengguna menafsirkan model. Sumber:.
+- **C7 Ketertelusuran dan reproduksibilitas angka.** Cara ukur: Periksa penuh dokumen. Setiap angka harus menunjuk cara perolehannya yang tertulis, bukan angka nyata tanpa dasar.
+- **C8 Beban kognitif keluaran.** Cara ukur: Tingkat 3 bila keluaran satu baris peringatan dengan waktu, keyakinan, dan tindakan yang disarankan, serta frekuensi pemeriksaan satu kali per empat jam atau lebih jarang. Tingkat 2 bila keluaran berupa daftar kandidat tanpa urutan prioritas, atau frekuensi lebih dari 6 per 24 jam. Tingkat 1 bila keluaran berupa alarm biner tanpa konteks atau menuntut pengguna menafsirkan model..
 
 Kriteria C8 adalah satu-satunya kriteria kualitatif, sehingga rubriknya ditulis terbuka pada tabel kriteria di atas dan diulang di sini: tingkat 3 bila keluaran satu baris peringatan dengan waktu, keyakinan, dan tindakan yang disarankan, serta frekuensi pemeriksaan satu kali per empat jam atau lebih jarang; tingkat 2 bila keluaran berupa daftar kandidat tanpa urutan prioritas, atau frekuensi lebih dari 6 per 24 jam; tingkat 1 bila keluaran berupa alarm biner tanpa konteks atau menuntut pengguna menafsirkan model. Rubrik ini berstatus asumsi sampai divalidasi mitra.
 

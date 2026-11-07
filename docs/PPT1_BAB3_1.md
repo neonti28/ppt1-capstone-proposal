@@ -76,8 +76,8 @@ Tiga anggota membagi lapisan intervensi, bukan kelas disfungsi. Pembagian ini di
 
 **Bukti kelayakan dari proyek.**
 
-- Formulasi onset sudah dijalankan untuk stuck dan menghasilkan peringatan dengan arah benar pada beban rendah: Random Forest pada titik operasi 0,05 memberi B1 0,51 sampai 1,00 dengan TLead 10 sampai 11,5 menit, sedangkan baseline persistence-EVENT hanya mem
-- Untuk hyd, formulasi yang sama menghasilkan B1 nol dari tiga onset dengan TLead no
+- Formulasi onset sudah dijalankan untuk stuck dan menghasilkan peringatan dengan arah benar pada beban rendah: Random Forest pada titik operasi 0,05 memberi B1 0,51 sampai 1,00 dengan TLead 10 sampai 11,5 menit, sedangkan baseline persistence-EVENT hanya memberi TLead median 7,0 menit dengan B1 0 sampai 11,5 persen.
+- Untuk hyd, formulasi yang sama menghasilkan B1 nol dari tiga onset dengan TLead nol, jadi hasil negatifnya terukur dan dilaporkan apa adanya.
 - Relabel tidak mem
 
 **Keadaan pelaksanaan.** Berjalan. Sudah dieksekusi untuk stuck (K-ii) dan hyd (K-ii) pada percobaan uji utama. Belum dieksekusi untuk bit_wear K-2 karena registrasi sebelum percobaan tersebut belum terbit.
@@ -94,9 +94,9 @@ Tiga anggota membagi lapisan intervensi, bukan kelas disfungsi. Pembagian ini di
 
 **Bukti kelayakan dari proyek.**
 
-- Peta kanal menunjukkan sumber positif yang nyata: F-10 mendaftarkan SHKRSK_RT pada 188 berkas, CRPM_RT 186, STKSLP 125, VIBLAT_RT 66, dan STUCK_RT
-- Akuisisi data sudah berjalan dan terukur: CRPM F-10 281.030 baris, F-4 42.010 baris, F-12 178.430 baris
-- Akar masalah yang diserang terukur pada ssi: G1 4 dari 5, F-9_A lift 1,47 gagal tipis,
+- Peta kanal menunjukkan sumber positif yang nyata: F-10 mendaftarkan SHKRSK_RT pada 188 berkas, CRPM_RT 186, STKSLP 125, VIBLAT_RT 66, dan STUCK_RT 18; F-4 135/135/135/86; F-12 91/90/52/6; F-15 77/76/76/76.
+- Akuisisi data sudah berjalan dan terukur: CRPM F-10 281.030 baris, F-4 42.010 baris, F-12 178.430 baris, F-15 57.846 baris, dengan re-run 11 fold belum dilakukan.
+- Akar masalah yang diserang terukur pada ssi: G1 4 dari 5, F-9_A lift 1,47 gagal tipis, dan dua fold underpowered (F-7 3 positif, F-9 12 positif).
 
 **Keadaan pelaksanaan.** Berjalan. Akuisisi dan parsing selesai dengan angka baris terukur. Evaluasi ulang fold belum dijalankan, sehingga dampak terhadap gate belum dapat diklaim.
 
@@ -112,9 +112,9 @@ Tiga anggota membagi lapisan intervensi, bukan kelas disfungsi. Pembagian ini di
 
 **Bukti kelayakan dari proyek.**
 
-- Tiga cacat label sudah terukur: kontrol-positif stuck 0 dari 10, label hyd masih p
-- Basis label kurasi memuat 884 kejadian, 50 di antaranya relevan BHA, dengan total durasi 73.500 menit atau 1.225 jam, seh
-- Urutan 6a sebelum 6b ditetapkan karena kalibrasi ambang menyetel kebenaran,
+- Tiga cacat label sudah terukur: kontrol-positif stuck 0 dari 10, label hyd masih proksi residual, dan campuran severitas berbeda antar sumur.
+- Basis label kurasi memuat 884 kejadian, 50 di antaranya relevan BHA, dengan total durasi 73.500 menit atau 1.225 jam, sehingga bahan rekonsiliasi tersedia dan dapat dihitung ulang.
+- Urutan 6a sebelum 6b ditetapkan karena kalibrasi ambang menyetel kebenaran, sehingga label yang salah akan menghasilkan presisi palsu.
 
 **Keadaan pelaksanaan.** Rencana (belum terealisasi). Belum ada langkah audit label yang dieksekusi pada percobaan uji mana pun.
 
@@ -131,8 +131,8 @@ Tiga anggota membagi lapisan intervensi, bukan kelas disfungsi. Pembagian ini di
 **Bukti kelayakan dari proyek.**
 
 - Rentang prevalensi unit stand 10 sampai 40 persen adalah **asumsi**. **Isi asumsinya:** proporsi unit stand yang menghasilkan kejadian di antara unit yang dikunci. **Dasar:** belum ada hitungan prevalensi untuk unit stand karena belum ada label stand pada data, sementara rancangan standar memerlukan ambang kalibrasi awal. **Alasan dipilih:** rentang dipakai untuk menguji kerentanan desain ambang sebelum biaya pengumpulan label stand dibelanjakan, bukan sebagai angka kinerja. **Cara mengujinya:** saat data stand tersedia, hitung proporsi unit stand dengan kejadian pada interval yang sama dan bandingkan dengan 10 sampai 40 persen.
-- Batas stand dapat diturunkan dari BPOS dan celah waktu pada data ya
-- Bila unit stand dipakai, false alarm rate wajib dihitung per stand disertai justi
+- Batas stand dapat diturunkan dari BPOS dan celah waktu pada data yang sudah tersedia, sehingga tidak memerlukan akuisisi baru.
+- Bila unit stand dipakai, false alarm rate wajib dihitung per stand disertai justifikasinya, karena gate saat ini dihitung per jendela waktu.
 
 **Keadaan pelaksanaan.** Rencana (belum terealisasi). Belum dijalankan; belum ada artefak hasil untuk unit stand.
 
@@ -148,9 +148,9 @@ Tiga anggota membagi lapisan intervensi, bukan kelas disfungsi. Pembagian ini di
 
 **Bukti kelayakan dari proyek.**
 
-- Klasifikasi severitas stick-slip dengan pembelajaran mesin sudah ma
-- ssi sudah lolos G1 4 dari 5 dengan dua fold underpowered (F-7 3 positif, F-9 12 positif), sehi
-- Penulis solusi sendiri menilai jalur stabilitas fold sebagai pengeras bukti, bu
+- Klasifikasi severitas stick-slip dengan pembelajaran mesin sudah mapan pada literatur sehingga jalur ordinal bukan klaim baru.
+- ssi sudah lolos G1 4 dari 5 dengan dua fold underpowered (F-7 3 positif, F-9 12 positif), sehingga stabilitas fold adalah variabel yang wajib dilaporkan.
+- Penulis solusi sendiri menilai jalur stabilitas fold sebagai pengeras bukti, bukan penambah kelas, sehingga posisinya pelengkap A4 dan A2.
 
 **Keadaan pelaksanaan.** Rencana (belum terealisasi). Belum dijalankan; tidak ada angka ordinal maupun bootstrap pada percobaan uji yang sudah ada.
 
@@ -166,9 +166,9 @@ Tiga anggota membagi lapisan intervensi, bukan kelas disfungsi. Pembagian ini di
 
 **Bukti kelayakan dari proyek.**
 
-- Label waktu sampai penarikan tersedia dari 77 berkas bhaRun, tetapi berkas itu tidak memuat dullingInfo, dullGrade, maupun bitName, seh
-- Penulis solusi menilai survival sebagai opsi pembanding karena mengubah formulasi tanpa 
-- Titik operasi hidrolik saat ini menghasilkan nol dari tiga onset terdeteksi, sehingga pembanding berformulasi 
+- Label waktu sampai penarikan tersedia dari 77 berkas bhaRun, tetapi berkas itu tidak memuat dullingInfo, dullGrade, maupun bitName, sehingga label hanya berupa batas run dan bukan keausan fisik.
+- Penulis solusi menilai survival sebagai opsi pembanding karena mengubah formulasi tanpa menambah informasi, sehingga posisinya bukan solusi primer.
+- Titik operasi hidrolik saat ini menghasilkan nol dari tiga onset terdeteksi, sehingga pembanding berformulasi waktu adalah langkah yang masuk akal dan bukan pengulangan.
 
 **Keadaan pelaksanaan.** Rencana (belum terealisasi). Belum dijalankan; belum ada model hazard pada percobaan uji mana pun.
 
@@ -184,10 +184,10 @@ Tiga anggota membagi lapisan intervensi, bukan kelas disfungsi. Pembagian ini di
 
 **Bukti kelayakan dari proyek.**
 
-- Deteksi perubahan regime sudah dijalankan pada 4 dari 4 alat dengan TLead 20 sampai 36 detik (1,8 kali) dan false alarm terkalibrasi 1 sampai 3 per alat, tetapi presisi run h
-- Uji artefak termal gagal membuktikan confound pada 0 dari 8 ru
-- Baseline ranking lintas alat stabil pada 1,19 kali (AUPRC 0,516 sampai 0,612) sedangkan model Random Forest belum 
-- Fitur dekomposisi mode baru dinyatakan sebagai pengangkat AUPRC pada rancangan
+- Deteksi perubahan regime sudah dijalankan pada 4 dari 4 alat dengan TLead 20 sampai 36 detik (1,8 kali) dan false alarm terkalibrasi 1 sampai 3 per alat, tetapi presisi run hanya 0,50 karena titik ubah juga signifikan pada alat baru.
+- Uji artefak termal gagal membuktikan confound pada 0 dari 8 run, sehingga kritik urutan run tidak terbukti pada data ini.
+- Baseline ranking lintas alat stabil pada 1,19 kali (AUPRC 0,516 sampai 0,612) sedangkan model Random Forest belum dijalankan di V9, sehingga mekanisme ranking masih terbuka.
+- Fitur dekomposisi mode baru dinyatakan sebagai pengangkat AUPRC pada rancangan, tanpa artefak eksekusi, sehingga statusnya masih rencana.
 
 **Keadaan pelaksanaan.** Berjalan. Mekanisme progresi dan kalibrasi ambang selesai pada domain bengkel. Dekomposisi mode dan ranking belum dieksekusi.
 
@@ -203,9 +203,9 @@ Tiga anggota membagi lapisan intervensi, bukan kelas disfungsi. Pembagian ini di
 
 **Bukti kelayakan dari proyek.**
 
-- Kanal sumber label tersedia dan terhitung: GAINLOSSTOT pada 575 berkas di F-1 C dan 5
+- Kanal sumber label tersedia dan terhitung: GAINLOSSTOT pada 575 berkas di F-1 C dan 517 di F-11, PITTOT 565 dan 506, FLOWOUT 688, FLOWOUTPC 949.
 - Bahan label silang tersedia langsung: USROP_labeled.cs
-- Aturan MSE dan MSE/DS sudah diverifikasi rumusnya pada dokum
+- Aturan MSE dan MSE/DS sudah diverifikasi rumusnya pada dokumen sumber, sehingga label silang bukan gagasan tanpa dasar.
 
 **Keadaan pelaksanaan.** Rencana (belum terealisasi). Belum ada label pit atau flow yang diparse menjadi deret label; kanal mentahnya sudah teridentifikasi di F-9, F-1 C, dan F-11.
 
@@ -221,10 +221,10 @@ Tiga anggota membagi lapisan intervensi, bukan kelas disfungsi. Pembagian ini di
 
 **Bukti kelayakan dari proyek.**
 
-- Ambang global terbukti gagal: pada titik operasi 0,5 false alarm rate vib menyebar 4,15 
-- Dataset TSPP tersedia dengan 52.905 baris pada empat berkas dan 10 kanal permukaa
-- Artefak autoencoder lama tidak diskriminatif karena 75 sampai 99 persen baris berada di atas ambang, sehingga komponen indeks kondisi harus dikerjaka
-- Alat saat ini berjalan dengan nol slot alarm otomatis dari 27 head, sehingga lapis
+- Ambang global terbukti gagal: pada titik operasi 0,5 false alarm rate vib menyebar 4,15 sampai 496,09 per 24 jam atau rasio 119,6 kali antar sumur.
+- Dataset TSPP tersedia dengan 52.905 baris pada empat berkas dan 10 kanal permukaan, sehingga purwarupa dapat dijalankan tanpa akuisisi baru.
+- Artefak autoencoder lama tidak diskriminatif karena 75 sampai 99 persen baris berada di atas ambang, sehingga komponen indeks kondisi harus dikerjakan ulang dan tidak boleh mengutip artefak itu sebagai bukti.
+- Alat saat ini berjalan dengan nol slot alarm otomatis dari 27 head, sehingga lapisan ini adalah syarat naik tier dan bukan tambahan opsional.
 
 **Keadaan pelaksanaan.** Rencana (belum terealisasi). Kalibrasi ambang per sumur untuk hyd, vib, dan shk belum dijalankan. Kalibrasi false alarm yang sudah ada hanya di dalam mode tool_wear pada domain bengkel.
 
