@@ -1,0 +1,200 @@
+[
+ {
+  "status": "OK",
+  "http": 200,
+  "doi": "10.1016/j.ress.2019.106621",
+  "title": "A Markov chains prognostics framework for complex degradation processes",
+  "year": 2020,
+  "first_author": "Chiach\u00edo",
+  "container": "Reliability Engineering &amp; System Safety",
+  "type": "journal-article",
+  "tag": "markov_chiachio2019"
+ },
+ {
+  "status": "OK",
+  "http": 200,
+  "doi": "10.3390/jmse13040798",
+  "title": "Integrated Approach to Marine Engine Maintenance Optimization: Weibull Analysis, Markov Chains, and DEA Model",
+  "year": 2025,
+  "first_author": "Budimir",
+  "container": "Journal of Marine Science and Engineering",
+  "type": "journal-article",
+  "tag": "markov_budimir2025"
+ },
+ {
+  "status": "OK",
+  "http": 200,
+  "doi": "10.1155/2015/278120",
+  "title": "Hidden Semi-Markov Models for Predictive Maintenance",
+  "year": 2015,
+  "first_author": "Cartella",
+  "container": "Mathematical Problems in Engineering",
+  "type": "journal-article",
+  "tag": "semimarkov_cartella2015"
+ },
+ {
+  "status": "OK",
+  "http": 200,
+  "doi": "10.1109/tase.2009.2038170",
+  "title": "Health-State Estimation and Prognostics in Machining Processes",
+  "year": 2010,
+  "first_author": "Camci",
+  "container": "IEEE Transactions on Automation Science and Engineering",
+  "type": "journal-article",
+  "tag": "markov_camci2010"
+ },
+ {
+  "status": "OK",
+  "http": 200,
+  "doi": "10.1016/s0890-6955(00)00112-7",
+  "title": "Tool wear condition monitoring in drilling operations using hidden Markov models (HMMs)",
+  "year": 2001,
+  "first_author": "Ertunc",
+  "container": "International Journal of Machine Tools and Manufacture",
+  "type": "journal-article",
+  "tag": "hmm_ertunc2001"
+ },
+ {
+  "status": "OK",
+  "http": 200,
+  "doi": "10.1007/s00170-016-9711-0",
+  "title": "A weighted hidden Markov model approach for continuous-state tool wear monitoring and tool life prediction",
+  "year": 2016,
+  "first_author": "Yu",
+  "container": "The International Journal of Advanced Manufacturing Technology",
+  "type": "journal-article",
+  "tag": "hmm_yu2016"
+ },
+ {
+  "status": "OK",
+  "http": 200,
+  "doi": "10.1080/0740817x.2014.905734",
+  "title": "Degradation modeling and monitoring of machines using operation-specific hidden Markov models",
+  "year": 2014,
+  "first_author": "Cholette",
+  "container": "IIE Transactions",
+  "type": "journal-article",
+  "tag": "hmm_cholette2014"
+ },
+ {
+  "status": "OK",
+  "http": 200,
+  "doi": "10.1016/j.ress.2022.108341",
+  "title": "Alarm-based predictive maintenance scheduling for aircraft engines with imperfect Remaining Useful Life prognostics",
+  "year": 2022,
+  "first_author": "de Pater",
+  "container": "Reliability Engineering &amp; System Safety",
+  "type": "journal-article",
+  "tag": "mc_depater2022"
+ },
+ {
+  "status": "OK",
+  "http": 200,
+  "doi": "10.1016/j.nexres.2026.102266",
+  "title": "One-sided predictive thresholds for aerospace electromechanical actuators: Monte Carlo and probability-plot methods",
+  "year": 2026,
+  "first_author": "Annaz",
+  "container": "Next Research",
+  "type": "journal-article",
+  "tag": "mc_annaz2026"
+ },
+ {
+  "status": "OK",
+  "http": 200,
+  "doi": "10.1016/j.ress.2020.107341",
+  "title": "A Bayesian Inference for Remaining Useful Life Estimation by Fusing Accelerated Degradation Data and Condition Monitoring Data",
+  "year": 2021,
+  "first_author": "Pang",
+  "container": "Reliability Engineering &amp; System Safety",
+  "type": "journal-article",
+  "tag": "mcmc_pang2020"
+ },
+ {
+  "status": "OK",
+  "http": 200,
+  "doi": "10.1016/j.jmsy.2020.11.005",
+  "title": "Utilizing uncertainty information in remaining useful life estimation via Bayesian neural networks and Hamiltonian Monte Carlo",
+  "year": 2021,
+  "first_author": "Benker",
+  "container": "Journal of Manufacturing Systems",
+  "type": "journal-article",
+  "tag": "mcmc_benker2020"
+ },
+ {
+  "status": "OK",
+  "http": 200,
+  "doi": "10.3390/en14227758",
+  "title": "An Integrated Fuzzy Fault Tree Model with Bayesian Network-Based Maintenance Optimization of Complex Equipment in Automotive Manufacturing",
+  "year": 2021,
+  "first_author": "Soltanali",
+  "container": "Energies",
+  "type": "journal-article",
+  "tag": "bn_soltanali2021"
+ },
+ {
+  "status": "OK",
+  "http": 200,
+  "doi": "10.1109/tr.2024.3416064",
+  "title": "Graph Embedding-Based Bayesian Network for Fault Isolation in Complex Equipment",
+  "year": 2025,
+  "first_author": "Xia",
+  "container": "IEEE Transactions on Reliability",
+  "type": "journal-article",
+  "tag": "bn_xia2024"
+ },
+ {
+  "status": "OK",
+  "http": 200,
+  "doi": "10.1016/j.aei.2020.101054",
+  "title": "Predictive maintenance using cox proportional hazard deep learning",
+  "year": 2020,
+  "first_author": "Chen",
+  "container": "Advanced Engineering Informatics",
+  "type": "journal-article",
+  "tag": "cox_chen2020"
+ },
+ {
+  "status": "OK",
+  "http": 200,
+  "doi": "10.1007/978-3-030-25147-5_15",
+  "title": "Statistical Analysis of the Lifetime of Diamond-Impregnated Tools for Core Drilling of Concrete",
+  "year": 2019,
+  "first_author": "Malevich",
+  "container": "Studies in Classification, Data Analysis, and Knowledge Organization",
+  "type": "book-chapter",
+  "tag": "cox_malevich2019"
+ },
+ {
+  "status": "OK",
+  "http": 200,
+  "doi": "10.1186/s12911-024-02525-z",
+  "title": "Improved nonparametric survival prediction using CoxPH, Random Survival Forest &amp; DeepHit Neural Network",
+  "year": 2024,
+  "first_author": "Asghar",
+  "container": "BMC Medical Informatics and Decision Making",
+  "type": "journal-article",
+  "tag": "rsf_asghar2024"
+ },
+ {
+  "status": "OK",
+  "http": 200,
+  "doi": "10.1186/s40064-016-3113-5",
+  "title": "Random rotation survival forest for high dimensional censored data",
+  "year": 2016,
+  "first_author": "Zhou",
+  "container": "SpringerPlus",
+  "type": "journal-article",
+  "tag": "rsf_zhou2016"
+ },
+ {
+  "status": "OK",
+  "http": 200,
+  "doi": "10.1609/aaai.v33i01.33014798",
+  "title": "Deep Recurrent Survival Analysis",
+  "year": 2019,
+  "first_author": "Ren",
+  "container": "Proceedings of the AAAI Conference on Artificial Intelligence",
+  "type": "journal-article",
+  "tag": "deephit_ren2019"
+ }
+]

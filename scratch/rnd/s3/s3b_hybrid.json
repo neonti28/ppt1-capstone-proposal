@@ -1,0 +1,3491 @@
+{
+ "meta": {
+  "sumber": "/mnt/d/Capstone 1(v2)/data/USROP_labeled.csv",
+  "waktu": "/mnt/d/Capstone 1(v2)/data/volve/usrop_timestamped.csv",
+  "seed": 42,
+  "durasi_detik": 13.6,
+  "kanal_rule": "Average Surface Torque kN.m",
+  "kanal_stat": "Average Standpipe Pressure kPa",
+  "thr_rule": 2.0,
+  "w_alarm": 10,
+  "win_z": 500,
+  "alpha": 0.004166666666666667,
+  "fitur_fisik": [
+   "Weight on Bit kkgf",
+   "Average Standpipe Pressure kPa",
+   "Average Surface Torque kN.m",
+   "Rate of Penetration m/h",
+   "Average Rotary Speed rpm",
+   "Mud Flow In L/min",
+   "Average Hookload kkgf"
+  ],
+  "fitur_terlarang": [
+   "MSE",
+   "D_exp",
+   "ROC_coef"
+  ],
+  "catatan": "ambang h dan conformal dipilih pada well kalibrasi; label tidak dipakai untuk membentuk z, rule, atau statistik"
+ },
+ "well_info": {
+  "USROP_A 0 N-NA_F-9_Ad.csv": {
+   "baris": 13746,
+   "pos": 182,
+   "prevalensi": 0.01324,
+   "rentang_jam": 113.778,
+   "baris_per_jam": 120.81,
+   "md_min": 491.033,
+   "md_maks": 1205.999
+  },
+  "USROP_A 1 N-S_F-7d.csv": {
+   "baris": 6389,
+   "pos": 0,
+   "prevalensi": 0.0,
+   "rentang_jam": 305.482,
+   "baris_per_jam": 20.91,
+   "md_min": 301.231,
+   "md_maks": 633.536
+  },
+  "USROP_A 2 N-SH_F-14d.csv": {
+   "baris": 47645,
+   "pos": 4918,
+   "prevalensi": 0.103222,
+   "rentang_jam": 4534.969,
+   "baris_per_jam": 10.51,
+   "md_min": 987.948,
+   "md_maks": 3466.033
+  },
+  "USROP_A 3 N-SH-F-15d.csv": {
+   "baris": 53041,
+   "pos": 7622,
+   "prevalensi": 0.1437,
+   "rentang_jam": 688.248,
+   "baris_per_jam": 77.07,
+   "md_min": 1306.525,
+   "md_maks": 4065.346
+  },
+  "USROP_A 4 N-SH_F-15Sd.csv": {
+   "baris": 51708,
+   "pos": 28051,
+   "prevalensi": 0.542489,
+   "rentang_jam": 1538.487,
+   "baris_per_jam": 33.61,
+   "md_min": 1400.55,
+   "md_maks": 4090.001
+  },
+  "USROP_A 5 N-SH-F-5d.csv": {
+   "baris": 18548,
+   "pos": 8959,
+   "prevalensi": 0.483017,
+   "rentang_jam": 297.469,
+   "baris_per_jam": 62.35,
+   "md_min": 2828.239,
+   "md_maks": 3792.2
+  },
+  "USROP_A 6 N-SH_F-9d.csv": {
+   "baris": 7851,
+   "pos": 0,
+   "prevalensi": 0.0,
+   "rentang_jam": 400.25,
+   "baris_per_jam": 19.62,
+   "md_min": 225.171,
+   "md_maks": 633.536
+  }
+ },
+ "folds": [
+  {
+   "fold": "USROP_A 0 N-NA_F-9_Ad.csv",
+   "cal_well": "USROP_A 1 N-S_F-7d.csv",
+   "h": 30.0,
+   "ambang_conformal": 0.000533,
+   "n_latih": 178793,
+   "n_pos_latih": 49550,
+   "prevalensi_uji": 0.01324,
+   "laju_stat": {
+    "h": 30.0,
+    "saturasi": true,
+    "frac_raw": 0.030482,
+    "frac_jendela": 0.183908,
+    "anggaran": 0.004167
+   },
+   "recall_rule": 0.0,
+   "recall_ml": 1.0,
+   "recall_ml_mse": 1.0
+  },
+  {
+   "fold": "USROP_A 1 N-S_F-7d.csv",
+   "cal_well": "USROP_A 0 N-NA_F-9_Ad.csv",
+   "h": 30.0,
+   "ambang_conformal": 0.009853,
+   "n_latih": 178793,
+   "n_pos_latih": 49550,
+   "prevalensi_uji": 0.0,
+   "laju_stat": {
+    "h": 30.0,
+    "saturasi": true,
+    "frac_raw": 0.07732,
+    "frac_jendela": 0.247457,
+    "anggaran": 0.004167
+   },
+   "recall_rule": null,
+   "recall_ml": null,
+   "recall_ml_mse": null
+  },
+  {
+   "fold": "USROP_A 2 N-SH_F-14d.csv",
+   "cal_well": "USROP_A 0 N-NA_F-9_Ad.csv",
+   "h": 30.0,
+   "ambang_conformal": 0.010506,
+   "n_latih": 137537,
+   "n_pos_latih": 44632,
+   "prevalensi_uji": 0.103222,
+   "laju_stat": {
+    "h": 30.0,
+    "saturasi": true,
+    "frac_raw": 0.043572,
+    "frac_jendela": 0.216812,
+    "anggaran": 0.004167
+   },
+   "recall_rule": 0.21411142740951605,
+   "recall_ml": 1.0,
+   "recall_ml_mse": 1.0
+  },
+  {
+   "fold": "USROP_A 3 N-SH-F-15d.csv",
+   "cal_well": "USROP_A 0 N-NA_F-9_Ad.csv",
+   "h": 30.0,
+   "ambang_conformal": 0.000958,
+   "n_latih": 132141,
+   "n_pos_latih": 41928,
+   "prevalensi_uji": 0.1437,
+   "laju_stat": {
+    "h": 30.0,
+    "saturasi": true,
+    "frac_raw": 0.048943,
+    "frac_jendela": 0.185668,
+    "anggaran": 0.004167
+   },
+   "recall_rule": 0.11335607452112306,
+   "recall_ml": 0.9843872999212805,
+   "recall_ml_mse": 1.0
+  },
+  {
+   "fold": "USROP_A 4 N-SH_F-15Sd.csv",
+   "cal_well": "USROP_A 0 N-NA_F-9_Ad.csv",
+   "h": 30.0,
+   "ambang_conformal": 0.001499,
+   "n_latih": 133474,
+   "n_pos_latih": 21499,
+   "prevalensi_uji": 0.542489,
+   "laju_stat": {
+    "h": 30.0,
+    "saturasi": true,
+    "frac_raw": 0.033805,
+    "frac_jendela": 0.18179,
+    "anggaran": 0.004167
+   },
+   "recall_rule": 0.08270649887704538,
+   "recall_ml": 0.9967559088802538,
+   "recall_ml_mse": 1.0
+  },
+  {
+   "fold": "USROP_A 5 N-SH-F-5d.csv",
+   "cal_well": "USROP_A 0 N-NA_F-9_Ad.csv",
+   "h": 30.0,
+   "ambang_conformal": 0.008073,
+   "n_latih": 166634,
+   "n_pos_latih": 40591,
+   "prevalensi_uji": 0.483017,
+   "laju_stat": {
+    "h": 30.0,
+    "saturasi": true,
+    "frac_raw": 0.029168,
+    "frac_jendela": 0.175113,
+    "anggaran": 0.004167
+   },
+   "recall_rule": 0.19812479071324926,
+   "recall_ml": 0.8621497935037392,
+   "recall_ml_mse": 1.0
+  },
+  {
+   "fold": "USROP_A 6 N-SH_F-9d.csv",
+   "cal_well": "USROP_A 0 N-NA_F-9_Ad.csv",
+   "h": 30.0,
+   "ambang_conformal": 0.006549,
+   "n_latih": 177331,
+   "n_pos_latih": 49550,
+   "prevalensi_uji": 0.0,
+   "laju_stat": {
+    "h": 30.0,
+    "saturasi": true,
+    "frac_raw": 0.074768,
+    "frac_jendela": 0.280474,
+    "anggaran": 0.004167
+   },
+   "recall_rule": null,
+   "recall_ml": null,
+   "recall_ml_mse": null
+  }
+ ],
+ "records": [
+  {
+   "fold": "USROP_A 0 N-NA_F-9_Ad.csv",
+   "model": "rule_label",
+   "n": 13746,
+   "n_pos": 182,
+   "rows": {
+    "tp": 182,
+    "fp": 0,
+    "fn": 0,
+    "tn": 13564,
+    "precision": 1.0,
+    "recall": 1.0,
+    "menit_alarm": 182,
+    "n_pos": 182,
+    "n_neg": 13564
+   },
+   "events": {
+    "tp_kejadian": 5,
+    "fp_kejadian": 0,
+    "n_kejadian": 5
+   },
+   "far": {
+    "menit_berdata": 3621,
+    "menit_pos": 153,
+    "menit_neg": 3468,
+    "menit_alarm": 153,
+    "menit_alarm_neg": 0,
+    "rentang_menit": 6828.0,
+    "jam_operasi": 60.35,
+    "cakupan_menit": 0.5303,
+    "far24_kalender": 0.0
+   },
+   "far24_kalender": 0.0,
+   "far24_baris": null,
+   "far_per_1000_sampel": 0.0,
+   "garwood_atas_fp": 1.5317,
+   "lead": {
+    "n_onset": 5,
+    "n_diperingatkan": 0,
+    "lead_median_min": null,
+    "lead_min_min": null,
+    "lead_maks_min": null
+   },
+   "separuh": {
+    "awal": {
+     "precision": null,
+     "recall": null,
+     "fp": 0,
+     "n_pos": 0
+    },
+    "akhir": {
+     "precision": 1.0,
+     "recall": 1.0,
+     "fp": 0,
+     "n_pos": 182
+    }
+   },
+   "h_terpilih": 30.0,
+   "ambang_conformal": 0.000533,
+   "cakupan": 0.5303,
+   "gate_A_baru": true
+  },
+  {
+   "fold": "USROP_A 0 N-NA_F-9_Ad.csv",
+   "model": "rule_kanal",
+   "n": 13746,
+   "n_pos": 182,
+   "rows": {
+    "tp": 0,
+    "fp": 2115,
+    "fn": 182,
+    "tn": 11449,
+    "precision": 0.0,
+    "recall": 0.0,
+    "menit_alarm": 2115,
+    "n_pos": 182,
+    "n_neg": 13564
+   },
+   "events": {
+    "tp_kejadian": 0,
+    "fp_kejadian": 74,
+    "n_kejadian": 74
+   },
+   "far": {
+    "menit_berdata": 3621,
+    "menit_pos": 153,
+    "menit_neg": 3468,
+    "menit_alarm": 624,
+    "menit_alarm_neg": 617,
+    "rentang_menit": 6828.0,
+    "jam_operasi": 60.35,
+    "cakupan_menit": 0.5303,
+    "far24_kalender": 245.3687
+   },
+   "far24_kalender": 245.3687,
+   "far24_baris": null,
+   "far_per_1000_sampel": 155.927,
+   "garwood_atas_fp": 916.4436,
+   "lead": {
+    "n_onset": 5,
+    "n_diperingatkan": 1,
+    "lead_median_min": 24.0,
+    "lead_min_min": 24,
+    "lead_maks_min": 24
+   },
+   "separuh": {
+    "awal": {
+     "precision": 0.0,
+     "recall": null,
+     "fp": 1559,
+     "n_pos": 0
+    },
+    "akhir": {
+     "precision": 0.0,
+     "recall": 0.0,
+     "fp": 556,
+     "n_pos": 182
+    }
+   },
+   "h_terpilih": 30.0,
+   "ambang_conformal": 0.000533,
+   "cakupan": 0.5303,
+   "gate_A_baru": false
+  },
+  {
+   "fold": "USROP_A 0 N-NA_F-9_Ad.csv",
+   "model": "stat_cusum",
+   "n": 13746,
+   "n_pos": 182,
+   "rows": {
+    "tp": 77,
+    "fp": 2451,
+    "fn": 105,
+    "tn": 11113,
+    "precision": 0.03045886075949367,
+    "recall": 0.4230769230769231,
+    "menit_alarm": 2528,
+    "n_pos": 182,
+    "n_neg": 13564
+   },
+   "events": {
+    "tp_kejadian": 2,
+    "fp_kejadian": 135,
+    "n_kejadian": 137
+   },
+   "far": {
+    "menit_berdata": 3621,
+    "menit_pos": 153,
+    "menit_neg": 3468,
+    "menit_alarm": 1260,
+    "menit_alarm_neg": 1178,
+    "rentang_menit": 6828.0,
+    "jam_operasi": 60.35,
+    "cakupan_menit": 0.5303,
+    "far24_kalender": 468.4673
+   },
+   "far24_kalender": 468.4673,
+   "far24_baris": null,
+   "far_per_1000_sampel": 180.699,
+   "garwood_atas_fp": 1058.8221,
+   "lead": {
+    "n_onset": 5,
+    "n_diperingatkan": 3,
+    "lead_median_min": 1.0,
+    "lead_min_min": 1,
+    "lead_maks_min": 16
+   },
+   "separuh": {
+    "awal": {
+     "precision": 0.0,
+     "recall": null,
+     "fp": 1090,
+     "n_pos": 0
+    },
+    "akhir": {
+     "precision": 0.05354659248956885,
+     "recall": 0.4230769230769231,
+     "fp": 1361,
+     "n_pos": 182
+    }
+   },
+   "h_terpilih": 30.0,
+   "ambang_conformal": 0.000533,
+   "cakupan": 0.5303,
+   "gate_A_baru": false
+  },
+  {
+   "fold": "USROP_A 0 N-NA_F-9_Ad.csv",
+   "model": "H5_stat_dan_rule",
+   "n": 13746,
+   "n_pos": 182,
+   "rows": {
+    "tp": 0,
+    "fp": 370,
+    "fn": 182,
+    "tn": 13194,
+    "precision": 0.0,
+    "recall": 0.0,
+    "menit_alarm": 370,
+    "n_pos": 182,
+    "n_neg": 13564
+   },
+   "events": {
+    "tp_kejadian": 0,
+    "fp_kejadian": 36,
+    "n_kejadian": 36
+   },
+   "far": {
+    "menit_berdata": 3621,
+    "menit_pos": 153,
+    "menit_neg": 3468,
+    "menit_alarm": 167,
+    "menit_alarm_neg": 165,
+    "rentang_menit": 6828.0,
+    "jam_operasi": 60.35,
+    "cakupan_menit": 0.5303,
+    "far24_kalender": 65.6172
+   },
+   "far24_kalender": 65.6172,
+   "far24_baris": null,
+   "far_per_1000_sampel": 27.278,
+   "garwood_atas_fp": 170.1133,
+   "lead": {
+    "n_onset": 5,
+    "n_diperingatkan": 0,
+    "lead_median_min": null,
+    "lead_min_min": null,
+    "lead_maks_min": null
+   },
+   "separuh": {
+    "awal": {
+     "precision": 0.0,
+     "recall": null,
+     "fp": 207,
+     "n_pos": 0
+    },
+    "akhir": {
+     "precision": 0.0,
+     "recall": 0.0,
+     "fp": 163,
+     "n_pos": 182
+    }
+   },
+   "h_terpilih": 30.0,
+   "ambang_conformal": 0.000533,
+   "cakupan": 0.5303,
+   "gate_A_baru": false
+  },
+  {
+   "fold": "USROP_A 0 N-NA_F-9_Ad.csv",
+   "model": "ml_fisik",
+   "n": 13746,
+   "n_pos": 182,
+   "rows": {
+    "tp": 182,
+    "fp": 880,
+    "fn": 0,
+    "tn": 12684,
+    "precision": 0.1713747645951036,
+    "recall": 1.0,
+    "menit_alarm": 1062,
+    "n_pos": 182,
+    "n_neg": 13564
+   },
+   "events": {
+    "tp_kejadian": 5,
+    "fp_kejadian": 7,
+    "n_kejadian": 12
+   },
+   "far": {
+    "menit_berdata": 3621,
+    "menit_pos": 153,
+    "menit_neg": 3468,
+    "menit_alarm": 972,
+    "menit_alarm_neg": 819,
+    "rentang_menit": 6828.0,
+    "jam_operasi": 60.35,
+    "cakupan_menit": 0.5303,
+    "far24_kalender": 325.7001
+   },
+   "far24_kalender": 325.7001,
+   "far24_baris": null,
+   "far_per_1000_sampel": 64.878,
+   "garwood_atas_fp": 390.3597,
+   "lead": {
+    "n_onset": 5,
+    "n_diperingatkan": 2,
+    "lead_median_min": 12.5,
+    "lead_min_min": 1,
+    "lead_maks_min": 24
+   },
+   "separuh": {
+    "awal": {
+     "precision": null,
+     "recall": null,
+     "fp": 0,
+     "n_pos": 0
+    },
+    "akhir": {
+     "precision": 0.1713747645951036,
+     "recall": 1.0,
+     "fp": 880,
+     "n_pos": 182
+    }
+   },
+   "h_terpilih": 30.0,
+   "ambang_conformal": 0.000533,
+   "cakupan": 0.5303,
+   "gate_A_baru": false
+  },
+  {
+   "fold": "USROP_A 0 N-NA_F-9_Ad.csv",
+   "model": "H6_ml_dan_stat",
+   "n": 13746,
+   "n_pos": 182,
+   "rows": {
+    "tp": 77,
+    "fp": 248,
+    "fn": 105,
+    "tn": 13316,
+    "precision": 0.23692307692307693,
+    "recall": 0.4230769230769231,
+    "menit_alarm": 325,
+    "n_pos": 182,
+    "n_neg": 13564
+   },
+   "events": {
+    "tp_kejadian": 3,
+    "fp_kejadian": 7,
+    "n_kejadian": 10
+   },
+   "far": {
+    "menit_berdata": 3621,
+    "menit_pos": 153,
+    "menit_neg": 3468,
+    "menit_alarm": 302,
+    "menit_alarm_neg": 227,
+    "rentang_menit": 6828.0,
+    "jam_operasi": 60.35,
+    "cakupan_menit": 0.5303,
+    "far24_kalender": 90.2734
+   },
+   "far24_kalender": 90.2734,
+   "far24_baris": null,
+   "far_per_1000_sampel": 18.284,
+   "garwood_atas_fp": 116.6216,
+   "lead": {
+    "n_onset": 5,
+    "n_diperingatkan": 2,
+    "lead_median_min": 12.5,
+    "lead_min_min": 1,
+    "lead_maks_min": 24
+   },
+   "separuh": {
+    "awal": {
+     "precision": null,
+     "recall": null,
+     "fp": 0,
+     "n_pos": 0
+    },
+    "akhir": {
+     "precision": 0.23692307692307693,
+     "recall": 0.4230769230769231,
+     "fp": 248,
+     "n_pos": 182
+    }
+   },
+   "h_terpilih": 30.0,
+   "ambang_conformal": 0.000533,
+   "cakupan": 0.5303,
+   "gate_A_baru": false
+  },
+  {
+   "fold": "USROP_A 0 N-NA_F-9_Ad.csv",
+   "model": "ml_dengan_MSE",
+   "n": 13746,
+   "n_pos": 182,
+   "rows": {
+    "tp": 182,
+    "fp": 6229,
+    "fn": 0,
+    "tn": 7335,
+    "precision": 0.02838870690999844,
+    "recall": 1.0,
+    "menit_alarm": 6411,
+    "n_pos": 182,
+    "n_neg": 13564
+   },
+   "events": {
+    "tp_kejadian": 1,
+    "fp_kejadian": 33,
+    "n_kejadian": 34
+   },
+   "far": {
+    "menit_berdata": 3621,
+    "menit_pos": 153,
+    "menit_neg": 3468,
+    "menit_alarm": 2533,
+    "menit_alarm_neg": 2380,
+    "rentang_menit": 6828.0,
+    "jam_operasi": 60.35,
+    "cakupan_menit": 0.5303,
+    "far24_kalender": 946.4789
+   },
+   "far24_kalender": 946.4789,
+   "far24_baris": null,
+   "far_per_1000_sampel": 459.23,
+   "garwood_atas_fp": 2651.4791,
+   "lead": {
+    "n_onset": 5,
+    "n_diperingatkan": 5,
+    "lead_median_min": 1.0,
+    "lead_min_min": 1,
+    "lead_maks_min": 1
+   },
+   "separuh": {
+    "awal": {
+     "precision": 0.0,
+     "recall": null,
+     "fp": 631,
+     "n_pos": 0
+    },
+    "akhir": {
+     "precision": 0.0314878892733564,
+     "recall": 1.0,
+     "fp": 5598,
+     "n_pos": 182
+    }
+   },
+   "h_terpilih": 30.0,
+   "ambang_conformal": 0.000533,
+   "cakupan": 0.5303,
+   "gate_A_baru": false
+  },
+  {
+   "fold": "USROP_A 1 N-S_F-7d.csv",
+   "model": "rule_label",
+   "n": 6389,
+   "n_pos": 0,
+   "rows": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 6389,
+    "precision": null,
+    "recall": null,
+    "menit_alarm": 0,
+    "n_pos": 0,
+    "n_neg": 6389
+   },
+   "events": {
+    "tp_kejadian": 0,
+    "fp_kejadian": 0,
+    "n_kejadian": 0
+   },
+   "far": {
+    "menit_berdata": 2464,
+    "menit_pos": 0,
+    "menit_neg": 2464,
+    "menit_alarm": 0,
+    "menit_alarm_neg": 0,
+    "rentang_menit": 18330.0,
+    "jam_operasi": 41.067,
+    "cakupan_menit": 0.1344,
+    "far24_kalender": 0.0
+   },
+   "far24_kalender": 0.0,
+   "far24_baris": null,
+   "far_per_1000_sampel": 0.0,
+   "garwood_atas_fp": 2.1558,
+   "lead": {
+    "n_onset": 0,
+    "n_diperingatkan": 0,
+    "lead_median_min": null,
+    "lead_min_min": null,
+    "lead_maks_min": null
+   },
+   "separuh": {
+    "awal": {
+     "precision": null,
+     "recall": null,
+     "fp": 0,
+     "n_pos": 0
+    },
+    "akhir": {
+     "precision": null,
+     "recall": null,
+     "fp": 0,
+     "n_pos": 0
+    }
+   },
+   "h_terpilih": 30.0,
+   "ambang_conformal": 0.009853,
+   "cakupan": 0.1344,
+   "gate_A_baru": false
+  },
+  {
+   "fold": "USROP_A 1 N-S_F-7d.csv",
+   "model": "rule_kanal",
+   "n": 6389,
+   "n_pos": 0,
+   "rows": {
+    "tp": 0,
+    "fp": 727,
+    "fn": 0,
+    "tn": 5662,
+    "precision": 0.0,
+    "recall": null,
+    "menit_alarm": 727,
+    "n_pos": 0,
+    "n_neg": 6389
+   },
+   "events": {
+    "tp_kejadian": 0,
+    "fp_kejadian": 14,
+    "n_kejadian": 14
+   },
+   "far": {
+    "menit_berdata": 2464,
+    "menit_pos": 0,
+    "menit_neg": 2464,
+    "menit_alarm": 414,
+    "menit_alarm_neg": 414,
+    "rentang_menit": 18330.0,
+    "jam_operasi": 41.067,
+    "cakupan_menit": 0.1344,
+    "far24_kalender": 241.9481
+   },
+   "far24_kalender": 241.9481,
+   "far24_baris": null,
+   "far_per_1000_sampel": 113.789,
+   "garwood_atas_fp": 456.9098,
+   "lead": {
+    "n_onset": 0,
+    "n_diperingatkan": 0,
+    "lead_median_min": null,
+    "lead_min_min": null,
+    "lead_maks_min": null
+   },
+   "separuh": {
+    "awal": {
+     "precision": 0.0,
+     "recall": null,
+     "fp": 164,
+     "n_pos": 0
+    },
+    "akhir": {
+     "precision": 0.0,
+     "recall": null,
+     "fp": 563,
+     "n_pos": 0
+    }
+   },
+   "h_terpilih": 30.0,
+   "ambang_conformal": 0.009853,
+   "cakupan": 0.1344,
+   "gate_A_baru": false
+  },
+  {
+   "fold": "USROP_A 1 N-S_F-7d.csv",
+   "model": "stat_cusum",
+   "n": 6389,
+   "n_pos": 0,
+   "rows": {
+    "tp": 0,
+    "fp": 1581,
+    "fn": 0,
+    "tn": 4808,
+    "precision": 0.0,
+    "recall": null,
+    "menit_alarm": 1581,
+    "n_pos": 0,
+    "n_neg": 6389
+   },
+   "events": {
+    "tp_kejadian": 0,
+    "fp_kejadian": 49,
+    "n_kejadian": 49
+   },
+   "far": {
+    "menit_berdata": 2464,
+    "menit_pos": 0,
+    "menit_neg": 2464,
+    "menit_alarm": 493,
+    "menit_alarm_neg": 493,
+    "rentang_menit": 18330.0,
+    "jam_operasi": 41.067,
+    "cakupan_menit": 0.1344,
+    "far24_kalender": 288.1169
+   },
+   "far24_kalender": 288.1169,
+   "far24_baris": null,
+   "far_per_1000_sampel": 247.457,
+   "garwood_atas_fp": 970.6553,
+   "lead": {
+    "n_onset": 0,
+    "n_diperingatkan": 0,
+    "lead_median_min": null,
+    "lead_min_min": null,
+    "lead_maks_min": null
+   },
+   "separuh": {
+    "awal": {
+     "precision": 0.0,
+     "recall": null,
+     "fp": 841,
+     "n_pos": 0
+    },
+    "akhir": {
+     "precision": 0.0,
+     "recall": null,
+     "fp": 740,
+     "n_pos": 0
+    }
+   },
+   "h_terpilih": 30.0,
+   "ambang_conformal": 0.009853,
+   "cakupan": 0.1344,
+   "gate_A_baru": false
+  },
+  {
+   "fold": "USROP_A 1 N-S_F-7d.csv",
+   "model": "H5_stat_dan_rule",
+   "n": 6389,
+   "n_pos": 0,
+   "rows": {
+    "tp": 0,
+    "fp": 463,
+    "fn": 0,
+    "tn": 5926,
+    "precision": 0.0,
+    "recall": null,
+    "menit_alarm": 463,
+    "n_pos": 0,
+    "n_neg": 6389
+   },
+   "events": {
+    "tp_kejadian": 0,
+    "fp_kejadian": 16,
+    "n_kejadian": 16
+   },
+   "far": {
+    "menit_berdata": 2464,
+    "menit_pos": 0,
+    "menit_neg": 2464,
+    "menit_alarm": 193,
+    "menit_alarm_neg": 193,
+    "rentang_menit": 18330.0,
+    "jam_operasi": 41.067,
+    "cakupan_menit": 0.1344,
+    "far24_kalender": 112.7922
+   },
+   "far24_kalender": 112.7922,
+   "far24_baris": null,
+   "far_per_1000_sampel": 72.468,
+   "garwood_atas_fp": 296.391,
+   "lead": {
+    "n_onset": 0,
+    "n_diperingatkan": 0,
+    "lead_median_min": null,
+    "lead_min_min": null,
+    "lead_maks_min": null
+   },
+   "separuh": {
+    "awal": {
+     "precision": 0.0,
+     "recall": null,
+     "fp": 144,
+     "n_pos": 0
+    },
+    "akhir": {
+     "precision": 0.0,
+     "recall": null,
+     "fp": 319,
+     "n_pos": 0
+    }
+   },
+   "h_terpilih": 30.0,
+   "ambang_conformal": 0.009853,
+   "cakupan": 0.1344,
+   "gate_A_baru": false
+  },
+  {
+   "fold": "USROP_A 1 N-S_F-7d.csv",
+   "model": "ml_fisik",
+   "n": 6389,
+   "n_pos": 0,
+   "rows": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 6389,
+    "precision": null,
+    "recall": null,
+    "menit_alarm": 0,
+    "n_pos": 0,
+    "n_neg": 6389
+   },
+   "events": {
+    "tp_kejadian": 0,
+    "fp_kejadian": 0,
+    "n_kejadian": 0
+   },
+   "far": {
+    "menit_berdata": 2464,
+    "menit_pos": 0,
+    "menit_neg": 2464,
+    "menit_alarm": 0,
+    "menit_alarm_neg": 0,
+    "rentang_menit": 18330.0,
+    "jam_operasi": 41.067,
+    "cakupan_menit": 0.1344,
+    "far24_kalender": 0.0
+   },
+   "far24_kalender": 0.0,
+   "far24_baris": null,
+   "far_per_1000_sampel": 0.0,
+   "garwood_atas_fp": 2.1558,
+   "lead": {
+    "n_onset": 0,
+    "n_diperingatkan": 0,
+    "lead_median_min": null,
+    "lead_min_min": null,
+    "lead_maks_min": null
+   },
+   "separuh": {
+    "awal": {
+     "precision": null,
+     "recall": null,
+     "fp": 0,
+     "n_pos": 0
+    },
+    "akhir": {
+     "precision": null,
+     "recall": null,
+     "fp": 0,
+     "n_pos": 0
+    }
+   },
+   "h_terpilih": 30.0,
+   "ambang_conformal": 0.009853,
+   "cakupan": 0.1344,
+   "gate_A_baru": false
+  },
+  {
+   "fold": "USROP_A 1 N-S_F-7d.csv",
+   "model": "H6_ml_dan_stat",
+   "n": 6389,
+   "n_pos": 0,
+   "rows": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 6389,
+    "precision": null,
+    "recall": null,
+    "menit_alarm": 0,
+    "n_pos": 0,
+    "n_neg": 6389
+   },
+   "events": {
+    "tp_kejadian": 0,
+    "fp_kejadian": 0,
+    "n_kejadian": 0
+   },
+   "far": {
+    "menit_berdata": 2464,
+    "menit_pos": 0,
+    "menit_neg": 2464,
+    "menit_alarm": 0,
+    "menit_alarm_neg": 0,
+    "rentang_menit": 18330.0,
+    "jam_operasi": 41.067,
+    "cakupan_menit": 0.1344,
+    "far24_kalender": 0.0
+   },
+   "far24_kalender": 0.0,
+   "far24_baris": null,
+   "far_per_1000_sampel": 0.0,
+   "garwood_atas_fp": 2.1558,
+   "lead": {
+    "n_onset": 0,
+    "n_diperingatkan": 0,
+    "lead_median_min": null,
+    "lead_min_min": null,
+    "lead_maks_min": null
+   },
+   "separuh": {
+    "awal": {
+     "precision": null,
+     "recall": null,
+     "fp": 0,
+     "n_pos": 0
+    },
+    "akhir": {
+     "precision": null,
+     "recall": null,
+     "fp": 0,
+     "n_pos": 0
+    }
+   },
+   "h_terpilih": 30.0,
+   "ambang_conformal": 0.009853,
+   "cakupan": 0.1344,
+   "gate_A_baru": false
+  },
+  {
+   "fold": "USROP_A 1 N-S_F-7d.csv",
+   "model": "ml_dengan_MSE",
+   "n": 6389,
+   "n_pos": 0,
+   "rows": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 6389,
+    "precision": null,
+    "recall": null,
+    "menit_alarm": 0,
+    "n_pos": 0,
+    "n_neg": 6389
+   },
+   "events": {
+    "tp_kejadian": 0,
+    "fp_kejadian": 0,
+    "n_kejadian": 0
+   },
+   "far": {
+    "menit_berdata": 2464,
+    "menit_pos": 0,
+    "menit_neg": 2464,
+    "menit_alarm": 0,
+    "menit_alarm_neg": 0,
+    "rentang_menit": 18330.0,
+    "jam_operasi": 41.067,
+    "cakupan_menit": 0.1344,
+    "far24_kalender": 0.0
+   },
+   "far24_kalender": 0.0,
+   "far24_baris": null,
+   "far_per_1000_sampel": 0.0,
+   "garwood_atas_fp": 2.1558,
+   "lead": {
+    "n_onset": 0,
+    "n_diperingatkan": 0,
+    "lead_median_min": null,
+    "lead_min_min": null,
+    "lead_maks_min": null
+   },
+   "separuh": {
+    "awal": {
+     "precision": null,
+     "recall": null,
+     "fp": 0,
+     "n_pos": 0
+    },
+    "akhir": {
+     "precision": null,
+     "recall": null,
+     "fp": 0,
+     "n_pos": 0
+    }
+   },
+   "h_terpilih": 30.0,
+   "ambang_conformal": 0.009853,
+   "cakupan": 0.1344,
+   "gate_A_baru": false
+  },
+  {
+   "fold": "USROP_A 2 N-SH_F-14d.csv",
+   "model": "rule_label",
+   "n": 47645,
+   "n_pos": 4918,
+   "rows": {
+    "tp": 4918,
+    "fp": 0,
+    "fn": 0,
+    "tn": 42727,
+    "precision": 1.0,
+    "recall": 1.0,
+    "menit_alarm": 4918,
+    "n_pos": 4918,
+    "n_neg": 42727
+   },
+   "events": {
+    "tp_kejadian": 37,
+    "fp_kejadian": 0,
+    "n_kejadian": 37
+   },
+   "far": {
+    "menit_berdata": 18047,
+    "menit_pos": 1861,
+    "menit_neg": 16186,
+    "menit_alarm": 1861,
+    "menit_alarm_neg": 0,
+    "rentang_menit": 272100.0,
+    "jam_operasi": 300.783,
+    "cakupan_menit": 0.0663,
+    "far24_kalender": 0.0
+   },
+   "far24_kalender": 0.0,
+   "far24_baris": null,
+   "far_per_1000_sampel": 0.0,
+   "garwood_atas_fp": 0.3282,
+   "lead": {
+    "n_onset": 37,
+    "n_diperingatkan": 6,
+    "lead_median_min": 21.5,
+    "lead_min_min": 6,
+    "lead_maks_min": 52
+   },
+   "separuh": {
+    "awal": {
+     "precision": null,
+     "recall": null,
+     "fp": 0,
+     "n_pos": 0
+    },
+    "akhir": {
+     "precision": 1.0,
+     "recall": 1.0,
+     "fp": 0,
+     "n_pos": 4918
+    }
+   },
+   "h_terpilih": 30.0,
+   "ambang_conformal": 0.010506,
+   "cakupan": 0.0663,
+   "gate_A_baru": false
+  },
+  {
+   "fold": "USROP_A 2 N-SH_F-14d.csv",
+   "model": "rule_kanal",
+   "n": 47645,
+   "n_pos": 4918,
+   "rows": {
+    "tp": 1053,
+    "fp": 6004,
+    "fn": 3865,
+    "tn": 36723,
+    "precision": 0.14921354683293184,
+    "recall": 0.21411142740951605,
+    "menit_alarm": 7057,
+    "n_pos": 4918,
+    "n_neg": 42727
+   },
+   "events": {
+    "tp_kejadian": 32,
+    "fp_kejadian": 138,
+    "n_kejadian": 170
+   },
+   "far": {
+    "menit_berdata": 18047,
+    "menit_pos": 1861,
+    "menit_neg": 16186,
+    "menit_alarm": 3689,
+    "menit_alarm_neg": 3136,
+    "rentang_menit": 272100.0,
+    "jam_operasi": 300.783,
+    "cakupan_menit": 0.0663,
+    "far24_kalender": 250.2266
+   },
+   "far24_kalender": 250.2266,
+   "far24_baris": null,
+   "far_per_1000_sampel": 140.52,
+   "garwood_atas_fp": 547.8358,
+   "lead": {
+    "n_onset": 37,
+    "n_diperingatkan": 15,
+    "lead_median_min": 1.0,
+    "lead_min_min": 1,
+    "lead_maks_min": 33
+   },
+   "separuh": {
+    "awal": {
+     "precision": 0.0,
+     "recall": null,
+     "fp": 3741,
+     "n_pos": 0
+    },
+    "akhir": {
+     "precision": 0.3175512665862485,
+     "recall": 0.21411142740951605,
+     "fp": 2263,
+     "n_pos": 4918
+    }
+   },
+   "h_terpilih": 30.0,
+   "ambang_conformal": 0.010506,
+   "cakupan": 0.0663,
+   "gate_A_baru": false
+  },
+  {
+   "fold": "USROP_A 2 N-SH_F-14d.csv",
+   "model": "stat_cusum",
+   "n": 47645,
+   "n_pos": 4918,
+   "rows": {
+    "tp": 1180,
+    "fp": 9150,
+    "fn": 3738,
+    "tn": 33577,
+    "precision": 0.11423039690222653,
+    "recall": 0.23993493289955267,
+    "menit_alarm": 10330,
+    "n_pos": 4918,
+    "n_neg": 42727
+   },
+   "events": {
+    "tp_kejadian": 50,
+    "fp_kejadian": 431,
+    "n_kejadian": 481
+   },
+   "far": {
+    "menit_berdata": 18047,
+    "menit_pos": 1861,
+    "menit_neg": 16186,
+    "menit_alarm": 6064,
+    "menit_alarm_neg": 5433,
+    "rentang_menit": 272100.0,
+    "jam_operasi": 300.783,
+    "cakupan_menit": 0.0663,
+    "far24_kalender": 433.5081
+   },
+   "far24_kalender": 433.5081,
+   "far24_baris": null,
+   "far_per_1000_sampel": 214.15,
+   "garwood_atas_fp": 830.8902,
+   "lead": {
+    "n_onset": 37,
+    "n_diperingatkan": 16,
+    "lead_median_min": 4.0,
+    "lead_min_min": 1,
+    "lead_maks_min": 36
+   },
+   "separuh": {
+    "awal": {
+     "precision": 0.0,
+     "recall": null,
+     "fp": 5759,
+     "n_pos": 0
+    },
+    "akhir": {
+     "precision": 0.2581492014876395,
+     "recall": 0.23993493289955267,
+     "fp": 3391,
+     "n_pos": 4918
+    }
+   },
+   "h_terpilih": 30.0,
+   "ambang_conformal": 0.010506,
+   "cakupan": 0.0663,
+   "gate_A_baru": false
+  },
+  {
+   "fold": "USROP_A 2 N-SH_F-14d.csv",
+   "model": "H5_stat_dan_rule",
+   "n": 47645,
+   "n_pos": 4918,
+   "rows": {
+    "tp": 352,
+    "fp": 1652,
+    "fn": 4566,
+    "tn": 41075,
+    "precision": 0.17564870259481039,
+    "recall": 0.07157381049206994,
+    "menit_alarm": 2004,
+    "n_pos": 4918,
+    "n_neg": 42727
+   },
+   "events": {
+    "tp_kejadian": 15,
+    "fp_kejadian": 116,
+    "n_kejadian": 131
+   },
+   "far": {
+    "menit_berdata": 18047,
+    "menit_pos": 1861,
+    "menit_neg": 16186,
+    "menit_alarm": 1082,
+    "menit_alarm_neg": 903,
+    "rentang_menit": 272100.0,
+    "jam_operasi": 300.783,
+    "cakupan_menit": 0.0663,
+    "far24_kalender": 72.0519
+   },
+   "far24_kalender": 72.0519,
+   "far24_baris": null,
+   "far_per_1000_sampel": 38.664,
+   "garwood_atas_fp": 154.2337,
+   "lead": {
+    "n_onset": 37,
+    "n_diperingatkan": 4,
+    "lead_median_min": 13.5,
+    "lead_min_min": 1,
+    "lead_maks_min": 33
+   },
+   "separuh": {
+    "awal": {
+     "precision": 0.0,
+     "recall": null,
+     "fp": 1064,
+     "n_pos": 0
+    },
+    "akhir": {
+     "precision": 0.37446808510638296,
+     "recall": 0.07157381049206994,
+     "fp": 588,
+     "n_pos": 4918
+    }
+   },
+   "h_terpilih": 30.0,
+   "ambang_conformal": 0.010506,
+   "cakupan": 0.0663,
+   "gate_A_baru": false
+  },
+  {
+   "fold": "USROP_A 2 N-SH_F-14d.csv",
+   "model": "ml_fisik",
+   "n": 47645,
+   "n_pos": 4918,
+   "rows": {
+    "tp": 4918,
+    "fp": 7186,
+    "fn": 0,
+    "tn": 35541,
+    "precision": 0.40631196298744215,
+    "recall": 1.0,
+    "menit_alarm": 12104,
+    "n_pos": 4918,
+    "n_neg": 42727
+   },
+   "events": {
+    "tp_kejadian": 21,
+    "fp_kejadian": 35,
+    "n_kejadian": 56
+   },
+   "far": {
+    "menit_berdata": 18047,
+    "menit_pos": 1861,
+    "menit_neg": 16186,
+    "menit_alarm": 3245,
+    "menit_alarm_neg": 1384,
+    "rentang_menit": 272100.0,
+    "jam_operasi": 300.783,
+    "cakupan_menit": 0.0663,
+    "far24_kalender": 110.4317
+   },
+   "far24_kalender": 110.4317,
+   "far24_baris": null,
+   "far_per_1000_sampel": 168.184,
+   "garwood_atas_fp": 654.2635,
+   "lead": {
+    "n_onset": 37,
+    "n_diperingatkan": 32,
+    "lead_median_min": 1.0,
+    "lead_min_min": 1,
+    "lead_maks_min": 1
+   },
+   "separuh": {
+    "awal": {
+     "precision": 0.0,
+     "recall": null,
+     "fp": 355,
+     "n_pos": 0
+    },
+    "akhir": {
+     "precision": 0.4185888160694527,
+     "recall": 1.0,
+     "fp": 6831,
+     "n_pos": 4918
+    }
+   },
+   "h_terpilih": 30.0,
+   "ambang_conformal": 0.010506,
+   "cakupan": 0.0663,
+   "gate_A_baru": false
+  },
+  {
+   "fold": "USROP_A 2 N-SH_F-14d.csv",
+   "model": "H6_ml_dan_stat",
+   "n": 47645,
+   "n_pos": 4918,
+   "rows": {
+    "tp": 1180,
+    "fp": 1120,
+    "fn": 3738,
+    "tn": 41607,
+    "precision": 0.5130434782608696,
+    "recall": 0.23993493289955267,
+    "menit_alarm": 2300,
+    "n_pos": 4918,
+    "n_neg": 42727
+   },
+   "events": {
+    "tp_kejadian": 50,
+    "fp_kejadian": 62,
+    "n_kejadian": 112
+   },
+   "far": {
+    "menit_berdata": 18047,
+    "menit_pos": 1861,
+    "menit_neg": 16186,
+    "menit_alarm": 865,
+    "menit_alarm_neg": 268,
+    "rentang_menit": 272100.0,
+    "jam_operasi": 300.783,
+    "cakupan_menit": 0.0663,
+    "far24_kalender": 21.3842
+   },
+   "far24_kalender": 21.3842,
+   "far24_baris": null,
+   "far_per_1000_sampel": 26.213,
+   "garwood_atas_fp": 105.6526,
+   "lead": {
+    "n_onset": 37,
+    "n_diperingatkan": 13,
+    "lead_median_min": 3.0,
+    "lead_min_min": 1,
+    "lead_maks_min": 36
+   },
+   "separuh": {
+    "awal": {
+     "precision": 0.0,
+     "recall": null,
+     "fp": 31,
+     "n_pos": 0
+    },
+    "akhir": {
+     "precision": 0.5200528867342442,
+     "recall": 0.23993493289955267,
+     "fp": 1089,
+     "n_pos": 4918
+    }
+   },
+   "h_terpilih": 30.0,
+   "ambang_conformal": 0.010506,
+   "cakupan": 0.0663,
+   "gate_A_baru": false
+  },
+  {
+   "fold": "USROP_A 2 N-SH_F-14d.csv",
+   "model": "ml_dengan_MSE",
+   "n": 47645,
+   "n_pos": 4918,
+   "rows": {
+    "tp": 4918,
+    "fp": 3741,
+    "fn": 0,
+    "tn": 38986,
+    "precision": 0.5679639681256496,
+    "recall": 1.0,
+    "menit_alarm": 8659,
+    "n_pos": 4918,
+    "n_neg": 42727
+   },
+   "events": {
+    "tp_kejadian": 28,
+    "fp_kejadian": 16,
+    "n_kejadian": 44
+   },
+   "far": {
+    "menit_berdata": 18047,
+    "menit_pos": 1861,
+    "menit_neg": 16186,
+    "menit_alarm": 2433,
+    "menit_alarm_neg": 572,
+    "rentang_menit": 272100.0,
+    "jam_operasi": 300.783,
+    "cakupan_menit": 0.0663,
+    "far24_kalender": 45.6408
+   },
+   "far24_kalender": 45.6408,
+   "far24_baris": null,
+   "far_per_1000_sampel": 87.556,
+   "garwood_atas_fp": 343.6605,
+   "lead": {
+    "n_onset": 37,
+    "n_diperingatkan": 25,
+    "lead_median_min": 1.0,
+    "lead_min_min": 1,
+    "lead_maks_min": 32
+   },
+   "separuh": {
+    "awal": {
+     "precision": 0.0,
+     "recall": null,
+     "fp": 360,
+     "n_pos": 0
+    },
+    "akhir": {
+     "precision": 0.5926015182552115,
+     "recall": 1.0,
+     "fp": 3381,
+     "n_pos": 4918
+    }
+   },
+   "h_terpilih": 30.0,
+   "ambang_conformal": 0.010506,
+   "cakupan": 0.0663,
+   "gate_A_baru": false
+  },
+  {
+   "fold": "USROP_A 3 N-SH-F-15d.csv",
+   "model": "rule_label",
+   "n": 53041,
+   "n_pos": 7622,
+   "rows": {
+    "tp": 7622,
+    "fp": 0,
+    "fn": 0,
+    "tn": 45419,
+    "precision": 1.0,
+    "recall": 1.0,
+    "menit_alarm": 7622,
+    "n_pos": 7622,
+    "n_neg": 45419
+   },
+   "events": {
+    "tp_kejadian": 309,
+    "fp_kejadian": 0,
+    "n_kejadian": 309
+   },
+   "far": {
+    "menit_berdata": 18411,
+    "menit_pos": 2624,
+    "menit_neg": 15787,
+    "menit_alarm": 2624,
+    "menit_alarm_neg": 0,
+    "rentang_menit": 41296.0,
+    "jam_operasi": 306.85,
+    "cakupan_menit": 0.4458,
+    "far24_kalender": 0.0
+   },
+   "far24_kalender": 0.0,
+   "far24_baris": null,
+   "far_per_1000_sampel": 0.0,
+   "garwood_atas_fp": 0.3365,
+   "lead": {
+    "n_onset": 309,
+    "n_diperingatkan": 253,
+    "lead_median_min": 10.0,
+    "lead_min_min": 2,
+    "lead_maks_min": 57
+   },
+   "separuh": {
+    "awal": {
+     "precision": 1.0,
+     "recall": 1.0,
+     "fp": 0,
+     "n_pos": 755
+    },
+    "akhir": {
+     "precision": 1.0,
+     "recall": 1.0,
+     "fp": 0,
+     "n_pos": 6867
+    }
+   },
+   "h_terpilih": 30.0,
+   "ambang_conformal": 0.000958,
+   "cakupan": 0.4458,
+   "gate_A_baru": false
+  },
+  {
+   "fold": "USROP_A 3 N-SH-F-15d.csv",
+   "model": "rule_kanal",
+   "n": 53041,
+   "n_pos": 7622,
+   "rows": {
+    "tp": 864,
+    "fp": 3814,
+    "fn": 6758,
+    "tn": 41605,
+    "precision": 0.18469431380932022,
+    "recall": 0.11335607452112306,
+    "menit_alarm": 4678,
+    "n_pos": 7622,
+    "n_neg": 45419
+   },
+   "events": {
+    "tp_kejadian": 74,
+    "fp_kejadian": 357,
+    "n_kejadian": 431
+   },
+   "far": {
+    "menit_berdata": 18411,
+    "menit_pos": 2624,
+    "menit_neg": 15787,
+    "menit_alarm": 2622,
+    "menit_alarm_neg": 2191,
+    "rentang_menit": 41296.0,
+    "jam_operasi": 306.85,
+    "cakupan_menit": 0.4458,
+    "far24_kalender": 171.3671
+   },
+   "far24_kalender": 171.3671,
+   "far24_baris": null,
+   "far_per_1000_sampel": 83.974,
+   "garwood_atas_fp": 359.1109,
+   "lead": {
+    "n_onset": 309,
+    "n_diperingatkan": 106,
+    "lead_median_min": 20.0,
+    "lead_min_min": 1,
+    "lead_maks_min": 60
+   },
+   "separuh": {
+    "awal": {
+     "precision": 0.015445402298850575,
+     "recall": 0.05695364238410596,
+     "fp": 2741,
+     "n_pos": 755
+    },
+    "akhir": {
+     "precision": 0.4334741288278775,
+     "recall": 0.11955730304354158,
+     "fp": 1073,
+     "n_pos": 6867
+    }
+   },
+   "h_terpilih": 30.0,
+   "ambang_conformal": 0.000958,
+   "cakupan": 0.4458,
+   "gate_A_baru": false
+  },
+  {
+   "fold": "USROP_A 3 N-SH-F-15d.csv",
+   "model": "stat_cusum",
+   "n": 53041,
+   "n_pos": 7622,
+   "rows": {
+    "tp": 1377,
+    "fp": 8471,
+    "fn": 6245,
+    "tn": 36948,
+    "precision": 0.13982534524776605,
+    "recall": 0.18066124376803988,
+    "menit_alarm": 9848,
+    "n_pos": 7622,
+    "n_neg": 45419
+   },
+   "events": {
+    "tp_kejadian": 78,
+    "fp_kejadian": 339,
+    "n_kejadian": 417
+   },
+   "far": {
+    "menit_berdata": 18411,
+    "menit_pos": 2624,
+    "menit_neg": 15787,
+    "menit_alarm": 5341,
+    "menit_alarm_neg": 4660,
+    "rentang_menit": 41296.0,
+    "jam_operasi": 306.85,
+    "cakupan_menit": 0.4458,
+    "far24_kalender": 364.4778
+   },
+   "far24_kalender": 364.4778,
+   "far24_baris": null,
+   "far_per_1000_sampel": 186.508,
+   "garwood_atas_fp": 789.3089,
+   "lead": {
+    "n_onset": 309,
+    "n_diperingatkan": 113,
+    "lead_median_min": 14.0,
+    "lead_min_min": 1,
+    "lead_maks_min": 60
+   },
+   "separuh": {
+    "awal": {
+     "precision": 0.03988259668508287,
+     "recall": 0.30596026490066225,
+     "fp": 5561,
+     "n_pos": 755
+    },
+    "akhir": {
+     "precision": 0.28254437869822485,
+     "recall": 0.16688510266491918,
+     "fp": 2910,
+     "n_pos": 6867
+    }
+   },
+   "h_terpilih": 30.0,
+   "ambang_conformal": 0.000958,
+   "cakupan": 0.4458,
+   "gate_A_baru": false
+  },
+  {
+   "fold": "USROP_A 3 N-SH-F-15d.csv",
+   "model": "H5_stat_dan_rule",
+   "n": 53041,
+   "n_pos": 7622,
+   "rows": {
+    "tp": 137,
+    "fp": 1049,
+    "fn": 7485,
+    "tn": 44370,
+    "precision": 0.11551433389544688,
+    "recall": 0.017974284964576228,
+    "menit_alarm": 1186,
+    "n_pos": 7622,
+    "n_neg": 45419
+   },
+   "events": {
+    "tp_kejadian": 20,
+    "fp_kejadian": 89,
+    "n_kejadian": 109
+   },
+   "far": {
+    "menit_berdata": 18411,
+    "menit_pos": 2624,
+    "menit_neg": 15787,
+    "menit_alarm": 823,
+    "menit_alarm_neg": 761,
+    "rentang_menit": 41296.0,
+    "jam_operasi": 306.85,
+    "cakupan_menit": 0.4458,
+    "far24_kalender": 59.5209
+   },
+   "far24_kalender": 59.5209,
+   "far24_baris": null,
+   "far_per_1000_sampel": 23.096,
+   "garwood_atas_fp": 101.6539,
+   "lead": {
+    "n_onset": 309,
+    "n_diperingatkan": 15,
+    "lead_median_min": 17.0,
+    "lead_min_min": 1,
+    "lead_maks_min": 57
+   },
+   "separuh": {
+    "awal": {
+     "precision": 0.0,
+     "recall": 0.0,
+     "fp": 898,
+     "n_pos": 755
+    },
+    "akhir": {
+     "precision": 0.4756944444444444,
+     "recall": 0.019950487840396096,
+     "fp": 151,
+     "n_pos": 6867
+    }
+   },
+   "h_terpilih": 30.0,
+   "ambang_conformal": 0.000958,
+   "cakupan": 0.4458,
+   "gate_A_baru": false
+  },
+  {
+   "fold": "USROP_A 3 N-SH-F-15d.csv",
+   "model": "ml_fisik",
+   "n": 53041,
+   "n_pos": 7622,
+   "rows": {
+    "tp": 7503,
+    "fp": 4047,
+    "fn": 119,
+    "tn": 41372,
+    "precision": 0.6496103896103896,
+    "recall": 0.9843872999212805,
+    "menit_alarm": 11550,
+    "n_pos": 7622,
+    "n_neg": 45419
+   },
+   "events": {
+    "tp_kejadian": 163,
+    "fp_kejadian": 128,
+    "n_kejadian": 291
+   },
+   "far": {
+    "menit_berdata": 18411,
+    "menit_pos": 2624,
+    "menit_neg": 15787,
+    "menit_alarm": 4104,
+    "menit_alarm_neg": 1533,
+    "rentang_menit": 41296.0,
+    "jam_operasi": 306.85,
+    "cakupan_menit": 0.4458,
+    "far24_kalender": 119.9022
+   },
+   "far24_kalender": 119.9022,
+   "far24_baris": null,
+   "far_per_1000_sampel": 89.104,
+   "garwood_atas_fp": 380.6961,
+   "lead": {
+    "n_onset": 309,
+    "n_diperingatkan": 272,
+    "lead_median_min": 1.0,
+    "lead_min_min": 1,
+    "lead_maks_min": 60
+   },
+   "separuh": {
+    "awal": {
+     "precision": 0.30591572123176664,
+     "recall": 1.0,
+     "fp": 1713,
+     "n_pos": 755
+    },
+    "akhir": {
+     "precision": 0.7430081479850253,
+     "recall": 0.9826707441386341,
+     "fp": 2334,
+     "n_pos": 6867
+    }
+   },
+   "h_terpilih": 30.0,
+   "ambang_conformal": 0.000958,
+   "cakupan": 0.4458,
+   "gate_A_baru": false
+  },
+  {
+   "fold": "USROP_A 3 N-SH-F-15d.csv",
+   "model": "H6_ml_dan_stat",
+   "n": 53041,
+   "n_pos": 7622,
+   "rows": {
+    "tp": 1360,
+    "fp": 858,
+    "fn": 6262,
+    "tn": 44561,
+    "precision": 0.6131650135256989,
+    "recall": 0.17843085804250852,
+    "menit_alarm": 2218,
+    "n_pos": 7622,
+    "n_neg": 45419
+   },
+   "events": {
+    "tp_kejadian": 81,
+    "fp_kejadian": 40,
+    "n_kejadian": 121
+   },
+   "far": {
+    "menit_berdata": 18411,
+    "menit_pos": 2624,
+    "menit_neg": 15787,
+    "menit_alarm": 785,
+    "menit_alarm_neg": 281,
+    "rentang_menit": 41296.0,
+    "jam_operasi": 306.85,
+    "cakupan_menit": 0.4458,
+    "far24_kalender": 21.9782
+   },
+   "far24_kalender": 21.9782,
+   "far24_baris": null,
+   "far_per_1000_sampel": 18.891,
+   "garwood_atas_fp": 83.6786,
+   "lead": {
+    "n_onset": 309,
+    "n_diperingatkan": 82,
+    "lead_median_min": 14.0,
+    "lead_min_min": 1,
+    "lead_maks_min": 60
+   },
+   "separuh": {
+    "awal": {
+     "precision": 0.26521239954075776,
+     "recall": 0.30596026490066225,
+     "fp": 640,
+     "n_pos": 755
+    },
+    "akhir": {
+     "precision": 0.838158871566444,
+     "recall": 0.16440949468472404,
+     "fp": 218,
+     "n_pos": 6867
+    }
+   },
+   "h_terpilih": 30.0,
+   "ambang_conformal": 0.000958,
+   "cakupan": 0.4458,
+   "gate_A_baru": false
+  },
+  {
+   "fold": "USROP_A 3 N-SH-F-15d.csv",
+   "model": "ml_dengan_MSE",
+   "n": 53041,
+   "n_pos": 7622,
+   "rows": {
+    "tp": 7622,
+    "fp": 1349,
+    "fn": 0,
+    "tn": 44070,
+    "precision": 0.849626574517891,
+    "recall": 1.0,
+    "menit_alarm": 8971,
+    "n_pos": 7622,
+    "n_neg": 45419
+   },
+   "events": {
+    "tp_kejadian": 263,
+    "fp_kejadian": 65,
+    "n_kejadian": 328
+   },
+   "far": {
+    "menit_berdata": 18411,
+    "menit_pos": 2624,
+    "menit_neg": 15787,
+    "menit_alarm": 3151,
+    "menit_alarm_neg": 527,
+    "rentang_menit": 41296.0,
+    "jam_operasi": 306.85,
+    "cakupan_menit": 0.4458,
+    "far24_kalender": 41.2188
+   },
+   "far24_kalender": 41.2188,
+   "far24_baris": null,
+   "far_per_1000_sampel": 29.701,
+   "garwood_atas_fp": 129.7939,
+   "lead": {
+    "n_onset": 309,
+    "n_diperingatkan": 264,
+    "lead_median_min": 6.0,
+    "lead_min_min": 1,
+    "lead_maks_min": 57
+   },
+   "separuh": {
+    "awal": {
+     "precision": 0.58984375,
+     "recall": 1.0,
+     "fp": 525,
+     "n_pos": 755
+    },
+    "akhir": {
+     "precision": 0.8928617865037056,
+     "recall": 1.0,
+     "fp": 824,
+     "n_pos": 6867
+    }
+   },
+   "h_terpilih": 30.0,
+   "ambang_conformal": 0.000958,
+   "cakupan": 0.4458,
+   "gate_A_baru": false
+  },
+  {
+   "fold": "USROP_A 4 N-SH_F-15Sd.csv",
+   "model": "rule_label",
+   "n": 51708,
+   "n_pos": 28051,
+   "rows": {
+    "tp": 28051,
+    "fp": 0,
+    "fn": 0,
+    "tn": 23657,
+    "precision": 1.0,
+    "recall": 1.0,
+    "menit_alarm": 28051,
+    "n_pos": 28051,
+    "n_neg": 23657
+   },
+   "events": {
+    "tp_kejadian": 97,
+    "fp_kejadian": 0,
+    "n_kejadian": 97
+   },
+   "far": {
+    "menit_berdata": 21360,
+    "menit_pos": 9684,
+    "menit_neg": 11676,
+    "menit_alarm": 9684,
+    "menit_alarm_neg": 0,
+    "rentang_menit": 92310.0,
+    "jam_operasi": 356.0,
+    "cakupan_menit": 0.2314,
+    "far24_kalender": 0.0
+   },
+   "far24_kalender": 0.0,
+   "far24_baris": null,
+   "far_per_1000_sampel": 0.0,
+   "garwood_atas_fp": 0.4549,
+   "lead": {
+    "n_onset": 97,
+    "n_diperingatkan": 65,
+    "lead_median_min": 7.0,
+    "lead_min_min": 2,
+    "lead_maks_min": 59
+   },
+   "separuh": {
+    "awal": {
+     "precision": 1.0,
+     "recall": 1.0,
+     "fp": 0,
+     "n_pos": 6006
+    },
+    "akhir": {
+     "precision": 1.0,
+     "recall": 1.0,
+     "fp": 0,
+     "n_pos": 22045
+    }
+   },
+   "h_terpilih": 30.0,
+   "ambang_conformal": 0.001499,
+   "cakupan": 0.2314,
+   "gate_A_baru": false
+  },
+  {
+   "fold": "USROP_A 4 N-SH_F-15Sd.csv",
+   "model": "rule_kanal",
+   "n": 51708,
+   "n_pos": 28051,
+   "rows": {
+    "tp": 2320,
+    "fp": 2036,
+    "fn": 25731,
+    "tn": 21621,
+    "precision": 0.5325987144168962,
+    "recall": 0.08270649887704538,
+    "menit_alarm": 4356,
+    "n_pos": 28051,
+    "n_neg": 23657
+   },
+   "events": {
+    "tp_kejadian": 298,
+    "fp_kejadian": 131,
+    "n_kejadian": 429
+   },
+   "far": {
+    "menit_berdata": 21360,
+    "menit_pos": 9684,
+    "menit_neg": 11676,
+    "menit_alarm": 2415,
+    "menit_alarm_neg": 1102,
+    "rentang_menit": 92310.0,
+    "jam_operasi": 356.0,
+    "cakupan_menit": 0.2314,
+    "far24_kalender": 74.2921
+   },
+   "far24_kalender": 74.2921,
+   "far24_baris": null,
+   "far_per_1000_sampel": 86.063,
+   "garwood_atas_fp": 262.249,
+   "lead": {
+    "n_onset": 97,
+    "n_diperingatkan": 47,
+    "lead_median_min": 7.0,
+    "lead_min_min": 1,
+    "lead_maks_min": 59
+   },
+   "separuh": {
+    "awal": {
+     "precision": 0.2888680131517144,
+     "recall": 0.1023976023976024,
+     "fp": 1514,
+     "n_pos": 6006
+    },
+    "akhir": {
+     "precision": 0.7656039515042659,
+     "recall": 0.07734180086187344,
+     "fp": 522,
+     "n_pos": 22045
+    }
+   },
+   "h_terpilih": 30.0,
+   "ambang_conformal": 0.001499,
+   "cakupan": 0.2314,
+   "gate_A_baru": false
+  },
+  {
+   "fold": "USROP_A 4 N-SH_F-15Sd.csv",
+   "model": "stat_cusum",
+   "n": 51708,
+   "n_pos": 28051,
+   "rows": {
+    "tp": 4863,
+    "fp": 4537,
+    "fn": 23188,
+    "tn": 19120,
+    "precision": 0.5173404255319148,
+    "recall": 0.17336280346511712,
+    "menit_alarm": 9400,
+    "n_pos": 28051,
+    "n_neg": 23657
+   },
+   "events": {
+    "tp_kejadian": 332,
+    "fp_kejadian": 189,
+    "n_kejadian": 521
+   },
+   "far": {
+    "menit_berdata": 21360,
+    "menit_pos": 9684,
+    "menit_neg": 11676,
+    "menit_alarm": 4896,
+    "menit_alarm_neg": 2377,
+    "rentang_menit": 92310.0,
+    "jam_operasi": 356.0,
+    "cakupan_menit": 0.2314,
+    "far24_kalender": 160.2472
+   },
+   "far24_kalender": 160.2472,
+   "far24_baris": null,
+   "far_per_1000_sampel": 191.783,
+   "garwood_atas_fp": 576.0712,
+   "lead": {
+    "n_onset": 97,
+    "n_diperingatkan": 56,
+    "lead_median_min": 4.0,
+    "lead_min_min": 1,
+    "lead_maks_min": 51
+   },
+   "separuh": {
+    "awal": {
+     "precision": 0.25325493490130196,
+     "recall": 0.2007992007992008,
+     "fp": 3556,
+     "n_pos": 6006
+    },
+    "akhir": {
+     "precision": 0.7884864165588615,
+     "recall": 0.16588795645271037,
+     "fp": 981,
+     "n_pos": 22045
+    }
+   },
+   "h_terpilih": 30.0,
+   "ambang_conformal": 0.001499,
+   "cakupan": 0.2314,
+   "gate_A_baru": false
+  },
+  {
+   "fold": "USROP_A 4 N-SH_F-15Sd.csv",
+   "model": "H5_stat_dan_rule",
+   "n": 51708,
+   "n_pos": 28051,
+   "rows": {
+    "tp": 1057,
+    "fp": 798,
+    "fn": 26994,
+    "tn": 22859,
+    "precision": 0.569811320754717,
+    "recall": 0.03768136608320559,
+    "menit_alarm": 1855,
+    "n_pos": 28051,
+    "n_neg": 23657
+   },
+   "events": {
+    "tp_kejadian": 141,
+    "fp_kejadian": 66,
+    "n_kejadian": 207
+   },
+   "far": {
+    "menit_berdata": 21360,
+    "menit_pos": 9684,
+    "menit_neg": 11676,
+    "menit_alarm": 1073,
+    "menit_alarm_neg": 387,
+    "rentang_menit": 92310.0,
+    "jam_operasi": 356.0,
+    "cakupan_menit": 0.2314,
+    "far24_kalender": 26.0899
+   },
+   "far24_kalender": 26.0899,
+   "far24_baris": null,
+   "far_per_1000_sampel": 33.732,
+   "garwood_atas_fp": 105.4893,
+   "lead": {
+    "n_onset": 97,
+    "n_diperingatkan": 32,
+    "lead_median_min": 11.5,
+    "lead_min_min": 1,
+    "lead_maks_min": 59
+   },
+   "separuh": {
+    "awal": {
+     "precision": 0.45383759733036705,
+     "recall": 0.06793206793206794,
+     "fp": 491,
+     "n_pos": 6006
+    },
+    "akhir": {
+     "precision": 0.6788702928870293,
+     "recall": 0.029439782263551827,
+     "fp": 307,
+     "n_pos": 22045
+    }
+   },
+   "h_terpilih": 30.0,
+   "ambang_conformal": 0.001499,
+   "cakupan": 0.2314,
+   "gate_A_baru": false
+  },
+  {
+   "fold": "USROP_A 4 N-SH_F-15Sd.csv",
+   "model": "ml_fisik",
+   "n": 51708,
+   "n_pos": 28051,
+   "rows": {
+    "tp": 27960,
+    "fp": 2026,
+    "fn": 91,
+    "tn": 21631,
+    "precision": 0.9324351363969853,
+    "recall": 0.9967559088802538,
+    "menit_alarm": 29986,
+    "n_pos": 28051,
+    "n_neg": 23657
+   },
+   "events": {
+    "tp_kejadian": 36,
+    "fp_kejadian": 39,
+    "n_kejadian": 75
+   },
+   "far": {
+    "menit_berdata": 21360,
+    "menit_pos": 9684,
+    "menit_neg": 11676,
+    "menit_alarm": 10714,
+    "menit_alarm_neg": 1069,
+    "rentang_menit": 92310.0,
+    "jam_operasi": 356.0,
+    "cakupan_menit": 0.2314,
+    "far24_kalender": 72.0674
+   },
+   "far24_kalender": 72.0674,
+   "far24_baris": null,
+   "far_per_1000_sampel": 85.641,
+   "garwood_atas_fp": 260.9889,
+   "lead": {
+    "n_onset": 97,
+    "n_diperingatkan": 80,
+    "lead_median_min": 1.0,
+    "lead_min_min": 1,
+    "lead_maks_min": 48
+   },
+   "separuh": {
+    "awal": {
+     "precision": 0.7831899404367968,
+     "recall": 0.9851814851814852,
+     "fp": 1638,
+     "n_pos": 6006
+    },
+    "akhir": {
+     "precision": 0.9827025099193081,
+     "recall": 0.9999092764799274,
+     "fp": 388,
+     "n_pos": 22045
+    }
+   },
+   "h_terpilih": 30.0,
+   "ambang_conformal": 0.001499,
+   "cakupan": 0.2314,
+   "gate_A_baru": false
+  },
+  {
+   "fold": "USROP_A 4 N-SH_F-15Sd.csv",
+   "model": "H6_ml_dan_stat",
+   "n": 51708,
+   "n_pos": 28051,
+   "rows": {
+    "tp": 4837,
+    "fp": 342,
+    "fn": 23214,
+    "tn": 23315,
+    "precision": 0.9339640857308361,
+    "recall": 0.17243592028804677,
+    "menit_alarm": 5179,
+    "n_pos": 28051,
+    "n_neg": 23657
+   },
+   "events": {
+    "tp_kejadian": 334,
+    "fp_kejadian": 36,
+    "n_kejadian": 370
+   },
+   "far": {
+    "menit_berdata": 21360,
+    "menit_pos": 9684,
+    "menit_neg": 11676,
+    "menit_alarm": 2516,
+    "menit_alarm_neg": 182,
+    "rentang_menit": 92310.0,
+    "jam_operasi": 356.0,
+    "cakupan_menit": 0.2314,
+    "far24_kalender": 12.2697
+   },
+   "far24_kalender": 12.2697,
+   "far24_baris": null,
+   "far_per_1000_sampel": 14.457,
+   "garwood_atas_fp": 46.8946,
+   "lead": {
+    "n_onset": 97,
+    "n_diperingatkan": 45,
+    "lead_median_min": 11.0,
+    "lead_min_min": 1,
+    "lead_maks_min": 50
+   },
+   "separuh": {
+    "awal": {
+     "precision": 0.8160442600276625,
+     "recall": 0.19647019647019648,
+     "fp": 266,
+     "n_pos": 6006
+    },
+    "akhir": {
+     "precision": 0.979641039378516,
+     "recall": 0.16588795645271037,
+     "fp": 76,
+     "n_pos": 22045
+    }
+   },
+   "h_terpilih": 30.0,
+   "ambang_conformal": 0.001499,
+   "cakupan": 0.2314,
+   "gate_A_baru": false
+  },
+  {
+   "fold": "USROP_A 4 N-SH_F-15Sd.csv",
+   "model": "ml_dengan_MSE",
+   "n": 51708,
+   "n_pos": 28051,
+   "rows": {
+    "tp": 28051,
+    "fp": 1473,
+    "fn": 0,
+    "tn": 22184,
+    "precision": 0.9501083863975072,
+    "recall": 1.0,
+    "menit_alarm": 29524,
+    "n_pos": 28051,
+    "n_neg": 23657
+   },
+   "events": {
+    "tp_kejadian": 68,
+    "fp_kejadian": 99,
+    "n_kejadian": 167
+   },
+   "far": {
+    "menit_berdata": 21360,
+    "menit_pos": 9684,
+    "menit_neg": 11676,
+    "menit_alarm": 10426,
+    "menit_alarm_neg": 742,
+    "rentang_menit": 92310.0,
+    "jam_operasi": 356.0,
+    "cakupan_menit": 0.2314,
+    "far24_kalender": 50.0225
+   },
+   "far24_kalender": 50.0225,
+   "far24_baris": null,
+   "far_per_1000_sampel": 62.265,
+   "garwood_atas_fp": 191.1849,
+   "lead": {
+    "n_onset": 97,
+    "n_diperingatkan": 81,
+    "lead_median_min": 1.0,
+    "lead_min_min": 1,
+    "lead_maks_min": 60
+   },
+   "separuh": {
+    "awal": {
+     "precision": 0.8477064220183487,
+     "recall": 1.0,
+     "fp": 1079,
+     "n_pos": 6006
+    },
+    "akhir": {
+     "precision": 0.9824412852622666,
+     "recall": 1.0,
+     "fp": 394,
+     "n_pos": 22045
+    }
+   },
+   "h_terpilih": 30.0,
+   "ambang_conformal": 0.001499,
+   "cakupan": 0.2314,
+   "gate_A_baru": false
+  },
+  {
+   "fold": "USROP_A 5 N-SH-F-5d.csv",
+   "model": "rule_label",
+   "n": 18548,
+   "n_pos": 8959,
+   "rows": {
+    "tp": 8959,
+    "fp": 0,
+    "fn": 0,
+    "tn": 9589,
+    "precision": 1.0,
+    "recall": 1.0,
+    "menit_alarm": 8959,
+    "n_pos": 8959,
+    "n_neg": 9589
+   },
+   "events": {
+    "tp_kejadian": 34,
+    "fp_kejadian": 0,
+    "n_kejadian": 34
+   },
+   "far": {
+    "menit_berdata": 6479,
+    "menit_pos": 3777,
+    "menit_neg": 2702,
+    "menit_alarm": 3777,
+    "menit_alarm_neg": 0,
+    "rentang_menit": 17850.0,
+    "jam_operasi": 107.983,
+    "cakupan_menit": 0.363,
+    "far24_kalender": 0.0
+   },
+   "far24_kalender": 0.0,
+   "far24_baris": null,
+   "far_per_1000_sampel": 0.0,
+   "garwood_atas_fp": 1.9659,
+   "lead": {
+    "n_onset": 34,
+    "n_diperingatkan": 12,
+    "lead_median_min": 29.0,
+    "lead_min_min": 17,
+    "lead_maks_min": 58
+   },
+   "separuh": {
+    "awal": {
+     "precision": 1.0,
+     "recall": 1.0,
+     "fp": 0,
+     "n_pos": 6636
+    },
+    "akhir": {
+     "precision": 1.0,
+     "recall": 1.0,
+     "fp": 0,
+     "n_pos": 2323
+    }
+   },
+   "h_terpilih": 30.0,
+   "ambang_conformal": 0.008073,
+   "cakupan": 0.363,
+   "gate_A_baru": false
+  },
+  {
+   "fold": "USROP_A 5 N-SH-F-5d.csv",
+   "model": "rule_kanal",
+   "n": 18548,
+   "n_pos": 8959,
+   "rows": {
+    "tp": 1775,
+    "fp": 1048,
+    "fn": 7184,
+    "tn": 8541,
+    "precision": 0.6287637265320581,
+    "recall": 0.19812479071324926,
+    "menit_alarm": 2823,
+    "n_pos": 8959,
+    "n_neg": 9589
+   },
+   "events": {
+    "tp_kejadian": 35,
+    "fp_kejadian": 21,
+    "n_kejadian": 56
+   },
+   "far": {
+    "menit_berdata": 6479,
+    "menit_pos": 3777,
+    "menit_neg": 2702,
+    "menit_alarm": 1393,
+    "menit_alarm_neg": 486,
+    "rentang_menit": 17850.0,
+    "jam_operasi": 107.983,
+    "cakupan_menit": 0.363,
+    "far24_kalender": 108.0167
+   },
+   "far24_kalender": 108.0167,
+   "far24_baris": null,
+   "far_per_1000_sampel": 109.292,
+   "garwood_atas_fp": 593.3853,
+   "lead": {
+    "n_onset": 34,
+    "n_diperingatkan": 15,
+    "lead_median_min": 21.0,
+    "lead_min_min": 1,
+    "lead_maks_min": 54
+   },
+   "separuh": {
+    "awal": {
+     "precision": 0.7160056657223796,
+     "recall": 0.1523508137432188,
+     "fp": 401,
+     "n_pos": 6636
+    },
+    "akhir": {
+     "precision": 0.5414599574769667,
+     "recall": 0.3288850624192854,
+     "fp": 647,
+     "n_pos": 2323
+    }
+   },
+   "h_terpilih": 30.0,
+   "ambang_conformal": 0.008073,
+   "cakupan": 0.363,
+   "gate_A_baru": false
+  },
+  {
+   "fold": "USROP_A 5 N-SH-F-5d.csv",
+   "model": "stat_cusum",
+   "n": 18548,
+   "n_pos": 8959,
+   "rows": {
+    "tp": 1754,
+    "fp": 1494,
+    "fn": 7205,
+    "tn": 8095,
+    "precision": 0.5400246305418719,
+    "recall": 0.19578077910481081,
+    "menit_alarm": 3248,
+    "n_pos": 8959,
+    "n_neg": 9589
+   },
+   "events": {
+    "tp_kejadian": 96,
+    "fp_kejadian": 66,
+    "n_kejadian": 162
+   },
+   "far": {
+    "menit_berdata": 6479,
+    "menit_pos": 3777,
+    "menit_neg": 2702,
+    "menit_alarm": 1368,
+    "menit_alarm_neg": 473,
+    "rentang_menit": 17850.0,
+    "jam_operasi": 107.983,
+    "cakupan_menit": 0.363,
+    "far24_kalender": 105.1273
+   },
+   "far24_kalender": 105.1273,
+   "far24_baris": null,
+   "far_per_1000_sampel": 155.804,
+   "garwood_atas_fp": 837.6329,
+   "lead": {
+    "n_onset": 34,
+    "n_diperingatkan": 17,
+    "lead_median_min": 11.0,
+    "lead_min_min": 1,
+    "lead_maks_min": 51
+   },
+   "separuh": {
+    "awal": {
+     "precision": 0.7452264048008729,
+     "recall": 0.20584689572031345,
+     "fp": 467,
+     "n_pos": 6636
+    },
+    "akhir": {
+     "precision": 0.2742049469964664,
+     "recall": 0.1670253981919931,
+     "fp": 1027,
+     "n_pos": 2323
+    }
+   },
+   "h_terpilih": 30.0,
+   "ambang_conformal": 0.008073,
+   "cakupan": 0.363,
+   "gate_A_baru": false
+  },
+  {
+   "fold": "USROP_A 5 N-SH-F-5d.csv",
+   "model": "H5_stat_dan_rule",
+   "n": 18548,
+   "n_pos": 8959,
+   "rows": {
+    "tp": 619,
+    "fp": 325,
+    "fn": 8340,
+    "tn": 9264,
+    "precision": 0.6557203389830508,
+    "recall": 0.06909253264873312,
+    "menit_alarm": 944,
+    "n_pos": 8959,
+    "n_neg": 9589
+   },
+   "events": {
+    "tp_kejadian": 37,
+    "fp_kejadian": 14,
+    "n_kejadian": 51
+   },
+   "far": {
+    "menit_berdata": 6479,
+    "menit_pos": 3777,
+    "menit_neg": 2702,
+    "menit_alarm": 358,
+    "menit_alarm_neg": 74,
+    "rentang_menit": 17850.0,
+    "jam_operasi": 107.983,
+    "cakupan_menit": 0.363,
+    "far24_kalender": 16.447
+   },
+   "far24_kalender": 16.447,
+   "far24_baris": null,
+   "far_per_1000_sampel": 33.893,
+   "garwood_atas_fp": 193.0972,
+   "lead": {
+    "n_onset": 34,
+    "n_diperingatkan": 6,
+    "lead_median_min": 1.0,
+    "lead_min_min": 1,
+    "lead_maks_min": 50
+   },
+   "separuh": {
+    "awal": {
+     "precision": 0.6661828737300436,
+     "recall": 0.06916817359855335,
+     "fp": 230,
+     "n_pos": 6636
+    },
+    "akhir": {
+     "precision": 0.6274509803921569,
+     "recall": 0.06887645286267757,
+     "fp": 95,
+     "n_pos": 2323
+    }
+   },
+   "h_terpilih": 30.0,
+   "ambang_conformal": 0.008073,
+   "cakupan": 0.363,
+   "gate_A_baru": false
+  },
+  {
+   "fold": "USROP_A 5 N-SH-F-5d.csv",
+   "model": "ml_fisik",
+   "n": 18548,
+   "n_pos": 8959,
+   "rows": {
+    "tp": 7724,
+    "fp": 966,
+    "fn": 1235,
+    "tn": 8623,
+    "precision": 0.888837744533947,
+    "recall": 0.8621497935037392,
+    "menit_alarm": 8690,
+    "n_pos": 8959,
+    "n_neg": 9589
+   },
+   "events": {
+    "tp_kejadian": 34,
+    "fp_kejadian": 8,
+    "n_kejadian": 42
+   },
+   "far": {
+    "menit_berdata": 6479,
+    "menit_pos": 3777,
+    "menit_neg": 2702,
+    "menit_alarm": 4143,
+    "menit_alarm_neg": 642,
+    "rentang_menit": 17850.0,
+    "jam_operasi": 107.983,
+    "cakupan_menit": 0.363,
+    "far24_kalender": 142.6887
+   },
+   "far24_kalender": 142.6887,
+   "far24_baris": null,
+   "far_per_1000_sampel": 100.74,
+   "garwood_atas_fp": 548.3351,
+   "lead": {
+    "n_onset": 34,
+    "n_diperingatkan": 16,
+    "lead_median_min": 1.0,
+    "lead_min_min": 1,
+    "lead_maks_min": 58
+   },
+   "separuh": {
+    "awal": {
+     "precision": 0.9003141015043808,
+     "recall": 0.820675105485232,
+     "fp": 603,
+     "n_pos": 6636
+    },
+    "akhir": {
+     "precision": 0.8625520636122681,
+     "recall": 0.9806284976323719,
+     "fp": 363,
+     "n_pos": 2323
+    }
+   },
+   "h_terpilih": 30.0,
+   "ambang_conformal": 0.008073,
+   "cakupan": 0.363,
+   "gate_A_baru": false
+  },
+  {
+   "fold": "USROP_A 5 N-SH-F-5d.csv",
+   "model": "H6_ml_dan_stat",
+   "n": 18548,
+   "n_pos": 8959,
+   "rows": {
+    "tp": 1443,
+    "fp": 149,
+    "fn": 7516,
+    "tn": 9440,
+    "precision": 0.9064070351758794,
+    "recall": 0.1610670833798415,
+    "menit_alarm": 1592,
+    "n_pos": 8959,
+    "n_neg": 9589
+   },
+   "events": {
+    "tp_kejadian": 87,
+    "fp_kejadian": 8,
+    "n_kejadian": 95
+   },
+   "far": {
+    "menit_berdata": 6479,
+    "menit_pos": 3777,
+    "menit_neg": 2702,
+    "menit_alarm": 791,
+    "menit_alarm_neg": 47,
+    "rentang_menit": 17850.0,
+    "jam_operasi": 107.983,
+    "cakupan_menit": 0.363,
+    "far24_kalender": 10.4461
+   },
+   "far24_kalender": 10.4461,
+   "far24_baris": null,
+   "far_per_1000_sampel": 15.539,
+   "garwood_atas_fp": 93.2308,
+   "lead": {
+    "n_onset": 34,
+    "n_diperingatkan": 5,
+    "lead_median_min": 1.0,
+    "lead_min_min": 1,
+    "lead_maks_min": 28
+   },
+   "separuh": {
+    "awal": {
+     "precision": 0.8835845896147404,
+     "recall": 0.1589813140446052,
+     "fp": 139,
+     "n_pos": 6636
+    },
+    "akhir": {
+     "precision": 0.9748743718592965,
+     "recall": 0.1670253981919931,
+     "fp": 10,
+     "n_pos": 2323
+    }
+   },
+   "h_terpilih": 30.0,
+   "ambang_conformal": 0.008073,
+   "cakupan": 0.363,
+   "gate_A_baru": false
+  },
+  {
+   "fold": "USROP_A 5 N-SH-F-5d.csv",
+   "model": "ml_dengan_MSE",
+   "n": 18548,
+   "n_pos": 8959,
+   "rows": {
+    "tp": 8959,
+    "fp": 1136,
+    "fn": 0,
+    "tn": 8453,
+    "precision": 0.8874690440812283,
+    "recall": 1.0,
+    "menit_alarm": 10095,
+    "n_pos": 8959,
+    "n_neg": 9589
+   },
+   "events": {
+    "tp_kejadian": 28,
+    "fp_kejadian": 7,
+    "n_kejadian": 35
+   },
+   "far": {
+    "menit_berdata": 6479,
+    "menit_pos": 3777,
+    "menit_neg": 2702,
+    "menit_alarm": 4479,
+    "menit_alarm_neg": 702,
+    "rentang_menit": 17850.0,
+    "jam_operasi": 107.983,
+    "cakupan_menit": 0.363,
+    "far24_kalender": 156.0241
+   },
+   "far24_kalender": 156.0241,
+   "far24_baris": null,
+   "far_per_1000_sampel": 118.469,
+   "garwood_atas_fp": 641.6745,
+   "lead": {
+    "n_onset": 34,
+    "n_diperingatkan": 18,
+    "lead_median_min": 1.0,
+    "lead_min_min": 1,
+    "lead_maks_min": 58
+   },
+   "separuh": {
+    "awal": {
+     "precision": 0.9011406844106464,
+     "recall": 1.0,
+     "fp": 728,
+     "n_pos": 6636
+    },
+    "akhir": {
+     "precision": 0.85060417429513,
+     "recall": 1.0,
+     "fp": 408,
+     "n_pos": 2323
+    }
+   },
+   "h_terpilih": 30.0,
+   "ambang_conformal": 0.008073,
+   "cakupan": 0.363,
+   "gate_A_baru": false
+  },
+  {
+   "fold": "USROP_A 6 N-SH_F-9d.csv",
+   "model": "rule_label",
+   "n": 7851,
+   "n_pos": 0,
+   "rows": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 7851,
+    "precision": null,
+    "recall": null,
+    "menit_alarm": 0,
+    "n_pos": 0,
+    "n_neg": 7851
+   },
+   "events": {
+    "tp_kejadian": 0,
+    "fp_kejadian": 0,
+    "n_kejadian": 0
+   },
+   "far": {
+    "menit_berdata": 1880,
+    "menit_pos": 0,
+    "menit_neg": 1880,
+    "menit_alarm": 0,
+    "menit_alarm_neg": 0,
+    "rentang_menit": 24016.0,
+    "jam_operasi": 31.333,
+    "cakupan_menit": 0.0783,
+    "far24_kalender": 0.0
+   },
+   "far24_kalender": 0.0,
+   "far24_baris": null,
+   "far_per_1000_sampel": 0.0,
+   "garwood_atas_fp": 2.8255,
+   "lead": {
+    "n_onset": 0,
+    "n_diperingatkan": 0,
+    "lead_median_min": null,
+    "lead_min_min": null,
+    "lead_maks_min": null
+   },
+   "separuh": {
+    "awal": {
+     "precision": null,
+     "recall": null,
+     "fp": 0,
+     "n_pos": 0
+    },
+    "akhir": {
+     "precision": null,
+     "recall": null,
+     "fp": 0,
+     "n_pos": 0
+    }
+   },
+   "h_terpilih": 30.0,
+   "ambang_conformal": 0.006549,
+   "cakupan": 0.0783,
+   "gate_A_baru": false
+  },
+  {
+   "fold": "USROP_A 6 N-SH_F-9d.csv",
+   "model": "rule_kanal",
+   "n": 7851,
+   "n_pos": 0,
+   "rows": {
+    "tp": 0,
+    "fp": 943,
+    "fn": 0,
+    "tn": 6908,
+    "precision": 0.0,
+    "recall": null,
+    "menit_alarm": 943,
+    "n_pos": 0,
+    "n_neg": 7851
+   },
+   "events": {
+    "tp_kejadian": 0,
+    "fp_kejadian": 19,
+    "n_kejadian": 19
+   },
+   "far": {
+    "menit_berdata": 1880,
+    "menit_pos": 0,
+    "menit_neg": 1880,
+    "menit_alarm": 382,
+    "menit_alarm_neg": 382,
+    "rentang_menit": 24016.0,
+    "jam_operasi": 31.333,
+    "cakupan_menit": 0.0783,
+    "far24_kalender": 292.5957
+   },
+   "far24_kalender": 292.5957,
+   "far24_baris": null,
+   "far_per_1000_sampel": 120.112,
+   "garwood_atas_fp": 769.9102,
+   "lead": {
+    "n_onset": 0,
+    "n_diperingatkan": 0,
+    "lead_median_min": null,
+    "lead_min_min": null,
+    "lead_maks_min": null
+   },
+   "separuh": {
+    "awal": {
+     "precision": 0.0,
+     "recall": null,
+     "fp": 339,
+     "n_pos": 0
+    },
+    "akhir": {
+     "precision": 0.0,
+     "recall": null,
+     "fp": 604,
+     "n_pos": 0
+    }
+   },
+   "h_terpilih": 30.0,
+   "ambang_conformal": 0.006549,
+   "cakupan": 0.0783,
+   "gate_A_baru": false
+  },
+  {
+   "fold": "USROP_A 6 N-SH_F-9d.csv",
+   "model": "stat_cusum",
+   "n": 7851,
+   "n_pos": 0,
+   "rows": {
+    "tp": 0,
+    "fp": 2202,
+    "fn": 0,
+    "tn": 5649,
+    "precision": 0.0,
+    "recall": null,
+    "menit_alarm": 2202,
+    "n_pos": 0,
+    "n_neg": 7851
+   },
+   "events": {
+    "tp_kejadian": 0,
+    "fp_kejadian": 69,
+    "n_kejadian": 69
+   },
+   "far": {
+    "menit_berdata": 1880,
+    "menit_pos": 0,
+    "menit_neg": 1880,
+    "menit_alarm": 669,
+    "menit_alarm_neg": 669,
+    "rentang_menit": 24016.0,
+    "jam_operasi": 31.333,
+    "cakupan_menit": 0.0783,
+    "far24_kalender": 512.4255
+   },
+   "far24_kalender": 512.4255,
+   "far24_baris": null,
+   "far_per_1000_sampel": 280.474,
+   "garwood_atas_fp": 1758.5897,
+   "lead": {
+    "n_onset": 0,
+    "n_diperingatkan": 0,
+    "lead_median_min": null,
+    "lead_min_min": null,
+    "lead_maks_min": null
+   },
+   "separuh": {
+    "awal": {
+     "precision": 0.0,
+     "recall": null,
+     "fp": 1108,
+     "n_pos": 0
+    },
+    "akhir": {
+     "precision": 0.0,
+     "recall": null,
+     "fp": 1094,
+     "n_pos": 0
+    }
+   },
+   "h_terpilih": 30.0,
+   "ambang_conformal": 0.006549,
+   "cakupan": 0.0783,
+   "gate_A_baru": false
+  },
+  {
+   "fold": "USROP_A 6 N-SH_F-9d.csv",
+   "model": "H5_stat_dan_rule",
+   "n": 7851,
+   "n_pos": 0,
+   "rows": {
+    "tp": 0,
+    "fp": 609,
+    "fn": 0,
+    "tn": 7242,
+    "precision": 0.0,
+    "recall": null,
+    "menit_alarm": 609,
+    "n_pos": 0,
+    "n_neg": 7851
+   },
+   "events": {
+    "tp_kejadian": 0,
+    "fp_kejadian": 21,
+    "n_kejadian": 21
+   },
+   "far": {
+    "menit_berdata": 1880,
+    "menit_pos": 0,
+    "menit_neg": 1880,
+    "menit_alarm": 326,
+    "menit_alarm_neg": 326,
+    "rentang_menit": 24016.0,
+    "jam_operasi": 31.333,
+    "cakupan_menit": 0.0783,
+    "far24_kalender": 249.7021
+   },
+   "far24_kalender": 249.7021,
+   "far24_baris": null,
+   "far_per_1000_sampel": 77.57,
+   "garwood_atas_fp": 505.0322,
+   "lead": {
+    "n_onset": 0,
+    "n_diperingatkan": 0,
+    "lead_median_min": null,
+    "lead_min_min": null,
+    "lead_maks_min": null
+   },
+   "separuh": {
+    "awal": {
+     "precision": 0.0,
+     "recall": null,
+     "fp": 246,
+     "n_pos": 0
+    },
+    "akhir": {
+     "precision": 0.0,
+     "recall": null,
+     "fp": 363,
+     "n_pos": 0
+    }
+   },
+   "h_terpilih": 30.0,
+   "ambang_conformal": 0.006549,
+   "cakupan": 0.0783,
+   "gate_A_baru": false
+  },
+  {
+   "fold": "USROP_A 6 N-SH_F-9d.csv",
+   "model": "ml_fisik",
+   "n": 7851,
+   "n_pos": 0,
+   "rows": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 7851,
+    "precision": null,
+    "recall": null,
+    "menit_alarm": 0,
+    "n_pos": 0,
+    "n_neg": 7851
+   },
+   "events": {
+    "tp_kejadian": 0,
+    "fp_kejadian": 0,
+    "n_kejadian": 0
+   },
+   "far": {
+    "menit_berdata": 1880,
+    "menit_pos": 0,
+    "menit_neg": 1880,
+    "menit_alarm": 0,
+    "menit_alarm_neg": 0,
+    "rentang_menit": 24016.0,
+    "jam_operasi": 31.333,
+    "cakupan_menit": 0.0783,
+    "far24_kalender": 0.0
+   },
+   "far24_kalender": 0.0,
+   "far24_baris": null,
+   "far_per_1000_sampel": 0.0,
+   "garwood_atas_fp": 2.8255,
+   "lead": {
+    "n_onset": 0,
+    "n_diperingatkan": 0,
+    "lead_median_min": null,
+    "lead_min_min": null,
+    "lead_maks_min": null
+   },
+   "separuh": {
+    "awal": {
+     "precision": null,
+     "recall": null,
+     "fp": 0,
+     "n_pos": 0
+    },
+    "akhir": {
+     "precision": null,
+     "recall": null,
+     "fp": 0,
+     "n_pos": 0
+    }
+   },
+   "h_terpilih": 30.0,
+   "ambang_conformal": 0.006549,
+   "cakupan": 0.0783,
+   "gate_A_baru": false
+  },
+  {
+   "fold": "USROP_A 6 N-SH_F-9d.csv",
+   "model": "H6_ml_dan_stat",
+   "n": 7851,
+   "n_pos": 0,
+   "rows": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 7851,
+    "precision": null,
+    "recall": null,
+    "menit_alarm": 0,
+    "n_pos": 0,
+    "n_neg": 7851
+   },
+   "events": {
+    "tp_kejadian": 0,
+    "fp_kejadian": 0,
+    "n_kejadian": 0
+   },
+   "far": {
+    "menit_berdata": 1880,
+    "menit_pos": 0,
+    "menit_neg": 1880,
+    "menit_alarm": 0,
+    "menit_alarm_neg": 0,
+    "rentang_menit": 24016.0,
+    "jam_operasi": 31.333,
+    "cakupan_menit": 0.0783,
+    "far24_kalender": 0.0
+   },
+   "far24_kalender": 0.0,
+   "far24_baris": null,
+   "far_per_1000_sampel": 0.0,
+   "garwood_atas_fp": 2.8255,
+   "lead": {
+    "n_onset": 0,
+    "n_diperingatkan": 0,
+    "lead_median_min": null,
+    "lead_min_min": null,
+    "lead_maks_min": null
+   },
+   "separuh": {
+    "awal": {
+     "precision": null,
+     "recall": null,
+     "fp": 0,
+     "n_pos": 0
+    },
+    "akhir": {
+     "precision": null,
+     "recall": null,
+     "fp": 0,
+     "n_pos": 0
+    }
+   },
+   "h_terpilih": 30.0,
+   "ambang_conformal": 0.006549,
+   "cakupan": 0.0783,
+   "gate_A_baru": false
+  },
+  {
+   "fold": "USROP_A 6 N-SH_F-9d.csv",
+   "model": "ml_dengan_MSE",
+   "n": 7851,
+   "n_pos": 0,
+   "rows": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 7851,
+    "precision": null,
+    "recall": null,
+    "menit_alarm": 0,
+    "n_pos": 0,
+    "n_neg": 7851
+   },
+   "events": {
+    "tp_kejadian": 0,
+    "fp_kejadian": 0,
+    "n_kejadian": 0
+   },
+   "far": {
+    "menit_berdata": 1880,
+    "menit_pos": 0,
+    "menit_neg": 1880,
+    "menit_alarm": 0,
+    "menit_alarm_neg": 0,
+    "rentang_menit": 24016.0,
+    "jam_operasi": 31.333,
+    "cakupan_menit": 0.0783,
+    "far24_kalender": 0.0
+   },
+   "far24_kalender": 0.0,
+   "far24_baris": null,
+   "far_per_1000_sampel": 0.0,
+   "garwood_atas_fp": 2.8255,
+   "lead": {
+    "n_onset": 0,
+    "n_diperingatkan": 0,
+    "lead_median_min": null,
+    "lead_min_min": null,
+    "lead_maks_min": null
+   },
+   "separuh": {
+    "awal": {
+     "precision": null,
+     "recall": null,
+     "fp": 0,
+     "n_pos": 0
+    },
+    "akhir": {
+     "precision": null,
+     "recall": null,
+     "fp": 0,
+     "n_pos": 0
+    }
+   },
+   "h_terpilih": 30.0,
+   "ambang_conformal": 0.006549,
+   "cakupan": 0.0783,
+   "gate_A_baru": false
+  }
+ ],
+ "ringkas": {
+  "rule_label": {
+   "n_fold": 7,
+   "fp_total": 0,
+   "tp_total": 49732,
+   "fp_kejadian_total": 0,
+   "precision_median": 1.0,
+   "precision_min": 1.0,
+   "precision_maks": 1.0,
+   "recall_median": 1.0,
+   "recall_min": 1.0,
+   "recall_maks": 1.0,
+   "far24_kalender_median": 0.0,
+   "far24_kalender_min": 0.0,
+   "far24_kalender_maks": 0.0,
+   "far24_kalender_rentang": 0.0,
+   "far24_baris_median": null,
+   "far24_baris_min": null,
+   "far24_baris_maks": null,
+   "cakupan_median": 0.2314,
+   "lead_median_median": 15.75,
+   "lead_median_min": 7.0,
+   "lead_median_maks": 29.0,
+   "n_onset": 482,
+   "n_diperingatkan": 336,
+   "fold_far_le6": 7,
+   "fold_gate_A_baru": 1,
+   "fold_recall_gt0": 5
+  },
+  "rule_kanal": {
+   "n_fold": 7,
+   "fp_total": 16687,
+   "tp_total": 6012,
+   "fp_kejadian_total": 754,
+   "precision_median": 0.1492,
+   "precision_min": 0.0,
+   "precision_maks": 0.6288,
+   "recall_median": 0.1134,
+   "recall_min": 0.0,
+   "recall_maks": 0.2141,
+   "far24_kalender_median": 241.9481,
+   "far24_kalender_min": 74.2921,
+   "far24_kalender_maks": 292.5957,
+   "far24_kalender_rentang": 218.3036,
+   "far24_baris_median": null,
+   "far24_baris_min": null,
+   "far24_baris_maks": null,
+   "cakupan_median": 0.2314,
+   "lead_median_median": 20.0,
+   "lead_median_min": 1.0,
+   "lead_median_maks": 24.0,
+   "n_onset": 482,
+   "n_diperingatkan": 184,
+   "fold_far_le6": 0,
+   "fold_gate_A_baru": 0,
+   "fold_recall_gt0": 4
+  },
+  "stat_cusum": {
+   "n_fold": 7,
+   "fp_total": 29886,
+   "tp_total": 9251,
+   "fp_kejadian_total": 1278,
+   "precision_median": 0.1142,
+   "precision_min": 0.0,
+   "precision_maks": 0.54,
+   "recall_median": 0.1958,
+   "recall_min": 0.1734,
+   "recall_maks": 0.4231,
+   "far24_kalender_median": 364.4778,
+   "far24_kalender_min": 105.1273,
+   "far24_kalender_maks": 512.4255,
+   "far24_kalender_rentang": 407.2982,
+   "far24_baris_median": null,
+   "far24_baris_min": null,
+   "far24_baris_maks": null,
+   "cakupan_median": 0.2314,
+   "lead_median_median": 4.0,
+   "lead_median_min": 1.0,
+   "lead_median_maks": 14.0,
+   "n_onset": 482,
+   "n_diperingatkan": 205,
+   "fold_far_le6": 0,
+   "fold_gate_A_baru": 0,
+   "fold_recall_gt0": 5
+  },
+  "H5_stat_dan_rule": {
+   "n_fold": 7,
+   "fp_total": 5266,
+   "tp_total": 2165,
+   "fp_kejadian_total": 358,
+   "precision_median": 0.1155,
+   "precision_min": 0.0,
+   "precision_maks": 0.6557,
+   "recall_median": 0.0377,
+   "recall_min": 0.0,
+   "recall_maks": 0.0716,
+   "far24_kalender_median": 65.6172,
+   "far24_kalender_min": 16.447,
+   "far24_kalender_maks": 249.7021,
+   "far24_kalender_rentang": 233.2551,
+   "far24_baris_median": null,
+   "far24_baris_min": null,
+   "far24_baris_maks": null,
+   "cakupan_median": 0.2314,
+   "lead_median_median": 12.5,
+   "lead_median_min": 1.0,
+   "lead_median_maks": 17.0,
+   "n_onset": 482,
+   "n_diperingatkan": 57,
+   "fold_far_le6": 0,
+   "fold_gate_A_baru": 0,
+   "fold_recall_gt0": 4
+  },
+  "ml_fisik": {
+   "n_fold": 7,
+   "fp_total": 15105,
+   "tp_total": 48287,
+   "fp_kejadian_total": 217,
+   "precision_median": 0.6496,
+   "precision_min": 0.1714,
+   "precision_maks": 0.9324,
+   "recall_median": 0.9968,
+   "recall_min": 0.8621,
+   "recall_maks": 1.0,
+   "far24_kalender_median": 110.4317,
+   "far24_kalender_min": 0.0,
+   "far24_kalender_maks": 325.7001,
+   "far24_kalender_rentang": 325.7001,
+   "far24_baris_median": null,
+   "far24_baris_min": null,
+   "far24_baris_maks": null,
+   "cakupan_median": 0.2314,
+   "lead_median_median": 1.0,
+   "lead_median_min": 1.0,
+   "lead_median_maks": 12.5,
+   "n_onset": 482,
+   "n_diperingatkan": 402,
+   "fold_far_le6": 2,
+   "fold_gate_A_baru": 0,
+   "fold_recall_gt0": 5
+  },
+  "H6_ml_dan_stat": {
+   "n_fold": 7,
+   "fp_total": 2717,
+   "tp_total": 8897,
+   "fp_kejadian_total": 153,
+   "precision_median": 0.6132,
+   "precision_min": 0.2369,
+   "precision_maks": 0.934,
+   "recall_median": 0.1784,
+   "recall_min": 0.1611,
+   "recall_maks": 0.4231,
+   "far24_kalender_median": 12.2697,
+   "far24_kalender_min": 0.0,
+   "far24_kalender_maks": 90.2734,
+   "far24_kalender_rentang": 90.2734,
+   "far24_baris_median": null,
+   "far24_baris_min": null,
+   "far24_baris_maks": null,
+   "cakupan_median": 0.2314,
+   "lead_median_median": 11.0,
+   "lead_median_min": 1.0,
+   "lead_median_maks": 14.0,
+   "n_onset": 482,
+   "n_diperingatkan": 147,
+   "fold_far_le6": 2,
+   "fold_gate_A_baru": 0,
+   "fold_recall_gt0": 5
+  },
+  "ml_dengan_MSE": {
+   "n_fold": 7,
+   "fp_total": 13928,
+   "tp_total": 49732,
+   "fp_kejadian_total": 220,
+   "precision_median": 0.8496,
+   "precision_min": 0.0284,
+   "precision_maks": 0.9501,
+   "recall_median": 1.0,
+   "recall_min": 1.0,
+   "recall_maks": 1.0,
+   "far24_kalender_median": 45.6408,
+   "far24_kalender_min": 0.0,
+   "far24_kalender_maks": 946.4789,
+   "far24_kalender_rentang": 946.4789,
+   "far24_baris_median": null,
+   "far24_baris_min": null,
+   "far24_baris_maks": null,
+   "cakupan_median": 0.2314,
+   "lead_median_median": 1.0,
+   "lead_median_min": 1.0,
+   "lead_median_maks": 6.0,
+   "n_onset": 482,
+   "n_diperingatkan": 393,
+   "fold_far_le6": 2,
+   "fold_gate_A_baru": 0,
+   "fold_recall_gt0": 5
+  }
+ },
+ "far_tak_terdefinisi": {
+  "n_rekaman": 0,
+  "per_model": {
+   "rule_label": 0,
+   "rule_kanal": 0,
+   "stat_cusum": 0,
+   "H5_stat_dan_rule": 0,
+   "ml_fisik": 0,
+   "H6_ml_dan_stat": 0,
+   "ml_dengan_MSE": 0
+  },
+  "arti": "menit_neg = 0 sehingga penyebut FAR tidak ada; dihitung gagal gate"
+ },
+ "log": [
+  "[05:47:11] muat USROP",
+  "[05:47:13] sejajar: 198928 baris, ts kosong 1",
+  "[05:47:16] fold USROP_A 0 N-NA_F-9_Ad.csv selesai h=30.0 amb=0.0005",
+  "[05:47:18] fold USROP_A 1 N-S_F-7d.csv selesai h=30.0 amb=0.0099",
+  "[05:47:19] fold USROP_A 2 N-SH_F-14d.csv selesai h=30.0 amb=0.0105",
+  "[05:47:20] fold USROP_A 3 N-SH-F-15d.csv selesai h=30.0 amb=0.0010",
+  "[05:47:22] fold USROP_A 4 N-SH_F-15Sd.csv selesai h=30.0 amb=0.0015",
+  "[05:47:23] fold USROP_A 5 N-SH-F-5d.csv selesai h=30.0 amb=0.0081",
+  "[05:47:25] fold USROP_A 6 N-SH_F-9d.csv selesai h=30.0 amb=0.0065"
+ ]
+}

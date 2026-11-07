@@ -1,0 +1,47 @@
+{
+ "vib": {
+  "kolom_prev": "y_prev_vib",
+  "n": 23922,
+  "n_pos": 5429,
+  "n_pos_prev1": 4043,
+  "n_pos_prev0": 1386,
+  "fraksi_pos_onset_baru": 0.2553,
+  "n_prev_nan": 0
+ },
+ "shk": {
+  "kolom_prev": "y_prev_shk",
+  "n": 56495,
+  "n_pos": 2005,
+  "n_pos_prev1": 474,
+  "n_pos_prev0": 1531,
+  "fraksi_pos_onset_baru": 0.7636,
+  "n_prev_nan": 0
+ },
+ "stuck_k1": {
+  "kolom_prev": "y_prev_stuck",
+  "n": 5555,
+  "n_pos": 2007,
+  "n_pos_prev1": 1563,
+  "n_pos_prev0": 444,
+  "fraksi_pos_onset_baru": 0.2212,
+  "n_prev_nan": 0
+ },
+ "ssi": {
+  "kolom_prev": "y_prev_ssi",
+  "n": 35906,
+  "n_pos": 607,
+  "n_pos_prev1": 85,
+  "n_pos_prev0": 522,
+  "fraksi_pos_onset_baru": 0.86,
+  "n_prev_nan": 0
+ },
+ "hyd_ki": {
+  "kolom_prev": "y_prev_hyd",
+  "n": 52509,
+  "n_pos": 7172,
+  "n_pos_prev1": 5243,
+  "n_pos_prev0": 1929,
+  "fraksi_pos_onset_baru": 0.269,
+  "n_prev_nan": 0
+ }
+}

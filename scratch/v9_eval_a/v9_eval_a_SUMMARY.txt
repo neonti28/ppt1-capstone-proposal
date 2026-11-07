@@ -1,0 +1,127 @@
+WROTE /mnt/d/Capstone 1/scratch/v9_eval_a/v9_eval_a_RESULTS.json
+
+== recompute checks: 18 / 18 OK
+== cross-team checks: 6 / 6 OK
+
+== ML far grid total: {'grid_points': 390, 'far6_recall_pos': 10, 'far1_recall_pos': 4}
+-- vib: folds=4 underpowered=[]
+   rf: auprc 0.441-0.912 CIprev=0/4 dBcanary=4/4 dBpersistence=2/4 far-grid={'definition': 'point = (fold, model, tau) pada 5 tau grid pra-reg, semua fold', 'n_points': 20, 'FARle6_recall_pos': 1, 'FARle1_recall_pos': 0}
+     tau=0.05: P 0.19-0.57 R 0.96-1.00 FAR 983.5-1440.0 | le6+R>0 0/4 le1+R>0 0/4
+     tau=0.1: P 0.22-0.57 R 0.89-1.00 FAR 754.7-1440.0 | le6+R>0 0/4 le1+R>0 0/4
+     tau=0.2: P 0.27-0.69 R 0.72-0.98 FAR 394.0-1156.9 | le6+R>0 0/4 le1+R>0 0/4
+     tau=0.3: P 0.38-0.72 R 0.50-0.95 FAR 188.7-699.2 | le6+R>0 0/4 le1+R>0 0/4
+     tau=0.5: P 0.40-0.85 R 0.10-0.87 FAR 4.1-496.1 | le6+R>0 1/4 le1+R>0 0/4
+   gb: auprc 0.249-0.916 CIprev=0/4 dBcanary=3/4 dBpersistence=1/4 far-grid={'definition': 'point = (fold, model, tau) pada 5 tau grid pra-reg, semua fold', 'n_points': 20, 'FARle6_recall_pos': 0, 'FARle1_recall_pos': 0}
+     tau=0.05: P 0.22-0.70 R 0.82-0.96 FAR 670.1-890.4 | le6+R>0 0/4 le1+R>0 0/4
+     tau=0.1: P 0.28-0.71 R 0.71-0.96 FAR 432.7-740.8 | le6+R>0 0/4 le1+R>0 0/4
+     tau=0.2: P 0.29-0.72 R 0.54-0.95 FAR 310.4-692.5 | le6+R>0 0/4 le1+R>0 0/4
+     tau=0.3: P 0.28-0.73 R 0.41-0.94 FAR 227.8-655.9 | le6+R>0 0/4 le1+R>0 0/4
+     tau=0.5: P 0.23-0.80 R 0.07-0.85 FAR 14.8-391.2 | le6+R>0 0/4 le1+R>0 0/4
+   lr: auprc 0.184-0.875 CIprev=1/4 dBcanary=3/4 dBpersistence=2/4 far-grid={'definition': 'point = (fold, model, tau) pada 5 tau grid pra-reg, semua fold', 'n_points': 20, 'FARle6_recall_pos': 0, 'FARle1_recall_pos': 0}
+     tau=0.05: P 0.15-0.74 R 0.92-1.00 FAR 599.3-1433.5 | le6+R>0 0/4 le1+R>0 0/4
+     tau=0.1: P 0.16-0.76 R 0.88-0.99 FAR 514.4-1340.6 | le6+R>0 0/4 le1+R>0 0/4
+     tau=0.2: P 0.20-0.76 R 0.84-0.95 FAR 507.7-1170.9 | le6+R>0 0/4 le1+R>0 0/4
+     tau=0.3: P 0.25-0.80 R 0.76-0.94 FAR 399.5-1141.4 | le6+R>0 0/4 le1+R>0 0/4
+     tau=0.5: P 0.20-0.88 R 0.38-0.93 FAR 189.8-1023.4 | le6+R>0 0/4 le1+R>0 0/4
+-- ssi: folds=9 underpowered=['F-7', 'F-9']
+   rf: auprc 0.015-0.459 CIprev=5/9 dBcanary=7/9 dBpersistence=7/9 far-grid={'definition': 'point = (fold, model, tau) pada 5 tau grid pra-reg, semua fold', 'n_points': 45, 'FARle6_recall_pos': 3, 'FARle1_recall_pos': 1}
+     tau=0.05: P 0.01-0.07 R 0.17-1.00 FAR 112.8-1287.9 | le6+R>0 0/9 le1+R>0 0/9
+     tau=0.1: P 0.02-0.16 R 0.13-0.67 FAR 20.4-545.2 | le6+R>0 0/9 le1+R>0 0/9
+     tau=0.2: P 0.00-0.27 R 0.00-0.32 FAR 0.0-83.8 | le6+R>0 1/9 le1+R>0 0/9
+     tau=0.3: P 0.00-0.67 R 0.00-0.13 FAR 0.0-15.6 | le6+R>0 2/9 le1+R>0 1/9
+     tau=0.5: P 0.00-0.00 R 0.00-0.00 FAR 0.0-0.9 | le6+R>0 0/9 le1+R>0 0/9
+   gb: auprc 0.007-0.141 CIprev=4/9 dBcanary=5/9 dBpersistence=6/9 far-grid={'definition': 'point = (fold, model, tau) pada 5 tau grid pra-reg, semua fold', 'n_points': 45, 'FARle6_recall_pos': 2, 'FARle1_recall_pos': 0}
+     tau=0.05: P 0.00-0.15 R 0.00-0.67 FAR 19.0-537.4 | le6+R>0 0/9 le1+R>0 0/9
+     tau=0.1: P 0.00-0.15 R 0.00-0.45 FAR 5.2-413.3 | le6+R>0 0/9 le1+R>0 0/9
+     tau=0.2: P 0.00-0.10 R 0.00-0.40 FAR 1.3-398.6 | le6+R>0 0/9 le1+R>0 0/9
+     tau=0.3: P 0.00-0.09 R 0.00-0.35 FAR 1.3-395.7 | le6+R>0 1/9 le1+R>0 0/9
+     tau=0.5: P 0.00-0.11 R 0.00-0.27 FAR 1.3-389.8 | le6+R>0 1/9 le1+R>0 0/9
+   lr: auprc 0.016-0.208 CIprev=5/9 dBcanary=7/9 dBpersistence=7/9 far-grid={'definition': 'point = (fold, model, tau) pada 5 tau grid pra-reg, semua fold', 'n_points': 45, 'FARle6_recall_pos': 0, 'FARle1_recall_pos': 0}
+     tau=0.05: P 0.00-0.07 R 0.72-1.00 FAR 1283.6-1440.0 | le6+R>0 0/9 le1+R>0 0/9
+     tau=0.1: P 0.00-0.07 R 0.63-1.00 FAR 869.7-1428.2 | le6+R>0 0/9 le1+R>0 0/9
+     tau=0.2: P 0.00-0.07 R 0.37-1.00 FAR 389.9-1341.1 | le6+R>0 0/9 le1+R>0 0/9
+     tau=0.3: P 0.01-0.07 R 0.27-1.00 FAR 157.0-1251.3 | le6+R>0 0/9 le1+R>0 0/9
+     tau=0.5: P 0.01-0.09 R 0.17-1.00 FAR 76.6-1018.6 | le6+R>0 0/9 le1+R>0 0/9
+-- shk: folds=9 underpowered=[]
+   rf: auprc 0.007-0.193 CIprev=7/9 dBcanary=5/9 dBpersistence=4/9 far-grid={'definition': 'point = (fold, model, tau) pada 5 tau grid pra-reg, semua fold', 'n_points': 45, 'FARle6_recall_pos': 1, 'FARle1_recall_pos': 1}
+     tau=0.05: P 0.01-0.12 R 0.29-1.00 FAR 351.6-1173.2 | le6+R>0 0/9 le1+R>0 0/9
+     tau=0.1: P 0.00-0.10 R 0.02-0.64 FAR 91.4-708.8 | le6+R>0 0/9 le1+R>0 0/9
+     tau=0.2: P 0.00-0.29 R 0.00-0.62 FAR 0.3-211.3 | le6+R>0 0/9 le1+R>0 0/9
+     tau=0.3: P 0.00-0.44 R 0.00-0.49 FAR 0.0-96.5 | le6+R>0 1/9 le1+R>0 1/9
+     tau=0.5: P 0.00-0.36 R 0.00-0.31 FAR 0.0-19.9 | le6+R>0 0/9 le1+R>0 0/9
+   gb: auprc 0.009-0.117 CIprev=8/9 dBcanary=5/9 dBpersistence=4/9 far-grid={'definition': 'point = (fold, model, tau) pada 5 tau grid pra-reg, semua fold', 'n_points': 45, 'FARle6_recall_pos': 0, 'FARle1_recall_pos': 0}
+     tau=0.05: P 0.00-0.14 R 0.01-0.56 FAR 43.2-510.2 | le6+R>0 0/9 le1+R>0 0/9
+     tau=0.1: P 0.00-0.14 R 0.00-0.56 FAR 7.8-243.2 | le6+R>0 0/9 le1+R>0 0/9
+     tau=0.2: P 0.00-0.13 R 0.00-0.53 FAR 3.7-138.7 | le6+R>0 0/9 le1+R>0 0/9
+     tau=0.3: P 0.00-0.23 R 0.00-0.42 FAR 3.2-90.8 | le6+R>0 0/9 le1+R>0 0/9
+     tau=0.5: P 0.00-0.17 R 0.00-0.04 FAR 1.2-55.5 | le6+R>0 0/9 le1+R>0 0/9
+   lr: auprc 0.015-0.100 CIprev=8/9 dBcanary=5/9 dBpersistence=4/9 far-grid={'definition': 'point = (fold, model, tau) pada 5 tau grid pra-reg, semua fold', 'n_points': 45, 'FARle6_recall_pos': 0, 'FARle1_recall_pos': 0}
+     tau=0.05: P 0.01-0.10 R 0.33-1.00 FAR 1122.0-1440.0 | le6+R>0 0/9 le1+R>0 0/9
+     tau=0.1: P 0.01-0.10 R 0.29-1.00 FAR 934.1-1440.0 | le6+R>0 0/9 le1+R>0 0/9
+     tau=0.2: P 0.01-0.10 R 0.18-1.00 FAR 378.9-1432.1 | le6+R>0 0/9 le1+R>0 0/9
+     tau=0.3: P 0.00-0.10 R 0.08-1.00 FAR 108.7-1347.1 | le6+R>0 0/9 le1+R>0 0/9
+     tau=0.5: P 0.00-0.09 R 0.00-1.00 FAR 25.6-1084.4 | le6+R>0 0/9 le1+R>0 0/9
+-- stuck_k2: folds=4 underpowered=[]
+   rf: auprc 0.070-0.444 CIprev=1/4 dBcanary=4/4 dBpersistence=0/4 far-grid={'definition': 'point = (fold, model, tau) pada 5 tau grid pra-reg, semua fold', 'n_points': 20, 'FARle6_recall_pos': 3, 'FARle1_recall_pos': 2}
+     tau=0.05: P 0.01-0.33 R 0.36-1.00 FAR 266.8-812.3 | le6+R>0 0/4 le1+R>0 0/4
+     tau=0.1: P 0.02-0.37 R 0.15-0.99 FAR 200.7-448.0 | le6+R>0 0/4 le1+R>0 0/4
+     tau=0.2: P 0.00-0.43 R 0.00-0.83 FAR 26.8-217.8 | le6+R>0 0/4 le1+R>0 0/4
+     tau=0.3: P 0.00-0.58 R 0.00-0.40 FAR 6.3-79.5 | le6+R>0 0/4 le1+R>0 0/4
+     tau=0.5: P 0.00-1.00 R 0.00-0.01 FAR 0.0-11.2 | le6+R>0 3/4 le1+R>0 2/4
+     tau=q95_train: P 0.10-0.31 R 0.00-0.99 FAR 0.0-903.4 | le6+R>0 0/4 le1+R>0 0/4
+   gb: auprc 0.019-0.292 CIprev=2/4 dBcanary=4/4 dBpersistence=0/4 far-grid={'definition': 'point = (fold, model, tau) pada 5 tau grid pra-reg, semua fold', 'n_points': 20, 'FARle6_recall_pos': 0, 'FARle1_recall_pos': 0}
+     tau=0.05: P 0.02-0.25 R 0.27-0.85 FAR 175.4-346.6 | le6+R>0 0/4 le1+R>0 0/4
+     tau=0.1: P 0.02-0.33 R 0.13-0.68 FAR 94.0-259.7 | le6+R>0 0/4 le1+R>0 0/4
+     tau=0.2: P 0.00-0.34 R 0.00-0.51 FAR 40.5-165.0 | le6+R>0 0/4 le1+R>0 0/4
+     tau=0.3: P 0.00-0.34 R 0.00-0.37 FAR 21.0-124.5 | le6+R>0 0/4 le1+R>0 0/4
+     tau=0.5: P 0.00-0.22 R 0.00-0.15 FAR 6.9-70.6 | le6+R>0 0/4 le1+R>0 0/4
+     tau=q95_train: P 0.01-0.30 R 0.13-0.53 FAR 63.6-703.7 | le6+R>0 0/4 le1+R>0 0/4
+   lr: auprc 0.013-0.313 CIprev=1/4 dBcanary=4/4 dBpersistence=0/4 far-grid={'definition': 'point = (fold, model, tau) pada 5 tau grid pra-reg, semua fold', 'n_points': 20, 'FARle6_recall_pos': 0, 'FARle1_recall_pos': 0}
+     tau=0.05: P 0.01-0.28 R 0.98-1.00 FAR 551.1-1080.5 | le6+R>0 0/4 le1+R>0 0/4
+     tau=0.1: P 0.01-0.29 R 0.97-1.00 FAR 476.9-1004.4 | le6+R>0 0/4 le1+R>0 0/4
+     tau=0.2: P 0.01-0.33 R 0.91-1.00 FAR 405.2-902.3 | le6+R>0 0/4 le1+R>0 0/4
+     tau=0.3: P 0.01-0.34 R 0.76-1.00 FAR 366.9-847.1 | le6+R>0 0/4 le1+R>0 0/4
+     tau=0.5: P 0.02-0.33 R 0.60-1.00 FAR 329.3-804.9 | le6+R>0 0/4 le1+R>0 0/4
+     tau=q95_train: P 0.01-0.29 R 0.13-0.88 FAR 152.4-415.2 | le6+R>0 0/4 le1+R>0 0/4
+
+== RULE01 per class
+-- vib: folds=4 up=[] fp_rule=197
+     persistence: P 0.68-0.83 R 0.69-0.85 FAR 74.7-316.3 le6 0/4 le1 0/4 auprc 0.514-0.793
+     rule_display_t0minus1: P 0.87-0.95 R 0.28-0.60 FAR 10.0-49.9 le6 0/4 le1 0/4 auprc 0.412-0.737
+     hybrid_rule_and_persistence: P 0.87-0.95 R 0.28-0.60 FAR 10.0-49.9 le6 0/4 le1 0/4 auprc 0.412-0.737
+     canary_depth: (tanpa P/R/FAR) auprc 0.277-0.612
+-- ssi: folds=9 up=['F-7', 'F-9'] fp_rule=26
+     persistence: P 0.00-0.43 R 0.00-0.40 FAR 0.0-51.3 le6 2/9 le1 0/9 auprc 0.003-0.188
+     rule_display_t0minus1: P 0.00-0.50 R 0.00-0.03 FAR 0.0-7.3 le6 4/9 le1 3/9 auprc 0.003-0.068
+     hybrid_rule_and_persistence: P 0.00-0.67 R 0.00-0.01 FAR 0.0-3.7 le6 1/9 le1 1/9 auprc 0.003-0.065
+     canary_depth: (tanpa P/R/FAR) auprc 0.010-0.086
+-- shk: folds=9 up=[] fp_rule=121
+     persistence: P 0.00-0.70 R 0.00-0.58 FAR 3.2-54.0 le6 1/9 le1 0/9 auprc 0.006-0.443
+     rule_display_t0minus1: P 0.00-0.94 R 0.00-0.38 FAR 0.7-6.6 le6 7/9 le1 0/9 auprc 0.006-0.414
+     hybrid_rule_and_persistence: P 0.00-0.94 R 0.00-0.38 FAR 0.7-6.6 le6 7/9 le1 0/9 auprc 0.006-0.414
+     canary_depth: (tanpa P/R/FAR) auprc 0.012-0.079
+-- stuck_k1: folds=2 up=[] fp_rule=49
+     persistence: P 0.68-0.81 R 0.71-0.80 FAR 75.4-537.9 le6 0/2 le1 0/2 auprc 0.520-0.783
+     rule_display_t0minus1: P 0.92-0.97 R 0.45-0.60 FAR 8.3-61.0 le6 0/2 le1 0/2 auprc 0.489-0.847
+     hybrid_rule_and_persistence: P 0.92-0.97 R 0.45-0.60 FAR 8.3-61.0 le6 0/2 le1 0/2 auprc 0.489-0.847
+     canary_depth: (tanpa P/R/FAR) auprc 0.410-0.769
+     rule_E1_2of3: P 0.05-0.55 R 0.01-0.03 FAR 64.7-65.0 le6 0/2 le1 0/2 auprc 0.134-0.666
+     hybrid_E1_and_persistence: P 0.00-0.37 R 0.00-0.01 FAR 6.2-53.6 le6 0/2 le1 0/2 auprc 0.135-0.666
+-- hyd_ki: folds=9 up=[] fp_rule=2091
+     persistence: P 0.61-0.90 R 0.61-0.88 FAR 32.2-109.7 le6 0/9 le1 0/9 auprc 0.419-0.811
+     rule_display_t0minus1: P 0.62-0.89 R 0.66-0.93 FAR 38.7-132.1 le6 0/9 le1 0/9 auprc 0.462-0.835
+     hybrid_rule_and_persistence: P 0.72-0.95 R 0.52-0.87 FAR 14.6-58.4 le6 0/9 le1 0/9 auprc 0.436-0.849
+     canary_depth: (tanpa P/R/FAR) auprc 0.081-0.512
+
+== RULE02 stuck onset op aggregate
+   persistence_horizon {"P": {"min": 1.0, "median": 1.0, "max": 1.0, "n": 4}, "R": {"min": 0.8231511254019293, "median": 0.8500232537934347, "max": 0.8795336787564767, "n": 4}, "FAR": {"min": 0.0, "median": 0.0, "max": 0.0, "n": 4}, "n_FARle6_recall_pos": 4, "n_FARle1_recall_pos": 4, "fp_alarm_total": 0, "B1": {"min": 0.9298245614035088, "median": 0.9513574660633484, "max": 0.967032967032967, "n": 4}, "TLead_median": {"min": 1.0, "median": 1.0, "max": 3.0, "n": 4}}
+   persistence_event {"P": {"min": 0.5, "median": 0.5, "max": 0.75, "n": 3}, "R": {"min": 0.0, "median": 0.007104372843880283, "max": 0.01929260450160772, "n": 4}, "FAR": {"min": 0.0, "median": 0.10579294283866382, "max": 2.926829268292683, "n": 4}, "n_FARle6_recall_pos": 3, "n_FARle1_recall_pos": 2, "fp_alarm_total": 11, "B1": {"min": 0.0, "median": 0.050510892616155774, "max": 0.11538461538461539, "n": 4}, "TLead_median": {"min": 4.5, "median": 7.0, "max": 8.5, "n": 3}}
+   rule_E1_2of3 {"P": {"min": 0.0, "median": 0.20639317517503908, "max": 0.43548387096774194, "n": 4}, "R": {"min": 0.0, "median": 0.03167581283215898, "max": 0.0536779324055666, "n": 4}, "FAR": {"min": 2.0865620865620866, "median": 14.23005910682118, "max": 28.982173663024724, "n": 4}, "n_FARle6_recall_pos": 1, "n_FARle1_recall_pos": 0, "fp_alarm_total": 422, "B1": {"min": 0.0, "median": 0.03083075335397317, "max": 0.06593406593406594, "n": 4}, "TLead_median": {"min": 1.0, "median": 1.0, "max": 5.0, "n": 3}}
+
+== STAT hyd_ki: {"P": {"min": 0.614519427402863, "median": 0.7114093959731543, "max": 0.8986039676708303, "n": 9}, "R": {"min": 0.6170431211498973, "median": 0.7019867549668874, "max": 0.9223227752639518, "n": 9}, "FAR": {"min": 32.38064200749552, "median": 67.52453653217012, "max": 110.71498530852105, "n": 9}, "auprc": {"min": 0.4245, "median": 0.5415, "max": 0.8426, "n": 9}, "ci95_lo_min": 0.2662, "ci95_hi_max": 0.9146, "dB_pos_folds": 9, "delay_median_min": {"min": 0.0, "median": 0.0, "max": 3.5, "n": 9}, "pct_detected_within_H10": {"min": 0.3157894736842105, "median": 0.5757575757575758, "max": 0.65384615
+
+== STAT stuck_E2: {"P": {"min": 0.0, "median": 0.167320110701107, "max": 0.48717948717948717, "n": 4}, "R": {"min": 0.0, "median": 0.06723763602701227, "max": 0.15109343936381708, "n": 4}, "FAR": {"min": 2.3587223587223587, "median": 37.11678999773584, "max": 73.58885017421603, "n": 4}, "n_FARle6_recall_pos": 0, "n_FARle1_recall_pos": 0, "auprc": {"min": 0.0073, "median": 0.1258, "max": 0.3244, "n": 4}, "ci95_contains_prev": 4, "recall_at_H": {"min": 0.0, "median": 0.14621893178212586, "max": 0.18055555555555555, "n": 4}, "TLead_median": {"min": 2.5, "median": 7.0, "max": 8.0, "n": 3}, "e0_literal_recall_H": {"
+
+== STAT tool_wear part_C by target: {"1.0": {"n_tools": 4, "n_detected_R02": 4, "fp_R01": {"min": 1, "median": 2.0, "max": 3, "n": 4}, "TLead_s": {"min": 20.0, "median": 24.5, "max": 36.0, "n": 4}, "pct_R02_alarmed": {"min": 3.3, "median": 5.75, "max": 6.9, "n": 4}}, "0.2": {"n_tools": 4, "n_detected_R02": 4, "fp_R01": {"min": 1, "median": 2.0, "max": 3, "n": 4}, "TLead_s": {"min": 20.0, "median": 24.5, "max": 36.0, "n": 4}, "pct_R02_alarmed": {"min": 3.3, "median": 4.9, "max": 6.9, "n": 4}}}
+
+== FP for B3: {"vib": {"fp_rule_display_total": 197, "unit": "fold LOWO gabungan, t0-1 strict-past"}, "ssi": {"fp_rule_display_total": 26}, "shk": {"fp_rule_display_total": 121}, "stuck_k1": {"fp_rule_display_total": 49}, "hyd_ki": {"fp_rule_display_total": 2091, "note": "rule = PEMBENTUK LABEL (tautologi) -> FP = beban alarm sistem hari-ini"}, "stuck_k2": {"fp_E1_alarm_total": 422, "fp_persistence_event_total": 11, "fp_persistence_horizon_total": 0}, "hyd_kii": {"fp_rule_zpit_evalrows": 0, "note": "alarm dlm blok episode Dibuang dari baris eval -> FP eval=0 BY CONSTRUCTION; TLead=0 (deteksi saat-kejadian); n_episode_minutes=1348"}, "tool_wear": {"fp_R01_partB_range": [42.857, 58.571], "fp_R01_partC": {"1.0": {"min": 1, "median": 2.0, "max": 3, "n": 4}, "0.2": {"min": 1, "median": 2.0, "max": 3, "n": 4}}, "note": "part B kalibrasi 5/27 |z|>3 = FP/alat R01; part C = titik FAR-terkalibrasi per target"}, "bit_wear": {"fp": null, "note": "P/R/FAR tidak dihitung E_RULE/E_STAT (field tidak ada) -> LAPISAN A P/R/FAR = BELUM TERUKUR"}}

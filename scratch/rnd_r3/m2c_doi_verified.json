@@ -1,0 +1,207 @@
+{
+  "generated_at": "2026-10-27T04:47:20",
+  "by_title": [
+    {
+      "label": "Wang & Markert filter bank VMD",
+      "title_query": "Filter bank property of variational mode decomposition and its applications",
+      "hits": [
+        {
+          "doi": "10.1016/j.sigpro.2015.09.041",
+          "title": "Filter bank property of variational mode decomposition and its applications",
+          "first_author": "Wang Yanxue",
+          "year": 2016,
+          "container": "Signal Processing"
+        },
+        {
+          "doi": "10.2139/ssrn.4765634",
+          "title": "A General Method for Mode Decomposition on Additive Mixture: Generalized Variational Mode Decomposition and its Sequentialization",
+          "first_author": "chen wei",
+          "year": 2024,
+          "container": ""
+        },
+        {
+          "doi": "10.1109/tsp.2011.2106779",
+          "title": "Filter Bank Property of Multivariate Empirical Mode Decomposition",
+          "first_author": "ur Rehman Naveed",
+          "year": 2011,
+          "container": "IEEE Transactions on Signal Processing"
+        }
+      ]
+    },
+    {
+      "label": "Yan Gao Chen wavelets rotary review",
+      "title_query": "Wavelets for fault diagnosis of rotary machines: A review with applications",
+      "hits": [
+        {
+          "doi": "10.1016/j.sigpro.2013.04.015",
+          "title": "Wavelets for fault diagnosis of rotary machines: A review with applications",
+          "first_author": "Yan Ruqiang",
+          "year": 2014,
+          "container": "Signal Processing"
+        },
+        {
+          "doi": "10.4995/thesis/10251/231881",
+          "title": "Wavelets and Time-Frequency Analysis Technique for Fault Diagnosis in Electrical Machines",
+          "first_author": "Ramezanzadeh Nasrin",
+          "year": null,
+          "container": ""
+        },
+        {
+          "doi": "10.3390/machines11111012",
+          "title": "Multi-Stage Approach Using Convolutional Triplet Network and Ensemble Model for Fault Diagnosis in Oil Plant Rotary Machines",
+          "first_author": "Lee Seungjoo",
+          "year": 2023,
+          "container": "Machines"
+        }
+      ]
+    },
+    {
+      "label": "Xi et al numerosity reduction",
+      "title_query": "Fast time series classification using numerosity reduction",
+      "hits": [
+        {
+          "doi": "10.1145/1143844.1143974",
+          "title": "Fast time series classification using numerosity reduction",
+          "first_author": "Xi Xiaopeng",
+          "year": 2006,
+          "container": "Proceedings of the 23rd international conference on Machine learning  - ICML '06"
+        },
+        {
+          "doi": "10.2139/ssrn.4690889",
+          "title": "Fast Classification of Large Time Series Datasets",
+          "first_author": "Muhammad Fuad Muhammad Marwan",
+          "year": 2024,
+          "container": ""
+        },
+        {
+          "doi": "10.15242/iie.e0414072",
+          "title": "A Fast Time Series Classification using Shapelets",
+          "first_author": null,
+          "year": 2014,
+          "container": "International conference on Intelligent Systems, Data Mining and Information Technology (ICIDIT\u20192014) April 21-22, 2014 Bangkok (Thailand)"
+        }
+      ]
+    },
+    {
+      "label": "Niculescu-Mizil & Caruana calibration",
+      "title_query": "Predicting good probabilities with supervised learning",
+      "hits": [
+        {
+          "doi": "10.1145/1102351.1102430",
+          "title": "Predicting good probabilities with supervised learning",
+          "first_author": "Niculescu-Mizil Alexandru",
+          "year": 2005,
+          "container": "Proceedings of the 22nd international conference on Machine learning  - ICML '05"
+        },
+        {
+          "doi": "10.1021/acs.accounts.0c00770.s001",
+          "title": "Predicting Reaction Yields via Supervised Learning",
+          "first_author": null,
+          "year": null,
+          "container": ""
+        },
+        {
+          "doi": "10.70534/boph9364",
+          "title": "Combining Mechanistic Modeling and Deep Learning for Predicting Survival Probabilities in Oncology",
+          "first_author": "Alidoost Mohammadali",
+          "year": 2026,
+          "container": "Combining Mechanistic Modeling and Deep Learning for Predicting Survival Probabilities in Oncology"
+        }
+      ]
+    },
+    {
+      "label": "Smith Randall 2015 rolling element comb",
+      "title_query": "Rolling element bearing diagnostics using the Case Western Reserve University data",
+      "hits": [
+        {
+          "doi": "10.1016/j.ymssp.2015.04.021",
+          "title": "Rolling element bearing diagnostics using the Case Western Reserve University data: A benchmark study",
+          "first_author": "Smith Wade A.",
+          "year": 2015,
+          "container": "Mechanical Systems and Signal Processing"
+        },
+        {
+          "doi": "10.70675/48397afbz9356z4014z838ez675820cf8b7d",
+          "title": "Sparse representations in vibration-based rolling element bearing diagnostics",
+          "first_author": "Xin Ge",
+          "year": null,
+          "container": ""
+        },
+        {
+          "doi": "10.1109/access.2021.3128669",
+          "title": "Machine Learning Based Bearing Fault Diagnosis Using the Case Western Reserve University Data: A Review",
+          "first_author": "Zhang Xiao",
+          "year": 2021,
+          "container": "IEEE Access"
+        }
+      ]
+    }
+  ],
+  "verified": [
+    {
+      "label": "stick-slip pattern recognition 2022",
+      "doi": "10.1016/j.measurement.2022.112034",
+      "crossref_http": 200,
+      "title": "Pattern recognition of stick-slip vibration in combined signals of DrillString vibration",
+      "first_author": "Li Yafeng",
+      "year": 2022,
+      "container": "Measurement",
+      "volume": "204",
+      "page": "112034",
+      "type": "journal-article",
+      "status": "CROSSREF_OK",
+      "resolve_http": 200,
+      "final_url": "https://linkinghub.elsevier.com/retrieve/pii/S0263224122012301",
+      "first_author_full": "Li Yafeng"
+    },
+    {
+      "label": "MWD mud pulse denoising 2020",
+      "doi": "10.2118/204454-pa",
+      "crossref_http": 200,
+      "title": "Measurement While Drilling Mud Pulse Signal Denoising and Extraction Approach Based on Particle-Swarm-Optimized Time-Varying Filtering Empirical Mode Decomposition",
+      "first_author": "Zhong Xianyou",
+      "year": 2021,
+      "container": "SPE Drilling &amp; Completion",
+      "volume": "36",
+      "page": "483-493",
+      "type": "journal-article",
+      "status": "CROSSREF_OK",
+      "resolve_http": 403,
+      "final_url": "https://onepetro.org/DC/article/36/03/483/454761/Measurement-While-Drilling-Mud-Pulse-Signal",
+      "note": "HTTPError (penerbit menolak bot)",
+      "first_author_full": "Zhong Xianyou"
+    },
+    {
+      "label": "Bayesian optimized VMD denoising 2023",
+      "doi": "10.1109/tim.2023.3264044",
+      "crossref_http": 200,
+      "title": "A Bayesian Optimized Variational Mode Decomposition-Based Denoising Method for Measurement While Drilling Signal of Down-the-Hole Drilling",
+      "first_author": "Ding Weijie",
+      "year": 2023,
+      "container": "IEEE Transactions on Instrumentation and Measurement",
+      "volume": "72",
+      "page": "1-14",
+      "type": "journal-article",
+      "status": "CROSSREF_OK",
+      "resolve_http": 202,
+      "final_url": "https://ieeexplore.ieee.org/document/10091232/",
+      "first_author_full": "Ding Weijie"
+    },
+    {
+      "label": "drilling stick-slip EMD identification 2020",
+      "doi": "10.23919/ccc50068.2020.9189647",
+      "crossref_http": 200,
+      "title": "Identification of drilling stick-slip vibration conditions based on Empirical Mode Decomposition threshold denoising and Support Vector Machine",
+      "first_author": "Zhang Ke",
+      "year": 2020,
+      "container": "2020 39th Chinese Control Conference (CCC)",
+      "volume": null,
+      "page": "1116-1120",
+      "type": "proceedings-article",
+      "status": "CROSSREF_OK",
+      "resolve_http": 202,
+      "final_url": "https://ieeexplore.ieee.org/document/9189647/",
+      "first_author_full": "Zhang Ke"
+    }
+  ]
+}

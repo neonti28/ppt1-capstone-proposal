@@ -1,0 +1,57 @@
+=== A. KRITERIA PENERIMAAN ===
+PASS  kategori Man: 4 sebab (minimal 3)
+PASS  kategori Method: 5 sebab (minimal 3)
+PASS  kategori Machine: 4 sebab (minimal 3)
+PASS  kategori Material: 4 sebab (minimal 3)
+PASS  kategori Measurement: 5 sebab (minimal 3)
+PASS  kategori Environment: 5 sebab (minimal 3)
+PASS  jumlah kategori 6M = 6
+PASS  sebab dengan rujukan berkas/JSON: 27 dari 27 (minimal 8)
+PASS  seluruh sebab punya status sah (pelanggaran: [])
+PASS  hipotesis ditandai eksplisit: 2 sebab HIPOTESIS
+PASS  hipotesis Me4 dibahas beserta uji pembeda di dokumen
+PASS  hipotesis Ma3 dibahas beserta uji pembeda di dokumen
+PASS  id sebab unik (27 sebab)
+
+=== B. ANTI-HOAKS: BERKAS DAN BARIS YANG DIRUJUK ===
+PASS  seluruh berkas rujukan ada di disk (hilang: [])
+PASS  seluruh rujukan "baris N" berada di dalam rentang berkas (luar rentang: [])
+PASS  13 kunci JSON sederhana teresolusi (gagal: [])
+
+=== C. KONSISTENSI ANGKA DENGAN SUMBER PRIMER ===
+PASS  n_kejadian JSON 884 == CSV 884
+PASS  bha_relevant cocok: {'no': 263, 'yes': 50, 'uncertain': 571}
+PASS  total menit 73500 == hitung ulang 73500
+PASS  rasio FAR 119.5700 == JSON 119.57
+PASS  rasio FAR dibulatkan 1 desimal = 119.6 (klaim kartu 119,6x)
+PASS  ssi nodata 22385/35906 = 62.34%
+PASS  jumlah head 27
+PASS  slot alarm otomatis 0
+PASS  F-14 nodata atas grid = 87.80%
+PASS  angka 96,6% memang tidak tereproduksi dari JSON (dicatat sebagai temuan)
+
+=== D. KELENGKAPAN DOKUMEN ===
+PASS  dokumen memuat cabang Man
+PASS  dokumen memuat cabang Method
+PASS  dokumen memuat cabang Machine
+PASS  dokumen memuat cabang Material
+PASS  dokumen memuat cabang Measurement
+PASS  dokumen memuat cabang Environment
+PASS  dokumen memuat unsur/tabel 5W1H
+PASS  dokumen memuat unsur/tabel G1
+PASS  dokumen memuat unsur/tabel What
+PASS  dokumen memuat unsur/tabel Why
+PASS  dokumen memuat unsur/tabel Who
+PASS  dokumen memuat unsur/tabel Where
+PASS  dokumen memuat unsur/tabel When
+PASS  dokumen memuat unsur/tabel How
+PASS  dokumen memuat baris Riset pendahuluan
+PASS  dokumen bebas em-dash
+PASS  dokumen bebas aksara CJK
+
+=== RINGKASAN ===
+sebab: 27 | per kategori: {'Man': 4, 'Method': 5, 'Machine': 4, 'Material': 4, 'Measurement': 5, 'Environment': 5}
+status: {'TERBUKTI-DOKUMEN': 10, 'TERBUKTI': 15, 'HIPOTESIS': 2}
+berkas hilang: 0 | baris di luar rentang: 0 | kunci JSON gagal: 0
+GAGAL: 0
+SEMUA GERBANG LULUS

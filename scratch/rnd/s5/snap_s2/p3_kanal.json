@@ -1,0 +1,220 @@
+{
+ "vib": {
+  "kanal_bins": [
+   "BPOS",
+   "HKLD",
+   "ROP",
+   "RPM",
+   "SPPA",
+   "SWOB",
+   "TFLO",
+   "TQA",
+   "crpm",
+   "dbtm",
+   "depth",
+   "spm"
+  ],
+  "kolom_bins": [
+   "ts_bin",
+   "rows",
+   "rows_drill",
+   "TQA_mean",
+   "TQA_std",
+   "SPPA_mean",
+   "SPPA_std",
+   "TFLO_mean",
+   "TFLO_std",
+   "RPM_mean",
+   "RPM_std",
+   "SWOB_mean",
+   "SWOB_std",
+   "HKLD_mean",
+   "HKLD_std",
+   "ROP_mean",
+   "ROP_std",
+   "BPOS_mean",
+   "BPOS_std",
+   "depth_mean",
+   "dbtm_mean",
+   "stuck_max",
+   "stuck_n",
+   "vib_max",
+   "vib_n",
+   "shk_max",
+   "shk_n",
+   "crpm_mean",
+   "crpm_min",
+   "crpm_max",
+   "crpm_n",
+   "spm_mean"
+  ],
+  "n_kolom_bins": 32,
+  "persistence": {
+   "n": 23922,
+   "cocok": 21302,
+   "fraksi_cocok": 0.890477,
+   "prev_sum": 5499,
+   "y_sum": 5429
+  },
+  "auc_top": [
+   {
+    "kolom": "SPPA_last",
+    "auc": 0.7722
+   },
+   {
+    "kolom": "SPPA_mean",
+    "auc": 0.7718
+   },
+   {
+    "kolom": "HKLD_last",
+    "auc": 0.762
+   },
+   {
+    "kolom": "HKLD_mean",
+    "auc": 0.7617
+   },
+   {
+    "kolom": "TFLO_last",
+    "auc": 0.6611
+   },
+   {
+    "kolom": "TFLO_mean",
+    "auc": 0.6608
+   },
+   {
+    "kolom": "TQA_std",
+    "auc": 0.6342
+   },
+   {
+    "kolom": "SWOB_last",
+    "auc": 0.6309
+   },
+   {
+    "kolom": "SWOB_mean",
+    "auc": 0.6306
+   },
+   {
+    "kolom": "TQA_last",
+    "auc": 0.6224
+   },
+   {
+    "kolom": "TQA_mean",
+    "auc": 0.6221
+   },
+   {
+    "kolom": "SPPA_std",
+    "auc": 0.6095
+   }
+  ],
+  "n_fitur": 55
+ },
+ "ssi": {
+  "kanal_bins": [
+   "BPOS",
+   "HKLD",
+   "ROP",
+   "RPM",
+   "SPPA",
+   "SWOB",
+   "TFLO",
+   "TQA",
+   "crpm",
+   "dbtm",
+   "depth",
+   "spm"
+  ],
+  "kolom_bins": [
+   "ts_bin",
+   "rows",
+   "rows_drill",
+   "TQA_mean",
+   "TQA_std",
+   "SPPA_mean",
+   "SPPA_std",
+   "TFLO_mean",
+   "TFLO_std",
+   "RPM_mean",
+   "RPM_std",
+   "SWOB_mean",
+   "SWOB_std",
+   "HKLD_mean",
+   "HKLD_std",
+   "ROP_mean",
+   "ROP_std",
+   "BPOS_mean",
+   "BPOS_std",
+   "depth_mean",
+   "dbtm_mean",
+   "stuck_max",
+   "stuck_n",
+   "vib_max",
+   "vib_n",
+   "shk_max",
+   "shk_n",
+   "crpm_mean",
+   "crpm_min",
+   "crpm_max",
+   "crpm_n",
+   "spm_mean"
+  ],
+  "n_kolom_bins": 32,
+  "persistence": {
+   "n": 35906,
+   "cocok": 35148,
+   "fraksi_cocok": 0.978889,
+   "prev_sum": 352,
+   "y_sum": 607
+  },
+  "auc_top": [
+   {
+    "kolom": "RPM_last",
+    "auc": 0.3215
+   },
+   {
+    "kolom": "TFLO_last",
+    "auc": 0.325
+   },
+   {
+    "kolom": "SPPA_last",
+    "auc": 0.335
+   },
+   {
+    "kolom": "TFLO_mean",
+    "auc": 0.3387
+   },
+   {
+    "kolom": "BPOS_mean",
+    "auc": 0.3523
+   },
+   {
+    "kolom": "SPPA_mean",
+    "auc": 0.3579
+   },
+   {
+    "kolom": "RPM_mean",
+    "auc": 0.3653
+   },
+   {
+    "kolom": "HKLD_last",
+    "auc": 0.3835
+   },
+   {
+    "kolom": "HKLD_mean",
+    "auc": 0.3877
+   },
+   {
+    "kolom": "depth_slope",
+    "auc": 0.3915
+   },
+   {
+    "kolom": "depth_std",
+    "auc": 0.3954
+   },
+   {
+    "kolom": "BPOS_last",
+    "auc": 0.3963
+   }
+  ],
+  "n_fitur": 55
+ }
+}

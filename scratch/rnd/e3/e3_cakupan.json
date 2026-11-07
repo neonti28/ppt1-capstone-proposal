@@ -1,0 +1,95 @@
+{
+  "deskripsi": "Cakupan = jumlah jendela teramati / rentang menit kalender well.",
+  "per_fold": [
+    {
+      "fold": "LOWO_test_F-10",
+      "test_well": "F-10",
+      "n_jendela": 7571,
+      "menit_teramati": 7571.0,
+      "menit_kalender": 11249.0,
+      "fraksi": 0.673,
+      "well_start": 20672177,
+      "well_end": 20683425
+    },
+    {
+      "fold": "LOWO_test_F-12",
+      "test_well": "F-12",
+      "n_jendela": 7390,
+      "menit_teramati": 7390.0,
+      "menit_kalender": 86454.0,
+      "fraksi": 0.0855,
+      "well_start": 19712445,
+      "well_end": 19798898
+    },
+    {
+      "fold": "LOWO_test_F-14",
+      "test_well": "F-14",
+      "n_jendela": 10401,
+      "menit_teramati": 10401.0,
+      "menit_kalender": 317679.0,
+      "fraksi": 0.0327,
+      "well_start": 19906551,
+      "well_end": 20224229
+    },
+    {
+      "fold": "LOWO_test_F-15A",
+      "test_well": "F-15A",
+      "n_jendela": 6156,
+      "menit_teramati": 6156.0,
+      "menit_kalender": 32141.0,
+      "fraksi": 0.1915,
+      "well_start": 20482801,
+      "well_end": 20514941
+    },
+    {
+      "fold": "LOWO_test_F-15_S",
+      "test_well": "F-15_S",
+      "n_jendela": 8355,
+      "menit_teramati": 8355.0,
+      "menit_kalender": 92488.0,
+      "fraksi": 0.0903,
+      "well_start": 20371637,
+      "well_end": 20464124
+    },
+    {
+      "fold": "LOWO_test_F-5",
+      "test_well": "F-5",
+      "n_jendela": 6332,
+      "menit_teramati": 6332.0,
+      "menit_kalender": 369549.0,
+      "fraksi": 0.0171,
+      "well_start": 19919815,
+      "well_end": 20289363
+    },
+    {
+      "fold": "LOWO_test_F-7",
+      "test_well": "F-7",
+      "n_jendela": 2482,
+      "menit_teramati": 2482.0,
+      "menit_kalender": 23011.0,
+      "fraksi": 0.1079,
+      "well_start": 19833850,
+      "well_end": 19856860
+    },
+    {
+      "fold": "LOWO_test_F-9",
+      "test_well": "F-9",
+      "n_jendela": 1616,
+      "menit_teramati": 1616.0,
+      "menit_kalender": 22858.0,
+      "fraksi": 0.0707,
+      "well_start": 19937626,
+      "well_end": 19960483
+    },
+    {
+      "fold": "LOWO_test_F-9_A",
+      "test_well": "F-9_A",
+      "n_jendela": 2206,
+      "menit_teramati": 2206.0,
+      "menit_kalender": 7344.0,
+      "fraksi": 0.3004,
+      "well_start": 20776616,
+      "well_end": 20783959
+    }
+  ]
+}

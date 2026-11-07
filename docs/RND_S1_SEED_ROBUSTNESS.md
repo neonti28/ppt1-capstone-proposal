@@ -215,7 +215,7 @@ Kesimpulan 6.5, dan ini yang mengubah pembacaan bagian 6.4: masalahnya bukan han
 
 ---
 
-## 7. Banding dengan konfigurasi engine pra-riset (V9)
+## 7. Banding dengan konfigurasi detektor pra-riset (V9)
 
 Sumber: scratch/v9_i1/v9_i1_RESULTS.json dan docs/V9_EVAL_C_LAYERC.md. Tidak ada run ulang untuk V9; yang dipakai adalah angka yang sudah ada di repo. Satu hal wajib disebut lebih dulu: segmen hyd_ki pada V9 hanya 10401 baris (well F-14) dengan 865 baris positif, sedangkan S1 memakai 9 fold LOWO dengan 52509 baris. Jadi membandingkan angka agregat 9 fold dengan angka satu well adalah perbandingan yang tidak sah, dan yang dilakukan di sini adalah perbandingan pada segmen yang sama, yaitu F-14.
 

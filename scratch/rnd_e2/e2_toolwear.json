@@ -1,0 +1,95 @@
+{
+  "path": "/mnt/d/Capstone 1(v2)/scratch/v6_e1/toolwear_windows.csv",
+  "exists": true,
+  "n_cols": 32,
+  "n_rows": 469,
+  "cols": [
+    "X_mean",
+    "X_std",
+    "X_rms",
+    "X_kurt",
+    "X_skew",
+    "X_p2p",
+    "X_crest",
+    "X_zcr",
+    "X_fdom",
+    "Y_mean",
+    "Y_std",
+    "Y_rms",
+    "Y_kurt",
+    "Y_skew",
+    "Y_p2p",
+    "Y_crest",
+    "Y_zcr",
+    "Y_fdom",
+    "Z_mean",
+    "Z_std",
+    "Z_rms",
+    "Z_kurt",
+    "Z_skew",
+    "Z_p2p",
+    "Z_crest",
+    "Z_zcr",
+    "Z_fdom",
+    "tool",
+    "run",
+    "file",
+    "start_sample",
+    "y"
+  ],
+  "unit_col": "tool",
+  "per_unit": {
+    "T01": 120,
+    "T02": 112,
+    "T03": 121,
+    "T04": 116
+  },
+  "n_units": 4,
+  "label_cols": [
+    "Y_mean",
+    "Y_std",
+    "Y_rms",
+    "Y_kurt",
+    "Y_skew",
+    "Y_p2p",
+    "Y_crest",
+    "Y_zcr",
+    "Y_fdom"
+  ],
+  "label_counts": {
+    "Y_mean": 469,
+    "Y_std": 469,
+    "Y_rms": 469,
+    "Y_kurt": 469,
+    "Y_skew": 469,
+    "Y_p2p": 469,
+    "Y_crest": 469,
+    "Y_zcr": 469,
+    "Y_fdom": 469
+  },
+  "json_sources": {
+    "v9_e_stat_03_tool_wear_RESULTS.json": {
+      "keys": [
+        "claim_task",
+        "engine",
+        "jenis_engine",
+        "n_perm",
+        "part_A_change_point",
+        "part_B_within_tool_calibration",
+        "part_C_operating_far_calibrated",
+        "part_D_ranking_auprc",
+        "seed",
+        "summary"
+      ],
+      "size": 11693
+    },
+    "v9_e_RULE_03_bitwear_toolwear_results.json": {
+      "keys": [
+        "bitwear_k1",
+        "meta",
+        "toolwear_kii"
+      ],
+      "size": 13863
+    }
+  }
+}

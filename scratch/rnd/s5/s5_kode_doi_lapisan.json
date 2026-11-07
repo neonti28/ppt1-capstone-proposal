@@ -1,0 +1,156 @@
+{
+ "S1": {
+  "n_kode_ledger": 84,
+  "n_kode_dikutip": 0,
+  "kode_hilang": [],
+  "n_tak_dikutip": 84,
+  "tak_dikutip": [
+   "S1-001",
+   "S1-002",
+   "S1-003",
+   "S1-004",
+   "S1-005",
+   "S1-006",
+   "S1-007",
+   "S1-008",
+   "S1-009",
+   "S1-010",
+   "S1-011",
+   "S1-012"
+  ],
+  "dois": [],
+  "urls": [],
+  "literatur": [],
+  "lapisan": {
+   "A": {
+    "ada_judul": true,
+    "ada_pernyataan_belum": false
+   },
+   "B": {
+    "ada_judul": true,
+    "ada_pernyataan_belum": false
+   },
+   "C": {
+    "ada_judul": true,
+    "ada_pernyataan_belum": false
+   }
+  },
+  "em_dash": 0
+ },
+ "S2": {
+  "n_kode_ledger": 455,
+  "n_kode_dikutip": 0,
+  "kode_hilang": [],
+  "n_tak_dikutip": 455,
+  "tak_dikutip": [
+   "S2-001",
+   "S2-002",
+   "S2-003",
+   "S2-004",
+   "S2-005",
+   "S2-006",
+   "S2-007",
+   "S2-008",
+   "S2-009",
+   "S2-010",
+   "S2-011",
+   "S2-012"
+  ],
+  "dois": [],
+  "urls": [],
+  "literatur": [
+   "Label `y_vib` dibentuk dari kanal `vib_max` dengan ambang satu g, yaitu 32,17405 ft/s2 menurut API RP 7G. Kanal `vib` ti"
+  ],
+  "lapisan": {
+   "A": {
+    "ada_judul": true,
+    "ada_pernyataan_belum": false
+   },
+   "B": {
+    "ada_judul": true,
+    "ada_pernyataan_belum": true
+   },
+   "C": {
+    "ada_judul": true,
+    "ada_pernyataan_belum": false
+   }
+  },
+  "em_dash": 0
+ },
+ "S3": {
+  "n_kode_ledger": 92,
+  "n_kode_dikutip": 0,
+  "kode_hilang": [],
+  "n_tak_dikutip": 92,
+  "tak_dikutip": [
+   "S3-001",
+   "S3-002",
+   "S3-003",
+   "S3-004",
+   "S3-005",
+   "S3-006",
+   "S3-007",
+   "S3-008",
+   "S3-009",
+   "S3-010",
+   "S3-011",
+   "S3-012"
+  ],
+  "dois": [],
+  "urls": [],
+  "literatur": [],
+  "lapisan": {
+   "A": {
+    "ada_judul": true,
+    "ada_pernyataan_belum": false
+   },
+   "B": {
+    "ada_judul": true,
+    "ada_pernyataan_belum": true
+   },
+   "C": {
+    "ada_judul": true,
+    "ada_pernyataan_belum": false
+   }
+  },
+  "em_dash": 0
+ },
+ "S4": {
+  "n_kode_ledger": 95,
+  "n_kode_dikutip": 42,
+  "kode_hilang": [],
+  "n_tak_dikutip": 53,
+  "tak_dikutip": [
+   "S4-002",
+   "S4-038",
+   "S4-039",
+   "S4-040",
+   "S4-042",
+   "S4-043",
+   "S4-044",
+   "S4-045",
+   "S4-046",
+   "S4-047",
+   "S4-048",
+   "S4-049"
+  ],
+  "dois": [],
+  "urls": [],
+  "literatur": [],
+  "lapisan": {
+   "A": {
+    "ada_judul": true,
+    "ada_pernyataan_belum": false
+   },
+   "B": {
+    "ada_judul": true,
+    "ada_pernyataan_belum": false
+   },
+   "C": {
+    "ada_judul": true,
+    "ada_pernyataan_belum": false
+   }
+  },
+  "em_dash": 0
+ }
+}

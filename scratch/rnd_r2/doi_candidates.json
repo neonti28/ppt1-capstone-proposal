@@ -1,0 +1,80 @@
+{
+ "markov": [
+  {
+   "doi": "10.1201/b18127-12",
+   "title": "Integration of Reliability, Condition Monitoring, and Maintenance of Industrial Equipment",
+   "year": 2015,
+   "first": "?",
+   "container": "Integrated Reliability",
+   "type": "book-chapter"
+  },
+  {
+   "doi": "10.1201/b18127-5",
+   "title": "Role of Technological Inheritance Technique for Condition Monitoring and Maintenance of Industrial Equipment",
+   "year": 2015,
+   "first": "?",
+   "container": "Integrated Reliability",
+   "type": "book-chapter"
+  },
+  {
+   "doi": "10.2139/ssrn.4857315",
+   "title": "Optimization of Condition-Based Predictive Maintenance Schedule for Multi-State Systems: A Markov Decision Strategy",
+   "year": 2024,
+   "first": "Roy",
+   "container": "?",
+   "type": "posted-content"
+  }
+ ],
+ "hmm_drill": [
+  {
+   "doi": "10.1115/1.0003864v",
+   "title": "Modelling and Vibration Analysis of Drill String and Drilling Bit and Effect of Stick/slip Vibration on It Optimal Operation",
+   "year": 2021,
+   "first": "Makvandi",
+   "container": "?",
+   "type": "posted-content"
+  },
+  {
+   "doi": "10.2118/183417-ms",
+   "title": "Stick/Slip Vibration Management for RSS Drilling",
+   "year": 2016,
+   "first": "Kikuchi",
+   "container": "Abu Dhabi International Petroleum Exhibition &amp; Conference",
+   "type": "proceedings-article"
+  },
+  {
+   "doi": "10.3901/jme.2022.05.119",
+   "title": "Study on Axial-lateral-torsion Coupling Vibration Model and Stick-slip Characteristics of Drilling String in Ultra-HPHT Curved Wells",
+   "year": 2022,
+   "first": "?",
+   "container": "Journal of Mechanical Engineering",
+   "type": "journal-article"
+  }
+ ],
+ "rsf": [
+  {
+   "doi": "10.3390/math10162921",
+   "title": "Deep Learning-Based Remaining Useful Life Prediction Method with Transformer Module and Random Forest",
+   "year": 2022,
+   "first": "Zhao",
+   "container": "Mathematics",
+   "type": "journal-article"
+  },
+  {
+   "doi": "10.1109/cieec69682.2026.11572220",
+   "title": "Remaining Useful Life Prediction of Aero-Engines Using Ensemble Random Forest",
+   "year": 2026,
+   "first": "Chen",
+   "container": "2026 IEEE 9th International Electrical and Energy Conference (CIEEC)",
+   "type": "proceedings-article"
+  },
+  {
+   "doi": "10.71097/ijsat.v16.i3.7244",
+   "title": "A Comparative Study of Random Forest and LSTM Models for Battery Remaining Useful Life  Prediction",
+   "year": 2025,
+   "first": "Munhamoh",
+   "container": "International Journal on Science and Technology",
+   "type": "journal-article"
+  }
+ ]
+}

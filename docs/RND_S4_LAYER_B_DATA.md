@@ -2,7 +2,7 @@
 
 Kartu: `t_ad4e3f55` · Board: `rnd-algo-2026` · Tanggal: 2026-10-28 (WIB)
 Workspace: `/mnt/d/Capstone 1(v2)`
-Kebijakan pengikat: `docs/RND_EVALUATION_POLICY.md` (tiga lapisan A/B/C, tanpa gate biner, engine boleh berbeda antar kelas kerusakan)
+Kebijakan pengikat: `docs/RND_EVALUATION_POLICY.md` (tiga lapisan A/B/C, tanpa gate biner, detektor boleh berbeda antar kelas kerusakan)
 Artefak mentah: `scratch/rnd/s4/inventory.json`, `ddr_activity_stats.json`, `labels_duration.json`, `inventory_raw.json`, `ddr_downtime_table.json`, `ddr_downtime_records.jsonl`, `crosscheck.json`, `token_scan.json`
 Skrip: `scratch/rnd/s4/s4a_ddr_activity.py`, `s4b_labels_duration.py`, `s4c_inventory.py`, `s4d_downtime_table.py`, `s4e_crosscheck.py`, `s4f_merge.py`, `s4i_token_scan.py`
 
@@ -78,7 +78,7 @@ Path `data/volve/ddr.parquet`. 23.447 record pada 1.750 dari 1.759 laporan (`S4-
 Total interruption 3.577 record dan 8.343,253 jam (`S4-007`). Dua kode yang termasuk kerja maintenance, `repair` dan `maintain`, berjumlah 1.116 record dan 1.777,75 jam (`S4-008`, `S4-009`, `S4-010`). Record dengan `state = fail` berjumlah 480 dengan 1.265,5 jam dan median 2,0 jam (`S4-011`).
 
 **S4-C2. Label kejadian terkurasi dengan waktu mulai dan selesai.**
-Path `data/volve/labels_curated_v2.csv`. 884 kejadian, seluruhnya punya durasi valid (0 durasi nol, 0 durasi negatif, `S4-015`), total 1.225,0 jam, median 0,75 jam, p90 3,0 jam, maksimum 13,0 jam (`S4-013`, `S4-014`). Untuk 7 well yang dipakai engine: 671 kejadian dan 927,0 jam (`S4-016`). Subset `state_detail = equipment failure`: 770 kejadian, 1.071,5 jam (`S4-017`). Subset kegagalan beralasan (`category` selain `routine_no_failure_evidence`): 388 kejadian, 623,917 jam (`S4-018`).
+Path `data/volve/labels_curated_v2.csv`. 884 kejadian, seluruhnya punya durasi valid (0 durasi nol, 0 durasi negatif, `S4-015`), total 1.225,0 jam, median 0,75 jam, p90 3,0 jam, maksimum 13,0 jam (`S4-013`, `S4-014`). Untuk 7 well yang dipakai detektor: 671 kejadian dan 927,0 jam (`S4-016`). Subset `state_detail = equipment failure`: 770 kejadian, 1.071,5 jam (`S4-017`). Subset kegagalan beralasan (`category` selain `routine_no_failure_evidence`): 388 kejadian, 623,917 jam (`S4-018`).
 
 **S4-C3. Taksonomi kode kerja DDR sebagai pengganti kode work order.**
 64 kode (`S4-005`), dengan 10 kode interruption di atas. Ini bukan nomor work order, tetapi memberi kelas pekerjaan yang dapat dipakai sebagai penyebut dan pembilang beban maintenance.
@@ -124,7 +124,7 @@ Semua angka di bawah berasal dari `scratch/rnd/s4/inventory.json` bagian `metrik
 | B2 | Henti maintenance per kejadian | 310 kejadian, 562,75 jam, median 1,0 jam, p90 4,5 jam, maks 15,0 jam | record `interruption -- maintain` | beban pekerjaan maintenance terjadwal |
 | B3 | Beban maintenance gabungan | 1.116 kejadian, 1.777,75 jam, 0,6345 kejadian per laporan harian, 1,0107 jam per laporan harian (`S4-031`, `S4-032`) | 1.759 laporan harian | laju kerja maintenance yang harus dilayani tiap hari rig |
 | B4 | Henti kegagalan peralatan berlabel | 770 kejadian, 1.071,5 jam, median 0,75 jam, p90 3,0 jam | label `state_detail = equipment failure` | beban henti yang sudah punya label, siap dipakai sebagai target evaluasi |
-| B5 | Laju kejadian berlabel | 0,5026 kejadian per laporan harian (`S4-033`) | 884 kejadian / 1.759 laporan | kepadatan kejadian yang dapat dijadikan target engine |
+| B5 | Laju kejadian berlabel | 0,5026 kejadian per laporan harian (`S4-033`) | 884 kejadian / 1.759 laporan | kepadatan kejadian yang dapat dijadikan target detektor |
 | B6 | Cakupan jam henti berlabel | 0,1468 (`S4-019`) | 1.225,0 jam label / 8.343,253 jam interruption | 14,68 persen jam henti DDR sudah diberi label, sisanya belum, dan itu batas klaim |
 | B7 | Peringatan terhadap durasi henti | lead 11,5 menit H1 = 19,17 persen dari median henti repair 1,0 jam, dan 5,48 persen dari p90 3,5 jam (`S4-034`, `S4-035`) | lead R8/S1 (RUN-KITA) | peringatan datang jauh sebelum perbaikan selesai, tetapi hanya menutup seperlima durasi henti median |
 | B8 | Beban alarm per kejadian | H1 2,3974 alarm palsu per onset (935/390), rule 5,3974 (2105/390) (`S4-036`, `S4-037`) | FP dari R8, onset 390 | biaya perhatian per kejadian yang harus dibayar operator |
@@ -132,7 +132,7 @@ Semua angka di bawah berasal dari `scratch/rnd/s4/inventory.json` bagian `metrik
 Yang **tidak dapat** dihitung, dan penyebabnya terukur:
 
 1. **Rasio alarm per inspeksi.** Penyebutnya jadwal inspeksi, dan jadwal itu tidak ada (`S4-N3`: 0 kode `inspect`, 0 field jadwal). Angka 0 di sini bukan hasil ukur, melainkan ketiadaan penyebut.
-2. **Pengurangan pemeriksaan fisik.** Butuh jumlah pemeriksaan manual sebelum dan sesudah pemakaian engine. Tidak ada catatan pemeriksaan, sehingga selisihnya tidak dapat dibentuk.
+2. **Pengurangan pemeriksaan fisik.** Butuh jumlah pemeriksaan manual sebelum dan sesudah pemakaian detektor. Tidak ada catatan pemeriksaan, sehingga selisihnya tidak dapat dibentuk.
 3. **Jam orang yang dihemat.** Butuh durasi inspeksi per alarm. Tidak ada.
 4. **Nilai rupiah henti yang dihindari.** Butuh biaya per jam henti. Tidak ada (`S4-N1`).
 5. **Barrel tertunda.** Butuh data produksi. Tidak ada (`S4-N4`).
@@ -176,7 +176,7 @@ Batas yang harus dihormati: tarif rig harian bukan pengganti biaya perbaikan kom
 
 ## 7. NILAI TIGA LAPISAN SETELAH KARTU INI
 
-**Lapisan A, apakah deteksi bekerja.** Tidak berubah oleh kartu ini. Angka A tetap dari R8 dan S1 (FP, presisi, recall, FAR, lead per engine dan per kelas kerusakan). Kartu ini hanya menambah penyebut baru yang sah, yaitu jumlah kejadian maintenance nyata per laporan harian (0,6345).
+**Lapisan A, apakah deteksi bekerja.** Tidak berubah oleh kartu ini. Angka A tetap dari R8 dan S1 (FP, presisi, recall, FAR, lead per mode dan per kelas kerusakan). Kartu ini hanya menambah penyebut baru yang sah, yaitu jumlah kejadian maintenance nyata per laporan harian (0,6345).
 
 **Lapisan B, apakah deteksi memberi nilai maintenance.** Terukur sebagian, dan bagian yang terukur adalah yang selama ini disebut "belum terukur" tanpa pembedaan:
 

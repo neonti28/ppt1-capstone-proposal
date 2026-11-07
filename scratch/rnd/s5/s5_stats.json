@@ -1,0 +1,55 @@
+{
+ "S1": {
+  "header": "### 8.4 Daftar yang belum terverifikasi",
+  "n_butir": 8,
+  "sequ_declared": 10,
+  "em": 0,
+  "en": 0,
+  "baris": 279,
+  "byte": 25445,
+  "riset": [
+   "Riset pendahuluan: statistical-analysis, scikit-learn, scien"
+  ]
+ },
+ "S2": {
+  "header": "## 11. YANG BELUM TERVERIFIKASI",
+  "n_butir": 6,
+  "sequ_declared": null,
+  "em": 0,
+  "en": 0,
+  "baris": 311,
+  "byte": 24464,
+  "riset": [
+   "Riset pendahuluan: scikit-learn (dipakai nyata untuk `averag",
+   "Riset pendahuluan: statistical-power (dipakai untuk menghitu",
+   "Riset pendahuluan: verification-mandatory (setiap angka diba",
+   "Riset pendahuluan: sequentialthinking, 6 pikiran (`mcp__sequ"
+  ]
+ },
+ "S3": {
+  "header": "## 10. Yang belum terverifikasi",
+  "n_butir": 6,
+  "sequ_declared": null,
+  "em": 0,
+  "en": 0,
+  "baris": 218,
+  "byte": 21573,
+  "riset": [
+   "Riset pendahuluan: exploratory-data-analysis, scikit-learn, ",
+   "Riset pendahuluan: sequentialthinking, 5 pikiran (`mcp__sequ"
+  ]
+ },
+ "S4": {
+  "header": "## 9. BELUM TERVERIFIKASI",
+  "n_butir": 7,
+  "sequ_declared": null,
+  "em": 0,
+  "en": 0,
+  "baris": 207,
+  "byte": 23162,
+  "riset": [
+   "Riset pendahuluan: exploratory-data-analysis (dipakai untuk ",
+   "Riset pendahuluan: sequentialthinking, 4 pikiran (`mcp__sequ"
+  ]
+ }
+}

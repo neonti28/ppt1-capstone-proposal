@@ -1,0 +1,2094 @@
+{
+ "kandidat_1": {
+  "a_7engine": {
+   "count": 9,
+   "hits": [
+    [
+     46,
+     "Daripada memaksakan satu model pembelajaran mesin untuk semua jenis kegagalan, alat ini menyusun **tujuh mesin deteksi yang berbeda tugas**, masing-masing memakai metode "
+    ],
+    [
+     48,
+     "**Status kemampuan ketujuh mesin (per 12 Oktober 2026):**"
+    ],
+    [
+     230,
+     "| Lapisan penilaian | A (deteksi), B (nilai pemeliharaan), C (kepercayaan) | Diterapkan ketujuh mesin |"
+    ],
+    [
+     260,
+     "Dari tujuh mesin: **3 memenuhi Tingkat 2, 2 Tingkat 2 bersyarat, 2 Tingkat 1, dan 0 Tingkat 3** [A-19][A-20]."
+    ],
+    [
+     264,
+     "Ketujuh mesin dinyatakan dengan kemampuan **dan** batasnya. Tidak ada mesin yang diklaim melampaui buktinya. Audit independen menghitung ulang 121 klaim numerik dengan ha"
+    ],
+    [
+     293,
+     "| Okt 2026 | Pembukaan seluruh volume Volve oleh 8 tim pembaca; taksonomi 7 jenis dengan populasi terhitung | Selesai |"
+    ],
+    [
+     295,
+     "| Okt 2026 | Penilaian berlapis A/B/C ketujuh mesin; peta kemampuan + audit 121 klaim | Selesai |"
+    ],
+    [
+     321,
+     "| [A-1] | Penilaian akhir V6: vonis SAH \">3 jenis kerusakan dari data nyata\" (7 jenis, 3 lolos gate pra-reg) | `docs/V6_PM_VERDICT.md` |"
+    ],
+    [
+     322,
+     "| [A-2] | Desain + hasil kampanye ML tujuh kelas (4 pra-registrasi ber-hash) | `docs/V6_E1_ML_DESIGN.md`, `docs/V6_E1*_PREREG*.md` |"
+    ]
+   ]
+  },
+  "b_cara_kerja": {
+   "count": 0,
+   "hits": []
+  },
+  "c_alasan_pemilihan": {
+   "count": 0,
+   "hits": []
+  },
+  "d_peran_data": {
+   "count": 0,
+   "hits": []
+  },
+  "e_labeling": {
+   "count": 6,
+   "hits": [
+    [
+     46,
+     "Daripada memaksakan satu model pembelajaran mesin untuk semua jenis kegagalan, alat ini menyusun **tujuh mesin deteksi yang berbeda tugas**, masing-masing memakai metode "
+    ],
+    [
+     90,
+     "| Mesin hibrida (aturan + statistik + ML) | Arsitektur per mesin | gabungan lapisan dasar + prediksi |"
+    ],
+    [
+     101,
+     "Tujuh mesin deteksi (aturan / statistik / persistence / ML / hibrida)"
+    ],
+    [
+     137,
+     "- **Pembagian data**: *Leave-One-Wellbore-Out* (LOWO) antar sumur untuk mengukur generalisasi; kanal pembentuk label dilarang menjadi fitur (anti-sirkularitas)."
+    ],
+    [
+     159,
+     "| Mesin hibrida (aturan + statistik + ML) | Arsitektur dipilih | Tiap mesin memakai metode paling cocok untuk tugasnya |"
+    ],
+    [
+     229,
+     "| Mesin deteksi (7) | Aturan, statistik, persistence, ML terawasi, hibrida | Dievaluasi berlapis A/B/C |"
+    ]
+   ]
+  },
+  "f_71127": {
+   "count": 0,
+   "hits": []
+  },
+  "eval_a_lapisanABC": {
+   "count": 3,
+   "hits": [
+    [
+     188,
+     "- **Lapisan A — Apakah deteksi bekerja?** Presisi, recall, tingkat alarm palsu, waktu deteksi, dibandingkan ke *baseline relevan* untuk tugas mesin itu (bukan satu baseli"
+    ],
+    [
+     189,
+     "- **Lapisan B — Apakah bernilai pemeliharaan?** Adanya peringatan sebelum kondisi memburuk, lamanya waktu untuk bertindak, dan pengurangan pemeriksaan tidak perlu. Waktu "
+    ],
+    [
+     190,
+     "- **Lapisan C — Cukup tepercaya untuk dipakai?** Ketahanan hasil pada periode, kondisi operasi, dan peralatan berbeda; penanganan kualitas sensor dan ketidakpastian."
+    ]
+   ]
+  },
+  "eval_b_baseline": {
+   "count": 3,
+   "hits": [
+    [
+     188,
+     "- **Lapisan A — Apakah deteksi bekerja?** Presisi, recall, tingkat alarm palsu, waktu deteksi, dibandingkan ke *baseline relevan* untuk tugas mesin itu (bukan satu baseli"
+    ],
+    [
+     256,
+     "- **Tingkat 1 — Pemantauan tren:** nilai terukur untuk mendeteksi kondisi/perubahan pola dibanding baseline relevan; ketidakpastian dinyatakan."
+    ],
+    [
+     305,
+     "1. **Tingkat 1 (tren):** mesin menunjukkan nilai terukur mendeteksi kondisi/perubahan pola dibanding baseline relevan; ketidakpastian dinyatakan."
+    ]
+   ]
+  },
+  "eval_c_jenis_tugas": {
+   "count": 4,
+   "hits": [
+    [
+     92,
+     "Karena tiap kelas kegagalan mengerjakan tugas berbeda (deteksi anomali, deteksi kondisi, diagnosis, atau prediksi kejadian mendatang), tidak semua mesin memerlukan ambang"
+    ],
+    [
+     147,
+     "Pembingkaian mengikuti tugas tiap mesin. Tidak semua kegagalan diperlakukan sebagai \"prediksi kejadian mendatang\"; sebagian adalah deteksi anomali, deteksi kondisi, atau "
+    ],
+    [
+     256,
+     "- **Tingkat 1 — Pemantauan tren:** nilai terukur untuk mendeteksi kondisi/perubahan pola dibanding baseline relevan; ketidakpastian dinyatakan."
+    ],
+    [
+     305,
+     "1. **Tingkat 1 (tren):** mesin menunjukkan nilai terukur mendeteksi kondisi/perubahan pola dibanding baseline relevan; ketidakpastian dinyatakan."
+    ]
+   ]
+  },
+  "eval_d_kemampuan_batas": {
+   "count": 11,
+   "hits": [
+    [
+     46,
+     "Daripada memaksakan satu model pembelajaran mesin untuk semua jenis kegagalan, alat ini menyusun **tujuh mesin deteksi yang berbeda tugas**, masing-masing memakai metode "
+    ],
+    [
+     56,
+     "| **Punya peran dalam alat** | **7 dari 7** | tidak ada mesin dibuang; tiap mesin punya batas pemakaian tertulis |"
+    ],
+    [
+     77,
+     "3. Menyatakan batas pemakaian dan ketidakpastian setiap mesin secara terbuka."
+    ],
+    [
+     192,
+     "Keputusan akhir tiap mesin dinyatakan sebagai **batas pemakaian** (layak untuk tren, layak untuk peringatan berpengawas manusia, atau belum layak untuk alarm otomatis), b"
+    ],
+    [
+     231,
+     "| Peta kemampuan | Kemampuan, batas, kekuatan bukti per mesin | Tersusun & diaudit (121 klaim, 0 fabrikasi) |"
+    ],
+    [
+     246,
+     "| Getaran lateral (whirl) | Deteksi kondisi + peringatan | Hibrida (rule + persistence + RF) | Peringatan bersyarat | Alarm otomatis (FAR belum terukur) |"
+    ],
+    [
+     247,
+     "| Stick-slip torsional | Deteksi kondisi + peringatan | Hibrida (rule + RF) | Peringatan bersyarat | Alarm otomatis (FAR belum terukur) |"
+    ],
+    [
+     264,
+     "Ketujuh mesin dinyatakan dengan kemampuan **dan** batasnya. Tidak ada mesin yang diklaim melampaui buktinya. Audit independen menghitung ulang 121 klaim numerik dengan ha"
+    ],
+    [
+     272,
+     "| R3 | Validitas label lintas sumur (kontrol positif stuck 0/10; label hidraulik proxy) | Ketidakpastian label = kekuatan bukti terendah | Dianotasi; jadi syarat sebelum "
+    ],
+    [
+     273,
+     "| R4 | Alarm palsu belum terukur nyata untuk beberapa mesin | Membatasi kenaikan ke alarm otomatis | Diukur di Tahap 2a |"
+    ],
+    [
+     280,
+     "1. **Tahap 1a: Prototipe advisori (dapat dimulai).** Tujuh mesin dengan batas pemakaian dipasang pada satu lapisan keputusan: konfirmasi status otomatis, peringatan berpe"
+    ]
+   ]
+  },
+  "eval_e_tingkat_alat": {
+   "count": 3,
+   "hits": [
+    [
+     280,
+     "1. **Tahap 1a: Prototipe advisori (dapat dimulai).** Tujuh mesin dengan batas pemakaian dipasang pada satu lapisan keputusan: konfirmasi status otomatis, peringatan berpe"
+    ],
+    [
+     307,
+     "3. **Tingkat 3 (alarm otomatis kritis):** hanya setelah alarm palsu rendah terukur lintas periode/sumur dan validitas label terverifikasi. Belum dicapai; tidak diklaim."
+    ],
+    [
+     324,
+     "| [A-4] | Pembukaan seluruh volume Volve oleh 8 tim pembaca + sintesis | `docs/V6_D0_READERS_SYNTHESIS.md`, `docs/V6_D1a..h_*.md` |"
+    ]
+   ]
+  },
+  "verdict_LULUS": {
+   "count": 0,
+   "hits": []
+  },
+  "verdict_GAGAL": {
+   "count": 0,
+   "hits": []
+  },
+  "verdict_lulusgagal": {
+   "count": 2,
+   "hits": [
+    [
+     192,
+     "Keputusan akhir tiap mesin dinyatakan sebagai **batas pemakaian** (layak untuk tren, layak untuk peringatan berpengawas manusia, atau belum layak untuk alarm otomatis), b"
+    ],
+    [
+     321,
+     "| [A-1] | Penilaian akhir V6: vonis SAH \">3 jenis kerusakan dari data nyata\" (7 jenis, 3 lolos gate pra-reg) | `docs/V6_PM_VERDICT.md` |"
+    ]
+   ]
+  },
+  "postmortem": {
+   "count": 3,
+   "hits": [
+    [
+     14,
+     "| Catatan versi | Versi ini hanya memuat solusi aktual. Seluruh riwayat kegagalan kampanye lama dipindah ke `CHANGELOG.md` agar proposal terbaca sebagai rencana solusi, b"
+    ],
+    [
+     58,
+     "Riwayat pengembangan, termasuk seluruh kampanye evaluasi beserta hasil yang tidak memenuhi ambang, tercatat transparan pada `CHANGELOG.md` dan arsip Lampiran A. Angka pen"
+    ],
+    [
+     352,
+     "Lampiran ini bersifat internal. Riwayat pengembangan lengkap — termasuk seluruh kampanye evaluasi, hasil yang tidak memenuhi ambang, dan penilaian berturut-turut — tercat"
+    ]
+   ]
+  },
+  "n_7": {
+   "count": 9,
+   "hits": [
+    [
+     24,
+     "7. Skenario Penggunaan"
+    ],
+    [
+     56,
+     "| **Punya peran dalam alat** | **7 dari 7** | tidak ada mesin dibuang; tiap mesin punya batas pemakaian tertulis |"
+    ],
+    [
+     110,
+     "## 7. Skenario Penggunaan dan Perjalanan Pengguna"
+    ],
+    [
+     128,
+     "| Volume terbuka Databricks | 17.368 berkas; 20.086 XML WITSML mentah; 7.150 log XML; 192 tubular; 161 bhaRun; 63 trajectory; 8 mudLog; basis data EDM | Sumber label turu"
+    ],
+    [
+     229,
+     "| Mesin deteksi (7) | Aturan, statistik, persistence, ML terawasi, hibrida | Dievaluasi berlapis A/B/C |"
+    ],
+    [
+     293,
+     "| Okt 2026 | Pembukaan seluruh volume Volve oleh 8 tim pembaca; taksonomi 7 jenis dengan populasi terhitung | Selesai |"
+    ],
+    [
+     321,
+     "| [A-1] | Penilaian akhir V6: vonis SAH \">3 jenis kerusakan dari data nyata\" (7 jenis, 3 lolos gate pra-reg) | `docs/V6_PM_VERDICT.md` |"
+    ],
+    [
+     326,
+     "| [A-6] | Spesifikasi penilaian berlapis A/B/C + 7 profil kemampuan | `docs/V8_R1_ABC_SPEC.md`, `docs/V8_E_*_CAPABILITY.md` |"
+    ],
+    [
+     327,
+     "| [A-7] | Peta alat pemeliharaan berbasis prediksi (kemampuan+batas+bukti) | `docs/V8_M1_CAPABILITY_MAP.md` |"
+    ]
+   ]
+  },
+  "n_11_klaim": {
+   "count": 0,
+   "hits": []
+  },
+  "n_27_head": {
+   "count": 0,
+   "hits": []
+  }
+ },
+ "kandidat_2": {
+  "a_7engine": {
+   "count": 45,
+   "hits": [
+    [
+     55,
+     "Daripada memaksakan satu model pembelajaran mesin untuk semua jenis kegagalan, alat ini menyusun **tujuh mesin deteksi yang berbeda tugas**, masing-masing memakai metode "
+    ],
+    [
+     57,
+     "**Tiga angka pengikat (dijelaskan tegas pada Bab 1):** alat ini mengoperasikan **7 engine**, menilai **11 klaim**, dan merakit **27 head**. Ketiganya berjenjang, yaitu 7 "
+    ],
+    [
+     59,
+     "**Status kemampuan ketujuh mesin (per 15 Oktober 2026):**"
+    ],
+    [
+     147,
+     "`docs/V9_PM1_ARCHITECTURE.md` (§2 spesifikasi 7 engine, §3 S1–S9) ·"
+    ],
+    [
+     172,
+     "(**7 ENGINE** = 7 kelas kerusakan yang dideteksi). Karena sebagian pertanyaan punya dua sisi, yaitu"
+    ],
+    [
+     187,
+     "- **7 ENGINE = 7 kelas hal yang dideteksi** (unit fisis/operasional: \"apa yang rusak?\"; satu engine per kelas kegagalan)."
+    ],
+    [
+     192,
+     "1. Pernyataan \"**0 dari 7 engine layak alarm otomatis**\" ditulis pada **level ENGINE** (tier adalah atribut head; tak ada engine yang seluruh head-nya berstatus alarm)."
+    ],
+    [
+     279,
+     "#### Bab 1: Ruang lingkup & tiga angka: 7 engine / 11 klaim / 27 head  *(penulis: PM1: dokumen ini)*"
+    ],
+    [
+     280,
+     "- §1.1 Peta 7 engine + hal yang dideteksi + kanal/sensor kunci."
+    ],
+    [
+     334,
+     "| (a) daftar 7 hal yang dideteksi | Bab 1 (§1.1) + Bab 7 | tabel 7 engine + hasil per engine |"
+    ],
+    [
+     361,
+     "1. **Kosakata angka mengikat**: setiap sebutan \"7 engine\", \"11 klaim\", \"27 head\" harus merujuk daftar eksak §1.1–§1.3; nama engine/head persis seperti kunci REGISTRY kode"
+    ],
+    [
+     374,
+     "| AC-1 | Daftar 7/11/27 disebut NAMA-NAMENYA & konsisten dgn kode V9 | jalankan REGISTRY: 7 engine, 27 head (4+4+4+6+4+2+3), 11 klaim | **LULUS** (modul IMPORT OK; lihat "
+    ],
+    [
+     394,
+     "`code/v9_i1_pipeline.py` (REGISTRY §1, baris 74–287; **dijalankan**: IMPORT OK, 7 engine/27 head) ·"
+    ],
+    [
+     419,
+     "Sumbu: `docs/V9_PM1_ARCHITECTURE.md` (§2 spesifikasi 7 engine, §3 kontrak S1–S9) ·"
+    ],
+    [
+     463,
+     "Alat PdM ini menangani **7 kelas kegagalan BHA**. Untuk **setiap kelas, metode dipilih dari"
+    ],
+    [
+     770,
+     "tugas\"); 7 kelas = vib, ssi, bit_wear, stuck, hyd, shk, tool_wear."
+    ],
+    [
+     819,
+     "dijalankan ulang hanya modul REGISTRY `v9_i1_pipeline.py` (7 engine, 27 head terkonfirmasi)."
+    ],
+    [
+     830,
+     "| d | Fisika→sensor per engine | §2 (i)–(ii) 7 kelas lengkap |"
+    ],
+    [
+     835,
+     "| i | Angka konsisten dgn sumber (review V10-R1) | tiap angka ditelusuri ke dokumen/JSON primer (V9_E_ML/E_STAT/E_RULE, V9_EVAL_A/B/C, V8_E_*, V9_PM1/PM2); registry `v9_i"
+    ],
+    [
+     839,
+     "`docs/V9_PM1_ARCHITECTURE.md` (§2 spesifikasi 7 engine, §3 S1–S9) · `docs/V9_R1_JUSTIFICATION.md`"
+    ],
+    [
+     913,
+     "**Kedudukan dalam kosakata PM1 (7 engine / 11 klaim / 27 head).** Bab ini memasok bahan mentah dan"
+    ],
+    [
+     914,
+     "kontrak fitur untuk **7 engine** (vib, ssi, shk, stuck, hyd, bit_wear, tool_wear) dan menjadi dasar"
+    ],
+    [
+     1373,
+     "Bab ini memasok data untuk **7 engine** (kelas kerusakan), menjadi dasar pengukuran **11 klaim**"
+    ],
+    [
+     1975,
+     "**Kedudukan dalam kosakata PM1 (7 engine / 11 klaim / 27 head):** peran statistik menyumbang rumus &"
+    ],
+    [
+     1976,
+     "hasil untuk **sub-tugas K-i/K-ii** dari 3 dari **7 engine** yaitu `hyd`, `stuck`, `tool_wear` (Bab 1 §1.2"
+    ],
+    [
+     1980,
+     "(head 25–26), `hyd/k2_tidak_tersedia` (head 22). Ketiga angka (7 engine ⊂ 11 klaim ⊂ 27 head) merujuk"
+    ],
+    [
+     2355,
+     "| **(a) 7 engine + apa yang dideteksi** | Peran statistik menangani **4 prosedur**: hyd-K-i (kondisi residu SPPA), stuck-E2 (onset H=10 mnt), tool_wear-K-i (perubahan-reg"
+    ],
+    [
+     2360,
+     "| **(f) 7 vs 11 vs 27** | **7 engine** = kelas masalah; **11 klaim** = sub-tugas/estimand; **27 head** = varian metode di registry prototipe I1 (`docs/V10_PM1_OUTLINE.md`"
+    ],
+    [
+     2906,
+     "- Riset pendahuluan: `sequentialthinking` (5 pikiran, 5/5 sukses, `sequ-mcp`): (1) inventaris 7 engine/11 klaim/"
+    ],
+    [
+     2915,
+     "#### 0.1 (a) Tujuh engine = tujuh jenis kegagalan/disfungsi berbeda fisika"
+    ],
+    [
+     2917,
+     "Alat PdM advisory ini **bukan satu model untuk semua masalah**. Ia menyusun **7 engine**, masing-masing"
+    ],
+    [
+     2953,
+     "| **7 engine** | 7 | **kelas kegagalan** (fisis) | 7 fisika berbeda → label, tindakan, bukti berbeda; satu model gabungan = mencampur estimand (D-A2) |"
+    ],
+    [
+     3127,
+     "- **(a) 7 engine + apa yang dideteksi:** vib (getaran lateral), ssi (stick-slip), shk (bit bounce),"
+    ],
+    [
+     3139,
+     "- **(f) 7 vs 11 vs 27:** 7 kelas kegagalan → 11 klaim (4 kelas berbagi dua tugas) → 27 head (varian metode"
+    ],
+    [
+     3186,
+     "Alat PdM yang dibangun menilai **tujuh kelas kegagalan BHA** (vibrasi lateral, stick-slip,"
+    ],
+    [
+     3190,
+     "lulus/gagal. Hasilnya jujur dan tegas: **0 dari 7 engine layak sebagai alarm otomatis**,"
+    ],
+    [
+     3192,
+     "pengukuran** (bersyarat), dan **2 layak pada tingkat tren/skor**. Seluruh 7 engine tetap"
+    ],
+    [
+     3361,
+     "| **11** | **Klaim/sub-tugas** yang dievaluasi | 7 kelas + 4 kelas yang punya dua sub-tugas: bit_wear (K-1/K-2), stuck (K-i/K-ii), hyd (K-i/K-ii), tool_wear (K-i/K-ii) → "
+    ],
+    [
+     3362,
+     "| **27** | **Head** pada registry prototipe (implementasi konkret tiap engine × metode/head) | hasil perakitan `V9_I1_INTEGRATION.md` §2, 7 engine = **27 head** (rule/per"
+    ],
+    [
+     3427,
+     "**Alarm otomatis kritis tanpa manusia: 0 slot hari ini (0/7 engine).** Ini keputusan wajar,"
+    ],
+    [
+     3462,
+     "`docs/V9_PM1_ARCHITECTURE.md` (§1 pipeline 5 lapis, §2 spesifikasi 7 engine, §1.3 gate tier) ·"
+    ],
+    [
+     3498,
+     "| Okt 2026 | Pembukaan seluruh volume Volve oleh 8 tim pembaca; taksonomi 7 jenis dengan populasi terhitung | Selesai |"
+    ],
+    [
+     3500,
+     "| Okt 2026 | Penilaian berlapis A/B/C ketujuh mesin; peta kemampuan + audit 121 klaim | Selesai |"
+    ],
+    [
+     3526,
+     "| [A-1] | Penilaian akhir V6: vonis SAH \">3 jenis kerusakan dari data nyata\" (7 jenis, 3 lolos gate pra-reg) | `docs/V6_PM_VERDICT.md` |"
+    ],
+    [
+     3527,
+     "| [A-2] | Desain + hasil kampanye ML tujuh kelas (4 pra-registrasi ber-hash) | `docs/V6_E1_ML_DESIGN.md`, `docs/V6_E1*_PREREG*.md` |"
+    ]
+   ]
+  },
+  "b_cara_kerja": {
+   "count": 18,
+   "hits": [
+    [
+     142,
+     "cara kerjanya; (c) alasan KENAPA tiap engine dipilih (bukti, bukan selera); (d) peran DATA;"
+    ],
+    [
+     143,
+     "(e) labeling ML / statistik / workflow hybrid; (f) penjelasan TEGAS angka 7 vs 11 (dan 27 head)."
+    ],
+    [
+     312,
+     "#### Bab 6: Rule, persistence & workflow hibrida  *(penulis: E_RULE: t_258c7550)*"
+    ],
+    [
+     317,
+     "- **Menutup keluhan:** (e) bagian hybrid: workflow-nya & pengaruh antar-komponen."
+    ],
+    [
+     323,
+     "- **Menutup keluhan:** (b) engine mana yang bekerja & bagaimana cara kerjanya; (a) diulang pada level hasil."
+    ],
+    [
+     338,
+     "| (e) labeling ML / statistik / hybrid | Bab 4 (ML) · Bab 5 (statistik) · Bab 6 (hibrida) | definisi label · rumus · workflow hibrida |"
+    ],
+    [
+     353,
+     "| Bab 6 Rule/Hibrida | E_RULE: `t_258c7550` | v9_e_RULE_01..05, V9_E_RULE_ENGINE, v9_e_rule JSON | rule+persistence+workflow hibrida & pengaruh antar-komponen; baseline f"
+    ],
+    [
+     751,
+     "| Taksonomi dysfungsi dari surface | physics-based workflow, 10 kelas | **[23]** Saini et al. 2020 |"
+    ],
+    [
+     1521,
+     "Untuk pertanyaan proposal **(e) \"labeling ML / rumus statistik / workflow hybrid\"**, jawaban peran"
+    ],
+    [
+     2356,
+     "| **(b) cara kerja engine** | hyd-K-i: label median/MAD per desil TFLO + persistence W=10. stuck-E2: skor `z(TQA)+z(HKLD)+ROP-drop` vs median/MAD 60 mnt, ambang q95-train"
+    ],
+    [
+     2359,
+     "| **(e) labeling ML / rumus statistik / workflow hybrid** | Inilah dokumen ini (§5.1–§5.4): label dibentuk statistik robust (median/MAD), engine = persistence/change-poin"
+    ],
+    [
+     2422,
+     "workflow hibrida & pengaruh antar-komponen), langsung dari sudut pandang peran sendiri."
+    ],
+    [
+     2454,
+     "Jawaban peran Rule/Persistence/Hybrid untuk pertanyaan proposal **(e) \"kalau hybrid: workflow-nya &"
+    ],
+    [
+     2863,
+     "*Selesai Bab 6 V10-E_RULE (`t_258c7550`) yakni porsi (e)-hybrid: workflow hibrida + pengaruh"
+    ],
+    [
+     2931,
+     "#### 0.2 (b) Bagaimana engine bekerja: lima keluarga metode, dirangkai hibrida per tugas"
+    ],
+    [
+     2970,
+     "| # | Engine / klaim | APA YANG DIDETEKSI (bahasa manusia rig) | Jenis tugas | Metode (cara kerja) | Angka kunci | Tier | Batas pemakaian |"
+    ],
+    [
+     3130,
+     "- **(b) cara kerja & engine mana yang bekerja:** 5 keluarga metode (rule · persistence · statistik robust ·"
+    ],
+    [
+     3240,
+     "Tabel cara kerja per engine (jenis engine + mekanisme):"
+    ]
+   ]
+  },
+  "c_alasan_pemilihan": {
+   "count": 2,
+   "hits": [
+    [
+     2357,
+     "| **(c) kenapa metode dipilih** | Data sensor **skewed/non-normal** → z median/MAD tahan outlier (bukan mean/std). 469 jendela 1 dtk non-normal & n kecil → **permutation "
+    ],
+    [
+     3133,
+     "- **(c) mengapa metode itu dipilih:** tiap kelas = tugas berbeda → metode disesuaikan; RF **dilarang** di"
+    ]
+   ]
+  },
+  "d_peran_data": {
+   "count": 10,
+   "hits": [
+    [
+     142,
+     "cara kerjanya; (c) alasan KENAPA tiap engine dipilih (bukti, bukan selera); (d) peran DATA;"
+    ],
+    [
+     292,
+     "#### Bab 3: Data: apa yang dipakai & perannya dalam identifikasi kerusakan  *(penulis: Data Eng: t_6209eacc)*"
+    ],
+    [
+     297,
+     "- **Menutup keluhan:** (d) peran DATA (data apa, isinya apa, masing-masing berperan apa)."
+    ],
+    [
+     337,
+     "| (d) peran DATA | Bab 3 | inventaris dataset + isi + peran + kanal terlarang |"
+    ],
+    [
+     773,
+     "- **(d) \"peran data\"** → §2 (ii) tiap engine (\"mengapa sensor X relevan\") + §4 (label turunan"
+    ],
+    [
+     866,
+     "| Menutup keluhan operator | **(d) peran data** + porsi data dari **(f) arti 7/11/27** |"
+    ],
+    [
+     871,
+     "(jawaban pertanyaan proposal dari sudut data, verifikasi, sumber angka)."
+    ],
+    [
+     1371,
+     "#### 3.6.3 (f) Peran angka 7 vs 11 vs 27 dari sudut data"
+    ],
+    [
+     2358,
+     "| **(d) peran data** | Data = sumber tunggal semua angka; kontrol kejujuran lewat **recompute independen dari `bins/`** (0/52.509 mismatch). Data bengkel = 4 alat × 2 run"
+    ],
+    [
+     3135,
+     "- **(d) peran data:** label dari kanal instrumen/turunan/kurasi/identitas-run; kanal pembentuk label"
+    ]
+   ]
+  },
+  "e_labeling": {
+   "count": 79,
+   "hits": [
+    [
+     55,
+     "Daripada memaksakan satu model pembelajaran mesin untuk semua jenis kegagalan, alat ini menyusun **tujuh mesin deteksi yang berbeda tugas**, masing-masing memakai metode "
+    ],
+    [
+     57,
+     "**Tiga angka pengikat (dijelaskan tegas pada Bab 1):** alat ini mengoperasikan **7 engine**, menilai **11 klaim**, dan merakit **27 head**. Ketiganya berjenjang, yaitu 7 "
+    ],
+    [
+     101,
+     "| Mesin hibrida (aturan + statistik + ML) | Arsitektur per mesin | gabungan lapisan dasar dan prediksi |"
+    ],
+    [
+     112,
+     "Tujuh mesin deteksi (aturan / statistik / persistence / ML / hibrida)"
+    ],
+    [
+     143,
+     "(e) labeling ML / statistik / workflow hybrid; (f) penjelasan TEGAS angka 7 vs 11 (dan 27 head)."
+    ],
+    [
+     176,
+     "statistik z-score, random forest, hibrida) dan tiap cara diukur terpisah, jumlah **HEAD** (varian"
+    ],
+    [
+     189,
+     "- **27 HEAD = 27 varian metode yang benar-benar dievaluasi** (unit metode-terukur). Tiap klaim dijawab dengan beberapa cara (rule, persistence, statistik, RF, hibrida), d"
+    ],
+    [
+     288,
+     "- Justifikasi pemilihan metode: kenapa rule, kenapa persistence, kenapa statistik, kenapa RF, kenapa hibrida."
+    ],
+    [
+     295,
+     "- Tabel kanal terlarang jadi fitur (anti-sirkularitas, §2.8 V9_PM1) per kelas."
+    ],
+    [
+     312,
+     "#### Bab 6: Rule, persistence & workflow hibrida  *(penulis: E_RULE: t_258c7550)*"
+    ],
+    [
+     315,
+     "- **Workflow hibrida**: bagaimana komponen rule + statistik + ML dirangkai (D-A3) dan **pengaruh antar-komponen** (mis. konfirmasi dua langkah rule→persistence; pemangkas"
+    ],
+    [
+     338,
+     "| (e) labeling ML / statistik / hybrid | Bab 4 (ML) · Bab 5 (statistik) · Bab 6 (hibrida) | definisi label · rumus · workflow hibrida |"
+    ],
+    [
+     351,
+     "| Bab 4 Labeling ML | E_ML: `t_2db22ea0` | V9_E_ML_ENGINE, v9_e_ML_01_train.py, v9_e_ml JSON, V9_D1 §3 | definisi label per kelas + anti-sirkular + LOWO/LOTO + kontrak RF"
+    ],
+    [
+     353,
+     "| Bab 6 Rule/Hibrida | E_RULE: `t_258c7550` | v9_e_RULE_01..05, V9_E_RULE_ENGINE, v9_e_rule JSON | rule+persistence+workflow hibrida & pengaruh antar-komponen; baseline f"
+    ],
+    [
+     465,
+     "kerusakan dijadikan **label**, dan metode (rule / persistence / statistik / ML / hibrida)"
+    ],
+    [
+     493,
+     "4. **Kejujuran label.** Kanal pembentuk label **dilarang** jadi fitur (anti-sirkular); kelas"
+    ],
+    [
+     514,
+     "hibrida) dipilih; **(iv)** bukti empiris V9; **(v)** batas."
+    ],
+    [
+     527,
+     "- **Mengapa rule + persistence + RF (hibrida).** Tiga alasan berbeda untuk tiga lapisan:"
+    ],
+    [
+     629,
+     "32–111/24jam (beban blok, bukan alarm); **hibrida rule AND persistence memangkas FP"
+    ],
+    [
+     630,
+     "2091→927 (−55,7%) konsisten 9/9 well** yaitu hibrida non-degenerasi paling kuat di portofolio;"
+    ],
+    [
+     646,
+     "- **Mengapa RF + persistence (hibrida).** Untuk **status**, RF dipakai bersama persistence;"
+    ],
+    [
+     665,
+     "anti-sirkular terpenuhi)."
+    ],
+    [
+     775,
+     "- **(e) \"labeling / statistik / hybrid\"** → §3.1 (peta metode) + §3.3 (labeling onset jujur) +"
+    ],
+    [
+     776,
+     "hibrida `rule AND persistence` (FP −73,1% ssi; −55,7% hyd)."
+    ],
+    [
+     817,
+     "ssi hibrida \"konsisten 7/7\" → \"tak memburuk 7/7 (memotong 6/7)\" sesuai `V9_PM2_VERDICT` §2."
+    ],
+    [
+     844,
+     "(§3 skema label) · `docs/V8_E_{vib,ssi,bit_wear,stuck,hyd,shk,tool_wear}_CAPABILITY.md` ·"
+    ],
+    [
+     882,
+     "> disimpulkan dari namanya melainkan dari cara kanal itu masuk ke skema label/fitur."
+    ],
+    [
+     892,
+     "> (ML/statistik/hibrida/eval) tidak menghitung ulang dan tidak mengarang ulang angkanya."
+    ],
+    [
+     1205,
+     "`SPM` dikecualikan (anti-sirkularitas karena kanal ini membentuk label), sehingga tersisa 8 kanal ×"
+    ],
+    [
+     1249,
+     "#### 3.3.6 Skema label per kelas dan anti-sirkularitas"
+    ],
+    [
+     1263,
+     "sehingga kanal pembentuk label tidak pernah menjadi fitur. Asersi anti-sirkularitas lolos pada"
+    ],
+    [
+     1325,
+     "### 3.5 DAFTAR KANAL TERLARANG JADI FITUR (anti-sirkularitas)"
+    ],
+    [
+     1444,
+     "- `docs/V9_D1_DATA_PIPELINE.md`: kontrak grid 60 detik, jendela ketat-lalu, skema label."
+    ],
+    [
+     1501,
+     "> re-run fold 0 (gerbang 1e-9 S4); anti-sirkularitas di-assert ulang di runtime (0 kanal label di"
+    ],
+    [
+     1521,
+     "Untuk pertanyaan proposal **(e) \"labeling ML / rumus statistik / workflow hybrid\"**, jawaban peran"
+    ],
+    [
+     1528,
+     "anti-sirkularitas lolos di runtime, §1.2). (2) **Fitur = 55 = 11 kanal MWD × 5 statistik**"
+    ],
+    [
+     1558,
+     "memisahkan **yang benar-benar dilatih di kartu ini** dari **skema label engine lain** (yang labelnya"
+    ],
+    [
+     1592,
+     "turunan fitur** → anti-sirkular terpenuhi secara desain; **tidak dilatih** di kartu ini"
+    ],
+    [
+     1601,
+     "for c in feats), \"anti-sirkularitas: kanal label ada di fitur!\""
+    ],
+    [
+     1609,
+     "Aturan anti-sirkularitas per kelas (tabel kanal terlarang):"
+    ],
+    [
+     1619,
+     "| tool_wear K-ii | n/a (label = identitas run) | n/a (anti-sirkular by design) |"
+    ],
+    [
+     1902,
+     "- `code/v9_e_ML_01_train.py` (harness RF/GB/LR + CI95 + baseline + assert anti-sirkular) ·"
+    ],
+    [
+     1911,
+     "`docs/V9_D1_DATA_PIPELINE.md` (§2 fitur, §3 skema label, anti-bocor, LOWO) ·"
+    ],
+    [
+     1914,
+     "*Selesai V10-E_ML (`t_2db22ea0`): porsi (e)-ML bab proposal: labeling per kelas (instrumen /"
+    ],
+    [
+     2059,
+     "dibentuk dari kanal (`SPPA`,`TFLO`) yang juga **dilarang** jadi fitur (anti-sirkular), ML hanya bisa"
+    ],
+    [
+     2179,
+     "run**; label = identitas run (desain dataset → anti-sirkular terpenuhi). Kode:"
+    ],
+    [
+     2359,
+     "| **(e) labeling ML / rumus statistik / workflow hybrid** | Inilah dokumen ini (§5.1–§5.4): label dibentuk statistik robust (median/MAD), engine = persistence/change-poin"
+    ],
+    [
+     2422,
+     "workflow hibrida & pengaruh antar-komponen), langsung dari sudut pandang peran sendiri."
+    ],
+    [
+     2434,
+     "> di 5/5 kelas**, §1.2). Klaim \"hibrida memangkas FP\" **dipisah tegas** antara **degenerasi"
+    ],
+    [
+     2435,
+     "> struktural** (vib/shk/stuck_k1, di mana hibrida ≡ rule) dan **non-degenerasi** (ssi/hyd) namun tidak"
+    ],
+    [
+     2459,
+     "pada data ini. (3) **Hibrida** `h(t)=rule(t0−1) AND persistence(t)` adalah menyatukan **dua pemotong"
+    ],
+    [
+     2463,
+     "persistence 0,5555**. Di kelas lain (vib/shk/stuck_k1) hibrida **≡ rule** karena rule t0−1 sudah"
+    ],
+    [
+     2507,
+     "> bukan artefak sirkularitas, sehingga perbandingan ML-vs-rule dan hibrida berdiri di atas dasar bersih."
+    ],
+    [
+     2535,
+     "engine status non-ML terkuat kedua di kelas ini (rule sedikit lebih baik; hibrida terbaik, §3)."
+    ],
+    [
+     2553,
+     "### 3. (Sub-tugas 3) HIBRIDA `h(t)=rule(t0−1) AND persistence(t)`: WORKFLOW & MEKANISME"
+    ],
+    [
+     2558,
+     "h(t) = rule(t0−1)  AND  persistence(t)"
+    ],
+    [
+     2596,
+     "│  h(t) = r AND p                                    │"
+    ],
+    [
+     2618,
+     "- **AND** hanya meloloskan alarm yang **lolos kedua saringan** → setiap alarm hibrida sudah"
+    ],
+    [
+     2633,
+     "**AUPRC naik ke 0,6024** > rule 0,5751 > persistence 0,5555 → **hibrida mengalahkan persistence di"
+    ],
+    [
+     2641,
+     "| vib | **+0,0000** | degenerasi, yaitu hibrida ≡ rule |"
+    ]
+   ]
+  },
+  "f_71127": {
+   "count": 60,
+   "hits": [
+    [
+     57,
+     "**Tiga angka pengikat (dijelaskan tegas pada Bab 1):** alat ini mengoperasikan **7 engine**, menilai **11 klaim**, dan merakit **27 head**. Ketiganya berjenjang, yaitu 7 "
+    ],
+    [
+     143,
+     "(e) labeling ML / statistik / workflow hybrid; (f) penjelasan TEGAS angka 7 vs 11 (dan 27 head)."
+    ],
+    [
+     172,
+     "(**7 ENGINE** = 7 kelas kerusakan yang dideteksi). Karena sebagian pertanyaan punya dua sisi, yaitu"
+    ],
+    [
+     175,
+     "`3×1 + 4×2 = 11`). Karena tiap klaim kami jawab dengan beberapa **cara** (rule, persistence,"
+    ],
+    [
+     177,
+     "metode per klaim) = **27 HEAD** (`4+4+4+6+4+2+3 = 27`). Setiap head membawa tier pemakaian sendiri"
+    ],
+    [
+     183,
+     "### 1. PENJELASAN TEGAS: 7 ENGINE vs 11 KLAIM vs 27 HEAD"
+    ],
+    [
+     185,
+     "Tiga angka itu tiga hal berbeda, berjenjang (**7 ⊂ 11 ⊂ 27**):"
+    ],
+    [
+     187,
+     "- **7 ENGINE = 7 kelas hal yang dideteksi** (unit fisis/operasional: \"apa yang rusak?\"; satu engine per kelas kegagalan)."
+    ],
+    [
+     188,
+     "- **11 KLAIM = 11 pertanyaan tugas terpisah yang dinilai** (unit estimand: deteksi-kondisi vs prediksi-onset adalah tugas beda dengan label & baseline beda, yaitu keputus"
+    ],
+    [
+     189,
+     "- **27 HEAD = 27 varian metode yang benar-benar dievaluasi** (unit metode-terukur). Tiap klaim dijawab dengan beberapa cara (rule, persistence, statistik, RF, hibrida), d"
+    ],
+    [
+     260,
+     "Rekap tier (27 head): PERINGATAN-BERPENGAWAS **12** · TREN **13** · BELUM LAYAK PAKAI **2**."
+    ],
+    [
+     261,
+     "Rekap lapisan (27 head): L0 **5** · L1 **11** · L2 **9** · L3 **2**. Slot ALARM-OTOMATIS = **0**."
+    ],
+    [
+     279,
+     "#### Bab 1: Ruang lingkup & tiga angka: 7 engine / 11 klaim / 27 head  *(penulis: PM1: dokumen ini)*"
+    ],
+    [
+     281,
+     "- §1.2 Daftar 11 klaim (tugas, label, baseline per klaim)."
+    ],
+    [
+     282,
+     "- §1.3 Daftar 27 head (nama · klaim · tier · lapisan)."
+    ],
+    [
+     283,
+     "- §1.4 Mengapa 7 ≠ 11 ≠ 27; arti \"0 alarm otomatis\"."
+    ],
+    [
+     321,
+     "- Tabel 11 klaim (setara PM2 §e) + tabel 27 head (tier/lapisan/badge FAR/batas)."
+    ],
+    [
+     335,
+     "| (b) engine mana bekerja & caranya | Bab 7 + Bab 1 (§1.3) | hasil A/B/C + daftar 27 head |"
+    ],
+    [
+     339,
+     "| (f) arti tegas 7 / 11 / 27 | Bab 1 (§1.0–§1.4) | daftar nama eksak + rekap tier |"
+    ],
+    [
+     354,
+     "| Bab 7 Hasil/Tier | EVAL: `t_de420dbc` | V9_EVAL_A/B/C, V8_M1, V9_PM2 §e | hasil A/B/C per engine/klaim + tabel tier 11 klaim & 27 head; \"belum terukur\" ≠ gagal |"
+    ],
+    [
+     361,
+     "1. **Kosakata angka mengikat**: setiap sebutan \"7 engine\", \"11 klaim\", \"27 head\" harus merujuk daftar eksak §1.1–§1.3; nama engine/head persis seperti kunci REGISTRY kode"
+    ],
+    [
+     374,
+     "| AC-1 | Daftar 7/11/27 disebut NAMA-NAMENYA & konsisten dgn kode V9 | jalankan REGISTRY: 7 engine, 27 head (4+4+4+6+4+2+3), 11 klaim | **LULUS** (modul IMPORT OK; lihat "
+    ],
+    [
+     394,
+     "`code/v9_i1_pipeline.py` (REGISTRY §1, baris 74–287; **dijalankan**: IMPORT OK, 7 engine/27 head) ·"
+    ],
+    [
+     397,
+     "`docs/V9_EVAL_C_LAYERC.md` (EC-1) · `docs/V9_I1_INTEGRATION.md` §2 (tabel 27 head)."
+    ],
+    [
+     777,
+     "- **(f) \"7 vs 11 vs 27\"** → 7 = kelas masalah; 11 = klaim/sub-tugas (7 + 4 kelas ber-sub-klaim:"
+    ],
+    [
+     819,
+     "dijalankan ulang hanya modul REGISTRY `v9_i1_pipeline.py` (7 engine, 27 head terkonfirmasi)."
+    ],
+    [
+     835,
+     "| i | Angka konsisten dgn sumber (review V10-R1) | tiap angka ditelusuri ke dokumen/JSON primer (V9_E_ML/E_STAT/E_RULE, V9_EVAL_A/B/C, V8_E_*, V9_PM1/PM2); registry `v9_i"
+    ],
+    [
+     843,
+     "(§2 registry 27 head) · `docs/V9_PM2_VERDICT.md` (§e tabel tier) · `docs/V9_D1_DATA_PIPELINE.md`"
+    ],
+    [
+     846,
+     "`code/v9_i1_pipeline.py` (REGISTRY 27 head) · `Evaluasi User.txt`."
+    ],
+    [
+     913,
+     "**Kedudukan dalam kosakata PM1 (7 engine / 11 klaim / 27 head).** Bab ini memasok bahan mentah dan"
+    ],
+    [
+     915,
+     "pengukuran **11 klaim** serta **27 head** yang didefinisikan pada `docs/V10_PM1_OUTLINE.md`"
+    ],
+    [
+     1371,
+     "#### 3.6.3 (f) Peran angka 7 vs 11 vs 27 dari sudut data"
+    ],
+    [
+     1373,
+     "Bab ini memasok data untuk **7 engine** (kelas kerusakan), menjadi dasar pengukuran **11 klaim**"
+    ],
+    [
+     1375,
+     "**27 head** (varian metode terukur). Angka 7/11/27 didefinisikan eksak pada"
+    ],
+    [
+     1808,
+     "### 5. (f) RINGKAS \"7 vs 11 vs 27\" DARI SUDUT ML"
+    ],
+    [
+     1975,
+     "**Kedudukan dalam kosakata PM1 (7 engine / 11 klaim / 27 head):** peran statistik menyumbang rumus &"
+    ],
+    [
+     1977,
+     "klaim #5–#7, #10 dari **11 klaim**), dan mengukur **head statistik** di REGISTRY prototipe I1"
+    ],
+    [
+     1978,
+     "(`docs/V10_PM1_OUTLINE.md` §1.3, daftar **27 head**): `hyd/persistence` (head 20), `stuck/e1_2of3` +"
+    ],
+    [
+     1980,
+     "(head 25–26), `hyd/k2_tidak_tersedia` (head 22). Ketiga angka (7 engine ⊂ 11 klaim ⊂ 27 head) merujuk"
+    ],
+    [
+     2360,
+     "| **(f) 7 vs 11 vs 27** | **7 engine** = kelas masalah; **11 klaim** = sub-tugas/estimand; **27 head** = varian metode di registry prototipe I1 (`docs/V10_PM1_OUTLINE.md`"
+    ],
+    [
+     2804,
+     "### 6. (f) RINGKAS \"7 vs 11 vs 27\" DARI SUDUT RULE/HIBRIDA"
+    ],
+    [
+     2809,
+     "| **11** | jumlah **klaim/sub-tugas** yang dinilai A/B/C (3 engine 1 klaim + 4 engine 2 klaim = `3×1+4×2`) | baseline S9 disediakan **per sub-tugas** (K-i/K-ii) pada fold"
+    ],
+    [
+     2879,
+     "mana yang bekerja & bagaimana, dan **(f)** arti tegas 7 vs 11 vs 27, pada **level hasil**."
+    ],
+    [
+     2906,
+     "- Riset pendahuluan: `sequentialthinking` (5 pikiran, 5/5 sukses, `sequ-mcp`): (1) inventaris 7 engine/11 klaim/"
+    ],
+    [
+     2907,
+     "27 head dari registry → (2) desain kolom tabel (apa-dideteksi → jenis tugas → metode → angka → tier → batas) →"
+    ],
+    [
+     2913,
+     "### 0. KERANGKA: (a) 7 ENGINE · (b) CARA KERJA · (f) 7 vs 11 vs 27"
+    ],
+    [
+     2946,
+     "#### 0.3 (f) Mengapa 7 · 11 · 27: tiga tingkat pengelompokan objek yang SAMA"
+    ],
+    [
+     2949,
+     "berjenjang (**7 ⊂ 11 ⊂ 27**):"
+    ],
+    [
+     2954,
+     "| **11 klaim** | 11 | **estimand / tugas terpisah** | 4 engine mengerjakan **dua tugas berbeda** dan dipisah: `stuck` (K-i status + K-ii onset), `hyd` (K-i status + K-ii "
+    ],
+    [
+     2955,
+     "| **27 head** | 27 | **varian metode terukur** | satu klaim dijalankan **beberapa cara** (rule/persistence/hybrid/statistik/ML) yang diukur terpisah. Registry I1 mencatat"
+    ],
+    [
+     3039,
+     "Registry `scratch/v9_i1/v9_i1_RESULTS.json` (diverifikasi ulang sesi ini: **27 head** = L0 5 · L1 11 · L2 9 ·"
+    ],
+    [
+     3044,
+     "#### 3.1 Peta 27 head → lapisan keputusan"
+    ],
+    [
+     3057,
+     "(cek V2: 27 head, **0 kenaikan tier**). Ini menjaga agar \"cepat terlihat berguna\" tidak mengalahkan"
+    ],
+    [
+     3116,
+     "| V13 | registry: **27 head** (L0 5 · L1 11 · L2 9 · L3 2), tier 13 TREN / 12 PERINGATAN / 2 BELUM, slot alarm **0**, keputusan **MANUSIA** | I1 `v9_i1_RESULTS.json` | ✓ "
+    ],
+    [
+     3139,
+     "- **(f) 7 vs 11 vs 27:** 7 kelas kegagalan → 11 klaim (4 kelas berbagi dua tugas) → 27 head (varian metode"
+    ],
+    [
+     3354,
+     "### 6. (f) MENJELASKAN \"7 vs 11 vs 27\""
+    ],
+    [
+     3361,
+     "| **11** | **Klaim/sub-tugas** yang dievaluasi | 7 kelas + 4 kelas yang punya dua sub-tugas: bit_wear (K-1/K-2), stuck (K-i/K-ii), hyd (K-i/K-ii), tool_wear (K-i/K-ii) → "
+    ],
+    [
+     3362,
+     "| **27** | **Head** pada registry prototipe (implementasi konkret tiap engine × metode/head) | hasil perakitan `V9_I1_INTEGRATION.md` §2, 7 engine = **27 head** (rule/per"
+    ],
+    [
+     3367,
+     "kebetulan angka dan **tidak berhubungan** dengan 27 head; jangan tertukar."
+    ],
+    [
+     3463,
+     "`docs/V9_I1_INTEGRATION.md` (§2 registry 27 head, §4 lapisan keputusan) ·"
+    ]
+   ]
+  },
+  "eval_a_lapisanABC": {
+   "count": 2,
+   "hits": [
+    [
+     2872,
+     "Peran: **Penerus Evaluator Lapisan A/B/C V9** (kartu induk `t_e43490bf` EVAL_C; ringkasan A `t_8a7a33d4`,"
+    ],
+    [
+     2993,
+     "#### 1.2 Nilai pemeliharaan terukur (Lapisan B: apakah alat mengurangi kerja inspeksi?)"
+    ]
+   ]
+  },
+  "eval_b_baseline": {
+   "count": 15,
+   "hits": [
+    [
+     316,
+     "- Perhitungan SEMUA baseline relevan pada fold identik (S9)."
+    ],
+    [
+     402,
+     "- Riset pendahuluan: `statistical-analysis`: unit analisis = klaim (11); baseline relevan per tugas; FAR skala asli; UNDERPOWERED dilabeli."
+    ],
+    [
+     1497,
+     "> aslinya (jendela 1 menit → per 24 jam) tanpa konversi diam-diam; baseline relevan per tugas"
+    ],
+    [
+     1498,
+     "> (persistence/canary/prevalence-random), bukan satu baseline universal."
+    ],
+    [
+     1816,
+     "| **11** | jumlah **klaim** (sub-tugas dinilai A/B/C) | ML menyumbang di **4 klaim** (vib, ssi, shk, stuck-K-ii); baseline relevan disediakan per fold untuk semuanya |"
+    ],
+    [
+     2359,
+     "| **(e) labeling ML / rumus statistik / workflow hybrid** | Inilah dokumen ini (§5.1–§5.4): label dibentuk statistik robust (median/MAD), engine = persistence/change-poin"
+    ],
+    [
+     2443,
+     "> **baseline relevan sendiri** (S9); fold UNDERPOWERED (positif < 30) **dilabeli**; AUPRC/lift"
+    ],
+    [
+     2465,
+     "Seluruh baseline relevan (**S9**: persistence, canary-kedalaman, prevalence-random, rule ambang)"
+    ],
+    [
+     2677,
+     "**Definisi S9** (PM1 §4.5): baseline relevan dihitung E_RULE **per tugas pada fold yang sama** dengan"
+    ],
+    [
+     2860,
+     "- Riset pendahuluan: `statistical-analysis` yakni baseline relevan per tugas (tidak ada baseline universal); fold UNDERPOWERED dilabeli; AUPRC/lift tidak dirata-ratakan a"
+    ],
+    [
+     2904,
+     "(A: deteksi bekerja · B: nilai pemeliharaan · C: layak dipercaya) dengan **baseline yang relevan per tugas**,"
+    ],
+    [
+     3264,
+     "Metode dipilih **per tugas** dan diuji terhadap **baseline yang relevan untuk tugas itu** dan"
+    ],
+    [
+     3265,
+     "bukan satu baseline universal. Empat alasan pokok:"
+    ],
+    [
+     3346,
+     "- **ML ditambahkan hanya bila ΔB>0** di atas baseline relevan kelas itu; kalau tidak, ML"
+    ],
+    [
+     3510,
+     "1. **Tingkat 1 (tren):** mesin menunjukkan nilai terukur mendeteksi kondisi/perubahan pola dibanding baseline relevan; ketidakpastian dinyatakan."
+    ]
+   ]
+  },
+  "eval_c_jenis_tugas": {
+   "count": 38,
+   "hits": [
+    [
+     103,
+     "Karena tiap kelas kegagalan mengerjakan tugas berbeda (deteksi anomali, deteksi kondisi, diagnosis, atau prediksi kejadian mendatang), tidak semua mesin memerlukan ambang"
+    ],
+    [
+     188,
+     "- **11 KLAIM = 11 pertanyaan tugas terpisah yang dinilai** (unit estimand: deteksi-kondisi vs prediksi-onset adalah tugas beda dengan label & baseline beda, yaitu keputus"
+    ],
+    [
+     211,
+     "| 1 | `vib` K tunggal, yaitu deteksi kondisi getaran lateral (status `VIBLAT_RT ≥ 32,17405 ft/s²`) | vib | deteksi kondisi (bukan prediksi onset, karena TLead tidak berla"
+    ],
+    [
+     212,
+     "| 2 | `ssi` K tunggal, yaitu deteksi kondisi stick-slip torsional (`SSI(CRPM_RT) ≥ 1`) | ssi | deteksi kondisi | aktif |"
+    ],
+    [
+     213,
+     "| 3 | `shk` K tunggal, yaitu deteksi anomali/dysfunction bit bounce (`SHKRSK_RT ≥ 1`) | shk | deteksi anomali sedang berlangsung | aktif |"
+    ],
+    [
+     214,
+     "| 4 | `stuck` `K-i`, yaitu deteksi kondisi blok `STUCK_RT` | stuck | deteksi kondisi | aktif |"
+    ],
+    [
+     215,
+     "| 5 | `stuck` `K-ii`, yaitu prediksi onset 0→1 (H = 10 menit) | stuck | prediksi kejadian mendatang | aktif |"
+    ],
+    [
+     216,
+     "| 6 | `hyd` `K-i`, yaitu deteksi kondisi residu `SPPA` \\|z\\| > 2 | hyd | deteksi kondisi (label PROXY) | aktif |"
+    ],
+    [
+     217,
+     "| 7 | `hyd` `K-ii`, yaitu prediksi kick/loss proxy | hyd | prediksi kejadian mendatang | **TIDAK TERSEDIA** (data pit/GAINLOSSTOT belum diparse, namun ditulis eksplisit, "
+    ],
+    [
+     218,
+     "| 8 | `bit_wear` `K-1`, yaitu deteksi status blok high_MSE (Teale) | bit_wear | deteksi kondisi | aktif |"
+    ],
+    [
+     219,
+     "| 9 | `bit_wear` `K-2`, yaitu prediksi onset keausan | bit_wear | prediksi onset | **BELUM** (pra-registrasi belum terbit; nol angka) |"
+    ],
+    [
+     436,
+     "> (deteksi status vs prediksi onset vs klasifikasi lintas-alat butuh baseline berbeda);"
+    ],
+    [
+     482,
+     "1. **Bedakan jenis tugas lebih dulu, baru pilih metode.** Deteksi kondisi (status sekarang)"
+    ],
+    [
+     483,
+     "≠ deteksi anomali ≠ prediksi onset (kejadian mendatang) ≠ klasifikasi lintas-alat. Peta"
+    ],
+    [
+     485,
+     "untuk tugas deteksi kondisi; kelas status memakai margin B4, kelas onset memakai B1/TLead)."
+    ],
+    [
+     500,
+     "| vib | deteksi kondisi | rule + persistence + **RF (penambah)** | RF ΔB vs canary 4/4; vs persistence 2/4 |"
+    ],
+    [
+     501,
+     "| ssi | deteksi kondisi | rule definisi + **RF** | RF≥canary 5/7; persistence kalah (0/5 V8) |"
+    ],
+    [
+     505,
+     "| shk | deteksi anomali | rule (display) + **RF (onset)** | RF≥persistence B1 9/9 (angka onset V8); rule FAR≤6 7/9 |"
+    ],
+    [
+     599,
+     "K-ii = prediksi kejadian mendatang, maka wajar memakai skor-ranking + ambang pra-reg:"
+    ],
+    [
+     1718,
+     "| **vib** | deteksi kondisi | 4 | 0,4405–0,9117 | 0,4712 | **4/4** | 2/4 | skor penambah layak (reproduksi V8 persis) |"
+    ],
+    [
+     1719,
+     "| **ssi** | deteksi kondisi | 9 (2 UP) | 0,0151–0,4589 | 0,4438 | 5/7 | 6/7 | skor-ranking layak; keyakinan fold wajib tampil |"
+    ],
+    [
+     1720,
+     "| **shk** | deteksi anomali | 9 | 0,0069–0,1929 | 0,1860 | 5/9 | 4/9 | layak L2/L1-terkalibrasi sesuai V8 |"
+    ],
+    [
+     1721,
+     "| **stuck K-ii** | prediksi onset H=10 mnt | 4 | 0,0697–0,4443 | 0,3747 | **4/4** | **0/4** | ranking layak; persistence-onset menang telak (§6.4) |"
+    ],
+    [
+     1782,
+     "#### 4.4 stuck K-ii (4 fold LOWO; prediksi onset H=10 mnt)"
+    ],
+    [
+     1988,
+     "prediksi onset, sehingga TLead tidak berlaku (kelas status dinilai dengan margin/konfirmasi, B4)."
+    ],
+    [
+     2103,
+     "**Jenis tugas:** **prediksi onset** 0→1 dengan horizon **H=10 menit** (kejadian mendatang → TLead"
+    ],
+    [
+     2907,
+     "27 head dari registry → (2) desain kolom tabel (apa-dideteksi → jenis tugas → metode → angka → tier → batas) →"
+    ],
+    [
+     2933,
+     "Setiap engine adalah **hibrida per tugas**, bukan satu metode seragam. Metode dipilih sesuai **jenis tugas**;"
+    ],
+    [
+     3207,
+     "| 1 | **vib** | Deteksi kondisi (status sekarang) | Getaran lateral berlebih yaitu status `VIBLAT_RT ≥ 32,17405 ft/s²` (ambang operasional rig). Bukan prediksi onset. |"
+    ],
+    [
+     3208,
+     "| 2 | **ssi** | Deteksi kondisi | Stick-slip torsional sedang berlangsung yaitu status `SSI(CRPM_RT) ≥ 1`, dengan `SSI = (max−min)/(2·mean)` atas jendela CRPM. Bukan onse"
+    ],
+    [
+     3209,
+     "| 3 | **bit_wear** | K-1 deteksi kondisi · K-2 prediksi onset | **K-1:** status blok inefisiensi MSE (`high_MSE`, Teale MSE). **K-2:** prediksi onset blok keausan (H=10 m"
+    ],
+    [
+     3210,
+     "| 4 | **stuck** | K-i deteksi kondisi · K-ii prediksi onset | **K-i:** status blok `STUCK_RT` (pipa terjepit). **K-ii:** prediksi onset 0→1, horizon H=10 menit (fokus run"
+    ],
+    [
+     3211,
+     "| 5 | **hyd** | K-i deteksi kondisi · K-ii prediksi onset | **K-i:** status anomali hidrolik = residu tekanan `SPPA` (`\\|z\\|>2` vs bin TFLO). **K-ii:** prediksi kick/loss"
+    ],
+    [
+     3215,
+     "**Catatan penting pembacaan:** lima kelas adalah **deteksi kondisi/status** (vib, ssi,"
+    ],
+    [
+     3216,
+     "bit_wear K-1, stuck K-i, hyd K-i) dan sisanya **prediksi onset** (stuck K-ii, hyd K-ii,"
+    ],
+    [
+     3217,
+     "shk sub-onset, bit_wear K-2). Dua jenis tugas ini **sengaja dibedakan** karena metriknya"
+    ],
+    [
+     3439,
+     "horizon ≤10 menit · tanpa klaim diagnosis (G1) · tanpa klaim pengurangan inspeksi (G3) ·"
+    ],
+    [
+     3510,
+     "1. **Tingkat 1 (tren):** mesin menunjukkan nilai terukur mendeteksi kondisi/perubahan pola dibanding baseline relevan; ketidakpastian dinyatakan."
+    ]
+   ]
+  },
+  "eval_d_kemampuan_batas": {
+   "count": 28,
+   "hits": [
+    [
+     55,
+     "Daripada memaksakan satu model pembelajaran mesin untuk semua jenis kegagalan, alat ini menyusun **tujuh mesin deteksi yang berbeda tugas**, masing-masing memakai metode "
+    ],
+    [
+     67,
+     "| **Punya peran dalam alat** | **7 dari 7** | Tidak ada mesin dibuang; tiap mesin punya batas pemakaian tertulis |"
+    ],
+    [
+     88,
+     "3. Menyatakan batas pemakaian dan ketidakpastian setiap mesin secara terbuka."
+    ],
+    [
+     189,
+     "- **27 HEAD = 27 varian metode yang benar-benar dievaluasi** (unit metode-terukur). Tiap klaim dijawab dengan beberapa cara (rule, persistence, statistik, RF, hibrida), d"
+    ],
+    [
+     267,
+     "- Angka **27** menjawab \"**berapa cara kami mengukur tiap pertanyaan**\", sehingga klaim \"engine X bekerja\" selalu dapat dilacak ke satu baris head dengan tier + badge FAR"
+    ],
+    [
+     354,
+     "| Bab 7 Hasil/Tier | EVAL: `t_de420dbc` | V9_EVAL_A/B/C, V8_M1, V9_PM2 §e | hasil A/B/C per engine/klaim + tabel tier 11 klaim & 27 head; \"belum terukur\" ≠ gagal |"
+    ],
+    [
+     362,
+     "2. **Nol angka karangan**: semua angka = kutipan dokumen/JSON sumber; yang belum ada ditulis \"belum terukur / belum tersedia / belum dijalankan\", bukan 0, bukan dihapus."
+    ],
+    [
+     434,
+     "> (fold/well) dan dinyatakan bila belum terukur."
+    ],
+    [
+     587,
+     "inefisiensi MSE\"); P/R/FAR K-1 **belum terukur**; dataset USROP ≠ rig Volve."
+    ],
+    [
+     1120,
+     "kekuatan bukti lintas-sumur lemah. Kanal disfungsi terisi hanya ~45–47 ribu dari 419.747 baris"
+    ],
+    [
+     1503,
+     "> validitas pipeline; daftar \"belum terukur\" eksplisit §7."
+    ],
+    [
+     1587,
+     "(F-9_A 72, F-10 93, F-14 61; F-9 tanpa referensi V8 = 55, dicatat kekuatan bukti lebih rendah)."
+    ],
+    [
+     1836,
+     "F-9_A) → layer keyakinan wajib (kekuatan bukti SEDANG). Bukaan baru vs V8: fold **F-9_A** (eksternal,"
+    ],
+    [
+     1935,
+     "> hasil dilaporkan **apa adanya** (termasuk yang tidak layak); yang belum terukur ditulis"
+    ],
+    [
+     1936,
+     "> \"belum terukur\", bukan 0 dan bukan dihapus. Bab ini **solusi** (apa yang dihitung, mengapa, hasilnya),"
+    ],
+    [
+     2876,
+     "Status: **HASIL EVALUASI** yaitu kemampuan + batas pemakaian + kekuatan bukti per klaim."
+    ],
+    [
+     2877,
+     "**BUKAN vonis LULUS/GAGAL.** Tiap klaim ditutup dengan \"memenuhi untuk X / belum untuk Y / belum terukur"
+    ],
+    [
+     2896,
+     "dengan skrip sendiri (§5), bukan disalin dari dokumen tim; \"belum terukur\" tetap dipisahkan dari \"gagal\" (§4);"
+    ],
+    [
+     2975,
+     "| 4 | **stuck K-i** | Pipa terjepit (blok status `STUCK_RT` persisten) yaitu konfirmasi, bukan ramalan | deteksi **kondisi** | rule display + persistence + hybrid | rule "
+    ],
+    [
+     2979,
+     "| 8 | **bit_wear K-1** | Zona inefisiensi MSE (keausan/balling mata bor) ialah status blok `high_MSE` | deteksi **kondisi** | persistence (engine utama) + RF screening + "
+    ],
+    [
+     2982,
+     "| 11 | **tool_wear K-ii** | Status keausan mata bor **lintas-alat** (alat belum pernah dilihat) ialah LOTO | klasifikasi **lintas-alat** | RF LOTO + ambang inner-LOO; bas"
+    ],
+    [
+     3078,
+     "**batas pemakaian tertulis** · `human_review_required`. Ketiadaan data selalu ditulis dengan **kata**"
+    ],
+    [
+     3176,
+     "> (plafon lift beda per kelas); FAR dilaporkan per skala aslinya; \"belum terukur\" ≠ 0 ≠ gagal."
+    ],
+    [
+     3209,
+     "| 3 | **bit_wear** | K-1 deteksi kondisi · K-2 prediksi onset | **K-1:** status blok inefisiensi MSE (`high_MSE`, Teale MSE). **K-2:** prediksi onset blok keausan (H=10 m"
+    ],
+    [
+     3365,
+     "benar-benar dirakit jadi alat** (tiap head punya tier + layer + badge FAR + batas pemakaian)."
+    ],
+    [
+     3477,
+     "| R3 | Validitas label lintas sumur (kontrol positif stuck 0/10; label hidraulik proxy) | Ketidakpastian label = kekuatan bukti terendah | Dianotasi; jadi syarat sebelum "
+    ],
+    [
+     3478,
+     "| R4 | Alarm palsu belum terukur nyata untuk beberapa mesin | Membatasi kenaikan ke alarm otomatis | Diukur di Tahap 2a |"
+    ],
+    [
+     3485,
+     "1. **Tahap 1a: Prototipe advisori (dapat dimulai).** Tujuh mesin dengan batas pemakaian dipasang pada satu lapisan keputusan: konfirmasi status otomatis, peringatan berpe"
+    ]
+   ]
+  },
+  "eval_e_tingkat_alat": {
+   "count": 13,
+   "hits": [
+    [
+     178,
+     "di REGISTRY kode; **tidak satu pun** berstatus alarm-otomatis (`AUTO_CRITICAL_SLOTS = 0`)."
+    ],
+    [
+     283,
+     "- §1.4 Mengapa 7 ≠ 11 ≠ 27; arti \"0 alarm otomatis\"."
+    ],
+    [
+     355,
+     "| Bab 1 & Bab 8 (sumbu + sintesis) | PM1 (dokumen ini) → perakit `t_0720bde5` | V10_PM1_OUTLINE + 6 bab tim | Bab 1 dari §1 dokumen ini; Bab 8 merangkai tanpa angka baru "
+    ],
+    [
+     449,
+     "> **Riset pendahuluan: `literature-review`** yaitu sintesis dikelompokkan per engine (bukan"
+    ],
+    [
+     792,
+     "| Φ Contrarian | 10% | Ternyata rule/persistence sudah cukup | alat tetap koheren (L0+L2+L1-terbatas) | 0 alarm otomatis; ML = lapisan ranking |"
+    ],
+    [
+     2894,
+     "OBSERVED (angka JSON) dipisah dari DERIVED (sintesis tier) dan BELUM-TERUKUR."
+    ],
+    [
+     3031,
+     "**Pesan jujur ke pengguna:** \"0 alarm otomatis\" **bukan** kegagalan alat; ini desain advisory. Alarm dini"
+    ],
+    [
+     3143,
+     "0 alarm, keputusan MANUSIA) di §3."
+    ],
+    [
+     3349,
+     "karena ambang terbukti tidak transfer (shk 0 alarm lintas-well; stuck q95 jenuh; hyd FAR"
+    ],
+    [
+     3378,
+     "| **LAYAK alarm otomatis kritis** | **0 dari 7** | n/a | Syarat alarm (FAR≤1/24jam dgn recall>0 **+** B1≥80% **+** C2/C3) belum tercapai engine mana pun; sebagian karena "
+    ],
+    [
+     3485,
+     "1. **Tahap 1a: Prototipe advisori (dapat dimulai).** Tujuh mesin dengan batas pemakaian dipasang pada satu lapisan keputusan: konfirmasi status otomatis, peringatan berpe"
+    ],
+    [
+     3512,
+     "3. **Tingkat 3 (alarm otomatis kritis):** hanya setelah alarm palsu rendah terukur lintas periode/sumur dan validitas label terverifikasi. Belum dicapai; tidak diklaim."
+    ],
+    [
+     3529,
+     "| [A-4] | Pembukaan seluruh volume Volve oleh 8 tim pembaca + sintesis | `docs/V6_D0_READERS_SYNTHESIS.md`, `docs/V6_D1a..h_*.md` |"
+    ]
+   ]
+  },
+  "verdict_LULUS": {
+   "count": 4,
+   "hits": [
+    [
+     374,
+     "| AC-1 | Daftar 7/11/27 disebut NAMA-NAMENYA & konsisten dgn kode V9 | jalankan REGISTRY: 7 engine, 27 head (4+4+4+6+4+2+3), 11 klaim | **LULUS** (modul IMPORT OK; lihat "
+    ],
+    [
+     375,
+     "| AC-2 | Outline menutup keluhan (a)–(f) | matriks §2.9 | **LULUS** (tiap butir punya bab) |"
+    ],
+    [
+     376,
+     "| AC-3 | Delegasi seksi ke 6 tim (Data/R&D/ML/Stat/Rule/Eval) | tabel §3 vs children `t_cf741053` | **LULUS** (6 kartu terpasang) |"
+    ],
+    [
+     2877,
+     "**BUKAN vonis LULUS/GAGAL.** Tiap klaim ditutup dengan \"memenuhi untuk X / belum untuk Y / belum terukur"
+    ]
+   ]
+  },
+  "verdict_GAGAL": {
+   "count": 2,
+   "hits": [
+    [
+     671,
+     "tetapi **spesifisitas keausan GAGAL** karena cp signifikan **8/8 run termasuk 8/8 alat BARU**"
+    ],
+    [
+     2877,
+     "**BUKAN vonis LULUS/GAGAL.** Tiap klaim ditutup dengan \"memenuhi untuk X / belum untuk Y / belum terukur"
+    ]
+   ]
+  },
+  "verdict_lulusgagal": {
+   "count": 8,
+   "hits": [
+    [
+     1716,
+     "| Engine | Jenis tugas | Fold | RF AUPRC (rentang) | RF spread | RF ΔB>0 vs canary | RF ΔB>0 vs persistence | vonis kemampuan |"
+    ],
+    [
+     1825,
+     "### 6. TEMUAN UTAMA (KEMAMPUAN + BATAS: bukan lulus/gagal)"
+    ],
+    [
+     2877,
+     "**BUKAN vonis LULUS/GAGAL.** Tiap klaim ditutup dengan \"memenuhi untuk X / belum untuk Y / belum terukur"
+    ],
+    [
+     2905,
+     "lalu diberi **tier pemakaian**; vonis ditaruh di tingkat **alat**, bukan \"N model lolos gate\"."
+    ],
+    [
+     2984,
+     "#### 1.1 Temuan pusat (evaluasi, bukan vonis)"
+    ],
+    [
+     3190,
+     "lulus/gagal. Hasilnya jujur dan tegas: **0 dari 7 engine layak sebagai alarm otomatis**,"
+    ],
+    [
+     3401,
+     "Peta kemampuan tidak berbunyi \"lulus/gagal\", melainkan **\"pada tingkat pemakaian apa engine ini"
+    ],
+    [
+     3526,
+     "| [A-1] | Penilaian akhir V6: vonis SAH \">3 jenis kerusakan dari data nyata\" (7 jenis, 3 lolos gate pra-reg) | `docs/V6_PM_VERDICT.md` |"
+    ]
+   ]
+  },
+  "postmortem": {
+   "count": 9,
+   "hits": [
+    [
+     15,
+     "| Catatan versi | Versi ini hanya memuat solusi aktual. Seluruh riwayat kegagalan kampanye lama dipindah ke `CHANGELOG.md` agar proposal terbaca sebagai rencana solusi, b"
+    ],
+    [
+     69,
+     "Riwayat pengembangan, termasuk seluruh kampanye evaluasi beserta hasil yang tidak memenuhi ambang, tercatat transparan pada `CHANGELOG.md` dan arsip Lampiran A. Angka pen"
+    ],
+    [
+     366,
+     "6. **Proposal = solusi**: tulis apa yang alat deteksi, bagaimana, mengapa, dan pada tingkat apa layak dipakai, bukan riwayat kegagalan."
+    ],
+    [
+     877,
+     "> deteksi), bukan riwayat kegagalan."
+    ],
+    [
+     1485,
+     "> bukan riwayat kegagalan: yang ditulis = apa yang dijalankan, bagaimana mekanismenya, dan pada"
+    ],
+    [
+     1937,
+     "> bukan riwayat kegagalan."
+    ],
+    [
+     2430,
+     "> bagaimana mekanismenya, pada tingkat apa layak dipakai), **bukan riwayat kegagalan**."
+    ],
+    [
+     3169,
+     "> adalah **solusi** untuk bab proposal, bukan riwayat kegagalan: yang ditulis = apa yang"
+    ],
+    [
+     3557,
+     "Lampiran ini bersifat internal. Riwayat pengembangan lengkap, termasuk seluruh kampanye evaluasi, hasil yang tidak memenuhi ambang, dan penilaian berturut-turut, tercatat"
+    ]
+   ]
+  },
+  "n_7": {
+   "count": 281,
+   "hits": [
+    [
+     27,
+     "7. Skenario Penggunaan dan Perjalanan Pengguna"
+    ],
+    [
+     31,
+     "- Bab 1: Ruang Lingkup dan Tiga Angka (7 Engine, 11 Klaim, 27 Head)"
+    ],
+    [
+     37,
+     "- Bab 7: Apa yang Dideteksi Tiap Engine dan Seberapa Bekerja (Hasil A/B/C)"
+    ],
+    [
+     57,
+     "**Tiga angka pengikat (dijelaskan tegas pada Bab 1):** alat ini mengoperasikan **7 engine**, menilai **11 klaim**, dan merakit **27 head**. Ketiganya berjenjang, yaitu 7 "
+    ],
+    [
+     67,
+     "| **Punya peran dalam alat** | **7 dari 7** | Tidak ada mesin dibuang; tiap mesin punya batas pemakaian tertulis |"
+    ],
+    [
+     93,
+     "Solusi berupa **susunan banyak mesin deteksi yang berbeda tugas**, dipilih per jenis kegagalan. Rincian konstruksi tiap kelas ada pada Bab 1 sampai Bab 6; hasil evaluasi "
+    ],
+    [
+     121,
+     "## 7. Skenario Penggunaan dan Perjalanan Pengguna"
+    ],
+    [
+     132,
+     "## Bab 1: Ruang Lingkup dan Tiga Angka: 7 Engine, 11 Klaim, 27 Head"
+    ],
+    [
+     141,
+     "Yang HILANG dan wajib ada: (a) daftar 7 hal yang dideteksi; (b) engine mana yang bekerja &"
+    ],
+    [
+     143,
+     "(e) labeling ML / statistik / workflow hybrid; (f) penjelasan TEGAS angka 7 vs 11 (dan 27 head)."
+    ],
+    [
+     147,
+     "`docs/V9_PM1_ARCHITECTURE.md` (§2 spesifikasi 7 engine, §3 S1–S9) ·"
+    ],
+    [
+     151,
+     "> **Riset pendahuluan: `scientific-critical-thinking`**: tiga angka 7/11/27 dipisah sebagai"
+    ],
+    [
+     156,
+     "> engine (7) maupun head (27); baseline wajib relevan per tugas (deteksi-kondisi vs prediksi-onset"
+    ],
+    [
+     160,
+     "> **Riset pendahuluan: `verification-mandatory`**: angka 7/11/27 diperoleh dengan **menjalankan"
+    ],
+    [
+     164,
+     "> & validasi angka → pemisahan tegas 7/11/27 → outline yang menutup (a)–(f) → delegasi per tim →"
+    ],
+    [
+     171,
+     "Alat PdM advisory yang kami bangun menjawab **7 pertanyaan perbaikan** di sekitar rig/bengkel"
+    ],
+    [
+     172,
+     "(**7 ENGINE** = 7 kelas kerusakan yang dideteksi). Karena sebagian pertanyaan punya dua sisi, yaitu"
+    ],
+    [
+     183,
+     "### 1. PENJELASAN TEGAS: 7 ENGINE vs 11 KLAIM vs 27 HEAD"
+    ],
+    [
+     185,
+     "Tiga angka itu tiga hal berbeda, berjenjang (**7 ⊂ 11 ⊂ 27**):"
+    ],
+    [
+     187,
+     "- **7 ENGINE = 7 kelas hal yang dideteksi** (unit fisis/operasional: \"apa yang rusak?\"; satu engine per kelas kegagalan)."
+    ],
+    [
+     192,
+     "1. Pernyataan \"**0 dari 7 engine layak alarm otomatis**\" ditulis pada **level ENGINE** (tier adalah atribut head; tak ada engine yang seluruh head-nya berstatus alarm)."
+    ],
+    [
+     193,
+     "2. Setiap kali angka 7, 11, atau 27 muncul di sebuah bab, ia harus merujuk daftar eksak di §1.1–§1.3 ini."
+    ],
+    [
+     205,
+     "| 7 | `tool_wear` | Keausan mata bor di bengkel, yaitu K-i perubahan-regime dalam-run; K-ii ranking lintas-alat | getaran bengkel 1000 Hz, 27 fitur | 2 |"
+    ],
+    [
+     217,
+     "| 7 | `hyd` `K-ii`, yaitu prediksi kick/loss proxy | hyd | prediksi kejadian mendatang | **TIDAK TERSEDIA** (data pit/GAINLOSSTOT belum diparse, namun ditulis eksplisit, "
+    ],
+    [
+     223,
+     "Klaim nomor 7 dan 9 TETAP dihitung sebagai bagian dari 11: kejujuran status (\"belum / belum"
+    ],
+    [
+     238,
+     "| 7 | ssi | `hybrid_rule_and_persistence` | kondisi | PERINGATAN-BERPENGAWAS | L1 |"
+    ],
+    [
+     265,
+     "- Angka **7** menjawab \"**apa yang dideteksi alat**\", yaitu peta kelas kegagalan BHA + bengkel."
+    ],
+    [
+     269,
+     "Menjumlahkan 7+11+27 (=45) adalah salah kategori: ketiganya **level berbeda dari objek yang sama**"
+    ],
+    [
+     279,
+     "#### Bab 1: Ruang lingkup & tiga angka: 7 engine / 11 klaim / 27 head  *(penulis: PM1: dokumen ini)*"
+    ],
+    [
+     280,
+     "- §1.1 Peta 7 engine + hal yang dideteksi + kanal/sensor kunci."
+    ],
+    [
+     283,
+     "- §1.4 Mengapa 7 ≠ 11 ≠ 27; arti \"0 alarm otomatis\"."
+    ],
+    [
+     284,
+     "- **Menutup keluhan:** (a) daftar 7 hal yang dideteksi; (f) arti tegas 7/11/27."
+    ],
+    [
+     319,
+     "#### Bab 7: Apa yang dideteksi tiap engine & seberapa bekerja (hasil A/B/C)  *(penulis: EVAL: t_de420dbc)*"
+    ],
+    [
+     334,
+     "| (a) daftar 7 hal yang dideteksi | Bab 1 (§1.1) + Bab 7 | tabel 7 engine + hasil per engine |"
+    ],
+    [
+     335,
+     "| (b) engine mana bekerja & caranya | Bab 7 + Bab 1 (§1.3) | hasil A/B/C + daftar 27 head |"
+    ],
+    [
+     339,
+     "| (f) arti tegas 7 / 11 / 27 | Bab 1 (§1.0–§1.4) | daftar nama eksak + rekap tier |"
+    ],
+    [
+     354,
+     "| Bab 7 Hasil/Tier | EVAL: `t_de420dbc` | V9_EVAL_A/B/C, V8_M1, V9_PM2 §e | hasil A/B/C per engine/klaim + tabel tier 11 klaim & 27 head; \"belum terukur\" ≠ gagal |"
+    ],
+    [
+     361,
+     "1. **Kosakata angka mengikat**: setiap sebutan \"7 engine\", \"11 klaim\", \"27 head\" harus merujuk daftar eksak §1.1–§1.3; nama engine/head persis seperti kunci REGISTRY kode"
+    ],
+    [
+     374,
+     "| AC-1 | Daftar 7/11/27 disebut NAMA-NAMENYA & konsisten dgn kode V9 | jalankan REGISTRY: 7 engine, 27 head (4+4+4+6+4+2+3), 11 klaim | **LULUS** (modul IMPORT OK; lihat "
+    ],
+    [
+     387,
+     "- Angka **7/11/27** = hasil MENJALANKAN `code/v9_i1_pipeline.py` (IMPORT OK) + cross-check ke EA-1/EB-1/EC-1 dan PM2 §e. Telah terverifikasi."
+    ],
+    [
+     390,
+     "- Rincian metrik A/B/C per head BELUM direkapitulasi di sini, sehingga menjadi kewajiban tim EVAL (Bab 7)."
+    ],
+    [
+     392,
+     "### 7. SUMBER (dibaca/dijalankan di sesi ini)"
+    ],
+    [
+     394,
+     "`code/v9_i1_pipeline.py` (REGISTRY §1, baris 74–287; **dijalankan**: IMPORT OK, 7 engine/27 head) ·"
+    ],
+    [
+     401,
+     "- Riset pendahuluan: `scientific-critical-thinking`: 7/11/27 dipisah sebagai tiga unit berbeda (kelas/estimand/metode); status \"belum/tidak tersedia\" dipertahankan sebaga"
+    ],
+    [
+     419,
+     "Sumbu: `docs/V9_PM1_ARCHITECTURE.md` (§2 spesifikasi 7 engine, §3 kontrak S1–S9) ·"
+    ],
+    [
+     441,
+     "> + tripwire §7; kunci: cabang Δ (\"pasang ML di semua kelas\") ditolak berdasar angka"
+    ],
+    [
+     457,
+     "> (§3.1–3.7) + kampanye V9; 0 angka baru."
+    ],
+    [
+     463,
+     "Alat PdM ini menangani **7 kelas kegagalan BHA**. Untuk **setiap kelas, metode dipilih dari"
+    ],
+    [
+     468,
+     "sinyal fitur nyata (vib ΔB>0 vs canary 4/4; ssi RF≥canary 5/7; shk RF≥persistence B1 9/9 untuk"
+    ],
+    [
+     471,
+     "(hyd-K-i ΔB RF−persistence negatif 7/7; bit_wear persistence menang 4/4)** dan di kelas"
+    ],
+    [
+     501,
+     "| ssi | deteksi kondisi | rule definisi + **RF** | RF≥canary 5/7; persistence kalah (0/5 V8) |"
+    ],
+    [
+     504,
+     "| hyd | K-i status · K-ii prediksi | **persistence** (K-i, RF DILARANG) · RF+aliran (K-ii) | ΔB RF−pers negatif 7/7 (D-A5) |"
+    ],
+    [
+     505,
+     "| shk | deteksi anomali | rule (display) + **RF (onset)** | RF≥persistence B1 9/9 (angka onset V8); rule FAR≤6 7/9 |"
+    ],
+    [
+     557,
+     "- **Bukti empiris V9.** RF AUPRC 0,0151–0,4589; **RF≥canary 5/7 fold layak**; **vs persistence"
+    ],
+    [
+     558,
+     "6/7 fold layak**; V8 mencatat persistence kalah 0/5 vs RF. Bukaan baru: fold eksternal"
+    ],
+    [
+     560,
+     "Hibrida `rule AND persistence` **memangkas FP 26→7 (−73,1% total)**; tak memburuk di 7/7 fold"
+    ],
+    [
+     561,
+     "layak (memotong di 6/7; F-14 tie 0→0) tanpa menambah FN material."
+    ],
+    [
+     595,
+     "kanal tunggal. Skor-z memakai statistik robust median/MAD [7][8][9]. Preseden: deteksi dini"
+    ],
+    [
+     596,
+     "stuck dari data surface Volve dengan Crossformer (peringatan **2,67–7,37 menit**) [19],"
+    ],
+    [
+     620,
+     "[7][8][9]. Untuk K-ii (kick/loss proxy), label dibangun dari **perubahan volume pit**"
+    ]
+   ]
+  },
+  "n_11_klaim": {
+   "count": 18,
+   "hits": [
+    [
+     57,
+     "**Tiga angka pengikat (dijelaskan tegas pada Bab 1):** alat ini mengoperasikan **7 engine**, menilai **11 klaim**, dan merakit **27 head**. Ketiganya berjenjang, yaitu 7 "
+    ],
+    [
+     279,
+     "#### Bab 1: Ruang lingkup & tiga angka: 7 engine / 11 klaim / 27 head  *(penulis: PM1: dokumen ini)*"
+    ],
+    [
+     281,
+     "- §1.2 Daftar 11 klaim (tugas, label, baseline per klaim)."
+    ],
+    [
+     321,
+     "- Tabel 11 klaim (setara PM2 §e) + tabel 27 head (tier/lapisan/badge FAR/batas)."
+    ],
+    [
+     354,
+     "| Bab 7 Hasil/Tier | EVAL: `t_de420dbc` | V9_EVAL_A/B/C, V8_M1, V9_PM2 §e | hasil A/B/C per engine/klaim + tabel tier 11 klaim & 27 head; \"belum terukur\" ≠ gagal |"
+    ],
+    [
+     361,
+     "1. **Kosakata angka mengikat**: setiap sebutan \"7 engine\", \"11 klaim\", \"27 head\" harus merujuk daftar eksak §1.1–§1.3; nama engine/head persis seperti kunci REGISTRY kode"
+    ],
+    [
+     374,
+     "| AC-1 | Daftar 7/11/27 disebut NAMA-NAMENYA & konsisten dgn kode V9 | jalankan REGISTRY: 7 engine, 27 head (4+4+4+6+4+2+3), 11 klaim | **LULUS** (modul IMPORT OK; lihat "
+    ],
+    [
+     913,
+     "**Kedudukan dalam kosakata PM1 (7 engine / 11 klaim / 27 head).** Bab ini memasok bahan mentah dan"
+    ],
+    [
+     915,
+     "pengukuran **11 klaim** serta **27 head** yang didefinisikan pada `docs/V10_PM1_OUTLINE.md`"
+    ],
+    [
+     1373,
+     "Bab ini memasok data untuk **7 engine** (kelas kerusakan), menjadi dasar pengukuran **11 klaim**"
+    ],
+    [
+     1975,
+     "**Kedudukan dalam kosakata PM1 (7 engine / 11 klaim / 27 head):** peran statistik menyumbang rumus &"
+    ],
+    [
+     1977,
+     "klaim #5–#7, #10 dari **11 klaim**), dan mengukur **head statistik** di REGISTRY prototipe I1"
+    ],
+    [
+     1980,
+     "(head 25–26), `hyd/k2_tidak_tersedia` (head 22). Ketiga angka (7 engine ⊂ 11 klaim ⊂ 27 head) merujuk"
+    ],
+    [
+     2360,
+     "| **(f) 7 vs 11 vs 27** | **7 engine** = kelas masalah; **11 klaim** = sub-tugas/estimand; **27 head** = varian metode di registry prototipe I1 (`docs/V10_PM1_OUTLINE.md`"
+    ],
+    [
+     2906,
+     "- Riset pendahuluan: `sequentialthinking` (5 pikiran, 5/5 sukses, `sequ-mcp`): (1) inventaris 7 engine/11 klaim/"
+    ],
+    [
+     2954,
+     "| **11 klaim** | 11 | **estimand / tugas terpisah** | 4 engine mengerjakan **dua tugas berbeda** dan dipisah: `stuck` (K-i status + K-ii onset), `hyd` (K-i status + K-ii "
+    ],
+    [
+     3139,
+     "- **(f) 7 vs 11 vs 27:** 7 kelas kegagalan → 11 klaim (4 kelas berbagi dua tugas) → 27 head (varian metode"
+    ],
+    [
+     3361,
+     "| **11** | **Klaim/sub-tugas** yang dievaluasi | 7 kelas + 4 kelas yang punya dua sub-tugas: bit_wear (K-1/K-2), stuck (K-i/K-ii), hyd (K-i/K-ii), tool_wear (K-i/K-ii) → "
+    ]
+   ]
+  },
+  "n_27_head": {
+   "count": 34,
+   "hits": [
+    [
+     57,
+     "**Tiga angka pengikat (dijelaskan tegas pada Bab 1):** alat ini mengoperasikan **7 engine**, menilai **11 klaim**, dan merakit **27 head**. Ketiganya berjenjang, yaitu 7 "
+    ],
+    [
+     143,
+     "(e) labeling ML / statistik / workflow hybrid; (f) penjelasan TEGAS angka 7 vs 11 (dan 27 head)."
+    ],
+    [
+     260,
+     "Rekap tier (27 head): PERINGATAN-BERPENGAWAS **12** · TREN **13** · BELUM LAYAK PAKAI **2**."
+    ],
+    [
+     261,
+     "Rekap lapisan (27 head): L0 **5** · L1 **11** · L2 **9** · L3 **2**. Slot ALARM-OTOMATIS = **0**."
+    ],
+    [
+     279,
+     "#### Bab 1: Ruang lingkup & tiga angka: 7 engine / 11 klaim / 27 head  *(penulis: PM1: dokumen ini)*"
+    ],
+    [
+     282,
+     "- §1.3 Daftar 27 head (nama · klaim · tier · lapisan)."
+    ],
+    [
+     321,
+     "- Tabel 11 klaim (setara PM2 §e) + tabel 27 head (tier/lapisan/badge FAR/batas)."
+    ],
+    [
+     335,
+     "| (b) engine mana bekerja & caranya | Bab 7 + Bab 1 (§1.3) | hasil A/B/C + daftar 27 head |"
+    ],
+    [
+     354,
+     "| Bab 7 Hasil/Tier | EVAL: `t_de420dbc` | V9_EVAL_A/B/C, V8_M1, V9_PM2 §e | hasil A/B/C per engine/klaim + tabel tier 11 klaim & 27 head; \"belum terukur\" ≠ gagal |"
+    ],
+    [
+     361,
+     "1. **Kosakata angka mengikat**: setiap sebutan \"7 engine\", \"11 klaim\", \"27 head\" harus merujuk daftar eksak §1.1–§1.3; nama engine/head persis seperti kunci REGISTRY kode"
+    ],
+    [
+     374,
+     "| AC-1 | Daftar 7/11/27 disebut NAMA-NAMENYA & konsisten dgn kode V9 | jalankan REGISTRY: 7 engine, 27 head (4+4+4+6+4+2+3), 11 klaim | **LULUS** (modul IMPORT OK; lihat "
+    ],
+    [
+     394,
+     "`code/v9_i1_pipeline.py` (REGISTRY §1, baris 74–287; **dijalankan**: IMPORT OK, 7 engine/27 head) ·"
+    ],
+    [
+     397,
+     "`docs/V9_EVAL_C_LAYERC.md` (EC-1) · `docs/V9_I1_INTEGRATION.md` §2 (tabel 27 head)."
+    ],
+    [
+     819,
+     "dijalankan ulang hanya modul REGISTRY `v9_i1_pipeline.py` (7 engine, 27 head terkonfirmasi)."
+    ],
+    [
+     835,
+     "| i | Angka konsisten dgn sumber (review V10-R1) | tiap angka ditelusuri ke dokumen/JSON primer (V9_E_ML/E_STAT/E_RULE, V9_EVAL_A/B/C, V8_E_*, V9_PM1/PM2); registry `v9_i"
+    ],
+    [
+     843,
+     "(§2 registry 27 head) · `docs/V9_PM2_VERDICT.md` (§e tabel tier) · `docs/V9_D1_DATA_PIPELINE.md`"
+    ],
+    [
+     846,
+     "`code/v9_i1_pipeline.py` (REGISTRY 27 head) · `Evaluasi User.txt`."
+    ],
+    [
+     913,
+     "**Kedudukan dalam kosakata PM1 (7 engine / 11 klaim / 27 head).** Bab ini memasok bahan mentah dan"
+    ],
+    [
+     915,
+     "pengukuran **11 klaim** serta **27 head** yang didefinisikan pada `docs/V10_PM1_OUTLINE.md`"
+    ],
+    [
+     1375,
+     "**27 head** (varian metode terukur). Angka 7/11/27 didefinisikan eksak pada"
+    ],
+    [
+     1975,
+     "**Kedudukan dalam kosakata PM1 (7 engine / 11 klaim / 27 head):** peran statistik menyumbang rumus &"
+    ],
+    [
+     1978,
+     "(`docs/V10_PM1_OUTLINE.md` §1.3, daftar **27 head**): `hyd/persistence` (head 20), `stuck/e1_2of3` +"
+    ],
+    [
+     1980,
+     "(head 25–26), `hyd/k2_tidak_tersedia` (head 22). Ketiga angka (7 engine ⊂ 11 klaim ⊂ 27 head) merujuk"
+    ],
+    [
+     2360,
+     "| **(f) 7 vs 11 vs 27** | **7 engine** = kelas masalah; **11 klaim** = sub-tugas/estimand; **27 head** = varian metode di registry prototipe I1 (`docs/V10_PM1_OUTLINE.md`"
+    ],
+    [
+     2907,
+     "27 head dari registry → (2) desain kolom tabel (apa-dideteksi → jenis tugas → metode → angka → tier → batas) →"
+    ],
+    [
+     2955,
+     "| **27 head** | 27 | **varian metode terukur** | satu klaim dijalankan **beberapa cara** (rule/persistence/hybrid/statistik/ML) yang diukur terpisah. Registry I1 mencatat"
+    ],
+    [
+     3039,
+     "Registry `scratch/v9_i1/v9_i1_RESULTS.json` (diverifikasi ulang sesi ini: **27 head** = L0 5 · L1 11 · L2 9 ·"
+    ],
+    [
+     3044,
+     "#### 3.1 Peta 27 head → lapisan keputusan"
+    ],
+    [
+     3057,
+     "(cek V2: 27 head, **0 kenaikan tier**). Ini menjaga agar \"cepat terlihat berguna\" tidak mengalahkan"
+    ],
+    [
+     3116,
+     "| V13 | registry: **27 head** (L0 5 · L1 11 · L2 9 · L3 2), tier 13 TREN / 12 PERINGATAN / 2 BELUM, slot alarm **0**, keputusan **MANUSIA** | I1 `v9_i1_RESULTS.json` | ✓ "
+    ],
+    [
+     3139,
+     "- **(f) 7 vs 11 vs 27:** 7 kelas kegagalan → 11 klaim (4 kelas berbagi dua tugas) → 27 head (varian metode"
+    ],
+    [
+     3362,
+     "| **27** | **Head** pada registry prototipe (implementasi konkret tiap engine × metode/head) | hasil perakitan `V9_I1_INTEGRATION.md` §2, 7 engine = **27 head** (rule/per"
+    ],
+    [
+     3367,
+     "kebetulan angka dan **tidak berhubungan** dengan 27 head; jangan tertukar."
+    ],
+    [
+     3463,
+     "`docs/V9_I1_INTEGRATION.md` (§2 registry 27 head, §4 lapisan keputusan) ·"
+    ]
+   ]
+  }
+ }
+}

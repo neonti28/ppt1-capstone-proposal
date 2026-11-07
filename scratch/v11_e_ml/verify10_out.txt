@@ -1,0 +1,31 @@
+baris tabel ditemukan/dicek = 26 (expected 26)
+sel angka dicek = 286
+ketidakcocokan = 0
+
+=== baris ringkasan agregat bab 4 ===
+  vib: rentang_cells=0,4405–0,9117 json=[0.44052428575087504,0.911676937088842] cocok=True | spread=0,4712 json=0.4712 cocok=True | canary=**4/4** json=4/4 fold layak | pers=2/4 json=2/4 fold layak
+  ssi: rentang_cells=0,0151–0,4589 json=[0.015115323583482665,0.4588744588744589] cocok=True | spread=0,4438 json=0.4438 cocok=True | canary=5/7 json=5/7 fold layak | pers=6/7 json=6/7 fold layak
+  shk: rentang_cells=0,0069–0,1929 json=[0.006872294547472093,0.19288544168099098] cocok=True | spread=0,1860 json=0.186 cocok=True | canary=5/9 json=5/9 fold layak | pers=4/9 json=4/9 fold layak
+  stuck_k2: rentang_cells=0,0697–0,4443 json=[0.06967364070055007,0.44433911521175595] cocok=True | spread=0,3747 json=0.3747 cocok=True | canary=**4/4** json=4/4 fold layak | pers=**0/4** json=0/4 fold layak
+
+=== baris deltaB prosa (regex) ===
+  nilai deltaB dicek = 20 | salah = 0
+
+=== prosa kunci vs primer ===
+  OK  26 fold
+  OK  lift 1,61/2,36/3,50/1,63
+  OK  persistence-onset 0,8265-0,9016
+  OK  RF 0,0697-0,4443
+  OK  135 titik shk / 53 FAR<=60
+  OK  10 dari 402 titik
+  OK  determinisme 2,22e-16
+  OK  UP F-7 3 pos / F-9 12 pos
+  OK  assert baris 192-193
+  OK  118.567 baris kosong
+  OK  884 event (50/571/263)
+  OK  P75 256,600 psi
+  OK  onset 72/93/61/55
+  OK  sklearn 1.9.1
+  OK  28 -> 26 koreksi
+  OK  median run 10 menit
+  OK  6/7 baris positif

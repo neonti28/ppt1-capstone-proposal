@@ -1,0 +1,54 @@
+=== KANDIDAT_1 ===  full=24230 chars | bab-ML=7470 chars
+   'Brier': di seluruh dokumen=1, di bab ML=1
+   'ECE': di seluruh dokumen=1, di bab ML=1
+   'A/B/C': di seluruh dokumen=7, di bab ML=2
+   'Lapisan A': di seluruh dokumen=1, di bab ML=1
+   'Deep learning': di seluruh dokumen=1, di bab ML=1
+   'Regresi logistik': di seluruh dokumen=1, di bab ML=1
+   'Gradient': di seluruh dokumen=1, di bab ML=1
+   '121 klaim': di seluruh dokumen=4, di bab ML=0
+   'Brier & ECE': di seluruh dokumen=1, di bab ML=1
+   'canary': di seluruh dokumen=3, di bab ML=2
+
+=== KANDIDAT_2 ===  full=243899 chars | bab-ML=31493 chars
+   'Riset pendahuluan': di seluruh dokumen=51, di bab ML=6
+   'A/B/C': di seluruh dokumen=21, di bab ML=1
+   'Lapisan A': di seluruh dokumen=1, di bab ML=0
+   'Logistic': di seluruh dokumen=1, di bab ML=1
+   'Gradient': di seluruh dokumen=1, di bab ML=1
+   '7 vs 11 vs 27': di seluruh dokumen=9, di bab ML=1
+   '27 head': di seluruh dokumen=36, di bab ML=0
+   '11 klaim': di seluruh dokumen=19, di bab ML=0
+   '121 klaim': di seluruh dokumen=2, di bab ML=0
+   'UNDERPOWER': di seluruh dokumen=21, di bab ML=6
+   'underpowered': di seluruh dokumen=4, di bab ML=1
+   'persistence-onset': di seluruh dokumen=15, di bab ML=10
+   'D-A5': di seluruh dokumen=21, di bab ML=6
+   'q95': di seluruh dokumen=24, di bab ML=6
+   'bootstrap': di seluruh dokumen=4, di bab ML=3
+   'CI95': di seluruh dokumen=19, di bab ML=9
+   'canary': di seluruh dokumen=73, di bab ML=20
+   'grid search': di seluruh dokumen=3, di bab ML=2
+
+=== jumlah baris & struktur bab ===
+KANDIDAT_1: total baris=352 | baris '### '=19 | baris '## '=20 | tabel=119
+KANDIDAT_2: total baris=3557 | baris '### '=82 | baris '## '=20 | tabel=619
+
+=== Evaluasi User.txt (instrumen rubrik) ===
+kandidat berkas: ['/mnt/d/Capstone 1(v2)/Evaluasi User.txt']
+--- /mnt/d/Capstone 1(v2)/Evaluasi User.txt (5090 bytes)
+Okay, konteksnya kita tahu adalah PREDICTIVE MAINTENANCE (anda bisa cari di internet apa itu predictive maintenance). Dan terpenting, anda sudah berhasil mendeteksi dengan engine machine learning, tapi beberapa gagal dengan machine learning. Jadi, kalau kita berbicara predictive maintenance, memang sewajarnya kita menggunakan machine learning, tapi kali ini anda tidak saya haruskan untuk pakai machine learning. Dalam machine learning pun, saya persilahkan anda menggunakan metode yang berbeda beda (misalnya random forest, regresi, atau lainnya, terserah anda, intinya yang performanya terbaik). Apakah standar anda terlalu ketat? Saya rasa iya. jika gate tersebut dipakai untuk memutuskan apakah suatu engine boleh digunakan sama sekali, pendekatannya terlalu kaku. Jika dipakai untuk menilai apakah engine tertentu sudah terbukti memberikan kemampuan prediksi yang kuat, pendekatan itu lebih masuk akal. Anda bisa menggunakan rule based detection, statistical detection, persistance, anomaly detection, supervised ML, atau bahkan hybrid engine (campuran beberapa engine, gabungan rule, stats, atau ML). Tidak semua engine perlu melewati gate yang identik karena tidak semua engine mengerjakan tugas yang sama. Untuk kasus kerusakan x, anda bisa menggunakan engine a; untuk kerusakan y, anda boleh menggunakan engine a juga, tapi juga boleh pakai engine lain (intinya sesuaikan saja). Tidak semua engine perlu melewati gate yang identik karena tidak semua engine mengerjakan tugas yang sama. Misalnya, aturan sederhana yang mampu mendeteksi tekanan abnormal secara konsisten dapat sangat berguna tanpa pernah mengalahkan suatu model ML pada lift 1,5. Begitu pula metode statistik yang mendeteksi perubahan pola operasi bisa membantu pemeriksaan peralatan meskipun belum mampu memprediksi tanggal kerusakan. Empat kelas yang gagal tadi tidak seharusnya langsung dibuang. stuck: meskipun persistence mengalahkan ML untuk klasifikasi status, engine tersebut masih bisa berguna untuk mendeteksi onset, durasi abnormal, atau kegagalan kembali ke kondisi normal. Tetapi target itu harus diuji secara terpisah.
+
+
+
+hyd: jika labelnya berasal dari SPPA dan aliran, engine mungkin tetap berguna untuk mendeteksi atau merekonstruksi kondisi yang didefinisikan oleh variabel tersebut. Namun, itu berbeda dari membuktikan prediksi kegagalan hidraulik independen.
+
+
+
+shk: kelas positif yang langka bukan alasan untuk menolak detektor. Pertanyaan praktisnya adalah apakah ia menemukan kejadian relevan dengan tingkat alarm palsu yang dapat ditangani. Penambahan data perlu disertai pemeriksaan kualitas label dan pembagian data.
+
+
+
+tool_wear: model yang belum terbukti dapat melakukan generalisasi ke alat yang belum pernah dilihat mungkin tetap bermanfaat untuk pemantauan alat yang sudah dikenal. Kemampuan lintas alat merupakan klaim tambahan yang membutuhkan pengujian tersendiri.
+
+Jadi, saya tidak akan memberi label sederhana seperti gagal, buang hanya berdasarkan satu ambang lift. Saya akan menyimpan h

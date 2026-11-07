@@ -1,7 +1,7 @@
-# RND-E3: EKSEKUSI PILOT PADA ENGINE hyd K-i (HASIL NYATA)
+# RND-E3: EKSEKUSI PILOT PADA mode hyd K-i (HASIL NYATA)
 
 Kartu: `t_13309129` · Board: `rnd-algo-2026` · Tanggal: 2026-10-27 (WIB)
-Engine: `hyd` · Klaim: K-i · Workspace: `/mnt/d/Capstone 1(v2)`
+Detektor: `hyd` · Klaim: K-i · Workspace: `/mnt/d/Capstone 1(v2)`
 Dokumen hulu: `docs/RND_E2_PROTOKOL.md` (protokol), `docs/RND_E1_MATRIKS.md` (kelayakan),
 `docs/RND_ALGO_RESEARCH_PLAN.md` §2 (aturan angka) dan §6 (gate C/A/B).
 
@@ -116,7 +116,7 @@ Dua koreksi yang wajib dinyatakan, bukan disembunyikan:
 1. **Angka terbit berbeda dari angka hitung ulang.** E2 §4.1 mencatat baseline terbit sebagai
    FP total 2091 (rule) dan 927 (hybrid). Hitung ulang pada fold dan definisi di sini memberi
    1941 (persistence) dan 195 (hybrid proxy). Penyebabnya konkret: proxy `rule_lag` memakai label
-   menit sebelumnya, bukan sinyal pra-label dari engine rule asli, sehingga proxy lebih ketat
+   menit sebelumnya, bukan sinyal pra-label dari detektor rule asli, sehingga proxy lebih ketat
    daripada rule sebenarnya. Baseline terbit **tidak** dipakai sebagai pembanding utama di sini.
 2. **FAR hybrid terbit 14,6 sampai 58,4 tidak dapat dibandingkan langsung** dengan FAR pada tabel
    ini karena definisi FAR E2 memakai jam negatif teramati, bukan jam kalender.
@@ -313,7 +313,7 @@ rekomendasi apa pun di dokumen ini, jadi tidak dimasukkan ke tabel.
    karena `detection_stats` hanya dijalankan untuk alarm model, bukan untuk baseline.
 7. **Waktu latih per fold tidak dicatat terpisah.** Yang tersedia hanya total 233,7 detik untuk
    seluruh lintasan.
-8. **Tidak ada uji pada satuan bengkel**, karena hyd adalah engine rig.
+8. **Tidak ada uji pada satuan bengkel**, karena hyd adalah detektor rig.
 
 ---
 

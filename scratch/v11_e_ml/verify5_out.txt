@@ -1,0 +1,31 @@
+=== 1. stuck_k2 ts_bin/lab_ts (parser csv resmi, bukan split) ===
+  contoh baris: {'well': 'F-10', 'ts_bin': "'20649209'", 'lab_ts': "'20649209.0'", 'feat_ts_max': "'20649208.0'", 'lab_kind': "'onset_horizon_neg'"}
+  contoh baris: {'well': 'F-10', 'ts_bin': "'20649210'", 'lab_ts': "'20649210.0'", 'feat_ts_max': "'20649209.0'", 'lab_kind': "'onset_horizon_neg'"}
+  contoh baris: {'well': 'F-10', 'ts_bin': "'20650042'", 'lab_ts': "'20650042.0'", 'feat_ts_max': "'20650041.0'", 'lab_kind': "'onset_horizon_neg'"}
+rows = 118567
+nilai ts_bin (top10): [('20649209', 1), ('20649210', 1), ('20650042', 1), ('20650043', 1), ('20650044', 1), ('20650045', 1), ('20650046', 1), ('20650047', 1), ('20650048', 1), ('20650049', 1)]
+nilai lab_ts (top10): [('20650513.0', 10), ('20650794.0', 10), ('20650847.0', 10), ('20650895.0', 10), ('20650954.0', 10), ('20651033.0', 10), ('20651088.0', 10), ('20651173.0', 10), ('20651209.0', 10), ('20651336.0', 10)]
+ts_bin kosong/NaN = 0/118567 ; lab_ts kosong/NaN = 0/118567
+
+=== 2. USROP_labeled: label vs MSE > P75 ===
+n MSE = 198928 | P75 = 256600.424 | min/max = 10.77 5946375.5
+distribusi label: {'normal': 134013, 'low_ROP_efficiency': 15183, 'high_MSE_bit_wear': 49732}
+cross-tab (label, posisi vs P75):
+    ('high_MSE_bit_wear', 'MSE>P75') 49732
+    ('low_ROP_efficiency', 'MSE<=P75') 15183
+    ('normal', 'MSE<=P75') 134013
+label unik: ['high_MSE_bit_wear', 'low_ROP_efficiency', 'normal']
+  label 'high_MSE_bit_wear': n=49732 MSE min=256601.905 max=5946375.499 median=413861.300
+  label 'low_ROP_efficiency': n=15183 MSE min=358.243 max=256588.640 median=192042.307
+  label 'normal': n=134013 MSE min=10.768 max=256599.930 P25=16706.487 P75=114633.585
+
+=== 3. NQ & jendela agregasi hyd (v9_d1_03) ===
+  :27: W = 10
+  :28: NQ = 10
+  :30: STATS = ["mean", "std", "slope", "last", "frac"]
+  :36: META_W = ["ts_bin", "feat_ts_max", "lab_ts", "lab_kind"]   # kolom di master windows
+  :61: if len(d) >= 50:
+  :101: y_h = (valid_h & (n_anom / np.maximum(n_obs, 1) >= 0.5)).astype(np.int8)
+
+=== 4. grep ipynb md-diff kandidat 2 (v8_e_shk_02b) ===
+'n kanal MWD.\\n",\n    "- **Mengapa RF + persistence (hibrida).** Untuk **status**, RF dipakai bersama persistence;\\n",\n    "  tetapi nilai tambah ML yang **terukur** ada di **sub-tugas onset**: RF≥persistence untuk\\n",\n    "  B1 di **9/9 fold** (TLead median 5,0 mnt; angka kampanye V8 pra-reg onset `v8_e_shk_02b`,\\\\nbukan V9 yang hanya mengukur status) → ML menambah nilai peringatan dini di atas\\n",\n    "  \\"status kemarin\\", meski AUPRC statusnya sering kalah dari persistence (blok panjang).\\n",\n    "- **Bukti empiris V9.** RF AUPRC 0,0069–0,1929; ΔB vs canary 5/9; rule-display FAR 0,67–6,6\\n"'

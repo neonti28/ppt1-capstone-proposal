@@ -1,0 +1,4549 @@
+{
+ "kartu": "t_b5b16adc",
+ "langkah": "S5-A rerun seed 42 dan 13",
+ "tanggal": "2026-10-28 06:02:50",
+ "sumber": {
+  "dokumen": "/mnt/d/Capstone 1(v2)/docs/RND_S1_SEED_ROBUSTNESS.md",
+  "json_s1": "/mnt/d/Capstone 1(v2)/scratch/rnd/s1/s1_hyd_seeds.json"
+ },
+ "tabel_5_1": {
+  "fp_total": {
+   "sel": {
+    "42": {
+     "json": 935,
+     "dok": 936.0,
+     "delta": -1.0,
+     "cocok": false
+    },
+    "7": {
+     "json": 935,
+     "dok": 935.0,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "13": {
+     "json": 935,
+     "dok": 935.0,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "21": {
+     "json": 935,
+     "dok": 935.0,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "33": {
+     "json": 935,
+     "dok": 935.0,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "median": {
+     "json": 935.0,
+     "dok": 935.0,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "min": {
+     "json": 935.0,
+     "dok": 935.0,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "maks": {
+     "json": 935.0,
+     "dok": 935.0,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "rentang": {
+     "json": 0.0,
+     "dok": 0.0,
+     "delta": 0.0,
+     "cocok": true
+    }
+   },
+   "semua_cocok": false
+  },
+  "tp_total": {
+   "sel": {
+    "42": {
+     "json": 3804,
+     "dok": 3804.0,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "7": {
+     "json": 3804,
+     "dok": 3804.0,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "13": {
+     "json": 3804,
+     "dok": 3804.0,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "21": {
+     "json": 3804,
+     "dok": 3804.0,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "33": {
+     "json": 3804,
+     "dok": 3804.0,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "median": {
+     "json": 3804.0,
+     "dok": 3804.0,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "min": {
+     "json": 3804.0,
+     "dok": 3804.0,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "maks": {
+     "json": 3804.0,
+     "dok": 3804.0,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "rentang": {
+     "json": 0.0,
+     "dok": 0.0,
+     "delta": 0.0,
+     "cocok": true
+    }
+   },
+   "semua_cocok": true
+  },
+  "precision_median": {
+   "sel": {
+    "42": {
+     "json": 0.7789,
+     "dok": 0.7789,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "7": {
+     "json": 0.7789,
+     "dok": 0.7789,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "13": {
+     "json": 0.7789,
+     "dok": 0.7789,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "21": {
+     "json": 0.7789,
+     "dok": 0.7789,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "33": {
+     "json": 0.7789,
+     "dok": 0.7789,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "median": {
+     "json": 0.7789,
+     "dok": 0.7789,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "min": {
+     "json": 0.7789,
+     "dok": 0.7789,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "maks": {
+     "json": 0.7789,
+     "dok": 0.7789,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "rentang": {
+     "json": 0.0,
+     "dok": 0.0,
+     "delta": 0.0,
+     "cocok": true
+    }
+   },
+   "semua_cocok": true
+  },
+  "recall_median": {
+   "sel": {
+    "42": {
+     "json": 0.5638,
+     "dok": 0.5638,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "7": {
+     "json": 0.5638,
+     "dok": 0.5638,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "13": {
+     "json": 0.5638,
+     "dok": 0.5638,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "21": {
+     "json": 0.5638,
+     "dok": 0.5638,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "33": {
+     "json": 0.5638,
+     "dok": 0.5638,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "median": {
+     "json": 0.5638,
+     "dok": 0.5638,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "min": {
+     "json": 0.5638,
+     "dok": 0.5638,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "maks": {
+     "json": 0.5638,
+     "dok": 0.5638,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "rentang": {
+     "json": 0.0,
+     "dok": 0.0,
+     "delta": 0.0,
+     "cocok": true
+    }
+   },
+   "semua_cocok": true
+  },
+  "far24_kalender_median": {
+   "sel": {
+    "42": {
+     "json": 3.5302,
+     "dok": 3.5302,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "7": {
+     "json": 3.5302,
+     "dok": 3.5302,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "13": {
+     "json": 3.5302,
+     "dok": 3.5302,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "21": {
+     "json": 3.5302,
+     "dok": 3.5302,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "33": {
+     "json": 3.5302,
+     "dok": 3.5302,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "median": {
+     "json": 3.5302,
+     "dok": 3.5302,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "min": {
+     "json": 3.5302,
+     "dok": 3.5302,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "maks": {
+     "json": 3.5302,
+     "dok": 3.5302,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "rentang": {
+     "json": 0.0,
+     "dok": 0.0,
+     "delta": 0.0,
+     "cocok": true
+    }
+   },
+   "semua_cocok": true
+  },
+  "far24_kalender_min": {
+   "sel": {
+    "42": {
+     "json": 0.4059,
+     "dok": 0.4059,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "7": {
+     "json": 0.4059,
+     "dok": 0.4059,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "13": {
+     "json": 0.4059,
+     "dok": 0.4059,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "21": {
+     "json": 0.4059,
+     "dok": 0.4059,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "33": {
+     "json": 0.4059,
+     "dok": 0.4059,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "median": {
+     "json": 0.4059,
+     "dok": 0.4059,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "min": {
+     "json": 0.4059,
+     "dok": 0.4059,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "maks": {
+     "json": 0.4059,
+     "dok": 0.4059,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "rentang": {
+     "json": 0.0,
+     "dok": 0.0,
+     "delta": 0.0,
+     "cocok": true
+    }
+   },
+   "semua_cocok": true
+  },
+  "far24_kalender_maks": {
+   "sel": {
+    "42": {
+     "json": 8.9132,
+     "dok": 8.9132,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "7": {
+     "json": 8.9132,
+     "dok": 8.9132,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "13": {
+     "json": 8.9132,
+     "dok": 8.9132,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "21": {
+     "json": 8.9132,
+     "dok": 8.9132,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "33": {
+     "json": 8.9132,
+     "dok": 8.9132,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "median": {
+     "json": 8.9132,
+     "dok": 8.9132,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "min": {
+     "json": 8.9132,
+     "dok": 8.9132,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "maks": {
+     "json": 8.9132,
+     "dok": 8.9132,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "rentang": {
+     "json": 0.0,
+     "dok": 0.0,
+     "delta": 0.0,
+     "cocok": true
+    }
+   },
+   "semua_cocok": true
+  },
+  "far24_baris_median": {
+   "sel": {
+    "42": {
+     "json": 32.256,
+     "dok": 32.256,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "7": {
+     "json": 32.256,
+     "dok": 32.256,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "13": {
+     "json": 32.256,
+     "dok": 32.256,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "21": {
+     "json": 32.256,
+     "dok": 32.256,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "33": {
+     "json": 32.256,
+     "dok": 32.256,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "median": {
+     "json": 32.256,
+     "dok": 32.256,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "min": {
+     "json": 32.256,
+     "dok": 32.256,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "maks": {
+     "json": 32.256,
+     "dok": 32.256,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "rentang": {
+     "json": 0.0,
+     "dok": 0.0,
+     "delta": 0.0,
+     "cocok": true
+    }
+   },
+   "semua_cocok": true
+  },
+  "lead_median_median": {
+   "sel": {
+    "42": {
+     "json": 11.5,
+     "dok": 11.5,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "7": {
+     "json": 11.5,
+     "dok": 11.5,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "13": {
+     "json": 11.5,
+     "dok": 11.5,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "21": {
+     "json": 11.5,
+     "dok": 11.5,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "33": {
+     "json": 11.5,
+     "dok": 11.5,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "median": {
+     "json": 11.5,
+     "dok": 11.5,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "min": {
+     "json": 11.5,
+     "dok": 11.5,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "maks": {
+     "json": 11.5,
+     "dok": 11.5,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "rentang": {
+     "json": 0.0,
+     "dok": 0.0,
+     "delta": 0.0,
+     "cocok": true
+    }
+   },
+   "semua_cocok": true
+  },
+  "n_diperingatkan": {
+   "sel": {
+    "42": {
+     "json": 219,
+     "dok": 219.0,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "7": {
+     "json": 219,
+     "dok": 219.0,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "13": {
+     "json": 219,
+     "dok": 219.0,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "21": {
+     "json": 219,
+     "dok": 219.0,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "33": {
+     "json": 219,
+     "dok": 219.0,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "median": {
+     "json": 219.0,
+     "dok": 219.0,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "min": {
+     "json": 219.0,
+     "dok": 219.0,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "maks": {
+     "json": 219.0,
+     "dok": 219.0,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "rentang": {
+     "json": 0.0,
+     "dok": 0.0,
+     "delta": 0.0,
+     "cocok": true
+    }
+   },
+   "semua_cocok": true
+  },
+  "fold_far_le6": {
+   "sel": {
+    "42": {
+     "json": 7,
+     "dok": 7.0,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "7": {
+     "json": 7,
+     "dok": 7.0,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "13": {
+     "json": 7,
+     "dok": 7.0,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "21": {
+     "json": 7,
+     "dok": 7.0,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "33": {
+     "json": 7,
+     "dok": 7.0,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "median": {
+     "json": 7.0,
+     "dok": 7.0,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "min": {
+     "json": 7.0,
+     "dok": 7.0,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "maks": {
+     "json": 7.0,
+     "dok": 7.0,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "rentang": {
+     "json": 0.0,
+     "dok": 0.0,
+     "delta": 0.0,
+     "cocok": true
+    }
+   },
+   "semua_cocok": true
+  },
+  "fold_gate_A_baru": {
+   "sel": {
+    "42": {
+     "json": 0,
+     "dok": 0.0,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "7": {
+     "json": 0,
+     "dok": 0.0,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "13": {
+     "json": 0,
+     "dok": 0.0,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "21": {
+     "json": 0,
+     "dok": 0.0,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "33": {
+     "json": 0,
+     "dok": 0.0,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "median": {
+     "json": 0.0,
+     "dok": 0.0,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "min": {
+     "json": 0.0,
+     "dok": 0.0,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "maks": {
+     "json": 0.0,
+     "dok": 0.0,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "rentang": {
+     "json": 0.0,
+     "dok": 0.0,
+     "delta": 0.0,
+     "cocok": true
+    }
+   },
+   "semua_cocok": true
+  },
+  "cakupan_median": {
+   "sel": {
+    "42": {
+     "json": 0.0903,
+     "dok": 0.0903,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "7": {
+     "json": 0.0903,
+     "dok": 0.0903,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "13": {
+     "json": 0.0903,
+     "dok": 0.0903,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "21": {
+     "json": 0.0903,
+     "dok": 0.0903,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "33": {
+     "json": 0.0903,
+     "dok": 0.0903,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "median": {
+     "json": 0.0903,
+     "dok": 0.0903,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "min": {
+     "json": 0.0903,
+     "dok": 0.0903,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "maks": {
+     "json": 0.0903,
+     "dok": 0.0903,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "rentang": {
+     "json": 0.0,
+     "dok": 0.0,
+     "delta": 0.0,
+     "cocok": true
+    }
+   },
+   "semua_cocok": true
+  }
+ },
+ "tabel_5_2": {},
+ "tabel_6_1": {
+  "F-10": {
+   "sel": {
+    "TP": {
+     "json": 794,
+     "dok": 794.0,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "FP": {
+     "json": 61,
+     "dok": 62.0,
+     "delta": -1.0,
+     "cocok": false
+    },
+    "Presisi": {
+     "json": 0.928654970760234,
+     "dok": 0.9287,
+     "delta": -4.503e-05,
+     "cocok": true
+    },
+    "Recall": {
+     "json": 0.569583931133429,
+     "dok": 0.5696,
+     "delta": -1.607e-05,
+     "cocok": true
+    },
+    "FAR24 kalender": {
+     "json": 8.9132,
+     "dok": 8.9132,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "FAR24 baris": {
+     "json": 14.2205,
+     "dok": 14.2205,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "Lead median": {
+     "json": 18.5,
+     "dok": 18.5,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "Diperingatkan": {
+     "json": 10,
+     "dok": 10.0,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "Cakupan": {
+     "json": 0.673,
+     "dok": 0.673,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "h": {
+     "json": 30.0,
+     "dok": 30.0,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "Gate A baru": {
+     "json": false,
+     "dok": "tidak",
+     "cocok": true
+    }
+   },
+   "semua_cocok": false
+  },
+  "F-12": {
+   "sel": {
+    "TP": {
+     "json": 804,
+     "dok": 804.0,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "FP": {
+     "json": 149,
+     "dok": 149.0,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "Presisi": {
+     "json": 0.8436516264428122,
+     "dok": 0.8437,
+     "delta": -4.837e-05,
+     "cocok": true
+    },
+    "Recall": {
+     "json": 0.5638148667601683,
+     "dok": 0.5638,
+     "delta": 1.487e-05,
+     "cocok": true
+    },
+    "FAR24 kalender": {
+     "json": 2.5234,
+     "dok": 2.5234,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "FAR24 baris": {
+     "json": 35.9759,
+     "dok": 35.9759,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "Lead median": {
+     "json": 11.5,
+     "dok": 11.5,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "Diperingatkan": {
+     "json": 56,
+     "dok": 56.0,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "Cakupan": {
+     "json": 0.0855,
+     "dok": 0.0855,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "h": {
+     "json": 30.0,
+     "dok": 30.0,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "Gate A baru": {
+     "json": false,
+     "dok": "tidak",
+     "cocok": true
+    }
+   },
+   "semua_cocok": true
+  },
+  "F-14": {
+   "sel": {
+    "TP": {
+     "json": 443,
+     "dok": 443.0,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "FP": {
+     "json": 215,
+     "dok": 215.0,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "Presisi": {
+     "json": 0.6732522796352584,
+     "dok": 0.6733,
+     "delta": -4.772e-05,
+     "cocok": true
+    },
+    "Recall": {
+     "json": 0.5121387283236994,
+     "dok": 0.5121,
+     "delta": 3.873e-05,
+     "cocok": true
+    },
+    "FAR24 kalender": {
+     "json": 0.9772,
+     "dok": 0.9772,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "FAR24 baris": {
+     "json": 32.4664,
+     "dok": 32.4664,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "Lead median": {
+     "json": 11.0,
+     "dok": 11.0,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "Diperingatkan": {
+     "json": 37,
+     "dok": 37.0,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "Cakupan": {
+     "json": 0.0327,
+     "dok": 0.0327,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "h": {
+     "json": 30.0,
+     "dok": 30.0,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "Gate A baru": {
+     "json": false,
+     "dok": "tidak",
+     "cocok": true
+    }
+   },
+   "semua_cocok": true
+  },
+  "F-15A": {
+   "sel": {
+    "TP": {
+     "json": 288,
+     "dok": 288.0,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "FP": {
+     "json": 101,
+     "dok": 101.0,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "Presisi": {
+     "json": 0.7403598971722365,
+     "dok": 0.7404,
+     "delta": -4.01e-05,
+     "cocok": true
+    },
+    "Recall": {
+     "json": 0.41260744985673353,
+     "dok": 0.4126,
+     "delta": 7.45e-06,
+     "cocok": true
+    },
+    "FAR24 kalender": {
+     "json": 4.6255,
+     "dok": 4.6255,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "FAR24 baris": {
+     "json": 26.6471,
+     "dok": 26.6471,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "Lead median": {
+     "json": 8.0,
+     "dok": 8.0,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "Diperingatkan": {
+     "json": 22,
+     "dok": 22.0,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "Cakupan": {
+     "json": 0.1915,
+     "dok": 0.1915,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "h": {
+     "json": 30.0,
+     "dok": 30.0,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "Gate A baru": {
+     "json": false,
+     "dok": "tidak",
+     "cocok": true
+    }
+   },
+   "semua_cocok": true
+  },
+  "F-15_S": {
+   "sel": {
+    "TP": {
+     "json": 390,
+     "dok": 390.0,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "FP": {
+     "json": 123,
+     "dok": 123.0,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "Presisi": {
+     "json": 0.7602339181286549,
+     "dok": 0.7602,
+     "delta": 3.392e-05,
+     "cocok": true
+    },
+    "Recall": {
+     "json": 0.39274924471299094,
+     "dok": 0.3927,
+     "delta": 4.924e-05,
+     "cocok": true
+    },
+    "FAR24 kalender": {
+     "json": 1.9358,
+     "dok": 1.9358,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "FAR24 baris": {
+     "json": 24.0587,
+     "dok": 24.0587,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "Lead median": {
+     "json": 12.0,
+     "dok": 12.0,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "Diperingatkan": {
+     "json": 27,
+     "dok": 27.0,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "Cakupan": {
+     "json": 0.0903,
+     "dok": 0.0903,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "h": {
+     "json": 30.0,
+     "dok": 30.0,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "Gate A baru": {
+     "json": false,
+     "dok": "tidak",
+     "cocok": true
+    }
+   },
+   "semua_cocok": true
+  },
+  "F-5": {
+   "sel": {
+    "TP": {
+     "json": 410,
+     "dok": 410.0,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "FP": {
+     "json": 104,
+     "dok": 104.0,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "Presisi": {
+     "json": 0.7976653696498055,
+     "dok": 0.7977,
+     "delta": -3.463e-05,
+     "cocok": true
+    },
+    "Recall": {
+     "json": 0.6602254428341385,
+     "dok": 0.6602,
+     "delta": 2.544e-05,
+     "cocok": true
+    },
+    "FAR24 kalender": {
+     "json": 0.4059,
+     "dok": 0.4059,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "FAR24 baris": {
+     "json": 26.2231,
+     "dok": 26.2231,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "Lead median": {
+     "json": 5.0,
+     "dok": 5.0,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "Diperingatkan": {
+     "json": 25,
+     "dok": 25.0,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "Cakupan": {
+     "json": 0.0171,
+     "dok": 0.0171,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "h": {
+     "json": 30.0,
+     "dok": 30.0,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "Gate A baru": {
+     "json": false,
+     "dok": "tidak",
+     "cocok": true
+    }
+   },
+   "semua_cocok": true
+  },
+  "F-7": {
+   "sel": {
+    "TP": {
+     "json": 271,
+     "dok": 271.0,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "FP": {
+     "json": 85,
+     "dok": 85.0,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "Presisi": {
+     "json": 0.7612359550561798,
+     "dok": 0.7612,
+     "delta": 3.596e-05,
+     "cocok": true
+    },
+    "Recall": {
+     "json": 0.6437054631828979,
+     "dok": 0.6437,
+     "delta": 5.46e-06,
+     "cocok": true
+    },
+    "FAR24 kalender": {
+     "json": 5.4183,
+     "dok": 5.4183,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "FAR24 baris": {
+     "json": 59.3886,
+     "dok": 59.3886,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "Lead median": {
+     "json": 16.0,
+     "dok": 16.0,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "Diperingatkan": {
+     "json": 15,
+     "dok": 15.0,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "Cakupan": {
+     "json": 0.1079,
+     "dok": 0.1079,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "h": {
+     "json": 30.0,
+     "dok": 30.0,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "Gate A baru": {
+     "json": false,
+     "dok": "tidak",
+     "cocok": true
+    }
+   },
+   "semua_cocok": true
+  },
+  "F-9": {
+   "sel": {
+    "TP": {
+     "json": 256,
+     "dok": 256.0,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "FP": {
+     "json": 55,
+     "dok": 55.0,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "Presisi": {
+     "json": 0.8231511254019293,
+     "dok": 0.8232,
+     "delta": -4.887e-05,
+     "cocok": true
+    },
+    "Recall": {
+     "json": 0.6052009456264775,
+     "dok": 0.6052,
+     "delta": 9.5e-07,
+     "cocok": true
+    },
+    "FAR24 kalender": {
+     "json": 3.5302,
+     "dok": 3.5302,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "FAR24 baris": {
+     "json": 66.3873,
+     "dok": 66.3873,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "Lead median": {
+     "json": 2.0,
+     "dok": 2.0,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "Diperingatkan": {
+     "json": 18,
+     "dok": 18.0,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "Cakupan": {
+     "json": 0.0707,
+     "dok": 0.0707,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "h": {
+     "json": 30.0,
+     "dok": 30.0,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "Gate A baru": {
+     "json": false,
+     "dok": "tidak",
+     "cocok": true
+    }
+   },
+   "semua_cocok": true
+  },
+  "F-9_A": {
+   "sel": {
+    "TP": {
+     "json": 148,
+     "dok": 148.0,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "FP": {
+     "json": 42,
+     "dok": 42.0,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "Presisi": {
+     "json": 0.7789473684210526,
+     "dok": 0.7789,
+     "delta": 4.737e-05,
+     "cocok": true
+    },
+    "Recall": {
+     "json": 0.4471299093655589,
+     "dok": 0.4471,
+     "delta": 2.991e-05,
+     "cocok": true
+    },
+    "FAR24 kalender": {
+     "json": 8.624,
+     "dok": 8.624,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "FAR24 baris": {
+     "json": 32.256,
+     "dok": 32.256,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "Lead median": {
+     "json": 38.0,
+     "dok": 38.0,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "Diperingatkan": {
+     "json": 9,
+     "dok": 9.0,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "Cakupan": {
+     "json": 0.3004,
+     "dok": 0.3004,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "h": {
+     "json": 30.0,
+     "dok": 30.0,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "Gate A baru": {
+     "json": false,
+     "dok": "tidak",
+     "cocok": true
+    }
+   },
+   "semua_cocok": true
+  }
+ },
+ "tabel_4": {
+  "FP total": {
+   "terbit_json": 935,
+   "terbit_dok": 935.0,
+   "replikasi_json": 935,
+   "replikasi_dok": 935.0,
+   "delta_dok": 0.0,
+   "lulus_dok": "ya",
+   "cocok": true
+  },
+  "TP total": {
+   "terbit_json": 3804,
+   "terbit_dok": 3804.0,
+   "replikasi_json": 3804,
+   "replikasi_dok": 3804.0,
+   "delta_dok": 0.0,
+   "lulus_dok": "ya",
+   "cocok": true
+  },
+  "Presisi median": {
+   "terbit_json": 0.7789,
+   "terbit_dok": 0.7789,
+   "replikasi_json": 0.7789,
+   "replikasi_dok": 0.7789,
+   "delta_dok": 0.0,
+   "lulus_dok": "ya",
+   "cocok": true
+  },
+  "Recall median": {
+   "terbit_json": 0.5638,
+   "terbit_dok": 0.5638,
+   "replikasi_json": 0.5638,
+   "replikasi_dok": 0.5638,
+   "delta_dok": 0.0,
+   "lulus_dok": "ya",
+   "cocok": true
+  },
+  "Lead median": {
+   "terbit_json": 11.5,
+   "terbit_dok": 11.5,
+   "replikasi_json": 11.5,
+   "replikasi_dok": 11.5,
+   "delta_dok": 0.0,
+   "lulus_dok": "ya",
+   "cocok": true
+  },
+  "Onset": {
+   "terbit_json": 390,
+   "terbit_dok": 390.0,
+   "replikasi_json": 390,
+   "replikasi_dok": 390.0,
+   "delta_dok": 0.0,
+   "lulus_dok": "ya",
+   "cocok": true
+  },
+  "Diperingatkan": {
+   "terbit_json": 219,
+   "terbit_dok": 219.0,
+   "replikasi_json": 219,
+   "replikasi_dok": 219.0,
+   "delta_dok": 0.0,
+   "lulus_dok": "ya",
+   "cocok": true
+  }
+ },
+ "rerun": {
+  "elapsed_s": 13.6,
+  "shape": [
+   52509,
+   50
+  ],
+  "n_fold": 9,
+  "ringkas": {
+   "42": {
+    "n_fold": 9,
+    "fp_total": 935,
+    "tp_total": 3804,
+    "fp_kejadian_total": 263,
+    "precision_median": 0.7789,
+    "precision_min": 0.6733,
+    "precision_maks": 0.9287,
+    "recall_median": 0.5638,
+    "recall_min": 0.3927,
+    "recall_maks": 0.6602,
+    "far24_kalender_median": 3.5302,
+    "far24_kalender_min": 0.4059,
+    "far24_kalender_maks": 8.9132,
+    "far24_kalender_rentang": 8.5073,
+    "far24_baris_median": 32.256,
+    "far24_baris_min": 14.2205,
+    "far24_baris_maks": 66.3873,
+    "cakupan_median": 0.0903,
+    "lead_median_median": 11.5,
+    "lead_median_min": 2.0,
+    "lead_median_maks": 38.0,
+    "n_onset": 390,
+    "n_diperingatkan": 219,
+    "fold_far_le6": 7,
+    "fold_gate_A_baru": 0,
+    "fold_recall_gt0": 9
+   },
+   "13": {
+    "n_fold": 9,
+    "fp_total": 935,
+    "tp_total": 3804,
+    "fp_kejadian_total": 263,
+    "precision_median": 0.7789,
+    "precision_min": 0.6733,
+    "precision_maks": 0.9287,
+    "recall_median": 0.5638,
+    "recall_min": 0.3927,
+    "recall_maks": 0.6602,
+    "far24_kalender_median": 3.5302,
+    "far24_kalender_min": 0.4059,
+    "far24_kalender_maks": 8.9132,
+    "far24_kalender_rentang": 8.5073,
+    "far24_baris_median": 32.256,
+    "far24_baris_min": 14.2205,
+    "far24_baris_maks": 66.3873,
+    "cakupan_median": 0.0903,
+    "lead_median_median": 11.5,
+    "lead_median_min": 2.0,
+    "lead_median_maks": 38.0,
+    "n_onset": 390,
+    "n_diperingatkan": 219,
+    "fold_far_le6": 7,
+    "fold_gate_A_baru": 0,
+    "fold_recall_gt0": 9
+   }
+  }
+ },
+ "selisih_rerun_vs_json": {
+  "42": {
+   "ringkas": {
+    "fp_total": {
+     "rerun": 935,
+     "json_s1": 935,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "tp_total": {
+     "rerun": 3804,
+     "json_s1": 3804,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "fp_kejadian_total": {
+     "rerun": 263,
+     "json_s1": 263,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "precision_median": {
+     "rerun": 0.7789,
+     "json_s1": 0.7789,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "recall_median": {
+     "rerun": 0.5638,
+     "json_s1": 0.5638,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "far24_kalender_median": {
+     "rerun": 3.5302,
+     "json_s1": 3.5302,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "far24_kalender_min": {
+     "rerun": 0.4059,
+     "json_s1": 0.4059,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "far24_kalender_maks": {
+     "rerun": 8.9132,
+     "json_s1": 8.9132,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "far24_baris_median": {
+     "rerun": 32.256,
+     "json_s1": 32.256,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "lead_median_median": {
+     "rerun": 11.5,
+     "json_s1": 11.5,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "n_onset": {
+     "rerun": 390,
+     "json_s1": 390,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "n_diperingatkan": {
+     "rerun": 219,
+     "json_s1": 219,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "fold_far_le6": {
+     "rerun": 7,
+     "json_s1": 7,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "fold_gate_A_baru": {
+     "rerun": 0,
+     "json_s1": 0,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "cakupan_median": {
+     "rerun": 0.0903,
+     "json_s1": 0.0903,
+     "delta": 0.0,
+     "cocok": true
+    }
+   },
+   "semua_cocok_ringkas": true,
+   "per_fold": {
+    "F-10": {
+     "sel": {
+      "TP": {
+       "rerun": 794,
+       "json_s1": 794,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "FP": {
+       "rerun": 61,
+       "json_s1": 61,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Presisi": {
+       "rerun": 0.928654970760234,
+       "json_s1": 0.928654970760234,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Recall": {
+       "rerun": 0.569583931133429,
+       "json_s1": 0.569583931133429,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "FAR24 kalender": {
+       "rerun": 8.9132,
+       "json_s1": 8.9132,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "FAR24 baris": {
+       "rerun": 14.2205,
+       "json_s1": 14.2205,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Lead median": {
+       "rerun": 18.5,
+       "json_s1": 18.5,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Diperingatkan": {
+       "rerun": 10,
+       "json_s1": 10,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Cakupan": {
+       "rerun": 0.673,
+       "json_s1": 0.673,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "h": {
+       "rerun": 30.0,
+       "json_s1": 30.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Gate A baru": {
+       "rerun": false,
+       "json_s1": false,
+       "cocok": true
+      },
+      "h_terpilih": {
+       "rerun": 30.0,
+       "json_s1": 30.0,
+       "cocok": true
+      }
+     },
+     "semua_cocok": true
+    },
+    "F-12": {
+     "sel": {
+      "TP": {
+       "rerun": 804,
+       "json_s1": 804,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "FP": {
+       "rerun": 149,
+       "json_s1": 149,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Presisi": {
+       "rerun": 0.8436516264428122,
+       "json_s1": 0.8436516264428122,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Recall": {
+       "rerun": 0.5638148667601683,
+       "json_s1": 0.5638148667601683,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "FAR24 kalender": {
+       "rerun": 2.5234,
+       "json_s1": 2.5234,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "FAR24 baris": {
+       "rerun": 35.9759,
+       "json_s1": 35.9759,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Lead median": {
+       "rerun": 11.5,
+       "json_s1": 11.5,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Diperingatkan": {
+       "rerun": 56,
+       "json_s1": 56,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Cakupan": {
+       "rerun": 0.0855,
+       "json_s1": 0.0855,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "h": {
+       "rerun": 30.0,
+       "json_s1": 30.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Gate A baru": {
+       "rerun": false,
+       "json_s1": false,
+       "cocok": true
+      },
+      "h_terpilih": {
+       "rerun": 30.0,
+       "json_s1": 30.0,
+       "cocok": true
+      }
+     },
+     "semua_cocok": true
+    },
+    "F-14": {
+     "sel": {
+      "TP": {
+       "rerun": 443,
+       "json_s1": 443,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "FP": {
+       "rerun": 215,
+       "json_s1": 215,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Presisi": {
+       "rerun": 0.6732522796352584,
+       "json_s1": 0.6732522796352584,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Recall": {
+       "rerun": 0.5121387283236994,
+       "json_s1": 0.5121387283236994,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "FAR24 kalender": {
+       "rerun": 0.9772,
+       "json_s1": 0.9772,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "FAR24 baris": {
+       "rerun": 32.4664,
+       "json_s1": 32.4664,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Lead median": {
+       "rerun": 11.0,
+       "json_s1": 11.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Diperingatkan": {
+       "rerun": 37,
+       "json_s1": 37,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Cakupan": {
+       "rerun": 0.0327,
+       "json_s1": 0.0327,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "h": {
+       "rerun": 30.0,
+       "json_s1": 30.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Gate A baru": {
+       "rerun": false,
+       "json_s1": false,
+       "cocok": true
+      },
+      "h_terpilih": {
+       "rerun": 30.0,
+       "json_s1": 30.0,
+       "cocok": true
+      }
+     },
+     "semua_cocok": true
+    },
+    "F-15A": {
+     "sel": {
+      "TP": {
+       "rerun": 288,
+       "json_s1": 288,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "FP": {
+       "rerun": 101,
+       "json_s1": 101,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Presisi": {
+       "rerun": 0.7403598971722365,
+       "json_s1": 0.7403598971722365,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Recall": {
+       "rerun": 0.41260744985673353,
+       "json_s1": 0.41260744985673353,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "FAR24 kalender": {
+       "rerun": 4.6255,
+       "json_s1": 4.6255,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "FAR24 baris": {
+       "rerun": 26.6471,
+       "json_s1": 26.6471,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Lead median": {
+       "rerun": 8.0,
+       "json_s1": 8.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Diperingatkan": {
+       "rerun": 22,
+       "json_s1": 22,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Cakupan": {
+       "rerun": 0.1915,
+       "json_s1": 0.1915,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "h": {
+       "rerun": 30.0,
+       "json_s1": 30.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Gate A baru": {
+       "rerun": false,
+       "json_s1": false,
+       "cocok": true
+      },
+      "h_terpilih": {
+       "rerun": 30.0,
+       "json_s1": 30.0,
+       "cocok": true
+      }
+     },
+     "semua_cocok": true
+    },
+    "F-15_S": {
+     "sel": {
+      "TP": {
+       "rerun": 390,
+       "json_s1": 390,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "FP": {
+       "rerun": 123,
+       "json_s1": 123,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Presisi": {
+       "rerun": 0.7602339181286549,
+       "json_s1": 0.7602339181286549,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Recall": {
+       "rerun": 0.39274924471299094,
+       "json_s1": 0.39274924471299094,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "FAR24 kalender": {
+       "rerun": 1.9358,
+       "json_s1": 1.9358,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "FAR24 baris": {
+       "rerun": 24.0587,
+       "json_s1": 24.0587,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Lead median": {
+       "rerun": 12.0,
+       "json_s1": 12.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Diperingatkan": {
+       "rerun": 27,
+       "json_s1": 27,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Cakupan": {
+       "rerun": 0.0903,
+       "json_s1": 0.0903,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "h": {
+       "rerun": 30.0,
+       "json_s1": 30.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Gate A baru": {
+       "rerun": false,
+       "json_s1": false,
+       "cocok": true
+      },
+      "h_terpilih": {
+       "rerun": 30.0,
+       "json_s1": 30.0,
+       "cocok": true
+      }
+     },
+     "semua_cocok": true
+    },
+    "F-5": {
+     "sel": {
+      "TP": {
+       "rerun": 410,
+       "json_s1": 410,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "FP": {
+       "rerun": 104,
+       "json_s1": 104,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Presisi": {
+       "rerun": 0.7976653696498055,
+       "json_s1": 0.7976653696498055,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Recall": {
+       "rerun": 0.6602254428341385,
+       "json_s1": 0.6602254428341385,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "FAR24 kalender": {
+       "rerun": 0.4059,
+       "json_s1": 0.4059,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "FAR24 baris": {
+       "rerun": 26.2231,
+       "json_s1": 26.2231,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Lead median": {
+       "rerun": 5.0,
+       "json_s1": 5.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Diperingatkan": {
+       "rerun": 25,
+       "json_s1": 25,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Cakupan": {
+       "rerun": 0.0171,
+       "json_s1": 0.0171,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "h": {
+       "rerun": 30.0,
+       "json_s1": 30.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Gate A baru": {
+       "rerun": false,
+       "json_s1": false,
+       "cocok": true
+      },
+      "h_terpilih": {
+       "rerun": 30.0,
+       "json_s1": 30.0,
+       "cocok": true
+      }
+     },
+     "semua_cocok": true
+    },
+    "F-7": {
+     "sel": {
+      "TP": {
+       "rerun": 271,
+       "json_s1": 271,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "FP": {
+       "rerun": 85,
+       "json_s1": 85,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Presisi": {
+       "rerun": 0.7612359550561798,
+       "json_s1": 0.7612359550561798,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Recall": {
+       "rerun": 0.6437054631828979,
+       "json_s1": 0.6437054631828979,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "FAR24 kalender": {
+       "rerun": 5.4183,
+       "json_s1": 5.4183,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "FAR24 baris": {
+       "rerun": 59.3886,
+       "json_s1": 59.3886,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Lead median": {
+       "rerun": 16.0,
+       "json_s1": 16.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Diperingatkan": {
+       "rerun": 15,
+       "json_s1": 15,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Cakupan": {
+       "rerun": 0.1079,
+       "json_s1": 0.1079,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "h": {
+       "rerun": 30.0,
+       "json_s1": 30.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Gate A baru": {
+       "rerun": false,
+       "json_s1": false,
+       "cocok": true
+      },
+      "h_terpilih": {
+       "rerun": 30.0,
+       "json_s1": 30.0,
+       "cocok": true
+      }
+     },
+     "semua_cocok": true
+    },
+    "F-9": {
+     "sel": {
+      "TP": {
+       "rerun": 256,
+       "json_s1": 256,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "FP": {
+       "rerun": 55,
+       "json_s1": 55,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Presisi": {
+       "rerun": 0.8231511254019293,
+       "json_s1": 0.8231511254019293,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Recall": {
+       "rerun": 0.6052009456264775,
+       "json_s1": 0.6052009456264775,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "FAR24 kalender": {
+       "rerun": 3.5302,
+       "json_s1": 3.5302,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "FAR24 baris": {
+       "rerun": 66.3873,
+       "json_s1": 66.3873,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Lead median": {
+       "rerun": 2.0,
+       "json_s1": 2.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Diperingatkan": {
+       "rerun": 18,
+       "json_s1": 18,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Cakupan": {
+       "rerun": 0.0707,
+       "json_s1": 0.0707,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "h": {
+       "rerun": 30.0,
+       "json_s1": 30.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Gate A baru": {
+       "rerun": false,
+       "json_s1": false,
+       "cocok": true
+      },
+      "h_terpilih": {
+       "rerun": 30.0,
+       "json_s1": 30.0,
+       "cocok": true
+      }
+     },
+     "semua_cocok": true
+    },
+    "F-9_A": {
+     "sel": {
+      "TP": {
+       "rerun": 148,
+       "json_s1": 148,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "FP": {
+       "rerun": 42,
+       "json_s1": 42,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Presisi": {
+       "rerun": 0.7789473684210526,
+       "json_s1": 0.7789473684210526,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Recall": {
+       "rerun": 0.4471299093655589,
+       "json_s1": 0.4471299093655589,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "FAR24 kalender": {
+       "rerun": 8.624,
+       "json_s1": 8.624,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "FAR24 baris": {
+       "rerun": 32.256,
+       "json_s1": 32.256,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Lead median": {
+       "rerun": 38.0,
+       "json_s1": 38.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Diperingatkan": {
+       "rerun": 9,
+       "json_s1": 9,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Cakupan": {
+       "rerun": 0.3004,
+       "json_s1": 0.3004,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "h": {
+       "rerun": 30.0,
+       "json_s1": 30.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Gate A baru": {
+       "rerun": false,
+       "json_s1": false,
+       "cocok": true
+      },
+      "h_terpilih": {
+       "rerun": 30.0,
+       "json_s1": 30.0,
+       "cocok": true
+      }
+     },
+     "semua_cocok": true
+    }
+   },
+   "semua_cocok_fold": true
+  },
+  "13": {
+   "ringkas": {
+    "fp_total": {
+     "rerun": 935,
+     "json_s1": 935,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "tp_total": {
+     "rerun": 3804,
+     "json_s1": 3804,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "fp_kejadian_total": {
+     "rerun": 263,
+     "json_s1": 263,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "precision_median": {
+     "rerun": 0.7789,
+     "json_s1": 0.7789,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "recall_median": {
+     "rerun": 0.5638,
+     "json_s1": 0.5638,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "far24_kalender_median": {
+     "rerun": 3.5302,
+     "json_s1": 3.5302,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "far24_kalender_min": {
+     "rerun": 0.4059,
+     "json_s1": 0.4059,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "far24_kalender_maks": {
+     "rerun": 8.9132,
+     "json_s1": 8.9132,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "far24_baris_median": {
+     "rerun": 32.256,
+     "json_s1": 32.256,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "lead_median_median": {
+     "rerun": 11.5,
+     "json_s1": 11.5,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "n_onset": {
+     "rerun": 390,
+     "json_s1": 390,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "n_diperingatkan": {
+     "rerun": 219,
+     "json_s1": 219,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "fold_far_le6": {
+     "rerun": 7,
+     "json_s1": 7,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "fold_gate_A_baru": {
+     "rerun": 0,
+     "json_s1": 0,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "cakupan_median": {
+     "rerun": 0.0903,
+     "json_s1": 0.0903,
+     "delta": 0.0,
+     "cocok": true
+    }
+   },
+   "semua_cocok_ringkas": true,
+   "per_fold": {
+    "F-10": {
+     "sel": {
+      "TP": {
+       "rerun": 794,
+       "json_s1": 794,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "FP": {
+       "rerun": 61,
+       "json_s1": 61,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Presisi": {
+       "rerun": 0.928654970760234,
+       "json_s1": 0.928654970760234,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Recall": {
+       "rerun": 0.569583931133429,
+       "json_s1": 0.569583931133429,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "FAR24 kalender": {
+       "rerun": 8.9132,
+       "json_s1": 8.9132,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "FAR24 baris": {
+       "rerun": 14.2205,
+       "json_s1": 14.2205,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Lead median": {
+       "rerun": 18.5,
+       "json_s1": 18.5,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Diperingatkan": {
+       "rerun": 10,
+       "json_s1": 10,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Cakupan": {
+       "rerun": 0.673,
+       "json_s1": 0.673,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "h": {
+       "rerun": 30.0,
+       "json_s1": 30.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Gate A baru": {
+       "rerun": false,
+       "json_s1": false,
+       "cocok": true
+      },
+      "h_terpilih": {
+       "rerun": 30.0,
+       "json_s1": 30.0,
+       "cocok": true
+      }
+     },
+     "semua_cocok": true
+    },
+    "F-12": {
+     "sel": {
+      "TP": {
+       "rerun": 804,
+       "json_s1": 804,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "FP": {
+       "rerun": 149,
+       "json_s1": 149,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Presisi": {
+       "rerun": 0.8436516264428122,
+       "json_s1": 0.8436516264428122,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Recall": {
+       "rerun": 0.5638148667601683,
+       "json_s1": 0.5638148667601683,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "FAR24 kalender": {
+       "rerun": 2.5234,
+       "json_s1": 2.5234,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "FAR24 baris": {
+       "rerun": 35.9759,
+       "json_s1": 35.9759,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Lead median": {
+       "rerun": 11.5,
+       "json_s1": 11.5,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Diperingatkan": {
+       "rerun": 56,
+       "json_s1": 56,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Cakupan": {
+       "rerun": 0.0855,
+       "json_s1": 0.0855,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "h": {
+       "rerun": 30.0,
+       "json_s1": 30.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Gate A baru": {
+       "rerun": false,
+       "json_s1": false,
+       "cocok": true
+      },
+      "h_terpilih": {
+       "rerun": 30.0,
+       "json_s1": 30.0,
+       "cocok": true
+      }
+     },
+     "semua_cocok": true
+    },
+    "F-14": {
+     "sel": {
+      "TP": {
+       "rerun": 443,
+       "json_s1": 443,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "FP": {
+       "rerun": 215,
+       "json_s1": 215,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Presisi": {
+       "rerun": 0.6732522796352584,
+       "json_s1": 0.6732522796352584,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Recall": {
+       "rerun": 0.5121387283236994,
+       "json_s1": 0.5121387283236994,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "FAR24 kalender": {
+       "rerun": 0.9772,
+       "json_s1": 0.9772,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "FAR24 baris": {
+       "rerun": 32.4664,
+       "json_s1": 32.4664,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Lead median": {
+       "rerun": 11.0,
+       "json_s1": 11.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Diperingatkan": {
+       "rerun": 37,
+       "json_s1": 37,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Cakupan": {
+       "rerun": 0.0327,
+       "json_s1": 0.0327,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "h": {
+       "rerun": 30.0,
+       "json_s1": 30.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Gate A baru": {
+       "rerun": false,
+       "json_s1": false,
+       "cocok": true
+      },
+      "h_terpilih": {
+       "rerun": 30.0,
+       "json_s1": 30.0,
+       "cocok": true
+      }
+     },
+     "semua_cocok": true
+    },
+    "F-15A": {
+     "sel": {
+      "TP": {
+       "rerun": 288,
+       "json_s1": 288,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "FP": {
+       "rerun": 101,
+       "json_s1": 101,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Presisi": {
+       "rerun": 0.7403598971722365,
+       "json_s1": 0.7403598971722365,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Recall": {
+       "rerun": 0.41260744985673353,
+       "json_s1": 0.41260744985673353,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "FAR24 kalender": {
+       "rerun": 4.6255,
+       "json_s1": 4.6255,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "FAR24 baris": {
+       "rerun": 26.6471,
+       "json_s1": 26.6471,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Lead median": {
+       "rerun": 8.0,
+       "json_s1": 8.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Diperingatkan": {
+       "rerun": 22,
+       "json_s1": 22,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Cakupan": {
+       "rerun": 0.1915,
+       "json_s1": 0.1915,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "h": {
+       "rerun": 30.0,
+       "json_s1": 30.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Gate A baru": {
+       "rerun": false,
+       "json_s1": false,
+       "cocok": true
+      },
+      "h_terpilih": {
+       "rerun": 30.0,
+       "json_s1": 30.0,
+       "cocok": true
+      }
+     },
+     "semua_cocok": true
+    },
+    "F-15_S": {
+     "sel": {
+      "TP": {
+       "rerun": 390,
+       "json_s1": 390,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "FP": {
+       "rerun": 123,
+       "json_s1": 123,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Presisi": {
+       "rerun": 0.7602339181286549,
+       "json_s1": 0.7602339181286549,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Recall": {
+       "rerun": 0.39274924471299094,
+       "json_s1": 0.39274924471299094,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "FAR24 kalender": {
+       "rerun": 1.9358,
+       "json_s1": 1.9358,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "FAR24 baris": {
+       "rerun": 24.0587,
+       "json_s1": 24.0587,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Lead median": {
+       "rerun": 12.0,
+       "json_s1": 12.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Diperingatkan": {
+       "rerun": 27,
+       "json_s1": 27,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Cakupan": {
+       "rerun": 0.0903,
+       "json_s1": 0.0903,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "h": {
+       "rerun": 30.0,
+       "json_s1": 30.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Gate A baru": {
+       "rerun": false,
+       "json_s1": false,
+       "cocok": true
+      },
+      "h_terpilih": {
+       "rerun": 30.0,
+       "json_s1": 30.0,
+       "cocok": true
+      }
+     },
+     "semua_cocok": true
+    },
+    "F-5": {
+     "sel": {
+      "TP": {
+       "rerun": 410,
+       "json_s1": 410,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "FP": {
+       "rerun": 104,
+       "json_s1": 104,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Presisi": {
+       "rerun": 0.7976653696498055,
+       "json_s1": 0.7976653696498055,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Recall": {
+       "rerun": 0.6602254428341385,
+       "json_s1": 0.6602254428341385,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "FAR24 kalender": {
+       "rerun": 0.4059,
+       "json_s1": 0.4059,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "FAR24 baris": {
+       "rerun": 26.2231,
+       "json_s1": 26.2231,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Lead median": {
+       "rerun": 5.0,
+       "json_s1": 5.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Diperingatkan": {
+       "rerun": 25,
+       "json_s1": 25,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Cakupan": {
+       "rerun": 0.0171,
+       "json_s1": 0.0171,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "h": {
+       "rerun": 30.0,
+       "json_s1": 30.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Gate A baru": {
+       "rerun": false,
+       "json_s1": false,
+       "cocok": true
+      },
+      "h_terpilih": {
+       "rerun": 30.0,
+       "json_s1": 30.0,
+       "cocok": true
+      }
+     },
+     "semua_cocok": true
+    },
+    "F-7": {
+     "sel": {
+      "TP": {
+       "rerun": 271,
+       "json_s1": 271,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "FP": {
+       "rerun": 85,
+       "json_s1": 85,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Presisi": {
+       "rerun": 0.7612359550561798,
+       "json_s1": 0.7612359550561798,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Recall": {
+       "rerun": 0.6437054631828979,
+       "json_s1": 0.6437054631828979,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "FAR24 kalender": {
+       "rerun": 5.4183,
+       "json_s1": 5.4183,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "FAR24 baris": {
+       "rerun": 59.3886,
+       "json_s1": 59.3886,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Lead median": {
+       "rerun": 16.0,
+       "json_s1": 16.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Diperingatkan": {
+       "rerun": 15,
+       "json_s1": 15,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Cakupan": {
+       "rerun": 0.1079,
+       "json_s1": 0.1079,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "h": {
+       "rerun": 30.0,
+       "json_s1": 30.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Gate A baru": {
+       "rerun": false,
+       "json_s1": false,
+       "cocok": true
+      },
+      "h_terpilih": {
+       "rerun": 30.0,
+       "json_s1": 30.0,
+       "cocok": true
+      }
+     },
+     "semua_cocok": true
+    },
+    "F-9": {
+     "sel": {
+      "TP": {
+       "rerun": 256,
+       "json_s1": 256,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "FP": {
+       "rerun": 55,
+       "json_s1": 55,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Presisi": {
+       "rerun": 0.8231511254019293,
+       "json_s1": 0.8231511254019293,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Recall": {
+       "rerun": 0.6052009456264775,
+       "json_s1": 0.6052009456264775,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "FAR24 kalender": {
+       "rerun": 3.5302,
+       "json_s1": 3.5302,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "FAR24 baris": {
+       "rerun": 66.3873,
+       "json_s1": 66.3873,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Lead median": {
+       "rerun": 2.0,
+       "json_s1": 2.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Diperingatkan": {
+       "rerun": 18,
+       "json_s1": 18,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Cakupan": {
+       "rerun": 0.0707,
+       "json_s1": 0.0707,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "h": {
+       "rerun": 30.0,
+       "json_s1": 30.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Gate A baru": {
+       "rerun": false,
+       "json_s1": false,
+       "cocok": true
+      },
+      "h_terpilih": {
+       "rerun": 30.0,
+       "json_s1": 30.0,
+       "cocok": true
+      }
+     },
+     "semua_cocok": true
+    },
+    "F-9_A": {
+     "sel": {
+      "TP": {
+       "rerun": 148,
+       "json_s1": 148,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "FP": {
+       "rerun": 42,
+       "json_s1": 42,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Presisi": {
+       "rerun": 0.7789473684210526,
+       "json_s1": 0.7789473684210526,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Recall": {
+       "rerun": 0.4471299093655589,
+       "json_s1": 0.4471299093655589,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "FAR24 kalender": {
+       "rerun": 8.624,
+       "json_s1": 8.624,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "FAR24 baris": {
+       "rerun": 32.256,
+       "json_s1": 32.256,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Lead median": {
+       "rerun": 38.0,
+       "json_s1": 38.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Diperingatkan": {
+       "rerun": 9,
+       "json_s1": 9,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Cakupan": {
+       "rerun": 0.3004,
+       "json_s1": 0.3004,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "h": {
+       "rerun": 30.0,
+       "json_s1": 30.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Gate A baru": {
+       "rerun": false,
+       "json_s1": false,
+       "cocok": true
+      },
+      "h_terpilih": {
+       "rerun": 30.0,
+       "json_s1": 30.0,
+       "cocok": true
+      }
+     },
+     "semua_cocok": true
+    }
+   },
+   "semua_cocok_fold": true
+  }
+ },
+ "selisih_rerun_vs_dokumen": {
+  "42": {
+   "tabel_5_1": {
+    "fp_total": {
+     "rerun": 935,
+     "dok": 936.0,
+     "delta": -1.0,
+     "cocok": false
+    },
+    "tp_total": {
+     "rerun": 3804,
+     "dok": 3804.0,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "precision_median": {
+     "rerun": 0.7789,
+     "dok": 0.7789,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "recall_median": {
+     "rerun": 0.5638,
+     "dok": 0.5638,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "far24_kalender_median": {
+     "rerun": 3.5302,
+     "dok": 3.5302,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "far24_kalender_min": {
+     "rerun": 0.4059,
+     "dok": 0.4059,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "far24_kalender_maks": {
+     "rerun": 8.9132,
+     "dok": 8.9132,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "far24_baris_median": {
+     "rerun": 32.256,
+     "dok": 32.256,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "lead_median_median": {
+     "rerun": 11.5,
+     "dok": 11.5,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "n_diperingatkan": {
+     "rerun": 219,
+     "dok": 219.0,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "fold_far_le6": {
+     "rerun": 7,
+     "dok": 7.0,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "fold_gate_A_baru": {
+     "rerun": 0,
+     "dok": 0.0,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "cakupan_median": {
+     "rerun": 0.0903,
+     "dok": 0.0903,
+     "delta": 0.0,
+     "cocok": true
+    }
+   },
+   "semua_cocok_51": false,
+   "tabel_6_1": {
+    "F-10": {
+     "sel": {
+      "TP": {
+       "rerun": 794,
+       "dok": 794.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "FP": {
+       "rerun": 61,
+       "dok": 62.0,
+       "delta": -1.0,
+       "cocok": false
+      },
+      "Presisi": {
+       "rerun": 0.928654970760234,
+       "dok": 0.9287,
+       "delta": -4.503e-05,
+       "cocok": true
+      },
+      "Recall": {
+       "rerun": 0.569583931133429,
+       "dok": 0.5696,
+       "delta": -1.607e-05,
+       "cocok": true
+      },
+      "FAR24 kalender": {
+       "rerun": 8.9132,
+       "dok": 8.9132,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "FAR24 baris": {
+       "rerun": 14.2205,
+       "dok": 14.2205,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Lead median": {
+       "rerun": 18.5,
+       "dok": 18.5,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Diperingatkan": {
+       "rerun": 10,
+       "dok": 10.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Cakupan": {
+       "rerun": 0.673,
+       "dok": 0.673,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "h": {
+       "rerun": 30.0,
+       "dok": 30.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Gate A baru": {
+       "rerun": false,
+       "dok": "tidak",
+       "cocok": true
+      }
+     },
+     "semua_cocok": false
+    },
+    "F-12": {
+     "sel": {
+      "TP": {
+       "rerun": 804,
+       "dok": 804.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "FP": {
+       "rerun": 149,
+       "dok": 149.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Presisi": {
+       "rerun": 0.8436516264428122,
+       "dok": 0.8437,
+       "delta": -4.837e-05,
+       "cocok": true
+      },
+      "Recall": {
+       "rerun": 0.5638148667601683,
+       "dok": 0.5638,
+       "delta": 1.487e-05,
+       "cocok": true
+      },
+      "FAR24 kalender": {
+       "rerun": 2.5234,
+       "dok": 2.5234,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "FAR24 baris": {
+       "rerun": 35.9759,
+       "dok": 35.9759,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Lead median": {
+       "rerun": 11.5,
+       "dok": 11.5,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Diperingatkan": {
+       "rerun": 56,
+       "dok": 56.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Cakupan": {
+       "rerun": 0.0855,
+       "dok": 0.0855,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "h": {
+       "rerun": 30.0,
+       "dok": 30.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Gate A baru": {
+       "rerun": false,
+       "dok": "tidak",
+       "cocok": true
+      }
+     },
+     "semua_cocok": true
+    },
+    "F-14": {
+     "sel": {
+      "TP": {
+       "rerun": 443,
+       "dok": 443.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "FP": {
+       "rerun": 215,
+       "dok": 215.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Presisi": {
+       "rerun": 0.6732522796352584,
+       "dok": 0.6733,
+       "delta": -4.772e-05,
+       "cocok": true
+      },
+      "Recall": {
+       "rerun": 0.5121387283236994,
+       "dok": 0.5121,
+       "delta": 3.873e-05,
+       "cocok": true
+      },
+      "FAR24 kalender": {
+       "rerun": 0.9772,
+       "dok": 0.9772,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "FAR24 baris": {
+       "rerun": 32.4664,
+       "dok": 32.4664,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Lead median": {
+       "rerun": 11.0,
+       "dok": 11.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Diperingatkan": {
+       "rerun": 37,
+       "dok": 37.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Cakupan": {
+       "rerun": 0.0327,
+       "dok": 0.0327,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "h": {
+       "rerun": 30.0,
+       "dok": 30.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Gate A baru": {
+       "rerun": false,
+       "dok": "tidak",
+       "cocok": true
+      }
+     },
+     "semua_cocok": true
+    },
+    "F-15A": {
+     "sel": {
+      "TP": {
+       "rerun": 288,
+       "dok": 288.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "FP": {
+       "rerun": 101,
+       "dok": 101.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Presisi": {
+       "rerun": 0.7403598971722365,
+       "dok": 0.7404,
+       "delta": -4.01e-05,
+       "cocok": true
+      },
+      "Recall": {
+       "rerun": 0.41260744985673353,
+       "dok": 0.4126,
+       "delta": 7.45e-06,
+       "cocok": true
+      },
+      "FAR24 kalender": {
+       "rerun": 4.6255,
+       "dok": 4.6255,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "FAR24 baris": {
+       "rerun": 26.6471,
+       "dok": 26.6471,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Lead median": {
+       "rerun": 8.0,
+       "dok": 8.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Diperingatkan": {
+       "rerun": 22,
+       "dok": 22.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Cakupan": {
+       "rerun": 0.1915,
+       "dok": 0.1915,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "h": {
+       "rerun": 30.0,
+       "dok": 30.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Gate A baru": {
+       "rerun": false,
+       "dok": "tidak",
+       "cocok": true
+      }
+     },
+     "semua_cocok": true
+    },
+    "F-15_S": {
+     "sel": {
+      "TP": {
+       "rerun": 390,
+       "dok": 390.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "FP": {
+       "rerun": 123,
+       "dok": 123.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Presisi": {
+       "rerun": 0.7602339181286549,
+       "dok": 0.7602,
+       "delta": 3.392e-05,
+       "cocok": true
+      },
+      "Recall": {
+       "rerun": 0.39274924471299094,
+       "dok": 0.3927,
+       "delta": 4.924e-05,
+       "cocok": true
+      },
+      "FAR24 kalender": {
+       "rerun": 1.9358,
+       "dok": 1.9358,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "FAR24 baris": {
+       "rerun": 24.0587,
+       "dok": 24.0587,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Lead median": {
+       "rerun": 12.0,
+       "dok": 12.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Diperingatkan": {
+       "rerun": 27,
+       "dok": 27.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Cakupan": {
+       "rerun": 0.0903,
+       "dok": 0.0903,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "h": {
+       "rerun": 30.0,
+       "dok": 30.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Gate A baru": {
+       "rerun": false,
+       "dok": "tidak",
+       "cocok": true
+      }
+     },
+     "semua_cocok": true
+    },
+    "F-5": {
+     "sel": {
+      "TP": {
+       "rerun": 410,
+       "dok": 410.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "FP": {
+       "rerun": 104,
+       "dok": 104.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Presisi": {
+       "rerun": 0.7976653696498055,
+       "dok": 0.7977,
+       "delta": -3.463e-05,
+       "cocok": true
+      },
+      "Recall": {
+       "rerun": 0.6602254428341385,
+       "dok": 0.6602,
+       "delta": 2.544e-05,
+       "cocok": true
+      },
+      "FAR24 kalender": {
+       "rerun": 0.4059,
+       "dok": 0.4059,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "FAR24 baris": {
+       "rerun": 26.2231,
+       "dok": 26.2231,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Lead median": {
+       "rerun": 5.0,
+       "dok": 5.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Diperingatkan": {
+       "rerun": 25,
+       "dok": 25.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Cakupan": {
+       "rerun": 0.0171,
+       "dok": 0.0171,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "h": {
+       "rerun": 30.0,
+       "dok": 30.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Gate A baru": {
+       "rerun": false,
+       "dok": "tidak",
+       "cocok": true
+      }
+     },
+     "semua_cocok": true
+    },
+    "F-7": {
+     "sel": {
+      "TP": {
+       "rerun": 271,
+       "dok": 271.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "FP": {
+       "rerun": 85,
+       "dok": 85.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Presisi": {
+       "rerun": 0.7612359550561798,
+       "dok": 0.7612,
+       "delta": 3.596e-05,
+       "cocok": true
+      },
+      "Recall": {
+       "rerun": 0.6437054631828979,
+       "dok": 0.6437,
+       "delta": 5.46e-06,
+       "cocok": true
+      },
+      "FAR24 kalender": {
+       "rerun": 5.4183,
+       "dok": 5.4183,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "FAR24 baris": {
+       "rerun": 59.3886,
+       "dok": 59.3886,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Lead median": {
+       "rerun": 16.0,
+       "dok": 16.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Diperingatkan": {
+       "rerun": 15,
+       "dok": 15.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Cakupan": {
+       "rerun": 0.1079,
+       "dok": 0.1079,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "h": {
+       "rerun": 30.0,
+       "dok": 30.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Gate A baru": {
+       "rerun": false,
+       "dok": "tidak",
+       "cocok": true
+      }
+     },
+     "semua_cocok": true
+    },
+    "F-9": {
+     "sel": {
+      "TP": {
+       "rerun": 256,
+       "dok": 256.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "FP": {
+       "rerun": 55,
+       "dok": 55.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Presisi": {
+       "rerun": 0.8231511254019293,
+       "dok": 0.8232,
+       "delta": -4.887e-05,
+       "cocok": true
+      },
+      "Recall": {
+       "rerun": 0.6052009456264775,
+       "dok": 0.6052,
+       "delta": 9.5e-07,
+       "cocok": true
+      },
+      "FAR24 kalender": {
+       "rerun": 3.5302,
+       "dok": 3.5302,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "FAR24 baris": {
+       "rerun": 66.3873,
+       "dok": 66.3873,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Lead median": {
+       "rerun": 2.0,
+       "dok": 2.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Diperingatkan": {
+       "rerun": 18,
+       "dok": 18.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Cakupan": {
+       "rerun": 0.0707,
+       "dok": 0.0707,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "h": {
+       "rerun": 30.0,
+       "dok": 30.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Gate A baru": {
+       "rerun": false,
+       "dok": "tidak",
+       "cocok": true
+      }
+     },
+     "semua_cocok": true
+    },
+    "F-9_A": {
+     "sel": {
+      "TP": {
+       "rerun": 148,
+       "dok": 148.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "FP": {
+       "rerun": 42,
+       "dok": 42.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Presisi": {
+       "rerun": 0.7789473684210526,
+       "dok": 0.7789,
+       "delta": 4.737e-05,
+       "cocok": true
+      },
+      "Recall": {
+       "rerun": 0.4471299093655589,
+       "dok": 0.4471,
+       "delta": 2.991e-05,
+       "cocok": true
+      },
+      "FAR24 kalender": {
+       "rerun": 8.624,
+       "dok": 8.624,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "FAR24 baris": {
+       "rerun": 32.256,
+       "dok": 32.256,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Lead median": {
+       "rerun": 38.0,
+       "dok": 38.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Diperingatkan": {
+       "rerun": 9,
+       "dok": 9.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Cakupan": {
+       "rerun": 0.3004,
+       "dok": 0.3004,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "h": {
+       "rerun": 30.0,
+       "dok": 30.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Gate A baru": {
+       "rerun": false,
+       "dok": "tidak",
+       "cocok": true
+      }
+     },
+     "semua_cocok": true
+    }
+   },
+   "semua_cocok_61": false
+  },
+  "13": {
+   "tabel_5_1": {
+    "fp_total": {
+     "rerun": 935,
+     "dok": 935.0,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "tp_total": {
+     "rerun": 3804,
+     "dok": 3804.0,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "precision_median": {
+     "rerun": 0.7789,
+     "dok": 0.7789,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "recall_median": {
+     "rerun": 0.5638,
+     "dok": 0.5638,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "far24_kalender_median": {
+     "rerun": 3.5302,
+     "dok": 3.5302,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "far24_kalender_min": {
+     "rerun": 0.4059,
+     "dok": 0.4059,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "far24_kalender_maks": {
+     "rerun": 8.9132,
+     "dok": 8.9132,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "far24_baris_median": {
+     "rerun": 32.256,
+     "dok": 32.256,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "lead_median_median": {
+     "rerun": 11.5,
+     "dok": 11.5,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "n_diperingatkan": {
+     "rerun": 219,
+     "dok": 219.0,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "fold_far_le6": {
+     "rerun": 7,
+     "dok": 7.0,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "fold_gate_A_baru": {
+     "rerun": 0,
+     "dok": 0.0,
+     "delta": 0.0,
+     "cocok": true
+    },
+    "cakupan_median": {
+     "rerun": 0.0903,
+     "dok": 0.0903,
+     "delta": 0.0,
+     "cocok": true
+    }
+   },
+   "semua_cocok_51": true,
+   "tabel_6_1": {
+    "F-10": {
+     "sel": {
+      "TP": {
+       "rerun": 794,
+       "dok": 794.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "FP": {
+       "rerun": 61,
+       "dok": 62.0,
+       "delta": -1.0,
+       "cocok": false
+      },
+      "Presisi": {
+       "rerun": 0.928654970760234,
+       "dok": 0.9287,
+       "delta": -4.503e-05,
+       "cocok": true
+      },
+      "Recall": {
+       "rerun": 0.569583931133429,
+       "dok": 0.5696,
+       "delta": -1.607e-05,
+       "cocok": true
+      },
+      "FAR24 kalender": {
+       "rerun": 8.9132,
+       "dok": 8.9132,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "FAR24 baris": {
+       "rerun": 14.2205,
+       "dok": 14.2205,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Lead median": {
+       "rerun": 18.5,
+       "dok": 18.5,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Diperingatkan": {
+       "rerun": 10,
+       "dok": 10.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Cakupan": {
+       "rerun": 0.673,
+       "dok": 0.673,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "h": {
+       "rerun": 30.0,
+       "dok": 30.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Gate A baru": {
+       "rerun": false,
+       "dok": "tidak",
+       "cocok": true
+      }
+     },
+     "semua_cocok": false
+    },
+    "F-12": {
+     "sel": {
+      "TP": {
+       "rerun": 804,
+       "dok": 804.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "FP": {
+       "rerun": 149,
+       "dok": 149.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Presisi": {
+       "rerun": 0.8436516264428122,
+       "dok": 0.8437,
+       "delta": -4.837e-05,
+       "cocok": true
+      },
+      "Recall": {
+       "rerun": 0.5638148667601683,
+       "dok": 0.5638,
+       "delta": 1.487e-05,
+       "cocok": true
+      },
+      "FAR24 kalender": {
+       "rerun": 2.5234,
+       "dok": 2.5234,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "FAR24 baris": {
+       "rerun": 35.9759,
+       "dok": 35.9759,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Lead median": {
+       "rerun": 11.5,
+       "dok": 11.5,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Diperingatkan": {
+       "rerun": 56,
+       "dok": 56.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Cakupan": {
+       "rerun": 0.0855,
+       "dok": 0.0855,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "h": {
+       "rerun": 30.0,
+       "dok": 30.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Gate A baru": {
+       "rerun": false,
+       "dok": "tidak",
+       "cocok": true
+      }
+     },
+     "semua_cocok": true
+    },
+    "F-14": {
+     "sel": {
+      "TP": {
+       "rerun": 443,
+       "dok": 443.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "FP": {
+       "rerun": 215,
+       "dok": 215.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Presisi": {
+       "rerun": 0.6732522796352584,
+       "dok": 0.6733,
+       "delta": -4.772e-05,
+       "cocok": true
+      },
+      "Recall": {
+       "rerun": 0.5121387283236994,
+       "dok": 0.5121,
+       "delta": 3.873e-05,
+       "cocok": true
+      },
+      "FAR24 kalender": {
+       "rerun": 0.9772,
+       "dok": 0.9772,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "FAR24 baris": {
+       "rerun": 32.4664,
+       "dok": 32.4664,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Lead median": {
+       "rerun": 11.0,
+       "dok": 11.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Diperingatkan": {
+       "rerun": 37,
+       "dok": 37.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Cakupan": {
+       "rerun": 0.0327,
+       "dok": 0.0327,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "h": {
+       "rerun": 30.0,
+       "dok": 30.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Gate A baru": {
+       "rerun": false,
+       "dok": "tidak",
+       "cocok": true
+      }
+     },
+     "semua_cocok": true
+    },
+    "F-15A": {
+     "sel": {
+      "TP": {
+       "rerun": 288,
+       "dok": 288.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "FP": {
+       "rerun": 101,
+       "dok": 101.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Presisi": {
+       "rerun": 0.7403598971722365,
+       "dok": 0.7404,
+       "delta": -4.01e-05,
+       "cocok": true
+      },
+      "Recall": {
+       "rerun": 0.41260744985673353,
+       "dok": 0.4126,
+       "delta": 7.45e-06,
+       "cocok": true
+      },
+      "FAR24 kalender": {
+       "rerun": 4.6255,
+       "dok": 4.6255,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "FAR24 baris": {
+       "rerun": 26.6471,
+       "dok": 26.6471,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Lead median": {
+       "rerun": 8.0,
+       "dok": 8.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Diperingatkan": {
+       "rerun": 22,
+       "dok": 22.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Cakupan": {
+       "rerun": 0.1915,
+       "dok": 0.1915,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "h": {
+       "rerun": 30.0,
+       "dok": 30.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Gate A baru": {
+       "rerun": false,
+       "dok": "tidak",
+       "cocok": true
+      }
+     },
+     "semua_cocok": true
+    },
+    "F-15_S": {
+     "sel": {
+      "TP": {
+       "rerun": 390,
+       "dok": 390.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "FP": {
+       "rerun": 123,
+       "dok": 123.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Presisi": {
+       "rerun": 0.7602339181286549,
+       "dok": 0.7602,
+       "delta": 3.392e-05,
+       "cocok": true
+      },
+      "Recall": {
+       "rerun": 0.39274924471299094,
+       "dok": 0.3927,
+       "delta": 4.924e-05,
+       "cocok": true
+      },
+      "FAR24 kalender": {
+       "rerun": 1.9358,
+       "dok": 1.9358,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "FAR24 baris": {
+       "rerun": 24.0587,
+       "dok": 24.0587,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Lead median": {
+       "rerun": 12.0,
+       "dok": 12.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Diperingatkan": {
+       "rerun": 27,
+       "dok": 27.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Cakupan": {
+       "rerun": 0.0903,
+       "dok": 0.0903,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "h": {
+       "rerun": 30.0,
+       "dok": 30.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Gate A baru": {
+       "rerun": false,
+       "dok": "tidak",
+       "cocok": true
+      }
+     },
+     "semua_cocok": true
+    },
+    "F-5": {
+     "sel": {
+      "TP": {
+       "rerun": 410,
+       "dok": 410.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "FP": {
+       "rerun": 104,
+       "dok": 104.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Presisi": {
+       "rerun": 0.7976653696498055,
+       "dok": 0.7977,
+       "delta": -3.463e-05,
+       "cocok": true
+      },
+      "Recall": {
+       "rerun": 0.6602254428341385,
+       "dok": 0.6602,
+       "delta": 2.544e-05,
+       "cocok": true
+      },
+      "FAR24 kalender": {
+       "rerun": 0.4059,
+       "dok": 0.4059,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "FAR24 baris": {
+       "rerun": 26.2231,
+       "dok": 26.2231,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Lead median": {
+       "rerun": 5.0,
+       "dok": 5.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Diperingatkan": {
+       "rerun": 25,
+       "dok": 25.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Cakupan": {
+       "rerun": 0.0171,
+       "dok": 0.0171,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "h": {
+       "rerun": 30.0,
+       "dok": 30.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Gate A baru": {
+       "rerun": false,
+       "dok": "tidak",
+       "cocok": true
+      }
+     },
+     "semua_cocok": true
+    },
+    "F-7": {
+     "sel": {
+      "TP": {
+       "rerun": 271,
+       "dok": 271.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "FP": {
+       "rerun": 85,
+       "dok": 85.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Presisi": {
+       "rerun": 0.7612359550561798,
+       "dok": 0.7612,
+       "delta": 3.596e-05,
+       "cocok": true
+      },
+      "Recall": {
+       "rerun": 0.6437054631828979,
+       "dok": 0.6437,
+       "delta": 5.46e-06,
+       "cocok": true
+      },
+      "FAR24 kalender": {
+       "rerun": 5.4183,
+       "dok": 5.4183,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "FAR24 baris": {
+       "rerun": 59.3886,
+       "dok": 59.3886,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Lead median": {
+       "rerun": 16.0,
+       "dok": 16.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Diperingatkan": {
+       "rerun": 15,
+       "dok": 15.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Cakupan": {
+       "rerun": 0.1079,
+       "dok": 0.1079,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "h": {
+       "rerun": 30.0,
+       "dok": 30.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Gate A baru": {
+       "rerun": false,
+       "dok": "tidak",
+       "cocok": true
+      }
+     },
+     "semua_cocok": true
+    },
+    "F-9": {
+     "sel": {
+      "TP": {
+       "rerun": 256,
+       "dok": 256.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "FP": {
+       "rerun": 55,
+       "dok": 55.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Presisi": {
+       "rerun": 0.8231511254019293,
+       "dok": 0.8232,
+       "delta": -4.887e-05,
+       "cocok": true
+      },
+      "Recall": {
+       "rerun": 0.6052009456264775,
+       "dok": 0.6052,
+       "delta": 9.5e-07,
+       "cocok": true
+      },
+      "FAR24 kalender": {
+       "rerun": 3.5302,
+       "dok": 3.5302,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "FAR24 baris": {
+       "rerun": 66.3873,
+       "dok": 66.3873,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Lead median": {
+       "rerun": 2.0,
+       "dok": 2.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Diperingatkan": {
+       "rerun": 18,
+       "dok": 18.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Cakupan": {
+       "rerun": 0.0707,
+       "dok": 0.0707,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "h": {
+       "rerun": 30.0,
+       "dok": 30.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Gate A baru": {
+       "rerun": false,
+       "dok": "tidak",
+       "cocok": true
+      }
+     },
+     "semua_cocok": true
+    },
+    "F-9_A": {
+     "sel": {
+      "TP": {
+       "rerun": 148,
+       "dok": 148.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "FP": {
+       "rerun": 42,
+       "dok": 42.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Presisi": {
+       "rerun": 0.7789473684210526,
+       "dok": 0.7789,
+       "delta": 4.737e-05,
+       "cocok": true
+      },
+      "Recall": {
+       "rerun": 0.4471299093655589,
+       "dok": 0.4471,
+       "delta": 2.991e-05,
+       "cocok": true
+      },
+      "FAR24 kalender": {
+       "rerun": 8.624,
+       "dok": 8.624,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "FAR24 baris": {
+       "rerun": 32.256,
+       "dok": 32.256,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Lead median": {
+       "rerun": 38.0,
+       "dok": 38.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Diperingatkan": {
+       "rerun": 9,
+       "dok": 9.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Cakupan": {
+       "rerun": 0.3004,
+       "dok": 0.3004,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "h": {
+       "rerun": 30.0,
+       "dok": 30.0,
+       "delta": 0.0,
+       "cocok": true
+      },
+      "Gate A baru": {
+       "rerun": false,
+       "dok": "tidak",
+       "cocok": true
+      }
+     },
+     "semua_cocok": true
+    }
+   },
+   "semua_cocok_61": false
+  }
+ },
+ "rekap": {
+  "t51_metrik": 13,
+  "t51_gagal": [
+   "fp_total"
+  ],
+  "t52_gagal": [],
+  "t61_gagal": [
+   "F-10"
+  ],
+  "t4_gagal": [],
+  "rerun42_ringkas_beda": [],
+  "rerun42_fold_beda": [],
+  "rerun42_dok51_beda": [
+   "fp_total"
+  ],
+  "rerun42_dok61_beda": [
+   "F-10"
+  ],
+  "rerun13_ringkas_beda": [],
+  "rerun13_fold_beda": [],
+  "rerun13_dok51_beda": [],
+  "rerun13_dok61_beda": [
+   "F-10"
+  ]
+ }
+}

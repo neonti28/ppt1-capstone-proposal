@@ -1,0 +1,4867 @@
+{
+ "meta": {
+  "kartu": "t_9abcb3b3",
+  "tanggal": "2026-10-27",
+  "dibuat": "2026-10-27 06:24:16",
+  "skrip": "scratch/rnd_e1/e1_build.py",
+  "bobot": {
+   "tier": 0.5,
+   "data": 0.25,
+   "risiko": 0.15,
+   "biaya": 0.1
+  },
+  "rumus": "0,35*tier + 0,30*data + 0,20*risiko + 0,15*biaya"
+ },
+ "matriks": {
+  "A01": {
+   "nama": "BGWO (binary GWO)",
+   "sumber": "R1",
+   "sel": {
+    "vib": {
+     "skor": 2,
+     "status": "ADA",
+     "alasan": "55 fitur kontrak memberi ruang seleksi nyata; ukuran baris 23.922 cukup untuk LOWO (ledger R4-01)"
+    },
+    "ssi": {
+     "skor": 2,
+     "status": "SEBAGIAN",
+     "alasan": "seleksi fitur bisa memangkas kolom yang 62,3 persen barisnya tanpa data CRPM (ledger R4-26)"
+    },
+    "shk": {
+     "skor": 2,
+     "status": "ADA",
+     "alasan": "volume 56.495 baris dan fitur lebar, seleksi menurunkan dimensi tanpa kehilangan unit (ledger R4-09)"
+    },
+    "stuck": {
+     "skor": 1,
+     "status": "SEBAGIAN",
+     "alasan": "hanya 5.555 jendela di 2 well, ruang seleksi lebih sempit dari jumlah fitur (ledger R4-10)"
+    },
+    "hyd": {
+     "skor": 1,
+     "status": "ADA",
+     "alasan": "52.509 jendela, tetapi masalah hyd adalah ambang FAR bukan dimensi fitur (ledger R4-12)"
+    },
+    "bit_wear": {
+     "skor": 0,
+     "status": "TIDAK",
+     "alasan": "label bit_wear berasal dari dataset USROP yang bukan rig Volve, jadi seleksi fitur tidak menjawab gate (ledger D0-752)"
+    },
+    "tool_wear": {
+     "skor": 1,
+     "status": "ADA",
+     "alasan": "hanya 27 fitur dan 469 jendela sehingga seleksi tidak mendesak (ledger D0-766)"
+    }
+   },
+   "biaya": 1,
+   "risiko": 1,
+   "catatan": ""
+  },
+  "A02": {
+   "nama": "GWO atau WOA (tuning hyperparameter)",
+   "sumber": "R1",
+   "sel": {
+    "vib": {
+     "skor": 1,
+     "status": "ADA",
+     "alasan": "ruang hyperparameter 4 sampai 6 dimensi terlalu kecil untuk memberi kenaikan tier (ledger R4-01)"
+    },
+    "ssi": {
+     "skor": 1,
+     "status": "SEBAGIAN",
+     "alasan": "tuning tidak menyembuhkan 62,3 persen baris tanpa data CRPM (ledger R4-26)"
+    },
+    "shk": {
+     "skor": 1,
+     "status": "ADA",
+     "alasan": "tuning hanya menggeser titik operasi, bukan menutup CI yang memuat no-skill di 7 dari 9 fold (ledger R1-030)"
+    },
+    "stuck": {
+     "skor": 1,
+     "status": "SEBAGIAN",
+     "alasan": "tuning tidak menambah well; cakupan tetap 2 fold (ledger R4-10)"
+    },
+    "hyd": {
+     "skor": 2,
+     "status": "ADA",
+     "alasan": "ambang hybrid adalah inti masalah hyd, sehingga pencarian ambang terarah relevan (ledger R1-032)"
+    },
+    "bit_wear": {
+     "skor": 1,
+     "status": "TIDAK",
+     "alasan": "tanpa CI, presisi, dan FAR yang terukur, tuning tidak punya sasaran yang bisa dievaluasi (ledger R5-068)"
+    },
+    "tool_wear": {
+     "skor": 1,
+     "status": "ADA",
+     "alasan": "FAR sudah terkalibrasi per alat, ruang perbaikan tuning kecil (ledger L-33)"
+    }
+   },
+   "biaya": 2,
+   "risiko": 1,
+   "catatan": ""
+  },
+  "A03": {
+   "nama": "SMA (Slime Mould Algorithm)",
+   "sumber": "R1",
+   "sel": {
+    "vib": {
+     "skor": 1,
+     "status": "ADA",
+     "alasan": "diusulkan R1 sebagai pemeriksaan silang BGWO, bukan jalur utama (ledger R4-01)"
+    },
+    "ssi": {
+     "skor": 1,
+     "status": "SEBAGIAN",
+     "alasan": "sama seperti BGWO tetapi bukti domain lebih lemah (ledger R4-26)"
+    },
+    "shk": {
+     "skor": 1,
+     "status": "ADA",
+     "alasan": "pemeriksaan silang hasil seleksi fitur (ledger R4-09)"
+    },
+    "stuck": {
+     "skor": 1,
+     "status": "SEBAGIAN",
+     "alasan": "cakupan 2 well membatasi manfaat apa pun dari tuning (ledger R4-10)"
+    },
+    "hyd": {
+     "skor": 1,
+     "status": "ADA",
+     "alasan": "alternatif tuning ambang bila GWO gagal konvergen (ledger R4-12)"
+    },
+    "bit_wear": {
+     "skor": 0,
+     "status": "TIDAK",
+     "alasan": "tidak ada sasaran gate yang terukur pada kelas ini (ledger R5-068)"
+    },
+    "tool_wear": {
+     "skor": 1,
+     "status": "ADA",
+     "alasan": "ruang 27 fitur terlalu kecil untuk metaheuristik (ledger D0-766)"
+    }
+   },
+   "biaya": 2,
+   "risiko": 1,
+   "catatan": ""
+  },
+  "A04": {
+   "nama": "SVM (RBF dan linear) sebagai pembanding murah",
+   "sumber": "R3",
+   "sel": {
+    "vib": {
+     "skor": 2,
+     "status": "ADA",
+     "alasan": "median AUC 0,8245 pada satu split dan biaya RBF 7,99 detik, layak sebagai pembanding rule (ledger R3-35)"
+    },
+    "ssi": {
+     "skor": 1,
+     "status": "SEBAGIAN",
+     "alasan": "pembanding saja, tidak menyerang 62,3 persen nodata (ledger R4-26)"
+    },
+    "shk": {
+     "skor": 1,
+     "status": "ADA",
+     "alasan": "pembanding di bawah rule yang sudah lolos FAR di 7 dari 9 fold (ledger R3-51)"
+    },
+    "stuck": {
+     "skor": 1,
+     "status": "SEBAGIAN",
+     "alasan": "2 well tidak cukup untuk melatih kernel dengan jujur (ledger R4-10)"
+    },
+    "hyd": {
+     "skor": 1,
+     "status": "ADA",
+     "alasan": "pembanding untuk hybrid, bukan pengganti aturan ambang (ledger R1-032)"
+    },
+    "bit_wear": {
+     "skor": 0,
+     "status": "TIDAK",
+     "alasan": "dataset berbeda asal sehingga skor tidak menjawab klaim tier (ledger D0-752)"
+    },
+    "tool_wear": {
+     "skor": 3,
+     "status": "ADA",
+     "alasan": "27 fitur tabular dan 469 jendela adalah bentuk paling cocok untuk SVM lintas alat (ledger D0-766)"
+    }
+   },
+   "biaya": 2,
+   "risiko": 2,
+   "catatan": ""
+  },
+  "A05": {
+   "nama": "Matrix profile (pengganti DTW)",
+   "sumber": "R3, R5",
+   "sel": {
+    "vib": {
+     "skor": 2,
+     "status": "ADA",
+     "alasan": "0,00039 detik per query pada 3.000 titik, murah untuk menunjuk episode mirip (ledger R3-41)"
+    },
+    "ssi": {
+     "skor": 1,
+     "status": "SEBAGIAN",
+     "alasan": "kanal CRPM tidak lengkap, motif tidak bisa dihitung konsisten (ledger R4-26)"
+    },
+    "shk": {
+     "skor": 1,
+     "status": "ADA",
+     "alasan": "kanal terkuantisasi 4 nilai unik membatasi motif yang bisa dibedakan (ledger R3-51)"
+    },
+    "stuck": {
+     "skor": 1,
+     "status": "SEBAGIAN",
+     "alasan": "2 well membatasi motif lintas unit (ledger R4-10)"
+    },
+    "hyd": {
+     "skor": 2,
+     "status": "ADA",
+     "alasan": "dipakai R5 sebagai penunjuk potongan waktu untuk pemeriksaan manual (ledger R4-12)"
+    },
+    "bit_wear": {
+     "skor": 0,
+     "status": "TIDAK",
+     "alasan": "grid kedalaman bukan deret waktu, motif tidak terdefinisi (ledger D0-752)"
+    },
+    "tool_wear": {
+     "skor": 0,
+     "status": "ADA",
+     "alasan": "data bengkel sudah berbentuk jendela fitur, bukan deret panjang (ledger D0-766)"
+    }
+   },
+   "biaya": 2,
+   "risiko": 3,
+   "catatan": "manfaat pada kanal VIBLAT belum diuji (R3 daftar belum terverifikasi)"
+  },
+  "A06": {
+   "nama": "LightGBM atau XGBoost",
+   "sumber": "R4",
+   "sel": {
+    "vib": {
+     "skor": 1,
+     "status": "ADA",
+     "alasan": "R4 menyatakan RF dipertahankan; boosting hanya masuk bila menang di 75 persen fold LOWO (ledger R4-15)"
+    },
+    "ssi": {
+     "skor": 2,
+     "status": "SEBAGIAN",
+     "alasan": "36 ribu baris dan banyak missing adalah kondisi yang justru ditangani boosting modern (ledger R4-08)"
+    },
+    "shk": {
+     "skor": 2,
+     "status": "ADA",
+     "alasan": "56 ribu baris dan prevalensi 0,0355 memberi ruang bagi model berkapasitas lebih (ledger R4-29)"
+    },
+    "stuck": {
+     "skor": 2,
+     "status": "SEBAGIAN",
+     "alasan": "118.567 jendela dengan prevalensi 0,0167 adalah kasus imbalance yang jadi alasan utama boosting (ledger R4-29)"
+    },
+    "hyd": {
+     "skor": 1,
+     "status": "ADA",
+     "alasan": "hybrid aturan sudah kuat, boosting hanya mengganti lapisan ranking (ledger R1-032)"
+    },
+    "bit_wear": {
+     "skor": 0,
+     "status": "TIDAK",
+     "alasan": "label bersifat sirkular dan CI belum terukur, boosting tidak memperbaiki label (ledger R5-068)"
+    },
+    "tool_wear": {
+     "skor": 1,
+     "status": "ADA",
+     "alasan": "469 jendela terlalu kecil untuk boosting yang lebih rakus data (ledger D0-766)"
+    }
+   },
+   "biaya": 1,
+   "risiko": 2,
+   "catatan": ""
+  },
+  "A07": {
+   "nama": "CatBoost (lintas alat, LOTO)",
+   "sumber": "R4",
+   "sel": {
+    "vib": {
+     "skor": 1,
+     "status": "ADA",
+     "alasan": "tidak ada variabel kategori alat pada kelas rig (ledger R4-01)"
+    },
+    "ssi": {
+     "skor": 1,
+     "status": "SEBAGIAN",
+     "alasan": "keunggulan kategorikal tidak terpakai, nodata tetap pembatas (ledger R4-26)"
+    },
+    "shk": {
+     "skor": 1,
+     "status": "ADA",
+     "alasan": "tidak ada kolom kategorikal yang menonjol (ledger R4-09)"
+    },
+    "stuck": {
+     "skor": 2,
+     "status": "SEBAGIAN",
+     "alasan": "imbalance ekstrem 0,0167 adalah target alami boosting (ledger R4-29)"
+    },
+    "hyd": {
+     "skor": 1,
+     "status": "ADA",
+     "alasan": "sama seperti kelas status lain, tidak ada kategori alat (ledger R4-12)"
+    },
+    "bit_wear": {
+     "skor": 0,
+     "status": "TIDAK",
+     "alasan": "7 well USROP adalah kandidat kategori, tetapi label belum layak (ledger D0-752)"
+    },
+    "tool_wear": {
+     "skor": 2,
+     "status": "ADA",
+     "alasan": "ada identitas alat T01 sampai T04 sehingga LOTO memakai keunggulan CatBoost (ledger D0-766)"
+    }
+   },
+   "biaya": 1,
+   "risiko": 1,
+   "catatan": ""
+  },
+  "A08": {
+   "nama": "RF kontrak V9 (baseline yang berjalan)",
+   "sumber": "R4",
+   "sel": {
+    "vib": {
+     "skor": 2,
+     "status": "ADA",
+     "alasan": "AUPRC 0,9117 pada fold F-14 dengan prevalensi 0,5651, selisih +0,3466 (ledger R4-15)"
+    },
+    "ssi": {
+     "skor": 2,
+     "status": "SEBAGIAN",
+     "alasan": "berjalan di 35.906 jendela, tetapi 62,3 persen tanpa CRPM (ledger R4-26)"
+    },
+    "shk": {
+     "skor": 1,
+     "status": "ADA",
+     "alasan": "CI memuat prevalensi di 7 dari 9 fold, jadi RF belum terbukti di atas no-skill (ledger R1-030)"
+    },
+    "stuck": {
+     "skor": 1,
+     "status": "SEBAGIAN",
+     "alasan": "K-i hanya 2 well, K-ii B1 rendah (ledger R4-10)"
+    },
+    "hyd": {
+     "skor": 1,
+     "status": "ADA",
+     "alasan": "persistence dan hybrid sudah memenuhi C lebih lengkap dari RF (ledger R1-032)"
+    },
+    "bit_wear": {
+     "skor": 0,
+     "status": "TIDAK",
+     "alasan": "persistence di kelas ini adalah label digeser, bukan model (ledger R5-068)"
+    },
+    "tool_wear": {
+     "skor": 1,
+     "status": "ADA",
+     "alasan": "FAR terkalibrasi lebih penting dari penggantian model (ledger L-33)"
+    }
+   },
+   "biaya": 2,
+   "risiko": 2,
+   "catatan": ""
+  },
+  "A09": {
+   "nama": "Kalibrasi isotonic atau Platt",
+   "sumber": "R4",
+   "sel": {
+    "vib": {
+     "skor": 1,
+     "status": "ADA",
+     "alasan": "kalibrasi monoton, tidak mengubah AUPRC 0,9117 (ledger R4-15)"
+    },
+    "ssi": {
+     "skor": 1,
+     "status": "SEBAGIAN",
+     "alasan": "tidak menyentuh nodata, hanya membuat probabilitas bisa dibaca (ledger R4-26)"
+    },
+    "shk": {
+     "skor": 1,
+     "status": "ADA",
+     "alasan": "presisi rule sudah stabil, kalibrasi tidak menambah gate (ledger R3-51)"
+    },
+    "stuck": {
+     "skor": 1,
+     "status": "SEBAGIAN",
+     "alasan": "jumlah positif per well kecil, syarat sampel kalibrasi kemungkinan gagal (ledger R4-10)"
+    },
+    "hyd": {
+     "skor": 1,
+     "status": "ADA",
+     "alasan": "kalibrasi tidak menurunkan FAR yang jadi satu-satunya gerbang gagal (ledger R1-032)"
+    },
+    "bit_wear": {
+     "skor": 0,
+     "status": "TIDAK",
+     "alasan": "tanpa skor probabilitas yang sah, kalibrasi tidak punya objek (ledger R5-068)"
+    },
+    "tool_wear": {
+     "skor": 1,
+     "status": "ADA",
+     "alasan": "skor per alat sudah dipakai untuk kalibrasi ambang, bukan probabilitas (ledger L-33)"
+    }
+   },
+   "biaya": 3,
+   "risiko": 2,
+   "catatan": ""
+  },
+  "A10": {
+   "nama": "Conformal (kuantil lintas-well dan dalam-well)",
+   "sumber": "R4",
+   "sel": {
+    "vib": {
+     "skor": 3,
+     "status": "ADA",
+     "alasan": "sebar FAR ambang RF 119 kali antar well adalah sasaran langsung conformal per well (ledger R5-072)"
+    },
+    "ssi": {
+     "skor": 2,
+     "status": "SEBAGIAN",
+     "alasan": "hybrid sudah memangkas FP 26 ke 7, conformal menjaga laju itu prospektif (ledger R4-26)"
+    },
+    "shk": {
+     "skor": 2,
+     "status": "ADA",
+     "alasan": "rule sudah lolos FAR 0,67 sampai 6,6 di 7 dari 9 fold, conformal membuatnya dapat dijanjikan (ledger R3-51)"
+    },
+    "stuck": {
+     "skor": 2,
+     "status": "SEBAGIAN",
+     "alasan": "B1 0 sampai 0,115 adalah masalah daya deteksi, conformal hanya mengendalikan alarm (ledger R2-015)"
+    },
+    "hyd": {
+     "skor": 3,
+     "status": "ADA",
+     "alasan": "satu-satunya gerbang yang tersisa pada kandidat terkuat adalah FAR 14,6 sampai 58,4 (ledger E1-021)"
+    },
+    "bit_wear": {
+     "skor": 0,
+     "status": "TIDAK",
+     "alasan": "FAR pada grid kedalaman tidak terdefinisi, conformal tidak punya satuan (ledger D0-752)"
+    },
+    "tool_wear": {
+     "skor": 3,
+     "status": "ADA",
+     "alasan": "FP 1 sampai 3 per alat sudah terkalibrasi; conformal membuatnya janji bukan hasil satu run (ledger L-33)"
+    }
+   },
+   "biaya": 3,
+   "risiko": 2,
+   "catatan": ""
+  },
+  "A11": {
+   "nama": "Cox proportional hazards",
+   "sumber": "R2",
+   "sel": {
+    "vib": {
+     "skor": 0,
+     "status": "ADA",
+     "alasan": "kelas status, bukan waktu kejadian, sehingga survival tidak terdefinisi (ledger R4-01)"
+    },
+    "ssi": {
+     "skor": 0,
+     "status": "SEBAGIAN",
+     "alasan": "kelas status, survival tidak terdefinisi (ledger R4-26)"
+    },
+    "shk": {
+     "skor": 0,
+     "status": "ADA",
+     "alasan": "kelas status, survival tidak terdefinisi (ledger R4-09)"
+    },
+    "stuck": {
+     "skor": 2,
+     "status": "SEBAGIAN",
+     "alasan": "hanya K-ii yang punya onset; Cox diusulkan R2 sebagai pembanding TLead (ledger L-28)"
+    },
+    "hyd": {
+     "skor": 1,
+     "status": "ADA",
+     "alasan": "K-ii punya horizon 10 menit sehingga survival hampir tidak punya ruang (ledger L-28)"
+    },
+    "bit_wear": {
+     "skor": 0,
+     "status": "TIDAK",
+     "alasan": "tidak ada waktu kejadian yang sah (ledger D0-752)"
+    },
+    "tool_wear": {
+     "skor": 0,
+     "status": "ADA",
+     "alasan": "label konstan dalam run, tidak ada kejadian (ledger L-33)"
+    }
+   },
+   "biaya": 2,
+   "risiko": 1,
+   "catatan": ""
+  },
+  "A12": {
+   "nama": "Markov chain",
+   "sumber": "R2",
+   "sel": {
+    "vib": {
+     "skor": 0,
+     "status": "ADA",
+     "alasan": "status biner per menit, bukan transisi state yang ingin diprediksi (ledger R4-01)"
+    },
+    "ssi": {
+     "skor": 0,
+     "status": "SEBAGIAN",
+     "alasan": "sama, tidak ada state fisik (ledger R4-26)"
+    },
+    "shk": {
+     "skor": 0,
+     "status": "ADA",
+     "alasan": "sama, tidak ada state fisik (ledger R4-09)"
+    },
+    "stuck": {
+     "skor": 1,
+     "status": "SEBAGIAN",
+     "alasan": "median episode satu menit berarti memori hampir nol sehingga orde-1 tidak informatif (R2 bagian 3)"
+    },
+    "hyd": {
+     "skor": 0,
+     "status": "ADA",
+     "alasan": "residu SPPA kontinu, bukan state diskret (ledger R4-12)"
+    },
+    "bit_wear": {
+     "skor": 0,
+     "status": "TIDAK",
+     "alasan": "label sirkular, transisi tidak bermakna (ledger R5-068)"
+    },
+    "tool_wear": {
+     "skor": 1,
+     "status": "ADA",
+     "alasan": "dua kondisi run memberi transisi regime yang bisa dihitung (ledger D0-766)"
+    }
+   },
+   "biaya": 3,
+   "risiko": 0,
+   "catatan": ""
+  },
+  "A13": {
+   "nama": "HMM",
+   "sumber": "R2",
+   "sel": {
+    "vib": {
+     "skor": 0,
+     "status": "ADA",
+     "alasan": "tidak ada label state tersembunyi yang bisa divalidasi (ledger R4-01)"
+    },
+    "ssi": {
+     "skor": 0,
+     "status": "SEBAGIAN",
+     "alasan": "idem, state fisik tidak ada (ledger R4-26)"
+    },
+    "shk": {
+     "skor": 0,
+     "status": "ADA",
+     "alasan": "idem (ledger R4-09)"
+    },
+    "stuck": {
+     "skor": 1,
+     "status": "SEBAGIAN",
+     "alasan": "state fisik tidak ada, jadi HMM hanya menghasilkan state yang kita karang (ledger R4-10)"
+    },
+    "hyd": {
+     "skor": 0,
+     "status": "ADA",
+     "alasan": "idem (ledger R4-12)"
+    },
+    "bit_wear": {
+     "skor": 0,
+     "status": "TIDAK",
+     "alasan": "idem (ledger R5-068)"
+    },
+    "tool_wear": {
+     "skor": 0,
+     "status": "ADA",
+     "alasan": "idem (ledger D0-766)"
+    }
+   },
+   "biaya": 2,
+   "risiko": 0,
+   "catatan": ""
+  },
+  "A14": {
+   "nama": "Monte Carlo (pelaporan CI)",
+   "sumber": "R2",
+   "sel": {
+    "vib": {
+     "skor": 1,
+     "status": "ADA",
+     "alasan": "perannya pelaporan selang FAR, bukan menaikkan deteksi (ledger R4-01)"
+    },
+    "ssi": {
+     "skor": 1,
+     "status": "SEBAGIAN",
+     "alasan": "idem, dan CI sudah bisa dihitung analitik (ledger R4-26)"
+    },
+    "shk": {
+     "skor": 1,
+     "status": "ADA",
+     "alasan": "idem (ledger R4-09)"
+    },
+    "stuck": {
+     "skor": 1,
+     "status": "SEBAGIAN",
+     "alasan": "idem (ledger R4-10)"
+    },
+    "hyd": {
+     "skor": 1,
+     "status": "ADA",
+     "alasan": "idem (ledger R4-12)"
+    },
+    "bit_wear": {
+     "skor": 1,
+     "status": "TIDAK",
+     "alasan": "tanpa FAR terdefinisi, simulasi CI tidak punya besaran (ledger D0-752)"
+    },
+    "tool_wear": {
+     "skor": 1,
+     "status": "ADA",
+     "alasan": "idem (ledger D0-766)"
+    }
+   },
+   "biaya": 3,
+   "risiko": 3,
+   "catatan": "nilai 3 pada kolom risiko berarti hasilnya paling tidak berisiko jadi artefak, sekaligus paling kecil dampaknya"
+  },
+  "A15": {
+   "nama": "CUSUM",
+   "sumber": "R5",
+   "sel": {
+    "vib": {
+     "skor": 0,
+     "status": "ADA",
+     "alasan": "tidak ada perubahan level yang ingin dideteksi (ledger R4-01)"
+    },
+    "ssi": {
+     "skor": 0,
+     "status": "SEBAGIAN",
+     "alasan": "idem (ledger R4-26)"
+    },
+    "shk": {
+     "skor": 0,
+     "status": "ADA",
+     "alasan": "idem (ledger R4-09)"
+    },
+    "stuck": {
+     "skor": 1,
+     "status": "SEBAGIAN",
+     "alasan": "onset sudah punya detektor rule, CUSUM hanya menambah alarm (ledger R4-10)"
+    },
+    "hyd": {
+     "skor": 1,
+     "status": "ADA",
+     "alasan": "hybrid aturan sudah menangani status (ledger R4-12)"
+    },
+    "bit_wear": {
+     "skor": 2,
+     "status": "SEBAGIAN",
+     "alasan": "K-2 belum berlabel sehingga detektor tanpa label adalah satu-satunya jalan (ledger D0-752)"
+    },
+    "tool_wear": {
+     "skor": 2,
+     "status": "ADA",
+     "alasan": "perubahan regime per alat adalah definisi kerja CUSUM (ledger L-33)"
+    }
+   },
+   "biaya": 3,
+   "risiko": 1,
+   "catatan": "tanpa reset, CUSUM menyala 52,293 sampai 60,000 menit tiap jam (ledger R5-032)"
+  },
+  "A16": {
+   "nama": "Page-Hinkley",
+   "sumber": "R5",
+   "sel": {
+    "vib": {
+     "skor": 0,
+     "status": "ADA",
+     "alasan": "idem CUSUM, tidak ada target level (ledger R4-01)"
+    },
+    "ssi": {
+     "skor": 0,
+     "status": "SEBAGIAN",
+     "alasan": "idem (ledger R4-26)"
+    },
+    "shk": {
+     "skor": 0,
+     "status": "ADA",
+     "alasan": "idem (ledger R4-09)"
+    },
+    "stuck": {
+     "skor": 1,
+     "status": "SEBAGIAN",
+     "alasan": "idem (ledger R4-10)"
+    },
+    "hyd": {
+     "skor": 1,
+     "status": "ADA",
+     "alasan": "idem (ledger R4-12)"
+    },
+    "bit_wear": {
+     "skor": 2,
+     "status": "SEBAGIAN",
+     "alasan": "pembanding CUSUM untuk K-2 tanpa label (ledger D0-752)"
+    },
+    "tool_wear": {
+     "skor": 2,
+     "status": "ADA",
+     "alasan": "pembanding CUSUM yang lebih jujur pada data berautokorelasi (ledger L-33)"
+    }
+   },
+   "biaya": 3,
+   "risiko": 2,
+   "catatan": ""
+  },
+  "A17": {
+   "nama": "ADWIN",
+   "sumber": "R5",
+   "sel": {
+    "vib": {
+     "skor": 0,
+     "status": "ADA",
+     "alasan": "jendela adaptif tidak dibutuhkan kelas status (ledger R4-01)"
+    },
+    "ssi": {
+     "skor": 0,
+     "status": "SEBAGIAN",
+     "alasan": "idem (ledger R4-26)"
+    },
+    "shk": {
+     "skor": 0,
+     "status": "ADA",
+     "alasan": "idem (ledger R4-09)"
+    },
+    "stuck": {
+     "skor": 0,
+     "status": "SEBAGIAN",
+     "alasan": "idem (ledger R4-10)"
+    },
+    "hyd": {
+     "skor": 0,
+     "status": "ADA",
+     "alasan": "idem (ledger R4-12)"
+    },
+    "bit_wear": {
+     "skor": 1,
+     "status": "SEBAGIAN",
+     "alasan": "butuh baseline lebih pendek dari BOCPD, tetapi label belum ada (ledger D0-752)"
+    },
+    "tool_wear": {
+     "skor": 2,
+     "status": "ADA",
+     "alasan": "tidak menuntut baseline bersih panjang, cocok untuk run bengkel pendek (ledger L-33)"
+    }
+   },
+   "biaya": 3,
+   "risiko": 2,
+   "catatan": "belum dijalankan pada data kita (R5)"
+  },
+  "A18": {
+   "nama": "BOCPD",
+   "sumber": "R5",
+   "sel": {
+    "vib": {
+     "skor": 0,
+     "status": "ADA",
+     "alasan": "tidak ada target (ledger R4-01)"
+    },
+    "ssi": {
+     "skor": 0,
+     "status": "SEBAGIAN",
+     "alasan": "idem (ledger R4-26)"
+    },
+    "shk": {
+     "skor": 0,
+     "status": "ADA",
+     "alasan": "idem (ledger R4-09)"
+    },
+    "stuck": {
+     "skor": 0,
+     "status": "SEBAGIAN",
+     "alasan": "idem (ledger R4-10)"
+    },
+    "hyd": {
+     "skor": 0,
+     "status": "ADA",
+     "alasan": "idem (ledger R4-12)"
+    },
+    "bit_wear": {
+     "skor": 1,
+     "status": "SEBAGIAN",
+     "alasan": "ditunda sampai baseline kontigu mencukupi (ledger D0-752)"
+    },
+    "tool_wear": {
+     "skor": 1,
+     "status": "ADA",
+     "alasan": "prior panjang rezim belum bisa diuji pada run pendek (ledger L-33)"
+    }
+   },
+   "biaya": 1,
+   "risiko": 1,
+   "catatan": "ditunda, bukan ditolak"
+  },
+  "A19": {
+   "nama": "Uji KS dua sampel",
+   "sumber": "R5",
+   "sel": {
+    "vib": {
+     "skor": 2,
+     "status": "ADA",
+     "alasan": "gerbang sebelum memakai ambang pinjaman, langsung menyentuh sebar 119 kali (ledger R5-072)"
+    },
+    "ssi": {
+     "skor": 1,
+     "status": "SEBAGIAN",
+     "alasan": "nodata membuat dua sampel tidak sebanding (ledger R4-26)"
+    },
+    "shk": {
+     "skor": 1,
+     "status": "ADA",
+     "alasan": "rule sudah lolos FAR tanpa pinjaman ambang (ledger R3-51)"
+    },
+    "stuck": {
+     "skor": 1,
+     "status": "SEBAGIAN",
+     "alasan": "2 well terlalu sedikit untuk uji dua sampel yang kuat (ledger R4-10)"
+    },
+    "hyd": {
+     "skor": 2,
+     "status": "ADA",
+     "alasan": "9 well memberi bahan uji antar well yang memadai (ledger R1-032)"
+    },
+    "bit_wear": {
+     "skor": 1,
+     "status": "TIDAK",
+     "alasan": "7 well USROP hanya 5 yang punya positif (ledger D0-756)"
+    },
+    "tool_wear": {
+     "skor": 1,
+     "status": "ADA",
+     "alasan": "4 alat terlalu sedikit untuk uji antar alat (ledger L-33)"
+    }
+   },
+   "biaya": 3,
+   "risiko": 3,
+   "catatan": ""
+  },
+  "A20": {
+   "nama": "Isolation Forest",
+   "sumber": "R5",
+   "sel": {
+    "vib": {
+     "skor": 1,
+     "status": "ADA",
+     "alasan": "kelas sudah berlabel, detektor tanpa label tidak menambah gate (ledger R4-01)"
+    },
+    "ssi": {
+     "skor": 1,
+     "status": "SEBAGIAN",
+     "alasan": "idem, dan nodata mendominasi (ledger R4-26)"
+    },
+    "shk": {
+     "skor": 1,
+     "status": "ADA",
+     "alasan": "idem (ledger R4-09)"
+    },
+    "stuck": {
+     "skor": 1,
+     "status": "SEBAGIAN",
+     "alasan": "idem (ledger R4-10)"
+    },
+    "hyd": {
+     "skor": 2,
+     "status": "SEBAGIAN",
+     "alasan": "K-ii tanpa label yang dapat dipercaya, triase adalah peran yang sah (ledger R5-067)"
+    },
+    "bit_wear": {
+     "skor": 2,
+     "status": "TIDAK",
+     "alasan": "K-2 belum berlabel, triase satu-satunya jalan (ledger D0-752)"
+    },
+    "tool_wear": {
+     "skor": 1,
+     "status": "ADA",
+     "alasan": "label konstan dalam run membuat triase tidak bisa dievaluasi (ledger L-33)"
+    }
+   },
+   "biaya": 2,
+   "risiko": 2,
+   "catatan": "recall horizon 10 menit 0,6131 tetapi FAR 9,70 sampai 11,21 masih di atas gerbang 6 (ledger R5-046, R5-047)"
+  },
+  "A21": {
+   "nama": "LOF",
+   "sumber": "R5",
+   "sel": {
+    "vib": {
+     "skor": 0,
+     "status": "ADA",
+     "alasan": "tidak ada target (ledger R4-01)"
+    },
+    "ssi": {
+     "skor": 0,
+     "status": "SEBAGIAN",
+     "alasan": "idem (ledger R4-26)"
+    },
+    "shk": {
+     "skor": 0,
+     "status": "ADA",
+     "alasan": "idem (ledger R4-09)"
+    },
+    "stuck": {
+     "skor": 0,
+     "status": "SEBAGIAN",
+     "alasan": "idem (ledger R4-10)"
+    },
+    "hyd": {
+     "skor": 1,
+     "status": "SEBAGIAN",
+     "alasan": "dijalankan sebagai pembanding, hasilnya jenuh menyala (ledger R5-067)"
+    },
+    "bit_wear": {
+     "skor": 1,
+     "status": "TIDAK",
+     "alasan": "idem, jenuh (ledger D0-752)"
+    },
+    "tool_wear": {
+     "skor": 0,
+     "status": "ADA",
+     "alasan": "idem (ledger L-33)"
+    }
+   },
+   "biaya": 2,
+   "risiko": 1,
+   "catatan": ""
+  },
+  "A22": {
+   "nama": "Autoencoder",
+   "sumber": "R5",
+   "sel": {
+    "vib": {
+     "skor": 0,
+     "status": "ADA",
+     "alasan": "tidak ada target (ledger R4-01)"
+    },
+    "ssi": {
+     "skor": 0,
+     "status": "SEBAGIAN",
+     "alasan": "idem (ledger R4-26)"
+    },
+    "shk": {
+     "skor": 0,
+     "status": "ADA",
+     "alasan": "idem (ledger R4-09)"
+    },
+    "stuck": {
+     "skor": 0,
+     "status": "SEBAGIAN",
+     "alasan": "idem (ledger R4-10)"
+    },
+    "hyd": {
+     "skor": 0,
+     "status": "SEBAGIAN",
+     "alasan": "dijalankan dan jenuh, 96 persen menit menyala (ledger R5-067)"
+    },
+    "bit_wear": {
+     "skor": 0,
+     "status": "TIDAK",
+     "alasan": "idem (ledger D0-752)"
+    },
+    "tool_wear": {
+     "skor": 0,
+     "status": "ADA",
+     "alasan": "idem (ledger L-33)"
+    }
+   },
+   "biaya": 1,
+   "risiko": 0,
+   "catatan": ""
+  },
+  "A23": {
+   "nama": "One-Class SVM",
+   "sumber": "R5",
+   "sel": {
+    "vib": {
+     "skor": 0,
+     "status": "ADA",
+     "alasan": "tidak ada target (ledger R4-01)"
+    },
+    "ssi": {
+     "skor": 0,
+     "status": "SEBAGIAN",
+     "alasan": "idem (ledger R4-26)"
+    },
+    "shk": {
+     "skor": 0,
+     "status": "ADA",
+     "alasan": "idem (ledger R4-09)"
+    },
+    "stuck": {
+     "skor": 0,
+     "status": "SEBAGIAN",
+     "alasan": "idem (ledger R4-10)"
+    },
+    "hyd": {
+     "skor": 0,
+     "status": "SEBAGIAN",
+     "alasan": "laju alarm 6,65 kali parameter, tidak layak menetapkan laju (ledger E1-026)"
+    },
+    "bit_wear": {
+     "skor": 0,
+     "status": "TIDAK",
+     "alasan": "idem (ledger D0-752)"
+    },
+    "tool_wear": {
+     "skor": 0,
+     "status": "ADA",
+     "alasan": "idem (ledger L-33)"
+    }
+   },
+   "biaya": 2,
+   "risiko": 0,
+   "catatan": ""
+  },
+  "A24": {
+   "nama": "VMD, EMD, wavelet",
+   "sumber": "R3, D0",
+   "sel": {
+    "vib": {
+     "skor": 0,
+     "status": "TIDAK",
+     "alasan": "Nyquist 0,1667 Hz tidak menjangkau pita diagnostik bantalan (ledger R3-02)"
+    },
+    "ssi": {
+     "skor": 0,
+     "status": "TIDAK",
+     "alasan": "laju maksimum 0,3333 Hz (ledger R3-02)"
+    },
+    "shk": {
+     "skor": 0,
+     "status": "TIDAK",
+     "alasan": "kanal terkuantisasi, tidak ada gelombang untuk didekomposisi (ledger R3-02)"
+    },
+    "stuck": {
+     "skor": 0,
+     "status": "TIDAK",
+     "alasan": "laju maksimum 0,3333 Hz (ledger R3-02)"
+    },
+    "hyd": {
+     "skor": 0,
+     "status": "TIDAK",
+     "alasan": "laju maksimum 0,3333 Hz (ledger R3-02)"
+    },
+    "bit_wear": {
+     "skor": 0,
+     "status": "TIDAK",
+     "alasan": "bukan deret waktu getaran (ledger D0-752)"
+    },
+    "tool_wear": {
+     "skor": 0,
+     "status": "TIDAK",
+     "alasan": "data sudah berbentuk fitur jendela (ledger D0-766)"
+    }
+   },
+   "biaya": 0,
+   "risiko": 0,
+   "catatan": "105 percobaan VMD dijalankan, 75 gagal (ledger R3-29, R3-30)"
+  },
+  "A25": {
+   "nama": "kNN-DTW",
+   "sumber": "R3",
+   "sel": {
+    "vib": {
+     "skor": 0,
+     "status": "ADA",
+     "alasan": "biaya 134,01 sampai 137.374,35 jam per klasifikasi penuh (ledger R3-40)"
+    },
+    "ssi": {
+     "skor": 0,
+     "status": "SEBAGIAN",
+     "alasan": "idem, biaya tidak terbayar (ledger R3-40)"
+    },
+    "shk": {
+     "skor": 0,
+     "status": "ADA",
+     "alasan": "idem (ledger R3-40)"
+    },
+    "stuck": {
+     "skor": 0,
+     "status": "SEBAGIAN",
+     "alasan": "idem (ledger R3-40)"
+    },
+    "hyd": {
+     "skor": 0,
+     "status": "ADA",
+     "alasan": "idem (ledger R3-40)"
+    },
+    "bit_wear": {
+     "skor": 0,
+     "status": "TIDAK",
+     "alasan": "idem (ledger R3-40)"
+    },
+    "tool_wear": {
+     "skor": 0,
+     "status": "ADA",
+     "alasan": "idem (ledger R3-40)"
+    }
+   },
+   "biaya": 0,
+   "risiko": 1,
+   "catatan": ""
+  },
+  "A26": {
+   "nama": "RSF dan DeepHit",
+   "sumber": "R2",
+   "sel": {
+    "vib": {
+     "skor": 0,
+     "status": "ADA",
+     "alasan": "kelas status, survival tidak terdefinisi (ledger R4-01)"
+    },
+    "ssi": {
+     "skor": 0,
+     "status": "SEBAGIAN",
+     "alasan": "idem (ledger R4-26)"
+    },
+    "shk": {
+     "skor": 0,
+     "status": "ADA",
+     "alasan": "idem (ledger R4-09)"
+    },
+    "stuck": {
+     "skor": 1,
+     "status": "SEBAGIAN",
+     "alasan": "event per well kecil dan horizon 10 menit, sehingga survival rakus data gugur (ledger L-28)"
+    },
+    "hyd": {
+     "skor": 0,
+     "status": "ADA",
+     "alasan": "idem horizon 10 menit (ledger L-28)"
+    },
+    "bit_wear": {
+     "skor": 0,
+     "status": "TIDAK",
+     "alasan": "idem (ledger D0-752)"
+    },
+    "tool_wear": {
+     "skor": 0,
+     "status": "ADA",
+     "alasan": "label konstan, tidak ada kejadian (ledger L-33)"
+    }
+   },
+   "biaya": 1,
+   "risiko": 1,
+   "catatan": ""
+  },
+  "A27": {
+   "nama": "MCMC dan Bayesian network",
+   "sumber": "R2",
+   "sel": {
+    "vib": {
+     "skor": 0,
+     "status": "ADA",
+     "alasan": "prior dan DAG belum ada sehingga model menjelaskan prior kita (ledger R4-01)"
+    },
+    "ssi": {
+     "skor": 0,
+     "status": "SEBAGIAN",
+     "alasan": "idem (ledger R4-26)"
+    },
+    "shk": {
+     "skor": 0,
+     "status": "ADA",
+     "alasan": "idem (ledger R4-09)"
+    },
+    "stuck": {
+     "skor": 0,
+     "status": "SEBAGIAN",
+     "alasan": "idem (ledger R4-10)"
+    },
+    "hyd": {
+     "skor": 0,
+     "status": "ADA",
+     "alasan": "idem (ledger R4-12)"
+    },
+    "bit_wear": {
+     "skor": 0,
+     "status": "TIDAK",
+     "alasan": "idem (ledger D0-752)"
+    },
+    "tool_wear": {
+     "skor": 0,
+     "status": "ADA",
+     "alasan": "idem (ledger L-33)"
+    }
+   },
+   "biaya": 1,
+   "risiko": 0,
+   "catatan": ""
+  },
+  "A28": {
+   "nama": "Metaheuristik lain (EO, Horse Herd, HBO, Honey Badger, HHO, EPO, SSA-Salp, SSA-Sparrow, WOA+GWO)",
+   "sumber": "R1",
+   "sel": {
+    "vib": {
+     "skor": 0,
+     "status": "ADA",
+     "alasan": "nol bukti domain atau peran identik GWO tanpa keunggulan terukur (R1 bagian 4.3)"
+    },
+    "ssi": {
+     "skor": 0,
+     "status": "ADA",
+     "alasan": "nol bukti domain atau peran identik GWO tanpa keunggulan terukur (R1 bagian 4.3)"
+    },
+    "shk": {
+     "skor": 0,
+     "status": "ADA",
+     "alasan": "nol bukti domain atau peran identik GWO tanpa keunggulan terukur (R1 bagian 4.3)"
+    },
+    "stuck": {
+     "skor": 0,
+     "status": "ADA",
+     "alasan": "nol bukti domain atau peran identik GWO tanpa keunggulan terukur (R1 bagian 4.3)"
+    },
+    "hyd": {
+     "skor": 0,
+     "status": "ADA",
+     "alasan": "nol bukti domain atau peran identik GWO tanpa keunggulan terukur (R1 bagian 4.3)"
+    },
+    "bit_wear": {
+     "skor": 0,
+     "status": "ADA",
+     "alasan": "nol bukti domain atau peran identik GWO tanpa keunggulan terukur (R1 bagian 4.3)"
+    },
+    "tool_wear": {
+     "skor": 0,
+     "status": "ADA",
+     "alasan": "nol bukti domain atau peran identik GWO tanpa keunggulan terukur (R1 bagian 4.3)"
+    }
+   },
+   "biaya": 1,
+   "risiko": 1,
+   "catatan": "status data ADA karena datanya ada; yang nol adalah kesesuaian, bukan ketersediaan"
+  }
+ },
+ "pasangan": [
+  {
+   "algoritma": "A10",
+   "nama": "Conformal (kuantil lintas-well dan dalam-well)",
+   "engine": "hyd",
+   "tier_algo": 3,
+   "skor_sel": 3,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 3,
+    "data": 3,
+    "risiko": 2,
+    "biaya": 3,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 2.85
+  },
+  {
+   "algoritma": "A10",
+   "nama": "Conformal (kuantil lintas-well dan dalam-well)",
+   "engine": "tool_wear",
+   "tier_algo": 3,
+   "skor_sel": 3,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 3,
+    "data": 3,
+    "risiko": 2,
+    "biaya": 3,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 2.85
+  },
+  {
+   "algoritma": "A10",
+   "nama": "Conformal (kuantil lintas-well dan dalam-well)",
+   "engine": "vib",
+   "tier_algo": 3,
+   "skor_sel": 3,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 3,
+    "data": 3,
+    "risiko": 2,
+    "biaya": 3,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 2.85
+  },
+  {
+   "algoritma": "A19",
+   "nama": "Uji KS dua sampel",
+   "engine": "hyd",
+   "tier_algo": 2,
+   "skor_sel": 2,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 2,
+    "data": 3,
+    "risiko": 3,
+    "biaya": 3,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 2.5
+  },
+  {
+   "algoritma": "A19",
+   "nama": "Uji KS dua sampel",
+   "engine": "vib",
+   "tier_algo": 2,
+   "skor_sel": 2,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 2,
+    "data": 3,
+    "risiko": 3,
+    "biaya": 3,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 2.5
+  },
+  {
+   "algoritma": "A10",
+   "nama": "Conformal (kuantil lintas-well dan dalam-well)",
+   "engine": "shk",
+   "tier_algo": 3,
+   "skor_sel": 2,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 2,
+    "data": 3,
+    "risiko": 2,
+    "biaya": 3,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 2.35
+  },
+  {
+   "algoritma": "A16",
+   "nama": "Page-Hinkley",
+   "engine": "tool_wear",
+   "tier_algo": 2,
+   "skor_sel": 2,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 2,
+    "data": 3,
+    "risiko": 2,
+    "biaya": 3,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 2.35
+  },
+  {
+   "algoritma": "A17",
+   "nama": "ADWIN",
+   "engine": "tool_wear",
+   "tier_algo": 2,
+   "skor_sel": 2,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 2,
+    "data": 3,
+    "risiko": 2,
+    "biaya": 3,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 2.35
+  },
+  {
+   "algoritma": "A04",
+   "nama": "SVM (RBF dan linear) sebagai pembanding murah",
+   "engine": "tool_wear",
+   "tier_algo": 2,
+   "skor_sel": 3,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 2,
+    "data": 3,
+    "risiko": 2,
+    "biaya": 2,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 2.25
+  },
+  {
+   "algoritma": "A04",
+   "nama": "SVM (RBF dan linear) sebagai pembanding murah",
+   "engine": "vib",
+   "tier_algo": 2,
+   "skor_sel": 2,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 2,
+    "data": 3,
+    "risiko": 2,
+    "biaya": 2,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 2.25
+  },
+  {
+   "algoritma": "A15",
+   "nama": "CUSUM",
+   "engine": "tool_wear",
+   "tier_algo": 2,
+   "skor_sel": 2,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 2,
+    "data": 3,
+    "risiko": 1,
+    "biaya": 3,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 2.2
+  },
+  {
+   "algoritma": "A06",
+   "nama": "LightGBM atau XGBoost",
+   "engine": "shk",
+   "tier_algo": 2,
+   "skor_sel": 2,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 2,
+    "data": 3,
+    "risiko": 2,
+    "biaya": 1,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 2.15
+  },
+  {
+   "algoritma": "A01",
+   "nama": "BGWO (binary GWO)",
+   "engine": "shk",
+   "tier_algo": 2,
+   "skor_sel": 2,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 2,
+    "data": 3,
+    "risiko": 1,
+    "biaya": 1,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 2.0
+  },
+  {
+   "algoritma": "A01",
+   "nama": "BGWO (binary GWO)",
+   "engine": "vib",
+   "tier_algo": 2,
+   "skor_sel": 2,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 2,
+    "data": 3,
+    "risiko": 1,
+    "biaya": 1,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 2.0
+  },
+  {
+   "algoritma": "A07",
+   "nama": "CatBoost (lintas alat, LOTO)",
+   "engine": "tool_wear",
+   "tier_algo": 2,
+   "skor_sel": 2,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 2,
+    "data": 3,
+    "risiko": 1,
+    "biaya": 1,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 2.0
+  },
+  {
+   "algoritma": "A19",
+   "nama": "Uji KS dua sampel",
+   "engine": "shk",
+   "tier_algo": 2,
+   "skor_sel": 1,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 1,
+    "data": 3,
+    "risiko": 3,
+    "biaya": 3,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 2.0
+  },
+  {
+   "algoritma": "A19",
+   "nama": "Uji KS dua sampel",
+   "engine": "tool_wear",
+   "tier_algo": 2,
+   "skor_sel": 1,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 1,
+    "data": 3,
+    "risiko": 3,
+    "biaya": 3,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 2.0
+  },
+  {
+   "algoritma": "A05",
+   "nama": "Matrix profile (pengganti DTW)",
+   "engine": "hyd",
+   "tier_algo": 1,
+   "skor_sel": 2,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 1,
+    "data": 3,
+    "risiko": 3,
+    "biaya": 2,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 1.9
+  },
+  {
+   "algoritma": "A05",
+   "nama": "Matrix profile (pengganti DTW)",
+   "engine": "shk",
+   "tier_algo": 1,
+   "skor_sel": 1,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 1,
+    "data": 3,
+    "risiko": 3,
+    "biaya": 2,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 1.9
+  },
+  {
+   "algoritma": "A05",
+   "nama": "Matrix profile (pengganti DTW)",
+   "engine": "vib",
+   "tier_algo": 1,
+   "skor_sel": 2,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 1,
+    "data": 3,
+    "risiko": 3,
+    "biaya": 2,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 1.9
+  },
+  {
+   "algoritma": "A09",
+   "nama": "Kalibrasi isotonic atau Platt",
+   "engine": "hyd",
+   "tier_algo": 1,
+   "skor_sel": 1,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 1,
+    "data": 3,
+    "risiko": 2,
+    "biaya": 3,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 1.85
+  },
+  {
+   "algoritma": "A09",
+   "nama": "Kalibrasi isotonic atau Platt",
+   "engine": "shk",
+   "tier_algo": 1,
+   "skor_sel": 1,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 1,
+    "data": 3,
+    "risiko": 2,
+    "biaya": 3,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 1.85
+  },
+  {
+   "algoritma": "A09",
+   "nama": "Kalibrasi isotonic atau Platt",
+   "engine": "tool_wear",
+   "tier_algo": 1,
+   "skor_sel": 1,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 1,
+    "data": 3,
+    "risiko": 2,
+    "biaya": 3,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 1.85
+  },
+  {
+   "algoritma": "A09",
+   "nama": "Kalibrasi isotonic atau Platt",
+   "engine": "vib",
+   "tier_algo": 1,
+   "skor_sel": 1,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 1,
+    "data": 3,
+    "risiko": 2,
+    "biaya": 3,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 1.85
+  },
+  {
+   "algoritma": "A10",
+   "nama": "Conformal (kuantil lintas-well dan dalam-well)",
+   "engine": "ssi",
+   "tier_algo": 3,
+   "skor_sel": 2,
+   "status_data": "SEBAGIAN",
+   "komponen": {
+    "tier": 2,
+    "data": 1,
+    "risiko": 2,
+    "biaya": 3,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 1.85
+  },
+  {
+   "algoritma": "A10",
+   "nama": "Conformal (kuantil lintas-well dan dalam-well)",
+   "engine": "stuck",
+   "tier_algo": 3,
+   "skor_sel": 2,
+   "status_data": "SEBAGIAN",
+   "komponen": {
+    "tier": 2,
+    "data": 1,
+    "risiko": 2,
+    "biaya": 3,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 1.85
+  },
+  {
+   "algoritma": "A16",
+   "nama": "Page-Hinkley",
+   "engine": "bit_wear",
+   "tier_algo": 2,
+   "skor_sel": 2,
+   "status_data": "SEBAGIAN",
+   "komponen": {
+    "tier": 2,
+    "data": 1,
+    "risiko": 2,
+    "biaya": 3,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 1.85
+  },
+  {
+   "algoritma": "A16",
+   "nama": "Page-Hinkley",
+   "engine": "hyd",
+   "tier_algo": 2,
+   "skor_sel": 1,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 1,
+    "data": 3,
+    "risiko": 2,
+    "biaya": 3,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 1.85
+  },
+  {
+   "algoritma": "A04",
+   "nama": "SVM (RBF dan linear) sebagai pembanding murah",
+   "engine": "hyd",
+   "tier_algo": 2,
+   "skor_sel": 1,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 1,
+    "data": 3,
+    "risiko": 2,
+    "biaya": 2,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 1.75
+  },
+  {
+   "algoritma": "A04",
+   "nama": "SVM (RBF dan linear) sebagai pembanding murah",
+   "engine": "shk",
+   "tier_algo": 2,
+   "skor_sel": 1,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 1,
+    "data": 3,
+    "risiko": 2,
+    "biaya": 2,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 1.75
+  },
+  {
+   "algoritma": "A08",
+   "nama": "RF kontrak V9 (baseline yang berjalan)",
+   "engine": "hyd",
+   "tier_algo": 1,
+   "skor_sel": 1,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 1,
+    "data": 3,
+    "risiko": 2,
+    "biaya": 2,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 1.75
+  },
+  {
+   "algoritma": "A08",
+   "nama": "RF kontrak V9 (baseline yang berjalan)",
+   "engine": "shk",
+   "tier_algo": 1,
+   "skor_sel": 1,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 1,
+    "data": 3,
+    "risiko": 2,
+    "biaya": 2,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 1.75
+  },
+  {
+   "algoritma": "A08",
+   "nama": "RF kontrak V9 (baseline yang berjalan)",
+   "engine": "tool_wear",
+   "tier_algo": 1,
+   "skor_sel": 1,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 1,
+    "data": 3,
+    "risiko": 2,
+    "biaya": 2,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 1.75
+  },
+  {
+   "algoritma": "A08",
+   "nama": "RF kontrak V9 (baseline yang berjalan)",
+   "engine": "vib",
+   "tier_algo": 1,
+   "skor_sel": 2,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 1,
+    "data": 3,
+    "risiko": 2,
+    "biaya": 2,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 1.75
+  },
+  {
+   "algoritma": "A20",
+   "nama": "Isolation Forest",
+   "engine": "shk",
+   "tier_algo": 1,
+   "skor_sel": 1,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 1,
+    "data": 3,
+    "risiko": 2,
+    "biaya": 2,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 1.75
+  },
+  {
+   "algoritma": "A20",
+   "nama": "Isolation Forest",
+   "engine": "tool_wear",
+   "tier_algo": 1,
+   "skor_sel": 1,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 1,
+    "data": 3,
+    "risiko": 2,
+    "biaya": 2,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 1.75
+  },
+  {
+   "algoritma": "A20",
+   "nama": "Isolation Forest",
+   "engine": "vib",
+   "tier_algo": 1,
+   "skor_sel": 1,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 1,
+    "data": 3,
+    "risiko": 2,
+    "biaya": 2,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 1.75
+  },
+  {
+   "algoritma": "A15",
+   "nama": "CUSUM",
+   "engine": "bit_wear",
+   "tier_algo": 2,
+   "skor_sel": 2,
+   "status_data": "SEBAGIAN",
+   "komponen": {
+    "tier": 2,
+    "data": 1,
+    "risiko": 1,
+    "biaya": 3,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 1.7
+  },
+  {
+   "algoritma": "A15",
+   "nama": "CUSUM",
+   "engine": "hyd",
+   "tier_algo": 2,
+   "skor_sel": 1,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 1,
+    "data": 3,
+    "risiko": 1,
+    "biaya": 3,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 1.7
+  },
+  {
+   "algoritma": "A06",
+   "nama": "LightGBM atau XGBoost",
+   "engine": "hyd",
+   "tier_algo": 2,
+   "skor_sel": 1,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 1,
+    "data": 3,
+    "risiko": 2,
+    "biaya": 1,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 1.65
+  },
+  {
+   "algoritma": "A06",
+   "nama": "LightGBM atau XGBoost",
+   "engine": "ssi",
+   "tier_algo": 2,
+   "skor_sel": 2,
+   "status_data": "SEBAGIAN",
+   "komponen": {
+    "tier": 2,
+    "data": 1,
+    "risiko": 2,
+    "biaya": 1,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 1.65
+  },
+  {
+   "algoritma": "A06",
+   "nama": "LightGBM atau XGBoost",
+   "engine": "stuck",
+   "tier_algo": 2,
+   "skor_sel": 2,
+   "status_data": "SEBAGIAN",
+   "komponen": {
+    "tier": 2,
+    "data": 1,
+    "risiko": 2,
+    "biaya": 1,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 1.65
+  },
+  {
+   "algoritma": "A06",
+   "nama": "LightGBM atau XGBoost",
+   "engine": "tool_wear",
+   "tier_algo": 2,
+   "skor_sel": 1,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 1,
+    "data": 3,
+    "risiko": 2,
+    "biaya": 1,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 1.65
+  },
+  {
+   "algoritma": "A06",
+   "nama": "LightGBM atau XGBoost",
+   "engine": "vib",
+   "tier_algo": 2,
+   "skor_sel": 1,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 1,
+    "data": 3,
+    "risiko": 2,
+    "biaya": 1,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 1.65
+  },
+  {
+   "algoritma": "A02",
+   "nama": "GWO atau WOA (tuning hyperparameter)",
+   "engine": "hyd",
+   "tier_algo": 1,
+   "skor_sel": 2,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 1,
+    "data": 3,
+    "risiko": 1,
+    "biaya": 2,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 1.6
+  },
+  {
+   "algoritma": "A02",
+   "nama": "GWO atau WOA (tuning hyperparameter)",
+   "engine": "shk",
+   "tier_algo": 1,
+   "skor_sel": 1,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 1,
+    "data": 3,
+    "risiko": 1,
+    "biaya": 2,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 1.6
+  },
+  {
+   "algoritma": "A02",
+   "nama": "GWO atau WOA (tuning hyperparameter)",
+   "engine": "tool_wear",
+   "tier_algo": 1,
+   "skor_sel": 1,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 1,
+    "data": 3,
+    "risiko": 1,
+    "biaya": 2,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 1.6
+  },
+  {
+   "algoritma": "A02",
+   "nama": "GWO atau WOA (tuning hyperparameter)",
+   "engine": "vib",
+   "tier_algo": 1,
+   "skor_sel": 1,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 1,
+    "data": 3,
+    "risiko": 1,
+    "biaya": 2,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 1.6
+  },
+  {
+   "algoritma": "A03",
+   "nama": "SMA (Slime Mould Algorithm)",
+   "engine": "hyd",
+   "tier_algo": 1,
+   "skor_sel": 1,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 1,
+    "data": 3,
+    "risiko": 1,
+    "biaya": 2,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 1.6
+  },
+  {
+   "algoritma": "A03",
+   "nama": "SMA (Slime Mould Algorithm)",
+   "engine": "shk",
+   "tier_algo": 1,
+   "skor_sel": 1,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 1,
+    "data": 3,
+    "risiko": 1,
+    "biaya": 2,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 1.6
+  },
+  {
+   "algoritma": "A03",
+   "nama": "SMA (Slime Mould Algorithm)",
+   "engine": "tool_wear",
+   "tier_algo": 1,
+   "skor_sel": 1,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 1,
+    "data": 3,
+    "risiko": 1,
+    "biaya": 2,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 1.6
+  },
+  {
+   "algoritma": "A03",
+   "nama": "SMA (Slime Mould Algorithm)",
+   "engine": "vib",
+   "tier_algo": 1,
+   "skor_sel": 1,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 1,
+    "data": 3,
+    "risiko": 1,
+    "biaya": 2,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 1.6
+  },
+  {
+   "algoritma": "A11",
+   "nama": "Cox proportional hazards",
+   "engine": "hyd",
+   "tier_algo": 1,
+   "skor_sel": 1,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 1,
+    "data": 3,
+    "risiko": 1,
+    "biaya": 2,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 1.6
+  },
+  {
+   "algoritma": "A01",
+   "nama": "BGWO (binary GWO)",
+   "engine": "hyd",
+   "tier_algo": 2,
+   "skor_sel": 1,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 1,
+    "data": 3,
+    "risiko": 1,
+    "biaya": 1,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 1.5
+  },
+  {
+   "algoritma": "A01",
+   "nama": "BGWO (binary GWO)",
+   "engine": "ssi",
+   "tier_algo": 2,
+   "skor_sel": 2,
+   "status_data": "SEBAGIAN",
+   "komponen": {
+    "tier": 2,
+    "data": 1,
+    "risiko": 1,
+    "biaya": 1,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 1.5
+  },
+  {
+   "algoritma": "A01",
+   "nama": "BGWO (binary GWO)",
+   "engine": "tool_wear",
+   "tier_algo": 2,
+   "skor_sel": 1,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 1,
+    "data": 3,
+    "risiko": 1,
+    "biaya": 1,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 1.5
+  },
+  {
+   "algoritma": "A07",
+   "nama": "CatBoost (lintas alat, LOTO)",
+   "engine": "hyd",
+   "tier_algo": 2,
+   "skor_sel": 1,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 1,
+    "data": 3,
+    "risiko": 1,
+    "biaya": 1,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 1.5
+  },
+  {
+   "algoritma": "A07",
+   "nama": "CatBoost (lintas alat, LOTO)",
+   "engine": "shk",
+   "tier_algo": 2,
+   "skor_sel": 1,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 1,
+    "data": 3,
+    "risiko": 1,
+    "biaya": 1,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 1.5
+  },
+  {
+   "algoritma": "A07",
+   "nama": "CatBoost (lintas alat, LOTO)",
+   "engine": "stuck",
+   "tier_algo": 2,
+   "skor_sel": 2,
+   "status_data": "SEBAGIAN",
+   "komponen": {
+    "tier": 2,
+    "data": 1,
+    "risiko": 1,
+    "biaya": 1,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 1.5
+  },
+  {
+   "algoritma": "A07",
+   "nama": "CatBoost (lintas alat, LOTO)",
+   "engine": "vib",
+   "tier_algo": 2,
+   "skor_sel": 1,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 1,
+    "data": 3,
+    "risiko": 1,
+    "biaya": 1,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 1.5
+  },
+  {
+   "algoritma": "A18",
+   "nama": "BOCPD",
+   "engine": "tool_wear",
+   "tier_algo": 1,
+   "skor_sel": 1,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 1,
+    "data": 3,
+    "risiko": 1,
+    "biaya": 1,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 1.5
+  },
+  {
+   "algoritma": "A19",
+   "nama": "Uji KS dua sampel",
+   "engine": "ssi",
+   "tier_algo": 2,
+   "skor_sel": 1,
+   "status_data": "SEBAGIAN",
+   "komponen": {
+    "tier": 1,
+    "data": 1,
+    "risiko": 3,
+    "biaya": 3,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 1.5
+  },
+  {
+   "algoritma": "A19",
+   "nama": "Uji KS dua sampel",
+   "engine": "stuck",
+   "tier_algo": 2,
+   "skor_sel": 1,
+   "status_data": "SEBAGIAN",
+   "komponen": {
+    "tier": 1,
+    "data": 1,
+    "risiko": 3,
+    "biaya": 3,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 1.5
+  },
+  {
+   "algoritma": "A05",
+   "nama": "Matrix profile (pengganti DTW)",
+   "engine": "ssi",
+   "tier_algo": 1,
+   "skor_sel": 1,
+   "status_data": "SEBAGIAN",
+   "komponen": {
+    "tier": 1,
+    "data": 1,
+    "risiko": 3,
+    "biaya": 2,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 1.4
+  },
+  {
+   "algoritma": "A05",
+   "nama": "Matrix profile (pengganti DTW)",
+   "engine": "stuck",
+   "tier_algo": 1,
+   "skor_sel": 1,
+   "status_data": "SEBAGIAN",
+   "komponen": {
+    "tier": 1,
+    "data": 1,
+    "risiko": 3,
+    "biaya": 2,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 1.4
+  },
+  {
+   "algoritma": "A09",
+   "nama": "Kalibrasi isotonic atau Platt",
+   "engine": "ssi",
+   "tier_algo": 1,
+   "skor_sel": 1,
+   "status_data": "SEBAGIAN",
+   "komponen": {
+    "tier": 1,
+    "data": 1,
+    "risiko": 2,
+    "biaya": 3,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 1.35
+  },
+  {
+   "algoritma": "A09",
+   "nama": "Kalibrasi isotonic atau Platt",
+   "engine": "stuck",
+   "tier_algo": 1,
+   "skor_sel": 1,
+   "status_data": "SEBAGIAN",
+   "komponen": {
+    "tier": 1,
+    "data": 1,
+    "risiko": 2,
+    "biaya": 3,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 1.35
+  },
+  {
+   "algoritma": "A16",
+   "nama": "Page-Hinkley",
+   "engine": "stuck",
+   "tier_algo": 2,
+   "skor_sel": 1,
+   "status_data": "SEBAGIAN",
+   "komponen": {
+    "tier": 1,
+    "data": 1,
+    "risiko": 2,
+    "biaya": 3,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 1.35
+  },
+  {
+   "algoritma": "A17",
+   "nama": "ADWIN",
+   "engine": "bit_wear",
+   "tier_algo": 2,
+   "skor_sel": 1,
+   "status_data": "SEBAGIAN",
+   "komponen": {
+    "tier": 1,
+    "data": 1,
+    "risiko": 2,
+    "biaya": 3,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 1.35
+  },
+  {
+   "algoritma": "A04",
+   "nama": "SVM (RBF dan linear) sebagai pembanding murah",
+   "engine": "ssi",
+   "tier_algo": 2,
+   "skor_sel": 1,
+   "status_data": "SEBAGIAN",
+   "komponen": {
+    "tier": 1,
+    "data": 1,
+    "risiko": 2,
+    "biaya": 2,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 1.25
+  },
+  {
+   "algoritma": "A04",
+   "nama": "SVM (RBF dan linear) sebagai pembanding murah",
+   "engine": "stuck",
+   "tier_algo": 2,
+   "skor_sel": 1,
+   "status_data": "SEBAGIAN",
+   "komponen": {
+    "tier": 1,
+    "data": 1,
+    "risiko": 2,
+    "biaya": 2,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 1.25
+  },
+  {
+   "algoritma": "A08",
+   "nama": "RF kontrak V9 (baseline yang berjalan)",
+   "engine": "ssi",
+   "tier_algo": 1,
+   "skor_sel": 2,
+   "status_data": "SEBAGIAN",
+   "komponen": {
+    "tier": 1,
+    "data": 1,
+    "risiko": 2,
+    "biaya": 2,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 1.25
+  },
+  {
+   "algoritma": "A08",
+   "nama": "RF kontrak V9 (baseline yang berjalan)",
+   "engine": "stuck",
+   "tier_algo": 1,
+   "skor_sel": 1,
+   "status_data": "SEBAGIAN",
+   "komponen": {
+    "tier": 1,
+    "data": 1,
+    "risiko": 2,
+    "biaya": 2,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 1.25
+  },
+  {
+   "algoritma": "A19",
+   "nama": "Uji KS dua sampel",
+   "engine": "bit_wear",
+   "tier_algo": 2,
+   "skor_sel": 1,
+   "status_data": "TIDAK",
+   "komponen": {
+    "tier": 1,
+    "data": 0,
+    "risiko": 3,
+    "biaya": 3,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 1.25
+  },
+  {
+   "algoritma": "A20",
+   "nama": "Isolation Forest",
+   "engine": "hyd",
+   "tier_algo": 1,
+   "skor_sel": 2,
+   "status_data": "SEBAGIAN",
+   "komponen": {
+    "tier": 1,
+    "data": 1,
+    "risiko": 2,
+    "biaya": 2,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 1.25
+  },
+  {
+   "algoritma": "A20",
+   "nama": "Isolation Forest",
+   "engine": "ssi",
+   "tier_algo": 1,
+   "skor_sel": 1,
+   "status_data": "SEBAGIAN",
+   "komponen": {
+    "tier": 1,
+    "data": 1,
+    "risiko": 2,
+    "biaya": 2,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 1.25
+  },
+  {
+   "algoritma": "A20",
+   "nama": "Isolation Forest",
+   "engine": "stuck",
+   "tier_algo": 1,
+   "skor_sel": 1,
+   "status_data": "SEBAGIAN",
+   "komponen": {
+    "tier": 1,
+    "data": 1,
+    "risiko": 2,
+    "biaya": 2,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 1.25
+  },
+  {
+   "algoritma": "A15",
+   "nama": "CUSUM",
+   "engine": "stuck",
+   "tier_algo": 2,
+   "skor_sel": 1,
+   "status_data": "SEBAGIAN",
+   "komponen": {
+    "tier": 1,
+    "data": 1,
+    "risiko": 1,
+    "biaya": 3,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 1.2
+  },
+  {
+   "algoritma": "A02",
+   "nama": "GWO atau WOA (tuning hyperparameter)",
+   "engine": "ssi",
+   "tier_algo": 1,
+   "skor_sel": 1,
+   "status_data": "SEBAGIAN",
+   "komponen": {
+    "tier": 1,
+    "data": 1,
+    "risiko": 1,
+    "biaya": 2,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 1.1
+  },
+  {
+   "algoritma": "A02",
+   "nama": "GWO atau WOA (tuning hyperparameter)",
+   "engine": "stuck",
+   "tier_algo": 1,
+   "skor_sel": 1,
+   "status_data": "SEBAGIAN",
+   "komponen": {
+    "tier": 1,
+    "data": 1,
+    "risiko": 1,
+    "biaya": 2,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 1.1
+  },
+  {
+   "algoritma": "A03",
+   "nama": "SMA (Slime Mould Algorithm)",
+   "engine": "ssi",
+   "tier_algo": 1,
+   "skor_sel": 1,
+   "status_data": "SEBAGIAN",
+   "komponen": {
+    "tier": 1,
+    "data": 1,
+    "risiko": 1,
+    "biaya": 2,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 1.1
+  },
+  {
+   "algoritma": "A03",
+   "nama": "SMA (Slime Mould Algorithm)",
+   "engine": "stuck",
+   "tier_algo": 1,
+   "skor_sel": 1,
+   "status_data": "SEBAGIAN",
+   "komponen": {
+    "tier": 1,
+    "data": 1,
+    "risiko": 1,
+    "biaya": 2,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 1.1
+  },
+  {
+   "algoritma": "A11",
+   "nama": "Cox proportional hazards",
+   "engine": "stuck",
+   "tier_algo": 1,
+   "skor_sel": 2,
+   "status_data": "SEBAGIAN",
+   "komponen": {
+    "tier": 1,
+    "data": 1,
+    "risiko": 1,
+    "biaya": 2,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 1.1
+  },
+  {
+   "algoritma": "A01",
+   "nama": "BGWO (binary GWO)",
+   "engine": "stuck",
+   "tier_algo": 2,
+   "skor_sel": 1,
+   "status_data": "SEBAGIAN",
+   "komponen": {
+    "tier": 1,
+    "data": 1,
+    "risiko": 1,
+    "biaya": 1,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 1.0
+  },
+  {
+   "algoritma": "A07",
+   "nama": "CatBoost (lintas alat, LOTO)",
+   "engine": "ssi",
+   "tier_algo": 2,
+   "skor_sel": 1,
+   "status_data": "SEBAGIAN",
+   "komponen": {
+    "tier": 1,
+    "data": 1,
+    "risiko": 1,
+    "biaya": 1,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 1.0
+  },
+  {
+   "algoritma": "A18",
+   "nama": "BOCPD",
+   "engine": "bit_wear",
+   "tier_algo": 1,
+   "skor_sel": 1,
+   "status_data": "SEBAGIAN",
+   "komponen": {
+    "tier": 1,
+    "data": 1,
+    "risiko": 1,
+    "biaya": 1,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 1.0
+  },
+  {
+   "algoritma": "A20",
+   "nama": "Isolation Forest",
+   "engine": "bit_wear",
+   "tier_algo": 1,
+   "skor_sel": 2,
+   "status_data": "TIDAK",
+   "komponen": {
+    "tier": 1,
+    "data": 0,
+    "risiko": 2,
+    "biaya": 2,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 1.0
+  },
+  {
+   "algoritma": "A26",
+   "nama": "RSF dan DeepHit",
+   "engine": "stuck",
+   "tier_algo": 1,
+   "skor_sel": 1,
+   "status_data": "SEBAGIAN",
+   "komponen": {
+    "tier": 1,
+    "data": 1,
+    "risiko": 1,
+    "biaya": 1,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 1.0
+  },
+  {
+   "algoritma": "A02",
+   "nama": "GWO atau WOA (tuning hyperparameter)",
+   "engine": "bit_wear",
+   "tier_algo": 1,
+   "skor_sel": 1,
+   "status_data": "TIDAK",
+   "komponen": {
+    "tier": 1,
+    "data": 0,
+    "risiko": 1,
+    "biaya": 2,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 0.85
+  },
+  {
+   "algoritma": "A01",
+   "nama": "BGWO (binary GWO)",
+   "engine": "bit_wear",
+   "tier_algo": 2,
+   "skor_sel": 0,
+   "status_data": "TIDAK",
+   "komponen": {
+    "tier": 0,
+    "data": 0,
+    "risiko": 1,
+    "biaya": 1,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A03",
+   "nama": "SMA (Slime Mould Algorithm)",
+   "engine": "bit_wear",
+   "tier_algo": 1,
+   "skor_sel": 0,
+   "status_data": "TIDAK",
+   "komponen": {
+    "tier": 0,
+    "data": 0,
+    "risiko": 1,
+    "biaya": 2,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A04",
+   "nama": "SVM (RBF dan linear) sebagai pembanding murah",
+   "engine": "bit_wear",
+   "tier_algo": 2,
+   "skor_sel": 0,
+   "status_data": "TIDAK",
+   "komponen": {
+    "tier": 0,
+    "data": 0,
+    "risiko": 2,
+    "biaya": 2,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A05",
+   "nama": "Matrix profile (pengganti DTW)",
+   "engine": "bit_wear",
+   "tier_algo": 1,
+   "skor_sel": 0,
+   "status_data": "TIDAK",
+   "komponen": {
+    "tier": 0,
+    "data": 0,
+    "risiko": 3,
+    "biaya": 2,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A05",
+   "nama": "Matrix profile (pengganti DTW)",
+   "engine": "tool_wear",
+   "tier_algo": 1,
+   "skor_sel": 0,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 0,
+    "data": 3,
+    "risiko": 3,
+    "biaya": 2,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A06",
+   "nama": "LightGBM atau XGBoost",
+   "engine": "bit_wear",
+   "tier_algo": 2,
+   "skor_sel": 0,
+   "status_data": "TIDAK",
+   "komponen": {
+    "tier": 0,
+    "data": 0,
+    "risiko": 2,
+    "biaya": 1,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A07",
+   "nama": "CatBoost (lintas alat, LOTO)",
+   "engine": "bit_wear",
+   "tier_algo": 2,
+   "skor_sel": 0,
+   "status_data": "TIDAK",
+   "komponen": {
+    "tier": 0,
+    "data": 0,
+    "risiko": 1,
+    "biaya": 1,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A08",
+   "nama": "RF kontrak V9 (baseline yang berjalan)",
+   "engine": "bit_wear",
+   "tier_algo": 1,
+   "skor_sel": 0,
+   "status_data": "TIDAK",
+   "komponen": {
+    "tier": 0,
+    "data": 0,
+    "risiko": 2,
+    "biaya": 2,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A09",
+   "nama": "Kalibrasi isotonic atau Platt",
+   "engine": "bit_wear",
+   "tier_algo": 1,
+   "skor_sel": 0,
+   "status_data": "TIDAK",
+   "komponen": {
+    "tier": 0,
+    "data": 0,
+    "risiko": 2,
+    "biaya": 3,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A10",
+   "nama": "Conformal (kuantil lintas-well dan dalam-well)",
+   "engine": "bit_wear",
+   "tier_algo": 3,
+   "skor_sel": 0,
+   "status_data": "TIDAK",
+   "komponen": {
+    "tier": 0,
+    "data": 0,
+    "risiko": 2,
+    "biaya": 3,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A11",
+   "nama": "Cox proportional hazards",
+   "engine": "bit_wear",
+   "tier_algo": 1,
+   "skor_sel": 0,
+   "status_data": "TIDAK",
+   "komponen": {
+    "tier": 0,
+    "data": 0,
+    "risiko": 1,
+    "biaya": 2,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A11",
+   "nama": "Cox proportional hazards",
+   "engine": "shk",
+   "tier_algo": 1,
+   "skor_sel": 0,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 0,
+    "data": 3,
+    "risiko": 1,
+    "biaya": 2,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A11",
+   "nama": "Cox proportional hazards",
+   "engine": "ssi",
+   "tier_algo": 1,
+   "skor_sel": 0,
+   "status_data": "SEBAGIAN",
+   "komponen": {
+    "tier": 0,
+    "data": 1,
+    "risiko": 1,
+    "biaya": 2,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A11",
+   "nama": "Cox proportional hazards",
+   "engine": "tool_wear",
+   "tier_algo": 1,
+   "skor_sel": 0,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 0,
+    "data": 3,
+    "risiko": 1,
+    "biaya": 2,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A11",
+   "nama": "Cox proportional hazards",
+   "engine": "vib",
+   "tier_algo": 1,
+   "skor_sel": 0,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 0,
+    "data": 3,
+    "risiko": 1,
+    "biaya": 2,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A12",
+   "nama": "Markov chain",
+   "engine": "bit_wear",
+   "tier_algo": 0,
+   "skor_sel": 0,
+   "status_data": "TIDAK",
+   "komponen": {
+    "tier": 0,
+    "data": 0,
+    "risiko": 0,
+    "biaya": 3,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A12",
+   "nama": "Markov chain",
+   "engine": "hyd",
+   "tier_algo": 0,
+   "skor_sel": 0,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 0,
+    "data": 3,
+    "risiko": 0,
+    "biaya": 3,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A12",
+   "nama": "Markov chain",
+   "engine": "shk",
+   "tier_algo": 0,
+   "skor_sel": 0,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 0,
+    "data": 3,
+    "risiko": 0,
+    "biaya": 3,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A12",
+   "nama": "Markov chain",
+   "engine": "ssi",
+   "tier_algo": 0,
+   "skor_sel": 0,
+   "status_data": "SEBAGIAN",
+   "komponen": {
+    "tier": 0,
+    "data": 1,
+    "risiko": 0,
+    "biaya": 3,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A12",
+   "nama": "Markov chain",
+   "engine": "stuck",
+   "tier_algo": 0,
+   "skor_sel": 1,
+   "status_data": "SEBAGIAN",
+   "komponen": {
+    "tier": 0,
+    "data": 1,
+    "risiko": 0,
+    "biaya": 3,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A12",
+   "nama": "Markov chain",
+   "engine": "tool_wear",
+   "tier_algo": 0,
+   "skor_sel": 1,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 0,
+    "data": 3,
+    "risiko": 0,
+    "biaya": 3,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A12",
+   "nama": "Markov chain",
+   "engine": "vib",
+   "tier_algo": 0,
+   "skor_sel": 0,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 0,
+    "data": 3,
+    "risiko": 0,
+    "biaya": 3,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A13",
+   "nama": "HMM",
+   "engine": "bit_wear",
+   "tier_algo": 0,
+   "skor_sel": 0,
+   "status_data": "TIDAK",
+   "komponen": {
+    "tier": 0,
+    "data": 0,
+    "risiko": 0,
+    "biaya": 2,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A13",
+   "nama": "HMM",
+   "engine": "hyd",
+   "tier_algo": 0,
+   "skor_sel": 0,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 0,
+    "data": 3,
+    "risiko": 0,
+    "biaya": 2,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A13",
+   "nama": "HMM",
+   "engine": "shk",
+   "tier_algo": 0,
+   "skor_sel": 0,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 0,
+    "data": 3,
+    "risiko": 0,
+    "biaya": 2,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A13",
+   "nama": "HMM",
+   "engine": "ssi",
+   "tier_algo": 0,
+   "skor_sel": 0,
+   "status_data": "SEBAGIAN",
+   "komponen": {
+    "tier": 0,
+    "data": 1,
+    "risiko": 0,
+    "biaya": 2,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A13",
+   "nama": "HMM",
+   "engine": "stuck",
+   "tier_algo": 0,
+   "skor_sel": 1,
+   "status_data": "SEBAGIAN",
+   "komponen": {
+    "tier": 0,
+    "data": 1,
+    "risiko": 0,
+    "biaya": 2,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A13",
+   "nama": "HMM",
+   "engine": "tool_wear",
+   "tier_algo": 0,
+   "skor_sel": 0,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 0,
+    "data": 3,
+    "risiko": 0,
+    "biaya": 2,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A13",
+   "nama": "HMM",
+   "engine": "vib",
+   "tier_algo": 0,
+   "skor_sel": 0,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 0,
+    "data": 3,
+    "risiko": 0,
+    "biaya": 2,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A14",
+   "nama": "Monte Carlo (pelaporan CI)",
+   "engine": "bit_wear",
+   "tier_algo": 0,
+   "skor_sel": 1,
+   "status_data": "TIDAK",
+   "komponen": {
+    "tier": 0,
+    "data": 0,
+    "risiko": 3,
+    "biaya": 3,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A14",
+   "nama": "Monte Carlo (pelaporan CI)",
+   "engine": "hyd",
+   "tier_algo": 0,
+   "skor_sel": 1,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 0,
+    "data": 3,
+    "risiko": 3,
+    "biaya": 3,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A14",
+   "nama": "Monte Carlo (pelaporan CI)",
+   "engine": "shk",
+   "tier_algo": 0,
+   "skor_sel": 1,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 0,
+    "data": 3,
+    "risiko": 3,
+    "biaya": 3,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A14",
+   "nama": "Monte Carlo (pelaporan CI)",
+   "engine": "ssi",
+   "tier_algo": 0,
+   "skor_sel": 1,
+   "status_data": "SEBAGIAN",
+   "komponen": {
+    "tier": 0,
+    "data": 1,
+    "risiko": 3,
+    "biaya": 3,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A14",
+   "nama": "Monte Carlo (pelaporan CI)",
+   "engine": "stuck",
+   "tier_algo": 0,
+   "skor_sel": 1,
+   "status_data": "SEBAGIAN",
+   "komponen": {
+    "tier": 0,
+    "data": 1,
+    "risiko": 3,
+    "biaya": 3,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A14",
+   "nama": "Monte Carlo (pelaporan CI)",
+   "engine": "tool_wear",
+   "tier_algo": 0,
+   "skor_sel": 1,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 0,
+    "data": 3,
+    "risiko": 3,
+    "biaya": 3,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A14",
+   "nama": "Monte Carlo (pelaporan CI)",
+   "engine": "vib",
+   "tier_algo": 0,
+   "skor_sel": 1,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 0,
+    "data": 3,
+    "risiko": 3,
+    "biaya": 3,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A15",
+   "nama": "CUSUM",
+   "engine": "shk",
+   "tier_algo": 2,
+   "skor_sel": 0,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 0,
+    "data": 3,
+    "risiko": 1,
+    "biaya": 3,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A15",
+   "nama": "CUSUM",
+   "engine": "ssi",
+   "tier_algo": 2,
+   "skor_sel": 0,
+   "status_data": "SEBAGIAN",
+   "komponen": {
+    "tier": 0,
+    "data": 1,
+    "risiko": 1,
+    "biaya": 3,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A15",
+   "nama": "CUSUM",
+   "engine": "vib",
+   "tier_algo": 2,
+   "skor_sel": 0,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 0,
+    "data": 3,
+    "risiko": 1,
+    "biaya": 3,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A16",
+   "nama": "Page-Hinkley",
+   "engine": "shk",
+   "tier_algo": 2,
+   "skor_sel": 0,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 0,
+    "data": 3,
+    "risiko": 2,
+    "biaya": 3,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A16",
+   "nama": "Page-Hinkley",
+   "engine": "ssi",
+   "tier_algo": 2,
+   "skor_sel": 0,
+   "status_data": "SEBAGIAN",
+   "komponen": {
+    "tier": 0,
+    "data": 1,
+    "risiko": 2,
+    "biaya": 3,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A16",
+   "nama": "Page-Hinkley",
+   "engine": "vib",
+   "tier_algo": 2,
+   "skor_sel": 0,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 0,
+    "data": 3,
+    "risiko": 2,
+    "biaya": 3,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A17",
+   "nama": "ADWIN",
+   "engine": "hyd",
+   "tier_algo": 2,
+   "skor_sel": 0,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 0,
+    "data": 3,
+    "risiko": 2,
+    "biaya": 3,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A17",
+   "nama": "ADWIN",
+   "engine": "shk",
+   "tier_algo": 2,
+   "skor_sel": 0,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 0,
+    "data": 3,
+    "risiko": 2,
+    "biaya": 3,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A17",
+   "nama": "ADWIN",
+   "engine": "ssi",
+   "tier_algo": 2,
+   "skor_sel": 0,
+   "status_data": "SEBAGIAN",
+   "komponen": {
+    "tier": 0,
+    "data": 1,
+    "risiko": 2,
+    "biaya": 3,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A17",
+   "nama": "ADWIN",
+   "engine": "stuck",
+   "tier_algo": 2,
+   "skor_sel": 0,
+   "status_data": "SEBAGIAN",
+   "komponen": {
+    "tier": 0,
+    "data": 1,
+    "risiko": 2,
+    "biaya": 3,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A17",
+   "nama": "ADWIN",
+   "engine": "vib",
+   "tier_algo": 2,
+   "skor_sel": 0,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 0,
+    "data": 3,
+    "risiko": 2,
+    "biaya": 3,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A18",
+   "nama": "BOCPD",
+   "engine": "hyd",
+   "tier_algo": 1,
+   "skor_sel": 0,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 0,
+    "data": 3,
+    "risiko": 1,
+    "biaya": 1,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A18",
+   "nama": "BOCPD",
+   "engine": "shk",
+   "tier_algo": 1,
+   "skor_sel": 0,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 0,
+    "data": 3,
+    "risiko": 1,
+    "biaya": 1,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A18",
+   "nama": "BOCPD",
+   "engine": "ssi",
+   "tier_algo": 1,
+   "skor_sel": 0,
+   "status_data": "SEBAGIAN",
+   "komponen": {
+    "tier": 0,
+    "data": 1,
+    "risiko": 1,
+    "biaya": 1,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A18",
+   "nama": "BOCPD",
+   "engine": "stuck",
+   "tier_algo": 1,
+   "skor_sel": 0,
+   "status_data": "SEBAGIAN",
+   "komponen": {
+    "tier": 0,
+    "data": 1,
+    "risiko": 1,
+    "biaya": 1,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A18",
+   "nama": "BOCPD",
+   "engine": "vib",
+   "tier_algo": 1,
+   "skor_sel": 0,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 0,
+    "data": 3,
+    "risiko": 1,
+    "biaya": 1,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A21",
+   "nama": "LOF",
+   "engine": "bit_wear",
+   "tier_algo": 0,
+   "skor_sel": 1,
+   "status_data": "TIDAK",
+   "komponen": {
+    "tier": 0,
+    "data": 0,
+    "risiko": 1,
+    "biaya": 2,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A21",
+   "nama": "LOF",
+   "engine": "hyd",
+   "tier_algo": 0,
+   "skor_sel": 1,
+   "status_data": "SEBAGIAN",
+   "komponen": {
+    "tier": 0,
+    "data": 1,
+    "risiko": 1,
+    "biaya": 2,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A21",
+   "nama": "LOF",
+   "engine": "shk",
+   "tier_algo": 0,
+   "skor_sel": 0,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 0,
+    "data": 3,
+    "risiko": 1,
+    "biaya": 2,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A21",
+   "nama": "LOF",
+   "engine": "ssi",
+   "tier_algo": 0,
+   "skor_sel": 0,
+   "status_data": "SEBAGIAN",
+   "komponen": {
+    "tier": 0,
+    "data": 1,
+    "risiko": 1,
+    "biaya": 2,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A21",
+   "nama": "LOF",
+   "engine": "stuck",
+   "tier_algo": 0,
+   "skor_sel": 0,
+   "status_data": "SEBAGIAN",
+   "komponen": {
+    "tier": 0,
+    "data": 1,
+    "risiko": 1,
+    "biaya": 2,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A21",
+   "nama": "LOF",
+   "engine": "tool_wear",
+   "tier_algo": 0,
+   "skor_sel": 0,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 0,
+    "data": 3,
+    "risiko": 1,
+    "biaya": 2,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A21",
+   "nama": "LOF",
+   "engine": "vib",
+   "tier_algo": 0,
+   "skor_sel": 0,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 0,
+    "data": 3,
+    "risiko": 1,
+    "biaya": 2,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A22",
+   "nama": "Autoencoder",
+   "engine": "bit_wear",
+   "tier_algo": 0,
+   "skor_sel": 0,
+   "status_data": "TIDAK",
+   "komponen": {
+    "tier": 0,
+    "data": 0,
+    "risiko": 0,
+    "biaya": 1,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A22",
+   "nama": "Autoencoder",
+   "engine": "hyd",
+   "tier_algo": 0,
+   "skor_sel": 0,
+   "status_data": "SEBAGIAN",
+   "komponen": {
+    "tier": 0,
+    "data": 1,
+    "risiko": 0,
+    "biaya": 1,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A22",
+   "nama": "Autoencoder",
+   "engine": "shk",
+   "tier_algo": 0,
+   "skor_sel": 0,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 0,
+    "data": 3,
+    "risiko": 0,
+    "biaya": 1,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A22",
+   "nama": "Autoencoder",
+   "engine": "ssi",
+   "tier_algo": 0,
+   "skor_sel": 0,
+   "status_data": "SEBAGIAN",
+   "komponen": {
+    "tier": 0,
+    "data": 1,
+    "risiko": 0,
+    "biaya": 1,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A22",
+   "nama": "Autoencoder",
+   "engine": "stuck",
+   "tier_algo": 0,
+   "skor_sel": 0,
+   "status_data": "SEBAGIAN",
+   "komponen": {
+    "tier": 0,
+    "data": 1,
+    "risiko": 0,
+    "biaya": 1,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A22",
+   "nama": "Autoencoder",
+   "engine": "tool_wear",
+   "tier_algo": 0,
+   "skor_sel": 0,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 0,
+    "data": 3,
+    "risiko": 0,
+    "biaya": 1,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A22",
+   "nama": "Autoencoder",
+   "engine": "vib",
+   "tier_algo": 0,
+   "skor_sel": 0,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 0,
+    "data": 3,
+    "risiko": 0,
+    "biaya": 1,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A23",
+   "nama": "One-Class SVM",
+   "engine": "bit_wear",
+   "tier_algo": 0,
+   "skor_sel": 0,
+   "status_data": "TIDAK",
+   "komponen": {
+    "tier": 0,
+    "data": 0,
+    "risiko": 0,
+    "biaya": 2,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A23",
+   "nama": "One-Class SVM",
+   "engine": "hyd",
+   "tier_algo": 0,
+   "skor_sel": 0,
+   "status_data": "SEBAGIAN",
+   "komponen": {
+    "tier": 0,
+    "data": 1,
+    "risiko": 0,
+    "biaya": 2,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A23",
+   "nama": "One-Class SVM",
+   "engine": "shk",
+   "tier_algo": 0,
+   "skor_sel": 0,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 0,
+    "data": 3,
+    "risiko": 0,
+    "biaya": 2,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A23",
+   "nama": "One-Class SVM",
+   "engine": "ssi",
+   "tier_algo": 0,
+   "skor_sel": 0,
+   "status_data": "SEBAGIAN",
+   "komponen": {
+    "tier": 0,
+    "data": 1,
+    "risiko": 0,
+    "biaya": 2,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A23",
+   "nama": "One-Class SVM",
+   "engine": "stuck",
+   "tier_algo": 0,
+   "skor_sel": 0,
+   "status_data": "SEBAGIAN",
+   "komponen": {
+    "tier": 0,
+    "data": 1,
+    "risiko": 0,
+    "biaya": 2,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A23",
+   "nama": "One-Class SVM",
+   "engine": "tool_wear",
+   "tier_algo": 0,
+   "skor_sel": 0,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 0,
+    "data": 3,
+    "risiko": 0,
+    "biaya": 2,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A23",
+   "nama": "One-Class SVM",
+   "engine": "vib",
+   "tier_algo": 0,
+   "skor_sel": 0,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 0,
+    "data": 3,
+    "risiko": 0,
+    "biaya": 2,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A24",
+   "nama": "VMD, EMD, wavelet",
+   "engine": "bit_wear",
+   "tier_algo": 0,
+   "skor_sel": 0,
+   "status_data": "TIDAK",
+   "komponen": {
+    "tier": 0,
+    "data": 0,
+    "risiko": 0,
+    "biaya": 0,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A24",
+   "nama": "VMD, EMD, wavelet",
+   "engine": "hyd",
+   "tier_algo": 0,
+   "skor_sel": 0,
+   "status_data": "TIDAK",
+   "komponen": {
+    "tier": 0,
+    "data": 0,
+    "risiko": 0,
+    "biaya": 0,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A24",
+   "nama": "VMD, EMD, wavelet",
+   "engine": "shk",
+   "tier_algo": 0,
+   "skor_sel": 0,
+   "status_data": "TIDAK",
+   "komponen": {
+    "tier": 0,
+    "data": 0,
+    "risiko": 0,
+    "biaya": 0,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A24",
+   "nama": "VMD, EMD, wavelet",
+   "engine": "ssi",
+   "tier_algo": 0,
+   "skor_sel": 0,
+   "status_data": "TIDAK",
+   "komponen": {
+    "tier": 0,
+    "data": 0,
+    "risiko": 0,
+    "biaya": 0,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A24",
+   "nama": "VMD, EMD, wavelet",
+   "engine": "stuck",
+   "tier_algo": 0,
+   "skor_sel": 0,
+   "status_data": "TIDAK",
+   "komponen": {
+    "tier": 0,
+    "data": 0,
+    "risiko": 0,
+    "biaya": 0,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A24",
+   "nama": "VMD, EMD, wavelet",
+   "engine": "tool_wear",
+   "tier_algo": 0,
+   "skor_sel": 0,
+   "status_data": "TIDAK",
+   "komponen": {
+    "tier": 0,
+    "data": 0,
+    "risiko": 0,
+    "biaya": 0,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A24",
+   "nama": "VMD, EMD, wavelet",
+   "engine": "vib",
+   "tier_algo": 0,
+   "skor_sel": 0,
+   "status_data": "TIDAK",
+   "komponen": {
+    "tier": 0,
+    "data": 0,
+    "risiko": 0,
+    "biaya": 0,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A25",
+   "nama": "kNN-DTW",
+   "engine": "bit_wear",
+   "tier_algo": 0,
+   "skor_sel": 0,
+   "status_data": "TIDAK",
+   "komponen": {
+    "tier": 0,
+    "data": 0,
+    "risiko": 1,
+    "biaya": 0,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A25",
+   "nama": "kNN-DTW",
+   "engine": "hyd",
+   "tier_algo": 0,
+   "skor_sel": 0,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 0,
+    "data": 3,
+    "risiko": 1,
+    "biaya": 0,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A25",
+   "nama": "kNN-DTW",
+   "engine": "shk",
+   "tier_algo": 0,
+   "skor_sel": 0,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 0,
+    "data": 3,
+    "risiko": 1,
+    "biaya": 0,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A25",
+   "nama": "kNN-DTW",
+   "engine": "ssi",
+   "tier_algo": 0,
+   "skor_sel": 0,
+   "status_data": "SEBAGIAN",
+   "komponen": {
+    "tier": 0,
+    "data": 1,
+    "risiko": 1,
+    "biaya": 0,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A25",
+   "nama": "kNN-DTW",
+   "engine": "stuck",
+   "tier_algo": 0,
+   "skor_sel": 0,
+   "status_data": "SEBAGIAN",
+   "komponen": {
+    "tier": 0,
+    "data": 1,
+    "risiko": 1,
+    "biaya": 0,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A25",
+   "nama": "kNN-DTW",
+   "engine": "tool_wear",
+   "tier_algo": 0,
+   "skor_sel": 0,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 0,
+    "data": 3,
+    "risiko": 1,
+    "biaya": 0,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A25",
+   "nama": "kNN-DTW",
+   "engine": "vib",
+   "tier_algo": 0,
+   "skor_sel": 0,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 0,
+    "data": 3,
+    "risiko": 1,
+    "biaya": 0,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A26",
+   "nama": "RSF dan DeepHit",
+   "engine": "bit_wear",
+   "tier_algo": 1,
+   "skor_sel": 0,
+   "status_data": "TIDAK",
+   "komponen": {
+    "tier": 0,
+    "data": 0,
+    "risiko": 1,
+    "biaya": 1,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A26",
+   "nama": "RSF dan DeepHit",
+   "engine": "hyd",
+   "tier_algo": 1,
+   "skor_sel": 0,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 0,
+    "data": 3,
+    "risiko": 1,
+    "biaya": 1,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A26",
+   "nama": "RSF dan DeepHit",
+   "engine": "shk",
+   "tier_algo": 1,
+   "skor_sel": 0,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 0,
+    "data": 3,
+    "risiko": 1,
+    "biaya": 1,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A26",
+   "nama": "RSF dan DeepHit",
+   "engine": "ssi",
+   "tier_algo": 1,
+   "skor_sel": 0,
+   "status_data": "SEBAGIAN",
+   "komponen": {
+    "tier": 0,
+    "data": 1,
+    "risiko": 1,
+    "biaya": 1,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A26",
+   "nama": "RSF dan DeepHit",
+   "engine": "tool_wear",
+   "tier_algo": 1,
+   "skor_sel": 0,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 0,
+    "data": 3,
+    "risiko": 1,
+    "biaya": 1,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A26",
+   "nama": "RSF dan DeepHit",
+   "engine": "vib",
+   "tier_algo": 1,
+   "skor_sel": 0,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 0,
+    "data": 3,
+    "risiko": 1,
+    "biaya": 1,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A27",
+   "nama": "MCMC dan Bayesian network",
+   "engine": "bit_wear",
+   "tier_algo": 0,
+   "skor_sel": 0,
+   "status_data": "TIDAK",
+   "komponen": {
+    "tier": 0,
+    "data": 0,
+    "risiko": 0,
+    "biaya": 1,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A27",
+   "nama": "MCMC dan Bayesian network",
+   "engine": "hyd",
+   "tier_algo": 0,
+   "skor_sel": 0,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 0,
+    "data": 3,
+    "risiko": 0,
+    "biaya": 1,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A27",
+   "nama": "MCMC dan Bayesian network",
+   "engine": "shk",
+   "tier_algo": 0,
+   "skor_sel": 0,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 0,
+    "data": 3,
+    "risiko": 0,
+    "biaya": 1,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A27",
+   "nama": "MCMC dan Bayesian network",
+   "engine": "ssi",
+   "tier_algo": 0,
+   "skor_sel": 0,
+   "status_data": "SEBAGIAN",
+   "komponen": {
+    "tier": 0,
+    "data": 1,
+    "risiko": 0,
+    "biaya": 1,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A27",
+   "nama": "MCMC dan Bayesian network",
+   "engine": "stuck",
+   "tier_algo": 0,
+   "skor_sel": 0,
+   "status_data": "SEBAGIAN",
+   "komponen": {
+    "tier": 0,
+    "data": 1,
+    "risiko": 0,
+    "biaya": 1,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A27",
+   "nama": "MCMC dan Bayesian network",
+   "engine": "tool_wear",
+   "tier_algo": 0,
+   "skor_sel": 0,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 0,
+    "data": 3,
+    "risiko": 0,
+    "biaya": 1,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A27",
+   "nama": "MCMC dan Bayesian network",
+   "engine": "vib",
+   "tier_algo": 0,
+   "skor_sel": 0,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 0,
+    "data": 3,
+    "risiko": 0,
+    "biaya": 1,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A28",
+   "nama": "Metaheuristik lain (EO, Horse Herd, HBO, Honey Badger, HHO, EPO, SSA-Salp, SSA-Sparrow, WOA+GWO)",
+   "engine": "bit_wear",
+   "tier_algo": 0,
+   "skor_sel": 0,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 0,
+    "data": 3,
+    "risiko": 1,
+    "biaya": 1,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A28",
+   "nama": "Metaheuristik lain (EO, Horse Herd, HBO, Honey Badger, HHO, EPO, SSA-Salp, SSA-Sparrow, WOA+GWO)",
+   "engine": "hyd",
+   "tier_algo": 0,
+   "skor_sel": 0,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 0,
+    "data": 3,
+    "risiko": 1,
+    "biaya": 1,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A28",
+   "nama": "Metaheuristik lain (EO, Horse Herd, HBO, Honey Badger, HHO, EPO, SSA-Salp, SSA-Sparrow, WOA+GWO)",
+   "engine": "shk",
+   "tier_algo": 0,
+   "skor_sel": 0,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 0,
+    "data": 3,
+    "risiko": 1,
+    "biaya": 1,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A28",
+   "nama": "Metaheuristik lain (EO, Horse Herd, HBO, Honey Badger, HHO, EPO, SSA-Salp, SSA-Sparrow, WOA+GWO)",
+   "engine": "ssi",
+   "tier_algo": 0,
+   "skor_sel": 0,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 0,
+    "data": 3,
+    "risiko": 1,
+    "biaya": 1,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A28",
+   "nama": "Metaheuristik lain (EO, Horse Herd, HBO, Honey Badger, HHO, EPO, SSA-Salp, SSA-Sparrow, WOA+GWO)",
+   "engine": "stuck",
+   "tier_algo": 0,
+   "skor_sel": 0,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 0,
+    "data": 3,
+    "risiko": 1,
+    "biaya": 1,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A28",
+   "nama": "Metaheuristik lain (EO, Horse Herd, HBO, Honey Badger, HHO, EPO, SSA-Salp, SSA-Sparrow, WOA+GWO)",
+   "engine": "tool_wear",
+   "tier_algo": 0,
+   "skor_sel": 0,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 0,
+    "data": 3,
+    "risiko": 1,
+    "biaya": 1,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A28",
+   "nama": "Metaheuristik lain (EO, Horse Herd, HBO, Honey Badger, HHO, EPO, SSA-Salp, SSA-Sparrow, WOA+GWO)",
+   "engine": "vib",
+   "tier_algo": 0,
+   "skor_sel": 0,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 0,
+    "data": 3,
+    "risiko": 1,
+    "biaya": 1,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  }
+ ],
+ "target_engine": {
+  "A01": "vib",
+  "A02": "hyd",
+  "A03": "vib",
+  "A04": "tool_wear",
+  "A05": "vib",
+  "A06": "shk",
+  "A07": "tool_wear",
+  "A08": "vib",
+  "A09": "hyd",
+  "A10": "hyd",
+  "A11": "stuck",
+  "A12": "tool_wear",
+  "A13": "stuck",
+  "A14": "hyd",
+  "A15": "tool_wear",
+  "A16": "tool_wear",
+  "A17": "tool_wear",
+  "A18": "bit_wear",
+  "A19": "vib",
+  "A20": "hyd",
+  "A21": "hyd",
+  "A22": "hyd",
+  "A23": "hyd",
+  "A24": "vib",
+  "A25": "vib",
+  "A26": "stuck",
+  "A27": "vib",
+  "A28": "vib"
+ },
+ "peringkat_algoritma": [
+  {
+   "algoritma": "A10",
+   "nama": "Conformal (kuantil lintas-well dan dalam-well)",
+   "engine": "hyd",
+   "tier_algo": 3,
+   "skor_sel": 3,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 3,
+    "data": 3,
+    "risiko": 2,
+    "biaya": 3,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 2.85
+  },
+  {
+   "algoritma": "A19",
+   "nama": "Uji KS dua sampel",
+   "engine": "vib",
+   "tier_algo": 2,
+   "skor_sel": 2,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 2,
+    "data": 3,
+    "risiko": 3,
+    "biaya": 3,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 2.5
+  },
+  {
+   "algoritma": "A16",
+   "nama": "Page-Hinkley",
+   "engine": "tool_wear",
+   "tier_algo": 2,
+   "skor_sel": 2,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 2,
+    "data": 3,
+    "risiko": 2,
+    "biaya": 3,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 2.35
+  },
+  {
+   "algoritma": "A17",
+   "nama": "ADWIN",
+   "engine": "tool_wear",
+   "tier_algo": 2,
+   "skor_sel": 2,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 2,
+    "data": 3,
+    "risiko": 2,
+    "biaya": 3,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 2.35
+  },
+  {
+   "algoritma": "A04",
+   "nama": "SVM (RBF dan linear) sebagai pembanding murah",
+   "engine": "tool_wear",
+   "tier_algo": 2,
+   "skor_sel": 3,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 2,
+    "data": 3,
+    "risiko": 2,
+    "biaya": 2,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 2.25
+  },
+  {
+   "algoritma": "A15",
+   "nama": "CUSUM",
+   "engine": "tool_wear",
+   "tier_algo": 2,
+   "skor_sel": 2,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 2,
+    "data": 3,
+    "risiko": 1,
+    "biaya": 3,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 2.2
+  },
+  {
+   "algoritma": "A06",
+   "nama": "LightGBM atau XGBoost",
+   "engine": "shk",
+   "tier_algo": 2,
+   "skor_sel": 2,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 2,
+    "data": 3,
+    "risiko": 2,
+    "biaya": 1,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 2.15
+  },
+  {
+   "algoritma": "A01",
+   "nama": "BGWO (binary GWO)",
+   "engine": "vib",
+   "tier_algo": 2,
+   "skor_sel": 2,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 2,
+    "data": 3,
+    "risiko": 1,
+    "biaya": 1,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 2.0
+  },
+  {
+   "algoritma": "A07",
+   "nama": "CatBoost (lintas alat, LOTO)",
+   "engine": "tool_wear",
+   "tier_algo": 2,
+   "skor_sel": 2,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 2,
+    "data": 3,
+    "risiko": 1,
+    "biaya": 1,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 2.0
+  },
+  {
+   "algoritma": "A05",
+   "nama": "Matrix profile (pengganti DTW)",
+   "engine": "vib",
+   "tier_algo": 1,
+   "skor_sel": 2,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 1,
+    "data": 3,
+    "risiko": 3,
+    "biaya": 2,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 1.9
+  },
+  {
+   "algoritma": "A09",
+   "nama": "Kalibrasi isotonic atau Platt",
+   "engine": "hyd",
+   "tier_algo": 1,
+   "skor_sel": 1,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 1,
+    "data": 3,
+    "risiko": 2,
+    "biaya": 3,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 1.85
+  },
+  {
+   "algoritma": "A08",
+   "nama": "RF kontrak V9 (baseline yang berjalan)",
+   "engine": "vib",
+   "tier_algo": 1,
+   "skor_sel": 2,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 1,
+    "data": 3,
+    "risiko": 2,
+    "biaya": 2,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 1.75
+  },
+  {
+   "algoritma": "A02",
+   "nama": "GWO atau WOA (tuning hyperparameter)",
+   "engine": "hyd",
+   "tier_algo": 1,
+   "skor_sel": 2,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 1,
+    "data": 3,
+    "risiko": 1,
+    "biaya": 2,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 1.6
+  },
+  {
+   "algoritma": "A03",
+   "nama": "SMA (Slime Mould Algorithm)",
+   "engine": "vib",
+   "tier_algo": 1,
+   "skor_sel": 1,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 1,
+    "data": 3,
+    "risiko": 1,
+    "biaya": 2,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 1.6
+  },
+  {
+   "algoritma": "A20",
+   "nama": "Isolation Forest",
+   "engine": "hyd",
+   "tier_algo": 1,
+   "skor_sel": 2,
+   "status_data": "SEBAGIAN",
+   "komponen": {
+    "tier": 1,
+    "data": 1,
+    "risiko": 2,
+    "biaya": 2,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 1.25
+  },
+  {
+   "algoritma": "A11",
+   "nama": "Cox proportional hazards",
+   "engine": "stuck",
+   "tier_algo": 1,
+   "skor_sel": 2,
+   "status_data": "SEBAGIAN",
+   "komponen": {
+    "tier": 1,
+    "data": 1,
+    "risiko": 1,
+    "biaya": 2,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 1.1
+  },
+  {
+   "algoritma": "A18",
+   "nama": "BOCPD",
+   "engine": "bit_wear",
+   "tier_algo": 1,
+   "skor_sel": 1,
+   "status_data": "SEBAGIAN",
+   "komponen": {
+    "tier": 1,
+    "data": 1,
+    "risiko": 1,
+    "biaya": 1,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 1.0
+  },
+  {
+   "algoritma": "A26",
+   "nama": "RSF dan DeepHit",
+   "engine": "stuck",
+   "tier_algo": 1,
+   "skor_sel": 1,
+   "status_data": "SEBAGIAN",
+   "komponen": {
+    "tier": 1,
+    "data": 1,
+    "risiko": 1,
+    "biaya": 1,
+    "gerbang": "lolos"
+   },
+   "skor_prioritas": 1.0
+  },
+  {
+   "algoritma": "A12",
+   "nama": "Markov chain",
+   "engine": "tool_wear",
+   "tier_algo": 0,
+   "skor_sel": 1,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 0,
+    "data": 3,
+    "risiko": 0,
+    "biaya": 3,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A13",
+   "nama": "HMM",
+   "engine": "stuck",
+   "tier_algo": 0,
+   "skor_sel": 1,
+   "status_data": "SEBAGIAN",
+   "komponen": {
+    "tier": 0,
+    "data": 1,
+    "risiko": 0,
+    "biaya": 2,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A14",
+   "nama": "Monte Carlo (pelaporan CI)",
+   "engine": "hyd",
+   "tier_algo": 0,
+   "skor_sel": 1,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 0,
+    "data": 3,
+    "risiko": 3,
+    "biaya": 3,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A21",
+   "nama": "LOF",
+   "engine": "hyd",
+   "tier_algo": 0,
+   "skor_sel": 1,
+   "status_data": "SEBAGIAN",
+   "komponen": {
+    "tier": 0,
+    "data": 1,
+    "risiko": 1,
+    "biaya": 2,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A22",
+   "nama": "Autoencoder",
+   "engine": "hyd",
+   "tier_algo": 0,
+   "skor_sel": 0,
+   "status_data": "SEBAGIAN",
+   "komponen": {
+    "tier": 0,
+    "data": 1,
+    "risiko": 0,
+    "biaya": 1,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A23",
+   "nama": "One-Class SVM",
+   "engine": "hyd",
+   "tier_algo": 0,
+   "skor_sel": 0,
+   "status_data": "SEBAGIAN",
+   "komponen": {
+    "tier": 0,
+    "data": 1,
+    "risiko": 0,
+    "biaya": 2,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A24",
+   "nama": "VMD, EMD, wavelet",
+   "engine": "vib",
+   "tier_algo": 0,
+   "skor_sel": 0,
+   "status_data": "TIDAK",
+   "komponen": {
+    "tier": 0,
+    "data": 0,
+    "risiko": 0,
+    "biaya": 0,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A25",
+   "nama": "kNN-DTW",
+   "engine": "vib",
+   "tier_algo": 0,
+   "skor_sel": 0,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 0,
+    "data": 3,
+    "risiko": 1,
+    "biaya": 0,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A27",
+   "nama": "MCMC dan Bayesian network",
+   "engine": "vib",
+   "tier_algo": 0,
+   "skor_sel": 0,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 0,
+    "data": 3,
+    "risiko": 0,
+    "biaya": 1,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  },
+  {
+   "algoritma": "A28",
+   "nama": "Metaheuristik lain (EO, Horse Herd, HBO, Honey Badger, HHO, EPO, SSA-Salp, SSA-Sparrow, WOA+GWO)",
+   "engine": "vib",
+   "tier_algo": 0,
+   "skor_sel": 0,
+   "status_data": "ADA",
+   "komponen": {
+    "tier": 0,
+    "data": 3,
+    "risiko": 1,
+    "biaya": 1,
+    "gerbang": "tier=0"
+   },
+   "skor_prioritas": 0.0
+  }
+ ]
+}

@@ -5,7 +5,7 @@ Tanggal: 6 November 2026. Ruang kerja: `/mnt/d/ARCT-9F2`. Status: **TERUKUR** (s
 Riset pendahuluan: `verification-mandatory` (setiap angka punya jejak berkas dan perintah yang bisa dijalankan ulang).
 Riset pendahuluan: `sequentialthinking` (sequ-mcp, 3 pikiran): pertama memisahkan klaim dari bukti mentah, kedua menguji hipotesis alternatif (salah ukur metrik, salah pemilihan model, salah jumlah fitur), ketiga menyimpulkan hanya pada bagian yang lolos uji.
 
-**Pertanyaan yang dijawab dokumen ini:** apakah engine pencarian hyperparameter otomatis (H2O AutoML) mengalahkan Random Forest tuned pada data kejadian pengeboran, dan bila tidak, mengapa.
+**Pertanyaan yang dijawab dokumen ini:** apakah detektor pencarian hyperparameter otomatis (H2O AutoML) mengalahkan Random Forest tuned pada data kejadian pengeboran, dan bila tidak, mengapa.
 
 **Bukan untuk menjawab:** rumusan masalah proposal. Dokumen ini bahan pendukung pemilihan algoritma di Bab III, bukan kesimpulan.
 
@@ -65,19 +65,30 @@ Yang dipakai H2O untuk memilih leader adalah AUPRC CV internal. Nilai itu diband
 | F-9 | 0,0732 | 0,0017 | 0,4643 |
 | F-9_A | 0,1034 | 0,0045 | 0,0769 |
 
-1. **Korelasi Spearman (CV leader, AUPRC uji) = -0,39.** Berkorelasi berbalik arah: ranking internal tidak menunjukkan siapa yang akan menang di sumur yang belum pernah dilihat.
-2. **Selisih antar kandidat rata-rata hanya 0,0055 AUPRC**, sementara jarak CV leader ke AUPRC uji rata-rata **0,0793** (14 kali lebih besar). Pemenang leaderboard ditentukan di dalam noise.
-3. **AUPRC itu peka prevalensi, dan prevalensi antar fold sangat berbeda** (2,9 sampai 8,0 persen). Dengan `fold_column=wellbore`, fold berisi sumur yang berbeda, sehingga AUPRC CV tercampur perbedaan kemudahan sumur, bukan perbedaan kualitas model.
+Tiga pengukuran dihitung dari skor tersimpan per kandidat (run penyimpanan prediksi, 9 sampai 12 kandidat per sumur). Tabel per sumur di atas berasal dari run kontrol (`h2o_kontrol.json`); run penyimpanan prediksi terpisah dan angkanya sedikit berbeda, misalnya F-9_A CV leader 0,1034 pada run kontrol berbanding 0,1046 pada run penyimpanan prediksi.
 
-Konsekuensinya: menambah model, core, atau detik tidak memperbaiki pemilihan, karena yang kurang bukan anggaran melainkan statistik seleksi yang netral terhadap prevalensi.
+| Besaran | Nilai | Makna |
+|---|---|---|
+| Selisih antar kandidat pada leaderboard internal (rerata sebaran nilai 5 teratas) | 0,0053 | Kandidat teratas tidak terbedakan oleh CV internal |
+| Jarak AUPRC CV leader ke AUPRC uji | 0,0789 rata-rata | Resolusi pemilihan 15 kali lebih besar daripada yang ditawarkan CV internal |
+| Korelasi Spearman lintas sumur (CV leader lawan AUPRC uji leader) | -0,3929 (7 titik, p 0,383) | Skor CV leader tidak prediktif antar sumur |
+| Korelasi rerata peringkat internal terhadap hasil uji di dalam satu sumur | +0,28 (positif di 4 dari 7 sumur) | Pemilihan dalam sumur tidak bocor menyeluruh, tetapi tidak juga andal |
 
-## 5. Temuan T3: DeepLearning AutoML gagal total karena satu kanal rusak
+Dibaca bersama:
+
+1. **Pemenang leaderboard ditentukan di dalam noise**: selisih antar kandidat (0,0053) jauh di bawah jarak CV ke hasil uji (0,0789), sehingga "leader" tidak terbukti berbeda dari kandidat lain.
+2. **Lintas sumur, skor CV leader tidak menandai siapa yang akan menang** (korelasinya berbalik arah), dan **di dalam satu sumur korelasinya lemah** (rerata +0,28). Pembanding model antar sumur dengan leaderboard internal tidak sah; pemilihan satu kandidat di dalam satu sumur juga tidak terbukti andal.
+3. **AUPRC peka prevalensi, dan prevalensi antar fold sangat berbeda** (2,9 sampai 8,0 persen). Dengan `fold_column=wellbore`, fold berisi sumur yang berbeda, sehingga AUPRC CV tercampur perbedaan kemudahan sumur, bukan perbedaan kualitas model.
+
+Konsekuensinya: menambah model, core, atau detik tidak memperbaiki pemilihan, karena yang kurang bukan anggaran melainkan statistik seleksi yang netral terhadap prevalensi dan perbandingan yang jujur antar sumur.
+
+## 5. Temuan T3: DeepLearning AutoML gagal total karena sel rusak pada kolom SPPA
 
 DeepLearning tidak menghasilkan satu pun model pada ketujuh run. Penyebabnya ditemukan pada data, bukan pada engine.
 
 **Bukti struktural (dihitung langsung dari npz):**
 
-- 5 baris memuat nilai sensor SPPA sampai **9,524e+30** (baris 1756 pada kontrol, baris 241 pada kejadian), dengan seluruh fitur turunannya ikut meledak: `std` 2,89e+29, `mean` 1,07e+28, `slope_per_min` 1,74e+26.
+- **30 sel memuat nilai absolut di atas 10^20**: 25 sel pada berkas fitur kontrol (baris 1756 sampai 1759) dan 5 sel pada berkas fitur kejadian (baris 241), semuanya kolom SPPA (`w2h` dan `w6h` berikut turunannya), dengan nilai maksimum **9,524e+30**. Seluruh fitur turunannya ikut meledak: `std` 2,89e+29, `mean` 1,07e+28, `slope_per_min` 1,74e+26.
 - Seluruh fitur lain berada di rentang 0 sampai 1 (rasio skala antar kolom 1,35), sehingga sel rusak itu 35 orde lebih besar dari distribusi.
 - 188.872 NaN (9,9 persen) pada 438 dari 480 kolom, terbanyak `burstiness` dan `trend_rho` (67 sampai 81 persen kosong).
 
@@ -134,11 +145,11 @@ Menang di 5 dari 7 sumur. Yang penting, sifat kesalahannya berbeda: leader tungg
 
 **Kesimpulan operasional:** yang layak dipakai dari AutoML bukan leadernya, melainkan gabungan median seluruh kandidatnya. Ini juga menjelaskan mengapa menambah anggaran tidak menolong pada T1: masalahnya bukan jumlah model, melainkan pemilihan satu pemenang di antara kandidat yang selisihnya di bawah noise.
 
-## 7. Perbandingan dengan kombinasi algoritma per engine sebelumnya
+## 7. Perbandingan dengan kombinasi algoritma per mode sebelumnya
 
-Perbandingan ini **kualitatif, bukan angka mentah**, karena unitnya berbeda: engine lama memakai jendela 1 menit dengan label per engine, sedangkan eksperimen ini memakai per kejadian dengan label bukti kegagalan.
+Perbandingan ini **kualitatif, bukan angka mentah**, karena unitnya berbeda: detektor lama memakai jendela 1 menit dengan label per mode, sedangkan eksperimen ini memakai per kejadian dengan label bukti kegagalan.
 
-| Engine lama | Kombinasi algoritma | Hasil head terbaik | Selaras dengan temuan di sini |
+| Detektor lama | Kombinasi algoritma | Hasil head terbaik | Selaras dengan temuan di sini |
 |---|---|---|---|
 | vib | rule + persistence | P 0,94, R 0,45 | label kanal derivatif membuat semua metrik melonjak, bukan karena algoritma |
 | ssi | rule + persistence AND | hybrid memotong FP 73 persen | label langka membuat head ML presisi 0 |
@@ -147,13 +158,13 @@ Perbandingan ini **kualitatif, bukan angka mentah**, karena unitnya berbeda: eng
 | hyd | hibrida dua mode | hybrid P 0,82, R 0,60 | pemenangnya kombinasi aturan, bukan satu model |
 | tool_wear | rule terkalibrasi per alat | P 0,62, R 0,05 | kalibrasi per unit, bukan ambang global |
 
-Pola yang sama muncul dua kali dan dua kali independen: pada label langka, head ML berhenti di kelas ranking, sedangkan aturan terkalibrasi per unit yang memberi presisi berguna. Eksperimen ini menambah satu bukti baru: **engine pencarian otomatis dengan anggaran komputasi maksimal pun tidak menyalip RF tuned pada skema LOO yang sama.**
+Pola yang sama muncul dua kali dan dua kali independen: pada label langka, head ML berhenti di kelas ranking, sedangkan aturan terkalibrasi per unit yang memberi presisi berguna. Eksperimen ini menambah satu bukti baru: **AutoML dengan anggaran komputasi maksimal pun tidak menyalip RF tuned pada skema leave-one-well-out yang sama, kecuali bila seluruh kandidatnya digabung (Temuan T4).**
 
 ## 8. Implikasi untuk pemilihan algoritma di Bab III
 
-1. Pemilihan RF tuned sebagai engine utama berstatus **teruji**, bukan preferensi: sudah diadu lawan pencarian otomatis 18 core dan kalah tipis 5 dari 7 sumur.
-2. Rule + persistence + kalibrasi per unit tetap arsitektur yang dipakai pada engine yang labelnya tersedia; AutoML tidak menggantikannya.
-3. Data defect SPPA (5 sel sampai 9,524e+30) masuk daftar perbaikan data: tanpa clip atau drop kolom turunan SPPA, seluruh keluarga model linear dan jaringan saraf tidak dapat dipakai pada dataset ini.
+1. Pemilihan Random Forest sebagai detektor utama berstatus **teruji**, bukan preferensi: sudah diadu lawan pencarian otomatis 18 core dan kalah tipis 5 dari 7 sumur.
+2. Rule + persistence + kalibrasi per unit tetap arsitektur yang dipakai pada detektor yang labelnya tersedia; AutoML tidak menggantikannya.
+3. Data defect SPPA (30 sel, maksimum 9,524e+30) masuk daftar perbaikan data: tanpa clip atau drop kolom turunan SPPA, seluruh keluarga model linear dan jaringan saraf tidak dapat dipakai pada dataset ini.
 4. Pernyataan "AutoML lebih baik" dilarang pada Bab IV tanpa skema seleksi yang netral prevalensi; angka yang ada justru mendukung sebaliknya.
 
 ## 9. Jejak reproduksi

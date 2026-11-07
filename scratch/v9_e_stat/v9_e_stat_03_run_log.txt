@@ -1,0 +1,21 @@
+[2026-10-15 10:18:14] toolwear_windows rows=469 feats=27 tools=['T01', 'T02', 'T03', 'T04']
+[2026-10-15 10:18:15]   [cp T01 R01] n=60 t_cp=26s p=0.0020 sig05=True sig002=True early5=False
+[2026-10-15 10:18:17]   [cp T01 R02] n=60 t_cp=26s p=0.0020 sig05=True sig002=True early5=False
+[2026-10-15 10:18:19]   [cp T02 R01] n=50 t_cp=29s p=0.0020 sig05=True sig002=True early5=False
+[2026-10-15 10:18:20]   [cp T02 R02] n=62 t_cp=26s p=0.0020 sig05=True sig002=True early5=False
+[2026-10-15 10:18:21]   [cp T03 R01] n=61 t_cp=35s p=0.0020 sig05=True sig002=True early5=False
+[2026-10-15 10:18:22]   [cp T03 R02] n=60 t_cp=21s p=0.0020 sig05=True sig002=True early5=False
+[2026-10-15 10:18:23]   [cp T04 R01] n=58 t_cp=29s p=0.0020 sig05=True sig002=True early5=False
+[2026-10-15 10:18:24]   [cp T04 R02] n=58 t_cp=31s p=0.0020 sig05=True sig002=True early5=False
+[2026-10-15 10:18:24]   [cal T01] FP_R01=41/42 detR02=True TLead=60.0s ruleFP=41 kurangi_ragu=0.0
+[2026-10-15 10:18:24]   [cal T02] FP_R01=27/35 detR02=True TLead=48.0s ruleFP=33 kurangi_ragu=0.182
+[2026-10-15 10:18:24]   [cal T03] FP_R01=30/42 detR02=True TLead=60.0s ruleFP=40 kurangi_ragu=0.25
+[2026-10-15 10:18:24]   [cal T04] FP_R01=34/40 detR02=True TLead=58.0s ruleFP=36 kurangi_ragu=0.056
+[2026-10-15 10:18:24]   [op t=1.0 T01] thr=12.316666666666663 fpR01=1 det=True TLead=25.0s
+[2026-10-15 10:18:24]   [op t=1.0 T02] thr=10.0 fpR01=3 det=True TLead=36.0s
+[2026-10-15 10:18:24]   [op t=1.0 T03] thr=8.633333333333326 fpR01=1 det=True TLead=24.0s
+[2026-10-15 10:18:24]   [op t=1.0 T04] thr=10.0 fpR01=3 det=True TLead=20.0s
+[2026-10-15 10:18:24]   [op t=0.2 T01] thr=12.863333333333337 fpR01=1 det=True TLead=25.0s
+[2026-10-15 10:18:24]   [op t=0.2 T02] thr=10.0 fpR01=3 det=True TLead=36.0s
+[2026-10-15 10:18:24]   [op t=0.2 T03] thr=9.726666666666674 fpR01=1 det=True TLead=24.0s
+[2026-10-15 10:18:24]   [op t=0.2 T04] thr=10.0 fpR01=3 det=True TLead=20.0s

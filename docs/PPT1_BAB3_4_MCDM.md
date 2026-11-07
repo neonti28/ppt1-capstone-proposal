@@ -451,7 +451,7 @@ Tabel ini menjawab pertanyaan yang mudah terlewat saat membaca matriks MCDM: alt
 | Kode | Pertanyaan (1.1.6) | Alternatif yang menjawab | Status jawaban di Bab III |
 |---|---|---|---|
 | RM1 | merancang lapisan peringatan dini pada data yang benar-benar tersedia | A1, dibantu A2 dan A3 | dijawab sebagian. A1 peringkat satu dengan koefisien kedekatan 0,8465, juara pada 25 dari 25 kasus uji, dan memberi delta terukur positif pada kelas stuck. Hasil negatif pada kelas hyd tetap dinyatakan pada 3.4.11 dan tidak ditutupi. |
-| RM2 | memilih titik operasi per engine dengan beban alarm palsu yang dapat diterima | A9 | belum dijawab. A9 satu-satunya alternatif yang menyentuh langsung gejala sebaran 119,6 kali, tetapi peringkat sembilan karena rancangan kalibrasi belum diuji. Titik operasi per engine belum ditetapkan, dan pekerjaan itu dipindahkan ke Saran 1 dengan alasan yang dinyatakan terbuka. |
+| RM2 | memilih titik operasi per mode dengan beban alarm palsu yang dapat diterima | A9 | belum dijawab. A9 satu-satunya alternatif yang menyentuh langsung gejala sebaran 119,6 kali, tetapi peringkat sembilan karena rancangan kalibrasi belum diuji. Titik operasi per mode belum ditetapkan, dan pekerjaan itu dipindahkan ke Saran 1 dengan alasan yang dinyatakan terbuka. |
 | RM3 | menyajikan keluaran yang dapat dijelaskan kepada drilling engineer | belum ada alternatif | belum dijawab. Kriteria C8 belum dapat dinilai karena antarmuka peringatan belum dirancang (3.3.6 butir 8), sehingga pertanyaan ini berstatus pekerjaan PPT II dan tidak boleh dibaca sebagai sudah selesai. |
 
 Catatan pembacaan: dua dari tiga pertanyaan riset belum terjawab penuh. Matriks MCDM memilih sumbu rancangan, bukan menyatakan bahwa seluruh pertanyaan sudah tuntas. Menyatakan sebaliknya akan melebihkan capaian Bab III.
@@ -516,7 +516,7 @@ Dua hal perlu dibaca dari tabel itu. Pertama, menurut `docs/V8_PM_VERDICT.md:155
 
 ![Gambar 5](assets/fig04_auprc_per_engine.png)
 
-**Gambar 5.** AUPRC terbaik per engine pada split leave-one-well-out dari `dashboard/data/engine_v9_i1.json`: vib 0,912; shk 0,104; stuck 0,070; ssi 0,029. Batang vib menyandang peringatan yang dicalat langsung ke gambar, yaitu risiko sirkularitas karena labelnya diturunkan dari kanal yang sama dengan fitur, sehingga angka 0,912 tidak boleh dibaca sebagai kualitas generalisasi.
+**Gambar 5.** AUPRC terbaik per mode pada split leave-one-well-out dari `dashboard/data/engine_v9_i1.json`: vib 0,912; shk 0,104; stuck 0,070; ssi 0,029. Batang vib menyandang peringatan yang dicalat langsung ke gambar, yaitu risiko sirkularitas karena labelnya diturunkan dari kanal yang sama dengan fitur, sehingga angka 0,912 tidak boleh dibaca sebagai kualitas generalisasi.
 
 ![Gambar 6](assets/fig05_far_vs_recall.png)
 
@@ -524,7 +524,7 @@ Dua hal perlu dibaca dari tabel itu. Pertama, menurut `docs/V8_PM_VERDICT.md:155
 
 ![Gambar 7](assets/fig06_presisi_vs_recall.png)
 
-**Gambar 7.** Presisi terhadap recall tiap head terukur. Anotasi atas head utama `hybrid_rule_and_persistence` pada engine hyd menyebut presisi 0,824 dan recall 0,597, dengan FAR 16,6 per 24 jam pada n = 10.401 window (pos 865, neg 9.536). Garis titik-titik diagonal adalah acuan acak (`presisi = recall`). Skrip gambar 5 sampai 7: `docs/assets/make_figures.py`.
+**Gambar 7.** Presisi terhadap recall tiap head terukur. Anotasi atas head utama `hybrid_rule_and_persistence` pada mode hyd menyebut presisi 0,824 dan recall 0,597, dengan FAR 16,6 per 24 jam pada n = 10.401 window (pos 865, neg 9.536). Garis titik-titik diagonal adalah acuan acak (`presisi = recall`). Skrip gambar 5 sampai 7: `docs/assets/make_figures.py`.
 
 Reproduksi:
 

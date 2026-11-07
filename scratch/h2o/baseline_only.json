@@ -1,0 +1,255 @@
+{
+  "data": {
+    "baris": 4619,
+    "positif": 243,
+    "sumur": [
+      "F-14",
+      "F-15A",
+      "F-15_S",
+      "F-5",
+      "F-7",
+      "F-9",
+      "F-9_A"
+    ]
+  },
+  "per_sumur": {
+    "F-14": {
+      "n_uji": 1369,
+      "n_positif_uji": 59,
+      "mayoritas": {
+        "auc": 0.5,
+        "auprc": 0.0431,
+        "presisi": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 59
+      },
+      "reglog": {
+        "auc": 0.6898,
+        "auprc": 0.092,
+        "presisi": 0.0833,
+        "recall": 0.5424,
+        "f1": 0.1445,
+        "tp": 32,
+        "fp": 352,
+        "fn": 27
+      },
+      "rf": {
+        "auc": 0.6631,
+        "auprc": 0.1008,
+        "presisi": 0.1957,
+        "recall": 0.1525,
+        "f1": 0.1714,
+        "tp": 9,
+        "fp": 37,
+        "fn": 50
+      }
+    },
+    "F-15A": {
+      "n_uji": 476,
+      "n_positif_uji": 24,
+      "mayoritas": {
+        "auc": 0.5,
+        "auprc": 0.0504,
+        "presisi": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 24
+      },
+      "reglog": {
+        "auc": 0.511,
+        "auprc": 0.0513,
+        "presisi": 0.0516,
+        "recall": 1.0,
+        "f1": 0.0982,
+        "tp": 24,
+        "fp": 441,
+        "fn": 0
+      },
+      "rf": {
+        "auc": 0.656,
+        "auprc": 0.0948,
+        "presisi": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 24
+      }
+    },
+    "F-15_S": {
+      "n_uji": 898,
+      "n_positif_uji": 69,
+      "mayoritas": {
+        "auc": 0.5,
+        "auprc": 0.0768,
+        "presisi": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 69
+      },
+      "reglog": {
+        "auc": 0.5967,
+        "auprc": 0.1156,
+        "presisi": 0.1269,
+        "recall": 0.4783,
+        "f1": 0.2006,
+        "tp": 33,
+        "fp": 227,
+        "fn": 36
+      },
+      "rf": {
+        "auc": 0.4779,
+        "auprc": 0.1063,
+        "presisi": 0.5,
+        "recall": 0.0725,
+        "f1": 0.1266,
+        "tp": 5,
+        "fp": 5,
+        "fn": 64
+      }
+    },
+    "F-5": {
+      "n_uji": 932,
+      "n_positif_uji": 27,
+      "mayoritas": {
+        "auc": 0.5,
+        "auprc": 0.029,
+        "presisi": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 27
+      },
+      "reglog": {
+        "auc": 0.5637,
+        "auprc": 0.0479,
+        "presisi": 0.0412,
+        "recall": 0.2963,
+        "f1": 0.0724,
+        "tp": 8,
+        "fp": 186,
+        "fn": 19
+      },
+      "rf": {
+        "auc": 0.5059,
+        "auprc": 0.0325,
+        "presisi": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 3,
+        "fn": 27
+      }
+    },
+    "F-7": {
+      "n_uji": 301,
+      "n_positif_uji": 24,
+      "mayoritas": {
+        "auc": 0.5,
+        "auprc": 0.0797,
+        "presisi": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 24
+      },
+      "reglog": {
+        "auc": 0.5702,
+        "auprc": 0.0993,
+        "presisi": 0.082,
+        "recall": 0.2083,
+        "f1": 0.1176,
+        "tp": 5,
+        "fp": 56,
+        "fn": 19
+      },
+      "rf": {
+        "auc": 0.5017,
+        "auprc": 0.0884,
+        "presisi": 0.1111,
+        "recall": 0.0833,
+        "f1": 0.0952,
+        "tp": 2,
+        "fp": 16,
+        "fn": 22
+      }
+    },
+    "F-9": {
+      "n_uji": 300,
+      "n_positif_uji": 24,
+      "mayoritas": {
+        "auc": 0.5,
+        "auprc": 0.08,
+        "presisi": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 24
+      },
+      "reglog": {
+        "auc": 0.7732,
+        "auprc": 0.2741,
+        "presisi": 0.2267,
+        "recall": 0.7083,
+        "f1": 0.3434,
+        "tp": 17,
+        "fp": 58,
+        "fn": 7
+      },
+      "rf": {
+        "auc": 0.865,
+        "auprc": 0.4729,
+        "presisi": 0.5926,
+        "recall": 0.6667,
+        "f1": 0.6275,
+        "tp": 16,
+        "fp": 11,
+        "fn": 8
+      }
+    },
+    "F-9_A": {
+      "n_uji": 343,
+      "n_positif_uji": 16,
+      "mayoritas": {
+        "auc": 0.5,
+        "auprc": 0.0466,
+        "presisi": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 16
+      },
+      "reglog": {
+        "auc": 0.5971,
+        "auprc": 0.0624,
+        "presisi": 0.0558,
+        "recall": 0.6875,
+        "f1": 0.1033,
+        "tp": 11,
+        "fp": 186,
+        "fn": 5
+      },
+      "rf": {
+        "auc": 0.6317,
+        "auprc": 0.0785,
+        "presisi": 0.0976,
+        "recall": 0.5,
+        "f1": 0.1633,
+        "tp": 8,
+        "fp": 74,
+        "fn": 8
+      }
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+ "n_baris": 6,
+ "n_cocok": 6,
+ "keterangan": "enam baris MISMATCH semuanya sel hitungan atau julat yang tidak dapat dibandingkan resolver terhadap daun tunggal; setelah dihitung sendiri, semuanya cocok",
+ "rincian": [
+  {
+   "kode": "S1-012",
+   "sel_ledger": 7,
+   "hitung": 7,
+   "dasar": "jumlah nilai True pada reproduksi.lulus",
+   "jenis": "hitungan",
+   "lulus": true
+  },
+  {
+   "kode": "S1-013",
+   "sel_ledger": 5,
+   "hitung": 5,
+   "dasar": "len(seed_list)",
+   "jenis": "hitungan",
+   "lulus": true
+  },
+  {
+   "kode": "S1-016",
+   "sel_ledger": 9,
+   "hitung": 9,
+   "dasar": "len(s1_meta.wells)",
+   "jenis": "hitungan",
+   "lulus": true
+  },
+  {
+   "kode": "S1-051",
+   "sel_ledger": 2,
+   "hitung": 2,
+   "dasar": "len(h_saturasi.well_kalibrasi_unik)",
+   "jenis": "hitungan",
+   "lulus": true
+  },
+  {
+   "kode": "S3-016",
+   "sel_ledger": "1,32% sampai 54,25%",
+   "hitung": [
+    1.32,
+    54.25
+   ],
+   "hitung_termasuk_well_nol": [
+    0.0,
+    54.25
+   ],
+   "dasar": "min prevalensi pada well berpositif dan maks prevalensi, dikali 100; dokumen menyatakan dua well nol positif pada kalimat yang sama",
+   "jenis": "julat",
+   "lulus": true
+  },
+  {
+   "kode": "S3-032",
+   "sel_ledger": 7,
+   "hitung": 7,
+   "dasar": "len(s3b_hybrid.folds)",
+   "jenis": "hitungan",
+   "lulus": true
+  }
+ ]
+}

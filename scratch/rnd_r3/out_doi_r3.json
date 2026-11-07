@@ -1,0 +1,146 @@
+[
+ {
+  "tag": "Dragomiretskiy2014_VMD",
+  "doi": "10.1109/TSP.2013.2288675",
+  "http": 200,
+  "year": 2014,
+  "first_author": "Dragomiretskiy Konstantin",
+  "title": "Variational Mode Decomposition",
+  "container": "IEEE Transactions on Signal Processing"
+ },
+ {
+  "tag": "Huang1998_EMD",
+  "doi": "10.1098/rspa.1998.0193",
+  "http": 200,
+  "year": 1998,
+  "first_author": "Huang Norden E.",
+  "title": "The empirical mode decomposition and the Hilbert spectrum for nonlinear and non-stationary time series analysis",
+  "container": "Proceedings of the Royal Society of London. Series A: Mathematical, Physical and Engineering Sciences"
+ },
+ {
+  "tag": "Torrence1998_Wavelet",
+  "doi": "10.1175/1520-0477(1998)079<0061:APGTWA>2.0.CO;2",
+  "http": 200,
+  "year": 1998,
+  "first_author": "Torrence Christopher",
+  "title": "A Practical Guide to Wavelet Analysis",
+  "container": "Bulletin of the American Meteorological Society"
+ },
+ {
+  "tag": "Cortes1995_SVM",
+  "doi": "10.1007/BF00994018",
+  "http": 200,
+  "year": 1995,
+  "first_author": "Cortes Corinna",
+  "title": "Support-vector networks",
+  "container": "Machine Learning"
+ },
+ {
+  "tag": "Rakthanmanon2012_DTW",
+  "doi": "10.1145/2339530.2339576",
+  "http": 200,
+  "year": 2012,
+  "first_author": "Rakthanmanon Thanawin",
+  "title": "Searching and mining trillions of time series subsequences under dynamic time warping",
+  "container": "Proceedings of the 18th ACM SIGKDD international conference on Knowledge discovery and data mining"
+ },
+ {
+  "tag": "Yeh2016_MatrixProfileI",
+  "doi": "10.1109/ICDM.2016.0179",
+  "http": 200,
+  "year": 2016,
+  "first_author": "Yeh Chin-Chia Michael",
+  "title": "Matrix Profile I: All Pairs Similarity Joins for Time Series: A Unifying View That Includes Motifs, Discords and Shapelets",
+  "container": "2016 IEEE 16th International Conference on Data Mining (ICDM)"
+ },
+ {
+  "tag": "Yeh2016_MatrixProfileI_wrong_prior_attempt",
+  "doi": "10.1109/ICDM.2016.0172",
+  "http": 200,
+  "year": 2016,
+  "first_author": "Wang Yang",
+  "title": "The Development of a Smart Taxicab Scheduling System: A Multi-source Data Fusion Perspective",
+  "container": "2016 IEEE 16th International Conference on Data Mining (ICDM)"
+ },
+ {
+  "tag": "Mirjalili2014_GWO",
+  "doi": "10.1016/j.advengsoft.2013.12.007",
+  "http": 200,
+  "year": 2014,
+  "first_author": "Mirjalili Seyedali",
+  "title": "Grey Wolf Optimizer",
+  "container": "Advances in Engineering Software"
+ },
+ {
+  "tag": "Mirjalili2016_WOA",
+  "doi": "10.1016/j.advengsoft.2016.01.008",
+  "http": 200,
+  "year": 2016,
+  "first_author": "Mirjalili Seyedali",
+  "title": "The Whale Optimization Algorithm",
+  "container": "Advances in Engineering Software"
+ },
+ {
+  "tag": "RamaKrishna2018_VMD_SVM",
+  "doi": "10.1088/1757-899X/310/1/012076",
+  "http": 200,
+  "year": 2018,
+  "first_author": "Rama Krishna K",
+  "title": "Machinery Bearing Fault Diagnosis Using Variational Mode Decomposition and Support Vector Machine as a Classifier",
+  "container": "IOP Conference Series: Materials Science and Engineering"
+ },
+ {
+  "tag": "LiLin2023_VMD_param_opt",
+  "doi": "10.3390/electronics12061290",
+  "http": 200,
+  "year": 2023,
+  "first_author": "Li Lin",
+  "title": "Research on Rolling Bearing Fault Diagnosis Based on Variational Modal Decomposition Parameter Optimization and an Improved Support Vector Machine",
+  "container": "Electronics"
+ },
+ {
+  "tag": "Gai2020_HGWO_VMD",
+  "doi": "10.1016/j.measurement.2020.107901",
+  "http": 200,
+  "year": 2020,
+  "first_author": "Gai Jingbo",
+  "title": "An integrated method based on hybrid grey wolf optimizer improved variational mode decomposition and deep neural network for fault diagnosis of rolling bearing",
+  "container": "Measurement"
+ },
+ {
+  "tag": "Zhang2021_VMD_CGWO_SVR",
+  "doi": "10.1016/j.knosys.2021.107297",
+  "http": 200,
+  "year": 2021,
+  "first_author": "Zhang Zichen",
+  "title": "Application of variational mode decomposition and chaotic grey wolf optimizer with support vector regression for forecasting electric loads",
+  "container": "Knowledge-Based Systems"
+ },
+ {
+  "tag": "HeDeqiang2023_IGWO_AVMD",
+  "doi": "10.1088/1361-6501/acd713",
+  "http": 200,
+  "year": 2023,
+  "first_author": "He Deqiang",
+  "title": "A new weak fault diagnosis approach for train bearings based on improved grey wolf optimizer and adaptive variational mode decomposition",
+  "container": "Measurement Science and Technology"
+ },
+ {
+  "tag": "Reckmann2010_MWD_failure",
+  "doi": "10.2118/127413-MS",
+  "http": 200,
+  "year": 2010,
+  "first_author": "Reckmann Hanno",
+  "title": "MWD Failure Rates Due to Drilling Dynamics",
+  "container": "IADC/SPE Drilling Conference and Exhibition"
+ },
+ {
+  "tag": "Mal2022_stuckpipe_ML",
+  "doi": "10.2118/208778-MS",
+  "http": 200,
+  "year": 2022,
+  "first_author": "Mal Anwesha",
+  "title": "Prediction of Stuck Pipe Incidents Using Models Powered by Deep Learning and Machine Learning",
+  "container": "IADC/SPE International Drilling Conference and Exhibition"
+ }
+]

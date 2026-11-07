@@ -22,11 +22,11 @@ Tiga hasil yang paling menentukan arah riset berikutnya:
 
 ---
 
-## 2. PETA ENGINE, KLAIM, DAN PARAMETER PENGGERAK
+## 2. PETA Detektor, KLAIM, DAN PARAMETER PENGGERAK
 
-Alat PdM terdiri dari 7 engine dan 11 klaim (K-i/K-ii). Registry tier ada di `code/v9_i1_pipeline.py:74` (`REGISTRY = {`, dengan komentar sumber di `:72`), dan sumber tier per engine berupa rujukan dokumen (`docs/V9_EVAL_C_LAYERC.md`). Dokumen ini tidak mengubah tier apa pun.
+Alat PdM terdiri dari 7 mode dan 11 klaim (K-i/K-ii). Registry tier ada di `code/v9_i1_pipeline.py:74` (`REGISTRY = {`, dengan komentar sumber di `:72`), dan sumber tier per mode berupa rujukan dokumen (`docs/V9_EVAL_C_LAYERC.md`). Dokumen ini tidak mengubah tier apa pun.
 
-| Engine | Klaim | Parameter penggerak utama | Baris ledger |
+| Mode | Klaim | Parameter penggerak utama | Baris ledger |
 |---|---|---|---|
 | vib | K-i (status getaran lateral) | 32,17405 ft/s²; jendela 10 menit; FAR <= 6 konvensi | L-01, L-29, L-26 |
 | ssi | K-i (status stick-slip torsional) | SSI >= 1; SSI_MIN_SAMPLES 10 | L-04, L-05, L-07 |
@@ -133,7 +133,7 @@ Format tiap baris: nilai dan satuan · sumber saat ini (file:baris) · kelas buk
 - Kelas: KONVENSI (L-25). Ini target desain titik operasi, bukan hasil ukur dan bukan standar.
 - Yang perlu: beban pemeriksaan nyata di bengkel (berapa alarm per shift yang bisa ditangani). Tanpa data itu, angka 1 hanya asumsi. Hasil run yang ada menunjukkan FP 1 sampai 3 per alat pada target ini (L-33), sehingga klaim yang jujur adalah "sesuai target", bukan "FAR rendah".
 
-### 3.9 Parameter lintas engine
+### 3.9 Parameter lintas detektor
 
 **Panjang jendela 10 menit dan horizon 10 menit**
 - Sumber: `code/v9_d1_02_rig_windows.py:31` (`W = 10`), `code/v9_e_RULE_01_status.py:51` (`W = 10`), `code/v9_e_RULE_04_hyd_k2.py:30` (`H = 10`).
@@ -162,7 +162,7 @@ Kegunaan: menutup pertanyaan asal 32,17405 ft/s². Ini juga menutup klaim "1 g" 
 
 **NIST/SEMATECH e-Handbook of Statistical Methods §1.3.5.6, Measures of Scale.**
 Isi terverifikasi: definisi median absolute deviation dan argumen robustness terhadap ekor distribusi. Tidak memuat konstanta 1,4826.
-Kegunaan: dasar definisi MAD yang dipakai semua z robust di engine (hyd, stuck E1, tool_wear). Konstanta penyekala dihitung sendiri (1/0,67449 = 1,4826), bukan dikutip.
+Kegunaan: dasar definisi MAD yang dipakai semua z robust di detektor (hyd, stuck E1, tool_wear). Konstanta penyekala dihitung sendiri (1/0,67449 = 1,4826), bukan dikutip.
 
 ### 4.2 Ditolak sebagai dasar ambang
 
@@ -181,7 +181,7 @@ Tidak ada standar ISO atau API yang, sejauh yang dapat diverifikasi hari ini, me
 
 ## 5. REKOMENDASI (HANYA YANG BERSANDAR BUKTI TERVERIFIKASI)
 
-Rekomendasi ini tidak mengubah ambang apa pun. Semua bersifat dokumentasi dan pengujian, sesuai larangan plan §9 ("tidak mengubah ambang engine yang sudah ada tanpa bukti pilot").
+Rekomendasi ini tidak mengubah ambang apa pun. Semua bersifat dokumentasi dan pengujian, sesuai larangan plan §9 ("tidak mengubah ambang detektor yang sudah ada tanpa bukti pilot").
 
 1. Perbaiki sitasi di dokumen dan komentar kode: 32,17405 ft/s² dikutip ke ISO 2041:2018 §3.1.4, bukan sebagai "1 g" tanpa sumber. Sekaligus seragamkan jumlah desimal (32,17405 di kode, 32,174 0 di standar) dengan satu catatan konversi.
 2. Pertahankan SSI >= 1, sekarang dengan dasar jurnal yang jelas (Liu et al. 2025 persamaan 2), dan tambahkan satu kalimat di metodologi bahwa ambang 3 adalah batas kelas "severe" yang belum kita pakai.

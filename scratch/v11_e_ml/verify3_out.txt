@@ -1,0 +1,54 @@
+=== A. stuck_k2: ts_bin/lab_ts kosong? feat_ts_max monotonic? y_prev NaN? ===
+rows = 118567 | per well = {'F-10': 4216, 'F-14': 95925, 'F-9': 16184, 'F-9_A': 2242}
+ts_bin kosong = {} (dari ts_bin & lab_ts)
+lab_ts kosong = {}
+feat_ts_max turun antar baris (per well) = {}
+y_prev_stuck_onset NaN = 0
+baris positif = 1975; di antaranya y_prev==1 = 1694 (85.8%)  [klaim k2: '±6/7 baris positif']
+
+=== B. klaim k2: '28 fold' ada di V9_E_ML_ENGINE.md (koreksi dokumentasi) ===
+  V9_E_ML_ENGINE.md:43: Empat head ML dilatih pada data nyata Volve dengan split LOWO (28 fold total,
+  V9_E_ML_ENGINE.md:468: | a | engine jalan pada data nyata | 4 engine × LOWO = 28 fold selesai; run log bertimestamp `scratch/v9_e_ml/v9_e_ML_*_RUN_LOG.txt` |
+
+=== C. klaim hyd K-i label (k2 §1): z robust median/MAD SPPA per bin qcut(TFLO,10), |z|>2, W=10 ===
+  v9_d1_03:5: vib, ssi, shk, stuck_k1 (status) + hyd_ki (label qcut SPPA/TFLO, resep V6-E1 31)
+  v9_d1_03:8: - hyd_ki               : 8 kanal x 5 = 40 fitur (SPPA/TFLO/SPM DIBUANG — anti-sirkular)
+  v9_d1_03:31: CHAN = ["TQA", "SPPA", "TFLO", "RPM", "SWOB", "HKLD", "ROP", "BPOS", "SPM",
+  v9_d1_03:34: HYD_EXCLUDE = ["SPPA", "TFLO", "SPM"]
+  v9_d1_03:57: d = b.dropna(subset=["SPPA_mean", "TFLO_mean"]).copy()
+  v9_d1_03:58: d = d[d["TFLO_mean"] > 0]
+  v9_d1_03:63: d["qbin"] = pd.qcut(d["TFLO_mean"], NQ, labels=False, duplicates="drop")
+  v9_d1_03:66: med = d.groupby("qbin")["SPPA_mean"].transform("median")
+  v9_d1_03:67: mad = d.groupby("qbin")["SPPA_mean"].transform(
+  v9_d1_03:69: z = (d["SPPA_mean"] - med) / (1.4826 * mad.replace(0, np.nan))
+  v9_d1_03:70: anom.loc[d.index] = (z.abs() > 2).fillna(False)
+  v9_d1_03:73: "obs": b["SPPA_mean"].notna() & b["TFLO_mean"].notna(),
+
+=== D. klaim k2: high_MSE Teale P75 = 256,600 psi (USROP_labeled) ===
+  header: ['Unnamed: 0', 'Measured Depth m', 'Weight on Bit kkgf', 'Average Standpipe Pressure kPa', 'Average Surface Torque kN.m', 'Rate of Penetration m/h', 'Average Rotary Speed rpm', 'Mud Flow In L/min', 'Mud Density In g/cm3', 'Diameter mm', 'Average Hookload kkgf', 'Hole Depth (TVD) m', 'USROP Gamma gAPI', 'well', 'label', 'MSE', 'D_exp', 'ROC_coef']
+  n_rows = 198928
+  label: n=198928 contoh=['normal', 'normal', 'normal', 'normal', 'normal']
+  MSE: n=198928 contoh=['453.1743018082976', '465.0995668774578', '465.0995668774578', '424.5892145142849', '424.5892145142849']
+
+=== E. klaim V8 pembanding (k2 §6.2/6.3): RF>=canary 5/5 (vib? ssi?), persistence kalah 0/5, shk 6/9 ===
+   ('V8_E_shk_CAPABILITY.md', 39, '- RF mengalahkan canary-depth di 6/9 fold (semua fold ORIG kecuali F-9_A; di F-9_A depth canary 0,1727 ≫ RF 0,0294). Konsisten dengan G2 V6 6/7 — fitur non-depth MENAMBAH')
+   ('V8_E_shk_CAPABILITY.md', 109, '4. **Sinyal fitur non-depth MENAMBAH di atas kedalaman di well lama** — bukti: RF > canary-depth di 6/9 fold (A.1); G2 V6 6/7 tereplikasi (reproduksi AUPRC 7/7 < 1e-9).')
+   ('V8_E_ssi_CAPABILITY.md', 34, '| Baseline RELEVAN (per tugas, bukan universal) | (a) **persistence** — kalah 0/5 vs RF (angka per-fold TIDAK dicetak di V6 §4.2; hanya verdict 0/5); (b) **canary-kedalam')
+   ('V8_E_ssi_CAPABILITY.md', 58, '| AUPRC + lift | 0,0185–0,1057; lift 2,61–6,64 (5 fold layak); lift ≥1,5 di **4/5** (G1); RF ≥ canary di **5/5** (G2) | OBSERVED |')
+   ('V8_E_ssi_CAPABILITY.md', 59, '| ΔB vs persistence | RF **tidak dikalahkan** persistence di 5/5 fold (persistence menang 0/5) → ΔB ≥ 0 di 5/5. Catatan jujur: angka AUPRC persistence per-fold TIDAK dice')
+   ('V8_E_ssi_CAPABILITY.md', 60, '| ΔB vs canary-kedalaman | positif di 5/5 fold (tabel §1.1) | DERIVED dari angka V6 |')
+   ('V8_E_ssi_CAPABILITY.md', 68, '`ΔB > 0` vs canary di 5/5 fold dan vs persistence di 5/5 fold (mayoritas syarat')
+   ('V8_E_ssi_CAPABILITY.md', 98, '| C2 ketahanan lintas-regime | kasus khusus lama = canary-kedalaman: RF ≥ canary di **5/5 fold** (G2) → tidak ada fold di mana model kalah terhadap "diagnosis kedalaman".')
+   ('V8_E_ssi_CAPABILITY.md', 115, '| **Pemantauan tren / indikasi** (tampilan drift stick-slip, bahan diskusi harian) | **LAYAK** | A: ΔB > 0 di 5/5 fold vs persistence & canary; C4 terpenuhi |')
+   ('V8_E_ssi_CAPABILITY.md', 122, 'status-quo (persistence 0/5, canary kalah 5/5) untuk PEMANTAUAN/PERINGATAN')
+   ('V8_E_ssi_CAPABILITY.md', 133, '| Verdict persistence 0/5 | **SEDANG-TINGGI** | Verdict dicatat V6, tetapi angka per-fold persistence TIDAK dicetak → tidak bisa dicek ulang per fold dari dokumen |')
+   ('V8_E_ssi_CAPABILITY.md', 144, 'n/pos/prev, AUPRC+CI95, lift, canary; verdict G1 4/5, G2 5/5, persistence 0/5;')
+  total temuan: 12
+
+=== F. cross-check 'kemenangan fold' / majority rule k1: 'tujuh nilai lipatan' ===
+  lowo_hyd_ki.json: n_folds=9 wells_field=['F-10', 'F-12', 'F-14', 'F-15A', 'F-15_S', 'F-5', 'F-7', 'F-9', 'F-9_A'] n_rows=52509
+  lowo_shk.json: n_folds=9 wells_field=['F-10', 'F-12', 'F-14', 'F-15A', 'F-15_S', 'F-5', 'F-7', 'F-9', 'F-9_A'] n_rows=56495
+  lowo_ssi.json: n_folds=9 wells_field=['F-10', 'F-12', 'F-14', 'F-15A', 'F-15_S', 'F-5', 'F-7', 'F-9', 'F-9_A'] n_rows=35906
+  lowo_stuck_k1.json: n_folds=2 wells_field=['F-14', 'F-9_A'] n_rows=5555
+  lowo_stuck_k2.json: n_folds=4 wells_field=['F-10', 'F-14', 'F-9', 'F-9_A'] n_rows=118567
+  lowo_vib.json: n_folds=4 wells_field=['F-14', 'F-15A', 'F-15_S', 'F-5'] n_rows=23922

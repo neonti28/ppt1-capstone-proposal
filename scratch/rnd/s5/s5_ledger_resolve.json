@@ -1,0 +1,1095 @@
+{
+ "S1": {
+  "n_baris": 84,
+  "klasifikasi": {
+   "MATCH": 45,
+   "jalur_bebas_teks": 11,
+   "bukan_skalar": 3,
+   "angka_bukan_numerik": 6,
+   "boolean": 1,
+   "MISMATCH": 1,
+   "tanpa_nama_berkas": 11,
+   "jalur_tidak_ada": 6
+  },
+  "mismatch": [
+   {
+    "kode": "S1-034",
+    "ledger": 32256.0,
+    "json": 32.256,
+    "selisih": -32223.744,
+    "rujukan": "s1_hyd_seeds.json per_seed.42.ringkas.far24_baris_median"
+   }
+  ],
+  "tidak_resolve": [
+   [
+    "S1-012",
+    "7",
+    "jalur_bebas_teks"
+   ],
+   [
+    "S1-013",
+    "5",
+    "bukan_skalar"
+   ],
+   [
+    "S1-015",
+    "52509",
+    "bukan_skalar"
+   ],
+   [
+    "S1-016",
+    "9",
+    "jalur_bebas_teks"
+   ],
+   [
+    "S1-017",
+    "4a701ed63291e455",
+    "angka bukan numerik"
+   ],
+   [
+    "S1-032",
+    "1",
+    "boolean"
+   ],
+   [
+    "S1-043",
+    "9.1372",
+    "jalur_bebas_teks"
+   ],
+   [
+    "S1-044",
+    "0.00416667",
+    "tanpa_nama_berkas"
+   ],
+   [
+    "S1-047",
+    "30.0",
+    "jalur_bebas_teks"
+   ],
+   [
+    "S1-048",
+    "0.0441137",
+    "jalur_bebas_teks"
+   ],
+   [
+    "S1-049",
+    "0.017567",
+    "jalur_bebas_teks"
+   ],
+   [
+    "S1-051",
+    "2",
+    "bukan_skalar"
+   ],
+   [
+    "S1-052",
+    "10401",
+    "tanpa_nama_berkas"
+   ],
+   [
+    "S1-053",
+    "865",
+    "tanpa_nama_berkas"
+   ],
+   [
+    "S1-054",
+    "607",
+    "jalur_bebas_teks"
+   ],
+   [
+    "S1-055",
+    "607",
+    "tanpa_nama_berkas"
+   ],
+   [
+    "S1-056",
+    "368",
+    "jalur_bebas_teks"
+   ],
+   [
+    "S1-057",
+    "368",
+    "tanpa_nama_berkas"
+   ],
+   [
+    "S1-058",
+    "0.622564",
+    "jalur_bebas_teks"
+   ],
+   [
+    "S1-059",
+    "55.57",
+    "tanpa_nama_berkas"
+   ],
+   [
+    "S1-060",
+    "32.4664",
+    "jalur_bebas_teks"
+   ],
+   [
+    "S1-061",
+    "516",
+    "tanpa_nama_berkas"
+   ],
+   [
+    "S1-062",
+    "110",
+    "tanpa_nama_berkas"
+   ],
+   [
+    "S1-063",
+    "0.8243",
+    "tanpa_nama_berkas"
+   ],
+   [
+    "S1-064",
+    "0.5965",
+    "tanpa_nama_berkas"
+   ],
+   [
+    "S1-065",
+    "16.611",
+    "tanpa_nama_berkas"
+   ],
+   [
+    "S1-066",
+    "443",
+    "jalur_tidak_ada"
+   ],
+   [
+    "S1-067",
+    "215",
+    "jalur_tidak_ada"
+   ],
+   [
+    "S1-068",
+    "0.673252",
+    "jalur_tidak_ada"
+   ],
+   [
+    "S1-069",
+    "0.512139",
+    "jalur_tidak_ada"
+   ],
+   [
+    "S1-077",
+    "0.673",
+    "jalur_tidak_ada"
+   ],
+   [
+    "S1-078",
+    "0.0171",
+    "jalur_tidak_ada"
+   ],
+   [
+    "S1-079",
+    "tidak terukur",
+    "angka bukan numerik"
+   ],
+   [
+    "S1-080",
+    "tidak terukur",
+    "angka bukan numerik"
+   ],
+   [
+    "S1-081",
+    "tidak terukur",
+    "angka bukan numerik"
+   ],
+   [
+    "S1-082",
+    "tidak terukur",
+    "angka bukan numerik"
+   ],
+   [
+    "S1-083",
+    "tidak terukur",
+    "angka bukan numerik"
+   ],
+   [
+    "S1-084",
+    "0",
+    "jalur_bebas_teks"
+   ]
+  ]
+ },
+ "S2": {
+  "n_baris": 455,
+  "klasifikasi": {
+   "tanpa_nama_berkas": 454,
+   "tanpa_jalur": 1
+  },
+  "mismatch": [],
+  "tidak_resolve": [
+   [
+    "S2-001",
+    "152,2",
+    "tanpa_nama_berkas"
+   ],
+   [
+    "S2-002",
+    "277",
+    "tanpa_nama_berkas"
+   ],
+   [
+    "S2-003",
+    "30",
+    "tanpa_nama_berkas"
+   ],
+   [
+    "S2-004",
+    "6,0",
+    "tanpa_nama_berkas"
+   ],
+   [
+    "S2-005",
+    "0,004167",
+    "tanpa_nama_berkas"
+   ],
+   [
+    "S2-006",
+    "23.922",
+    "tanpa_nama_berkas"
+   ],
+   [
+    "S2-007",
+    "4",
+    "tanpa_nama_berkas"
+   ],
+   [
+    "S2-008",
+    "55",
+    "tanpa_nama_berkas"
+   ],
+   [
+    "S2-009",
+    "4",
+    "tanpa_nama_berkas"
+   ],
+   [
+    "S2-010",
+    "4",
+    "tanpa_nama_berkas"
+   ],
+   [
+    "S2-011",
+    "0",
+    "tanpa_nama_berkas"
+   ],
+   [
+    "S2-012",
+    "5.429",
+    "tanpa_nama_berkas"
+   ],
+   [
+    "S2-013",
+    "1.989",
+    "tanpa_nama_berkas"
+   ],
+   [
+    "S2-014",
+    "1.124",
+    "tanpa_nama_berkas"
+   ],
+   [
+    "S2-015",
+    "3.018",
+    "tanpa_nama_berkas"
+   ],
+   [
+    "S2-016",
+    "0,6757",
+    "tanpa_nama_berkas"
+   ],
+   [
+    "S2-017",
+    "30,0",
+    "tanpa_nama_berkas"
+   ],
+   [
+    "S2-018",
+    "0,8481",
+    "tanpa_nama_berkas"
+   ],
+   [
+    "S2-019",
+    "0,8274",
+    "tanpa_nama_berkas"
+   ],
+   [
+    "S2-020",
+    "6.482",
+    "tanpa_nama_berkas"
+   ],
+   [
+    "S2-021",
+    "1.543",
+    "tanpa_nama_berkas"
+   ],
+   [
+    "S2-022",
+    "32.141",
+    "tanpa_nama_berkas"
+   ],
+   [
+    "S2-023",
+    "0,6419",
+    "tanpa_nama_berkas"
+   ],
+   [
+    "S2-024",
+    "30,0",
+    "tanpa_nama_berkas"
+   ],
+   [
+    "S2-025",
+    "0,5452",
+    "tanpa_nama_berkas"
+   ],
+   [
+    "S2-026",
+    "0,8078",
+    "tanpa_nama_berkas"
+   ],
+   [
+    "S2-027",
+    "10.903",
+    "tanpa_nama_berkas"
+   ],
+   [
+    "S2-028",
+    "1.532",
+    "tanpa_nama_berkas"
+   ],
+   [
+    "S2-029",
+    "92.501",
+    "tanpa_nama_berkas"
+   ],
+   [
+    "S2-030",
+    "0,6760",
+    "tanpa_nama_berkas"
+   ],
+   [
+    "S2-031",
+    "30,0",
+    "tanpa_nama_berkas"
+   ],
+   [
+    "S2-032",
+    "0,4806",
+    "tanpa_nama_berkas"
+   ],
+   [
+    "S2-033",
+    "0,7919",
+    "tanpa_nama_berkas"
+   ],
+   [
+    "S2-034",
+    "4.548",
+    "tanpa_nama_berkas"
+   ],
+   [
+    "S2-035",
+    "1.230",
+    "tanpa_nama_berkas"
+   ],
+   [
+    "S2-036",
+    "20.961",
+    "tanpa_nama_berkas"
+   ],
+   [
+    "S2-037",
+    "0,6290",
+    "tanpa_nama_berkas"
+   ],
+   [
+    "S2-038",
+    "30,0",
+    "tanpa_nama_berkas"
+   ],
+   [
+    "S2-039",
+    "0,6073",
+    "tanpa_nama_berkas"
+   ],
+   [
+    "S2-040",
+    "0,8680",
+    "tanpa_nama_berkas"
+   ],
+   [
+    "S2-041",
+    "0,7405",
+    "tanpa_nama_berkas"
+   ],
+   [
+    "S2-042",
+    "0,7288",
+    "tanpa_nama_berkas"
+   ],
+   [
+    "S2-043",
+    "22,0218",
+    "tanpa_nama_berkas"
+   ],
+   [
+    "S2-044",
+    "133,8624",
+    "tanpa_nama_berkas"
+   ],
+   [
+    "S2-045",
+    "1.456",
+    "tanpa_nama_berkas"
+   ],
+   [
+    "S2-046",
+    "0",
+    "tanpa_nama_berkas"
+   ],
+   [
+    "S2-047",
+    "0,2094",
+    "tanpa_nama_berkas"
+   ],
+   [
+    "S2-048",
+    "0,2361",
+    "tanpa_nama_berkas"
+   ],
+   [
+    "S2-049",
+    "0,4856",
+    "tanpa_nama_berkas"
+   ],
+   [
+    "S2-050",
+    "37,3627",
+    "tanpa_nama_berkas"
+   ],
+   [
+    "S2-051",
+    "162,6561",
+    "tanpa_nama_berkas"
+   ],
+   [
+    "S2-052",
+    "2.293",
+    "tanpa_nama_berkas"
+   ],
+   [
+    "S2-053",
+    "0",
+    "tanpa_nama_berkas"
+   ],
+   [
+    "S2-054",
+    "0,2094",
+    "tanpa_nama_berkas"
+   ],
+   [
+    "S2-055",
+    "0,2363",
+    "tanpa_nama_berkas"
+   ],
+   [
+    "S2-056",
+    "0,4499",
+    "tanpa_nama_berkas"
+   ],
+   [
+    "S2-057",
+    "29,5230",
+    "tanpa_nama_berkas"
+   ],
+   [
+    "S2-058",
+    "137,9930",
+    "tanpa_nama_berkas"
+   ],
+   [
+    "S2-059",
+    "1.903",
+    "tanpa_nama_berkas"
+   ],
+   [
+    "S2-060",
+    "0",
+    "tanpa_nama_berkas"
+   ]
+  ]
+ },
+ "S3": {
+  "n_baris": 92,
+  "klasifikasi": {
+   "MATCH": 45,
+   "angka_bukan_numerik": 24,
+   "bukan_skalar": 12,
+   "tanpa_nama_berkas": 11
+  },
+  "mismatch": [],
+  "tidak_resolve": [
+   [
+    "S3-007",
+    "tidak ada",
+    "angka bukan numerik"
+   ],
+   [
+    "S3-008",
+    "tidak ada",
+    "angka bukan numerik"
+   ],
+   [
+    "S3-015",
+    "0,679834 sampai 0,845146",
+    "angka bukan numerik"
+   ],
+   [
+    "S3-016",
+    "1,32% sampai 54,25%",
+    "angka bukan numerik"
+   ],
+   [
+    "S3-017",
+    "0,042",
+    "bukan_skalar"
+   ],
+   [
+    "S3-018",
+    "0,051",
+    "bukan_skalar"
+   ],
+   [
+    "S3-019",
+    "0,037",
+    "bukan_skalar"
+   ],
+   [
+    "S3-020",
+    "0,027",
+    "bukan_skalar"
+   ],
+   [
+    "S3-021",
+    "0,031",
+    "bukan_skalar"
+   ],
+   [
+    "S3-022",
+    "0,031",
+    "bukan_skalar"
+   ],
+   [
+    "S3-023",
+    "0,045",
+    "bukan_skalar"
+   ],
+   [
+    "S3-024",
+    "166,497",
+    "bukan_skalar"
+   ],
+   [
+    "S3-027",
+    "113,778 sampai 4.534,969",
+    "angka bukan numerik"
+   ],
+   [
+    "S3-029",
+    "0,004167",
+    "tanpa_nama_berkas"
+   ],
+   [
+    "S3-030",
+    "0,029168",
+    "bukan_skalar"
+   ],
+   [
+    "S3-031",
+    "0,077320",
+    "bukan_skalar"
+   ],
+   [
+    "S3-032",
+    "7",
+    "bukan_skalar"
+   ],
+   [
+    "S3-033",
+    "30,0",
+    "tanpa_nama_berkas"
+   ],
+   [
+    "S3-034",
+    "0",
+    "bukan_skalar"
+   ],
+   [
+    "S3-035",
+    "0,0663 sampai 0,5303",
+    "angka bukan numerik"
+   ],
+   [
+    "S3-036",
+    "1",
+    "tanpa_nama_berkas"
+   ],
+   [
+    "S3-037",
+    "6,0",
+    "tanpa_nama_berkas"
+   ],
+   [
+    "S3-038",
+    "0,50",
+    "tanpa_nama_berkas"
+   ],
+   [
+    "S3-039",
+    "0,50",
+    "tanpa_nama_berkas"
+   ],
+   [
+    "S3-040",
+    "1000000",
+    "tanpa_nama_berkas"
+   ],
+   [
+    "S3-041",
+    "0,11 lawan 113,78",
+    "angka bukan numerik"
+   ],
+   [
+    "S3-042",
+    "31,33 sampai 356,00",
+    "angka bukan numerik"
+   ],
+   [
+    "S3-046",
+    "0/7",
+    "angka bukan numerik"
+   ],
+   [
+    "S3-047",
+    "0/7",
+    "angka bukan numerik"
+   ],
+   [
+    "S3-053",
+    "0/7",
+    "angka bukan numerik"
+   ],
+   [
+    "S3-054",
+    "0/7",
+    "angka bukan numerik"
+   ],
+   [
+    "S3-060",
+    "0/7",
+    "angka bukan numerik"
+   ],
+   [
+    "S3-061",
+    "0/7",
+    "angka bukan numerik"
+   ],
+   [
+    "S3-067",
+    "2/7",
+    "angka bukan numerik"
+   ],
+   [
+    "S3-068",
+    "0/7",
+    "angka bukan numerik"
+   ],
+   [
+    "S3-074",
+    "2/7",
+    "angka bukan numerik"
+   ],
+   [
+    "S3-075",
+    "0/7",
+    "angka bukan numerik"
+   ],
+   [
+    "S3-081",
+    "2/7",
+    "angka bukan numerik"
+   ],
+   [
+    "S3-082",
+    "0/7",
+    "angka bukan numerik"
+   ],
+   [
+    "S3-085",
+    "18,41",
+    "tanpa_nama_berkas"
+   ],
+   [
+    "S3-086",
+    "0,5672",
+    "tanpa_nama_berkas"
+   ],
+   [
+    "S3-087",
+    "0,7208",
+    "tanpa_nama_berkas"
+   ],
+   [
+    "S3-088",
+    "1, 3, 1, 3",
+    "angka bukan numerik"
+   ],
+   [
+    "S3-089",
+    "25, 36, 24, 20",
+    "angka bukan numerik"
+   ],
+   [
+    "S3-090",
+    "469",
+    "tanpa_nama_berkas"
+   ],
+   [
+    "S3-091",
+    "kosong",
+    "angka bukan numerik"
+   ],
+   [
+    "S3-092",
+    "BELUM TERUKUR",
+    "angka bukan numerik"
+   ]
+  ]
+ },
+ "S4": {
+  "n_baris": 95,
+  "klasifikasi": {
+   "jalur_bebas_teks": 4,
+   "tanpa_nama_berkas": 4,
+   "jalur_tidak_ada": 7,
+   "MATCH": 8,
+   "angka_bukan_numerik": 71,
+   "MISMATCH": 1
+  },
+  "mismatch": [
+   {
+    "kode": "S4-012",
+    "ledger": 39397986.0,
+    "json": 39397.986,
+    "selisih": -39358588.014,
+    "rujukan": "ddr_activity_stats.json activity.total_jam_semua_activity"
+   }
+  ],
+  "tidak_resolve": [
+   [
+    "S4-001",
+    "1759",
+    "jalur_bebas_teks"
+   ],
+   [
+    "S4-002",
+    "2180278",
+    "tanpa_nama_berkas"
+   ],
+   [
+    "S4-003",
+    "17",
+    "jalur_tidak_ada"
+   ],
+   [
+    "S4-007",
+    "3577 record / 8343.253 j",
+    "angka bukan numerik"
+   ],
+   [
+    "S4-008",
+    "1116 record / 1777.75 ja",
+    "angka bukan numerik"
+   ],
+   [
+    "S4-009",
+    "806 / 1215.0 / 1.0 / 3.5",
+    "angka bukan numerik"
+   ],
+   [
+    "S4-010",
+    "310 / 562.75 / 1.0 / 4.5",
+    "angka bukan numerik"
+   ],
+   [
+    "S4-011",
+    "480 / 1265.5 / 2.0",
+    "angka bukan numerik"
+   ],
+   [
+    "S4-013",
+    "884 record / 884 kolom",
+    "angka bukan numerik"
+   ],
+   [
+    "S4-014",
+    "1225.0 / 0.75 / 3.0 / 13",
+    "angka bukan numerik"
+   ],
+   [
+    "S4-015",
+    "884 valid / 0 nol / 0 ne",
+    "angka bukan numerik"
+   ],
+   [
+    "S4-016",
+    "671 / 927.0",
+    "angka bukan numerik"
+   ],
+   [
+    "S4-017",
+    "770 / 1071.5",
+    "angka bukan numerik"
+   ],
+   [
+    "S4-018",
+    "388 / 623.917",
+    "angka bukan numerik"
+   ],
+   [
+    "S4-020",
+    "325 berkas / 18.48 perse",
+    "angka bukan numerik"
+   ],
+   [
+    "S4-021",
+    "533 record / 533 bernila",
+    "angka bukan numerik"
+   ],
+   [
+    "S4-022",
+    "26 dengan pola min/menit",
+    "angka bukan numerik"
+   ],
+   [
+    "S4-023",
+    "cost 0 (lama) / cost 0 X",
+    "angka bukan numerik"
+   ],
+   [
+    "S4-024",
+    "work order 0 XML / 0 HTM",
+    "angka bukan numerik"
+   ],
+   [
+    "S4-025",
+    "1212 laporan / FIT 1072 ",
+    "angka bukan numerik"
+   ],
+   [
+    "S4-027",
+    "630 inspect / 154 inspec",
+    "angka bukan numerik"
+   ],
+   [
+    "S4-028",
+    "5473 berkas / 409920771 ",
+    "angka bukan numerik"
+   ],
+   [
+    "S4-029",
+    "4035 baris / other_targe",
+    "angka bukan numerik"
+   ],
+   [
+    "S4-031",
+    "0.6345",
+    "jalur_tidak_ada"
+   ],
+   [
+    "S4-032",
+    "1.0107",
+    "jalur_tidak_ada"
+   ],
+   [
+    "S4-033",
+    "0.5026",
+    "jalur_tidak_ada"
+   ],
+   [
+    "S4-034",
+    "19.17",
+    "jalur_bebas_teks"
+   ],
+   [
+    "S4-035",
+    "5.48",
+    "jalur_bebas_teks"
+   ],
+   [
+    "S4-036",
+    "2.3974",
+    "jalur_tidak_ada"
+   ],
+   [
+    "S4-037",
+    "5.3974",
+    "jalur_tidak_ada"
+   ],
+   [
+    "S4-038",
+    "1.4033",
+    "jalur_bebas_teks"
+   ],
+   [
+    "S4-041",
+    "HTML 1759 berkas / 30971",
+    "angka bukan numerik"
+   ],
+   [
+    "S4-042",
+    "1202 / 2680.917 / 1.0 / ",
+    "angka bukan numerik"
+   ],
+   [
+    "S4-043",
+    "445 / 1925.5 / 2.5 / 10.",
+    "angka bukan numerik"
+   ],
+   [
+    "S4-044",
+    "806 / 1215.0 / 1.0 / 3.5",
+    "angka bukan numerik"
+   ],
+   [
+    "S4-045",
+    "202 / 590.0 / 1.5 / 6.0 ",
+    "angka bukan numerik"
+   ],
+   [
+    "S4-046",
+    "246 / 568.333 / 1.5 / 5.",
+    "angka bukan numerik"
+   ],
+   [
+    "S4-047",
+    "310 / 562.75 / 1.0 / 4.5",
+    "angka bukan numerik"
+   ],
+   [
+    "S4-048",
+    "229 / 522.003 / 1.3333 /",
+    "angka bukan numerik"
+   ],
+   [
+    "S4-049",
+    "75 / 160.75 / 2.0 / 4.3 ",
+    "angka bukan numerik"
+   ],
+   [
+    "S4-050",
+    "33 / 62.25 / 1.25 / 4.3 ",
+    "angka bukan numerik"
+   ],
+   [
+    "S4-051",
+    "29 / 55.75 / 1.75 / 3.05",
+    "angka bukan numerik"
+   ],
+   [
+    "S4-100",
+    "142 / 962.5 / 0 / 0.0 / ",
+    "angka bukan numerik"
+   ],
+   [
+    "S4-101",
+    "160 / 483.0 / 0 / 0.0 / ",
+    "angka bukan numerik"
+   ],
+   [
+    "S4-102",
+    "104 / 269.0 / 0 / 0.0 / ",
+    "angka bukan numerik"
+   ],
+   [
+    "S4-103",
+    "104 / 229.0 / 0 / 0.0 / ",
+    "angka bukan numerik"
+   ],
+   [
+    "S4-104",
+    "321 / 1006.0 / 0 / 0.0 /",
+    "angka bukan numerik"
+   ],
+   [
+    "S4-105",
+    "50 / 90.25 / 0 / 0.0 / 0",
+    "angka bukan numerik"
+   ],
+   [
+    "S4-106",
+    "2 / 1.0 / 0 / 0.0 / 0.0",
+    "angka bukan numerik"
+   ],
+   [
+    "S4-107",
+    "142 / 363.0 / 0 / 0.0 / ",
+    "angka bukan numerik"
+   ],
+   [
+    "S4-108",
+    "280 / 410.25 / 0 / 0.0 /",
+    "angka bukan numerik"
+   ],
+   [
+    "S4-109",
+    "86 / 132.0 / 0 / 0.0 / 0",
+    "angka bukan numerik"
+   ],
+   [
+    "S4-110",
+    "136 / 272.25 / 0 / 0.0 /",
+    "angka bukan numerik"
+   ],
+   [
+    "S4-111",
+    "27 / 95.0 / 0 / 0.0 / 0.",
+    "angka bukan numerik"
+   ],
+   [
+    "S4-112",
+    "135 / 290.667 / 0 / 0.0 ",
+    "angka bukan numerik"
+   ],
+   [
+    "S4-113",
+    "111 / 297.25 / 0 / 0.0 /",
+    "angka bukan numerik"
+   ],
+   [
+    "S4-114",
+    "260 / 628.417 / 0 / 0.0 ",
+    "angka bukan numerik"
+   ],
+   [
+    "S4-115",
+    "271 / 448.917 / 182 / 26",
+    "angka bukan numerik"
+   ],
+   [
+    "S4-116",
+    "110 / 211.5 / 112 / 216.",
+    "angka bukan numerik"
+   ],
+   [
+    "S4-117",
+    "42 / 63.5 / 32 / 41.0 / ",
+    "angka bukan numerik"
+   ]
+  ]
+ }
+}

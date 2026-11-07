@@ -48,7 +48,7 @@ Putaran keempat memberi **PASS** tanpa cacat.
    (`PPT1_BAB3_1.md:250,263`).
 5. Jejak seluruh klaim angka 4.1 sampai 4.3 terverifikasi, di antaranya 388 kejadian,
    611 jam, 1.212 jam, RPN 490/400/378/320, FAR 4,15 sampai 496,09, koefisien 0,8465,
-   delapan kriteria, sembilan skenario, 7 engine 27 head.
+   delapan kriteria, sembilan skenario, 7 mode 27 head.
 6. Tidak ada kontradiksi antar bab.
 
 Status: **PASS, commit 7cd3b29**, diverifikasi terhadap remote dengan sha identik.

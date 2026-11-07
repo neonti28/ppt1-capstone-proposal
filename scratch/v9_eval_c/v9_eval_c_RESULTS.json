@@ -1,0 +1,4301 @@
+{
+ "meta": {
+  "task": "V9-EVAL_C Layer C metrics",
+  "sources": [
+   "scratch/v9_e_ml/*.json",
+   "scratch/v9_e_stat/*.json",
+   "scratch/v9_e_rule/*.json"
+  ],
+  "defs": {
+   "C1_ketahanan": "dispersi metrik kunci antar fold LOWO (min/max/median/ratio) + fraksi fold mengalahkan baseline relevan + fold terburuk",
+   "C2_ketidakpastian": "CI95 AUPRC dari JSON (E_ML/E_STAT): apakah memuat prevalensi (no-skill); E_RULE tanpa CI -> Wilson CI95 dari TP/FP/FN",
+   "C3_portabilitas_ambang": "pada tau TETAP: dispersion FAR/recall antar well + jumlah well dgn FAR<=6&recall>0; konsistensi pemangkasan FP hybrid antar fold",
+   "C4_kualitas_sensor": "n_nodata, anchor hilang onset (ABSORBED), sign-flip jendela, kanal absen",
+   "C5_determinisme": "rerun identik: E_STAT hash-equality (kecuali elapsed_s), E_ML determinism_check, E_RULE rerun (dilaporkan tim)"
+  }
+ },
+ "C_ml": {
+  "vib": {
+   "n_folds": 4,
+   "n_layak": 4,
+   "test_wells": [
+    "F-14",
+    "F-15A",
+    "F-15_S",
+    "F-5"
+   ],
+   "underpowered_folds": [],
+   "rf": {
+    "auprc_disp": {
+     "min": 0.44052428575087504,
+     "max": 0.911676937088842,
+     "median": 0.5268,
+     "max_min_ratio": 2.07,
+     "n": 4
+    },
+    "ci95_contains_prev_folds": {
+     "n": "0/4",
+     "folds": []
+    },
+    "delta_B_pos_folds": {
+     "persistence": {
+      "n_pos": "2/4",
+      "folds_pos": [
+       "F-14",
+       "F-15A"
+      ],
+      "range": [
+       -0.2268,
+       0.1192
+      ]
+     },
+     "canary_depth": {
+      "n_pos": "4/4",
+      "folds_pos": [
+       "F-14",
+       "F-15A",
+       "F-15_S",
+       "F-5"
+      ],
+      "range": [
+       0.1044,
+       0.2993
+      ]
+     },
+     "prevalence_random": {
+      "n_pos": "4/4",
+      "folds_pos": [
+       "F-14",
+       "F-15A",
+       "F-15_S",
+       "F-5"
+      ],
+      "range": [
+       0.1701,
+       0.3509
+      ]
+     }
+    },
+    "far_by_tau": {
+     "0.05": {
+      "FAR_disp": {
+       "min": 983.4596094333582,
+       "max": 1440.0,
+       "median": 1402.8644,
+       "max_min_ratio": 1.46,
+       "n": 4
+      },
+      "recall_disp": {
+       "min": 0.9647519582245431,
+       "max": 1.0,
+       "median": 0.9997,
+       "max_min_ratio": 1.04,
+       "n": 4
+      },
+      "n_well_FARle6_recall_pos": 0,
+      "n_well": 4
+     },
+     "0.1": {
+      "FAR_disp": {
+       "min": 754.6515846761284,
+       "max": 1440.0,
+       "median": 1244.5792,
+       "max_min_ratio": 1.91,
+       "n": 4
+      },
+      "recall_disp": {
+       "min": 0.8929503916449086,
+       "max": 1.0,
+       "median": 0.9974,
+       "max_min_ratio": 1.12,
+       "n": 4
+      },
+      "n_well_FARle6_recall_pos": 0,
+      "n_well": 4
+     },
+     "0.2": {
+      "FAR_disp": {
+       "min": 393.99850602923914,
+       "max": 1156.8981575217656,
+       "median": 766.6338,
+       "max_min_ratio": 2.94,
+       "n": 4
+      },
+      "recall_disp": {
+       "min": 0.7193211488250653,
+       "max": 0.983739837398374,
+       "median": 0.9712,
+       "max_min_ratio": 1.37,
+       "n": 4
+      },
+      "n_well_FARle6_recall_pos": 0,
+      "n_well": 4
+     },
+     "0.3": {
+      "FAR_disp": {
+       "min": 188.7013125600256,
+       "max": 699.1907514450867,
+       "median": 538.7992,
+       "max_min_ratio": 3.71,
+       "n": 4
+      },
+      "recall_disp": {
+       "min": 0.49738903394255873,
+       "max": 0.9537366548042705,
+       "median": 0.7561,
+       "max_min_ratio": 1.92,
+       "n": 4
+      },
+      "n_well_FARle6_recall_pos": 0,
+      "n_well": 4
+     },
+     "0.5": {
+      "FAR_disp": {
+       "min": 4.14897022729698,
+       "max": 496.09248554913296,
+       "median": 280.1694,
+       "max_min_ratio": 119.57,
+       "n": 4
+      },
+      "recall_disp": {
+       "min": 0.10182767624020887,
+       "max": 0.8656583629893239,
+       "median": 0.5198,
+       "max_min_ratio": 8.5,
+       "n": 4
+      },
+      "n_well_FARle6_recall_pos": 1,
+      "n_well": 4
+     }
+    }
+   },
+   "gb": {
+    "auprc_disp": {
+     "min": 0.24864965207826203,
+     "max": 0.9164087187683988,
+     "median": 0.4929,
+     "max_min_ratio": 3.69,
+     "n": 4
+    },
+    "ci95_contains_prev_folds": {
+     "n": "0/4",
+     "folds": []
+    },
+    "delta_B_pos_folds": {
+     "persistence": {
+      "n_pos": "2/4",
+      "folds_pos": [
+       "F-14",
+       "F-15A"
+      ],
+      "range": [
+       -0.2268,
+       0.1192
+      ]
+     },
+     "canary_depth": {
+      "n_pos": "4/4",
+      "folds_pos": [
+       "F-14",
+       "F-15A",
+       "F-15_S",
+       "F-5"
+      ],
+      "range": [
+       0.1044,
+       0.2993
+      ]
+     },
+     "prevalence_random": {
+      "n_pos": "4/4",
+      "folds_pos": [
+       "F-14",
+       "F-15A",
+       "F-15_S",
+       "F-5"
+      ],
+      "range": [
+       0.1701,
+       0.3509
+      ]
+     }
+    },
+    "far_by_tau": {
+     "0.05": {
+      "FAR_disp": {
+       "min": 670.1355244904493,
+       "max": 890.4150637780928,
+       "median": 815.8793,
+       "max_min_ratio": 1.33,
+       "n": 4
+      },
+      "recall_disp": {
+       "min": 0.8198433420365535,
+       "max": 0.9590747330960854,
+       "median": 0.9369,
+       "max_min_ratio": 1.17,
+       "n": 4
+      },
+      "n_well_FARle6_recall_pos": 0,
+      "n_well": 4
+     },
+     "0.1": {
+      "FAR_disp": {
+       "min": 432.7222281506776,
+       "max": 740.8092485549133,
+       "median": 686.2612,
+       "max_min_ratio": 1.71,
+       "n": 4
+      },
+      "recall_disp": {
+       "min": 0.7134464751958225,
+       "max": 0.9555160142348754,
+       "median": 0.8538,
+       "max_min_ratio": 1.34,
+       "n": 4
+      },
+      "n_well_FARle6_recall_pos": 0,
+      "n_well": 4
+     },
+     "0.2": {
+      "FAR_disp": {
+       "min": 310.4044392274037,
+       "max": 692.5317919075145,
+       "median": 474.9215,
+       "max_min_ratio": 2.23,
+       "n": 4
+      },
+      "recall_disp": {
+       "min": 0.5372062663185379,
+       "max": 0.9457295373665481,
+       "median": 0.7034,
+       "max_min_ratio": 1.76,
+       "n": 4
+      },
+      "n_well_FARle6_recall_pos": 0,
+      "n_well": 4
+     },
+     "0.3": {
+      "FAR_disp": {
+       "min": 227.84810126582278,
+       "max": 655.9075144508671,
+       "median": 326.3901,
+       "max_min_ratio": 2.88,
+       "n": 4
+      },
+      "recall_disp": {
+       "min": 0.4112271540469974,
+       "max": 0.9368327402135231,
+       "median": 0.5692,
+       "max_min_ratio": 2.28,
+       "n": 4
+      },
+      "n_well_FARle6_recall_pos": 0,
+      "n_well": 4
+     },
+     "0.5": {
+      "FAR_disp": {
+       "min": 14.755877034358047,
+       "max": 391.21387283236993,
+       "median": 213.9732,
+       "max_min_ratio": 26.51,
+       "n": 4
+      },
+      "recall_disp": {
+       "min": 0.06666666666666667,
+       "max": 0.8460854092526691,
+       "median": 0.366,
+       "max_min_ratio": 12.69,
+       "n": 4
+      },
+      "n_well_FARle6_recall_pos": 0,
+      "n_well": 4
+     }
+    }
+   },
+   "lr": {
+    "auprc_disp": {
+     "min": 0.18392540995839796,
+     "max": 0.8752400568983214,
+     "median": 0.6539,
+     "max_min_ratio": 4.76,
+     "n": 4
+    },
+    "ci95_contains_prev_folds": {
+     "n": "1/4",
+     "folds": [
+      "F-15_S"
+     ]
+    },
+    "delta_B_pos_folds": {
+     "persistence": {
+      "n_pos": "2/4",
+      "folds_pos": [
+       "F-14",
+       "F-15A"
+      ],
+      "range": [
+       -0.2268,
+       0.1192
+      ]
+     },
+     "canary_depth": {
+      "n_pos": "4/4",
+      "folds_pos": [
+       "F-14",
+       "F-15A",
+       "F-15_S",
+       "F-5"
+      ],
+      "range": [
+       0.1044,
+       0.2993
+      ]
+     },
+     "prevalence_random": {
+      "n_pos": "4/4",
+      "folds_pos": [
+       "F-14",
+       "F-15A",
+       "F-15_S",
+       "F-5"
+      ],
+      "range": [
+       0.1701,
+       0.3509
+      ]
+     }
+    },
+    "far_by_tau": {
+     "0.05": {
+      "FAR_disp": {
+       "min": 599.306358381503,
+       "max": 1433.490054249548,
+       "median": 1302.0377,
+       "max_min_ratio": 2.39,
+       "n": 4
+      },
+      "recall_disp": {
+       "min": 0.9217081850533808,
+       "max": 0.9983739837398374,
+       "median": 0.9769,
+       "max_min_ratio": 1.08,
+       "n": 4
+      },
+      "n_well_FARle6_recall_pos": 0,
+      "n_well": 4
+     },
+     "0.1": {
+      "FAR_disp": {
+       "min": 514.4046242774566,
+       "max": 1340.614828209765,
+       "median": 1197.2821,
+       "max_min_ratio": 2.61,
+       "n": 4
+      },
+      "recall_disp": {
+       "min": 0.8781138790035588,
+       "max": 0.9926829268292683,
+       "median": 0.9352,
+       "max_min_ratio": 1.13,
+       "n": 4
+      },
+      "n_well_FARle6_recall_pos": 0,
+      "n_well": 4
+     },
+     "0.2": {
+      "FAR_disp": {
+       "min": 507.7456647398844,
+       "max": 1170.8928932982385,
+       "median": 913.4693,
+       "max_min_ratio": 2.31,
+       "n": 4
+      },
+      "recall_disp": {
+       "min": 0.837467362924282,
+       "max": 0.9504065040650407,
+       "median": 0.9064,
+       "max_min_ratio": 1.13,
+       "n": 4
+      },
+      "n_well_FARle6_recall_pos": 0,
+      "n_well": 4
+     },
+     "0.3": {
+      "FAR_disp": {
+       "min": 399.53757225433526,
+       "max": 1141.4456367685766,
+       "median": 629.6789,
+       "max_min_ratio": 2.86,
+       "n": 4
+      },
+      "recall_disp": {
+       "min": 0.7571801566579635,
+       "max": 0.9384316267012314,
+       "median": 0.8935,
+       "max_min_ratio": 1.24,
+       "n": 4
+      },
+      "n_well_FARle6_recall_pos": 0,
+      "n_well": 4
+     },
+     "0.5": {
+      "FAR_disp": {
+       "min": 189.78034682080926,
+       "max": 1023.365053654586,
+       "median": 314.3161,
+       "max_min_ratio": 5.39,
+       "n": 4
+      },
+      "recall_disp": {
+       "min": 0.37532637075718017,
+       "max": 0.931302657161374,
+       "median": 0.8138,
+       "max_min_ratio": 2.48,
+       "n": 4
+      },
+      "n_well_FARle6_recall_pos": 0,
+      "n_well": 4
+     }
+    }
+   }
+  },
+  "ssi": {
+   "n_folds": 9,
+   "n_layak": 7,
+   "test_wells": [
+    "F-10",
+    "F-12",
+    "F-14",
+    "F-15A",
+    "F-15_S",
+    "F-5",
+    "F-7",
+    "F-9",
+    "F-9_A"
+   ],
+   "underpowered_folds": [
+    "F-7",
+    "F-9"
+   ],
+   "rf": {
+    "auprc_disp": {
+     "min": 0.015115323583482665,
+     "max": 0.4588744588744589,
+     "median": 0.0839,
+     "max_min_ratio": 30.36,
+     "n": 9
+    },
+    "ci95_contains_prev_folds": {
+     "n": "3/7",
+     "folds": [
+      "F-12",
+      "F-14",
+      "F-9_A"
+     ]
+    },
+    "delta_B_pos_folds": {
+     "persistence": {
+      "n_pos": "6/7",
+      "folds_pos": [
+       "F-12",
+       "F-14",
+       "F-15A",
+       "F-15_S",
+       "F-5",
+       "F-9_A"
+      ],
+      "range": [
+       -0.1168,
+       0.1195
+      ]
+     },
+     "canary_depth": {
+      "n_pos": "5/7",
+      "folds_pos": [
+       "F-10",
+       "F-15A",
+       "F-15_S",
+       "F-5",
+       "F-9_A"
+      ],
+      "range": [
+       -0.0159,
+       0.1118
+      ]
+     },
+     "prevalence_random": {
+      "n_pos": "7/7",
+      "folds_pos": [
+       "F-10",
+       "F-12",
+       "F-14",
+       "F-15A",
+       "F-15_S",
+       "F-5",
+       "F-9_A"
+      ],
+      "range": [
+       0.0148,
+       0.1202
+      ]
+     }
+    },
+    "far_by_tau": {
+     "0.05": {
+      "FAR_disp": {
+       "min": 112.7667390215395,
+       "max": 1287.9389312977098,
+       "median": 627.2779,
+       "max_min_ratio": 11.42,
+       "n": 7
+      },
+      "recall_disp": {
+       "min": 0.3167701863354037,
+       "max": 1.0,
+       "median": 0.7549,
+       "max_min_ratio": 3.16,
+       "n": 7
+      },
+      "n_well_FARle6_recall_pos": 0,
+      "n_well": 7
+     },
+     "0.1": {
+      "FAR_disp": {
+       "min": 20.437468692603105,
+       "max": 545.2161520190024,
+       "median": 225.7105,
+       "max_min_ratio": 26.68,
+       "n": 7
+      },
+      "recall_disp": {
+       "min": 0.13333333333333333,
+       "max": 0.6176470588235294,
+       "median": 0.5294,
+       "max_min_ratio": 4.63,
+       "n": 7
+      },
+      "n_well_FARle6_recall_pos": 0,
+      "n_well": 7
+     },
+     "0.2": {
+      "FAR_disp": {
+       "min": 4.327934546668893,
+       "max": 83.80047505938242,
+       "median": 25.4746,
+       "max_min_ratio": 19.36,
+       "n": 7
+      },
+      "recall_disp": {
+       "min": 0.0,
+       "max": 0.3176470588235294,
+       "median": 0.1205,
+       "max_min_ratio": null,
+       "n": 7
+      },
+      "n_well_FARle6_recall_pos": 1,
+      "n_well": 7
+     },
+     "0.3": {
+      "FAR_disp": {
+       "min": 0.0,
+       "max": 15.611448395490026,
+       "median": 3.6641,
+       "max_min_ratio": null,
+       "n": 7
+      },
+      "recall_disp": {
+       "min": 0.0,
+       "max": 0.12745098039215685,
+       "median": 0.0124,
+       "max_min_ratio": null,
+       "n": 7
+      },
+      "n_well_FARle6_recall_pos": 2,
+      "n_well": 7
+     },
+     "0.5": {
+      "FAR_disp": {
+       "min": 0.0,
+       "max": 0.9366869037294016,
+       "median": 0.0,
+       "max_min_ratio": null,
+       "n": 7
+      },
+      "recall_disp": {
+       "min": 0.0,
+       "max": 0.0,
+       "median": 0.0,
+       "max_min_ratio": null,
+       "n": 7
+      },
+      "n_well_FARle6_recall_pos": 0,
+      "n_well": 7
+     }
+    }
+   },
+   "gb": {
+    "auprc_disp": {
+     "min": 0.006854529701266534,
+     "max": 0.14061259773064513,
+     "median": 0.043,
+     "max_min_ratio": 20.51,
+     "n": 9
+    },
+    "ci95_contains_prev_folds": {
+     "n": "2/7",
+     "folds": [
+      "F-14",
+      "F-15_S"
+     ]
+    },
+    "delta_B_pos_folds": {
+     "persistence": {
+      "n_pos": "6/7",
+      "folds_pos": [
+       "F-12",
+       "F-14",
+       "F-15A",
+       "F-15_S",
+       "F-5",
+       "F-9_A"
+      ],
+      "range": [
+       -0.1168,
+       0.1195
+      ]
+     },
+     "canary_depth": {
+      "n_pos": "5/7",
+      "folds_pos": [
+       "F-10",
+       "F-15A",
+       "F-15_S",
+       "F-5",
+       "F-9_A"
+      ],
+      "range": [
+       -0.0159,
+       0.1118
+      ]
+     },
+     "prevalence_random": {
+      "n_pos": "7/7",
+      "folds_pos": [
+       "F-10",
+       "F-12",
+       "F-14",
+       "F-15A",
+       "F-15_S",
+       "F-5",
+       "F-9_A"
+      ],
+      "range": [
+       0.0148,
+       0.1202
+      ]
+     }
+    },
+    "far_by_tau": {
+     "0.05": {
+      "FAR_disp": {
+       "min": 18.994823843713476,
+       "max": 537.4319954346586,
+       "median": 42.3408,
+       "max_min_ratio": 28.29,
+       "n": 7
+      },
+      "recall_disp": {
+       "min": 0.04,
+       "max": 0.6265060240963856,
+       "median": 0.2059,
+       "max_min_ratio": 15.66,
+       "n": 7
+      },
+      "n_well_FARle6_recall_pos": 0,
+      "n_well": 7
+     },
+     "0.1": {
+      "FAR_disp": {
+       "min": 16.109534145934212,
+       "max": 376.0928286094731,
+       "median": 26.4372,
+       "max_min_ratio": 23.35,
+       "n": 7
+      },
+      "recall_disp": {
+       "min": 0.0,
+       "max": 0.4457831325301205,
+       "median": 0.1176,
+       "max_min_ratio": null,
+       "n": 7
+      },
+      "n_well_FARle6_recall_pos": 0,
+      "n_well": 7
+     },
+     "0.2": {
+      "FAR_disp": {
+       "min": 10.17100371747212,
+       "max": 253.92429142096253,
+       "median": 19.6704,
+       "max_min_ratio": 24.97,
+       "n": 7
+      },
+      "recall_disp": {
+       "min": 0.0,
+       "max": 0.39759036144578314,
+       "median": 0.0588,
+       "max_min_ratio": null,
+       "n": 7
+      },
+      "n_well_FARle6_recall_pos": 0,
+      "n_well": 7
+     },
+     "0.3": {
+      "FAR_disp": {
+       "min": 5.888475836431227,
+       "max": 156.9564390336694,
+       "median": 18.1093,
+       "max_min_ratio": 26.65,
+       "n": 7
+      },
+      "recall_disp": {
+       "min": 0.0,
+       "max": 0.3493975903614458,
+       "median": 0.0364,
+       "max_min_ratio": null,
+       "n": 7
+      },
+      "n_well_FARle6_recall_pos": 1,
+      "n_well": 7
+     },
+     "0.5": {
+      "FAR_disp": {
+       "min": 2.141263940520446,
+       "max": 81.40617577197149,
+       "median": 14.6669,
+       "max_min_ratio": 38.02,
+       "n": 7
+      },
+      "recall_disp": {
+       "min": 0.0,
+       "max": 0.26506024096385544,
+       "median": 0.0182,
+       "max_min_ratio": null,
+       "n": 7
+      },
+      "n_well_FARle6_recall_pos": 1,
+      "n_well": 7
+     }
+    }
+   },
+   "lr": {
+    "auprc_disp": {
+     "min": 0.015993875574791833,
+     "max": 0.2081602350644225,
+     "median": 0.0451,
+     "max_min_ratio": 13.01,
+     "n": 9
+    },
+    "ci95_contains_prev_folds": {
+     "n": "3/7",
+     "folds": [
+      "F-14",
+      "F-15A",
+      "F-15_S"
+     ]
+    },
+    "delta_B_pos_folds": {
+     "persistence": {
+      "n_pos": "6/7",
+      "folds_pos": [
+       "F-12",
+       "F-14",
+       "F-15A",
+       "F-15_S",
+       "F-5",
+       "F-9_A"
+      ],
+      "range": [
+       -0.1168,
+       0.1195
+      ]
+     },
+     "canary_depth": {
+      "n_pos": "5/7",
+      "folds_pos": [
+       "F-10",
+       "F-15A",
+       "F-15_S",
+       "F-5",
+       "F-9_A"
+      ],
+      "range": [
+       -0.0159,
+       0.1118
+      ]
+     },
+     "prevalence_random": {
+      "n_pos": "7/7",
+      "folds_pos": [
+       "F-10",
+       "F-12",
+       "F-14",
+       "F-15A",
+       "F-15_S",
+       "F-5",
+       "F-9_A"
+      ],
+      "range": [
+       0.0148,
+       0.1202
+      ]
+     }
+    },
+    "far_by_tau": {
+     "0.05": {
+      "FAR_disp": {
+       "min": 1283.6488812392427,
+       "max": 1438.0825565912116,
+       "median": 1412.8361,
+       "max_min_ratio": 1.12,
+       "n": 7
+      },
+      "recall_disp": {
+       "min": 0.72,
+       "max": 1.0,
+       "median": 0.9759,
+       "max_min_ratio": 1.39,
+       "n": 7
+      },
+      "n_well_FARle6_recall_pos": 0,
+      "n_well": 7
+     },
+     "0.1": {
+      "FAR_disp": {
+       "min": 869.7418244406197,
+       "max": 1428.2214190603006,
+       "median": 1334.4666,
+       "max_min_ratio": 1.64,
+       "n": 7
+      },
+      "recall_disp": {
+       "min": 0.6266666666666667,
+       "max": 1.0,
+       "median": 0.9518,
+       "max_min_ratio": 1.6,
+       "n": 7
+      },
+      "n_well_FARle6_recall_pos": 0,
+      "n_well": 7
+     },
+     "0.2": {
+      "FAR_disp": {
+       "min": 389.94836488812393,
+       "max": 1341.0687022900763,
+       "median": 1031.9167,
+       "max_min_ratio": 3.44,
+       "n": 7
+      },
+      "recall_disp": {
+       "min": 0.37333333333333335,
+       "max": 1.0,
+       "median": 0.8922,
+       "max_min_ratio": 2.68,
+       "n": 7
+      },
+      "n_well_FARle6_recall_pos": 0,
+      "n_well": 7
+     },
+     "0.3": {
+      "FAR_disp": {
+       "min": 156.97074010327023,
+       "max": 1251.2977099236641,
+       "median": 785.2559,
+       "max_min_ratio": 7.97,
+       "n": 7
+      },
+      "recall_disp": {
+       "min": 0.26666666666666666,
+       "max": 0.9636363636363636,
+       "median": 0.7353,
+       "max_min_ratio": 3.61,
+       "n": 7
+      },
+      "n_well_FARle6_recall_pos": 0,
+      "n_well": 7
+     },
+     "0.5": {
+      "FAR_disp": {
+       "min": 76.62650602409639,
+       "max": 1018.6259541984733,
+       "median": 396.843,
+       "max_min_ratio": 13.29,
+       "n": 7
+      },
+      "recall_disp": {
+       "min": 0.19875776397515527,
+       "max": 0.9454545454545454,
+       "median": 0.4902,
+       "max_min_ratio": 4.76,
+       "n": 7
+      },
+      "n_well_FARle6_recall_pos": 0,
+      "n_well": 7
+     }
+    }
+   }
+  },
+  "shk": {
+   "n_folds": 9,
+   "n_layak": 9,
+   "test_wells": [
+    "F-10",
+    "F-12",
+    "F-14",
+    "F-15A",
+    "F-15_S",
+    "F-5",
+    "F-7",
+    "F-9",
+    "F-9_A"
+   ],
+   "underpowered_folds": [],
+   "rf": {
+    "auprc_disp": {
+     "min": 0.006872294547472093,
+     "max": 0.19288544168099098,
+     "median": 0.0456,
+     "max_min_ratio": 28.07,
+     "n": 9
+    },
+    "ci95_contains_prev_folds": {
+     "n": "7/9",
+     "folds": [
+      "F-10",
+      "F-12",
+      "F-14",
+      "F-15A",
+      "F-15_S",
+      "F-7",
+      "F-9_A"
+     ]
+    },
+    "delta_B_pos_folds": {
+     "persistence": {
+      "n_pos": "4/9",
+      "folds_pos": [
+       "F-15A",
+       "F-5",
+       "F-9",
+       "F-9_A"
+      ],
+      "range": [
+       -0.3436,
+       0.1591
+      ]
+     },
+     "canary_depth": {
+      "n_pos": "5/9",
+      "folds_pos": [
+       "F-14",
+       "F-15_S",
+       "F-5",
+       "F-7",
+       "F-9"
+      ],
+      "range": [
+       -0.0196,
+       0.1318
+      ]
+     },
+     "prevalence_random": {
+      "n_pos": "9/9",
+      "folds_pos": [
+       "F-10",
+       "F-12",
+       "F-14",
+       "F-15A",
+       "F-15_S",
+       "F-5",
+       "F-7",
+       "F-9",
+       "F-9_A"
+      ],
+      "range": [
+       0.0005,
+       0.1686
+      ]
+     }
+    },
+    "far_by_tau": {
+     "0.05": {
+      "FAR_disp": {
+       "min": 351.59551141493614,
+       "max": 1173.1728288907996,
+       "median": 810.6496,
+       "max_min_ratio": 3.34,
+       "n": 9
+      },
+      "recall_disp": {
+       "min": 0.2945205479452055,
+       "max": 1.0,
+       "median": 0.7416,
+       "max_min_ratio": 3.4,
+       "n": 9
+      },
+      "n_well_FARle6_recall_pos": 0,
+      "n_well": 9
+     },
+     "0.1": {
+      "FAR_disp": {
+       "min": 91.41083346267267,
+       "max": 708.8372093023256,
+       "median": 282.919,
+       "max_min_ratio": 7.75,
+       "n": 9
+      },
+      "recall_disp": {
+       "min": 0.024390243902439025,
+       "max": 0.6444444444444445,
+       "median": 0.1461,
+       "max_min_ratio": 26.42,
+       "n": 9
+      },
+      "n_well_FARle6_recall_pos": 0,
+      "n_well": 9
+     },
+     "0.2": {
+      "FAR_disp": {
+       "min": 0.2586439155814998,
+       "max": 211.2956810631229,
+       "median": 52.0034,
+       "max_min_ratio": 816.94,
+       "n": 9
+      },
+      "recall_disp": {
+       "min": 0.0,
+       "max": 0.6222222222222222,
+       "median": 0.0075,
+       "max_min_ratio": null,
+       "n": 9
+      },
+      "n_well_FARle6_recall_pos": 0,
+      "n_well": 9
+     },
+     "0.3": {
+      "FAR_disp": {
+       "min": 0.0,
+       "max": 96.47840531561462,
+       "median": 9.7147,
+       "max_min_ratio": null,
+       "n": 9
+      },
+      "recall_disp": {
+       "min": 0.0,
+       "max": 0.4888888888888889,
+       "median": 0.0,
+       "max_min_ratio": null,
+       "n": 9
+      },
+      "n_well_FARle6_recall_pos": 1,
+      "n_well": 9
+     },
+     "0.5": {
+      "FAR_disp": {
+       "min": 0.0,
+       "max": 19.93355481727575,
+       "median": 0.0,
+       "max_min_ratio": null,
+       "n": 9
+      },
+      "recall_disp": {
+       "min": 0.0,
+       "max": 0.3111111111111111,
+       "median": 0.0,
+       "max_min_ratio": null,
+       "n": 9
+      },
+      "n_well_FARle6_recall_pos": 0,
+      "n_well": 9
+     }
+    }
+   },
+   "gb": {
+    "auprc_disp": {
+     "min": 0.009332970337405797,
+     "max": 0.11708490778880204,
+     "median": 0.0324,
+     "max_min_ratio": 12.55,
+     "n": 9
+    },
+    "ci95_contains_prev_folds": {
+     "n": "8/9",
+     "folds": [
+      "F-10",
+      "F-12",
+      "F-14",
+      "F-15A",
+      "F-15_S",
+      "F-7",
+      "F-9",
+      "F-9_A"
+     ]
+    },
+    "delta_B_pos_folds": {
+     "persistence": {
+      "n_pos": "4/9",
+      "folds_pos": [
+       "F-15A",
+       "F-5",
+       "F-9",
+       "F-9_A"
+      ],
+      "range": [
+       -0.3436,
+       0.1591
+      ]
+     },
+     "canary_depth": {
+      "n_pos": "5/9",
+      "folds_pos": [
+       "F-14",
+       "F-15_S",
+       "F-5",
+       "F-7",
+       "F-9"
+      ],
+      "range": [
+       -0.0196,
+       0.1318
+      ]
+     },
+     "prevalence_random": {
+      "n_pos": "9/9",
+      "folds_pos": [
+       "F-10",
+       "F-12",
+       "F-14",
+       "F-15A",
+       "F-15_S",
+       "F-5",
+       "F-7",
+       "F-9",
+       "F-9_A"
+      ],
+      "range": [
+       0.0005,
+       0.1686
+      ]
+     }
+    },
+    "far_by_tau": {
+     "0.05": {
+      "FAR_disp": {
+       "min": 43.15174724748684,
+       "max": 510.1619121048574,
+       "median": 185.3408,
+       "max_min_ratio": 11.82,
+       "n": 9
+      },
+      "recall_disp": {
+       "min": 0.007722007722007722,
+       "max": 0.5555555555555556,
+       "median": 0.0824,
+       "max_min_ratio": 71.94,
+       "n": 9
+      },
+      "n_well_FARle6_recall_pos": 0,
+      "n_well": 9
+     },
+     "0.1": {
+      "FAR_disp": {
+       "min": 7.800851283374178,
+       "max": 243.18936877076413,
+       "median": 99.0542,
+       "max_min_ratio": 31.17,
+       "n": 9
+      },
+      "recall_disp": {
+       "min": 0.0,
+       "max": 0.5555555555555556,
+       "median": 0.0375,
+       "max_min_ratio": null,
+       "n": 9
+      },
+      "n_well_FARle6_recall_pos": 0,
+      "n_well": 9
+     },
+     "0.2": {
+      "FAR_disp": {
+       "min": 3.714691087321037,
+       "max": 138.7375415282392,
+       "median": 31.9603,
+       "max_min_ratio": 37.35,
+       "n": 9
+      },
+      "recall_disp": {
+       "min": 0.0,
+       "max": 0.5333333333333333,
+       "median": 0.0244,
+       "max_min_ratio": null,
+       "n": 9
+      },
+      "n_well_FARle6_recall_pos": 0,
+      "n_well": 9
+     },
+     "0.3": {
+      "FAR_disp": {
+       "min": 3.1574874242228814,
+       "max": 90.763299922899,
+       "median": 30.8428,
+       "max_min_ratio": 28.75,
+       "n": 9
+      },
+      "recall_disp": {
+       "min": 0.0,
+       "max": 0.4222222222222222,
+       "median": 0.0145,
+       "max_min_ratio": null,
+       "n": 9
+      },
+      "n_well_FARle6_recall_pos": 0,
+      "n_well": 9
+     },
+     "0.5": {
+      "FAR_disp": {
+       "min": 1.238177128116939,
+       "max": 55.51272166538165,
+       "median": 9.1826,
+       "max_min_ratio": 44.83,
+       "n": 9
+      },
+      "recall_disp": {
+       "min": 0.0,
+       "max": 0.0375,
+       "median": 0.0105,
+       "max_min_ratio": null,
+       "n": 9
+      },
+      "n_well_FARle6_recall_pos": 0,
+      "n_well": 9
+     }
+    }
+   },
+   "lr": {
+    "auprc_disp": {
+     "min": 0.01475261459942058,
+     "max": 0.09970641023325552,
+     "median": 0.0542,
+     "max_min_ratio": 6.76,
+     "n": 9
+    },
+    "ci95_contains_prev_folds": {
+     "n": "8/9",
+     "folds": [
+      "F-10",
+      "F-12",
+      "F-14",
+      "F-15A",
+      "F-15_S",
+      "F-7",
+      "F-9",
+      "F-9_A"
+     ]
+    },
+    "delta_B_pos_folds": {
+     "persistence": {
+      "n_pos": "4/9",
+      "folds_pos": [
+       "F-15A",
+       "F-5",
+       "F-9",
+       "F-9_A"
+      ],
+      "range": [
+       -0.3436,
+       0.1591
+      ]
+     },
+     "canary_depth": {
+      "n_pos": "5/9",
+      "folds_pos": [
+       "F-14",
+       "F-15_S",
+       "F-5",
+       "F-7",
+       "F-9"
+      ],
+      "range": [
+       -0.0196,
+       0.1318
+      ]
+     },
+     "prevalence_random": {
+      "n_pos": "9/9",
+      "folds_pos": [
+       "F-10",
+       "F-12",
+       "F-14",
+       "F-15A",
+       "F-15_S",
+       "F-5",
+       "F-7",
+       "F-9",
+       "F-9_A"
+      ],
+      "range": [
+       0.0005,
+       0.1686
+      ]
+     }
+    },
+    "far_by_tau": {
+     "0.05": {
+      "FAR_disp": {
+       "min": 1121.997305792546,
+       "max": 1440.0,
+       "median": 1432.494,
+       "max_min_ratio": 1.28,
+       "n": 9
+      },
+      "recall_disp": {
+       "min": 0.3281853281853282,
+       "max": 1.0,
+       "median": 1.0,
+       "max_min_ratio": 3.05,
+       "n": 9
+      },
+      "n_well_FARle6_recall_pos": 0,
+      "n_well": 9
+     },
+     "0.1": {
+      "FAR_disp": {
+       "min": 934.0590739068748,
+       "max": 1440.0,
+       "median": 1401.4187,
+       "max_min_ratio": 1.54,
+       "n": 9
+      },
+      "recall_disp": {
+       "min": 0.28957528957528955,
+       "max": 1.0,
+       "median": 1.0,
+       "max_min_ratio": 3.45,
+       "n": 9
+      },
+      "n_well_FARle6_recall_pos": 0,
+      "n_well": 9
+     },
+     "0.2": {
+      "FAR_disp": {
+       "min": 378.8984909067458,
+       "max": 1432.0695652173913,
+       "median": 1302.8571,
+       "max_min_ratio": 3.78,
+       "n": 9
+      },
+      "recall_disp": {
+       "min": 0.18146718146718147,
+       "max": 1.0,
+       "median": 0.9778,
+       "max_min_ratio": 5.51,
+       "n": 9
+      },
+      "n_well_FARle6_recall_pos": 0,
+      "n_well": 9
+     },
+     "0.3": {
+      "FAR_disp": {
+       "min": 108.65471430414033,
+       "max": 1347.1367153912295,
+       "median": 1141.8967,
+       "max_min_ratio": 12.4,
+       "n": 9
+      },
+      "recall_disp": {
+       "min": 0.08494208494208494,
+       "max": 1.0,
+       "median": 0.8667,
+       "max_min_ratio": 11.77,
+       "n": 9
+      },
+      "n_well_FARle6_recall_pos": 0,
+      "n_well": 9
+     },
+     "0.5": {
+      "FAR_disp": {
+       "min": 25.631368502515155,
+       "max": 1084.4410177332306,
+       "median": 402.7441,
+       "max_min_ratio": 42.31,
+       "n": 9
+      },
+      "recall_disp": {
+       "min": 0.0,
+       "max": 1.0,
+       "median": 0.4157,
+       "max_min_ratio": null,
+       "n": 9
+      },
+      "n_well_FARle6_recall_pos": 0,
+      "n_well": 9
+     }
+    }
+   }
+  },
+  "stuck_k2": {
+   "n_folds": 4,
+   "n_layak": 4,
+   "test_wells": [
+    "F-10",
+    "F-14",
+    "F-9",
+    "F-9_A"
+   ],
+   "underpowered_folds": [],
+   "rf": {
+    "auprc_disp": {
+     "min": 0.06967364070055007,
+     "max": 0.44433911521175595,
+     "median": 0.1351,
+     "max_min_ratio": 6.38,
+     "n": 4
+    },
+    "ci95_contains_prev_folds": {
+     "n": "1/4",
+     "folds": [
+      "F-10"
+     ]
+    },
+    "delta_B_pos_folds": {
+     "persistence": {
+      "n_pos": "0/4",
+      "folds_pos": [],
+      "range": [
+       -0.7734,
+       -0.4446
+      ]
+     },
+     "canary_depth": {
+      "n_pos": "4/4",
+      "folds_pos": [
+       "F-10",
+       "F-14",
+       "F-9",
+       "F-9_A"
+      ],
+      "range": [
+       0.0239,
+       0.1874
+      ]
+     },
+     "prevalence_random": {
+      "n_pos": "4/4",
+      "folds_pos": [
+       "F-10",
+       "F-14",
+       "F-9",
+       "F-9_A"
+      ],
+      "range": [
+       0.0166,
+       0.22
+      ]
+     }
+    },
+    "far_by_tau": {
+     "0.05": {
+      "FAR_disp": {
+       "min": 266.8077868077868,
+       "max": 812.3289246693502,
+       "median": 454.6601,
+       "max_min_ratio": 3.04,
+       "n": 4
+      },
+      "recall_disp": {
+       "min": 0.3639896373056995,
+       "max": 0.9967845659163987,
+       "median": 0.9815,
+       "max_min_ratio": 2.74,
+       "n": 4
+      },
+      "n_well_FARle6_recall_pos": 0,
+      "n_well": 4
+     },
+     "0.1": {
+      "FAR_disp": {
+       "min": 200.67284067284066,
+       "max": 447.9815986198965,
+       "median": 274.6951,
+       "max_min_ratio": 2.23,
+       "n": 4
+      },
+      "recall_disp": {
+       "min": 0.1489637305699482,
+       "max": 0.987146529562982,
+       "median": 0.7728,
+       "max_min_ratio": 6.63,
+       "n": 4
+      },
+      "n_well_FARle6_recall_pos": 0,
+      "n_well": 4
+     },
+     "0.2": {
+      "FAR_disp": {
+       "min": 26.7595818815331,
+       "max": 217.78033352501438,
+       "median": 124.6199,
+       "max_min_ratio": 8.14,
+       "n": 4
+      },
+      "recall_disp": {
+       "min": 0.0,
+       "max": 0.8329048843187661,
+       "median": 0.2166,
+       "max_min_ratio": null,
+       "n": 4
+      },
+      "n_well_FARle6_recall_pos": 0,
+      "n_well": 4
+     },
+     "0.3": {
+      "FAR_disp": {
+       "min": 6.2717770034843205,
+       "max": 79.49396204715353,
+       "median": 35.2518,
+       "max_min_ratio": 12.67,
+       "n": 4
+      },
+      "recall_disp": {
+       "min": 0.0,
+       "max": 0.40102827763496146,
+       "median": 0.115,
+       "max_min_ratio": null,
+       "n": 4
+      },
+      "n_well_FARle6_recall_pos": 0,
+      "n_well": 4
+     },
+     "0.5": {
+      "FAR_disp": {
+       "min": 0.0,
+       "max": 11.249291249291248,
+       "median": 0.9286,
+       "max_min_ratio": null,
+       "n": 4
+      },
+      "recall_disp": {
+       "min": 0.0,
+       "max": 0.0051813471502590676,
+       "median": 0.0046,
+       "max_min_ratio": null,
+       "n": 4
+      },
+      "n_well_FARle6_recall_pos": 3,
+      "n_well": 4
+     }
+    }
+   },
+   "gb": {
+    "auprc_disp": {
+     "min": 0.019216153932381314,
+     "max": 0.2916912789375693,
+     "median": 0.1287,
+     "max_min_ratio": 15.18,
+     "n": 4
+    },
+    "ci95_contains_prev_folds": {
+     "n": "2/4",
+     "folds": [
+      "F-10",
+      "F-9_A"
+     ]
+    },
+    "delta_B_pos_folds": {
+     "persistence": {
+      "n_pos": "0/4",
+      "folds_pos": [],
+      "range": [
+       -0.7734,
+       -0.4446
+      ]
+     },
+     "canary_depth": {
+      "n_pos": "4/4",
+      "folds_pos": [
+       "F-10",
+       "F-14",
+       "F-9",
+       "F-9_A"
+      ],
+      "range": [
+       0.0239,
+       0.1874
+      ]
+     },
+     "prevalence_random": {
+      "n_pos": "4/4",
+      "folds_pos": [
+       "F-10",
+       "F-14",
+       "F-9",
+       "F-9_A"
+      ],
+      "range": [
+       0.0166,
+       0.22
+      ]
+     }
+    },
+    "far_by_tau": {
+     "0.05": {
+      "FAR_disp": {
+       "min": 175.36193536193537,
+       "max": 346.62020905923345,
+       "median": 313.9613,
+       "max_min_ratio": 1.98,
+       "n": 4
+      },
+      "recall_disp": {
+       "min": 0.266839378238342,
+       "max": 0.8457583547557841,
+       "median": 0.316,
+       "max_min_ratio": 3.17,
+       "n": 4
+      },
+      "n_well_FARle6_recall_pos": 0,
+      "n_well": 4
+     },
+     "0.1": {
+      "FAR_disp": {
+       "min": 93.98601398601399,
+       "max": 259.65156794425087,
+       "median": 169.5802,
+       "max_min_ratio": 2.76,
+       "n": 4
+      },
+      "recall_disp": {
+       "min": 0.12540192926045016,
+       "max": 0.6786632390745502,
+       "median": 0.1651,
+       "max_min_ratio": 5.41,
+       "n": 4
+      },
+      "n_well_FARle6_recall_pos": 0,
+      "n_well": 4
+     },
+     "0.2": {
+      "FAR_disp": {
+       "min": 40.46116046116046,
+       "max": 164.97236643778263,
+       "median": 93.766,
+       "max_min_ratio": 4.08,
+       "n": 4
+      },
+      "recall_disp": {
+       "min": 0.0,
+       "max": 0.5089974293059126,
+       "median": 0.0899,
+       "max_min_ratio": null,
+       "n": 4
+      },
+      "n_well_FARle6_recall_pos": 0,
+      "n_well": 4
+     },
+     "0.3": {
+      "FAR_disp": {
+       "min": 21.047061047061046,
+       "max": 124.53190420365098,
+       "median": 69.1788,
+       "max_min_ratio": 5.92,
+       "n": 4
+      },
+      "recall_disp": {
+       "min": 0.0,
+       "max": 0.3676092544987147,
+       "median": 0.058,
+       "max_min_ratio": null,
+       "n": 4
+      },
+      "n_well_FARle6_recall_pos": 0,
+      "n_well": 4
+     },
+     "0.5": {
+      "FAR_disp": {
+       "min": 6.894726894726895,
+       "max": 70.55602076704069,
+       "median": 37.6967,
+       "max_min_ratio": 10.23,
+       "n": 4
+      },
+      "recall_disp": {
+       "min": 0.0,
+       "max": 0.15167095115681234,
+       "median": 0.0248,
+       "max_min_ratio": null,
+       "n": 4
+      },
+      "n_well_FARle6_recall_pos": 0,
+      "n_well": 4
+     }
+    }
+   },
+   "lr": {
+    "auprc_disp": {
+     "min": 0.01323027454474832,
+     "max": 0.31279984654701776,
+     "median": 0.1833,
+     "max_min_ratio": 23.64,
+     "n": 4
+    },
+    "ci95_contains_prev_folds": {
+     "n": "1/4",
+     "folds": [
+      "F-9_A"
+     ]
+    },
+    "delta_B_pos_folds": {
+     "persistence": {
+      "n_pos": "0/4",
+      "folds_pos": [],
+      "range": [
+       -0.7734,
+       -0.4446
+      ]
+     },
+     "canary_depth": {
+      "n_pos": "4/4",
+      "folds_pos": [
+       "F-10",
+       "F-14",
+       "F-9",
+       "F-9_A"
+      ],
+      "range": [
+       0.0239,
+       0.1874
+      ]
+     },
+     "prevalence_random": {
+      "n_pos": "4/4",
+      "folds_pos": [
+       "F-10",
+       "F-14",
+       "F-9",
+       "F-9_A"
+      ],
+      "range": [
+       0.0166,
+       0.22
+      ]
+     }
+    },
+    "far_by_tau": {
+     "0.05": {
+      "FAR_disp": {
+       "min": 551.0936191592698,
+       "max": 1080.4762804762804,
+       "median": 1060.8885,
+       "max_min_ratio": 1.96,
+       "n": 4
+      },
+      "recall_disp": {
+       "min": 0.9753886010362695,
+       "max": 1.0,
+       "median": 0.994,
+       "max_min_ratio": 1.03,
+       "n": 4
+      },
+      "n_well_FARle6_recall_pos": 0,
+      "n_well": 4
+     },
+     "0.1": {
+      "FAR_disp": {
+       "min": 476.92011388377153,
+       "max": 1004.4393329499712,
+       "median": 921.8087,
+       "max_min_ratio": 2.11,
+       "n": 4
+      },
+      "recall_disp": {
+       "min": 0.9662027833001988,
+       "max": 1.0,
+       "median": 0.9742,
+       "max_min_ratio": 1.03,
+       "n": 4
+      },
+      "n_well_FARle6_recall_pos": 0,
+      "n_well": 4
+     },
+     "0.2": {
+      "FAR_disp": {
+       "min": 405.20348350360075,
+       "max": 902.2996515679442,
+       "median": 667.6806,
+       "max_min_ratio": 2.23,
+       "n": 4
+      },
+      "recall_disp": {
+       "min": 0.9085487077534792,
+       "max": 1.0,
+       "median": 0.9606,
+       "max_min_ratio": 1.1,
+       "n": 4
+      },
+      "n_well_FARle6_recall_pos": 0,
+      "n_well": 4
+     },
+     "0.3": {
+      "FAR_disp": {
+       "min": 366.85814771395076,
+       "max": 847.1080139372822,
+       "median": 532.5955,
+       "max_min_ratio": 2.31,
+       "n": 4
+      },
+      "recall_disp": {
+       "min": 0.7614314115308151,
+       "max": 1.0,
+       "median": 0.9368,
+       "max_min_ratio": 1.31,
+       "n": 4
+      },
+      "n_well_FARle6_recall_pos": 0,
+      "n_well": 4
+     },
+     "0.5": {
+      "FAR_disp": {
+       "min": 329.3418187908223,
+       "max": 804.8780487804878,
+       "median": 433.3911,
+       "max_min_ratio": 2.44,
+       "n": 4
+      },
+      "recall_disp": {
+       "min": 0.5984095427435387,
+       "max": 1.0,
+       "median": 0.9,
+       "max_min_ratio": 1.67,
+       "n": 4
+      },
+      "n_well_FARle6_recall_pos": 0,
+      "n_well": 4
+     }
+    }
+   }
+  }
+ },
+ "C_rule_status": {
+  "vib": {
+   "n_folds": 4,
+   "n_layak": 4,
+   "test_wells": [
+    "F-14",
+    "F-15A",
+    "F-15_S",
+    "F-5"
+   ],
+   "rule_display_t0minus1": {
+    "precision_disp": {
+     "min": 0.8676171079429735,
+     "max": 0.951885565669701,
+     "median": 0.9214,
+     "max_min_ratio": 1.1,
+     "n": 4
+    },
+    "recall_disp": {
+     "min": 0.2760855476344783,
+     "max": 0.5951219512195122,
+     "median": 0.4145,
+     "max_min_ratio": 2.16,
+     "n": 4
+    },
+    "far24h_disp": {
+     "min": 9.988261658307543,
+     "max": 49.942196531791915,
+     "median": 17.5045,
+     "max_min_ratio": 5.0,
+     "n": 4
+    },
+    "FP_total_layak": 197,
+    "wilson_ci95_precision": [
+     {
+      "well": "F-14",
+      "ci": [
+       0.9218,
+       0.9608
+      ],
+      "p": 0.9444
+     },
+     {
+      "well": "F-15A",
+      "ci": [
+       0.8348,
+       0.8948
+      ],
+      "p": 0.8676
+     },
+     {
+      "well": "F-15_S",
+      "ci": [
+       0.8726,
+       0.9195
+      ],
+      "p": 0.8984
+     },
+     {
+      "well": "F-5",
+      "ci": [
+       0.9344,
+       0.9649
+      ],
+      "p": 0.9519
+     }
+    ],
+    "wilson_ci95_recall": [
+     {
+      "well": "F-14",
+      "ci": [
+       0.4248,
+       0.483
+      ],
+      "r": 0.4537
+     },
+     {
+      "well": "F-15A",
+      "ci": [
+       0.2544,
+       0.2989
+      ],
+      "r": 0.2761
+     },
+     {
+      "well": "F-15_S",
+      "ci": [
+       0.3514,
+       0.3999
+      ],
+      "r": 0.3753
+     },
+     {
+      "well": "F-5",
+      "ci": [
+       0.5674,
+       0.6222
+      ],
+      "r": 0.5951
+     }
+    ],
+    "n_nodata_sum": 2999
+   },
+   "persistence": {
+    "precision_disp": {
+     "min": 0.6832377310388783,
+     "max": 0.8336252189141856,
+     "median": 0.7288,
+     "max_min_ratio": 1.22,
+     "n": 4
+    },
+    "recall_disp": {
+     "min": 0.6866840731070496,
+     "max": 0.8469750889679716,
+     "median": 0.7405,
+     "max_min_ratio": 1.23,
+     "n": 4
+    },
+    "far24h_disp": {
+     "min": 74.68146409134563,
+     "max": 316.3005780346821,
+     "median": 133.8624,
+     "max_min_ratio": 4.24,
+     "n": 4
+    },
+    "FP_total_layak": 1456,
+    "wilson_ci95_precision": [
+     {
+      "well": "F-14",
+      "ci": [
+       0.8109,
+       0.8541
+      ],
+      "p": 0.8336
+     },
+     {
+      "well": "F-15A",
+      "ci": [
+       0.6598,
+       0.7058
+      ],
+      "p": 0.6832
+     },
+     {
+      "well": "F-15_S",
+      "ci": [
+       0.6603,
+       0.7068
+      ],
+      "p": 0.684
+     },
+     {
+      "well": "F-5",
+      "ci": [
+       0.7496,
+       0.7959
+      ],
+      "p": 0.7736
+     }
+    ],
+    "wilson_ci95_recall": [
+     {
+      "well": "F-14",
+      "ci": [
+       0.8247,
+       0.8668
+      ],
+      "r": 0.847
+     },
+     {
+      "well": "F-15A",
+      "ci": [
+       0.6713,
+       0.7172
+      ],
+      "r": 0.6948
+     },
+     {
+      "well": "F-15_S",
+      "ci": [
+       0.663,
+       0.7094
+      ],
+      "r": 0.6867
+     },
+     {
+      "well": "F-5",
+      "ci": [
+       0.7624,
+       0.8082
+      ],
+      "r": 0.7862
+     }
+    ],
+    "n_nodata_sum": null
+   },
+   "hybrid_rule_and_persistence": {
+    "precision_disp": {
+     "min": 0.8676171079429735,
+     "max": 0.951885565669701,
+     "median": 0.9214,
+     "max_min_ratio": 1.1,
+     "n": 4
+    },
+    "recall_disp": {
+     "min": 0.2760855476344783,
+     "max": 0.5951219512195122,
+     "median": 0.4145,
+     "max_min_ratio": 2.16,
+     "n": 4
+    },
+    "far24h_disp": {
+     "min": 9.988261658307543,
+     "max": 49.942196531791915,
+     "median": 17.5045,
+     "max_min_ratio": 5.0,
+     "n": 4
+    },
+    "FP_total_layak": 197,
+    "wilson_ci95_precision": [
+     {
+      "well": "F-14",
+      "ci": [
+       0.9218,
+       0.9608
+      ],
+      "p": 0.9444
+     },
+     {
+      "well": "F-15A",
+      "ci": [
+       0.8348,
+       0.8948
+      ],
+      "p": 0.8676
+     },
+     {
+      "well": "F-15_S",
+      "ci": [
+       0.8726,
+       0.9195
+      ],
+      "p": 0.8984
+     },
+     {
+      "well": "F-5",
+      "ci": [
+       0.9344,
+       0.9649
+      ],
+      "p": 0.9519
+     }
+    ],
+    "wilson_ci95_recall": [
+     {
+      "well": "F-14",
+      "ci": [
+       0.4248,
+       0.483
+      ],
+      "r": 0.4537
+     },
+     {
+      "well": "F-15A",
+      "ci": [
+       0.2544,
+       0.2989
+      ],
+      "r": 0.2761
+     },
+     {
+      "well": "F-15_S",
+      "ci": [
+       0.3514,
+       0.3999
+      ],
+      "r": 0.3753
+     },
+     {
+      "well": "F-5",
+      "ci": [
+       0.5674,
+       0.6222
+      ],
+      "r": 0.5951
+     }
+    ],
+    "n_nodata_sum": null
+   },
+   "hybrid_fp_cut": {
+    "rule_FP": 197,
+    "hybrid_FP": 197,
+    "reduction_pct": 0.0,
+    "folds_not_increasing": "4/4",
+    "folds": [
+     "F-14",
+     "F-15A",
+     "F-15_S",
+     "F-5"
+    ]
+   }
+  },
+  "ssi": {
+   "n_folds": 9,
+   "n_layak": 7,
+   "test_wells": [
+    "F-10",
+    "F-12",
+    "F-14",
+    "F-15A",
+    "F-15_S",
+    "F-5",
+    "F-7",
+    "F-9",
+    "F-9_A"
+   ],
+   "rule_display_t0minus1": {
+    "precision_disp": {
+     "min": 0.0,
+     "max": 0.5,
+     "median": 0.225,
+     "max_min_ratio": null,
+     "n": 6
+    },
+    "recall_disp": {
+     "min": 0.0,
+     "max": 0.03225806451612903,
+     "median": 0.0124,
+     "max_min_ratio": null,
+     "n": 7
+    },
+    "far24h_disp": {
+     "min": 0.0,
+     "max": 7.32824427480916,
+     "median": 0.7213,
+     "max_min_ratio": null,
+     "n": 7
+    },
+    "FP_total_layak": 26,
+    "wilson_ci95_precision": [
+     {
+      "well": "F-10",
+      "ci": [
+       0.1176,
+       0.7693
+      ],
+      "p": 0.4
+     },
+     {
+      "well": "F-12",
+      "ci": [
+       0.0,
+       0.3903
+      ],
+      "p": 0.0
+     },
+     {
+      "well": "F-14",
+      "ci": null,
+      "p": null
+     },
+     {
+      "well": "F-15A",
+      "ci": [
+       0.0456,
+       0.6994
+      ],
+      "p": 0.25
+     },
+     {
+      "well": "F-15_S",
+      "ci": [
+       0.0199,
+       0.435
+      ],
+      "p": 0.1111
+     },
+     {
+      "well": "F-5",
+      "ci": [
+       0.15,
+       0.85
+      ],
+      "p": 0.5
+     },
+     {
+      "well": "F-9_A",
+      "ci": [
+       0.0362,
+       0.6245
+      ],
+      "p": 0.2
+     }
+    ],
+    "wilson_ci95_recall": [
+     {
+      "well": "F-10",
+      "ci": [
+       0.0034,
+       0.0442
+      ],
+      "r": 0.0124
+     },
+     {
+      "well": "F-12",
+      "ci": [
+       0.0,
+       0.0442
+      ],
+      "r": 0.0
+     },
+     {
+      "well": "F-14",
+      "ci": [
+       0.0,
+       0.0487
+      ],
+      "r": 0.0
+     },
+     {
+      "well": "F-15A",
+      "ci": [
+       0.0057,
+       0.1619
+      ],
+      "r": 0.0323
+     },
+     {
+      "well": "F-15_S",
+      "ci": [
+       0.0021,
+       0.0637
+      ],
+      "r": 0.0118
+     },
+     {
+      "well": "F-5",
+      "ci": [
+       0.0054,
+       0.0687
+      ],
+      "r": 0.0196
+     },
+     {
+      "well": "F-9_A",
+      "ci": [
+       0.0032,
+       0.0961
+      ],
+      "r": 0.0182
+     }
+    ],
+    "n_nodata_sum": 20277
+   },
+   "persistence": {
+    "precision_disp": {
+     "min": 0.03225806451612903,
+     "max": 0.43333333333333335,
+     "median": 0.1111,
+     "max_min_ratio": 13.43,
+     "n": 7
+    },
+    "recall_disp": {
+     "min": 0.011764705882352941,
+     "max": 0.40372670807453415,
+     "median": 0.0361,
+     "max_min_ratio": 34.32,
+     "n": 7
+    },
+    "far24h_disp": {
+     "min": 1.9235264651861748,
+     "max": 51.29770992366412,
+     "median": 14.7078,
+     "max_min_ratio": 26.67,
+     "n": 7
+    },
+    "FP_total_layak": 255,
+    "wilson_ci95_precision": [
+     {
+      "well": "F-10",
+      "ci": [
+       0.3567,
+       0.5133
+      ],
+      "p": 0.4333
+     },
+     {
+      "well": "F-12",
+      "ci": [
+       0.0224,
+       0.175
+      ],
+      "p": 0.0652
+     },
+     {
+      "well": "F-14",
+      "ci": [
+       0.0057,
+       0.1619
+      ],
+      "p": 0.0323
+     },
+     {
+      "well": "F-15A",
+      "ci": [
+       0.0199,
+       0.435
+      ],
+      "p": 0.1111
+     },
+     {
+      "well": "F-15_S",
+      "ci": [
+       0.0137,
+       0.3331
+      ],
+      "p": 0.0769
+     },
+     {
+      "well": "F-5",
+      "ci": [
+       0.0838,
+       0.2693
+      ],
+      "p": 0.1552
+     },
+     {
+      "well": "F-9_A",
+      "ci": [
+       0.0665,
+       0.3092
+      ],
+      "p": 0.1515
+     }
+    ],
+    "wilson_ci95_recall": [
+     {
+      "well": "F-10",
+      "ci": [
+       0.331,
+       0.4809
+      ],
+      "r": 0.4037
+     },
+     {
+      "well": "F-12",
+      "ci": [
+       0.0124,
+       0.101
+      ],
+      "r": 0.0361
+     },
+     {
+      "well": "F-14",
+      "ci": [
+       0.0024,
+       0.0717
+      ],
+      "r": 0.0133
+     },
+     {
+      "well": "F-15A",
+      "ci": [
+       0.0057,
+       0.1619
+      ],
+      "r": 0.0323
+     },
+     {
+      "well": "F-15_S",
+      "ci": [
+       0.0021,
+       0.0637
+      ],
+      "r": 0.0118
+     },
+     {
+      "well": "F-5",
+      "ci": [
+       0.0471,
+       0.1592
+      ],
+      "r": 0.0882
+     },
+     {
+      "well": "F-9_A",
+      "ci": [
+       0.0395,
+       0.1958
+      ],
+      "r": 0.0909
+     }
+    ],
+    "n_nodata_sum": null
+   },
+   "hybrid_rule_and_persistence": {
+    "precision_disp": {
+     "min": 0.0,
+     "max": 0.6666666666666666,
+     "median": 0.0,
+     "max_min_ratio": null,
+     "n": 5
+    },
+    "recall_disp": {
+     "min": 0.0,
+     "max": 0.012422360248447204,
+     "median": 0.0,
+     "max_min_ratio": null,
+     "n": 7
+    },
+    "far24h_disp": {
+     "min": 0.0,
+     "max": 3.66412213740458,
+     "median": 0.2739,
+     "max_min_ratio": null,
+     "n": 7
+    },
+    "FP_total_layak": 7,
+    "wilson_ci95_precision": [
+     {
+      "well": "F-10",
+      "ci": [
+       0.2077,
+       0.9385
+      ],
+      "p": 0.6667
+     },
+     {
+      "well": "F-12",
+      "ci": [
+       0.0,
+       0.7935
+      ],
+      "p": 0.0
+     },
+     {
+      "well": "F-14",
+      "ci": null,
+      "p": null
+     },
+     {
+      "well": "F-15A",
+      "ci": [
+       0.0,
+       0.6576
+      ],
+      "p": 0.0
+     },
+     {
+      "well": "F-15_S",
+      "ci": [
+       0.0,
+       0.7935
+      ],
+      "p": 0.0
+     },
+     {
+      "well": "F-5",
+      "ci": null,
+      "p": null
+     },
+     {
+      "well": "F-9_A",
+      "ci": [
+       0.0,
+       0.6576
+      ],
+      "p": 0.0
+     }
+    ],
+    "wilson_ci95_recall": [
+     {
+      "well": "F-10",
+      "ci": [
+       0.0034,
+       0.0442
+      ],
+      "r": 0.0124
+     },
+     {
+      "well": "F-12",
+      "ci": [
+       0.0,
+       0.0442
+      ],
+      "r": 0.0
+     },
+     {
+      "well": "F-14",
+      "ci": [
+       0.0,
+       0.0487
+      ],
+      "r": 0.0
+     },
+     {
+      "well": "F-15A",
+      "ci": [
+       0.0,
+       0.1103
+      ],
+      "r": 0.0
+     },
+     {
+      "well": "F-15_S",
+      "ci": [
+       0.0,
+       0.0432
+      ],
+      "r": 0.0
+     },
+     {
+      "well": "F-5",
+      "ci": [
+       0.0,
+       0.0363
+      ],
+      "r": 0.0
+     },
+     {
+      "well": "F-9_A",
+      "ci": [
+       0.0,
+       0.0653
+      ],
+      "r": 0.0
+     }
+    ],
+    "n_nodata_sum": null
+   },
+   "hybrid_fp_cut": {
+    "rule_FP": 26,
+    "hybrid_FP": 7,
+    "reduction_pct": 73.1,
+    "folds_not_increasing": "7/7",
+    "folds": [
+     "F-10",
+     "F-12",
+     "F-14",
+     "F-15A",
+     "F-15_S",
+     "F-5",
+     "F-9_A"
+    ]
+   },
+   "sensor_nodata_rule": {
+    "n_nodata": 22385,
+    "n_total": 35906,
+    "frac": 0.6234
+   }
+  },
+  "shk": {
+   "n_folds": 9,
+   "n_layak": 9,
+   "test_wells": [
+    "F-10",
+    "F-12",
+    "F-14",
+    "F-15A",
+    "F-15_S",
+    "F-5",
+    "F-7",
+    "F-9",
+    "F-9_A"
+   ],
+   "rule_display_t0minus1": {
+    "precision_disp": {
+     "min": 0.0,
+     "max": 0.9351851851851852,
+     "median": 0.3333,
+     "max_min_ratio": null,
+     "n": 9
+    },
+    "recall_disp": {
+     "min": 0.0,
+     "max": 0.3782771535580524,
+     "median": 0.0411,
+     "max_min_ratio": null,
+     "n": 9
+    },
+    "far24h_disp": {
+     "min": 0.6704951109731492,
+     "max": 6.617520344662518,
+     "median": 2.786,
+     "max_min_ratio": 9.87,
+     "n": 9
+    },
+    "FP_total_layak": 121,
+    "wilson_ci95_precision": [
+     {
+      "well": "F-10",
+      "ci": [
+       0.1381,
+       0.4996
+      ],
+      "p": 0.2857
+     },
+     {
+      "well": "F-12",
+      "ci": [
+       0.3628,
+       0.7686
+      ],
+      "p": 0.5789
+     },
+     {
+      "well": "F-14",
+      "ci": [
+       0.4382,
+       0.6274
+      ],
+      "p": 0.534
+     },
+     {
+      "well": "F-15A",
+      "ci": [
+       0.0,
+       0.5615
+      ],
+      "p": 0.0
+     },
+     {
+      "well": "F-15_S",
+      "ci": [
+       0.2635,
+       0.5651
+      ],
+      "p": 0.4054
+     },
+     {
+      "well": "F-5",
+      "ci": [
+       0.035,
+       0.3602
+      ],
+      "p": 0.125
+     },
+     {
+      "well": "F-7",
+      "ci": [
+       0.8722,
+       0.9683
+      ],
+      "p": 0.9352
+     },
+     {
+      "well": "F-9",
+      "ci": [
+       0.0615,
+       0.7923
+      ],
+      "p": 0.3333
+     },
+     {
+      "well": "F-9_A",
+      "ci": [
+       0.0615,
+       0.7923
+      ],
+      "p": 0.3333
+     }
+    ],
+    "wilson_ci95_recall": [
+     {
+      "well": "F-10",
+      "ci": [
+       0.019,
+       0.0868
+      ],
+      "r": 0.0411
+     },
+     {
+      "well": "F-12",
+      "ci": [
+       0.0285,
+       0.0885
+      ],
+      "r": 0.0507
+     },
+     {
+      "well": "F-14",
+      "ci": [
+       0.056,
+       0.093
+      ],
+      "r": 0.0724
+     },
+     {
+      "well": "F-15A",
+      "ci": [
+       0.0,
+       0.0857
+      ],
+      "r": 0.0
+     },
+     {
+      "well": "F-15_S",
+      "ci": [
+       0.0354,
+       0.0933
+      ],
+      "r": 0.0579
+     },
+     {
+      "well": "F-5",
+      "ci": [
+       0.0023,
+       0.0299
+      ],
+      "r": 0.0083
+     },
+     {
+      "well": "F-7",
+      "ci": [
+       0.3222,
+       0.4378
+      ],
+      "r": 0.3783
+     },
+     {
+      "well": "F-9",
+      "ci": [
+       0.0039,
+       0.1157
+      ],
+      "r": 0.0222
+     },
+     {
+      "well": "F-9_A",
+      "ci": [
+       0.0059,
+       0.1667
+      ],
+      "r": 0.0333
+     }
+    ],
+    "n_nodata_sum": 6831
+   },
+   "persistence": {
+    "precision_disp": {
+     "min": 0.0,
+     "max": 0.6968325791855203,
+     "median": 0.1792,
+     "max_min_ratio": null,
+     "n": 9
+    },
+    "recall_disp": {
+     "min": 0.0,
+     "max": 0.5767790262172284,
+     "median": 0.0876,
+     "max_min_ratio": null,
+     "n": 9
+    },
+    "far24h_disp": {
+     "min": 3.189368770764119,
+     "max": 54.0430828147439,
+     "median": 22.7602,
+     "max_min_ratio": 16.94,
+     "n": 9
+    },
+    "FP_total_layak": 1056,
+    "wilson_ci95_precision": [
+     {
+      "well": "F-10",
+      "ci": [
+       0.045,
+       0.1257
+      ],
+      "p": 0.076
+     },
+     {
+      "well": "F-12",
+      "ci": [
+       0.1239,
+       0.2752
+      ],
+      "p": 0.1881
+     },
+     {
+      "well": "F-14",
+      "ci": [
+       0.3338,
+       0.4094
+      ],
+      "p": 0.3708
+     },
+     {
+      "well": "F-15A",
+      "ci": [
+       -0.0,
+       0.0918
+      ],
+      "p": 0.0
+     },
+     {
+      "well": "F-15_S",
+      "ci": [
+       0.105,
+       0.193
+      ],
+      "p": 0.1434
+     },
+     {
+      "well": "F-5",
+      "ci": [
+       0.1179,
+       0.2631
+      ],
+      "p": 0.1792
+     },
+     {
+      "well": "F-7",
+      "ci": [
+       0.6333,
+       0.7536
+      ],
+      "p": 0.6968
+     },
+     {
+      "well": "F-9",
+      "ci": [
+       0.0968,
+       0.7
+      ],
+      "p": 0.3333
+     },
+     {
+      "well": "F-9_A",
+      "ci": [
+       0.0089,
+       0.2361
+      ],
+      "p": 0.05
+     }
+    ],
+    "wilson_ci95_recall": [
+     {
+      "well": "F-10",
+      "ci": [
+       0.0528,
+       0.1464
+      ],
+      "r": 0.089
+     },
+     {
+      "well": "F-12",
+      "ci": [
+       0.0568,
+       0.1327
+      ],
+      "r": 0.0876
+     },
+     {
+      "well": "F-14",
+      "ci": [
+       0.2723,
+       0.3376
+      ],
+      "r": 0.3039
+     },
+     {
+      "well": "F-15A",
+      "ci": [
+       0.0,
+       0.0857
+      ],
+      "r": 0.0
+     },
+     {
+      "well": "F-15_S",
+      "ci": [
+       0.0988,
+       0.1821
+      ],
+      "r": 0.1351
+     },
+     {
+      "well": "F-5",
+      "ci": [
+       0.0513,
+       0.1203
+      ],
+      "r": 0.0792
+     },
+     {
+      "well": "F-7",
+      "ci": [
+       0.5168,
+       0.6345
+      ],
+      "r": 0.5768
+     },
+     {
+      "well": "F-9",
+      "ci": [
+       0.0123,
+       0.1483
+      ],
+      "r": 0.0444
+     },
+     {
+      "well": "F-9_A",
+      "ci": [
+       0.0059,
+       0.1667
+      ],
+      "r": 0.0333
+     }
+    ],
+    "n_nodata_sum": null
+   },
+   "hybrid_rule_and_persistence": {
+    "precision_disp": {
+     "min": 0.0,
+     "max": 0.9351851851851852,
+     "median": 0.3333,
+     "max_min_ratio": null,
+     "n": 9
+    },
+    "recall_disp": {
+     "min": 0.0,
+     "max": 0.3782771535580524,
+     "median": 0.0411,
+     "max_min_ratio": null,
+     "n": 9
+    },
+    "far24h_disp": {
+     "min": 0.6704951109731492,
+     "max": 6.617520344662518,
+     "median": 2.786,
+     "max_min_ratio": 9.87,
+     "n": 9
+    },
+    "FP_total_layak": 121,
+    "wilson_ci95_precision": [
+     {
+      "well": "F-10",
+      "ci": [
+       0.1381,
+       0.4996
+      ],
+      "p": 0.2857
+     },
+     {
+      "well": "F-12",
+      "ci": [
+       0.3628,
+       0.7686
+      ],
+      "p": 0.5789
+     },
+     {
+      "well": "F-14",
+      "ci": [
+       0.4382,
+       0.6274
+      ],
+      "p": 0.534
+     },
+     {
+      "well": "F-15A",
+      "ci": [
+       0.0,
+       0.5615
+      ],
+      "p": 0.0
+     },
+     {
+      "well": "F-15_S",
+      "ci": [
+       0.2635,
+       0.5651
+      ],
+      "p": 0.4054
+     },
+     {
+      "well": "F-5",
+      "ci": [
+       0.035,
+       0.3602
+      ],
+      "p": 0.125
+     },
+     {
+      "well": "F-7",
+      "ci": [
+       0.8722,
+       0.9683
+      ],
+      "p": 0.9352
+     },
+     {
+      "well": "F-9",
+      "ci": [
+       0.0615,
+       0.7923
+      ],
+      "p": 0.3333
+     },
+     {
+      "well": "F-9_A",
+      "ci": [
+       0.0615,
+       0.7923
+      ],
+      "p": 0.3333
+     }
+    ],
+    "wilson_ci95_recall": [
+     {
+      "well": "F-10",
+      "ci": [
+       0.019,
+       0.0868
+      ],
+      "r": 0.0411
+     },
+     {
+      "well": "F-12",
+      "ci": [
+       0.0285,
+       0.0885
+      ],
+      "r": 0.0507
+     },
+     {
+      "well": "F-14",
+      "ci": [
+       0.056,
+       0.093
+      ],
+      "r": 0.0724
+     },
+     {
+      "well": "F-15A",
+      "ci": [
+       0.0,
+       0.0857
+      ],
+      "r": 0.0
+     },
+     {
+      "well": "F-15_S",
+      "ci": [
+       0.0354,
+       0.0933
+      ],
+      "r": 0.0579
+     },
+     {
+      "well": "F-5",
+      "ci": [
+       0.0023,
+       0.0299
+      ],
+      "r": 0.0083
+     },
+     {
+      "well": "F-7",
+      "ci": [
+       0.3222,
+       0.4378
+      ],
+      "r": 0.3783
+     },
+     {
+      "well": "F-9",
+      "ci": [
+       0.0039,
+       0.1157
+      ],
+      "r": 0.0222
+     },
+     {
+      "well": "F-9_A",
+      "ci": [
+       0.0059,
+       0.1667
+      ],
+      "r": 0.0333
+     }
+    ],
+    "n_nodata_sum": null
+   },
+   "hybrid_fp_cut": {
+    "rule_FP": 121,
+    "hybrid_FP": 121,
+    "reduction_pct": 0.0,
+    "folds_not_increasing": "9/9",
+    "folds": [
+     "F-10",
+     "F-12",
+     "F-14",
+     "F-15A",
+     "F-15_S",
+     "F-5",
+     "F-7",
+     "F-9",
+     "F-9_A"
+    ]
+   },
+   "sensor_nodata_rule": {
+    "n_nodata": 6831,
+    "n_total": 56495,
+    "frac": 0.1209
+   }
+  },
+  "stuck_k1": {
+   "n_folds": 2,
+   "n_layak": 2,
+   "test_wells": [
+    "F-14",
+    "F-9_A"
+   ],
+   "rule_display_t0minus1": {
+    "precision_disp": {
+     "min": 0.9238095238095239,
+     "max": 0.9662231320368475,
+     "median": 0.945,
+     "max_min_ratio": 1.05,
+     "n": 2
+    },
+    "recall_disp": {
+     "min": 0.44907407407407407,
+     "max": 0.5993650793650793,
+     "median": 0.5242,
+     "max_min_ratio": 1.33,
+     "n": 2
+    },
+    "far24h_disp": {
+     "min": 8.320693391115926,
+     "max": 61.001283697047505,
+     "median": 34.661,
+     "max_min_ratio": 7.33,
+     "n": 2
+    },
+    "FP_total_layak": 49,
+    "wilson_ci95_precision": [
+     {
+      "well": "F-14",
+      "ci": [
+       0.8798,
+       0.9526
+      ],
+      "p": 0.9238
+     },
+     {
+      "well": "F-9_A",
+      "ci": [
+       0.9529,
+       0.9758
+      ],
+      "p": 0.9662
+     }
+    ],
+    "wilson_ci95_recall": [
+     {
+      "well": "F-14",
+      "ci": [
+       0.4028,
+       0.4962
+      ],
+      "r": 0.4491
+     },
+     {
+      "well": "F-9_A",
+      "ci": [
+       0.575,
+       0.6233
+      ],
+      "r": 0.5994
+     }
+    ],
+    "n_nodata_sum": 357
+   },
+   "persistence": {
+    "precision_disp": {
+     "min": 0.6784922394678492,
+     "max": 0.812015503875969,
+     "median": 0.7453,
+     "max_min_ratio": 1.2,
+     "n": 2
+    },
+    "recall_disp": {
+     "min": 0.7083333333333334,
+     "max": 0.7980952380952381,
+     "median": 0.7532,
+     "max_min_ratio": 1.13,
+     "n": 2
+    },
+    "far24h_disp": {
+     "min": 75.40628385698808,
+     "max": 537.9204107830552,
+     "median": 306.6633,
+     "max_min_ratio": 7.13,
+     "n": 2
+    },
+    "FP_total_layak": 436,
+    "wilson_ci95_precision": [
+     {
+      "well": "F-14",
+      "ci": [
+       0.634,
+       0.7199
+      ],
+      "p": 0.6785
+     },
+     {
+      "well": "F-9_A",
+      "ci": [
+       0.7918,
+       0.8307
+      ],
+      "p": 0.812
+     }
+    ],
+    "wilson_ci95_recall": [
+     {
+      "well": "F-14",
+      "ci": [
+       0.6638,
+       0.7492
+      ],
+      "r": 0.7083
+     },
+     {
+      "well": "F-9_A",
+      "ci": [
+       0.7776,
+       0.8172
+      ],
+      "r": 0.7981
+     }
+    ],
+    "n_nodata_sum": null
+   },
+   "hybrid_rule_and_persistence": {
+    "precision_disp": {
+     "min": 0.9238095238095239,
+     "max": 0.9662231320368475,
+     "median": 0.945,
+     "max_min_ratio": 1.05,
+     "n": 2
+    },
+    "recall_disp": {
+     "min": 0.44907407407407407,
+     "max": 0.5993650793650793,
+     "median": 0.5242,
+     "max_min_ratio": 1.33,
+     "n": 2
+    },
+    "far24h_disp": {
+     "min": 8.320693391115926,
+     "max": 61.001283697047505,
+     "median": 34.661,
+     "max_min_ratio": 7.33,
+     "n": 2
+    },
+    "FP_total_layak": 49,
+    "wilson_ci95_precision": [
+     {
+      "well": "F-14",
+      "ci": [
+       0.8798,
+       0.9526
+      ],
+      "p": 0.9238
+     },
+     {
+      "well": "F-9_A",
+      "ci": [
+       0.9529,
+       0.9758
+      ],
+      "p": 0.9662
+     }
+    ],
+    "wilson_ci95_recall": [
+     {
+      "well": "F-14",
+      "ci": [
+       0.4028,
+       0.4962
+      ],
+      "r": 0.4491
+     },
+     {
+      "well": "F-9_A",
+      "ci": [
+       0.575,
+       0.6233
+      ],
+      "r": 0.5994
+     }
+    ],
+    "n_nodata_sum": null
+   },
+   "hybrid_fp_cut": {
+    "rule_FP": 49,
+    "hybrid_FP": 49,
+    "reduction_pct": 0.0,
+    "folds_not_increasing": "2/2",
+    "folds": [
+     "F-14",
+     "F-9_A"
+    ]
+   }
+  },
+  "hyd_ki": {
+   "n_folds": 9,
+   "n_layak": 9,
+   "test_wells": [
+    "F-10",
+    "F-12",
+    "F-14",
+    "F-15A",
+    "F-15_S",
+    "F-5",
+    "F-7",
+    "F-9",
+    "F-9_A"
+   ],
+   "rule_display_t0minus1": {
+    "precision_disp": {
+     "min": 0.6225641025641026,
+     "max": 0.886223440712817,
+     "median": 0.7162,
+     "max_min_ratio": 1.42,
+     "n": 9
+    },
+    "recall_disp": {
+     "min": 0.6555891238670695,
+     "max": 0.9275466284074605,
+     "median": 0.7507,
+     "max_min_ratio": 1.41,
+     "n": 9
+    },
+    "far24h_disp": {
+     "min": 38.698397280233124,
+     "max": 132.05240174672488,
+     "median": 66.7497,
+     "max_min_ratio": 3.41,
+     "n": 9
+    },
+    "FP_total_layak": 2091,
+    "wilson_ci95_precision": [
+     {
+      "well": "F-10",
+      "ci": [
+       0.8689,
+       0.9015
+      ],
+      "p": 0.8862
+     },
+     {
+      "well": "F-12",
+      "ci": [
+       0.7378,
+       0.7805
+      ],
+      "p": 0.7598
+     },
+     {
+      "well": "F-14",
+      "ci": [
+       0.5917,
+       0.6525
+      ],
+      "p": 0.6226
+     },
+     {
+      "well": "F-15A",
+      "ci": [
+       0.6407,
+       0.7064
+      ],
+      "p": 0.6744
+     },
+     {
+      "well": "F-15_S",
+      "ci": [
+       0.6236,
+       0.6815
+      ],
+      "p": 0.6531
+     },
+     {
+      "well": "F-5",
+      "ci": [
+       0.6824,
+       0.7496
+      ],
+      "p": 0.7172
+     },
+     {
+      "well": "F-7",
+      "ci": [
+       0.589,
+       0.6722
+      ],
+      "p": 0.6316
+     },
+     {
+      "well": "F-9",
+      "ci": [
+       0.6775,
+       0.7658
+      ],
+      "p": 0.7238
+     },
+     {
+      "well": "F-9_A",
+      "ci": [
+       0.6629,
+       0.764
+      ],
+      "p": 0.7162
+     }
+    ],
+    "wilson_ci95_recall": [
+     {
+      "well": "F-10",
+      "ci": [
+       0.9127,
+       0.94
+      ],
+      "r": 0.9275
+     },
+     {
+      "well": "F-12",
+      "ci": [
+       0.7953,
+       0.8355
+      ],
+      "r": 0.8163
+     },
+     {
+      "well": "F-14",
+      "ci": [
+       0.6704,
+       0.7313
+      ],
+      "r": 0.7017
+     },
+     {
+      "well": "F-15A",
+      "ci": [
+       0.7173,
+       0.7814
+      ],
+      "r": 0.7507
+     },
+     {
+      "well": "F-15_S",
+      "ci": [
+       0.6511,
+       0.709
+      ],
+      "r": 0.6808
+     },
+     {
+      "well": "F-5",
+      "ci": [
+       0.7586,
+       0.8223
+      ],
+      "r": 0.7923
+     },
+     {
+      "well": "F-7",
+      "ci": [
+       0.727,
+       0.8073
+      ],
+      "r": 0.7696
+     },
+     {
+      "well": "F-9",
+      "ci": [
+       0.6228,
+       0.7122
+      ],
+      "r": 0.669
+     },
+     {
+      "well": "F-9_A",
+      "ci": [
+       0.6029,
+       0.7047
+      ],
+      "r": 0.6556
+     }
+    ],
+    "n_nodata_sum": null
+   },
+   "persistence": {
+    "precision_disp": {
+     "min": 0.614519427402863,
+     "max": 0.8986039676708303,
+     "median": 0.7114,
+     "max_min_ratio": 1.46,
+     "n": 9
+    },
+    "recall_disp": {
+     "min": 0.6052366565961732,
+     "max": 0.8773314203730272,
+     "median": 0.6791,
+     "max_min_ratio": 1.45,
+     "n": 9
+    },
+    "far24h_disp": {
+     "min": 32.17095677513356,
+     "max": 109.6943231441048,
+     "median": 66.048,
+     "max_min_ratio": 3.41,
+     "n": 9
+    },
+    "FP_total_layak": 1941,
+    "wilson_ci95_precision": [
+     {
+      "well": "F-10",
+      "ci": [
+       0.8814,
+       0.9135
+      ],
+      "p": 0.8986
+     },
+     {
+      "well": "F-12",
+      "ci": [
+       0.7193,
+       0.763
+      ],
+      "p": 0.7417
+     },
+     {
+      "well": "F-14",
+      "ci": [
+       0.5988,
+       0.6626
+      ],
+      "p": 0.6313
+     },
+     {
+      "well": "F-15A",
+      "ci": [
+       0.6321,
+       0.7013
+      ],
+      "p": 0.6676
+     },
+     {
+      "well": "F-15_S",
+      "ci": [
+       0.5836,
+       0.6445
+      ],
+      "p": 0.6145
+     },
+     {
+      "well": "F-5",
+      "ci": [
+       0.7181,
+       0.786
+      ],
+      "p": 0.7536
+     },
+     {
+      "well": "F-7",
+      "ci": [
+       0.6026,
+       0.6909
+      ],
+      "p": 0.648
+     },
+     {
+      "well": "F-9",
+      "ci": [
+       0.7477,
+       0.8315
+      ],
+      "p": 0.7927
+     },
+     {
+      "well": "F-9_A",
+      "ci": [
+       0.6575,
+       0.7599
+      ],
+      "p": 0.7114
+     }
+    ],
+    "wilson_ci95_recall": [
+     {
+      "well": "F-10",
+      "ci": [
+       0.8591,
+       0.8935
+      ],
+      "r": 0.8773
+     },
+     {
+      "well": "F-12",
+      "ci": [
+       0.78,
+       0.8214
+      ],
+      "r": 0.8015
+     },
+     {
+      "well": "F-14",
+      "ci": [
+       0.6068,
+       0.6706
+      ],
+      "r": 0.6393
+     },
+     {
+      "well": "F-15A",
+      "ci": [
+       0.6436,
+       0.7127
+      ],
+      "r": 0.6791
+     },
+     {
+      "well": "F-15_S",
+      "ci": [
+       0.5745,
+       0.6352
+      ],
+      "r": 0.6052
+     },
+     {
+      "well": "F-5",
+      "ci": [
+       0.7132,
+       0.7813
+      ],
+      "r": 0.7488
+     },
+     {
+      "well": "F-7",
+      "ci": [
+       0.6406,
+       0.7289
+      ],
+      "r": 0.6865
+     },
+     {
+      "well": "F-9",
+      "ci": [
+       0.6228,
+       0.7122
+      ],
+      "r": 0.669
+     },
+     {
+      "well": "F-9_A",
+      "ci": [
+       0.5874,
+       0.6903
+      ],
+      "r": 0.6405
+     }
+    ],
+    "n_nodata_sum": null
+   },
+   "hybrid_rule_and_persistence": {
+    "precision_disp": {
+     "min": 0.7236111111111111,
+     "max": 0.9483971853010165,
+     "median": 0.8243,
+     "max_min_ratio": 1.31,
+     "n": 9
+    },
+    "recall_disp": {
+     "min": 0.5246727089627392,
+     "max": 0.870157819225251,
+     "median": 0.6519,
+     "max_min_ratio": 1.66,
+     "n": 9
+    },
+    "far24h_disp": {
+     "min": 14.624409035195235,
+     "max": 58.430583501006026,
+     "median": 28.416,
+     "max_min_ratio": 4.0,
+     "n": 9
+    },
+    "FP_total_layak": 927,
+    "wilson_ci95_precision": [
+     {
+      "well": "F-10",
+      "ci": [
+       0.9349,
+       0.9592
+      ],
+      "p": 0.9484
+     },
+     {
+      "well": "F-12",
+      "ci": [
+       0.794,
+       0.8359
+      ],
+      "p": 0.8158
+     },
+     {
+      "well": "F-14",
+      "ci": [
+       0.7925,
+       0.8521
+      ],
+      "p": 0.8243
+     },
+     {
+      "well": "F-15A",
+      "ci": [
+       0.7811,
+       0.8454
+      ],
+      "p": 0.8154
+     },
+     {
+      "well": "F-15_S",
+      "ci": [
+       0.6898,
+       0.755
+      ],
+      "p": 0.7236
+     },
+     {
+      "well": "F-5",
+      "ci": [
+       0.8541,
+       0.9099
+      ],
+      "p": 0.8849
+     },
+     {
+      "well": "F-7",
+      "ci": [
+       0.7396,
+       0.8249
+      ],
+      "p": 0.7853
+     },
+     {
+      "well": "F-9",
+      "ci": [
+       0.8222,
+       0.9028
+      ],
+      "p": 0.8676
+     },
+     {
+      "well": "F-9_A",
+      "ci": [
+       0.7816,
+       0.8783
+      ],
+      "p": 0.8356
+     }
+    ],
+    "wilson_ci95_recall": [
+     {
+      "well": "F-10",
+      "ci": [
+       0.8515,
+       0.8868
+      ],
+      "r": 0.8702
+     },
+     {
+      "well": "F-12",
+      "ci": [
+       0.7287,
+       0.7735
+      ],
+      "r": 0.7518
+     },
+     {
+      "well": "F-14",
+      "ci": [
+       0.5635,
+       0.6287
+      ],
+      "r": 0.5965
+     },
+     {
+      "well": "F-15A",
+      "ci": [
+       0.6158,
+       0.6863
+      ],
+      "r": 0.6519
+     },
+     {
+      "well": "F-15_S",
+      "ci": [
+       0.4936,
+       0.5556
+      ],
+      "r": 0.5247
+     },
+     {
+      "well": "F-5",
+      "ci": [
+       0.6816,
+       0.7522
+      ],
+      "r": 0.7182
+     },
+     {
+      "well": "F-7",
+      "ci": [
+       0.6138,
+       0.7039
+      ],
+      "r": 0.6603
+     },
+     {
+      "well": "F-9",
+      "ci": [
+       0.5103,
+       0.6045
+      ],
+      "r": 0.5579
+     },
+     {
+      "well": "F-9_A",
+      "ci": [
+       0.5141,
+       0.6203
+      ],
+      "r": 0.568
+     }
+    ],
+    "n_nodata_sum": null
+   },
+   "hybrid_fp_cut": {
+    "rule_FP": 2091,
+    "hybrid_FP": 927,
+    "reduction_pct": 55.7,
+    "folds_not_increasing": "9/9",
+    "folds": [
+     "F-10",
+     "F-12",
+     "F-14",
+     "F-15A",
+     "F-15_S",
+     "F-5",
+     "F-7",
+     "F-9",
+     "F-9_A"
+    ]
+   }
+  }
+ },
+ "C_stat": {
+  "hyd_ki_persistence": {
+   "n_folds": 9,
+   "n_layak": 9,
+   "ci95_contains_prev_folds": {
+    "n": "0/9",
+    "folds": []
+   },
+   "auprc_disp": {
+    "min": 0.4245,
+    "max": 0.8426,
+    "median": 0.5415,
+    "max_min_ratio": 1.98,
+    "n": 9
+   },
+   "far24h_disp": {
+    "min": 32.38064200749552,
+    "max": 110.71498530852105,
+    "median": 67.5245,
+    "max_min_ratio": 3.42,
+    "n": 9
+   },
+   "delay_median_min_disp": {
+    "min": 0.0,
+    "max": 3.5,
+    "median": 0.0,
+    "max_min_ratio": null,
+    "n": 9
+   },
+   "pct_detected_H10_disp": {
+    "min": 0.3157894736842105,
+    "max": 0.6538461538461539,
+    "median": 0.5758,
+    "max_min_ratio": 2.07,
+    "n": 9
+   }
+  },
+  "stuck_E2": {
+   "n_folds": 4,
+   "n_layak": 4,
+   "ci95_contains_prev_folds": {
+    "n": "4/4",
+    "folds": [
+     "F-10",
+     "F-14",
+     "F-9",
+     "F-9_A"
+    ]
+   },
+   "lift_disp": {
+    "min": 1.057,
+    "max": 1.797,
+    "median": 1.3545,
+    "max_min_ratio": 1.7,
+    "n": 4
+   },
+   "far24h_disp": {
+    "min": 2.3587223587223587,
+    "max": 73.58885017421603,
+    "median": 37.1168,
+    "max_min_ratio": 31.2,
+    "n": 4
+   },
+   "recall_at_H_disp": {
+    "min": 0.0,
+    "max": 0.18055555555555555,
+    "median": 0.1462,
+    "max_min_ratio": null,
+    "n": 4
+   }
+  },
+  "hyd_kii_fisher_variant": {
+   "n_split_temporal": 1,
+   "ci95_contains_prev": true,
+   "ci95": [
+    0.0025,
+    0.0684
+   ],
+   "prev": 0.003701,
+   "lift": 5.945,
+   "sign_flip_windows": 6377,
+   "n_test": 8107,
+   "sign_flip_frac": 0.7866,
+   "op_q95": {
+    "tp": 0,
+    "fp": 177,
+    "fn": 30,
+    "precision": 0.0,
+    "recall": 0.0,
+    "far_per_neg_hour": 1.3148446205274236,
+    "far_per_24h_neg": 31.556270892658166
+   },
+   "onset_level": {
+    "onsets_test": 3,
+    "detected_at_H": 0,
+    "B1_recall_at_H": 0.0,
+    "TLead_median_min": null,
+    "TLead_IQR_min": null
+   },
+   "flowout_status": "FlowOut TIDAK TERSEDIA di F-9A — literal (FlowIn-FlowOut) TIDAK DIJALANKAN"
+  }
+ },
+ "C_onset": {
+  "stuck_k2": {
+   "n_folds": 4,
+   "n_layak": 4,
+   "persistence_event": {
+    "B1_disp": {
+     "min": 0.0,
+     "max": 0.11538461538461539,
+     "median": 0.0505,
+     "max_min_ratio": null,
+     "n": 4
+    },
+    "TLead_median_min_disp": {
+     "min": 4.5,
+     "max": 8.5,
+     "median": 7.0,
+     "max_min_ratio": 1.89,
+     "n": 3
+    },
+    "far24h_disp": {
+     "min": 0.0,
+     "max": 2.926829268292683,
+     "median": 0.1058,
+     "max_min_ratio": null,
+     "n": 4
+    },
+    "fp_alarm_total": 11
+   },
+   "rule_E1_2of3": {
+    "B1_disp": {
+     "min": 0.0,
+     "max": 0.06593406593406594,
+     "median": 0.0308,
+     "max_min_ratio": null,
+     "n": 4
+    },
+    "TLead_median_min_disp": {
+     "min": 1.0,
+     "max": 5.0,
+     "median": 1.0,
+     "max_min_ratio": 5.0,
+     "n": 3
+    },
+    "far24h_disp": {
+     "min": 2.0865620865620866,
+     "max": 28.982173663024724,
+     "median": 14.2301,
+     "max_min_ratio": 13.89,
+     "n": 4
+    },
+    "fp_alarm_total": 422
+   },
+   "persistence_horizon": {
+    "B1_disp": {
+     "min": 0.9298245614035088,
+     "max": 0.967032967032967,
+     "median": 0.9514,
+     "max_min_ratio": 1.04,
+     "n": 4
+    },
+    "TLead_median_min_disp": {
+     "min": 1.0,
+     "max": 3.0,
+     "median": 1.0,
+     "max_min_ratio": 3.0,
+     "n": 4
+    },
+    "far24h_disp": {
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "max_min_ratio": null,
+     "n": 4
+    },
+    "fp_alarm_total": 0
+   },
+   "anchor_gap": {
+    "n_onsets_total": 281,
+    "n_missing_anchors": 13,
+    "frac": 0.0463,
+    "kelas": "ABSORBED (absorber delta 2-7 mnt)",
+    "per_well": {
+     "F-9": {
+      "onsets": 55,
+      "missing": 3
+     },
+     "F-9_A": {
+      "onsets": 72,
+      "missing": 4
+     },
+     "F-10": {
+      "onsets": 93,
+      "missing": 2
+     },
+     "F-14": {
+      "onsets": 61,
+      "missing": 4
+     }
+    }
+   }
+  }
+ },
+ "C_bitwear": {
+  "K1": {
+   "n_folds": 7,
+   "n_scorable": 5,
+   "zero_pos_folds": [
+    "USROP_A 1 N-S_F-7d.csv",
+    "USROP_A 6 N-SH_F-9d.csv"
+   ],
+   "underpowered_folds": [
+    "USROP_A 0 N-NA_F-9_Ad.csv",
+    "USROP_A 1 N-S_F-7d.csv",
+    "USROP_A 6 N-SH_F-9d.csv"
+   ],
+   "auprc_disp_scorable": {
+    "min": 0.11851851851851851,
+    "max": 0.9837378022700696,
+    "median": 0.6979,
+    "max_min_ratio": 8.3,
+    "n": 5
+   },
+   "lift_disp_scorable": {
+    "min": 1.806149619141126,
+    "max": 10.666666666666666,
+    "median": 4.7544,
+    "max_min_ratio": 5.91,
+    "n": 5
+   },
+   "canary_auprc_disp": {
+    "min": 0.017700437341751342,
+    "max": 0.75551936756036,
+    "median": 0.288,
+    "max_min_ratio": 42.68,
+    "n": 5
+   },
+   "dB_pers_vs_canary_pos": "5/5",
+   "dataset": "USROP (bukan rig Volve utama) — transfer lintas-dataset",
+   "P_R_FAR": "BELUM TERUKUR (field TP/FP tidak ada di JSON; konsisten EVAL_A §2.6)",
+   "K2": "BELUM DIJALANKAN (pra-reg belum terbit)"
+  }
+ },
+ "C_toolwear": {
+  "K_i": {
+   "n_runs": 8,
+   "cp_precision_runlevel": 0.5,
+   "cp_sig_folds": "8/8 (p<=0,05) & 8/8 (p<=0,002)",
+   "thermal_artifact_test": "t_cp TIDAK dominan awal -> lanjut dinilai",
+   "cross_family_spread_s": {
+    "min": 8,
+    "max": 40,
+    "median": 16.5,
+    "max_min_ratio": 5.0,
+    "n": 8
+   },
+   "partC_target1_per_tool": [
+    {
+     "tool": "T01",
+     "fp_R01": 1,
+     "det_R02": true,
+     "TLead_s": 25.0,
+     "pct_R02_alarmed": 3.3
+    },
+    {
+     "tool": "T02",
+     "fp_R01": 3,
+     "det_R02": true,
+     "TLead_s": 36.0,
+     "pct_R02_alarmed": 6.5
+    },
+    {
+     "tool": "T03",
+     "fp_R01": 1,
+     "det_R02": true,
+     "TLead_s": 24.0,
+     "pct_R02_alarmed": 5.0
+    },
+    {
+     "tool": "T04",
+     "fp_R01": 3,
+     "det_R02": true,
+     "TLead_s": 20.0,
+     "pct_R02_alarmed": 6.9
+    }
+   ],
+   "partC_TLead_disp": {
+    "min": 20.0,
+    "max": 36.0,
+    "median": 24.5,
+    "max_min_ratio": 1.8,
+    "n": 4
+   },
+   "partC_FP_disp": {
+    "min": 1,
+    "max": 3,
+    "median": 2.0,
+    "max_min_ratio": 3.0,
+    "n": 4
+   },
+   "partB_raw_FAR_disp": {
+    "min": 42.857,
+    "max": 58.571,
+    "median": 48.643,
+    "max_min_ratio": 1.37,
+    "n": 4
+   }
+  },
+  "K_ii": {
+   "n_folds_LOTO": 4,
+   "tools": [
+    "T01",
+    "T02",
+    "T03",
+    "T04"
+   ],
+   "canary_auprc_disp": {
+    "min": 0.5164015727016399,
+    "max": 0.6123907846873864,
+    "median": 0.5985,
+    "max_min_ratio": 1.19,
+    "n": 4
+   },
+   "identity_auprc_disp": {
+    "min": 0.49586776859504134,
+    "max": 0.5535714285714286,
+    "median": 0.5,
+    "max_min_ratio": 1.12,
+    "n": 4
+   },
+   "lift_ceiling": 2.0,
+   "RF_V9": "BELUM DIJALANKAN (E_ML 4 head; angka V8 = referensi, EA-7)",
+   "persistence": "N/A dinyatakan (label konstan dalam run)"
+  }
+ },
+ "C5_det": {
+  "E_ML_vib": {
+   "rerun_identical": false,
+   "max_abs_diff": 2.220446049250313e-16,
+   "interpretasi": "selisih = 2.2e-16 (machine epsilon) -> numerik identik"
+  },
+  "E_STAT": {
+   "method": "banding hash SHA256 file rerun _det_a & _det_b vs main",
+   "hasil": "SEMUA field identik kecuali summary.elapsed_s (waktu komputasi); _det_b hash == main (termasuk elapsed)",
+   "verdict": "deterministik (4/4 file)"
+  },
+  "E_RULE": {
+   "rerun": "dilaporkan tim E_RULE: 4/4 identik (handoff t_c8bebfb6)",
+   "verifikasi evaluator": "tidak di-rerun ulang oleh EVAL_C (mengikuti laporan tim + determinisme metode (seed 42, ambang q95-train))"
+  }
+ }
+}

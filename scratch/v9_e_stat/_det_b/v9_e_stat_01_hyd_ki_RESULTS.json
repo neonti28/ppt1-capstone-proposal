@@ -1,0 +1,694 @@
+{
+ "engine": "hyd_ki",
+ "claim_task": "deteksi kondisi |z|>2 residu SPPA",
+ "jenis_engine": "statistical (persistence) + label-forming median/MAD",
+ "seed": 42,
+ "split": "LOWO",
+ "label_crosscheck": {
+  "method": "recompute hyd_bin_labels dari bins/ lalu agregasi jendela W=10 identik v9_d1_03 (NQ=10, MIN_OBS=5)",
+  "per_well": {
+   "F-10": {
+    "rows": 7571,
+    "label_bins": 13473,
+    "y_match": 7571,
+    "y_mismatch": 0,
+    "y_match_pct": 100.0,
+    "y_prev_pairs_in_dataset": 7001,
+    "y_prev_match": 7001,
+    "y_prev_mismatch_in_dataset": 0
+   },
+   "F-12": {
+    "rows": 7390,
+    "label_bins": 20572,
+    "y_match": 7390,
+    "y_mismatch": 0,
+    "y_match_pct": 100.0,
+    "y_prev_pairs_in_dataset": 5848,
+    "y_prev_match": 5848,
+    "y_prev_mismatch_in_dataset": 0
+   },
+   "F-14": {
+    "rows": 10401,
+    "label_bins": 12569,
+    "y_match": 10401,
+    "y_mismatch": 0,
+    "y_match_pct": 100.0,
+    "y_prev_pairs_in_dataset": 9066,
+    "y_prev_match": 9066,
+    "y_prev_mismatch_in_dataset": 0
+   },
+   "F-15A": {
+    "rows": 6156,
+    "label_bins": 11770,
+    "y_match": 6156,
+    "y_mismatch": 0,
+    "y_match_pct": 100.0,
+    "y_prev_pairs_in_dataset": 5644,
+    "y_prev_match": 5644,
+    "y_prev_mismatch_in_dataset": 0
+   },
+   "F-15_S": {
+    "rows": 8355,
+    "label_bins": 10547,
+    "y_match": 8355,
+    "y_mismatch": 0,
+    "y_match_pct": 100.0,
+    "y_prev_pairs_in_dataset": 7540,
+    "y_prev_match": 7540,
+    "y_prev_mismatch_in_dataset": 0
+   },
+   "F-5": {
+    "rows": 6332,
+    "label_bins": 10164,
+    "y_match": 6332,
+    "y_mismatch": 0,
+    "y_match_pct": 100.0,
+    "y_prev_pairs_in_dataset": 5364,
+    "y_prev_match": 5364,
+    "y_prev_mismatch_in_dataset": 0
+   },
+   "F-7": {
+    "rows": 2482,
+    "label_bins": 3620,
+    "y_match": 2482,
+    "y_mismatch": 0,
+    "y_match_pct": 100.0,
+    "y_prev_pairs_in_dataset": 2029,
+    "y_prev_match": 2029,
+    "y_prev_mismatch_in_dataset": 0
+   },
+   "F-9": {
+    "rows": 1616,
+    "label_bins": 2194,
+    "y_match": 1616,
+    "y_mismatch": 0,
+    "y_match_pct": 100.0,
+    "y_prev_pairs_in_dataset": 1322,
+    "y_prev_match": 1322,
+    "y_prev_mismatch_in_dataset": 0
+   },
+   "F-9_A": {
+    "rows": 2206,
+    "label_bins": 2503,
+    "y_match": 2206,
+    "y_mismatch": 0,
+    "y_match_pct": 100.0,
+    "y_prev_pairs_in_dataset": 1944,
+    "y_prev_match": 1944,
+    "y_prev_mismatch_in_dataset": 0
+   }
+  },
+  "total_rows": 52509,
+  "total_y_mismatch": 0,
+  "verdict": "LABEL TERDUPLIKASI PERSIS (0 mismatch)"
+ },
+ "folds": [
+  {
+   "fold": "LOWO_test_F-10",
+   "test_well": "F-10",
+   "train_wells": [
+    "F-12",
+    "F-14",
+    "F-15A",
+    "F-15_S",
+    "F-5",
+    "F-7",
+    "F-9",
+    "F-9_A"
+   ],
+   "task": "deteksi kondisi (bukan onset)",
+   "engine": "persistence y_hat(t)=y(t-W)",
+   "n_test": 7571,
+   "n_pos": 1394,
+   "prev": 0.184124,
+   "underpowered": false,
+   "n_prev_valid": 7463,
+   "engine_persistence": {
+    "auprc": 0.8426,
+    "ci95_auprc": [
+     0.734,
+     0.9146
+    ],
+    "lift": 4.576,
+    "lift_ceiling_1_over_prev": 5.431,
+    "dB_vs_prevalence_random": 0.6585,
+    "op": {
+     "tp": 1223,
+     "fp": 138,
+     "fn": 103,
+     "tn": 5999,
+     "precision": 0.8986039676708303,
+     "recall": 0.9223227752639518,
+     "far_per_neg_hour": 1.3491934169789799,
+     "far_per_24h_neg": 32.38064200749552
+    },
+    "det": {
+     "onsets": 19,
+     "detected_any": 12,
+     "detected_within_H10": 12,
+     "pct_detected_within_H10": 0.631578947368421,
+     "delay_median_min": 3.5,
+     "delay_p25_p75": [
+      0.0,
+      10.0
+     ]
+    }
+   },
+   "baseline_prevalence_random": {
+    "auprc_equals_prev": 0.184124,
+    "type": "analitik (AUPRC acak = prevalensi)",
+    "lift_by_definition": 1.0
+   },
+   "baseline_rule_z_manual": {
+    "definition": "rule |z|>2 per qcut(TFLO,10) = PEMBENTUK LABEL",
+    "note": "TAUTOLOGI: rule == definisi label -> P=R=1.0 by construction; bukan pembanding keunggulan. Nilai B3 = menghitung beban alarm.",
+    "n_label_rule_alarms": 1394,
+    "rule_far_per_24h_neg_definitional": 324.9732880038854
+   }
+  },
+  {
+   "fold": "LOWO_test_F-12",
+   "test_well": "F-12",
+   "train_wells": [
+    "F-10",
+    "F-14",
+    "F-15A",
+    "F-15_S",
+    "F-5",
+    "F-7",
+    "F-9",
+    "F-9_A"
+   ],
+   "task": "deteksi kondisi (bukan onset)",
+   "engine": "persistence y_hat(t)=y(t-W)",
+   "n_test": 7390,
+   "n_pos": 1426,
+   "prev": 0.192963,
+   "underpowered": false,
+   "n_prev_valid": 7241,
+   "engine_persistence": {
+    "auprc": 0.6428,
+    "ci95_auprc": [
+     0.5428,
+     0.734
+    ],
+    "lift": 3.331,
+    "lift_ceiling_1_over_prev": 5.182,
+    "dB_vs_prevalence_random": 0.4499,
+    "op": {
+     "tp": 1143,
+     "fp": 398,
+     "fn": 251,
+     "tn": 5449,
+     "precision": 0.7417261518494485,
+     "recall": 0.8199426111908178,
+     "far_per_neg_hour": 4.084145715751667,
+     "far_per_24h_neg": 98.01949717804001
+    },
+    "det": {
+     "onsets": 91,
+     "detected_any": 55,
+     "detected_within_H10": 55,
+     "pct_detected_within_H10": 0.6043956043956044,
+     "delay_median_min": 0.0,
+     "delay_p25_p75": [
+      0.0,
+      2.0
+     ]
+    }
+   },
+   "baseline_prevalence_random": {
+    "auprc_equals_prev": 0.192963,
+    "type": "analitik (AUPRC acak = prevalensi)",
+    "lift_by_definition": 1.0
+   },
+   "baseline_rule_z_manual": {
+    "definition": "rule |z|>2 per qcut(TFLO,10) = PEMBENTUK LABEL",
+    "note": "TAUTOLOGI: rule == definisi label -> P=R=1.0 by construction; bukan pembanding keunggulan. Nilai B3 = menghitung beban alarm.",
+    "n_label_rule_alarms": 1426,
+    "rule_far_per_24h_neg_definitional": 344.3058350100604
+   }
+  },
+  {
+   "fold": "LOWO_test_F-14",
+   "test_well": "F-14",
+   "train_wells": [
+    "F-10",
+    "F-12",
+    "F-15A",
+    "F-15_S",
+    "F-5",
+    "F-7",
+    "F-9",
+    "F-9_A"
+   ],
+   "task": "deteksi kondisi (bukan onset)",
+   "engine": "persistence y_hat(t)=y(t-W)",
+   "n_test": 10401,
+   "n_pos": 865,
+   "prev": 0.083165,
+   "underpowered": false,
+   "n_prev_valid": 10221,
+   "engine_persistence": {
+    "auprc": 0.4441,
+    "ci95_auprc": [
+     0.2837,
+     0.5799
+    ],
+    "lift": 5.34,
+    "lift_ceiling_1_over_prev": 12.024,
+    "dB_vs_prevalence_random": 0.3609,
+    "op": {
+     "tp": 553,
+     "fp": 323,
+     "fn": 286,
+     "tn": 9059,
+     "precision": 0.6312785388127854,
+     "recall": 0.6591179976162098,
+     "far_per_neg_hour": 2.065657642293754,
+     "far_per_24h_neg": 49.5757834150501
+    },
+    "det": {
+     "onsets": 58,
+     "detected_any": 27,
+     "detected_within_H10": 27,
+     "pct_detected_within_H10": 0.46551724137931033,
+     "delay_median_min": 0.0,
+     "delay_p25_p75": [
+      0.0,
+      10.0
+     ]
+    }
+   },
+   "baseline_prevalence_random": {
+    "auprc_equals_prev": 0.083165,
+    "type": "analitik (AUPRC acak = prevalensi)",
+    "lift_by_definition": 1.0
+   },
+   "baseline_rule_z_manual": {
+    "definition": "rule |z|>2 per qcut(TFLO,10) = PEMBENTUK LABEL",
+    "note": "TAUTOLOGI: rule == definisi label -> P=R=1.0 by construction; bukan pembanding keunggulan. Nilai B3 = menghitung beban alarm.",
+    "n_label_rule_alarms": 865,
+    "rule_far_per_24h_neg_definitional": 130.62080536912754
+   }
+  },
+  {
+   "fold": "LOWO_test_F-15A",
+   "test_well": "F-15A",
+   "train_wells": [
+    "F-10",
+    "F-12",
+    "F-14",
+    "F-15_S",
+    "F-5",
+    "F-7",
+    "F-9",
+    "F-9_A"
+   ],
+   "task": "deteksi kondisi (bukan onset)",
+   "engine": "persistence y_hat(t)=y(t-W)",
+   "n_test": 6156,
+   "n_pos": 698,
+   "prev": 0.113385,
+   "underpowered": false,
+   "n_prev_valid": 6154,
+   "engine_persistence": {
+    "auprc": 0.4898,
+    "ci95_auprc": [
+     0.2686,
+     0.6766
+    ],
+    "lift": 4.319,
+    "lift_ceiling_1_over_prev": 8.819,
+    "dB_vs_prevalence_random": 0.3764,
+    "op": {
+     "tp": 474,
+     "fp": 236,
+     "fn": 224,
+     "tn": 5220,
+     "precision": 0.6676056338028169,
+     "recall": 0.6790830945558739,
+     "far_per_neg_hour": 2.595307917888563,
+     "far_per_24h_neg": 62.28739002932551
+    },
+    "det": {
+     "onsets": 33,
+     "detected_any": 19,
+     "detected_within_H10": 19,
+     "pct_detected_within_H10": 0.5757575757575758,
+     "delay_median_min": 0.0,
+     "delay_p25_p75": [
+      0.0,
+      10.0
+     ]
+    }
+   },
+   "baseline_prevalence_random": {
+    "auprc_equals_prev": 0.113385,
+    "type": "analitik (AUPRC acak = prevalensi)",
+    "lift_by_definition": 1.0
+   },
+   "baseline_rule_z_manual": {
+    "definition": "rule |z|>2 per qcut(TFLO,10) = PEMBENTUK LABEL",
+    "note": "TAUTOLOGI: rule == definisi label -> P=R=1.0 by construction; bukan pembanding keunggulan. Nilai B3 = menghitung beban alarm.",
+    "n_label_rule_alarms": 698,
+    "rule_far_per_24h_neg_definitional": 184.15536826676438
+   }
+  },
+  {
+   "fold": "LOWO_test_F-15_S",
+   "test_well": "F-15_S",
+   "train_wells": [
+    "F-10",
+    "F-12",
+    "F-14",
+    "F-15A",
+    "F-5",
+    "F-7",
+    "F-9",
+    "F-9_A"
+   ],
+   "task": "deteksi kondisi (bukan onset)",
+   "engine": "persistence y_hat(t)=y(t-W)",
+   "n_test": 8355,
+   "n_pos": 993,
+   "prev": 0.118851,
+   "underpowered": false,
+   "n_prev_valid": 8225,
+   "engine_persistence": {
+    "auprc": 0.4245,
+    "ci95_auprc": [
+     0.2787,
+     0.5526
+    ],
+    "lift": 3.572,
+    "lift_ceiling_1_over_prev": 8.414,
+    "dB_vs_prevalence_random": 0.3057,
+    "op": {
+     "tp": 601,
+     "fp": 377,
+     "fn": 373,
+     "tn": 6874,
+     "precision": 0.614519427402863,
+     "recall": 0.6170431211498973,
+     "far_per_neg_hour": 3.119569714522135,
+     "far_per_24h_neg": 74.86967314853123
+    },
+    "det": {
+     "onsets": 64,
+     "detected_any": 30,
+     "detected_within_H10": 30,
+     "pct_detected_within_H10": 0.46875,
+     "delay_median_min": 3.0,
+     "delay_p25_p75": [
+      0.0,
+      10.0
+     ]
+    }
+   },
+   "baseline_prevalence_random": {
+    "auprc_equals_prev": 0.118851,
+    "type": "analitik (AUPRC acak = prevalensi)",
+    "lift_by_definition": 1.0
+   },
+   "baseline_rule_z_manual": {
+    "definition": "rule |z|>2 per qcut(TFLO,10) = PEMBENTUK LABEL",
+    "note": "TAUTOLOGI: rule == definisi label -> P=R=1.0 by construction; bukan pembanding keunggulan. Nilai B3 = menghitung beban alarm.",
+    "n_label_rule_alarms": 993,
+    "rule_far_per_24h_neg_definitional": 194.22982885085577
+   }
+  },
+  {
+   "fold": "LOWO_test_F-5",
+   "test_well": "F-5",
+   "train_wells": [
+    "F-10",
+    "F-12",
+    "F-14",
+    "F-15A",
+    "F-15_S",
+    "F-7",
+    "F-9",
+    "F-9_A"
+   ],
+   "task": "deteksi kondisi (bukan onset)",
+   "engine": "persistence y_hat(t)=y(t-W)",
+   "n_test": 6332,
+   "n_pos": 621,
+   "prev": 0.098073,
+   "underpowered": false,
+   "n_prev_valid": 6254,
+   "engine_persistence": {
+    "auprc": 0.5985,
+    "ci95_auprc": [
+     0.3827,
+     0.7566
+    ],
+    "lift": 6.102,
+    "lift_ceiling_1_over_prev": 10.196,
+    "dB_vs_prevalence_random": 0.5004,
+    "op": {
+     "tp": 465,
+     "fp": 152,
+     "fn": 144,
+     "tn": 5493,
+     "precision": 0.7536466774716369,
+     "recall": 0.7635467980295566,
+     "far_per_neg_hour": 1.6155890168290523,
+     "far_per_24h_neg": 38.77413640389726
+    },
+    "det": {
+     "onsets": 38,
+     "detected_any": 13,
+     "detected_within_H10": 12,
+     "pct_detected_within_H10": 0.3157894736842105,
+     "delay_median_min": 0.0,
+     "delay_p25_p75": [
+      0.0,
+      10.0
+     ]
+    }
+   },
+   "baseline_prevalence_random": {
+    "auprc_equals_prev": 0.098073,
+    "type": "analitik (AUPRC acak = prevalensi)",
+    "lift_by_definition": 1.0
+   },
+   "baseline_rule_z_manual": {
+    "definition": "rule |z|>2 per qcut(TFLO,10) = PEMBENTUK LABEL",
+    "note": "TAUTOLOGI: rule == definisi label -> P=R=1.0 by construction; bukan pembanding keunggulan. Nilai B3 = menghitung beban alarm.",
+    "n_label_rule_alarms": 621,
+    "rule_far_per_24h_neg_definitional": 156.58203466993518
+   }
+  },
+  {
+   "fold": "LOWO_test_F-7",
+   "test_well": "F-7",
+   "train_wells": [
+    "F-10",
+    "F-12",
+    "F-14",
+    "F-15A",
+    "F-15_S",
+    "F-5",
+    "F-9",
+    "F-9_A"
+   ],
+   "task": "deteksi kondisi (bukan onset)",
+   "engine": "persistence y_hat(t)=y(t-W)",
+   "n_test": 2482,
+   "n_pos": 421,
+   "prev": 0.169621,
+   "underpowered": false,
+   "n_prev_valid": 2452,
+   "engine_persistence": {
+    "auprc": 0.5061,
+    "ci95_auprc": [
+     0.3212,
+     0.6481
+    ],
+    "lift": 2.984,
+    "lift_ceiling_1_over_prev": 5.895,
+    "dB_vs_prevalence_random": 0.3365,
+    "op": {
+     "tp": 289,
+     "fp": 157,
+     "fn": 121,
+     "tn": 1885,
+     "precision": 0.647982062780269,
+     "recall": 0.7048780487804878,
+     "far_per_neg_hour": 4.613124387855044,
+     "far_per_24h_neg": 110.71498530852105
+    },
+    "det": {
+     "onsets": 26,
+     "detected_any": 17,
+     "detected_within_H10": 17,
+     "pct_detected_within_H10": 0.6538461538461539,
+     "delay_median_min": 2.0,
+     "delay_p25_p75": [
+      0.0,
+      10.0
+     ]
+    }
+   },
+   "baseline_prevalence_random": {
+    "auprc_equals_prev": 0.169621,
+    "type": "analitik (AUPRC acak = prevalensi)",
+    "lift_by_definition": 1.0
+   },
+   "baseline_rule_z_manual": {
+    "definition": "rule |z|>2 per qcut(TFLO,10) = PEMBENTUK LABEL",
+    "note": "TAUTOLOGI: rule == definisi label -> P=R=1.0 by construction; bukan pembanding keunggulan. Nilai B3 = menghitung beban alarm.",
+    "n_label_rule_alarms": 421,
+    "rule_far_per_24h_neg_definitional": 294.1484716157205
+   }
+  },
+  {
+   "fold": "LOWO_test_F-9",
+   "test_well": "F-9",
+   "train_wells": [
+    "F-10",
+    "F-12",
+    "F-14",
+    "F-15A",
+    "F-15_S",
+    "F-5",
+    "F-7",
+    "F-9_A"
+   ],
+   "task": "deteksi kondisi (bukan onset)",
+   "engine": "persistence y_hat(t)=y(t-W)",
+   "n_test": 1616,
+   "n_pos": 423,
+   "prev": 0.261757,
+   "underpowered": false,
+   "n_prev_valid": 1600,
+   "engine_persistence": {
+    "auprc": 0.6251,
+    "ci95_auprc": [
+     0.3943,
+     0.7988
+    ],
+    "lift": 2.388,
+    "lift_ceiling_1_over_prev": 3.82,
+    "dB_vs_prevalence_random": 0.3634,
+    "op": {
+     "tp": 283,
+     "fp": 74,
+     "fn": 129,
+     "tn": 1114,
+     "precision": 0.7927170868347339,
+     "recall": 0.6868932038834952,
+     "far_per_neg_hour": 3.7373737373737375,
+     "far_per_24h_neg": 89.6969696969697
+    },
+    "det": {
+     "onsets": 28,
+     "detected_any": 17,
+     "detected_within_H10": 17,
+     "pct_detected_within_H10": 0.6071428571428571,
+     "delay_median_min": 0.0,
+     "delay_p25_p75": [
+      0.0,
+      4.0
+     ]
+    }
+   },
+   "baseline_prevalence_random": {
+    "auprc_equals_prev": 0.261757,
+    "type": "analitik (AUPRC acak = prevalensi)",
+    "lift_by_definition": 1.0
+   },
+   "baseline_rule_z_manual": {
+    "definition": "rule |z|>2 per qcut(TFLO,10) = PEMBENTUK LABEL",
+    "note": "TAUTOLOGI: rule == definisi label -> P=R=1.0 by construction; bukan pembanding keunggulan. Nilai B3 = menghitung beban alarm.",
+    "n_label_rule_alarms": 423,
+    "rule_far_per_24h_neg_definitional": 510.57837384744346
+   }
+  },
+  {
+   "fold": "LOWO_test_F-9_A",
+   "test_well": "F-9_A",
+   "train_wells": [
+    "F-10",
+    "F-12",
+    "F-14",
+    "F-15A",
+    "F-15_S",
+    "F-5",
+    "F-7",
+    "F-9"
+   ],
+   "task": "deteksi kondisi (bukan onset)",
+   "engine": "persistence y_hat(t)=y(t-W)",
+   "n_test": 2206,
+   "n_pos": 331,
+   "prev": 0.150045,
+   "underpowered": false,
+   "n_prev_valid": 2136,
+   "engine_persistence": {
+    "auprc": 0.5415,
+    "ci95_auprc": [
+     0.2662,
+     0.7147
+    ],
+    "lift": 3.609,
+    "lift_ceiling_1_over_prev": 6.665,
+    "dB_vs_prevalence_random": 0.3915,
+    "op": {
+     "tp": 212,
+     "fp": 86,
+     "fn": 90,
+     "tn": 1748,
+     "precision": 0.7114093959731543,
+     "recall": 0.7019867549668874,
+     "far_per_neg_hour": 2.8135223555070885,
+     "far_per_24h_neg": 67.52453653217012
+    },
+    "det": {
+     "onsets": 23,
+     "detected_any": 10,
+     "detected_within_H10": 10,
+     "pct_detected_within_H10": 0.43478260869565216,
+     "delay_median_min": 1.5,
+     "delay_p25_p75": [
+      0.0,
+      6.25
+     ]
+    }
+   },
+   "baseline_prevalence_random": {
+    "auprc_equals_prev": 0.150045,
+    "type": "analitik (AUPRC acak = prevalensi)",
+    "lift_by_definition": 1.0
+   },
+   "baseline_rule_z_manual": {
+    "definition": "rule |z|>2 per qcut(TFLO,10) = PEMBENTUK LABEL",
+    "note": "TAUTOLOGI: rule == definisi label -> P=R=1.0 by construction; bukan pembanding keunggulan. Nilai B3 = menghitung beban alarm.",
+    "n_label_rule_alarms": 331,
+    "rule_far_per_24h_neg_definitional": 254.20800000000003
+   }
+  }
+ ],
+ "summary": {
+  "n_folds": 9,
+  "n_layak": 9,
+  "n_underpowered": 0,
+  "auprc_range_layak": [
+   0.4245,
+   0.8426
+  ],
+  "lift_range_layak": [
+   2.388,
+   6.102
+  ],
+  "lift_gt1_folds": 9,
+  "dB_pos_folds": 9,
+  "p_range": [
+   0.614519427402863,
+   0.8986039676708303
+  ],
+  "elapsed_s": 14.0
+ }
+}

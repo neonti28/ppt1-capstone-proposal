@@ -1,0 +1,93 @@
+{
+ "vib": {
+  "status": "OK",
+  "n_rows": 23922,
+  "leak_violations_feat_ge_lab": 0,
+  "rows_with_nan_feat_ts": 0,
+  "wells": [
+   "F-14",
+   "F-15A",
+   "F-15_S",
+   "F-5"
+  ],
+  "n_folds": 4
+ },
+ "ssi": {
+  "status": "OK",
+  "n_rows": 35906,
+  "leak_violations_feat_ge_lab": 0,
+  "rows_with_nan_feat_ts": 0,
+  "wells": [
+   "F-10",
+   "F-12",
+   "F-14",
+   "F-15A",
+   "F-15_S",
+   "F-5",
+   "F-7",
+   "F-9",
+   "F-9_A"
+  ],
+  "n_folds": 9
+ },
+ "shk": {
+  "status": "OK",
+  "n_rows": 56495,
+  "leak_violations_feat_ge_lab": 0,
+  "rows_with_nan_feat_ts": 0,
+  "wells": [
+   "F-10",
+   "F-12",
+   "F-14",
+   "F-15A",
+   "F-15_S",
+   "F-5",
+   "F-7",
+   "F-9",
+   "F-9_A"
+  ],
+  "n_folds": 9
+ },
+ "stuck_k1": {
+  "status": "OK",
+  "n_rows": 5555,
+  "leak_violations_feat_ge_lab": 0,
+  "rows_with_nan_feat_ts": 0,
+  "wells": [
+   "F-14",
+   "F-9_A"
+  ],
+  "n_folds": 2
+ },
+ "hyd_ki": {
+  "status": "OK",
+  "n_rows": 52509,
+  "leak_violations_feat_ge_lab": 0,
+  "rows_with_nan_feat_ts": 0,
+  "wells": [
+   "F-10",
+   "F-12",
+   "F-14",
+   "F-15A",
+   "F-15_S",
+   "F-5",
+   "F-7",
+   "F-9",
+   "F-9_A"
+  ],
+  "n_folds": 9
+ },
+ "stuck_k2": {
+  "status": "OK",
+  "n_rows": 118567,
+  "leak_violations_feat_ge_lab": 0,
+  "rows_with_nan_feat_ts": 0,
+  "wells": [
+   "F-10",
+   "F-14",
+   "F-9",
+   "F-9_A"
+  ],
+  "n_folds": 4
+ }
+}

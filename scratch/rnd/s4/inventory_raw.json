@@ -1,0 +1,525 @@
+{
+ "folder_well_technical_data": {
+  "CasingSeat": {
+   "n_files": 1,
+   "bytes": 0
+  },
+  "CasingWear": {
+   "n_files": 1,
+   "bytes": 0
+  },
+  "Compass": {
+   "n_files": 1,
+   "bytes": 0
+  },
+  "Daily Drilling Report - HTML Version": {
+   "n_files": 1759,
+   "bytes": 30971159
+  },
+  "Daily Drilling Report - XML Version": {
+   "n_files": 1759,
+   "bytes": 21315879
+  },
+  "Daily Drilling report - PDF Version": {
+   "n_files": 1759,
+   "bytes": 56814977
+  },
+  "EDM.XML": {
+   "n_files": 2,
+   "bytes": 288962033
+  },
+  "Site": {
+   "n_files": 2,
+   "bytes": 105245
+  },
+  "Site_TemplateSlot": {
+   "n_files": 2,
+   "bytes": 71810
+  },
+  "StressCheck": {
+   "n_files": 8,
+   "bytes": 2065920
+  },
+  "WellPlan": {
+   "n_files": 1,
+   "bytes": 0
+  },
+  "WellWellbore": {
+   "n_files": 175,
+   "bytes": 6451636
+  },
+  "Wellcat": {
+   "n_files": 3,
+   "bytes": 3162112
+  }
+ },
+ "folder_total": {
+  "n_files": 5473,
+  "bytes": 409920771
+ },
+ "ddr_dokumen_per_format": {
+  "html": {
+   "n_files": 1759,
+   "bytes": 30971159
+  },
+  "xml": {
+   "n_files": 1759,
+   "bytes": 21315879
+  },
+  "pdf": {
+   "n_files": 1759,
+   "bytes": 56814977
+  }
+ },
+ "pindai_xml_ddr": {
+  "label": "XML DDR",
+  "n_file_dibaca": 1759,
+  "n_file_gagal": 0,
+  "kemunculan": {
+   "maintain": 393,
+   "inspection": 154,
+   "inspect": 630,
+   "downtime": 17,
+   "npt": 4
+  },
+  "file_mengandung": {
+   "maintain": 220,
+   "inspection": 119,
+   "inspect": 377,
+   "downtime": 15,
+   "npt": 4
+  }
+ },
+ "pindai_html_ddr": {
+  "label": "HTML DDR",
+  "n_file_dibaca": 1759,
+  "n_file_gagal": 0,
+  "kemunculan": {
+   "maintain": 393,
+   "inspection": 154,
+   "inspect": 630,
+   "downtime": 342,
+   "npt": 4
+  },
+  "file_mengandung": {
+   "maintain": 220,
+   "inspection": 119,
+   "inspect": 377,
+   "downtime": 326,
+   "npt": 4
+  }
+ },
+ "katalog_volve": {
+  "path": "/mnt/d/Capstone 1(v2)/data/volve/external/volve_catalog_target_paths.csv",
+  "bytes": 645763,
+  "n_baris": 4035,
+  "kolom": [
+   "category",
+   "well",
+   "ext",
+   "path"
+  ],
+  "kategori": {
+   "other_target": 3123,
+   "dlis_target": 468,
+   "las_target": 253,
+   "bhaRun": 175,
+   "mudLog": 16
+  },
+  "ekstensi": {
+   "pdf": 1231,
+   "xml": 797,
+   "html": 628,
+   "dlis": 442,
+   "asc": 255,
+   "las": 253,
+   "pds": 174,
+   "segy": 102,
+   "txt": 35,
+   "lis": 26,
+   "": 20,
+   "xls": 18,
+   "doc": 18,
+   "xlsx": 14,
+   "dex": 10
+  }
+ },
+ "csv_di_data": {
+  "n_file": 53,
+  "berkas": [
+   {
+    "path": "data/USROP/Code/Description.csv",
+    "bytes": 462,
+    "n_kolom": 6,
+    "header": ",File Name,Starting Measured Depth [m],Final Measured Depth [m],Available length [m],Sample count",
+    "kata_kunci_header": []
+   },
+   {
+    "path": "data/USROP/Code/Norway-NA-15_$47$_9-F-9 A depth.csv",
+    "bytes": 5579689,
+    "n_kolom": 116,
+    "header": ",Unnamed: 0,Measured Depth m,TOFB s,AVG_CONF unitless,MIN_CONF unitless,Average Rotary Speed rpm,STUCK_RT unitless,Corrected Surface Weight on Bit kkgf,Corrected Total Hookload kkgf,MWD Turbine RPM rpm,MWD Raw Gamma Ray 1/s,MWD Continuous Inclination dega,Pump 2 Stroke Rate 1/min,Rate of Penetration m/h,Bit Drill Time h,Corrected Hookload kkgf,MWD Gravity Toolface dega,Mud Density Out g/cm3,MWD GR",
+    "kata_kunci_header": []
+   },
+   {
+    "path": "data/USROP/Code/Norway-Statoil-15_$47$_9-F-7 depth.csv",
+    "bytes": 4200700,
+    "n_kolom": 72,
+    "header": ",Measured Depth m,MWD Continuous Inclination dega,MWD Magnetic Toolface dega,Weight on Bit kkgf,Average Hookload kkgf,Bit run number unitless,MWD Shock Risk unitless,Active Tank Volume m3,\"Gas, Nor-C4 ppm\",Hole Depth (TVD) m,MWD Collar RPM rpm,Average Standpipe Pressure kPa,Corr. Drilling Exponent unitless,Mud Temperature In degC,\"Gas, C3 ppm\",MWD Total Shocks unitless,MWD Shock Peak m/s2,Average ",
+    "kata_kunci_header": []
+   },
+   {
+    "path": "data/USROP/Code/Norway-StatoilHydro-15_$47$_9-F-14 depth.csv",
+    "bytes": 31218764,
+    "n_kolom": 194,
+    "header": ",Measured Depth m,\"Gas, Iso-C5 ppm\",Bit Drill Distance m,MWD Continuous Inclination dega,Mud Temperature In degC,Active Tank Volume m3,MWD Shock Risk unitless,\"Gas, Nor-C5 ppm\",Mud Flow Out % %,NRPM_RT unitless,Average Surface Torque kN.m,RHX_RT unitless,Hole Depth (TVD) m,MWD Total Shocks unitless,Pass Name unitless,Average Rotary Speed rpm,Average Standpipe Pressure kPa,Total Bit Revolutions uni",
+    "kata_kunci_header": []
+   },
+   {
+    "path": "data/USROP/Code/Norway-StatoilHydro-15_$47$_9-F-15 depth .csv",
+    "bytes": 37362521,
+    "n_kolom": 221,
+    "header": ",Measured Depth m,Bit Depth m,Corr. Drilling Exponent unitless,IMP/ARC Non-BHcorr Phase-Shift Resistivity 40-in. at 2 MHz ohm.m,MWD Stick-Slip PKtoPK RPM rpm,Average Surface Torque kN.m,Gas (avg) %,Bit Drilling Time s,Average Standpipe Pressure kPa,Mud Flow In L/min,MWD Shock Peak m/s2,Rate of Penetration m/h,Iso-butane (IC4) ppm,PowerDrive Inclination dega,PowerDrive Real-Time Status unitless,Rig",
+    "kata_kunci_header": []
+   },
+   {
+    "path": "data/USROP/Code/Norway-StatoilHydro-15_$47$_9-F-15S depth.csv",
+    "bytes": 33347947,
+    "n_kolom": 204,
+    "header": ",Measured Depth m,Average Surface Torque kN.m,\"Gas, Nor-C5 ppm\",\"Gas, Nor-C4 ppm\",\"Gas, C1 ppm\",Total Bit Revolutions unitless,RGX_RT unitless,HKLI kkgf,MWD Vibration X-Axis ft/s2,IMP/ARC Phase-Shift Resistivity 40-in. at 2 MHz ohm.m,Bit run number unitless,IMP/ARC Phase-Shift Resistivity 28-in. at 2 MHz ohm.m,Bit Drill Time h,IMP/ARC Attenuation Resistivity 28-in. at 2 MHz ohm.m,Bit Depth m,Avera",
+    "kata_kunci_header": []
+   },
+   {
+    "path": "data/USROP/Code/Norway-StatoilHydro-15_$47$_9-F-5 depth.csv",
+    "bytes": 6667285,
+    "n_kolom": 106,
+    "header": ",Measured Depth m,BPHI_UNC_ECO_RT unitless,Lag Depth (TVD) m,Mud Flow In L/min,ARC Phase Shift Resistivity 28 inch at 2 MHz ohm.m,Average Surface Torque kN.m,\"Best Thermal Neutron Porosity, Average m3/m3\",Mud Temperature Out degC,Hole Depth (TVD) m,Mud Temperature In degC,TNPH_UNC_ECO_RT unitless,\"Downhole Annulus Pressure, Computed DH kPa\",MWD Shock Risk unitless,MWD Stick-Slip PKtoPK RPM rpm,\"Ga",
+    "kata_kunci_header": []
+   },
+   {
+    "path": "data/USROP/Code/Norway-StatoilHydro-15_$47$_9-F-9 depth.csv",
+    "bytes": 3197756,
+    "n_kolom": 95,
+    "header": ",Measured Depth m,MWD Continuous Azimuth dega,Average Hookload kkgf,RGX_RT unitless,\"Gas, C1 ppm\",MWD Shock Peak m/s2,Bit run number unitless,MWD Continuous Inclination dega,MWD Annulus Pressure kPa,\"Gas, Iso-C5 ppm\",MWD Shock Rate 1/s,DRILLTM_RT unitless,MWD Gamma Ray (API BH corrected) gAPI,Average Surface Torque kN.m,\"Gas, Nor-C4 ppm\",BOUNCE_RT unitless,Bit Drill Time h,Gas %,Bit Drill Distance",
+    "kata_kunci_header": []
+   },
+   {
+    "path": "data/USROP/Code/USROP_A 0 N-NA_F-9_Ad.csv",
+    "bytes": 2121157,
+    "n_kolom": 13,
+    "header": ",Measured Depth m,Weight on Bit kkgf,Average Standpipe Pressure kPa,Average Surface Torque kN.m,Rate of Penetration m/h,Average Rotary Speed rpm,Mud Flow In L/min,Mud Density In g/cm3,Diameter mm,Average Hookload kkgf,Hole Depth (TVD) m,USROP Gamma gAPI",
+    "kata_kunci_header": []
+   },
+   {
+    "path": "data/USROP/Code/USROP_A 1 N-S_F-7d.csv",
+    "bytes": 1091824,
+    "n_kolom": 13,
+    "header": ",Measured Depth m,Weight on Bit kkgf,Average Standpipe Pressure kPa,Average Surface Torque kN.m,Rate of Penetration m/h,Average Rotary Speed rpm,Mud Flow In L/min,Mud Density In g/cm3,Diameter mm,Average Hookload kkgf,Hole Depth (TVD) m,USROP Gamma gAPI",
+    "kata_kunci_header": []
+   },
+   {
+    "path": "data/USROP/Code/USROP_A 2 N-SH_F-14d.csv",
+    "bytes": 8433141,
+    "n_kolom": 13,
+    "header": ",Measured Depth m,Weight on Bit kkgf,Average Standpipe Pressure kPa,Average Surface Torque kN.m,Rate of Penetration m/h,Average Rotary Speed rpm,Mud Flow In L/min,Mud Density In g/cm3,Diameter mm,Average Hookload kkgf,Hole Depth (TVD) m,USROP Gamma gAPI",
+    "kata_kunci_header": []
+   },
+   {
+    "path": "data/USROP/Code/USROP_A 3 N-SH-F-15d.csv",
+    "bytes": 8200281,
+    "n_kolom": 13,
+    "header": ",Measured Depth m,Weight on Bit kkgf,Average Standpipe Pressure kPa,Average Surface Torque kN.m,Rate of Penetration m/h,Average Rotary Speed rpm,Mud Flow In L/min,Mud Density In g/cm3,Diameter mm,Average Hookload kkgf,Hole Depth (TVD) m,USROP Gamma gAPI",
+    "kata_kunci_header": []
+   },
+   {
+    "path": "data/USROP/Code/USROP_A 4 N-SH_F-15Sd.csv",
+    "bytes": 8644334,
+    "n_kolom": 13,
+    "header": ",Measured Depth m,Weight on Bit kkgf,Average Standpipe Pressure kPa,Average Surface Torque kN.m,Rate of Penetration m/h,Average Rotary Speed rpm,Mud Flow In L/min,Mud Density In g/cm3,Diameter mm,Average Hookload kkgf,Hole Depth (TVD) m,USROP Gamma gAPI",
+    "kata_kunci_header": []
+   },
+   {
+    "path": "data/USROP/Code/USROP_A 5 N-SH-F-5d.csv",
+    "bytes": 3258517,
+    "n_kolom": 13,
+    "header": ",Measured Depth m,Weight on Bit kkgf,Average Standpipe Pressure kPa,Average Surface Torque kN.m,Rate of Penetration m/h,Average Rotary Speed rpm,Mud Flow In L/min,Mud Density In g/cm3,Diameter mm,Average Hookload kkgf,Hole Depth (TVD) m,USROP Gamma gAPI",
+    "kata_kunci_header": []
+   },
+   {
+    "path": "data/USROP/Code/USROP_A 6 N-SH_F-9d.csv",
+    "bytes": 1348122,
+    "n_kolom": 13,
+    "header": ",Measured Depth m,Weight on Bit kkgf,Average Standpipe Pressure kPa,Average Surface Torque kN.m,Rate of Penetration m/h,Average Rotary Speed rpm,Mud Flow In L/min,Mud Density In g/cm3,Diameter mm,Average Hookload kkgf,Hole Depth (TVD) m,USROP Gamma gAPI",
+    "kata_kunci_header": []
+   },
+   {
+    "path": "data/USROP/USROP_A 0 N-NA_F-9_Ad.csv",
+    "bytes": 2121157,
+    "n_kolom": 13,
+    "header": ",Measured Depth m,Weight on Bit kkgf,Average Standpipe Pressure kPa,Average Surface Torque kN.m,Rate of Penetration m/h,Average Rotary Speed rpm,Mud Flow In L/min,Mud Density In g/cm3,Diameter mm,Average Hookload kkgf,Hole Depth (TVD) m,USROP Gamma gAPI",
+    "kata_kunci_header": []
+   },
+   {
+    "path": "data/USROP/USROP_A 1 N-S_F-7d.csv",
+    "bytes": 1091824,
+    "n_kolom": 13,
+    "header": ",Measured Depth m,Weight on Bit kkgf,Average Standpipe Pressure kPa,Average Surface Torque kN.m,Rate of Penetration m/h,Average Rotary Speed rpm,Mud Flow In L/min,Mud Density In g/cm3,Diameter mm,Average Hookload kkgf,Hole Depth (TVD) m,USROP Gamma gAPI",
+    "kata_kunci_header": []
+   },
+   {
+    "path": "data/USROP/USROP_A 2 N-SH_F-14d.csv",
+    "bytes": 8433141,
+    "n_kolom": 13,
+    "header": ",Measured Depth m,Weight on Bit kkgf,Average Standpipe Pressure kPa,Average Surface Torque kN.m,Rate of Penetration m/h,Average Rotary Speed rpm,Mud Flow In L/min,Mud Density In g/cm3,Diameter mm,Average Hookload kkgf,Hole Depth (TVD) m,USROP Gamma gAPI",
+    "kata_kunci_header": []
+   },
+   {
+    "path": "data/USROP/USROP_A 3 N-SH-F-15d.csv",
+    "bytes": 8200281,
+    "n_kolom": 13,
+    "header": ",Measured Depth m,Weight on Bit kkgf,Average Standpipe Pressure kPa,Average Surface Torque kN.m,Rate of Penetration m/h,Average Rotary Speed rpm,Mud Flow In L/min,Mud Density In g/cm3,Diameter mm,Average Hookload kkgf,Hole Depth (TVD) m,USROP Gamma gAPI",
+    "kata_kunci_header": []
+   },
+   {
+    "path": "data/USROP/USROP_A 4 N-SH_F-15Sd.csv",
+    "bytes": 8644334,
+    "n_kolom": 13,
+    "header": ",Measured Depth m,Weight on Bit kkgf,Average Standpipe Pressure kPa,Average Surface Torque kN.m,Rate of Penetration m/h,Average Rotary Speed rpm,Mud Flow In L/min,Mud Density In g/cm3,Diameter mm,Average Hookload kkgf,Hole Depth (TVD) m,USROP Gamma gAPI",
+    "kata_kunci_header": []
+   },
+   {
+    "path": "data/USROP/USROP_A 5 N-SH-F-5d.csv",
+    "bytes": 3258517,
+    "n_kolom": 13,
+    "header": ",Measured Depth m,Weight on Bit kkgf,Average Standpipe Pressure kPa,Average Surface Torque kN.m,Rate of Penetration m/h,Average Rotary Speed rpm,Mud Flow In L/min,Mud Density In g/cm3,Diameter mm,Average Hookload kkgf,Hole Depth (TVD) m,USROP Gamma gAPI",
+    "kata_kunci_header": []
+   },
+   {
+    "path": "data/USROP/USROP_A 6 N-SH_F-9d.csv",
+    "bytes": 1348122,
+    "n_kolom": 13,
+    "header": ",Measured Depth m,Weight on Bit kkgf,Average Standpipe Pressure kPa,Average Surface Torque kN.m,Rate of Penetration m/h,Average Rotary Speed rpm,Mud Flow In L/min,Mud Density In g/cm3,Diameter mm,Average Hookload kkgf,Hole Depth (TVD) m,USROP Gamma gAPI",
+    "kata_kunci_header": []
+   },
+   {
+    "path": "data/USROP_health.csv",
+    "bytes": 56815359,
+    "n_kolom": 20,
+    "header": "Unnamed: 0,Measured Depth m,Weight on Bit kkgf,Average Standpipe Pressure kPa,Average Surface Torque kN.m,Rate of Penetration m/h,Average Rotary Speed rpm,Mud Flow In L/min,Mud Density In g/cm3,Diameter mm,Average Hookload kkgf,Hole Depth (TVD) m,USROP Gamma gAPI,well,label,MSE,D_exp,ROC_coef,health_index,maintenance_recommendation",
+    "kata_kunci_header": [
+     "maintenance"
+    ]
+   },
+   {
+    "path": "data/USROP_labeled.csv",
+    "bytes": 51055017,
+    "n_kolom": 18,
+    "header": "Unnamed: 0,Measured Depth m,Weight on Bit kkgf,Average Standpipe Pressure kPa,Average Surface Torque kN.m,Rate of Penetration m/h,Average Rotary Speed rpm,Mud Flow In L/min,Mud Density In g/cm3,Diameter mm,Average Hookload kkgf,Hole Depth (TVD) m,USROP Gamma gAPI,well,label,MSE,D_exp,ROC_coef",
+    "kata_kunci_header": []
+   },
+   {
+    "path": "data/bo_tspp/TSPP1-15s.csv",
+    "bytes": 835443,
+    "n_kolom": 11,
+    "header": "date,Average Hookload kkgf,Hole depth (MD) m,Weight on Bit kkgf,Block Position m,Average Rotary Speed rpm,Average Surface Torque kN.m,Bit Depth (MD) m,Average Standpipe Pressure kPa,Mud Flow In L/min,Rate of Penetration m/h",
+    "kata_kunci_header": []
+   },
+   {
+    "path": "data/bo_tspp/TSPP1-long.csv",
+    "bytes": 7551289,
+    "n_kolom": 12,
+    "header": "date,Average Hookload kkgf,Hole depth (MD) m,Weight on Bit kkgf,Block Position m,Rate of Penetration m/h,Average Rotary Speed rpm,Average Surface Torque kN.m,Rate of Penetration (5ft avg) m/h,Bit Depth (MD) m,Average Standpipe Pressure kPa,Mud Flow In L/min",
+    "kata_kunci_header": []
+   },
+   {
+    "path": "data/bo_tspp/TSPP1.csv",
+    "bytes": 2722605,
+    "n_kolom": 11,
+    "header": "date,Average Hookload kkgf,Hole depth (MD) m,Weight on Bit kkgf,Block Position m,Average Rotary Speed rpm,Average Surface Torque kN.m,Bit Depth (MD) m,Average Standpipe Pressure kPa,Mud Flow In L/min,Rate of Penetration m/h",
+    "kata_kunci_header": []
+   },
+   {
+    "path": "data/bo_tspp/TSPP2.csv",
+    "bytes": 1033913,
+    "n_kolom": 11,
+    "header": "date,Hole Depth (MD) m,Bit Depth (MD) m,Block Position m,Mud Flow In L/min,Average Standpipe Pressure kPa,Average Hookload kkgf,Average Surface Torque kN.m,Average Rotary Speed rpm,Weight on Bit kkgf,Rate of Penetration m/h",
+    "kata_kunci_header": []
+   },
+   {
+    "path": "data/bo_tspp/TSPP3.csv",
+    "bytes": 1468108,
+    "n_kolom": 11,
+    "header": "date,Hole depth (MD) m,Bit Depth (MD) m,Block Position m,RPM30s rpm,Average Hookload kkgf,Average Standpipe Pressure kPa,Mud Flow In L/min,Averaged WOB kkgf,Average Surface Torque kN.m,Rate of Penetration  m/h",
+    "kata_kunci_header": []
+   },
+   {
+    "path": "data/bo_tspp/TSPP4.csv",
+    "bytes": 1357012,
+    "n_kolom": 11,
+    "header": "date,Hole Depth (MD) m,Bit Depth (MD) m,Block Position m,Average Hookload kkgf,Average Standpipe Pressure kPa,Mud Flow In L/min,Average Surface Torque kN.m,Average Rotary Speed rpm,Weight on Bit kkgf,Rate of Penetration m/h",
+    "kata_kunci_header": []
+   },
+   {
+    "path": "data/bo_tspp/TSPP_AE_SCORES.csv",
+    "bytes": 637,
+    "n_kolom": 10,
+    "header": "file,rows,matched_cols,date_min,date_max,err_median,err_p95,share_above_threshold,share_rows_any_z_gt3,note",
+    "kata_kunci_header": []
+   },
+   {
+    "path": "data/predictive/dataset_prediktif.csv",
+    "bytes": 109916292,
+    "n_kolom": 73,
+    "header": "row_id,well,wellbore,md,est_timestamp,lead_m,next_event_id,next_event_md,next_event_ts,y_5,y_10,y_15,y_30,mean_md,std_md,first_md,last_md,delta_md,mean_wob,std_wob,first_wob,last_wob,delta_wob,mean_spp,std_spp,first_spp,last_spp,delta_spp,mean_torque,std_torque,first_torque,last_torque,delta_torque,mean_rop,std_rop,first_rop,last_rop,delta_rop,mean_rpm,std_rpm,first_rpm,last_rpm,delta_rpm,mean_flo",
+    "kata_kunci_header": []
+   },
+   {
+    "path": "data/predictive/features_timeseries_events.csv",
+    "bytes": 85613,
+    "n_kolom": 17,
+    "header": "event_id,fold,wellbore,act_start,act_start_utc,w30m_n_rows,w30m_gap_median_s,w30m_gap_max_s,w30m_full_window,w2h_n_rows,w2h_gap_median_s,w2h_gap_max_s,w2h_full_window,w6h_n_rows,w6h_gap_median_s,w6h_gap_max_s,w6h_full_window",
+    "kata_kunci_header": []
+   },
+   {
+    "path": "data/predictive/j2_stuck/F-14_window.csv",
+    "bytes": 9228381,
+    "n_kolom": 11,
+    "header": "timestamp,STUCK_RT,SPPA,TQA,TFLO,HKLD,SWOB,RPM,ROP,BPOS,DEPT",
+    "kata_kunci_header": []
+   },
+   {
+    "path": "data/predictive/j2_stuck/F-9_A_window.csv",
+    "bytes": 8089498,
+    "n_kolom": 11,
+    "header": "timestamp,STUCK_RT,SPPA,TQA,TFLO,HKLD,SWOB,RPM,ROP,BPOS,DEPT",
+    "kata_kunci_header": []
+   },
+   {
+    "path": "data/predictive/j2_stuck/F-9_window.csv",
+    "bytes": 2009798,
+    "n_kolom": 11,
+    "header": "timestamp,STUCK_RT,SPPA,TQA,TFLO,HKLD,SWOB,NRPM_RT,ROP,BPOS,DEPT",
+    "kata_kunci_header": []
+   },
+   {
+    "path": "data/volve/external/kaggle/Norway-NA-15_47_9-F-9 A depth.csv",
+    "bytes": 5596360,
+    "n_kolom": 116,
+    "header": ",Unnamed: 0,Measured Depth m,TOFB s,AVG_CONF unitless,MIN_CONF unitless,Average Rotary Speed rpm,STUCK_RT unitless,Corrected Surface Weight on Bit kkgf,Corrected Total Hookload kkgf,MWD Turbine RPM rpm,MWD Raw Gamma Ray 1/s,MWD Continuous Inclination dega,Pump 2 Stroke Rate 1/min,Rate of Penetration m/h,Bit Drill Time h,Corrected Hookload kkgf,MWD Gravity Toolface dega,Mud Density Out g/cm3,MWD GR",
+    "kata_kunci_header": []
+   },
+   {
+    "path": "data/volve/external/kaggle/ROP data .csv",
+    "bytes": 17751,
+    "n_kolom": 8,
+    "header": "﻿Depth,WOB,SURF_RPM,ROP_AVG,PHIF,VSH,SW,KLOGH",
+    "kata_kunci_header": []
+   },
+   {
+    "path": "data/volve/external/volve_catalog_target_paths.csv",
+    "bytes": 645763,
+    "n_kolom": 4,
+    "header": "category,well,ext,path",
+    "kata_kunci_header": []
+   },
+   {
+    "path": "data/volve/labels_curated.csv",
+    "bytes": 480479,
+    "n_kolom": 16,
+    "header": "event_id,wellbore,event_date,act_start,act_end,ddr_date_start,md,md_valid,source_code,state_detail,category,bha_relevant,evidence,match_rules,comments_full,comments_trunc300",
+    "kata_kunci_header": []
+   },
+   {
+    "path": "data/volve/labels_curated_v2.csv",
+    "bytes": 519171,
+    "n_kolom": 20,
+    "header": "event_id,wellbore,event_date,act_start,act_end,ddr_date_start,md,md_valid,source_code,state_detail,category,bha_relevant,evidence,match_rules,comments_full,comments_trunc300,outcome,outcome_reason,component,component_reason",
+    "kata_kunci_header": []
+   },
+   {
+    "path": "data/volve/uncertain_audit_100.csv",
+    "bytes": 40383,
+    "n_kolom": 18,
+    "header": "audit_id,event_id,wellbore,event_date,source_code,state_detail,category,bha_relevant,narrative,narrative_len,outcome_extracted,outcome_reason,component_extracted,component_reason,status,uncertainty_reason,bha_evidence_quote,notes",
+    "kata_kunci_header": []
+   },
+   {
+    "path": "data/volve/usrop_timestamped.csv",
+    "bytes": 57699413,
+    "n_kolom": 20,
+    "header": "Unnamed: 0,Measured Depth m,Weight on Bit kkgf,Average Standpipe Pressure kPa,Average Surface Torque kN.m,Rate of Penetration m/h,Average Rotary Speed rpm,Mud Flow In L/min,Mud Density In g/cm3,Diameter mm,Average Hookload kkgf,Hole Depth (TVD) m,USROP Gamma gAPI,well,label,MSE,D_exp,ROC_coef,est_timestamp,join_status",
+    "kata_kunci_header": []
+   },
+   {
+    "path": "data/volve/usrop_wellbores_events.csv",
+    "bytes": 218119,
+    "n_kolom": 8,
+    "header": "wellbore,ddr_date_start,act_start,act_end,md,code,state_detail,comments",
+    "kata_kunci_header": []
+   },
+   {
+    "path": "data/volve/witsml_parsed/F-10.csv",
+    "bytes": 395473359,
+    "n_kolom": 241,
+    "header": "timestamp,SHKRSK_RT,DBTV,SDEP_CONT_RT,GS_G_IC5,GS_DMEA,GS_TV05,GS_G_NC5,ROP30s,DCHV,HKLD,ATMP_RT,TEMP_DNI_RT,RSDX,GS_G_C1,GS_G_NC4,GS_SWOB,GS_TV07,SWOB,TCHR,GS_TV03,MTF_RT,AJAM_MWD,GS_ROP,GS_SPM1,DCHR,TQA,GS_TV12,INCL_CONT_RT,GS_GASA,SHKPK_RT,SIG_SPP5s,PDTF,HKLD30s,TTV2,PD_GRAV_BHC,Stick_RT,GS_TV02,MBOT,GTF_RT,GS_TV08,RPM,GS_DBTM,GS_ACTC,STIS,GS_TV06,GS_G_C2,DRPM,FVOC,GS_DCHM,PASS_NAME,ACTC,PMPT,G",
+    "kata_kunci_header": []
+   },
+   {
+    "path": "data/volve/witsml_parsed/F-15A.csv",
+    "bytes": 468702816,
+    "n_kolom": 282,
+    "header": "timestamp,WBSHOLEDEPMNEMONIC,WBSBITDEPMNEMONIC,WBSLITHOLOGY5,WBSLITHOLOGY4,WBSLITHOLOGY3,WBSCALIPERMNEMONIC,WBSLITHOLOGY1,WBSLITHOLOGY2,WBSWBGEOMETRYMNEMONIC,WBSTUBULARMNEMONIC,WBSTRAJECTORYMNEMONIC,ROP,P40H_COND_RT,PD_GRAV_BHC,GS_G_NC5,GS_TV01,GS_TV05,MSP4,TSPM,SIG_SPP5s,GS_RPM,PDSHKRSK,GS_TV07,ACTC,GS_TV03,FVOC,ROP30s,GS_G_C1,GS_DCHM,RSUX,PD_TFDS,SWOB,DBTV,P28H_UNC_RT,GS_TV14,GS_SPPA,INCL_CONT_R",
+    "kata_kunci_header": []
+   },
+   {
+    "path": "data/volve/witsml_parsed/F-5.csv",
+    "bytes": 520150064,
+    "n_kolom": 182,
+    "header": "timestamp,MTOA,DBTV,TV01,BOUNCE_RT,ACTC,DVER,HOURS_DM_RT,APRS_MWD,PASS_NAME,SWOB,RHX_RT,TV09,GZ_RT,RPM,SRV_GX,CHKP,CUREDT_RT,SHK3TM_RT,BVEL,GRID_CORR,TV10,DRTM,SRV_GY,TV14,TV06,ECD_MWD,ROP,TV13,AZIM_CONT_RT,ATMP_MWD,SDEP_CONT_RT,CPPA,SRV_HX,RSUX,SRV_HY,AJAM_MWD,TV11,GY_RT,Bit_RPM,TQA,HY_RT,TV12,TV05,BITRUN,HZ_RT,SRVDEPTH,SHKPK_RT,TTV1,DMEA,SHKRATE_RT,GTF_RT,CFIA,MTF_RT,TV08,TVCA,TTV2,SPM1,DNI_MP,F",
+    "kata_kunci_header": []
+   },
+   {
+    "path": "data/volve/witsml_parsed/F-7.csv",
+    "bytes": 190032284,
+    "n_kolom": 119,
+    "header": "timestamp,CHKP,CUREDT_RT,SPM2,HKLD,DEPT,BVEL,ROP5,ACTC,CFIA,TVT,DRTM,DMEA,SHKRSK_RT,MTF_RT,MFOP,MWTI,SHKTOT_RT,TV05,RGX_RT,AZIM_CONT_RT,SPM1,RPM,TV04,GTF_RT,TREV,TV14,SWOB,DBTM,SPPA,SPM3,NRPM_RT,TDH,DBTV,STIS,MDOA,CPPA,MTOA,PASS_NAME,TV11,ROP,TVDE,BPOS,TV06,SHKPK_RT,TV10,TVA,TVCA,RHX_RT,TEMP_DNI_RT,TQA,TV12,TV09,STICK_RT,TTV2,FVOC,SDEP_CONT_RT,DVER,DNISTAT,TTV1,GASA,RSUX,TV02,TFLO,MSP4,TV07,AJAM_M",
+    "kata_kunci_header": []
+   },
+   {
+    "path": "data/volve/witsml_parsed/F-9.csv",
+    "bytes": 201363819,
+    "n_kolom": 198,
+    "header": "timestamp,TV09,HY_RT,TV03,GRID_CORR,DRTM,TV12,MFOP,MTF_RT,CUREDT_RT,SRVAZI,DNI_MP,SHKTOT_RT,TQA,BITRUN,SWOB,DBTM,APRS_MWD,MDOA,TV10,DBTV,GRR,SHK3TM_RT,TVA,SRVEW,TV07,MTOA,ROP5,TDH,SPM2,BVEL,DNISTAT,WHIRL_RT,RHX_RT,RGX_RT,ATMP_MWD,TV11,RSDX,BOUNCE_RT,NRPM_RT,CHKP,DMEA,RSUX,GASA,TV06,INCL_CONT_RT,ROP,DRILLTM_RT,TV05,TTV1,TV14,SHKRATE_RT,SRVINC,SRV_HZ,PASS_NAME,SHKRSK_RT,ACTC,TRPM_RT,MWTI,SHKPK_RT,TV",
+    "kata_kunci_header": []
+   },
+   {
+    "path": "data/volve/witsml_parsed/F-9_A.csv",
+    "bytes": 240098246,
+    "n_kolom": 233,
+    "header": "timestamp,SPM2,GS_TV05,TOFB,BVEL,SPP/SPM2,MAG_DEC,GS_MDOA,RPM30s,GS_TV09,GS_TTV1,GTF_RT,GS_CHKP,INCL_CONT_RT,SHYC_USL,AZIM_CONT_RT,BITRUN,GS_G_NC5,TTONB,FVOC,SHKTOT_RT,STWT,ROP2M,GS_TFLO,CUREDT_RT,SRV_GZ,SPP-VPWD,THKD,MBOT,HKLD30s,GS_TV07,GS_TVA,GS_TV12,SGZC_USL,MWD_POS,GS_RPM,RGX_RT,TVDE,GRM1,DRET,CPOF,GS_G_IC4,SRVAZI,SPPA,MWD_VAL,TOTAL_CORR,TCHR,TFLO,TOFF,MWD_SLIDE,RPM,HKLD,GS_TV08,HKLI,GS_SPM3,",
+    "kata_kunci_header": []
+   },
+   {
+    "path": "data/volve/witsml_parsed/VAR_F-5_alt.csv",
+    "bytes": 19066113,
+    "n_kolom": 61,
+    "header": "timestamp,WBSCALIPERMNEMONIC,WBSBITDEPMNEMONIC,WBSTUBULARMNEMONIC,WBSLITHOLOGY4,WBSHOLEDEPMNEMONIC,WBSLITHOLOGY2,WBSTRAJECTORYMNEMONIC,WBSLITHOLOGY1,WBSLITHOLOGY5,WBSWBGEOMETRYMNEMONIC,WBSLITHOLOGY3,CPPA,TV05,TVA,CHKP,SPM3,TVT,SPM1,GASA,DBTM,TV12,SPM2,TTV1,SWOB,TV09,BPOS,TV14,RPM,HKLD,TV01,FVOC,RSUX,TV11,TV13,TVCA,MWTI,TV08,TDH,DVER,TFLO,MDOA,TV10,ACTC,DRTM,TV06,TV02,ROP,DMEA,TV03,RSDX,TQA,MSP5,TV",
+    "kata_kunci_header": []
+   },
+   {
+    "path": "data/witsml/Norway-NA-15_47_9-F-9 A depth.csv",
+    "bytes": 5596360,
+    "n_kolom": 116,
+    "header": ",Unnamed: 0,Measured Depth m,TOFB s,AVG_CONF unitless,MIN_CONF unitless,Average Rotary Speed rpm,STUCK_RT unitless,Corrected Surface Weight on Bit kkgf,Corrected Total Hookload kkgf,MWD Turbine RPM rpm,MWD Raw Gamma Ray 1/s,MWD Continuous Inclination dega,Pump 2 Stroke Rate 1/min,Rate of Penetration m/h,Bit Drill Time h,Corrected Hookload kkgf,MWD Gravity Toolface dega,Mud Density Out g/cm3,MWD GR",
+    "kata_kunci_header": []
+   },
+   {
+    "path": "data/witsml/Norway-NA-15_47_9-F-9 A time.csv",
+    "bytes": 427910797,
+    "n_kolom": 247,
+    "header": ",Unnamed: 0,Time s,Pump 2 Stroke Rate 1/min,MudPit Volume Average 5 m3,TOFB s,Block Velocity m/s,SPP/SPM2 unitless,MAG_DEC dega,Mud Density Out g/cm3,RPM30s rpm,MudPit Volume Average 9 m3,TripTank Volume 1 m3,MWD Gravity Toolface dega,Casing (choke) pressure kPa,MWD Continuous Inclination dega,SHYC_USL unitless,MWD Continuous Azimuth dega,Bit run number unitless,n-Penthane ppm,TTONB s,Fill/gain vo",
+    "kata_kunci_header": []
+   }
+  ]
+ }
+}

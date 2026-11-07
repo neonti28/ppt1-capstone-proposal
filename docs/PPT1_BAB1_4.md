@@ -47,6 +47,17 @@ jauh dari rentang yang dipakai di sini.
 5. **Domain berbeda untuk alat keausan.** Sebagian hasil keausan alat berasal dari data
    bengkel, sehingga waktu terdepannya dihitung dalam detik dan tidak boleh dijumlahkan
    dengan waktu terdepan pada domain rig.
+6. **Cacat data pada kanal SPPA.** Tiga puluh sel pada kolom SPPA memuat nilai absolut
+   di atas 10^20 dengan maksimum 9,524e+30 (25 sel pada berkas kontrol, 5 sel pada berkas
+   kejadian), yang 35 orde di atas rentang fitur lain. Model berbasis pohon tidak terpengaruh,
+   tetapi keluarga model linear dan jaringan saraf gagal dilatih sampai nilai itu
+   dipotong. Klaim apapun tentang keluarga ini harus menyertakan syarat pemotongan.
+   Jejak: `docs/evidence/dl_klipp99.json`, `docs/PPT1_BAB3_5_UJI_ALGORITME.md` bagian 3.5.5.
+7. **Pencarian otomatis belum menutup pemilihan algoritme.** Pada 7 sumur, satu model
+   hasil pencarian otomatis kalah dari Random Forest antar hiperparameter, sedangkan
+   gabungan median seluruh kandidatnya menang. Penggabungan berbobot hasil pembelajaran
+   (stacking) belum diuji, sehingga urutan keunggulan antar strategi gabungan masih
+   terbatas pada yang sudah diuji. Jejak: `docs/PPT1_BAB3_5_UJI_ALGORITME.md` bagian 3.5.7.
 
 ## 1.4.5 Ruang lingkup
 

@@ -7,8 +7,10 @@ Preamble diambil dari dokumen final sebelumnya agar catatan revisi tidak hilang.
 import pathlib
 
 D = pathlib.Path("/mnt/d/ARCT-9F2/docs")
-URUTAN = ["PPT1_BAB1_1.md", "PPT1_BAB1_2.md", "PPT1_BAB1_3.md", "PPT1_BAB1_4.md", "PPT1_BAB2.md",
-          "PPT1_BAB3_1.md", "PPT1_BAB3_2.md", "PPT1_BAB3_4_MCDM.md", "PPT1_BAB4.md",
+URUTAN = ["PPT1_BAB1_1.md", "PPT1_BAB1_2.md", "PPT1_BAB1_3.md", "PPT1_BAB1_4.md",
+          "PPT1_BAB1_5_ISTILAH.md", "PPT1_BAB2.md",
+          "PPT1_BAB3_1.md", "PPT1_BAB3_2.md", "PPT1_BAB3_4_MCDM.md",
+          "PPT1_BAB3_5_UJI_ALGORITME.md", "PPT1_BAB4.md",
           "PPT1_DAFTAR_PUSTAKA.md"]
 TUJUAN = D / "PPT1_PROPOSAL_FINAL.md"
 

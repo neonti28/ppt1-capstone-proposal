@@ -1,0 +1,320 @@
+{
+ "pres_test_type": {
+  "definisi": "statusInfo.presTestType pada laporan DDR (jenis uji tekanan/integritas)",
+  "n_laporan_dengan_uji": 1212,
+  "n_laporan_total": 1759,
+  "distribusi": {
+   "formation integrity test": 1072,
+   "leak off test": 140
+  },
+  "per_wellbore": {
+   "NO 15/9-19 A": {
+    "leak off test": 40
+   },
+   "NO 15/9-19 BT2": {
+    "leak off test": 9
+   },
+   "NO 15/9-19 B": {
+    "leak off test": 27
+   },
+   "NO 15/9-19 ST2": {
+    "leak off test": 3
+   },
+   "NO 15/9-F-10": {
+    "formation integrity test": 55
+   },
+   "NO 15/9-F-11 A": {
+    "formation integrity test": 14
+   },
+   "NO 15/9-F-11 B": {
+    "formation integrity test": 87,
+    "leak off test": 2
+   },
+   "NO 15/9-F-11 T2": {
+    "formation integrity test": 31
+   },
+   "NO 15/9-F-12": {
+    "formation integrity test": 130,
+    "leak off test": 23
+   },
+   "NO 15/9-F-14": {
+    "formation integrity test": 86,
+    "leak off test": 22
+   },
+   "NO 15/9-F-15": {
+    "formation integrity test": 50
+   },
+   "NO 15/9-F-15 A": {
+    "formation integrity test": 34
+   },
+   "NO 15/9-F-15 B": {
+    "formation integrity test": 6
+   },
+   "NO 15/9-F-15 C": {
+    "formation integrity test": 84
+   },
+   "NO 15/9-F-15 D": {
+    "formation integrity test": 97,
+    "leak off test": 2
+   },
+   "NO 15/9-F-1": {
+    "formation integrity test": 20
+   },
+   "NO 15/9-F-1 A": {
+    "formation integrity test": 7
+   },
+   "NO 15/9-F-1 B": {
+    "formation integrity test": 73
+   },
+   "NO 15/9-F-1 C": {
+    "formation integrity test": 97,
+    "leak off test": 1
+   },
+   "NO 15/9-F-4": {
+    "formation integrity test": 114
+   },
+   "NO 15/9-F-5": {
+    "formation integrity test": 87
+   },
+   "NO 15/9-F-7": {
+    "leak off test": 5
+   },
+   "NO 15/9-F-9 A": {
+    "leak off test": 6
+   }
+  }
+ },
+ "kode_activity_bernuansa": {
+  "definisi": "jumlah record activity yang proprietaryCode-nya mengandung kata kunci",
+  "n_record_total": 23447,
+  "n_record": {
+   "test": 185,
+   "inspect": 0,
+   "maintain": 310,
+   "repair": 806,
+   "service": 0
+  },
+  "jam": {
+   "maintain": 562.75,
+   "repair": 1215.0,
+   "test": 442.833
+  }
+ },
+ "silang_per_wellbore": [
+  {
+   "wellbore": "NO 15/9-19 A",
+   "ddr_interruption_n": 142,
+   "ddr_interruption_jam": 962.5,
+   "labels_n": 0,
+   "labels_jam": 0.0,
+   "rasio_labels_terhadap_ddr": 0.0
+  },
+  {
+   "wellbore": "NO 15/9-19 B",
+   "ddr_interruption_n": 160,
+   "ddr_interruption_jam": 483.0,
+   "labels_n": 0,
+   "labels_jam": 0.0,
+   "rasio_labels_terhadap_ddr": 0.0
+  },
+  {
+   "wellbore": "NO 15/9-19 BT2",
+   "ddr_interruption_n": 104,
+   "ddr_interruption_jam": 269.0,
+   "labels_n": 0,
+   "labels_jam": 0.0,
+   "rasio_labels_terhadap_ddr": 0.0
+  },
+  {
+   "wellbore": "NO 15/9-19 S",
+   "ddr_interruption_n": 104,
+   "ddr_interruption_jam": 229.0,
+   "labels_n": 0,
+   "labels_jam": 0.0,
+   "rasio_labels_terhadap_ddr": 0.0
+  },
+  {
+   "wellbore": "NO 15/9-19 ST2",
+   "ddr_interruption_n": 321,
+   "ddr_interruption_jam": 1006.0,
+   "labels_n": 0,
+   "labels_jam": 0.0,
+   "rasio_labels_terhadap_ddr": 0.0
+  },
+  {
+   "wellbore": "NO 15/9-F-1",
+   "ddr_interruption_n": 50,
+   "ddr_interruption_jam": 90.25,
+   "labels_n": 0,
+   "labels_jam": 0.0,
+   "rasio_labels_terhadap_ddr": 0.0
+  },
+  {
+   "wellbore": "NO 15/9-F-1 A",
+   "ddr_interruption_n": 2,
+   "ddr_interruption_jam": 1.0,
+   "labels_n": 0,
+   "labels_jam": 0.0,
+   "rasio_labels_terhadap_ddr": 0.0
+  },
+  {
+   "wellbore": "NO 15/9-F-1 B",
+   "ddr_interruption_n": 142,
+   "ddr_interruption_jam": 363.0,
+   "labels_n": 0,
+   "labels_jam": 0.0,
+   "rasio_labels_terhadap_ddr": 0.0
+  },
+  {
+   "wellbore": "NO 15/9-F-1 C",
+   "ddr_interruption_n": 280,
+   "ddr_interruption_jam": 410.25,
+   "labels_n": 0,
+   "labels_jam": 0.0,
+   "rasio_labels_terhadap_ddr": 0.0
+  },
+  {
+   "wellbore": "NO 15/9-F-10",
+   "ddr_interruption_n": 86,
+   "ddr_interruption_jam": 132.0,
+   "labels_n": 0,
+   "labels_jam": 0.0,
+   "rasio_labels_terhadap_ddr": 0.0
+  },
+  {
+   "wellbore": "NO 15/9-F-11",
+   "ddr_interruption_n": 136,
+   "ddr_interruption_jam": 272.25,
+   "labels_n": 0,
+   "labels_jam": 0.0,
+   "rasio_labels_terhadap_ddr": 0.0
+  },
+  {
+   "wellbore": "NO 15/9-F-11 A",
+   "ddr_interruption_n": 27,
+   "ddr_interruption_jam": 95.0,
+   "labels_n": 0,
+   "labels_jam": 0.0,
+   "rasio_labels_terhadap_ddr": 0.0
+  },
+  {
+   "wellbore": "NO 15/9-F-11 B",
+   "ddr_interruption_n": 135,
+   "ddr_interruption_jam": 290.667,
+   "labels_n": 0,
+   "labels_jam": 0.0,
+   "rasio_labels_terhadap_ddr": 0.0
+  },
+  {
+   "wellbore": "NO 15/9-F-11 T2",
+   "ddr_interruption_n": 111,
+   "ddr_interruption_jam": 297.25,
+   "labels_n": 0,
+   "labels_jam": 0.0,
+   "rasio_labels_terhadap_ddr": 0.0
+  },
+  {
+   "wellbore": "NO 15/9-F-12",
+   "ddr_interruption_n": 260,
+   "ddr_interruption_jam": 628.417,
+   "labels_n": 0,
+   "labels_jam": 0.0,
+   "rasio_labels_terhadap_ddr": 0.0
+  },
+  {
+   "wellbore": "NO 15/9-F-14",
+   "ddr_interruption_n": 271,
+   "ddr_interruption_jam": 448.917,
+   "labels_n": 182,
+   "labels_jam": 269.0,
+   "rasio_labels_terhadap_ddr": 0.5992
+  },
+  {
+   "wellbore": "NO 15/9-F-15",
+   "ddr_interruption_n": 110,
+   "ddr_interruption_jam": 211.5,
+   "labels_n": 112,
+   "labels_jam": 216.5,
+   "rasio_labels_terhadap_ddr": 1.0236
+  },
+  {
+   "wellbore": "NO 15/9-F-15 A",
+   "ddr_interruption_n": 42,
+   "ddr_interruption_jam": 63.5,
+   "labels_n": 32,
+   "labels_jam": 41.0,
+   "rasio_labels_terhadap_ddr": 0.6457
+  },
+  {
+   "wellbore": "NO 15/9-F-15 B",
+   "ddr_interruption_n": 5,
+   "ddr_interruption_jam": 8.5,
+   "labels_n": 2,
+   "labels_jam": 3.5,
+   "rasio_labels_terhadap_ddr": 0.4118
+  },
+  {
+   "wellbore": "NO 15/9-F-15 C",
+   "ddr_interruption_n": 154,
+   "ddr_interruption_jam": 496.0,
+   "labels_n": 89,
+   "labels_jam": 126.0,
+   "rasio_labels_terhadap_ddr": 0.254
+  },
+  {
+   "wellbore": "NO 15/9-F-15 D",
+   "ddr_interruption_n": 319,
+   "ddr_interruption_jam": 452.25,
+   "labels_n": 122,
+   "labels_jam": 168.5,
+   "rasio_labels_terhadap_ddr": 0.3726
+  },
+  {
+   "wellbore": "NO 15/9-F-4",
+   "ddr_interruption_n": 281,
+   "ddr_interruption_jam": 670.0,
+   "labels_n": 0,
+   "labels_jam": 0.0,
+   "rasio_labels_terhadap_ddr": 0.0
+  },
+  {
+   "wellbore": "NO 15/9-F-5",
+   "ddr_interruption_n": 120,
+   "ddr_interruption_jam": 208.503,
+   "labels_n": 136,
+   "labels_jam": 146.0,
+   "rasio_labels_terhadap_ddr": 0.7002
+  },
+  {
+   "wellbore": "NO 15/9-F-7",
+   "ddr_interruption_n": 54,
+   "ddr_interruption_jam": 71.75,
+   "labels_n": 59,
+   "labels_jam": 81.5,
+   "rasio_labels_terhadap_ddr": 1.1359
+  },
+  {
+   "wellbore": "NO 15/9-F-9",
+   "ddr_interruption_n": 39,
+   "ddr_interruption_jam": 60.75,
+   "labels_n": 56,
+   "labels_jam": 85.25,
+   "rasio_labels_terhadap_ddr": 1.4033
+  },
+  {
+   "wellbore": "NO 15/9-F-9 A",
+   "ddr_interruption_n": 122,
+   "ddr_interruption_jam": 122.0,
+   "labels_n": 94,
+   "labels_jam": 87.75,
+   "rasio_labels_terhadap_ddr": 0.7193
+  }
+ ],
+ "silang_total": {
+  "ddr_interruption_jam": 8343.253,
+  "ddr_interruption_n": 3577,
+  "labels_jam": 1225.0,
+  "labels_n": 884,
+  "rasio_jam": 0.1468
+ }
+}

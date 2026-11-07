@@ -1,0 +1,1353 @@
+{
+  "deskripsi": "Baseline dihitung pada 9 fold LOWO memakai rule t0-1 dari bins (code/rnd_rule_baseline.py). Proksi E3 ikut dicatat hanya sebagai pembanding sebelum/sesudah.",
+  "assert_r7_1": {
+    "fp_rule": 2105,
+    "fp_hybrid": 927,
+    "fp_rule_terbit": 2091,
+    "fp_hybrid_terbit": 927,
+    "selisih_rule_pct": 0.67,
+    "selisih_hybrid_pct": 0.0,
+    "toleransi_pct": 5.0,
+    "lulus": true
+  },
+  "folds": [
+    {
+      "rows": {
+        "tp": 1293,
+        "fp": 166,
+        "fn": 101,
+        "tn": 6011,
+        "n_neg": 6177,
+        "precision": 0.886223440712817,
+        "recall": 0.9275466284074605,
+        "far_per_24h": 38.698397280233124,
+        "jam_neg": 102.95
+      },
+      "events": {
+        "tp_kejadian": 29,
+        "fp_kejadian": 73,
+        "n_kejadian": 102,
+        "far24_kejadian": 17.017969888295287,
+        "menit_alarm": 1459
+      },
+      "cakupan": {
+        "n": 7571,
+        "menit_kalender": 11249.0,
+        "fraksi": 0.673
+      },
+      "far24_kalender": 24.255707762557076,
+      "far24_kalender_kejadian": 10.666666666666666,
+      "gate_A_lama": false,
+      "gate_A_lama_penuh": false,
+      "gate_A_baru": false,
+      "gate_A_baru_kejadian": false,
+      "satuan_dipakai_gate": "baris (far24_kalender); kejadian dilaporkan berdampingan",
+      "fold": "LOWO_test_F-10",
+      "test_well": "F-10",
+      "model": "rule_t0m1",
+      "status_kesahan": "sah",
+      "prev": 0.184124
+    },
+    {
+      "rows": {
+        "tp": 1223,
+        "fp": 138,
+        "fn": 171,
+        "tn": 6039,
+        "n_neg": 6177,
+        "precision": 0.8986039676708303,
+        "recall": 0.8773314203730272,
+        "far_per_24h": 32.17095677513356,
+        "jam_neg": 102.95
+      },
+      "events": {
+        "tp_kejadian": 14,
+        "fp_kejadian": 12,
+        "n_kejadian": 26,
+        "far24_kejadian": 2.7974745021855267,
+        "menit_alarm": 1361
+      },
+      "cakupan": {
+        "n": 7571,
+        "menit_kalender": 11249.0,
+        "fraksi": 0.673
+      },
+      "far24_kalender": 20.164383561643834,
+      "far24_kalender_kejadian": 1.7534246575342465,
+      "gate_A_lama": false,
+      "gate_A_lama_penuh": false,
+      "gate_A_baru": false,
+      "gate_A_baru_kejadian": true,
+      "satuan_dipakai_gate": "baris (far24_kalender); kejadian dilaporkan berdampingan",
+      "fold": "LOWO_test_F-10",
+      "test_well": "F-10",
+      "model": "persistence",
+      "status_kesahan": "sah",
+      "prev": 0.184124
+    },
+    {
+      "rows": {
+        "tp": 1213,
+        "fp": 66,
+        "fn": 181,
+        "tn": 6111,
+        "n_neg": 6177,
+        "precision": 0.9483971853010165,
+        "recall": 0.870157819225251,
+        "far_per_24h": 15.386109762020398,
+        "jam_neg": 102.95
+      },
+      "events": {
+        "tp_kejadian": 16,
+        "fp_kejadian": 15,
+        "n_kejadian": 31,
+        "far24_kejadian": 3.4968431277319083,
+        "menit_alarm": 1279
+      },
+      "cakupan": {
+        "n": 7571,
+        "menit_kalender": 11249.0,
+        "fraksi": 0.673
+      },
+      "far24_kalender": 9.643835616438356,
+      "far24_kalender_kejadian": 2.191780821917808,
+      "gate_A_lama": false,
+      "gate_A_lama_penuh": false,
+      "gate_A_baru": false,
+      "gate_A_baru_kejadian": true,
+      "satuan_dipakai_gate": "baris (far24_kalender); kejadian dilaporkan berdampingan",
+      "fold": "LOWO_test_F-10",
+      "test_well": "F-10",
+      "model": "hybrid_rule_persistence",
+      "status_kesahan": "sah",
+      "prev": 0.184124
+    },
+    {
+      "rows": {
+        "tp": 1220,
+        "fp": 12,
+        "fn": 174,
+        "tn": 6165,
+        "n_neg": 6177,
+        "precision": 0.9902597402597403,
+        "recall": 0.8751793400286944,
+        "far_per_24h": 2.7974745021855267,
+        "jam_neg": 102.95
+      },
+      "events": {
+        "tp_kejadian": 16,
+        "fp_kejadian": 2,
+        "n_kejadian": 18,
+        "far24_kejadian": 0.4662457503642545,
+        "menit_alarm": 1232
+      },
+      "cakupan": {
+        "n": 7571,
+        "menit_kalender": 11249.0,
+        "fraksi": 0.673
+      },
+      "far24_kalender": 1.7534246575342465,
+      "far24_kalender_kejadian": 0.2922374429223744,
+      "gate_A_lama": true,
+      "gate_A_lama_penuh": true,
+      "gate_A_baru": true,
+      "gate_A_baru_kejadian": true,
+      "satuan_dipakai_gate": "baris (far24_kalender); kejadian dilaporkan berdampingan",
+      "fold": "LOWO_test_F-10",
+      "test_well": "F-10",
+      "model": "hybrid_proxy_E3",
+      "status_kesahan": "TIDAK SAH: proksi label bocor",
+      "prev": 0.184124
+    },
+    {
+      "rows": {
+        "tp": 1164,
+        "fp": 368,
+        "fn": 262,
+        "tn": 5596,
+        "n_neg": 5964,
+        "precision": 0.7597911227154047,
+        "recall": 0.8162692847124825,
+        "far_per_24h": 88.85311871227364,
+        "jam_neg": 99.4
+      },
+      "events": {
+        "tp_kejadian": 109,
+        "fp_kejadian": 160,
+        "n_kejadian": 269,
+        "far24_kejadian": 38.6317907444668,
+        "menit_alarm": 1532
+      },
+      "cakupan": {
+        "n": 7390,
+        "menit_kalender": 86454.0,
+        "fraksi": 0.0855
+      },
+      "far24_kalender": 6.23229994825234,
+      "far24_kalender_kejadian": 2.7096956296749304,
+      "gate_A_lama": false,
+      "gate_A_lama_penuh": false,
+      "gate_A_baru": false,
+      "gate_A_baru_kejadian": false,
+      "satuan_dipakai_gate": "baris (far24_kalender); kejadian dilaporkan berdampingan",
+      "fold": "LOWO_test_F-12",
+      "test_well": "F-12",
+      "model": "rule_t0m1",
+      "status_kesahan": "sah",
+      "prev": 0.192963
+    },
+    {
+      "rows": {
+        "tp": 1143,
+        "fp": 398,
+        "fn": 283,
+        "tn": 5566,
+        "n_neg": 5964,
+        "precision": 0.7417261518494485,
+        "recall": 0.8015427769985974,
+        "far_per_24h": 96.09657947686115,
+        "jam_neg": 99.4
+      },
+      "events": {
+        "tp_kejadian": 34,
+        "fp_kejadian": 42,
+        "n_kejadian": 76,
+        "far24_kejadian": 10.140845070422536,
+        "menit_alarm": 1541
+      },
+      "cakupan": {
+        "n": 7390,
+        "menit_kalender": 86454.0,
+        "fraksi": 0.0855
+      },
+      "far24_kalender": 6.740367878816389,
+      "far24_kalender_kejadian": 0.7112951027896692,
+      "gate_A_lama": false,
+      "gate_A_lama_penuh": false,
+      "gate_A_baru": false,
+      "gate_A_baru_kejadian": false,
+      "satuan_dipakai_gate": "baris (far24_kalender); kejadian dilaporkan berdampingan",
+      "fold": "LOWO_test_F-12",
+      "test_well": "F-12",
+      "model": "persistence",
+      "status_kesahan": "sah",
+      "prev": 0.192963
+    },
+    {
+      "rows": {
+        "tp": 1072,
+        "fp": 242,
+        "fn": 354,
+        "tn": 5722,
+        "n_neg": 5964,
+        "precision": 0.8158295281582952,
+        "recall": 0.7517531556802244,
+        "far_per_24h": 58.430583501006026,
+        "jam_neg": 99.4
+      },
+      "events": {
+        "tp_kejadian": 83,
+        "fp_kejadian": 74,
+        "n_kejadian": 157,
+        "far24_kejadian": 17.867203219315897,
+        "menit_alarm": 1314
+      },
+      "cakupan": {
+        "n": 7390,
+        "menit_kalender": 86454.0,
+        "fraksi": 0.0855
+      },
+      "far24_kalender": 4.098414639883332,
+      "far24_kalender_kejadian": 1.2532342287246554,
+      "gate_A_lama": false,
+      "gate_A_lama_penuh": false,
+      "gate_A_baru": false,
+      "gate_A_baru_kejadian": false,
+      "satuan_dipakai_gate": "baris (far24_kalender); kejadian dilaporkan berdampingan",
+      "fold": "LOWO_test_F-12",
+      "test_well": "F-12",
+      "model": "hybrid_rule_persistence",
+      "status_kesahan": "sah",
+      "prev": 0.192963
+    },
+    {
+      "rows": {
+        "tp": 1108,
+        "fp": 60,
+        "fn": 318,
+        "tn": 5904,
+        "n_neg": 5964,
+        "precision": 0.9486301369863014,
+        "recall": 0.7769985974754559,
+        "far_per_24h": 14.48692152917505,
+        "jam_neg": 99.4
+      },
+      "events": {
+        "tp_kejadian": 50,
+        "fp_kejadian": 17,
+        "n_kejadian": 67,
+        "far24_kejadian": 4.104627766599597,
+        "menit_alarm": 1168
+      },
+      "cakupan": {
+        "n": 7390,
+        "menit_kalender": 86454.0,
+        "fraksi": 0.0855
+      },
+      "far24_kalender": 1.0161358611280988,
+      "far24_kalender_kejadian": 0.28790516065296134,
+      "gate_A_lama": false,
+      "gate_A_lama_penuh": false,
+      "gate_A_baru": false,
+      "gate_A_baru_kejadian": false,
+      "satuan_dipakai_gate": "baris (far24_kalender); kejadian dilaporkan berdampingan",
+      "fold": "LOWO_test_F-12",
+      "test_well": "F-12",
+      "model": "hybrid_proxy_E3",
+      "status_kesahan": "TIDAK SAH: proksi label bocor",
+      "prev": 0.192963
+    },
+    {
+      "rows": {
+        "tp": 607,
+        "fp": 368,
+        "fn": 258,
+        "tn": 9168,
+        "n_neg": 9536,
+        "precision": 0.6225641025641026,
+        "recall": 0.7017341040462428,
+        "far_per_24h": 55.57046979865771,
+        "jam_neg": 158.93333333333334
+      },
+      "events": {
+        "tp_kejadian": 63,
+        "fp_kejadian": 122,
+        "n_kejadian": 185,
+        "far24_kejadian": 18.422818791946305,
+        "menit_alarm": 975
+      },
+      "cakupan": {
+        "n": 10401,
+        "menit_kalender": 317679.0,
+        "fraksi": 0.0327
+      },
+      "far24_kalender": 1.672653354965374,
+      "far24_kalender_kejadian": 0.5545209492004772,
+      "gate_A_lama": false,
+      "gate_A_lama_penuh": false,
+      "gate_A_baru": false,
+      "gate_A_baru_kejadian": false,
+      "satuan_dipakai_gate": "baris (far24_kalender); kejadian dilaporkan berdampingan",
+      "fold": "LOWO_test_F-14",
+      "test_well": "F-14",
+      "model": "rule_t0m1",
+      "status_kesahan": "sah",
+      "prev": 0.083165
+    },
+    {
+      "rows": {
+        "tp": 553,
+        "fp": 323,
+        "fn": 312,
+        "tn": 9213,
+        "n_neg": 9536,
+        "precision": 0.6312785388127854,
+        "recall": 0.6393063583815028,
+        "far_per_24h": 48.7751677852349,
+        "jam_neg": 158.93333333333334
+      },
+      "events": {
+        "tp_kejadian": 25,
+        "fp_kejadian": 46,
+        "n_kejadian": 71,
+        "far24_kejadian": 6.946308724832214,
+        "menit_alarm": 876
+      },
+      "cakupan": {
+        "n": 10401,
+        "menit_kalender": 317679.0,
+        "fraksi": 0.0327
+      },
+      "far24_kalender": 1.4681169392766733,
+      "far24_kalender_kejadian": 0.20908166937067174,
+      "gate_A_lama": false,
+      "gate_A_lama_penuh": false,
+      "gate_A_baru": false,
+      "gate_A_baru_kejadian": false,
+      "satuan_dipakai_gate": "baris (far24_kalender); kejadian dilaporkan berdampingan",
+      "fold": "LOWO_test_F-14",
+      "test_well": "F-14",
+      "model": "persistence",
+      "status_kesahan": "sah",
+      "prev": 0.083165
+    },
+    {
+      "rows": {
+        "tp": 516,
+        "fp": 110,
+        "fn": 349,
+        "tn": 9426,
+        "n_neg": 9536,
+        "precision": 0.8242811501597445,
+        "recall": 0.5965317919075145,
+        "far_per_24h": 16.610738255033556,
+        "jam_neg": 158.93333333333334
+      },
+      "events": {
+        "tp_kejadian": 37,
+        "fp_kejadian": 44,
+        "n_kejadian": 81,
+        "far24_kejadian": 6.644295302013424,
+        "menit_alarm": 626
+      },
+      "cakupan": {
+        "n": 10401,
+        "menit_kalender": 317679.0,
+        "fraksi": 0.0327
+      },
+      "far24_kalender": 0.49997790501682376,
+      "far24_kalender_kejadian": 0.1999911620067295,
+      "gate_A_lama": false,
+      "gate_A_lama_penuh": false,
+      "gate_A_baru": false,
+      "gate_A_baru_kejadian": false,
+      "satuan_dipakai_gate": "baris (far24_kalender); kejadian dilaporkan berdampingan",
+      "fold": "LOWO_test_F-14",
+      "test_well": "F-14",
+      "model": "hybrid_rule_persistence",
+      "status_kesahan": "sah",
+      "prev": 0.083165
+    },
+    {
+      "rows": {
+        "tp": 540,
+        "fp": 20,
+        "fn": 325,
+        "tn": 9516,
+        "n_neg": 9536,
+        "precision": 0.9642857142857143,
+        "recall": 0.6242774566473989,
+        "far_per_24h": 3.020134228187919,
+        "jam_neg": 158.93333333333334
+      },
+      "events": {
+        "tp_kejadian": 26,
+        "fp_kejadian": 2,
+        "n_kejadian": 28,
+        "far24_kejadian": 0.30201342281879195,
+        "menit_alarm": 560
+      },
+      "cakupan": {
+        "n": 10401,
+        "menit_kalender": 317679.0,
+        "fraksi": 0.0327
+      },
+      "far24_kalender": 0.0909050736394225,
+      "far24_kalender_kejadian": 0.00909050736394225,
+      "gate_A_lama": true,
+      "gate_A_lama_penuh": true,
+      "gate_A_baru": false,
+      "gate_A_baru_kejadian": false,
+      "satuan_dipakai_gate": "baris (far24_kalender); kejadian dilaporkan berdampingan",
+      "fold": "LOWO_test_F-14",
+      "test_well": "F-14",
+      "model": "hybrid_proxy_E3",
+      "status_kesahan": "TIDAK SAH: proksi label bocor",
+      "prev": 0.083165
+    },
+    {
+      "rows": {
+        "tp": 524,
+        "fp": 253,
+        "fn": 174,
+        "tn": 5205,
+        "n_neg": 5458,
+        "precision": 0.6743886743886743,
+        "recall": 0.7507163323782235,
+        "far_per_24h": 66.74972517405644,
+        "jam_neg": 90.96666666666667
+      },
+      "events": {
+        "tp_kejadian": 36,
+        "fp_kejadian": 90,
+        "n_kejadian": 126,
+        "far24_kejadian": 23.744961524367902,
+        "menit_alarm": 777
+      },
+      "cakupan": {
+        "n": 6156,
+        "menit_kalender": 32141.0,
+        "fraksi": 0.1915
+      },
+      "far24_kalender": 11.586680660242344,
+      "far24_kalender_kejadian": 4.121744108386604,
+      "gate_A_lama": false,
+      "gate_A_lama_penuh": false,
+      "gate_A_baru": false,
+      "gate_A_baru_kejadian": false,
+      "satuan_dipakai_gate": "baris (far24_kalender); kejadian dilaporkan berdampingan",
+      "fold": "LOWO_test_F-15A",
+      "test_well": "F-15A",
+      "model": "rule_t0m1",
+      "status_kesahan": "sah",
+      "prev": 0.113385
+    },
+    {
+      "rows": {
+        "tp": 474,
+        "fp": 236,
+        "fn": 224,
+        "tn": 5222,
+        "n_neg": 5458,
+        "precision": 0.6676056338028169,
+        "recall": 0.6790830945558739,
+        "far_per_24h": 62.26456577500916,
+        "jam_neg": 90.96666666666667
+      },
+      "events": {
+        "tp_kejadian": 19,
+        "fp_kejadian": 14,
+        "n_kejadian": 33,
+        "far24_kejadian": 3.69366068156834,
+        "menit_alarm": 710
+      },
+      "cakupan": {
+        "n": 6156,
+        "menit_kalender": 32141.0,
+        "fraksi": 0.1915
+      },
+      "far24_kalender": 10.808128995324873,
+      "far24_kalender_kejadian": 0.6411601946379162,
+      "gate_A_lama": false,
+      "gate_A_lama_penuh": false,
+      "gate_A_baru": false,
+      "gate_A_baru_kejadian": false,
+      "satuan_dipakai_gate": "baris (far24_kalender); kejadian dilaporkan berdampingan",
+      "fold": "LOWO_test_F-15A",
+      "test_well": "F-15A",
+      "model": "persistence",
+      "status_kesahan": "sah",
+      "prev": 0.113385
+    },
+    {
+      "rows": {
+        "tp": 455,
+        "fp": 103,
+        "fn": 243,
+        "tn": 5355,
+        "n_neg": 5458,
+        "precision": 0.8154121863799283,
+        "recall": 0.6518624641833811,
+        "far_per_24h": 27.174789300109932,
+        "jam_neg": 90.96666666666667
+      },
+      "events": {
+        "tp_kejadian": 23,
+        "fp_kejadian": 21,
+        "n_kejadian": 44,
+        "far24_kejadian": 5.54049102235251,
+        "menit_alarm": 558
+      },
+      "cakupan": {
+        "n": 6156,
+        "menit_kalender": 32141.0,
+        "fraksi": 0.1915
+      },
+      "far24_kalender": 4.717107146264669,
+      "far24_kalender_kejadian": 0.9617402919568743,
+      "gate_A_lama": false,
+      "gate_A_lama_penuh": false,
+      "gate_A_baru": false,
+      "gate_A_baru_kejadian": false,
+      "satuan_dipakai_gate": "baris (far24_kalender); kejadian dilaporkan berdampingan",
+      "fold": "LOWO_test_F-15A",
+      "test_well": "F-15A",
+      "model": "hybrid_rule_persistence",
+      "status_kesahan": "sah",
+      "prev": 0.113385
+    },
+    {
+      "rows": {
+        "tp": 464,
+        "fp": 16,
+        "fn": 234,
+        "tn": 5442,
+        "n_neg": 5458,
+        "precision": 0.9666666666666667,
+        "recall": 0.664756446991404,
+        "far_per_24h": 4.2213264932209595,
+        "jam_neg": 90.96666666666667
+      },
+      "events": {
+        "tp_kejadian": 18,
+        "fp_kejadian": 2,
+        "n_kejadian": 20,
+        "far24_kejadian": 0.5276658116526199,
+        "menit_alarm": 480
+      },
+      "cakupan": {
+        "n": 6156,
+        "menit_kalender": 32141.0,
+        "fraksi": 0.1915
+      },
+      "far24_kalender": 0.7327545081576186,
+      "far24_kalender_kejadian": 0.09159431351970232,
+      "gate_A_lama": true,
+      "gate_A_lama_penuh": true,
+      "gate_A_baru": false,
+      "gate_A_baru_kejadian": false,
+      "satuan_dipakai_gate": "baris (far24_kalender); kejadian dilaporkan berdampingan",
+      "fold": "LOWO_test_F-15A",
+      "test_well": "F-15A",
+      "model": "hybrid_proxy_E3",
+      "status_kesahan": "TIDAK SAH: proksi label bocor",
+      "prev": 0.113385
+    },
+    {
+      "rows": {
+        "tp": 676,
+        "fp": 359,
+        "fn": 317,
+        "tn": 7003,
+        "n_neg": 7362,
+        "precision": 0.6531400966183575,
+        "recall": 0.6807653575025177,
+        "far_per_24h": 70.2200488997555,
+        "jam_neg": 122.7
+      },
+      "events": {
+        "tp_kejadian": 116,
+        "fp_kejadian": 140,
+        "n_kejadian": 256,
+        "far24_kejadian": 27.383863080684595,
+        "menit_alarm": 1035
+      },
+      "cakupan": {
+        "n": 8355,
+        "menit_kalender": 92488.0,
+        "fraksi": 0.0903
+      },
+      "far24_kalender": 5.650144816656648,
+      "far24_kalender_kejadian": 2.203399092846604,
+      "gate_A_lama": false,
+      "gate_A_lama_penuh": false,
+      "gate_A_baru": false,
+      "gate_A_baru_kejadian": false,
+      "satuan_dipakai_gate": "baris (far24_kalender); kejadian dilaporkan berdampingan",
+      "fold": "LOWO_test_F-15_S",
+      "test_well": "F-15_S",
+      "model": "rule_t0m1",
+      "status_kesahan": "sah",
+      "prev": 0.118851
+    },
+    {
+      "rows": {
+        "tp": 601,
+        "fp": 377,
+        "fn": 392,
+        "tn": 6985,
+        "n_neg": 7362,
+        "precision": 0.614519427402863,
+        "recall": 0.6052366565961732,
+        "far_per_24h": 73.74083129584352,
+        "jam_neg": 122.7
+      },
+      "events": {
+        "tp_kejadian": 30,
+        "fp_kejadian": 27,
+        "n_kejadian": 57,
+        "far24_kejadian": 5.281173594132029,
+        "menit_alarm": 978
+      },
+      "cakupan": {
+        "n": 8355,
+        "menit_kalender": 92488.0,
+        "fraksi": 0.0903
+      },
+      "far24_kalender": 5.933438985736926,
+      "far24_kalender_kejadian": 0.4249412536204164,
+      "gate_A_lama": false,
+      "gate_A_lama_penuh": false,
+      "gate_A_baru": false,
+      "gate_A_baru_kejadian": false,
+      "satuan_dipakai_gate": "baris (far24_kalender); kejadian dilaporkan berdampingan",
+      "fold": "LOWO_test_F-15_S",
+      "test_well": "F-15_S",
+      "model": "persistence",
+      "status_kesahan": "sah",
+      "prev": 0.118851
+    },
+    {
+      "rows": {
+        "tp": 521,
+        "fp": 199,
+        "fn": 472,
+        "tn": 7163,
+        "n_neg": 7362,
+        "precision": 0.7236111111111111,
+        "recall": 0.5246727089627392,
+        "far_per_24h": 38.924205378973106,
+        "jam_neg": 122.7
+      },
+      "events": {
+        "tp_kejadian": 62,
+        "fp_kejadian": 66,
+        "n_kejadian": 128,
+        "far24_kejadian": 12.90953545232274,
+        "menit_alarm": 720
+      },
+      "cakupan": {
+        "n": 8355,
+        "menit_kalender": 92488.0,
+        "fraksi": 0.0903
+      },
+      "far24_kalender": 3.131974424831958,
+      "far24_kalender_kejadian": 1.0387452866276845,
+      "gate_A_lama": false,
+      "gate_A_lama_penuh": false,
+      "gate_A_baru": false,
+      "gate_A_baru_kejadian": false,
+      "satuan_dipakai_gate": "baris (far24_kalender); kejadian dilaporkan berdampingan",
+      "fold": "LOWO_test_F-15_S",
+      "test_well": "F-15_S",
+      "model": "hybrid_rule_persistence",
+      "status_kesahan": "sah",
+      "prev": 0.118851
+    },
+    {
+      "rows": {
+        "tp": 588,
+        "fp": 36,
+        "fn": 405,
+        "tn": 7326,
+        "n_neg": 7362,
+        "precision": 0.9423076923076923,
+        "recall": 0.5921450151057401,
+        "far_per_24h": 7.04156479217604,
+        "jam_neg": 122.7
+      },
+      "events": {
+        "tp_kejadian": 34,
+        "fp_kejadian": 13,
+        "n_kejadian": 47,
+        "far24_kejadian": 2.54278728606357,
+        "menit_alarm": 624
+      },
+      "cakupan": {
+        "n": 8355,
+        "menit_kalender": 92488.0,
+        "fraksi": 0.0903
+      },
+      "far24_kalender": 0.5665883381605552,
+      "far24_kalender_kejadian": 0.20460134433575605,
+      "gate_A_lama": false,
+      "gate_A_lama_penuh": false,
+      "gate_A_baru": false,
+      "gate_A_baru_kejadian": false,
+      "satuan_dipakai_gate": "baris (far24_kalender); kejadian dilaporkan berdampingan",
+      "fold": "LOWO_test_F-15_S",
+      "test_well": "F-15_S",
+      "model": "hybrid_proxy_E3",
+      "status_kesahan": "TIDAK SAH: proksi label bocor",
+      "prev": 0.118851
+    },
+    {
+      "rows": {
+        "tp": 492,
+        "fp": 194,
+        "fn": 129,
+        "tn": 5517,
+        "n_neg": 5711,
+        "precision": 0.717201166180758,
+        "recall": 0.7922705314009661,
+        "far_per_24h": 48.916126772894415,
+        "jam_neg": 95.18333333333334
+      },
+      "events": {
+        "tp_kejadian": 40,
+        "fp_kejadian": 108,
+        "n_kejadian": 148,
+        "far24_kejadian": 27.231658203466992,
+        "menit_alarm": 686
+      },
+      "cakupan": {
+        "n": 6332,
+        "menit_kalender": 369549.0,
+        "fraksi": 0.0171
+      },
+      "far24_kalender": 0.7572209211553474,
+      "far24_kalender_kejadian": 0.4215456674473068,
+      "gate_A_lama": false,
+      "gate_A_lama_penuh": false,
+      "gate_A_baru": false,
+      "gate_A_baru_kejadian": false,
+      "satuan_dipakai_gate": "baris (far24_kalender); kejadian dilaporkan berdampingan",
+      "fold": "LOWO_test_F-5",
+      "test_well": "F-5",
+      "model": "rule_t0m1",
+      "status_kesahan": "sah",
+      "prev": 0.098073
+    },
+    {
+      "rows": {
+        "tp": 465,
+        "fp": 152,
+        "fn": 156,
+        "tn": 5559,
+        "n_neg": 5711,
+        "precision": 0.7536466774716369,
+        "recall": 0.748792270531401,
+        "far_per_24h": 38.32603747154614,
+        "jam_neg": 95.18333333333334
+      },
+      "events": {
+        "tp_kejadian": 12,
+        "fp_kejadian": 28,
+        "n_kejadian": 40,
+        "far24_kejadian": 7.060059534232183,
+        "menit_alarm": 617
+      },
+      "cakupan": {
+        "n": 6332,
+        "menit_kalender": 369549.0,
+        "fraksi": 0.0171
+      },
+      "far24_kalender": 0.5932864949258392,
+      "far24_kalender_kejadian": 0.10928961748633881,
+      "gate_A_lama": false,
+      "gate_A_lama_penuh": false,
+      "gate_A_baru": false,
+      "gate_A_baru_kejadian": false,
+      "satuan_dipakai_gate": "baris (far24_kalender); kejadian dilaporkan berdampingan",
+      "fold": "LOWO_test_F-5",
+      "test_well": "F-5",
+      "model": "persistence",
+      "status_kesahan": "sah",
+      "prev": 0.098073
+    },
+    {
+      "rows": {
+        "tp": 446,
+        "fp": 58,
+        "fn": 175,
+        "tn": 5653,
+        "n_neg": 5711,
+        "precision": 0.8849206349206349,
+        "recall": 0.7181964573268921,
+        "far_per_24h": 14.624409035195235,
+        "jam_neg": 95.18333333333334
+      },
+      "events": {
+        "tp_kejadian": 20,
+        "fp_kejadian": 33,
+        "n_kejadian": 53,
+        "far24_kejadian": 8.320784451059358,
+        "menit_alarm": 504
+      },
+      "cakupan": {
+        "n": 6332,
+        "menit_kalender": 369549.0,
+        "fraksi": 0.0171
+      },
+      "far24_kalender": 0.2263856362217018,
+      "far24_kalender_kejadian": 0.1288056206088993,
+      "gate_A_lama": false,
+      "gate_A_lama_penuh": false,
+      "gate_A_baru": false,
+      "gate_A_baru_kejadian": false,
+      "satuan_dipakai_gate": "baris (far24_kalender); kejadian dilaporkan berdampingan",
+      "fold": "LOWO_test_F-5",
+      "test_well": "F-5",
+      "model": "hybrid_rule_persistence",
+      "status_kesahan": "sah",
+      "prev": 0.098073
+    },
+    {
+      "rows": {
+        "tp": 457,
+        "fp": 11,
+        "fn": 164,
+        "tn": 5700,
+        "n_neg": 5711,
+        "precision": 0.9764957264957265,
+        "recall": 0.7359098228663447,
+        "far_per_24h": 2.773594817019786,
+        "jam_neg": 95.18333333333334
+      },
+      "events": {
+        "tp_kejadian": 11,
+        "fp_kejadian": 5,
+        "n_kejadian": 16,
+        "far24_kejadian": 1.2607249168271757,
+        "menit_alarm": 468
+      },
+      "cakupan": {
+        "n": 6332,
+        "menit_kalender": 369549.0,
+        "fraksi": 0.0171
+      },
+      "far24_kalender": 0.0429352068696331,
+      "far24_kalender_kejadian": 0.0195160031225605,
+      "gate_A_lama": true,
+      "gate_A_lama_penuh": true,
+      "gate_A_baru": false,
+      "gate_A_baru_kejadian": false,
+      "satuan_dipakai_gate": "baris (far24_kalender); kejadian dilaporkan berdampingan",
+      "fold": "LOWO_test_F-5",
+      "test_well": "F-5",
+      "model": "hybrid_proxy_E3",
+      "status_kesahan": "TIDAK SAH: proksi label bocor",
+      "prev": 0.098073
+    },
+    {
+      "rows": {
+        "tp": 324,
+        "fp": 189,
+        "fn": 97,
+        "tn": 1872,
+        "n_neg": 2061,
+        "precision": 0.631578947368421,
+        "recall": 0.7695961995249406,
+        "far_per_24h": 132.05240174672488,
+        "jam_neg": 34.35
+      },
+      "events": {
+        "tp_kejadian": 27,
+        "fp_kejadian": 85,
+        "n_kejadian": 112,
+        "far24_kejadian": 59.3886462882096,
+        "menit_alarm": 513
+      },
+      "cakupan": {
+        "n": 2482,
+        "menit_kalender": 23011.0,
+        "fraksi": 0.1079
+      },
+      "far24_kalender": 12.047808764940239,
+      "far24_kalender_kejadian": 5.418326693227091,
+      "gate_A_lama": false,
+      "gate_A_lama_penuh": false,
+      "gate_A_baru": false,
+      "gate_A_baru_kejadian": false,
+      "satuan_dipakai_gate": "baris (far24_kalender); kejadian dilaporkan berdampingan",
+      "fold": "LOWO_test_F-7",
+      "test_well": "F-7",
+      "model": "rule_t0m1",
+      "status_kesahan": "sah",
+      "prev": 0.169621
+    },
+    {
+      "rows": {
+        "tp": 289,
+        "fp": 157,
+        "fn": 132,
+        "tn": 1904,
+        "n_neg": 2061,
+        "precision": 0.647982062780269,
+        "recall": 0.6864608076009501,
+        "far_per_24h": 109.6943231441048,
+        "jam_neg": 34.35
+      },
+      "events": {
+        "tp_kejadian": 18,
+        "fp_kejadian": 11,
+        "n_kejadian": 29,
+        "far24_kejadian": 7.685589519650655,
+        "menit_alarm": 446
+      },
+      "cakupan": {
+        "n": 2482,
+        "menit_kalender": 23011.0,
+        "fraksi": 0.1079
+      },
+      "far24_kalender": 10.00796812749004,
+      "far24_kalender_kejadian": 0.701195219123506,
+      "gate_A_lama": false,
+      "gate_A_lama_penuh": false,
+      "gate_A_baru": false,
+      "gate_A_baru_kejadian": false,
+      "satuan_dipakai_gate": "baris (far24_kalender); kejadian dilaporkan berdampingan",
+      "fold": "LOWO_test_F-7",
+      "test_well": "F-7",
+      "model": "persistence",
+      "status_kesahan": "sah",
+      "prev": 0.169621
+    },
+    {
+      "rows": {
+        "tp": 278,
+        "fp": 76,
+        "fn": 143,
+        "tn": 1985,
+        "n_neg": 2061,
+        "precision": 0.7853107344632768,
+        "recall": 0.6603325415676959,
+        "far_per_24h": 53.10043668122271,
+        "jam_neg": 34.35
+      },
+      "events": {
+        "tp_kejadian": 20,
+        "fp_kejadian": 12,
+        "n_kejadian": 32,
+        "far24_kejadian": 8.384279475982533,
+        "menit_alarm": 354
+      },
+      "cakupan": {
+        "n": 2482,
+        "menit_kalender": 23011.0,
+        "fraksi": 0.1079
+      },
+      "far24_kalender": 4.844621513944223,
+      "far24_kalender_kejadian": 0.7649402390438247,
+      "gate_A_lama": false,
+      "gate_A_lama_penuh": false,
+      "gate_A_baru": false,
+      "gate_A_baru_kejadian": false,
+      "satuan_dipakai_gate": "baris (far24_kalender); kejadian dilaporkan berdampingan",
+      "fold": "LOWO_test_F-7",
+      "test_well": "F-7",
+      "model": "hybrid_rule_persistence",
+      "status_kesahan": "sah",
+      "prev": 0.169621
+    },
+    {
+      "rows": {
+        "tp": 283,
+        "fp": 16,
+        "fn": 138,
+        "tn": 2045,
+        "n_neg": 2061,
+        "precision": 0.9464882943143813,
+        "recall": 0.672209026128266,
+        "far_per_24h": 11.179039301310043,
+        "jam_neg": 34.35
+      },
+      "events": {
+        "tp_kejadian": 20,
+        "fp_kejadian": 1,
+        "n_kejadian": 21,
+        "far24_kejadian": 0.6986899563318777,
+        "menit_alarm": 299
+      },
+      "cakupan": {
+        "n": 2482,
+        "menit_kalender": 23011.0,
+        "fraksi": 0.1079
+      },
+      "far24_kalender": 1.0199203187250996,
+      "far24_kalender_kejadian": 0.06374501992031872,
+      "gate_A_lama": false,
+      "gate_A_lama_penuh": false,
+      "gate_A_baru": false,
+      "gate_A_baru_kejadian": false,
+      "satuan_dipakai_gate": "baris (far24_kalender); kejadian dilaporkan berdampingan",
+      "fold": "LOWO_test_F-7",
+      "test_well": "F-7",
+      "model": "hybrid_proxy_E3",
+      "status_kesahan": "TIDAK SAH: proksi label bocor",
+      "prev": 0.169621
+    },
+    {
+      "rows": {
+        "tp": 283,
+        "fp": 108,
+        "fn": 140,
+        "tn": 1085,
+        "n_neg": 1193,
+        "precision": 0.7237851662404092,
+        "recall": 0.6690307328605201,
+        "far_per_24h": 130.36043587594298,
+        "jam_neg": 19.883333333333333
+      },
+      "events": {
+        "tp_kejadian": 45,
+        "fp_kejadian": 49,
+        "n_kejadian": 94,
+        "far24_kejadian": 59.14501257334451,
+        "menit_alarm": 391
+      },
+      "cakupan": {
+        "n": 1616,
+        "menit_kalender": 22858.0,
+        "fraksi": 0.0707
+      },
+      "far24_kalender": 6.93202585246267,
+      "far24_kalender_kejadian": 3.145085803432137,
+      "gate_A_lama": false,
+      "gate_A_lama_penuh": false,
+      "gate_A_baru": false,
+      "gate_A_baru_kejadian": false,
+      "satuan_dipakai_gate": "baris (far24_kalender); kejadian dilaporkan berdampingan",
+      "fold": "LOWO_test_F-9",
+      "test_well": "F-9",
+      "model": "rule_t0m1",
+      "status_kesahan": "sah",
+      "prev": 0.261757
+    },
+    {
+      "rows": {
+        "tp": 283,
+        "fp": 74,
+        "fn": 140,
+        "tn": 1119,
+        "n_neg": 1193,
+        "precision": 0.7927170868347339,
+        "recall": 0.6690307328605201,
+        "far_per_24h": 89.32103939647946,
+        "jam_neg": 19.883333333333333
+      },
+      "events": {
+        "tp_kejadian": 16,
+        "fp_kejadian": 6,
+        "n_kejadian": 22,
+        "far24_kejadian": 7.242246437552389,
+        "menit_alarm": 357
+      },
+      "cakupan": {
+        "n": 1616,
+        "menit_kalender": 22858.0,
+        "fraksi": 0.0707
+      },
+      "far24_kalender": 4.749721417428126,
+      "far24_kalender_kejadian": 0.3851125473590372,
+      "gate_A_lama": false,
+      "gate_A_lama_penuh": false,
+      "gate_A_baru": false,
+      "gate_A_baru_kejadian": false,
+      "satuan_dipakai_gate": "baris (far24_kalender); kejadian dilaporkan berdampingan",
+      "fold": "LOWO_test_F-9",
+      "test_well": "F-9",
+      "model": "persistence",
+      "status_kesahan": "sah",
+      "prev": 0.261757
+    },
+    {
+      "rows": {
+        "tp": 236,
+        "fp": 36,
+        "fn": 187,
+        "tn": 1157,
+        "n_neg": 1193,
+        "precision": 0.8676470588235294,
+        "recall": 0.557919621749409,
+        "far_per_24h": 43.45347862531433,
+        "jam_neg": 19.883333333333333
+      },
+      "events": {
+        "tp_kejadian": 32,
+        "fp_kejadian": 16,
+        "n_kejadian": 48,
+        "far24_kejadian": 19.31265716680637,
+        "menit_alarm": 272
+      },
+      "cakupan": {
+        "n": 1616,
+        "menit_kalender": 22858.0,
+        "fraksi": 0.0707
+      },
+      "far24_kalender": 2.3106752841542235,
+      "far24_kalender_kejadian": 1.0269667929574327,
+      "gate_A_lama": false,
+      "gate_A_lama_penuh": false,
+      "gate_A_baru": false,
+      "gate_A_baru_kejadian": false,
+      "satuan_dipakai_gate": "baris (far24_kalender); kejadian dilaporkan berdampingan",
+      "fold": "LOWO_test_F-9",
+      "test_well": "F-9",
+      "model": "hybrid_rule_persistence",
+      "status_kesahan": "sah",
+      "prev": 0.261757
+    },
+    {
+      "rows": {
+        "tp": 273,
+        "fp": 16,
+        "fn": 150,
+        "tn": 1177,
+        "n_neg": 1193,
+        "precision": 0.9446366782006921,
+        "recall": 0.6453900709219859,
+        "far_per_24h": 19.31265716680637,
+        "jam_neg": 19.883333333333333
+      },
+      "events": {
+        "tp_kejadian": 16,
+        "fp_kejadian": 8,
+        "n_kejadian": 24,
+        "far24_kejadian": 9.656328583403186,
+        "menit_alarm": 289
+      },
+      "cakupan": {
+        "n": 1616,
+        "menit_kalender": 22858.0,
+        "fraksi": 0.0707
+      },
+      "far24_kalender": 1.0269667929574327,
+      "far24_kalender_kejadian": 0.5134833964787163,
+      "gate_A_lama": false,
+      "gate_A_lama_penuh": false,
+      "gate_A_baru": false,
+      "gate_A_baru_kejadian": false,
+      "satuan_dipakai_gate": "baris (far24_kalender); kejadian dilaporkan berdampingan",
+      "fold": "LOWO_test_F-9",
+      "test_well": "F-9",
+      "model": "hybrid_proxy_E3",
+      "status_kesahan": "TIDAK SAH: proksi label bocor",
+      "prev": 0.261757
+    },
+    {
+      "rows": {
+        "tp": 216,
+        "fp": 100,
+        "fn": 115,
+        "tn": 1775,
+        "n_neg": 1875,
+        "precision": 0.6835443037974683,
+        "recall": 0.6525679758308157,
+        "far_per_24h": 76.80000000000001,
+        "jam_neg": 31.25
+      },
+      "events": {
+        "tp_kejadian": 19,
+        "fp_kejadian": 49,
+        "n_kejadian": 68,
+        "far24_kejadian": 37.632000000000005,
+        "menit_alarm": 316
+      },
+      "cakupan": {
+        "n": 2206,
+        "menit_kalender": 7344.0,
+        "fraksi": 0.3004
+      },
+      "far24_kalender": 20.533295308712393,
+      "far24_kalender_kejadian": 10.061314701269072,
+      "gate_A_lama": false,
+      "gate_A_lama_penuh": false,
+      "gate_A_baru": false,
+      "gate_A_baru_kejadian": false,
+      "satuan_dipakai_gate": "baris (far24_kalender); kejadian dilaporkan berdampingan",
+      "fold": "LOWO_test_F-9_A",
+      "test_well": "F-9_A",
+      "model": "rule_t0m1",
+      "status_kesahan": "sah",
+      "prev": 0.150045
+    },
+    {
+      "rows": {
+        "tp": 212,
+        "fp": 86,
+        "fn": 119,
+        "tn": 1789,
+        "n_neg": 1875,
+        "precision": 0.7114093959731543,
+        "recall": 0.6404833836858006,
+        "far_per_24h": 66.048,
+        "jam_neg": 31.25
+      },
+      "events": {
+        "tp_kejadian": 10,
+        "fp_kejadian": 12,
+        "n_kejadian": 22,
+        "far24_kejadian": 9.216000000000001,
+        "menit_alarm": 298
+      },
+      "cakupan": {
+        "n": 2206,
+        "menit_kalender": 7344.0,
+        "fraksi": 0.3004
+      },
+      "far24_kalender": 17.65863396549266,
+      "far24_kalender_kejadian": 2.463995437045487,
+      "gate_A_lama": false,
+      "gate_A_lama_penuh": false,
+      "gate_A_baru": false,
+      "gate_A_baru_kejadian": false,
+      "satuan_dipakai_gate": "baris (far24_kalender); kejadian dilaporkan berdampingan",
+      "fold": "LOWO_test_F-9_A",
+      "test_well": "F-9_A",
+      "model": "persistence",
+      "status_kesahan": "sah",
+      "prev": 0.150045
+    },
+    {
+      "rows": {
+        "tp": 187,
+        "fp": 37,
+        "fn": 144,
+        "tn": 1838,
+        "n_neg": 1875,
+        "precision": 0.8348214285714286,
+        "recall": 0.5649546827794562,
+        "far_per_24h": 28.415999999999997,
+        "jam_neg": 31.25
+      },
+      "events": {
+        "tp_kejadian": 11,
+        "fp_kejadian": 10,
+        "n_kejadian": 21,
+        "far24_kejadian": 7.68,
+        "menit_alarm": 224
+      },
+      "cakupan": {
+        "n": 2206,
+        "menit_kalender": 7344.0,
+        "fraksi": 0.3004
+      },
+      "far24_kalender": 7.597319264223585,
+      "far24_kalender_kejadian": 2.053329530871239,
+      "gate_A_lama": false,
+      "gate_A_lama_penuh": false,
+      "gate_A_baru": false,
+      "gate_A_baru_kejadian": false,
+      "satuan_dipakai_gate": "baris (far24_kalender); kejadian dilaporkan berdampingan",
+      "fold": "LOWO_test_F-9_A",
+      "test_well": "F-9_A",
+      "model": "hybrid_rule_persistence",
+      "status_kesahan": "sah",
+      "prev": 0.150045
+    },
+    {
+      "rows": {
+        "tp": 208,
+        "fp": 8,
+        "fn": 123,
+        "tn": 1867,
+        "n_neg": 1875,
+        "precision": 0.9629629629629629,
+        "recall": 0.6283987915407855,
+        "far_per_24h": 6.144,
+        "jam_neg": 31.25
+      },
+      "events": {
+        "tp_kejadian": 12,
+        "fp_kejadian": 1,
+        "n_kejadian": 13,
+        "far24_kejadian": 0.768,
+        "menit_alarm": 216
+      },
+      "cakupan": {
+        "n": 2206,
+        "menit_kalender": 7344.0,
+        "fraksi": 0.3004
+      },
+      "far24_kalender": 1.6426636246969915,
+      "far24_kalender_kejadian": 0.20533295308712393,
+      "gate_A_lama": false,
+      "gate_A_lama_penuh": false,
+      "gate_A_baru": false,
+      "gate_A_baru_kejadian": false,
+      "satuan_dipakai_gate": "baris (far24_kalender); kejadian dilaporkan berdampingan",
+      "fold": "LOWO_test_F-9_A",
+      "test_well": "F-9_A",
+      "model": "hybrid_proxy_E3",
+      "status_kesahan": "TIDAK SAH: proksi label bocor",
+      "prev": 0.150045
+    }
+  ],
+  "total_fp": {
+    "rule_t0m1": 2105,
+    "hybrid_rule_persistence": 927,
+    "persistence": 1941,
+    "hybrid_proxy_E3": 195
+  }
+}

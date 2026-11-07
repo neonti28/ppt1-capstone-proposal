@@ -1,0 +1,26 @@
+{
+ "F-10": {
+  "n_events": 67,
+  "B1": 1.0,
+  "TLead_median": 9.0,
+  "n_detected": 67
+ },
+ "F-14": {
+  "n_events": 28,
+  "B1": 1.0,
+  "TLead_median": 9.0,
+  "n_detected": 28
+ },
+ "F-9": {
+  "n_events": 16,
+  "B1": 1.0,
+  "TLead_median": 10.5,
+  "n_detected": 16
+ },
+ "F-9_A": {
+  "n_events": 37,
+  "B1": 1.0,
+  "TLead_median": 9.0,
+  "n_detected": 37
+ }
+}

@@ -13,8 +13,8 @@ Riset pendahuluan: what-if-oracle, consciousness-council, scientific-critical-th
 
 - **what-if-oracle**: dipakai untuk memetakan enam cabang keputusan (naik tier sekarang, kalibrasi per well,
   tolak semua, hibrida, tunda sampai data baru, bongkar label) lalu memilih tindakan yang aman di semua cabang,
-  yaitu komposisi engine yang sudah terukur tanpa kenaikan tier.
-- **consciousness-council**: dipakai untuk mempertahankan ketegangan antara arketipe Pragmatist (ada engine
+  yaitu komposisi detektor yang sudah terukur tanpa kenaikan tier.
+- **consciousness-council**: dipakai untuk mempertahankan ketegangan antara arketipe Pragmatist (ada detektor
   yang siap dipakai sekarang), Contrarian (angka R8 justru menunjukkan dua dari empat hybrid tidak menambah nilai),
   Empiricist (hanya angka yang boleh menaikkan tier), dan Minimalist (hapus komponen yang tidak memberi nilai),
   sehingga vonis tidak jatuh ke "pakai semua" atau "buang semua".
@@ -42,16 +42,16 @@ Vonis tidak diberikan pada satu tingkat saja, karena kebijakan evaluasi yang men
 Tiga sumbu dipakai bersamaan:
 
 1. **Sumbu keluarga algoritma**: ADOPSI, PILOT, atau TOLAK, beserta alasan dan batas biaya.
-2. **Sumbu kelas kerusakan dan tugas**: engine tidak harus sama antar kelas, dan tiap kelas dinilai dengan
+2. **Sumbu kelas kerusakan dan tugas**: detektor tidak harus sama antar kelas, dan tiap kelas dinilai dengan
    baseline tugasnya sendiri.
 3. **Sumbu tier pemakaian**: `TREN`, `PERINGATAN-BERPENGAWAS`, `ALARM-OTOMATIS`, atau `BELUM LAYAK PAKAI`,
    dengan tier yang berlaku saat ini diambil dari `docs/V9_EVAL_C_LAYERC.md` dan REGISTRY
-   (tujuh engine, dua puluh tujuh head, PM-076 dan PM-077).
+   (tujuh detektor, dua puluh tujuh head, PM-076 dan PM-077).
 
 Empat aturan yang mengikat seluruh dokumen ini:
 
 - Gate C/A/B menyatakan **kekuatan bukti kemampuan**, bukan izin pakai (kebijakan bagian 1).
-- Engine yang gagal gate tidak dibuang, tetapi ditulis kemampuan, batas penggunaan, dan kekuatan buktinya
+- Detektor yang gagal gate tidak dibuang, tetapi ditulis kemampuan, batas penggunaan, dan kekuatan buktinya
   (kebijakan bagian 5).
 - Hybrid dan perpaduan tiga komponen dinilai sebagai kandidat tersendiri, dan hasilnya boleh negatif
   (kebijakan bagian 4).
@@ -83,7 +83,7 @@ Yang **tidak** dipakai sebagai dasar keputusan di dokumen ini:
 
 ## 2. VONIS PER KELUARGA ALGORITMA
 
-Kode vonis: **ADOPSI** berarti masuk komposisi engine sekarang tanpa kenaikan tier, **PILOT** berarti boleh
+Kode vonis: **ADOPSI** berarti masuk komposisi detektor sekarang tanpa kenaikan tier, **PILOT** berarti boleh
 dijalankan sebagai eksperimen dengan gate dan kriteria berhenti tertulis, **TOLAK** berarti tidak dijalankan
 pada gelombang ini dengan alasan yang bisa dibantah.
 
@@ -96,7 +96,7 @@ pada gelombang ini dengan alasan yang bisa dibantah.
 | kNN-DTW | **TOLAK** | Biaya 134,01 sampai 137.374,35 jam untuk satu klasifikasi penuh (PM-107) | Biaya melampaui anggaran kartu dan anggaran operasional |
 | Matrix profile | **PILOT** gelombang ketiga | Berguna sebagai penunjuk episode mirip untuk pemeriksaan manual, bukan alarm. Data pendukung hanya SEBAGIAN karena butuh deret rapat | Wajib lulus uji manfaat lebih dulu: waktu pencarian manual turun, bukan AUPRC naik |
 | Markov chain, HMM, Bayesian network, MCMC | **TOLAK** untuk gelombang ini | Prasyarat datanya tidak ada: label state fisik tidak tersedia, dan episode sangat pendek sehingga memori praktis nol (D0 bagian 7, R2 bagian 8). MCMC dan Bayesian network ditolak karena prior dan DAG belum ada, sehingga model akan menjelaskan prior kita, bukan data | Dapat dibuka kembali bila label state fisik tersedia dan uji orde Markov dijalankan |
-| Monte Carlo | **ADOPSI** sebagai kewajiban pelaporan | R2 menilainya satu-satunya metode dari delapan yang menaikkan mutu keputusan tanpa asumsi baru, dengan peran pelaporan selang, bukan deteksi (skor 5) | Biaya komputasi kecil. Wajib dipakai untuk CI FAR dan recall pada laporan engine |
+| Monte Carlo | **ADOPSI** sebagai kewajiban pelaporan | R2 menilainya satu-satunya metode dari delapan yang menaikkan mutu keputusan tanpa asumsi baru, dengan peran pelaporan selang, bukan deteksi (skor 5) | Biaya komputasi kecil. Wajib dipakai untuk CI FAR dan recall pada laporan detektor |
 | Survival: Cox PH | **PILOT** kecil | Murah dan auditable, relevan hanya untuk klaim K-ii, dan belum dijalankan pada data kita | Wajib pra-registrasi TLead dan uji asumsi proportional hazards; event berulang adalah risiko utama |
 | Survival: Random Survival Forest, DeepHit | **TOLAK** | Event per well kecil dan horizon hanya sepuluh menit, sehingga model kovariat banyak rawan underpowered (D0 bagian 7, R2 bagian 8) | Tidak ada syarat pembuka dalam waktu dekat karena butuh event jauh lebih banyak |
 | Boosting dan kalibrasi, termasuk conformal | **PILOT** gelombang kedua | Biaya dan AUPRC LightGBM, XGBoost, CatBoost pada data kita belum terukur (PM-118). Conformal sudah diuji dan gagal gate A: 3 dari 45 fold-run (PM-070, PM-071), dan CUSUM residu 0 dari 9 (PM-072). Tetapi conformal tetap satu-satunya mekanisme yang menyerang portabilitas ambang, jadi penolakannya harus berbasis kegagalan mekanisme, bukan ketiadaan minat | Risiko kegagalan terukur: pada titik operasi anggaran, 12 dari 18 fold-run tidak menyala sama sekali (PM-065), sehingga jaminan FAR dipenuhi dengan cara menghapus alarm |
@@ -117,9 +117,9 @@ pada gelombang ini dengan alasan yang bisa dibantah.
 
 Tier di kolom kanan adalah tier yang berlaku sekarang, diambil dari EVAL_C dan REGISTRY. Tidak ada perubahan
 tier di kartu ini. Kolom "kekuatan bukti" menyatakan seberapa jauh vonis didukung angka, bukan seberapa bagus
-engine.
+detektor.
 
-| Engine / klaim | Tugas | Komposisi final | Tier sekarang | Kekuatan bukti | Batas penggunaan |
+| Mode / klaim | Tugas | Komposisi final | Tier sekarang | Kekuatan bukti | Batas penggunaan |
 |---|---|---|---|---|---|
 | vib (K tunggal) | deteksi kondisi getaran | rule kanal sebagai peringatan, RF hanya untuk ranking | rule: PERINGATAN-BERPENGAWAS; RF: TREN | SEBAGIAN, dari EVAL_C dan E_RULE, bukan dari uji hybrid di R8 | Ambang global tidak portabel: FAR menyebar 4,1 sampai 496, yaitu 119 kali (PM-099). Hybrid untuk vib belum diuji (PM-104) |
 | ssi (K tunggal) | deteksi stick-slip | hybrid rule dan persistence untuk menghemat pemeriksaan, RF untuk ranking | hybrid: PERINGATAN-BERPENGAWAS; RF: TREN | SEBAGIAN, dari EVAL_C | Kanal CRPM absen pada 62,3 persen baris (PM-100), sehingga keterbatasan sensor tidak boleh dibaca sebagai kegagalan model |
@@ -130,16 +130,16 @@ engine.
 | hyd K-i mode cakupan penuh | cakupan seluruh onset | rule kanal tunggal | PERINGATAN-BERPENGAWAS | TERUKUR (PM-006, PM-015, PM-017) | Beban alarm tinggi: FAR median 6,932 (PM-012). H1 kehilangan 31,82 persen TP dibanding rule (PM-019) |
 | hyd K-ii | prediksi kejadian mendatang | tidak ada, tetap eksplorasi | BELUM LAYAK PAKAI | GAGAL C: satu split temporal, dan 78,7 persen jendela berbalik tanda (PM-110) | Penyebab terukur adalah kanal aliran tidak tersedia, bukan pilihan metode |
 | bit_wear K-1 | status keausan bit | persistence sebagai ranking | TREN | TERBATAS: FAR tidak dapat dipakai karena satuannya grid kedalaman | K-2 onset belum dijalankan (PM-121) |
-| tool_wear K-i | perubahan regime bengkel | engine terkalibrasi per alat sebagai peringatan, ML default untuk pemantauan | op_far_calibrated: PERINGATAN-BERPENGAWAS; calib_5of27: TREN | TERUKUR untuk penolakan H3 (PM-037 sampai PM-045) | Presisi biner mendekati peluang: peluang minimal satu alarm kebetulan 4 dari 4 alat adalah 0,5678 (PM-101) dan recall segmen 0,0542 (PM-102), jadi klaim deteksi keausan spesifik dilarang |
+| tool_wear K-i | perubahan regime bengkel | detektor terkalibrasi per alat sebagai peringatan, ML default untuk pemantauan | op_far_calibrated: PERINGATAN-BERPENGAWAS; calib_5of27: TREN | TERUKUR untuk penolakan H3 (PM-037 sampai PM-045) | Presisi biner mendekati peluang: peluang minimal satu alarm kebetulan 4 dari 4 alat adalah 0,5678 (PM-101) dan recall segmen 0,0542 (PM-102), jadi klaim deteksi keausan spesifik dilarang |
 | tool_wear K-ii | ranking lintas alat | canary sebagai pembanding stabil | TREN | SEBAGIAN, dari EVAL_C | Empat alat saja, generalisasi tidak boleh diklaim |
 
-Kesimpulan sumbu kelas: **engine tidak sama antar kelas**. hyd memakai hybrid dua mode, shk memakai rule
-ditambah ML terpisah, tool_wear memakai engine terkalibrasi per alat, stuck K-ii hanya triase, dan hyd K-ii
+Kesimpulan sumbu kelas: **detektor tidak sama antar kelas**. hyd memakai hybrid dua mode, shk memakai rule
+ditambah ML terpisah, tool_wear memakai detektor terkalibrasi per alat, stuck K-ii hanya triase, dan hyd K-ii
 tetap belum layak pakai. Ini bukan inkonsistensi metodologis, melainkan konsekuensi baseline per tugas.
 
 ---
 
-## 4. YANG DIADOPSI: PERUBAHAN KONKRET PADA ENGINE DAN DAMPAK TIER
+## 4. YANG DIADOPSI: PERUBAHAN KONKRET PADA Detektor DAN DAMPAK TIER
 
 | # | Perubahan konkret | Bukti | Dampak tier |
 |---|---|---|---|
@@ -158,7 +158,7 @@ kelas mana pun pada hari ini.
 
 ---
 
-## 5. YANG DIPILOT: ENGINE SASARAN, KLAIM, GATE, DAN RISIKO KEGAGALAN
+## 5. YANG DIPILOT: Detektor SASARAN, KLAIM, GATE, DAN RISIKO KEGAGALAN
 
 Setiap pilot wajib lulus gate yang sama seperti finalis E2: pra-registrasi titik operasi lebih dulu, skor per
 jendela disimpan, FAR dilaporkan sebagai laju kalender dengan cakupan, dan uji statistik dijalankan pada
@@ -305,7 +305,7 @@ Daftar ini bagian dari hasil, bukan lampiran.
 
 Selain itu, tiga kalimat berikut dilarang muncul di dokumen lain tanpa angka pendukung baru:
 
-- "engine X lebih baik" tanpa baseline tugas itu dan angkanya.
+- "detektor X lebih baik" tanpa baseline tugas itu dan angkanya.
 - "alarm otomatis siap" untuk kelas mana pun, karena syarat EVAL_C bagian 4 belum terpenuhi.
 - "siap produksi" atau "siap dipakai di rig", karena seluruh bukti berasal dari data arsip dan satu domain.
 

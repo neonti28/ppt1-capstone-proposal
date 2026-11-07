@@ -1,0 +1,52 @@
+{
+ "10.1145/2382577.2382579": {
+  "doi": "10.1145/2382577.2382579",
+  "crossref_http": 200,
+  "title": "Leakage in data mining",
+  "container": "ACM Transactions on Knowledge Discovery from Data",
+  "year": 2012,
+  "author1": "Kaufman",
+  "doi_resolve": "<HTTPError 403: 'Forbidden'>"
+ },
+ "10.1016/j.patter.2023.100804": {
+  "doi": "10.1016/j.patter.2023.100804",
+  "crossref_http": 200,
+  "title": "Leakage and the reproducibility crisis in machine-learning-based science",
+  "container": "Patterns",
+  "year": 2023,
+  "author1": "Kapoor",
+  "doi_resolve": 200
+ },
+ "10.1371/journal.pone.0118432": {
+  "doi": "10.1371/journal.pone.0118432",
+  "crossref_http": 200,
+  "title": "The Precision-Recall Plot Is More Informative than the ROC Plot When Evaluating Binary Classifiers on Imbalanced Datasets",
+  "container": "PLOS ONE",
+  "year": 2015,
+  "author1": "Saito",
+  "doi_resolve": 200
+ },
+ "10.1145/1143844.1143874": {
+  "doi": "10.1145/1143844.1143874",
+  "crossref_http": 200,
+  "title": "The relationship between Precision-Recall and ROC curves",
+  "container": "Proceedings of the 23rd international conference on Machine learning  - ICML '06",
+  "year": 2006,
+  "author1": "Davis",
+  "doi_resolve": "<HTTPError 403: 'Forbidden'>"
+ },
+ "10.1109/TII.2019.2950661": {
+  "doi": "10.1109/TII.2019.2950661",
+  "crossref_http": 404,
+  "doi_resolve": "<HTTPError 404: 'Not Found'>"
+ },
+ "10.1016/j.ress.2020.106889": {
+  "doi": "10.1016/j.ress.2020.106889",
+  "crossref_http": 200,
+  "title": "Failure assessment logic model (FALM): A new approach for reliability analysis of satellite attitude control subsystem",
+  "container": "Reliability Engineering &amp; System Safety",
+  "year": 2020,
+  "author1": "Damircheli",
+  "doi_resolve": 200
+ }
+}

@@ -1,0 +1,294 @@
+{
+  "tool_wear_partC_target1": {
+    "T01": {
+      "fp_R01": 1,
+      "n_eval_jendela_1s": 42,
+      "jam_eval": 0.0117,
+      "far_fp_per_menit_eval": 1.4286,
+      "TLead_s": 25.0,
+      "det_R02": true,
+      "pct_R02_alarmed": 3.3
+    },
+    "T02": {
+      "fp_R01": 3,
+      "n_eval_jendela_1s": 35,
+      "jam_eval": 0.0097,
+      "far_fp_per_menit_eval": 5.1429,
+      "TLead_s": 36.0,
+      "det_R02": true,
+      "pct_R02_alarmed": 6.5
+    },
+    "T03": {
+      "fp_R01": 1,
+      "n_eval_jendela_1s": 42,
+      "jam_eval": 0.0117,
+      "far_fp_per_menit_eval": 1.4286,
+      "TLead_s": 24.0,
+      "det_R02": true,
+      "pct_R02_alarmed": 5.0
+    },
+    "T04": {
+      "fp_R01": 3,
+      "n_eval_jendela_1s": 40,
+      "jam_eval": 0.0111,
+      "far_fp_per_menit_eval": 4.5,
+      "TLead_s": 20.0,
+      "det_R02": true,
+      "pct_R02_alarmed": 6.9
+    }
+  },
+  "tool_wear_ringkas": {
+    "fp_per_alat": [
+      1,
+      3,
+      1,
+      3
+    ],
+    "TLead_s": [
+      20.0,
+      24.0,
+      25.0,
+      36.0
+    ],
+    "TLead_median": 24.5,
+    "TLead_rasio_maks_min": 1.8,
+    "far_eval_per_menit": [
+      1.4286,
+      1.4286,
+      4.5,
+      5.1429
+    ],
+    "n_alat_lolos_far_1_per_menit": 0,
+    "n_alat": 4,
+    "det_R02": "4/4"
+  },
+  "tool_wear_target02": {
+    "T01": {
+      "fp_R01": 1,
+      "TLead_s": 25.0
+    },
+    "T02": {
+      "fp_R01": 3,
+      "TLead_s": 36.0
+    },
+    "T03": {
+      "fp_R01": 1,
+      "TLead_s": 24.0
+    },
+    "T04": {
+      "fp_R01": 3,
+      "TLead_s": 20.0
+    }
+  },
+  "tool_wear_run_level": {
+    "tp": 4,
+    "fp": 4,
+    "fn": 0,
+    "tn": 0,
+    "precision": 0.5,
+    "recall": 1.0,
+    "frac_sig_R01": 1.0
+  },
+  "fold": {
+    "hyd_ki": {
+      "n_folds": 9,
+      "n_fold_di_bawah_30": 0,
+      "min_positif": 331,
+      "max_positif": 1426,
+      "label": "y_hyd"
+    },
+    "shk": {
+      "n_folds": 9,
+      "n_fold_di_bawah_30": 0,
+      "min_positif": 30,
+      "max_positif": 760,
+      "label": "y_shk"
+    },
+    "ssi": {
+      "n_folds": 9,
+      "n_fold_di_bawah_30": 2,
+      "min_positif": 3,
+      "max_positif": 161,
+      "label": "y_ssi"
+    },
+    "stuck_k1": {
+      "n_folds": 2,
+      "n_fold_di_bawah_30": 0,
+      "min_positif": 432,
+      "max_positif": 1575,
+      "label": "y_stuck"
+    },
+    "stuck_k2": {
+      "n_folds": 4,
+      "n_fold_di_bawah_30": 0,
+      "min_positif": 311,
+      "max_positif": 772,
+      "label": "y_stuck_onset"
+    },
+    "vib": {
+      "n_folds": 4,
+      "n_fold_di_bawah_30": 0,
+      "min_positif": 1124,
+      "max_positif": 1543,
+      "label": "y_vib"
+    }
+  },
+  "registry": {
+    "n_engine": 7,
+    "n_head": 27,
+    "tier": {
+      "PERINGATAN-BERPENGAWAS": 12,
+      "TREN": 13,
+      "BELUM LAYAK PAKAI": 2
+    },
+    "auto_slots": 0,
+    "elapsed_s": 21.55,
+    "seed": 42
+  },
+  "sign_test": {
+    "4": {
+      "k_minimum_sepakat": null,
+      "p_pada_k": null,
+      "p_minimum_mungkin": 0.125,
+      "daya_konkordansi": {
+        "0.7": 0.0,
+        "0.8": 0.0,
+        "0.9": 0.0,
+        "1.0": 0.0
+      }
+    },
+    "7": {
+      "k_minimum_sepakat": 7,
+      "p_pada_k": 0.015625,
+      "p_minimum_mungkin": 0.015625,
+      "daya_konkordansi": {
+        "0.7": 0.0824,
+        "0.8": 0.2097,
+        "0.9": 0.4783,
+        "1.0": 1.0
+      }
+    },
+    "9": {
+      "k_minimum_sepakat": 8,
+      "p_pada_k": 0.039062,
+      "p_minimum_mungkin": 0.003906,
+      "daya_konkordansi": {
+        "0.7": 0.196,
+        "0.8": 0.4362,
+        "0.9": 0.7748,
+        "1.0": 1.0
+      }
+    }
+  },
+  "wilson_p05": {
+    "3": {
+      "p": 0.5,
+      "lo": 0.1253,
+      "hi": 0.8747,
+      "lebar": 0.7493,
+      "setengah_lebar": 0.3747
+    },
+    "12": {
+      "p": 0.5,
+      "lo": 0.2538,
+      "hi": 0.7462,
+      "lebar": 0.4924,
+      "setengah_lebar": 0.2462
+    },
+    "20": {
+      "p": 0.5,
+      "lo": 0.2993,
+      "hi": 0.7007,
+      "lebar": 0.4014,
+      "setengah_lebar": 0.2007
+    },
+    "29": {
+      "p": 0.5,
+      "lo": 0.329,
+      "hi": 0.671,
+      "lebar": 0.342,
+      "setengah_lebar": 0.171
+    },
+    "30": {
+      "p": 0.5,
+      "lo": 0.3315,
+      "hi": 0.6685,
+      "lebar": 0.3369,
+      "setengah_lebar": 0.1685
+    },
+    "50": {
+      "p": 0.5,
+      "lo": 0.3664,
+      "hi": 0.6336,
+      "lebar": 0.2671,
+      "setengah_lebar": 0.1336
+    },
+    "100": {
+      "p": 0.5,
+      "lo": 0.4038,
+      "hi": 0.5962,
+      "lebar": 0.1923,
+      "setengah_lebar": 0.0962
+    },
+    "281": {
+      "p": 0.5,
+      "lo": 0.4419,
+      "hi": 0.5581,
+      "lebar": 0.1161,
+      "setengah_lebar": 0.0581
+    }
+  },
+  "wilson_n_untuk": {
+    "setengah_lebar_0.05": 381,
+    "setengah_lebar_0.10": 93,
+    "setengah_lebar_0.168": 31
+  },
+  "garwood": {
+    "chi2_95_2": 5.991464547107979,
+    "chi2_975_2": 7.377758908227872,
+    "batas_atas_0_fp_1sisi": 2.9957,
+    "batas_atas_0_fp_2sisi": 3.6889,
+    "dipakai": 3.6889,
+    "jam_neg_min_untuk_far6_dengan_0fp_konservatif": 14.7555,
+    "jam_neg_min_untuk_far6_dengan_0fp_satusisi": 11.9829
+  },
+  "jam_neg_min_per_fp": {
+    "0": 0.0,
+    "1": 4.0,
+    "2": 8.0,
+    "3": 12.0,
+    "6": 24.0,
+    "12": 48.0,
+    "30": 120.0
+  },
+  "seed_rencana": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "seed_primer": 42,
+  "runtime_anchor_s": 21.55,
+  "budget": {
+    "per_fold_menit": 12,
+    "n_fold_hyd": 9,
+    "n_fold_shk": 9,
+    "n_fold_tw": 4,
+    "n_seed": 5,
+    "total_fold_run": 110,
+    "catatan": "12 menit per fold x 22 fold x 5 seed = 110 fold-run; runtime maksimum pilot 1.320 menit",
+    "total_menit": 1320
+  },
+  "tool_wear_data": {
+    "n_rows": 469,
+    "n_cols": 32,
+    "n_units": 4,
+    "per_unit": {
+      "T01": 120,
+      "T02": 112,
+      "T03": 121,
+      "T04": 116
+    }
+  }
+}

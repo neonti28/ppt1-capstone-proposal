@@ -1,4 +1,4 @@
-# KEBIJAKAN EVALUASI ENGINE (mengikat R7, R8, E4, PM)
+# KEBIJAKAN EVALUASI Detektor (mengikat R7, R8, E4, PM)
 
 Sumber primer: `/mnt/d/Capstone 1/Evaluasi User.txt` (5.090 byte, dibaca 2026-10-27 10:40 WIB).
 Kebijakan ini menimpa setiap kalimat di plan R&D yang memperlakukan gate C/A/B sebagai gerbang
@@ -7,33 +7,33 @@ biner "lolos atau buang".
 ## 1. Tidak ada gate biner
 
 Gate dipakai untuk menyatakan **kekuatan bukti kemampuan prediksi**, bukan untuk memutuskan
-apakah sebuah engine boleh dipakai sama sekali. Engine yang tidak melewati gate tetap dicatat
+apakah sebuah detektor boleh dipakai sama sekali. Detektor yang tidak melewati gate tetap dicatat
 sebagai informasi kemampuan, batas penggunaan, dan kekuatan bukti.
 
 ## 2. Tiga lapisan penilaian, bukan satu ambang
 
 - **Lapisan A, apakah deteksi bekerja:** precision, recall, false alarm, waktu deteksi, sesuai
-  tugas masing-masing engine.
+  tugas masing-masing detektor.
 - **Lapisan B, apakah deteksi memberi nilai maintenance:** peringatan datang sebelum kondisi
   memburuk, ada waktu untuk bertindak, mengurangi pemeriksaan yang tidak perlu. Waktu peringatan
   terhadap kejadian nyata adalah ukuran utama.
 - **Lapisan C, apakah cukup tepercaya:** hasil bertahan pada periode, kondisi operasi, dan
   peralatan berbeda; kualitas sensor, perubahan kondisi, dan ketidakpastian ditangani.
 
-Satu engine boleh layak untuk pemantauan tren tetapi belum layak mengeluarkan alarm kritis
+satu mode boleh layak untuk pemantauan tren tetapi belum layak mengeluarkan alarm kritis
 otomatis. Itu keputusan yang sah, bukan kegagalan sistem.
 
-## 3. Engine tidak harus sama antar kerusakan
+## 3. Detektor tidak harus sama antar kerusakan
 
-Untuk kerusakan x boleh engine a, untuk kerusakan y boleh engine a atau engine lain. Setiap
+Untuk kerusakan x boleh detektor a, untuk kerusakan y boleh detektor a atau detektor lain. Setiap
 kelas kerusakan (vib, ssi, shk, stuck, hyd, bit_wear, tool_wear) dinilai dengan kriteria dan
 baseline yang relevan untuk tugasnya sendiri.
 
 ## 4. Hybrid dan perpaduan tiga komponen diizinkan
 
-Engine boleh rule based, statistical, persistence, anomaly detection, supervised ML, atau
+Detektor boleh rule based, statistical, persistence, anomaly detection, supervised ML, atau
 campuran. Perpaduan tiga sekaligus (ML + metaheuristik + statistik) diizinkan dan harus diuji
-sebagai kandidat tersendiri, bukan dianggap varian dari satu engine.
+sebagai kandidat tersendiri, bukan dianggap varian dari satu mode.
 
 Bentuk hybrid yang wajib dipertimbangkan minimal:
 
@@ -50,9 +50,9 @@ FAR 14,6-58,4. Untuk tool_wear, baseline adalah regime bengkel 469 jendela.
 
 ## 6. Empat kelas yang gagal tidak dibuang
 
-- **stuck:** persistence menang untuk klasifikasi status, tetapi engine masih berguna untuk onset,
+- **stuck:** persistence menang untuk klasifikasi status, tetapi detektor masih berguna untuk onset,
   durasi abnormal, atau kegagalan kembali normal. Target itu diuji terpisah.
-- **hyd:** label berasal dari SPPA dan aliran, jadi engine berguna untuk mendeteksi atau
+- **hyd:** label berasal dari SPPA dan aliran, jadi detektor berguna untuk mendeteksi atau
   merekonstruksi kondisi yang didefinisikan variabel itu; klaim prediksi kegagalan hidraulik
   independen adalah klaim lain yang butuh uji sendiri.
 - **shk:** kelas positif langka bukan alasan menolak detektor; pertanyaannya apakah kejadian

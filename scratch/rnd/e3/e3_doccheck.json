@@ -1,0 +1,984 @@
+{
+  "ringkasan": {
+    "n_checks": 194,
+    "n_gagal": 0,
+    "gagal": [],
+    "n_em_dash": 0,
+    "n_en_dash": 0,
+    "panjang_dokumen_char": 22335,
+    "n_bagian": 12,
+    "n_baris_ledger_e3": 36
+  },
+  "checks": [
+    {
+      "check": "bagian wajib",
+      "lulus": true,
+      "detail": "Riset pendahuluan: scikit-learn, statsmodels, exploratory-data-analysis, statistical-analysis, verification-mandatory"
+    },
+    {
+      "check": "bagian wajib",
+      "lulus": true,
+      "detail": "Riset pendahuluan: sequentialthinking, 4 pikiran"
+    },
+    {
+      "check": "bagian wajib",
+      "lulus": true,
+      "detail": "## 5. Status gate C, A, dan B"
+    },
+    {
+      "check": "bagian wajib",
+      "lulus": true,
+      "detail": "## 11. Ringkasan 5 baris"
+    },
+    {
+      "check": "bagian wajib",
+      "lulus": true,
+      "detail": "## 12. Daftar yang belum terverifikasi"
+    },
+    {
+      "check": "bagian wajib",
+      "lulus": true,
+      "detail": "## 8. Rujukan ilmiah dan status verifikasinya"
+    },
+    {
+      "check": "satu kalimat pemakaian skill scikit-learn",
+      "lulus": true,
+      "detail": "scikit-learn"
+    },
+    {
+      "check": "satu kalimat pemakaian skill statsmodels",
+      "lulus": true,
+      "detail": "statsmodels"
+    },
+    {
+      "check": "satu kalimat pemakaian skill exploratory-data-analysis",
+      "lulus": true,
+      "detail": "exploratory-data-analysis"
+    },
+    {
+      "check": "satu kalimat pemakaian skill statistical-analysis",
+      "lulus": true,
+      "detail": "statistical-analysis"
+    },
+    {
+      "check": "satu kalimat pemakaian skill verification-mandatory",
+      "lulus": true,
+      "detail": "verification-mandatory"
+    },
+    {
+      "check": "tanpa em-dash di dokumen",
+      "lulus": true,
+      "detail": "jumlah em-dash = 0"
+    },
+    {
+      "check": "bagian E3 ada di ledger",
+      "lulus": true,
+      "detail": "ok"
+    },
+    {
+      "check": "elapsed_s 233,7",
+      "lulus": true,
+      "detail": "233,7"
+    },
+    {
+      "check": "angka di dokumen: waktu jalan",
+      "lulus": true,
+      "detail": "dicari '233,7'"
+    },
+    {
+      "check": "angka di dokumen: jumlah baris 52.509",
+      "lulus": true,
+      "detail": "dicari '52.509'"
+    },
+    {
+      "check": "angka di dokumen: fitur A1",
+      "lulus": true,
+      "detail": "dicari '41'"
+    },
+    {
+      "check": "angka di dokumen: fitur A1b",
+      "lulus": true,
+      "detail": "dicari '43'"
+    },
+    {
+      "check": "angka di dokumen: total FP persistence 1941",
+      "lulus": true,
+      "detail": "dicari '1.941'"
+    },
+    {
+      "check": "angka di dokumen: total FP hybrid 195",
+      "lulus": true,
+      "detail": "dicari '195'"
+    },
+    {
+      "check": "angka di dokumen: baris baseline F-10",
+      "lulus": true,
+      "detail": "dicari '| F-10 |'"
+    },
+    {
+      "check": "angka di dokumen: FP baseline F-10 persistence",
+      "lulus": true,
+      "detail": "dicari '138'"
+    },
+    {
+      "check": "angka di dokumen: FAR baseline F-10 persistence",
+      "lulus": true,
+      "detail": "dicari '32,17'"
+    },
+    {
+      "check": "angka di dokumen: baris baseline F-10",
+      "lulus": true,
+      "detail": "dicari '| F-10 |'"
+    },
+    {
+      "check": "angka di dokumen: FP baseline F-10 hybrid_rule_lag1_and_persistence",
+      "lulus": true,
+      "detail": "dicari '12'"
+    },
+    {
+      "check": "angka di dokumen: FAR baseline F-10 hybrid_rule_lag1_and_persistence",
+      "lulus": true,
+      "detail": "dicari '2,80'"
+    },
+    {
+      "check": "angka di dokumen: baris baseline F-12",
+      "lulus": true,
+      "detail": "dicari '| F-12 |'"
+    },
+    {
+      "check": "angka di dokumen: FP baseline F-12 persistence",
+      "lulus": true,
+      "detail": "dicari '398'"
+    },
+    {
+      "check": "angka di dokumen: FAR baseline F-12 persistence",
+      "lulus": true,
+      "detail": "dicari '96,10'"
+    },
+    {
+      "check": "angka di dokumen: baris baseline F-12",
+      "lulus": true,
+      "detail": "dicari '| F-12 |'"
+    },
+    {
+      "check": "angka di dokumen: FP baseline F-12 hybrid_rule_lag1_and_persistence",
+      "lulus": true,
+      "detail": "dicari '60'"
+    },
+    {
+      "check": "angka di dokumen: FAR baseline F-12 hybrid_rule_lag1_and_persistence",
+      "lulus": true,
+      "detail": "dicari '14,49'"
+    },
+    {
+      "check": "angka di dokumen: baris baseline F-14",
+      "lulus": true,
+      "detail": "dicari '| F-14 |'"
+    },
+    {
+      "check": "angka di dokumen: FP baseline F-14 persistence",
+      "lulus": true,
+      "detail": "dicari '323'"
+    },
+    {
+      "check": "angka di dokumen: FAR baseline F-14 persistence",
+      "lulus": true,
+      "detail": "dicari '48,78'"
+    },
+    {
+      "check": "angka di dokumen: baris baseline F-14",
+      "lulus": true,
+      "detail": "dicari '| F-14 |'"
+    },
+    {
+      "check": "angka di dokumen: FP baseline F-14 hybrid_rule_lag1_and_persistence",
+      "lulus": true,
+      "detail": "dicari '20'"
+    },
+    {
+      "check": "angka di dokumen: FAR baseline F-14 hybrid_rule_lag1_and_persistence",
+      "lulus": true,
+      "detail": "dicari '3,02'"
+    },
+    {
+      "check": "angka di dokumen: baris baseline F-15A",
+      "lulus": true,
+      "detail": "dicari '| F-15A |'"
+    },
+    {
+      "check": "angka di dokumen: FP baseline F-15A persistence",
+      "lulus": true,
+      "detail": "dicari '236'"
+    },
+    {
+      "check": "angka di dokumen: FAR baseline F-15A persistence",
+      "lulus": true,
+      "detail": "dicari '62,26'"
+    },
+    {
+      "check": "angka di dokumen: baris baseline F-15A",
+      "lulus": true,
+      "detail": "dicari '| F-15A |'"
+    },
+    {
+      "check": "angka di dokumen: FP baseline F-15A hybrid_rule_lag1_and_persistence",
+      "lulus": true,
+      "detail": "dicari '16'"
+    },
+    {
+      "check": "angka di dokumen: FAR baseline F-15A hybrid_rule_lag1_and_persistence",
+      "lulus": true,
+      "detail": "dicari '4,22'"
+    },
+    {
+      "check": "angka di dokumen: baris baseline F-15_S",
+      "lulus": true,
+      "detail": "dicari '| F-15_S |'"
+    },
+    {
+      "check": "angka di dokumen: FP baseline F-15_S persistence",
+      "lulus": true,
+      "detail": "dicari '377'"
+    },
+    {
+      "check": "angka di dokumen: FAR baseline F-15_S persistence",
+      "lulus": true,
+      "detail": "dicari '73,74'"
+    },
+    {
+      "check": "angka di dokumen: baris baseline F-15_S",
+      "lulus": true,
+      "detail": "dicari '| F-15_S |'"
+    },
+    {
+      "check": "angka di dokumen: FP baseline F-15_S hybrid_rule_lag1_and_persistence",
+      "lulus": true,
+      "detail": "dicari '36'"
+    },
+    {
+      "check": "angka di dokumen: FAR baseline F-15_S hybrid_rule_lag1_and_persistence",
+      "lulus": true,
+      "detail": "dicari '7,04'"
+    },
+    {
+      "check": "angka di dokumen: baris baseline F-5",
+      "lulus": true,
+      "detail": "dicari '| F-5 |'"
+    },
+    {
+      "check": "angka di dokumen: FP baseline F-5 persistence",
+      "lulus": true,
+      "detail": "dicari '152'"
+    },
+    {
+      "check": "angka di dokumen: FAR baseline F-5 persistence",
+      "lulus": true,
+      "detail": "dicari '38,33'"
+    },
+    {
+      "check": "angka di dokumen: baris baseline F-5",
+      "lulus": true,
+      "detail": "dicari '| F-5 |'"
+    },
+    {
+      "check": "angka di dokumen: FP baseline F-5 hybrid_rule_lag1_and_persistence",
+      "lulus": true,
+      "detail": "dicari '11'"
+    },
+    {
+      "check": "angka di dokumen: FAR baseline F-5 hybrid_rule_lag1_and_persistence",
+      "lulus": true,
+      "detail": "dicari '2,77'"
+    },
+    {
+      "check": "angka di dokumen: baris baseline F-7",
+      "lulus": true,
+      "detail": "dicari '| F-7 |'"
+    },
+    {
+      "check": "angka di dokumen: FP baseline F-7 persistence",
+      "lulus": true,
+      "detail": "dicari '157'"
+    },
+    {
+      "check": "angka di dokumen: FAR baseline F-7 persistence",
+      "lulus": true,
+      "detail": "dicari '109,69'"
+    },
+    {
+      "check": "angka di dokumen: baris baseline F-7",
+      "lulus": true,
+      "detail": "dicari '| F-7 |'"
+    },
+    {
+      "check": "angka di dokumen: FP baseline F-7 hybrid_rule_lag1_and_persistence",
+      "lulus": true,
+      "detail": "dicari '16'"
+    },
+    {
+      "check": "angka di dokumen: FAR baseline F-7 hybrid_rule_lag1_and_persistence",
+      "lulus": true,
+      "detail": "dicari '11,18'"
+    },
+    {
+      "check": "angka di dokumen: baris baseline F-9",
+      "lulus": true,
+      "detail": "dicari '| F-9 |'"
+    },
+    {
+      "check": "angka di dokumen: FP baseline F-9 persistence",
+      "lulus": true,
+      "detail": "dicari '74'"
+    },
+    {
+      "check": "angka di dokumen: FAR baseline F-9 persistence",
+      "lulus": true,
+      "detail": "dicari '89,32'"
+    },
+    {
+      "check": "angka di dokumen: baris baseline F-9",
+      "lulus": true,
+      "detail": "dicari '| F-9 |'"
+    },
+    {
+      "check": "angka di dokumen: FP baseline F-9 hybrid_rule_lag1_and_persistence",
+      "lulus": true,
+      "detail": "dicari '16'"
+    },
+    {
+      "check": "angka di dokumen: FAR baseline F-9 hybrid_rule_lag1_and_persistence",
+      "lulus": true,
+      "detail": "dicari '19,31'"
+    },
+    {
+      "check": "angka di dokumen: baris baseline F-9_A",
+      "lulus": true,
+      "detail": "dicari '| F-9_A |'"
+    },
+    {
+      "check": "angka di dokumen: FP baseline F-9_A persistence",
+      "lulus": true,
+      "detail": "dicari '86'"
+    },
+    {
+      "check": "angka di dokumen: FAR baseline F-9_A persistence",
+      "lulus": true,
+      "detail": "dicari '66,05'"
+    },
+    {
+      "check": "angka di dokumen: baris baseline F-9_A",
+      "lulus": true,
+      "detail": "dicari '| F-9_A |'"
+    },
+    {
+      "check": "angka di dokumen: FP baseline F-9_A hybrid_rule_lag1_and_persistence",
+      "lulus": true,
+      "detail": "dicari '8'"
+    },
+    {
+      "check": "angka di dokumen: FAR baseline F-9_A hybrid_rule_lag1_and_persistence",
+      "lulus": true,
+      "detail": "dicari '6,14'"
+    },
+    {
+      "check": "angka di dokumen: FAR A1 F-10",
+      "lulus": true,
+      "detail": "dicari '86,72'"
+    },
+    {
+      "check": "angka di dokumen: recall A1 F-10",
+      "lulus": true,
+      "detail": "dicari '0,0717'"
+    },
+    {
+      "check": "angka di dokumen: TP A1 F-10",
+      "lulus": true,
+      "detail": "dicari '100'"
+    },
+    {
+      "check": "angka di dokumen: FAR A1 F-12",
+      "lulus": true,
+      "detail": "dicari '295,29'"
+    },
+    {
+      "check": "angka di dokumen: recall A1 F-12",
+      "lulus": true,
+      "detail": "dicari '0,0989'"
+    },
+    {
+      "check": "angka di dokumen: TP A1 F-12",
+      "lulus": true,
+      "detail": "dicari '141'"
+    },
+    {
+      "check": "angka di dokumen: FAR A1 F-14",
+      "lulus": true,
+      "detail": "dicari '77,92'"
+    },
+    {
+      "check": "angka di dokumen: recall A1 F-14",
+      "lulus": true,
+      "detail": "dicari '0,0740'"
+    },
+    {
+      "check": "angka di dokumen: TP A1 F-14",
+      "lulus": true,
+      "detail": "dicari '64'"
+    },
+    {
+      "check": "angka di dokumen: FAR A1 F-15A",
+      "lulus": true,
+      "detail": "dicari '543,50'"
+    },
+    {
+      "check": "angka di dokumen: recall A1 F-15A",
+      "lulus": true,
+      "detail": "dicari '0,5057'"
+    },
+    {
+      "check": "angka di dokumen: TP A1 F-15A",
+      "lulus": true,
+      "detail": "dicari '353'"
+    },
+    {
+      "check": "angka di dokumen: FAR A1 F-15_S",
+      "lulus": true,
+      "detail": "dicari '1,96'"
+    },
+    {
+      "check": "angka di dokumen: recall A1 F-15_S",
+      "lulus": true,
+      "detail": "dicari '0,0010'"
+    },
+    {
+      "check": "angka di dokumen: TP A1 F-15_S",
+      "lulus": true,
+      "detail": "dicari '1'"
+    },
+    {
+      "check": "angka di dokumen: FAR A1 F-5",
+      "lulus": true,
+      "detail": "dicari '213,57'"
+    },
+    {
+      "check": "angka di dokumen: recall A1 F-5",
+      "lulus": true,
+      "detail": "dicari '0,1659'"
+    },
+    {
+      "check": "angka di dokumen: TP A1 F-5",
+      "lulus": true,
+      "detail": "dicari '103'"
+    },
+    {
+      "check": "angka di dokumen: FAR A1 F-7",
+      "lulus": true,
+      "detail": "dicari '252,23'"
+    },
+    {
+      "check": "angka di dokumen: recall A1 F-7",
+      "lulus": true,
+      "detail": "dicari '0,0974'"
+    },
+    {
+      "check": "angka di dokumen: TP A1 F-7",
+      "lulus": true,
+      "detail": "dicari '41'"
+    },
+    {
+      "check": "angka di dokumen: FAR A1 F-9",
+      "lulus": true,
+      "detail": "dicari '0,00'"
+    },
+    {
+      "check": "angka di dokumen: recall A1 F-9",
+      "lulus": true,
+      "detail": "dicari '0,0473'"
+    },
+    {
+      "check": "angka di dokumen: TP A1 F-9",
+      "lulus": true,
+      "detail": "dicari '20'"
+    },
+    {
+      "check": "angka di dokumen: FAR A1 F-9_A",
+      "lulus": true,
+      "detail": "dicari '29,18'"
+    },
+    {
+      "check": "angka di dokumen: recall A1 F-9_A",
+      "lulus": true,
+      "detail": "dicari '0,0060'"
+    },
+    {
+      "check": "angka di dokumen: TP A1 F-9_A",
+      "lulus": true,
+      "detail": "dicari '2'"
+    },
+    {
+      "check": "angka di dokumen: FAR A1b F-10",
+      "lulus": true,
+      "detail": "dicari '7,46'"
+    },
+    {
+      "check": "angka di dokumen: presisi A1b F-10",
+      "lulus": true,
+      "detail": "dicari '0,8725'"
+    },
+    {
+      "check": "angka di dokumen: FAR A1b F-12",
+      "lulus": true,
+      "detail": "dicari '24,14'"
+    },
+    {
+      "check": "angka di dokumen: presisi A1b F-12",
+      "lulus": true,
+      "detail": "dicari '0,8020'"
+    },
+    {
+      "check": "angka di dokumen: FAR A1b F-14",
+      "lulus": true,
+      "detail": "dicari '2,27'"
+    },
+    {
+      "check": "angka di dokumen: presisi A1b F-14",
+      "lulus": true,
+      "detail": "dicari '0,7414'"
+    },
+    {
+      "check": "angka di dokumen: FAR A1b F-15A",
+      "lulus": true,
+      "detail": "dicari '20,05'"
+    },
+    {
+      "check": "angka di dokumen: presisi A1b F-15A",
+      "lulus": true,
+      "detail": "dicari '0,6780'"
+    },
+    {
+      "check": "angka di dokumen: FAR A1b F-15_S",
+      "lulus": true,
+      "detail": "dicari '1,96'"
+    },
+    {
+      "check": "angka di dokumen: presisi A1b F-15_S",
+      "lulus": true,
+      "detail": "dicari '0,8305'"
+    },
+    {
+      "check": "angka di dokumen: FAR A1b F-5",
+      "lulus": true,
+      "detail": "dicari '6,81'"
+    },
+    {
+      "check": "angka di dokumen: presisi A1b F-5",
+      "lulus": true,
+      "detail": "dicari '0,8929'"
+    },
+    {
+      "check": "angka di dokumen: FAR A1b F-7",
+      "lulus": true,
+      "detail": "dicari '6,99'"
+    },
+    {
+      "check": "angka di dokumen: presisi A1b F-7",
+      "lulus": true,
+      "detail": "dicari '0,4737'"
+    },
+    {
+      "check": "angka di dokumen: FAR A1b F-9",
+      "lulus": true,
+      "detail": "dicari '6,04'"
+    },
+    {
+      "check": "angka di dokumen: presisi A1b F-9",
+      "lulus": true,
+      "detail": "dicari '0,9645'"
+    },
+    {
+      "check": "angka di dokumen: FAR A1b F-9_A",
+      "lulus": true,
+      "detail": "dicari '0,00'"
+    },
+    {
+      "check": "angka di dokumen: FAR A2 reset F-10",
+      "lulus": true,
+      "detail": "dicari '146,87'"
+    },
+    {
+      "check": "angka di dokumen: FP A2 F-10",
+      "lulus": true,
+      "detail": "dicari '630'"
+    },
+    {
+      "check": "angka di dokumen: FAR A2 reset F-12",
+      "lulus": true,
+      "detail": "dicari '188,57'"
+    },
+    {
+      "check": "angka di dokumen: FP A2 F-12",
+      "lulus": true,
+      "detail": "dicari '781'"
+    },
+    {
+      "check": "angka di dokumen: FAR A2 reset F-14",
+      "lulus": true,
+      "detail": "dicari '151,16'"
+    },
+    {
+      "check": "angka di dokumen: FP A2 F-14",
+      "lulus": true,
+      "detail": "dicari '1.001'"
+    },
+    {
+      "check": "angka di dokumen: FAR A2 reset F-15A",
+      "lulus": true,
+      "detail": "dicari '143,79'"
+    },
+    {
+      "check": "angka di dokumen: FP A2 F-15A",
+      "lulus": true,
+      "detail": "dicari '545'"
+    },
+    {
+      "check": "angka di dokumen: FAR A2 reset F-15_S",
+      "lulus": true,
+      "detail": "dicari '133,01'"
+    },
+    {
+      "check": "angka di dokumen: FP A2 F-15_S",
+      "lulus": true,
+      "detail": "dicari '680'"
+    },
+    {
+      "check": "angka di dokumen: FAR A2 reset F-5",
+      "lulus": true,
+      "detail": "dicari '199,19'"
+    },
+    {
+      "check": "angka di dokumen: FP A2 F-5",
+      "lulus": true,
+      "detail": "dicari '790'"
+    },
+    {
+      "check": "angka di dokumen: FAR A2 reset F-7",
+      "lulus": true,
+      "detail": "dicari '232,66'"
+    },
+    {
+      "check": "angka di dokumen: FP A2 F-7",
+      "lulus": true,
+      "detail": "dicari '333'"
+    },
+    {
+      "check": "angka di dokumen: FAR A2 reset F-9",
+      "lulus": true,
+      "detail": "dicari '194,33'"
+    },
+    {
+      "check": "angka di dokumen: FP A2 F-9",
+      "lulus": true,
+      "detail": "dicari '161'"
+    },
+    {
+      "check": "angka di dokumen: FAR A2 reset F-9_A",
+      "lulus": true,
+      "detail": "dicari '127,49'"
+    },
+    {
+      "check": "angka di dokumen: FP A2 F-9_A",
+      "lulus": true,
+      "detail": "dicari '166'"
+    },
+    {
+      "check": "angka di dokumen: FAR A2 tanpa reset F-10",
+      "lulus": true,
+      "detail": "dicari '1.440,00'"
+    },
+    {
+      "check": "angka di dokumen: FAR A2 tanpa reset F-12",
+      "lulus": true,
+      "detail": "dicari '1.439,28'"
+    },
+    {
+      "check": "angka di dokumen: FAR A2 tanpa reset F-14",
+      "lulus": true,
+      "detail": "dicari '1.440,00'"
+    },
+    {
+      "check": "angka di dokumen: FAR A2 tanpa reset F-15A",
+      "lulus": true,
+      "detail": "dicari '1.440,00'"
+    },
+    {
+      "check": "angka di dokumen: FAR A2 tanpa reset F-15_S",
+      "lulus": true,
+      "detail": "dicari '1.403,23'"
+    },
+    {
+      "check": "angka di dokumen: FAR A2 tanpa reset F-5",
+      "lulus": true,
+      "detail": "dicari '1.440,00'"
+    },
+    {
+      "check": "angka di dokumen: FAR A2 tanpa reset F-7",
+      "lulus": true,
+      "detail": "dicari '1.440,00'"
+    },
+    {
+      "check": "angka di dokumen: FAR A2 tanpa reset F-9",
+      "lulus": true,
+      "detail": "dicari '1.440,00'"
+    },
+    {
+      "check": "angka di dokumen: FAR A2 tanpa reset F-9_A",
+      "lulus": true,
+      "detail": "dicari '1.330,94'"
+    },
+    {
+      "check": "angka di dokumen: cakupan F-10",
+      "lulus": true,
+      "detail": "dicari '0,6730'"
+    },
+    {
+      "check": "angka di dokumen: cakupan F-12",
+      "lulus": true,
+      "detail": "dicari '0,0855'"
+    },
+    {
+      "check": "angka di dokumen: cakupan F-14",
+      "lulus": true,
+      "detail": "dicari '0,0327'"
+    },
+    {
+      "check": "angka di dokumen: cakupan F-15A",
+      "lulus": true,
+      "detail": "dicari '0,1915'"
+    },
+    {
+      "check": "angka di dokumen: cakupan F-15_S",
+      "lulus": true,
+      "detail": "dicari '0,0903'"
+    },
+    {
+      "check": "angka di dokumen: cakupan F-5",
+      "lulus": true,
+      "detail": "dicari '0,0171'"
+    },
+    {
+      "check": "angka di dokumen: cakupan F-7",
+      "lulus": true,
+      "detail": "dicari '0,1079'"
+    },
+    {
+      "check": "angka di dokumen: cakupan F-9",
+      "lulus": true,
+      "detail": "dicari '0,0707'"
+    },
+    {
+      "check": "angka di dokumen: cakupan F-9_A",
+      "lulus": true,
+      "detail": "dicari '0,3004'"
+    },
+    {
+      "check": "angka di dokumen: gate A A1 seed42",
+      "lulus": true,
+      "detail": "dicari '2 dari 9'"
+    },
+    {
+      "check": "angka di dokumen: gate A A1 semua seed",
+      "lulus": true,
+      "detail": "dicari '3 dari 45'"
+    },
+    {
+      "check": "angka di dokumen: gate A hybrid proxy",
+      "lulus": true,
+      "detail": "dicari '4 dari 9'"
+    },
+    {
+      "check": "angka di dokumen: gate A A2",
+      "lulus": true,
+      "detail": "dicari '0 dari 9'"
+    },
+    {
+      "check": "angka di dokumen: ambang E2",
+      "lulus": true,
+      "detail": "dicari '7 dari 9'"
+    },
+    {
+      "check": "angka di dokumen: anggaran alarm",
+      "lulus": true,
+      "detail": "dicari '1/240'"
+    },
+    {
+      "check": "angka di dokumen: anggaran fraksi",
+      "lulus": true,
+      "detail": "dicari '0,00416667'"
+    },
+    {
+      "check": "angka di dokumen: kelebihan alpha",
+      "lulus": true,
+      "detail": "dicari '12 sampai 48'"
+    },
+    {
+      "check": "angka di dokumen: rasio maksimum A1",
+      "lulus": true,
+      "detail": "dicari '90,6'"
+    },
+    {
+      "check": "angka di dokumen: jumlah pemeriksaan",
+      "lulus": true,
+      "detail": "dicari '113'"
+    },
+    {
+      "check": "angka di dokumen: elapsed",
+      "lulus": true,
+      "detail": "dicari '233,7'"
+    },
+    {
+      "check": "angka di dokumen: DOI angelopoulos2021",
+      "lulus": true,
+      "detail": "dicari '10.48550/arXiv.2107.07511'"
+    },
+    {
+      "check": "angka di dokumen: tahun rujukan angelopoulos2021",
+      "lulus": true,
+      "detail": "dicari '2021'"
+    },
+    {
+      "check": "angka di dokumen: penulis pertama angelopoulos2021",
+      "lulus": true,
+      "detail": "dicari 'Angelopoulos'"
+    },
+    {
+      "check": "angka di dokumen: DOI vovk2005",
+      "lulus": true,
+      "detail": "dicari '10.1007/b106715'"
+    },
+    {
+      "check": "angka di dokumen: tahun rujukan vovk2005",
+      "lulus": true,
+      "detail": "dicari '2005'"
+    },
+    {
+      "check": "angka di dokumen: penulis pertama vovk2005",
+      "lulus": true,
+      "detail": "dicari 'Vovk'"
+    },
+    {
+      "check": "angka di dokumen: DOI lei2018",
+      "lulus": true,
+      "detail": "dicari '10.1080/01621459.2017.1307116'"
+    },
+    {
+      "check": "angka di dokumen: tahun rujukan lei2018",
+      "lulus": true,
+      "detail": "dicari '2018'"
+    },
+    {
+      "check": "angka di dokumen: penulis pertama lei2018",
+      "lulus": true,
+      "detail": "dicari 'Lei'"
+    },
+    {
+      "check": "angka di dokumen: DOI page1954",
+      "lulus": true,
+      "detail": "dicari '10.1093/biomet/41.1-2.100'"
+    },
+    {
+      "check": "angka di dokumen: tahun rujukan page1954",
+      "lulus": true,
+      "detail": "dicari '1954'"
+    },
+    {
+      "check": "angka di dokumen: penulis pertama page1954",
+      "lulus": true,
+      "detail": "dicari 'Page'"
+    },
+    {
+      "check": "angka di dokumen: DOI garwood1936",
+      "lulus": true,
+      "detail": "dicari '10.1093/biomet/28.3-4.437'"
+    },
+    {
+      "check": "angka di dokumen: tahun rujukan garwood1936",
+      "lulus": true,
+      "detail": "dicari '1936'"
+    },
+    {
+      "check": "angka di dokumen: penulis pertama garwood1936",
+      "lulus": true,
+      "detail": "dicari 'Garwood'"
+    },
+    {
+      "check": "angka di dokumen: DOI hawkins1998",
+      "lulus": true,
+      "detail": "dicari '10.1007/978-1-4612-1686-5'"
+    },
+    {
+      "check": "angka di dokumen: tahun rujukan hawkins1998",
+      "lulus": true,
+      "detail": "dicari '1998'"
+    },
+    {
+      "check": "angka di dokumen: penulis pertama hawkins1998",
+      "lulus": true,
+      "detail": "dicari 'Hawkins'"
+    },
+    {
+      "check": "angka di dokumen: DOI siffer2017",
+      "lulus": true,
+      "detail": "dicari '10.1145/3097983.3098144'"
+    },
+    {
+      "check": "angka di dokumen: tahun rujukan siffer2017",
+      "lulus": true,
+      "detail": "dicari '2017'"
+    },
+    {
+      "check": "angka di dokumen: penulis pertama siffer2017",
+      "lulus": true,
+      "detail": "dicari 'Siffer'"
+    },
+    {
+      "check": "7 metadata DOI terverifikasi",
+      "lulus": true,
+      "detail": "ok"
+    },
+    {
+      "check": "tidak ada placeholder TODO",
+      "lulus": true,
+      "detail": "TODO"
+    },
+    {
+      "check": "tidak ada placeholder TBD",
+      "lulus": true,
+      "detail": "TBD"
+    },
+    {
+      "check": "tidak ada placeholder xxx",
+      "lulus": true,
+      "detail": "xxx"
+    },
+    {
+      "check": "tidak ada placeholder NaN",
+      "lulus": true,
+      "detail": "NaN"
+    },
+    {
+      "check": "tidak ada placeholder None",
+      "lulus": true,
+      "detail": "None"
+    },
+    {
+      "check": "36 baris ledger E3",
+      "lulus": true,
+      "detail": "terhitung 36"
+    },
+    {
+      "check": "ada baris BELUM-TERUKUR di ledger E3",
+      "lulus": true,
+      "detail": "ok"
+    }
+  ]
+}

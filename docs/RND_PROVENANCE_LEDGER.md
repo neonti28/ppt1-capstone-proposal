@@ -1,4 +1,4 @@
-# RND-P0: LEDGER PROVENANCE ANGKA ALAT PdM (7 ENGINE, 11 KLAIM)
+# RND-P0: LEDGER PROVENANCE ANGKA ALAT PdM (7 mode, 11 KLAIM)
 
 Kartu: `t_b90b3272` · Board: `rnd-algo-2026` · Tanggal: 2026-10-27 (WIB)
 Workspace: `/mnt/d/Capstone 1(v2)` · Dokumen pendamping: `docs/RND_P0_PARAMETER.md`
@@ -135,10 +135,10 @@ Penomoran memakai awalan `D0-` agar tidak bertabrakan dengan id `L-xx` bagian P0
 
 | No | Angka | Satuan | Kelas sumber | Rujukan persis | Tanggal akses | Dipakai di | Status |
 |---|---|---|---|---|---|---|---|
-| D0-001 | 23922 | jendela | RUN-KITA | `scratch/v9_d1/datasets/vib.csv.gz` kolom `well`/`y_vib`; skrip workspace `meas1.py` | 2026-10-27 | RND_D0 §1 tabel engine | TERUKUR |
-| D0-002 | 4 | well | RUN-KITA | `scratch/v9_d1/datasets/vib.csv.gz` kolom `well`/`y_vib`; skrip workspace `meas1.py` | 2026-10-27 | RND_D0 §1 tabel engine | TERUKUR |
-| D0-003 | 5429 | jendela positif | RUN-KITA | `scratch/v9_d1/datasets/vib.csv.gz` kolom `well`/`y_vib`; skrip workspace `meas1.py` | 2026-10-27 | RND_D0 §1 tabel engine | TERUKUR |
-| D0-004 | 22,69 | % | RUN-KITA | `scratch/v9_d1/datasets/vib.csv.gz` kolom `well`/`y_vib`; skrip workspace `meas1.py` | 2026-10-27 | RND_D0 §1 tabel engine | TERUKUR |
+| D0-001 | 23922 | jendela | RUN-KITA | `scratch/v9_d1/datasets/vib.csv.gz` kolom `well`/`y_vib`; skrip workspace `meas1.py` | 2026-10-27 | RND_D0 §1 tabel detektor | TERUKUR |
+| D0-002 | 4 | well | RUN-KITA | `scratch/v9_d1/datasets/vib.csv.gz` kolom `well`/`y_vib`; skrip workspace `meas1.py` | 2026-10-27 | RND_D0 §1 tabel detektor | TERUKUR |
+| D0-003 | 5429 | jendela positif | RUN-KITA | `scratch/v9_d1/datasets/vib.csv.gz` kolom `well`/`y_vib`; skrip workspace `meas1.py` | 2026-10-27 | RND_D0 §1 tabel detektor | TERUKUR |
+| D0-004 | 22,69 | % | RUN-KITA | `scratch/v9_d1/datasets/vib.csv.gz` kolom `well`/`y_vib`; skrip workspace `meas1.py` | 2026-10-27 | RND_D0 §1 tabel detektor | TERUKUR |
 | D0-005 | 0,00 | % baris NaN | RUN-KITA | `scratch/v9_d1/datasets/vib.csv.gz` kolom `TQA_mean`; `meas1.py` | 2026-10-27 | RND_D0 §1 tabel missing | TERUKUR |
 | D0-006 | 0,00 | % baris NaN | RUN-KITA | `scratch/v9_d1/datasets/vib.csv.gz` kolom `SPPA_mean`; `meas1.py` | 2026-10-27 | RND_D0 §1 tabel missing | TERUKUR |
 | D0-007 | 6,10 | % baris NaN | RUN-KITA | `scratch/v9_d1/datasets/vib.csv.gz` kolom `TFLO_mean`; `meas1.py` | 2026-10-27 | RND_D0 §1 tabel missing | TERUKUR |
@@ -154,10 +154,10 @@ Penomoran memakai awalan `D0-` agar tidak bertabrakan dengan id `L-xx` bagian P0
 | D0-017 | 6.482 jendela / 1.543 positif / 23,80% | per well | RUN-KITA | `scratch/v9_d1/datasets/vib.csv.gz` group `well=F-15A`; `meas1.py` | 2026-10-27 | RND_D0 §1 tabel per well | TERUKUR |
 | D0-018 | 10.903 jendela / 1.532 positif / 14,05% | per well | RUN-KITA | `scratch/v9_d1/datasets/vib.csv.gz` group `well=F-15_S`; `meas1.py` | 2026-10-27 | RND_D0 §1 tabel per well | TERUKUR |
 | D0-019 | 4.548 jendela / 1.230 positif / 27,04% | per well | RUN-KITA | `scratch/v9_d1/datasets/vib.csv.gz` group `well=F-5`; `meas1.py` | 2026-10-27 | RND_D0 §1 tabel per well | TERUKUR |
-| D0-020 | 35906 | jendela | RUN-KITA | `scratch/v9_d1/datasets/ssi.csv.gz` kolom `well`/`y_ssi`; skrip workspace `meas1.py` | 2026-10-27 | RND_D0 §1 tabel engine | TERUKUR |
-| D0-021 | 9 | well | RUN-KITA | `scratch/v9_d1/datasets/ssi.csv.gz` kolom `well`/`y_ssi`; skrip workspace `meas1.py` | 2026-10-27 | RND_D0 §1 tabel engine | TERUKUR |
-| D0-022 | 607 | jendela positif | RUN-KITA | `scratch/v9_d1/datasets/ssi.csv.gz` kolom `well`/`y_ssi`; skrip workspace `meas1.py` | 2026-10-27 | RND_D0 §1 tabel engine | TERUKUR |
-| D0-023 | 1,69 | % | RUN-KITA | `scratch/v9_d1/datasets/ssi.csv.gz` kolom `well`/`y_ssi`; skrip workspace `meas1.py` | 2026-10-27 | RND_D0 §1 tabel engine | TERUKUR |
+| D0-020 | 35906 | jendela | RUN-KITA | `scratch/v9_d1/datasets/ssi.csv.gz` kolom `well`/`y_ssi`; skrip workspace `meas1.py` | 2026-10-27 | RND_D0 §1 tabel detektor | TERUKUR |
+| D0-021 | 9 | well | RUN-KITA | `scratch/v9_d1/datasets/ssi.csv.gz` kolom `well`/`y_ssi`; skrip workspace `meas1.py` | 2026-10-27 | RND_D0 §1 tabel detektor | TERUKUR |
+| D0-022 | 607 | jendela positif | RUN-KITA | `scratch/v9_d1/datasets/ssi.csv.gz` kolom `well`/`y_ssi`; skrip workspace `meas1.py` | 2026-10-27 | RND_D0 §1 tabel detektor | TERUKUR |
+| D0-023 | 1,69 | % | RUN-KITA | `scratch/v9_d1/datasets/ssi.csv.gz` kolom `well`/`y_ssi`; skrip workspace `meas1.py` | 2026-10-27 | RND_D0 §1 tabel detektor | TERUKUR |
 | D0-024 | 0,00 | % baris NaN | RUN-KITA | `scratch/v9_d1/datasets/ssi.csv.gz` kolom `TQA_mean`; `meas1.py` | 2026-10-27 | RND_D0 §1 tabel missing | TERUKUR |
 | D0-025 | 0,00 | % baris NaN | RUN-KITA | `scratch/v9_d1/datasets/ssi.csv.gz` kolom `SPPA_mean`; `meas1.py` | 2026-10-27 | RND_D0 §1 tabel missing | TERUKUR |
 | D0-026 | 3,04 | % baris NaN | RUN-KITA | `scratch/v9_d1/datasets/ssi.csv.gz` kolom `TFLO_mean`; `meas1.py` | 2026-10-27 | RND_D0 §1 tabel missing | TERUKUR |
@@ -178,10 +178,10 @@ Penomoran memakai awalan `D0-` agar tidak bertabrakan dengan id `L-xx` bagian P0
 | D0-041 | 982 jendela / 3 positif / 0,31% | per well | RUN-KITA | `scratch/v9_d1/datasets/ssi.csv.gz` group `well=F-7`; `meas1.py` | 2026-10-27 | RND_D0 §1 tabel per well | TERUKUR |
 | D0-042 | 1.126 jendela / 12 positif / 1,07% | per well | RUN-KITA | `scratch/v9_d1/datasets/ssi.csv.gz` group `well=F-9`; `meas1.py` | 2026-10-27 | RND_D0 §1 tabel per well | TERUKUR |
 | D0-043 | 841 jendela / 55 positif / 6,54% | per well | RUN-KITA | `scratch/v9_d1/datasets/ssi.csv.gz` group `well=F-9_A`; `meas1.py` | 2026-10-27 | RND_D0 §1 tabel per well | TERUKUR |
-| D0-044 | 56495 | jendela | RUN-KITA | `scratch/v9_d1/datasets/shk.csv.gz` kolom `well`/`y_shk`; skrip workspace `meas1.py` | 2026-10-27 | RND_D0 §1 tabel engine | TERUKUR |
-| D0-045 | 9 | well | RUN-KITA | `scratch/v9_d1/datasets/shk.csv.gz` kolom `well`/`y_shk`; skrip workspace `meas1.py` | 2026-10-27 | RND_D0 §1 tabel engine | TERUKUR |
-| D0-046 | 2005 | jendela positif | RUN-KITA | `scratch/v9_d1/datasets/shk.csv.gz` kolom `well`/`y_shk`; skrip workspace `meas1.py` | 2026-10-27 | RND_D0 §1 tabel engine | TERUKUR |
-| D0-047 | 3,55 | % | RUN-KITA | `scratch/v9_d1/datasets/shk.csv.gz` kolom `well`/`y_shk`; skrip workspace `meas1.py` | 2026-10-27 | RND_D0 §1 tabel engine | TERUKUR |
+| D0-044 | 56495 | jendela | RUN-KITA | `scratch/v9_d1/datasets/shk.csv.gz` kolom `well`/`y_shk`; skrip workspace `meas1.py` | 2026-10-27 | RND_D0 §1 tabel detektor | TERUKUR |
+| D0-045 | 9 | well | RUN-KITA | `scratch/v9_d1/datasets/shk.csv.gz` kolom `well`/`y_shk`; skrip workspace `meas1.py` | 2026-10-27 | RND_D0 §1 tabel detektor | TERUKUR |
+| D0-046 | 2005 | jendela positif | RUN-KITA | `scratch/v9_d1/datasets/shk.csv.gz` kolom `well`/`y_shk`; skrip workspace `meas1.py` | 2026-10-27 | RND_D0 §1 tabel detektor | TERUKUR |
+| D0-047 | 3,55 | % | RUN-KITA | `scratch/v9_d1/datasets/shk.csv.gz` kolom `well`/`y_shk`; skrip workspace `meas1.py` | 2026-10-27 | RND_D0 §1 tabel detektor | TERUKUR |
 | D0-048 | 0,00 | % baris NaN | RUN-KITA | `scratch/v9_d1/datasets/shk.csv.gz` kolom `TQA_mean`; `meas1.py` | 2026-10-27 | RND_D0 §1 tabel missing | TERUKUR |
 | D0-049 | 0,00 | % baris NaN | RUN-KITA | `scratch/v9_d1/datasets/shk.csv.gz` kolom `SPPA_mean`; `meas1.py` | 2026-10-27 | RND_D0 §1 tabel missing | TERUKUR |
 | D0-050 | 2,84 | % baris NaN | RUN-KITA | `scratch/v9_d1/datasets/shk.csv.gz` kolom `TFLO_mean`; `meas1.py` | 2026-10-27 | RND_D0 §1 tabel missing | TERUKUR |
@@ -202,10 +202,10 @@ Penomoran memakai awalan `D0-` agar tidak bertabrakan dengan id `L-xx` bagian P0
 | D0-065 | 2.761 jendela / 267 positif / 9,67% | per well | RUN-KITA | `scratch/v9_d1/datasets/shk.csv.gz` group `well=F-7`; `meas1.py` | 2026-10-27 | RND_D0 §1 tabel per well | TERUKUR |
 | D0-066 | 1.851 jendela / 45 positif / 2,43% | per well | RUN-KITA | `scratch/v9_d1/datasets/shk.csv.gz` group `well=F-9`; `meas1.py` | 2026-10-27 | RND_D0 §1 tabel per well | TERUKUR |
 | D0-067 | 2.356 jendela / 30 positif / 1,27% | per well | RUN-KITA | `scratch/v9_d1/datasets/shk.csv.gz` group `well=F-9_A`; `meas1.py` | 2026-10-27 | RND_D0 §1 tabel per well | TERUKUR |
-| D0-068 | 5555 | jendela | RUN-KITA | `scratch/v9_d1/datasets/stuck_k1.csv.gz` kolom `well`/`y_stuck`; skrip workspace `meas1.py` | 2026-10-27 | RND_D0 §1 tabel engine | TERUKUR |
-| D0-069 | 2 | well | RUN-KITA | `scratch/v9_d1/datasets/stuck_k1.csv.gz` kolom `well`/`y_stuck`; skrip workspace `meas1.py` | 2026-10-27 | RND_D0 §1 tabel engine | TERUKUR |
-| D0-070 | 2007 | jendela positif | RUN-KITA | `scratch/v9_d1/datasets/stuck_k1.csv.gz` kolom `well`/`y_stuck`; skrip workspace `meas1.py` | 2026-10-27 | RND_D0 §1 tabel engine | TERUKUR |
-| D0-071 | 36,13 | % | RUN-KITA | `scratch/v9_d1/datasets/stuck_k1.csv.gz` kolom `well`/`y_stuck`; skrip workspace `meas1.py` | 2026-10-27 | RND_D0 §1 tabel engine | TERUKUR |
+| D0-068 | 5555 | jendela | RUN-KITA | `scratch/v9_d1/datasets/stuck_k1.csv.gz` kolom `well`/`y_stuck`; skrip workspace `meas1.py` | 2026-10-27 | RND_D0 §1 tabel detektor | TERUKUR |
+| D0-069 | 2 | well | RUN-KITA | `scratch/v9_d1/datasets/stuck_k1.csv.gz` kolom `well`/`y_stuck`; skrip workspace `meas1.py` | 2026-10-27 | RND_D0 §1 tabel detektor | TERUKUR |
+| D0-070 | 2007 | jendela positif | RUN-KITA | `scratch/v9_d1/datasets/stuck_k1.csv.gz` kolom `well`/`y_stuck`; skrip workspace `meas1.py` | 2026-10-27 | RND_D0 §1 tabel detektor | TERUKUR |
+| D0-071 | 36,13 | % | RUN-KITA | `scratch/v9_d1/datasets/stuck_k1.csv.gz` kolom `well`/`y_stuck`; skrip workspace `meas1.py` | 2026-10-27 | RND_D0 §1 tabel detektor | TERUKUR |
 | D0-072 | 0,00 | % baris NaN | RUN-KITA | `scratch/v9_d1/datasets/stuck_k1.csv.gz` kolom `TQA_mean`; `meas1.py` | 2026-10-27 | RND_D0 §1 tabel missing | TERUKUR |
 | D0-073 | 0,00 | % baris NaN | RUN-KITA | `scratch/v9_d1/datasets/stuck_k1.csv.gz` kolom `SPPA_mean`; `meas1.py` | 2026-10-27 | RND_D0 §1 tabel missing | TERUKUR |
 | D0-074 | 0,00 | % baris NaN | RUN-KITA | `scratch/v9_d1/datasets/stuck_k1.csv.gz` kolom `TFLO_mean`; `meas1.py` | 2026-10-27 | RND_D0 §1 tabel missing | TERUKUR |
@@ -219,10 +219,10 @@ Penomoran memakai awalan `D0-` agar tidak bertabrakan dengan id `L-xx` bagian P0
 | D0-082 | 0,00 | % baris NaN | RUN-KITA | `scratch/v9_d1/datasets/stuck_k1.csv.gz` kolom `dbtm_mean`; `meas1.py` | 2026-10-27 | RND_D0 §1 tabel missing | TERUKUR |
 | D0-083 | 3.201 jendela / 432 positif / 13,50% | per well | RUN-KITA | `scratch/v9_d1/datasets/stuck_k1.csv.gz` group `well=F-14`; `meas1.py` | 2026-10-27 | RND_D0 §1 tabel per well | TERUKUR |
 | D0-084 | 2.354 jendela / 1.575 positif / 66,91% | per well | RUN-KITA | `scratch/v9_d1/datasets/stuck_k1.csv.gz` group `well=F-9_A`; `meas1.py` | 2026-10-27 | RND_D0 §1 tabel per well | TERUKUR |
-| D0-085 | 118567 | jendela | RUN-KITA | `scratch/v9_d1/datasets/stuck_k2.csv.gz` kolom `well`/`y_stuck_onset`; skrip workspace `meas1.py` | 2026-10-27 | RND_D0 §1 tabel engine | TERUKUR |
-| D0-086 | 4 | well | RUN-KITA | `scratch/v9_d1/datasets/stuck_k2.csv.gz` kolom `well`/`y_stuck_onset`; skrip workspace `meas1.py` | 2026-10-27 | RND_D0 §1 tabel engine | TERUKUR |
-| D0-087 | 1975 | jendela positif | RUN-KITA | `scratch/v9_d1/datasets/stuck_k2.csv.gz` kolom `well`/`y_stuck_onset`; skrip workspace `meas1.py` | 2026-10-27 | RND_D0 §1 tabel engine | TERUKUR |
-| D0-088 | 1,67 | % | RUN-KITA | `scratch/v9_d1/datasets/stuck_k2.csv.gz` kolom `well`/`y_stuck_onset`; skrip workspace `meas1.py` | 2026-10-27 | RND_D0 §1 tabel engine | TERUKUR |
+| D0-085 | 118567 | jendela | RUN-KITA | `scratch/v9_d1/datasets/stuck_k2.csv.gz` kolom `well`/`y_stuck_onset`; skrip workspace `meas1.py` | 2026-10-27 | RND_D0 §1 tabel detektor | TERUKUR |
+| D0-086 | 4 | well | RUN-KITA | `scratch/v9_d1/datasets/stuck_k2.csv.gz` kolom `well`/`y_stuck_onset`; skrip workspace `meas1.py` | 2026-10-27 | RND_D0 §1 tabel detektor | TERUKUR |
+| D0-087 | 1975 | jendela positif | RUN-KITA | `scratch/v9_d1/datasets/stuck_k2.csv.gz` kolom `well`/`y_stuck_onset`; skrip workspace `meas1.py` | 2026-10-27 | RND_D0 §1 tabel detektor | TERUKUR |
+| D0-088 | 1,67 | % | RUN-KITA | `scratch/v9_d1/datasets/stuck_k2.csv.gz` kolom `well`/`y_stuck_onset`; skrip workspace `meas1.py` | 2026-10-27 | RND_D0 §1 tabel detektor | TERUKUR |
 | D0-089 | 0,53 | % baris NaN | RUN-KITA | `scratch/v9_d1/datasets/stuck_k2.csv.gz` kolom `TQA_mean`; `meas1.py` | 2026-10-27 | RND_D0 §1 tabel missing | TERUKUR |
 | D0-090 | 0,53 | % baris NaN | RUN-KITA | `scratch/v9_d1/datasets/stuck_k2.csv.gz` kolom `SPPA_mean`; `meas1.py` | 2026-10-27 | RND_D0 §1 tabel missing | TERUKUR |
 | D0-091 | 0,50 | % baris NaN | RUN-KITA | `scratch/v9_d1/datasets/stuck_k2.csv.gz` kolom `TFLO_mean`; `meas1.py` | 2026-10-27 | RND_D0 §1 tabel missing | TERUKUR |
@@ -238,10 +238,10 @@ Penomoran memakai awalan `D0-` agar tidak bertabrakan dengan id `L-xx` bagian P0
 | D0-101 | 95.925 jendela / 389 positif / 0,41% | per well | RUN-KITA | `scratch/v9_d1/datasets/stuck_k2.csv.gz` group `well=F-14`; `meas1.py` | 2026-10-27 | RND_D0 §1 tabel per well | TERUKUR |
 | D0-102 | 16.184 jendela / 311 positif / 1,92% | per well | RUN-KITA | `scratch/v9_d1/datasets/stuck_k2.csv.gz` group `well=F-9`; `meas1.py` | 2026-10-27 | RND_D0 §1 tabel per well | TERUKUR |
 | D0-103 | 2.242 jendela / 503 positif / 22,44% | per well | RUN-KITA | `scratch/v9_d1/datasets/stuck_k2.csv.gz` group `well=F-9_A`; `meas1.py` | 2026-10-27 | RND_D0 §1 tabel per well | TERUKUR |
-| D0-104 | 52509 | jendela | RUN-KITA | `scratch/v9_d1/datasets/hyd_ki.csv.gz` kolom `well`/`y_hyd`; skrip workspace `meas1.py` | 2026-10-27 | RND_D0 §1 tabel engine | TERUKUR |
-| D0-105 | 9 | well | RUN-KITA | `scratch/v9_d1/datasets/hyd_ki.csv.gz` kolom `well`/`y_hyd`; skrip workspace `meas1.py` | 2026-10-27 | RND_D0 §1 tabel engine | TERUKUR |
-| D0-106 | 7172 | jendela positif | RUN-KITA | `scratch/v9_d1/datasets/hyd_ki.csv.gz` kolom `well`/`y_hyd`; skrip workspace `meas1.py` | 2026-10-27 | RND_D0 §1 tabel engine | TERUKUR |
-| D0-107 | 13,66 | % | RUN-KITA | `scratch/v9_d1/datasets/hyd_ki.csv.gz` kolom `well`/`y_hyd`; skrip workspace `meas1.py` | 2026-10-27 | RND_D0 §1 tabel engine | TERUKUR |
+| D0-104 | 52509 | jendela | RUN-KITA | `scratch/v9_d1/datasets/hyd_ki.csv.gz` kolom `well`/`y_hyd`; skrip workspace `meas1.py` | 2026-10-27 | RND_D0 §1 tabel detektor | TERUKUR |
+| D0-105 | 9 | well | RUN-KITA | `scratch/v9_d1/datasets/hyd_ki.csv.gz` kolom `well`/`y_hyd`; skrip workspace `meas1.py` | 2026-10-27 | RND_D0 §1 tabel detektor | TERUKUR |
+| D0-106 | 7172 | jendela positif | RUN-KITA | `scratch/v9_d1/datasets/hyd_ki.csv.gz` kolom `well`/`y_hyd`; skrip workspace `meas1.py` | 2026-10-27 | RND_D0 §1 tabel detektor | TERUKUR |
+| D0-107 | 13,66 | % | RUN-KITA | `scratch/v9_d1/datasets/hyd_ki.csv.gz` kolom `well`/`y_hyd`; skrip workspace `meas1.py` | 2026-10-27 | RND_D0 §1 tabel detektor | TERUKUR |
 | D0-108 | 0,00 | % baris NaN | RUN-KITA | `scratch/v9_d1/datasets/hyd_ki.csv.gz` kolom `TQA_mean`; `meas1.py` | 2026-10-27 | RND_D0 §1 tabel missing | TERUKUR |
 | D0-109 | 0,00 | % baris NaN | RUN-KITA | `scratch/v9_d1/datasets/hyd_ki.csv.gz` kolom `RPM_mean`; `meas1.py` | 2026-10-27 | RND_D0 §1 tabel missing | TERUKUR |
 | D0-110 | 0,00 | % baris NaN | RUN-KITA | `scratch/v9_d1/datasets/hyd_ki.csv.gz` kolom `SWOB_mean`; `meas1.py` | 2026-10-27 | RND_D0 §1 tabel missing | TERUKUR |
@@ -920,12 +920,12 @@ Penomoran memakai awalan `D0-` agar tidak bertabrakan dengan id `L-xx` bagian P0
 | D0-783 | DOI 10.1109/ICDM.2008.17 | DOI | JURNAL | Liu 2008, divertifikasi lewat https://api.crossref.org/works/10.1109/ICDM.2008.17 | 2026-10-27 | RND_D0 §8 rujukan | TERVERIFIKASI |
 | D0-784 | DOI 10.1093/biomet/41.1-2.100 | DOI | JURNAL | Page 1954, divertifikasi lewat https://api.semanticscholar.org/graph/v1/paper/DOI:10.1093/biomet/41.1-2.100 | 2026-10-27 | RND_D0 §8 rujukan | TERVERIFIKASI |
 | D0-785 | DOI 10.1016/j.advengsoft.2013.12.007 | DOI | JURNAL | Mirjalili 2014, divertifikasi lewat https://api.semanticscholar.org/graph/v1/paper/DOI:10.1016/j.advengsoft.2013.12.007 | 2026-10-27 | RND_D0 §8 rujukan | TERVERIFIKASI |
-| D0-786 | 3,8 hari | hari | RUN-KITA | `scratch/v9_d1/datasets/vib.csv.gz` selisih `ts_bin`; `build_doc.py` | 2026-10-27 | RND_D0 §1 tabel engine | TERUKUR |
-| D0-787 | 12,4 hari | hari | RUN-KITA | `scratch/v9_d1/datasets/ssi.csv.gz` selisih `ts_bin`; `build_doc.py` | 2026-10-27 | RND_D0 §1 tabel engine | TERUKUR |
-| D0-788 | 12,4 hari | hari | RUN-KITA | `scratch/v9_d1/datasets/shk.csv.gz` selisih `ts_bin`; `build_doc.py` | 2026-10-27 | RND_D0 §1 tabel engine | TERUKUR |
-| D0-789 | 7,1 hari | hari | RUN-KITA | `scratch/v9_d1/datasets/stuck_k1.csv.gz` selisih `ts_bin`; `build_doc.py` | 2026-10-27 | RND_D0 §1 tabel engine | TERUKUR |
-| D0-790 | 10,2 hari | hari | RUN-KITA | `scratch/v9_d1/datasets/stuck_k2.csv.gz` selisih `ts_bin`; `build_doc.py` | 2026-10-27 | RND_D0 §1 tabel engine | TERUKUR |
-| D0-791 | 12,4 hari | hari | RUN-KITA | `scratch/v9_d1/datasets/hyd_ki.csv.gz` selisih `ts_bin`; `build_doc.py` | 2026-10-27 | RND_D0 §1 tabel engine | TERUKUR |
+| D0-786 | 3,8 hari | hari | RUN-KITA | `scratch/v9_d1/datasets/vib.csv.gz` selisih `ts_bin`; `build_doc.py` | 2026-10-27 | RND_D0 §1 tabel detektor | TERUKUR |
+| D0-787 | 12,4 hari | hari | RUN-KITA | `scratch/v9_d1/datasets/ssi.csv.gz` selisih `ts_bin`; `build_doc.py` | 2026-10-27 | RND_D0 §1 tabel detektor | TERUKUR |
+| D0-788 | 12,4 hari | hari | RUN-KITA | `scratch/v9_d1/datasets/shk.csv.gz` selisih `ts_bin`; `build_doc.py` | 2026-10-27 | RND_D0 §1 tabel detektor | TERUKUR |
+| D0-789 | 7,1 hari | hari | RUN-KITA | `scratch/v9_d1/datasets/stuck_k1.csv.gz` selisih `ts_bin`; `build_doc.py` | 2026-10-27 | RND_D0 §1 tabel detektor | TERUKUR |
+| D0-790 | 10,2 hari | hari | RUN-KITA | `scratch/v9_d1/datasets/stuck_k2.csv.gz` selisih `ts_bin`; `build_doc.py` | 2026-10-27 | RND_D0 §1 tabel detektor | TERUKUR |
+| D0-791 | 12,4 hari | hari | RUN-KITA | `scratch/v9_d1/datasets/hyd_ki.csv.gz` selisih `ts_bin`; `build_doc.py` | 2026-10-27 | RND_D0 §1 tabel detektor | TERUKUR |
 | D0-792 | 2007-11-04T13:00:13.968Z | timestamp ISO | RUN-KITA | `data/volve/witsml_parsed/F-14.csv` kolom `timestamp` baris 1; `probe_ts.py` | 2026-10-27 | RND_D0 §1 catatan waktu | TERUKUR |
 | D0-793 | 0 | tanggal absolut dari ts_bin | BELUM-TERUKUR | `ts_bin` = detik relatif tanpa titik nol epoch, sehingga tanggal absolut per jendela belum dipetakan | 2026-10-27 | RND_D0 §1 catatan waktu | BELUM |
 | D0-794 | 120 | jendela | RUN-KITA | `scratch/v6_e1/toolwear_windows.csv` group tool=T01; `meas3.py` | 2026-10-27 | RND_D0 §6.2 | TERUKUR |
@@ -1081,7 +1081,7 @@ Skrip ukur: `/home/neonti/.hermes/cache/scratch/rnd_r4/` (`rnd_r4_inventory.py`,
 | R4-26 | 62,3 | persen baris | RUN-KITA | `docs/V9_EVAL_C_LAYERC.md` §2.2 C4 (`n_nodata` 22.385/35.906) | 2026-10-27 | RND_R4 §3.3 | TERUKUR |
 | R4-27 | 4,6 | persen onset | RUN-KITA | `docs/V9_EVAL_C_LAYERC.md` §2.4 (anchor absorbed 13/281) | 2026-10-27 | RND_R4 §3.3 | TERUKUR |
 | R4-28 | 0,14–0,57 | proporsi | RUN-KITA | `docs/V9_EVAL_C_LAYERC.md` §2.1 C4 (prevalensi vib antar well) | 2026-10-27 | RND_R4 §4.2, §5.3 | TERUKUR |
-| R4-29 | hyd 0,1366; shk 0,0355; ssi 0,0169; stuck_k2 0,0167; vib 0,2269; stuck_k1 0,3613 | proporsi | RUN-KITA | `docs/RND_D0_DATA_FEASIBILITY.md` tabel prevalensi engine (ledger D0) | 2026-10-27 | RND_R4 §6.2 | TERUKUR |
+| R4-29 | hyd 0,1366; shk 0,0355; ssi 0,0169; stuck_k2 0,0167; vib 0,2269; stuck_k1 0,3613 | proporsi | RUN-KITA | `docs/RND_D0_DATA_FEASIBILITY.md` tabel prevalensi detektor (ledger D0) | 2026-10-27 | RND_R4 §6.2 | TERUKUR |
 | R4-30 | 6 | alarm per 24 jam | KONVENSI | `docs/RND_ALGO_RESEARCH_PLAN.md` §6 butir 2 (gerbang A) | 2026-10-27 | RND_R4 §7.3 | BELUM (konvensi internal) |
 | R4-31 | 1,0 | alarm per menit | KONVENSI | `code/v9_i1_pipeline.py:615` `TARGET_FP_PER_MIN = 1.0` | 2026-10-27 | RND_R4 §5.1 | BELUM (konvensi internal) |
 | R4-32 | q = 1 − 1,0·(n/60)/n | level kuantil | DERIVASI aritmetik | `code/v9_i1_pipeline.py:632-633`; untuk target 1 alarm/menit bentuknya menyederhana menjadi q = 1 − 1/60 | 2026-10-27 | RND_R4 §5.1 | TERVERIFIKASI sebagai aritmetika |
@@ -1091,7 +1091,7 @@ Skrip ukur: `/home/neonti/.hermes/cache/scratch/rnd_r4/` (`rnd_r4_inventory.py`,
 | R4-36 | 0,05 | alpha (target FAR) | KONVENSI | pilihan dokumen ini untuk uji conformal, bukan angka literatur; wajib ditulis di pra-registrasi sebelum run | 2026-10-27 | RND_R4 §5.2 | BELUM (belum diuji) |
 | R4-37 | 2000 | resample bootstrap | KONVENSI | rencana uji §7.1; belum dijalankan | 2026-10-27 | RND_R4 §7.1 | BELUM (belum diuji) |
 | R4-38 | 10 kali | rasio sampel kalibrasi | KONVENSI | aturan operasional yang diusulkan dokumen ini untuk isotonic, bukan kutipan literatur; belum diuji pada data kita | 2026-10-27 | RND_R4 §4.2 | BELUM (usulan, bukan bukti) |
-| R4-39 | 7 engine / 11 klaim / 27 head | cakupan | KONVENSI | `docs/V9_EVAL_C_LAYERC.md` §0 EC-1 dan `code/v9_i1_pipeline.py` REGISTRY | 2026-10-27 | RND_R4 header | BELUM (konvensi internal) |
+| R4-39 | 7 mode / 11 klaim / 27 head | cakupan | KONVENSI | `docs/V9_EVAL_C_LAYERC.md` §0 EC-1 dan `code/v9_i1_pipeline.py` REGISTRY | 2026-10-27 | RND_R4 header | BELUM (konvensi internal) |
 | R4-40 | 0 | hasil pembanding LightGBM/XGBoost/CatBoost | BELUM-TERUKUR | run pembanding tidak selesai dalam anggaran waktu (R4-20); sengaja tidak diisi angka literatur | 2026-10-27 | RND_R4 §3.2, §9 | BELUM |
 
 ## Bagian R2: stokastik + survival (kartu t_c24b3640)
@@ -1125,7 +1125,7 @@ Angka D0 yang dipakai ulang di dokumen R2 tidak diduplikasi di sini: rujukannya 
 
 ---
 
-## Bagian E0 (kartu `t_57e7d52b`, audit implementasi engine)
+## Bagian E0 (kartu `t_57e7d52b`, audit implementasi detektor)
 
 Lingkungan ukur: `/home/neonti/.venvs/rnd_r3/bin/python` 3.11.15, pandas 3.1.0, numpy 2.4.6, scikit-learn 1.9.1. Skrip: `scratch/e0_audit/*.py` (5 skrip, hanya baca). Tanggal akses seluruh baris: 2026-10-27 (WIB).
 
@@ -1152,7 +1152,7 @@ Lingkungan ukur: `/home/neonti/.venvs/rnd_r3/bin/python` 3.11.15, pandas 3.1.0, 
 | E0-019 | 11 FP alarm persistence_event = angka "FP alarm total 11" di EVAL_C | baris | RUN-KITA | `e0_audit_results2.json` + `docs/V9_EVAL_C_LAYERC.md:94` | 2026-10-27 | §2.3 (cek kesetiaan reproduksi) | TERUKUR |
 | E0-020 | n_aktif head `stuck/persistence_event` di segmen V9 = 4 baris (0,0%) | baris | RUN-KITA | `scratch/v9_i1/v9_i1_RESULTS.json`; `e0_audit_results3.json` `v9_i1_head_metrics.stuck.persistence_event` | 2026-10-27 | §2.3 | TERUKUR |
 | E0-021 | tool_wear op_far_calibrated: FP R01 1-3 dari 35-42 jendela; peluang minimal 1 alarm kebetulan 0,7603 / 0,9951 / 0,7603 / 0,9871 per alat; produk 4/4 = 0,5678 | rasio | DERIVASI aritmetik (model Poisson dari laju terukur) | `e0_audit_results4.json`; laju dari `v9_i1_RESULTS.json` `tool_wear/op_far_calibrated/per_alat` | 2026-10-27 | §2.4, K-3 | TERUKUR (laju) + DERIVASI (peluang, asumsi Poisson dicatat) |
-| E0-022 | tool_wear segmen: recall 0,0542 (tp 13, fn 227), presisi 0,619, FAR 2,096 FP/menit; engine 5/27: FAR 34,585 | rasio; FP/menit | RUN-KITA | `scratch/v9_i1/v9_i1_RESULTS.json` head `tool_wear/op_far_calibrated.metrik_segmen`; `e0_audit_results4.json` `ringkas` | 2026-10-27 | §2.4, §5.3 | TERUKUR |
+| E0-022 | tool_wear segmen: recall 0,0542 (tp 13, fn 227), presisi 0,619, FAR 2,096 FP/menit; detektor 5/27: FAR 34,585 | rasio; FP/menit | RUN-KITA | `scratch/v9_i1/v9_i1_RESULTS.json` head `tool_wear/op_far_calibrated.metrik_segmen`; `e0_audit_results4.json` `ringkas` | 2026-10-27 | §2.4, §5.3 | TERUKUR |
 | E0-023 | `q` kuantil = 0,983333 untuk n = 100, 469, 1.000, 5.000 (konstanta) | rasio | RUN-KITA | `e0_audit_results.json` `tool_wear.rumus_kuantil`; `code/v9_i1_pipeline.py:631` | 2026-10-27 | §3.7, §5.3, M-4 | TERUKUR |
 | E0-024 | bit_wear segmen F-14: n 47.645, tp 4.881, fp 36, fn 37, P 0,9927, R 0,9925, FAR 1,213 (unit jendela 60 dtk) | rasio; FP/24 jam | RUN-KITA | `v9_i1_RESULTS.json` head `bit_wear/persistence.metrik_segmen`; `e0_audit_results3.json` | 2026-10-27 | §2.5, §5.4 | TERUKUR |
 | E0-025 | bit_wear global: 198.928 baris, 49.732 positif, prevalensi 0,25, P(label bertahan) 0,9903 | rasio | RUN-KITA | `e0_audit_results.json` `bit_wear`; `e0_audit_results3.json` `bit_wear_pipeline` | 2026-10-27 | §2.5, §9 butir 5 | TERUKUR |
@@ -1373,7 +1373,7 @@ Jumlah baris: 134 (R6-01 sampai R6-134). Tanggal akses seluruh baris: 2026-10-27
 | R6-58 | 5,895 | rasio (plafon 1/prevalensi) | RUN-KITA | `rnd_r6_SUPPLEMENT.json` S14_lift_hyd_ki.folds[6].plafon_1_per_prev (well F-7) | 2026-10-27 | §1.6 | TERUKUR |
 | R6-59 | 2,388 | rasio (lift hyd K-i persistence) | RUN-KITA | `rnd_r6_SUPPLEMENT.json` S14_lift_hyd_ki.folds[7].lift (well F-9) | 2026-10-27 | §1.6 | TERUKUR |
 | R6-60 | 3,820 | rasio (plafon 1/prevalensi) | RUN-KITA | `rnd_r6_SUPPLEMENT.json` S14_lift_hyd_ki.folds[7].plafon_1_per_prev (well F-9) | 2026-10-27 | §1.6 | TERUKUR |
-| R6-61 | 0,8186 | proporsi (AUC sintetis) | RUN-KITA | `rnd_r6_RESULTS.json` S9_delong.uji_sintetis.auc | 2026-10-27 | §2.2 | TERUKUR (uji kewajaran fungsi, bukan kinerja engine) |
+| R6-61 | 0,8186 | proporsi (AUC sintetis) | RUN-KITA | `rnd_r6_RESULTS.json` S9_delong.uji_sintetis.auc | 2026-10-27 | §2.2 | TERUKUR (uji kewajaran fungsi, bukan kinerja detektor) |
 | R6-62 | 0,0141 | proporsi (galat baku sintetis) | RUN-KITA | `rnd_r6_RESULTS.json` S9_delong.uji_sintetis.se | 2026-10-27 | §2.2 | TERUKUR |
 | R6-63 | [0,7910; 0,8463] | proporsi (CI95 sintetis) | RUN-KITA | `rnd_r6_RESULTS.json` S9_delong.uji_sintetis.ci95 | 2026-10-27 | §2.2 | TERUKUR |
 | R6-64 | 9 | well (unit independen) | RUN-KITA | `docs/RND_D0_DATA_FEASIBILITY.md` (9 well) dan S7/S15 desain | 2026-10-27 | §2.1, §2.3 | TERUKUR |
@@ -1444,7 +1444,7 @@ Jumlah baris: 134 (R6-01 sampai R6-134). Tanggal akses seluruh baris: 2026-10-27
 | R6-129 | 1 | rujukan BELUM TERVERIFIKASI | JURNAL | Holm 1979, DOI 10.2307/4615733: Crossref 404 dan doi.org 404 pada `doi_verify_r6.json`; tidak dipakai sebagai dasar rekomendasi | 2026-10-27 | §5, §8 | BELUM |
 | R6-130 | 9 | pikiran sequ-mcp (5 pada run dokumen, 4 pada run provenance) | RUN-KITA | respons `mcp__sequentialthinking__sequentialthinking` dengan thoughtHistoryLength 5 dan 4 | 2026-10-27 | §0 | TERUKUR |
 | R6-131 | DeLong pada data nyata | tidak ada nilai | BELUM-TERUKUR | `rnd_r6_RESULTS.json` S9_delong.status: skor per jendela tidak disimpan di JSON V9 | 2026-10-27 | §2.2, §8 | BELUM TERUKUR |
-| R6-132 | McNemar untuk dua engine pada jendela sama | tidak ada nilai | BELUM-TERUKUR | `rnd_r6_SUPPLEMENT.json` S13_fisher_presisi.catatan: hitungan ketidaksesuaian berpasangan tidak tersedia | 2026-10-27 | §2.5, §8 | BELUM TERUKUR |
+| R6-132 | McNemar untuk dua detektor pada jendela sama | tidak ada nilai | BELUM-TERUKUR | `rnd_r6_SUPPLEMENT.json` S13_fisher_presisi.catatan: hitungan ketidaksesuaian berpasangan tidak tersedia | 2026-10-27 | §2.5, §8 | BELUM TERUKUR |
 | R6-133 | Kestabilan lintas seed | tidak ada nilai | BELUM-TERUKUR | semua skrip memakai SEED = 42; penggantian seed belum dijalankan | 2026-10-27 | §4 butir A4, §8 | BELUM TERUKUR |
 | R6-134 | MDE pada data heterogen | tidak ada nilai | BELUM-TERUKUR | S7 dan S15 memakai asumsi well homogen (800 jendela negatif, parameter identik) | 2026-10-27 | §3.3, §8 | BELUM TERUKUR |
 
@@ -1468,11 +1468,11 @@ Jumlah baris: 134 (R6-01 sampai R6-134). Tanggal akses seluruh baris: 2026-10-27
 
 ### Yang tetap belum terukur (baris R6-131 sampai R6-134)
 
-DeLong pada data nyata, McNemar untuk dua engine pada jendela yang sama, kestabilan lintas seed, dan MDE pada data heterogen. Keempatnya ditulis sebagai BELUM TERUKUR, bukan sebagai hasil nol atau hasil negatif.
+DeLong pada data nyata, McNemar untuk dua detektor pada jendela yang sama, kestabilan lintas seed, dan MDE pada data heterogen. Keempatnya ditulis sebagai BELUM TERUKUR, bukan sebagai hasil nol atau hasil negatif.
 
 ---
 
-## Bagian E1: matriks kelayakan algoritma x engine dan shortlist (kartu `t_9abcb3b3`)
+## Bagian E1: matriks kelayakan algoritma x detektor dan shortlist (kartu `t_9abcb3b3`)
 
 Dokumen pendamping: `docs/RND_E1_MATRIKS.md`. Sumber angka: `scratch/rnd_e1/e1_scores.json` (dibuat 2026-10-27 06:24:16 oleh `scratch/rnd_e1/e1_build.py`), `scratch/rnd_e1/doi_check.json`, dan baris ledger R1, R3, R4, R5, D0 yang dirujuk ulang.
 
@@ -1487,7 +1487,7 @@ Baris E1 tidak menduplikasi angka hasil ukur yang sudah punya baris sendiri. Yan
 | E1-005 | 0,50*tier + 0,25*data + 0,15*risiko + 0,10*biaya | rumus skor 0-3 | DERIVASI | `scratch/rnd_e1/e1_build.py` fungsi `skor_prioritas`, dengan gerbang skor 0 bila tier 0 | 2026-10-27 | bagian 5.1, 5.2 | TERVERIFIKASI (rumus dijalankan skrip, hasil di `e1_scores.json`) |
 | E1-006 | 0 sampai 3 | rubrik | KONVENSI | rubrik kesesuaian sel di `docs/RND_E1_MATRIKS.md` bagian 1.1 | 2026-10-27 | bagian 1.1, 2, 3 | BELUM (definisi dokumen, bukan temuan) |
 | E1-007 | 3 / 1 / 0 | skor data | KONVENSI | pemetaan ADA ke 3, SEBAGIAN ke 1, TIDAK ke 0 di `e1_build.py` `DATA_SCORE` | 2026-10-27 | bagian 5.1 | BELUM (keputusan dokumen) |
-| E1-008 | 196 | sel | DERIVASI | 28 algoritma x 7 engine; assert `len(D['pasangan']) == 196` di `e1_doc.py` | 2026-10-27 | bagian 0, 2 | TERVERIFIKASI (assert lolos) |
+| E1-008 | 196 | sel | DERIVASI | 28 algoritma x 7 mode; assert `len(D['pasangan']) == 196` di `e1_doc.py` | 2026-10-27 | bagian 0, 2 | TERVERIFIKASI (assert lolos) |
 | E1-009 | 28 | algoritma | DERIVASI | `len(D['matriks']) == 28`; daftar di `docs/RND_E1_MATRIKS.md` bagian 2 | 2026-10-27 | bagian 0, 2 | TERVERIFIKASI (assert lolos) |
 | E1-010 | 6 | pikiran | RUN-KITA | `mcp__sequentialthinking__sequentialthinking` thoughtNumber 1..6, thoughtHistoryLength 6 | 2026-10-27 | bagian Riset pendahuluan | TERUKUR |
 | E1-011 | 2,85 | skor prioritas | DERIVASI | A10 conformal pada hyd: 0,50*3 + 0,25*3 + 0,15*2 + 0,10*3 = 2,85 | 2026-10-27 | bagian 5.2, 6, 7.1 | TERVERIFIKASI (assert aritmetik) |
@@ -1523,9 +1523,9 @@ Dokumen pendamping: `docs/RND_E2_PROTOKOL.md`. Sumber: `scratch/rnd_e2/e2_final.
 | E2-004 | 469 | jendela | RUN-KITA | `e2_toolwear.py` `n_rows` pada berkas yang sama | 2026-10-27 | bagian 1, 4.2 | TERUKUR |
 | E2-005 | 32 | kolom | RUN-KITA | `e2_toolwear.py` `n_cols` pada berkas yang sama | 2026-10-27 | bagian 1 | TERUKUR |
 | E2-006 | 120 / 112 / 121 / 116 | jendela per alat T01..T04 | RUN-KITA | `e2_toolwear.py` `per_unit` | 2026-10-27 | bagian 1 | TERUKUR |
-| E2-007 | 27 | head | RUN-KITA | `scratch/v9_i1/v9_i1_RESULTS.json` dihitung ulang: jumlah `heads` seluruh engine = 27 | 2026-10-27 | bagian 1 | TERUKUR |
+| E2-007 | 27 | head | RUN-KITA | `scratch/v9_i1/v9_i1_RESULTS.json` dihitung ulang: jumlah `heads` seluruh detektor = 27 | 2026-10-27 | bagian 1 | TERUKUR |
 | E2-008 | 12 / 13 / 2 / 0 | head per tier (PERINGATAN / TREN / BELUM LAYAK / ALARM-OTOMATIS) | RUN-KITA | `v9_i1_RESULTS.json` hitung tier per head; kunci ALARM-OTOMATIS tidak muncul satu kali pun | 2026-10-27 | bagian 1, 5.5 | TERUKUR |
-| E2-009 | 21,55 | detik | RUN-KITA | `v9_i1_RESULTS.json` `meta.elapsed_s`, satu lintasan prototipe 7 engine | 2026-10-27 | bagian 3.4 | TERUKUR |
+| E2-009 | 21,55 | detik | RUN-KITA | `v9_i1_RESULTS.json` `meta.elapsed_s`, satu lintasan prototipe 7 mode | 2026-10-27 | bagian 3.4 | TERUKUR |
 | E2-010 | 42 | seed | RUN-KITA | `v9_i1_RESULTS.json` `meta.seed` | 2026-10-27 | bagian 3.1 | TERUKUR |
 | E2-011 | 1 / 3 / 1 / 3 | FP pada segmen evaluasi R01 per alat | RUN-KITA | `scratch/v9_e_stat/v9_e_stat_03_tool_wear_RESULTS.json` `part_C_operating_far_calibrated`, target 1,0 FP/menit | 2026-10-27 | bagian 4.2, 5.2 | TERUKUR |
 | E2-012 | 1,43 / 1,43 / 4,50 / 5,14 | FP per menit segmen evaluasi | DERIVASI | fp_R01 dibagi (n_eval_R01/60) dengan n_eval 42, 35, 42, 40 jendela 1 detik; assert di `e2_compute.py` | 2026-10-27 | bagian 4.2, 5.2, ringkasan | TERVERIFIKASI (assert lolos) |
@@ -1566,7 +1566,7 @@ Dokumen pendamping: `docs/RND_E2_PROTOKOL.md`. Sumber: `scratch/rnd_e2/e2_final.
 | E2-047 | 331 sampai 1.426 / 30 sampai 760 | positif per fold minimum sampai maksimum (hyd / shk) | RUN-KITA | `e2_probe.py`: `y_hyd` minimum 331 di F-9_A, maksimum 1.426 di F-12; `y_shk` minimum 30 di F-9_A, maksimum 760 di F-14 | 2026-10-27 | bagian 1, 6.3 | TERUKUR |
 | E2-048 | 52.509 / 56.495 / 7.571 | baris dataset hyd / shk / baris well F-10 pada hyd | RUN-KITA | `e2_probe.py` `rows` dan `rows_per_well['F-10']` | 2026-10-27 | bagian 1, 2.1 | TERUKUR |
 | E2-049 | 0,615 sampai 0,793 / 32,2 sampai 109,7 | presisi dan FAR persistence hyd K-i | RUN-KITA | presisi dari `code/v9_i1_pipeline.py` REGISTRY head hyd/persistence (`P 0,615-0,793`); FAR dari `docs/V9_EVAL_C_LAYERC.md` bagian 2.5 (`32,2–109,7`) | 2026-10-27 | bagian 4.1 | TERUKUR (kutipan diverifikasi) |
-| E2-050 | 42,857 sampai 58,571 | FP per menit engine 5/27 pada segmen R01 | RUN-KITA | `part_B_within_tool_calibration` `engine_5of27.far_fp_per_min_R01` per alat (58,571 / 46,286 / 42,857 / 51,0) | 2026-10-27 | bagian 4.2 | TERUKUR |
+| E2-050 | 42,857 sampai 58,571 | FP per menit detektor 5/27 pada segmen R01 | RUN-KITA | `part_B_within_tool_calibration` `engine_5of27.far_fp_per_min_R01` per alat (58,571 / 46,286 / 42,857 / 51,0) | 2026-10-27 | bagian 4.2 | TERUKUR |
 | E2-051 | 41 / 33 / 40 / 36 | FP rule 3-RMS pada segmen R01 per alat | RUN-KITA | `part_B_within_tool_calibration` `baseline_rule_3RMS.fp_R01` | 2026-10-27 | bagian 4.2 | TERUKUR |
 | E2-052 | 0,80 / 0,50 | ambang presisi gate B untuk F2 / F1 dan F3 | KONVENSI | ditetapkan dokumen ini; 0,50 adalah presisi run terukur (baris E2-017) sehingga F2 diminta naik, sedangkan F1 dan F3 diminta tidak turun | 2026-10-27 | bagian 4.2, 5.3 | BELUM (konvensi, bukan temuan) |
 | E2-053 | 1.740 / 1.770 | detik batas satu proses / batas terminal kartu | KONVENSI | 1.740 ditetapkan dokumen ini (di bawah batas terminal); 1.770 adalah `Terminal timeout` pada metadata kartu `t_79811fae` | 2026-10-27 | bagian 3.4 | BELUM (konvensi dan batas lingkungan) |
@@ -1673,7 +1673,7 @@ Jumlah baris: 36. Baris BELUM-TERUKUR: 1 (E3-036, gate B).
 ### Yang tetap belum terukur pada E3
 
 - Jam orang dan beban pemeriksaan manusia (gate B), karena tidak ada data durasi inspeksi per alarm di repo ini.
-- FAR pada satuan bengkel untuk hyd, karena hyd adalah engine rig dan konvensinya per 24 jam.
+- FAR pada satuan bengkel untuk hyd, karena hyd adalah detektor rig dan konvensinya per 24 jam.
 - Kestabilan gate C antar seed untuk A2, karena ambang CUSUM dikalibrasi deterministik sehingga seed tidak berlaku.
 
 ## Bagian R7: review R&D atas hasil engineer (kartu `t_f366fdcf`)
@@ -2020,7 +2020,7 @@ Tujuh kolom sesuai kartu. Angka yang tidak punya sumber ditulis BELUM TERUKUR.
 | PM-074 | 543,495786 | alarm/24jam | RUN-KITA | scratch/rnd/e3/e3_verify.json v4_rentang.A1_semua_seed_far.max | bagian 2 | TERUKUR |
 | PM-075 | 1440 | alarm/24jam | RUN-KITA | scratch/rnd/e3/e3_verify.json v4_rentang.A2_tanpa_reset_far.max (1440 = alarm tiap menit) | bagian 2 | TERUKUR |
 | PM-076 | 27 | head | RUN-KITA | scratch/v9_i1/v9_i1_RESULTS.json jumlah heads pada 7 engines | bagian 0, 3 | TERUKUR |
-| PM-077 | 7 | engine | RUN-KITA | scratch/v9_i1/v9_i1_RESULTS.json len(engines) | bagian 3 | TERUKUR |
+| PM-077 | 7 | detektor | RUN-KITA | scratch/v9_i1/v9_i1_RESULTS.json len(engines) | bagian 3 | TERUKUR |
 | PM-078 | 0 | slot | KONVENSI | scratch/v9_i1/v9_i1_RESULTS.json auto_critical_alarm_slots; docs/V9_EVAL_C_LAYERC.md tier | bagian 3, 4, 6 | TERUKUR |
 | PM-079 | 302 | status HTTP | JURNAL | scratch/rnd/pm/pm_doi.json page1954 lapis1_status; HEAD doi.org tanpa redirect; 10.1093/biomet/41.1-2.100 | bagian 8 | TERVERIFIKASI |
 | PM-080 | 200 | status HTTP | JURNAL | scratch/rnd/pm/pm_doi.json page1954 lapis2_status (crossref); 10.1093/biomet/41.1-2.100 | bagian 8 | TERVERIFIKASI |
@@ -3423,8 +3423,8 @@ Generator: `scratch/rnd/s6/s6e_ledger.py`. Setiap baris RUN-KITA dan DERIVASI di
 | S6-189 | BELUM | tidak terukur | BELUM-TERUKUR | tanggal kampanye per baris: kolom tidak ada | bagian 8 | BELUM (R8-097) |
 | S6-190 | BELUM | tidak terukur | BELUM-TERUKUR | kalibrasi ambang per well prospektif: belum dijalankan | bagian 8 | BELUM (PM-119) |
 | S6-191 | BELUM | tidak terukur | BELUM-TERUKUR | H1p dan H1p3 pada shk, stuck, bit_wear, tool_wear: belum dijalankan | bagian 8 | BELUM (kartu S6) |
-| E5-001 | 7 | engine | RUN-KITA | scratch/v9_i1/v9_i1_RESULTS.json:meta.n_engine | 2026-10-29 | RND_ENGINE_S6_INTEGRATION.md bagian 1 | TERUKUR |
-| E5-002 | 27 | head | TURUNAN | jumlah head seluruh engine pada JSON yang sama | 2026-10-29 | RND_ENGINE_S6_INTEGRATION.md bagian 4 | TERUKUR |
+| E5-001 | 7 | detektor | RUN-KITA | scratch/v9_i1/v9_i1_RESULTS.json:meta.n_engine | 2026-10-29 | RND_ENGINE_S6_INTEGRATION.md bagian 1 | TERUKUR |
+| E5-002 | 27 | head | TURUNAN | jumlah head seluruh detektor pada JSON yang sama | 2026-10-29 | RND_ENGINE_S6_INTEGRATION.md bagian 4 | TERUKUR |
 | E5-003 | 23447 | record | RUN-KITA | scratch/v9_i1/v9_i1_RESULTS.json:nilai_maintenance.n_record_aktivitas | 2026-10-29 | RND_ENGINE_S6_INTEGRATION.md bagian 2 | TERUKUR |
 | E5-004 | 39397.986 | jam | RUN-KITA | scratch/v9_i1/v9_i1_RESULTS.json:nilai_maintenance.total_jam_tercatat | 2026-10-29 | RND_ENGINE_S6_INTEGRATION.md bagian 2 | TERUKUR |
 | E5-005 | 2739.667 | jam | RUN-KITA | scratch/v9_i1/v9_i1_RESULTS.json:nilai_maintenance.jam_henti_per_sebab.equipment failure | 2026-10-29 | RND_ENGINE_S6_INTEGRATION.md bagian 2 | TERUKUR |

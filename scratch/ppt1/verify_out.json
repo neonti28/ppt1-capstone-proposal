@@ -1,0 +1,105 @@
+{
+ "labels_v2_n": 884,
+ "category_counts": {
+  "surface_rig_equipment": 216,
+  "safety_personnel": 1,
+  "bha_stuck_fishing": 38,
+  "routine_no_failure_evidence": 496,
+  "mixed_evidence": 47,
+  "failure_unlocated": 28,
+  "bha_downhole_equipment": 12,
+  "wellbore_fluid": 25,
+  "wireline_completion_intervention": 21
+ },
+ "category_counts_desc": [
+  496,
+  216,
+  47,
+  38,
+  28,
+  25,
+  21,
+  12,
+  1
+ ],
+ "bha_relevant": {
+  "no": 263,
+  "yes": 50,
+  "uncertain": 571
+ },
+ "dur_ok": 0,
+ "dur_unparsed": 884,
+ "witsml_parsed_csv_n": 10,
+ "witsml_parsed_total_lines": 9935708,
+ "train_datasets_n": 6,
+ "train_datasets_rows": {
+  "hyd_ki.csv.gz": 52509,
+  "shk.csv.gz": 56495,
+  "ssi.csv.gz": 35906,
+  "stuck_k1.csv.gz": 5555,
+  "stuck_k2.csv.gz": 118567,
+  "vib.csv.gz": 23922
+ },
+ "train_datasets_rows_sum": 292954,
+ "lowo_json_n": 6,
+ "lowo_json_names": [
+  "lowo_hyd_ki.json",
+  "lowo_shk.json",
+  "lowo_ssi.json",
+  "lowo_stuck_k1.json",
+  "lowo_stuck_k2.json",
+  "lowo_vib.json"
+ ],
+ "toolwear_windows_rows": 469,
+ "toolwear_windows_cols": 32,
+ "registry_heads_n": 27,
+ "registry_heads_per_engine": {
+  "vib": 4,
+  "ssi": 4,
+  "shk": 4,
+  "stuck": 6,
+  "hyd": 4,
+  "bit_wear": 2,
+  "tool_wear": 3
+ },
+ "registry_tier_counts": {
+  "PERINGATAN-BERPENGAWAS": 12,
+  "TREN": 13,
+  "BELUM LAYAK PAKAI": 2
+ },
+ "registry_layer_counts": {
+  "L1": 11,
+  "L0": 5,
+  "L2": 9,
+  "L3": 2
+ },
+ "registry_head_names": [
+  "vib/rule_display",
+  "vib/persistence",
+  "vib/hybrid_rule_and_persistence",
+  "vib/rf_lowo",
+  "ssi/rule_display",
+  "ssi/persistence",
+  "ssi/hybrid_rule_and_persistence",
+  "ssi/rf_lowo",
+  "shk/rule_display",
+  "shk/persistence",
+  "shk/hybrid_rule_and_persistence",
+  "shk/rf_lowo",
+  "stuck/rule_display",
+  "stuck/persistence",
+  "stuck/hybrid_rule_and_persistence",
+  "stuck/e1_2of3",
+  "stuck/persistence_event",
+  "stuck/rf_lowo",
+  "hyd/rule_display",
+  "hyd/persistence",
+  "hyd/hybrid_rule_and_persistence",
+  "hyd/k2_tidak_tersedia",
+  "bit_wear/persistence",
+  "bit_wear/k2_onset_belum",
+  "tool_wear/calib_5of27",
+  "tool_wear/op_far_calibrated",
+  "tool_wear/canary_3rms"
+ ]
+}

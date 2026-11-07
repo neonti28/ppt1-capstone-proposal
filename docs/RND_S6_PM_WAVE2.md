@@ -25,7 +25,7 @@ Tiga kolom yang dipakai di seluruh dokumen, dengan pemetaan bahan yang eksplisit
 
 | Kolom | Isi | Sumber angka |
 |---|---|---|
-| Pra-riset | konfigurasi engine sebelum gelombang riset, beserta tier yang berlaku | `docs/V9_EVAL_C_LAYERC.md` dan `scratch/v9_i1/v9_i1_RESULTS.json`, dibaca ulang di S1 bagian 7 |
+| Pra-riset | konfigurasi detektor sebelum gelombang riset, beserta tier yang berlaku | `docs/V9_EVAL_C_LAYERC.md` dan `scratch/v9_i1/v9_i1_RESULTS.json`, dibaca ulang di S1 bagian 7 |
 | Gelombang 1 | empat uji hybrid R8 dengan baseline per tugas, lalu vonis PM | `docs/RND_R8_EVALUASI_BERLAPIS.md` bagian 8 dan 9, `docs/RND_PM_VERDICT.md` bagian 3 dan 4 |
 | Gelombang 2 | lima kartu S1 sampai S5, ditambah run S6 pada kartu ini | `docs/RND_S1_SEED_ROBUSTNESS.md` sampai `docs/RND_S5_AUDIT_WAVE2.md`, dan `scratch/rnd/s6/s6_kandidat.json` |
 
@@ -152,7 +152,7 @@ sah untuk gate; BELUM berarti tidak ada angka.
 | hyd K-i, cakupan penuh | rule kanal tunggal | recall median 0,7507 dan 307 dari 390 onset, FAR median 6,932, 3 dari 9 fold di bawah 6 | lead 6,0 menit, 307 onset | stabil antar paruh 9 dari 9 well | beban alarm tertinggi, 5,3974 alarm per onset | TERUKUR |
 | shk K-i | single engine ML untuk pemantauan tren, rule kanal untuk peringatan, tanpa hybrid | ML: FP 2633, TP 192, AUPRC 0,0499 lawan prevalensi 0,0243, FAR median 3,6217. H2 ditolak: TP turun 76,04 persen | BELUM TERUKUR | recall positif di kedua paruh pada 4 dari 9 well untuk ML, 1 dari 9 untuk H2 | hanya untuk pemantauan tren. AUPRC 0,0499 hanya dua kali prevalensi | SEBAGIAN |
 | stuck K-ii | tanpa komposisi final, verifikasi manual bertarget | H4: FP 41, presisi 0,6404, recall 0,001, 17 dari 148 onset. ML 0,0322, CUSUM 0,133, rule 0,0808 | BELUM TERUKUR | recall positif di kedua paruh pada 0 dari 4 well | bukan alarm | SEBAGIAN |
-| tool_wear K-i | engine terkalibrasi per alat sebagai peringatan, ML logistik default untuk pemantauan | presisi run 0,50, FP 1 sampai 3 per alat; ML default balanced accuracy median 0,3385 dengan TP 63 dan FP 148 | BELUM TERUKUR karena label hanya punya urutan jendela tanpa stempel waktu | tanda delta berubah antar alat | empat alat saja. Peluang minimal satu alarm kebetulan di 4 dari 4 alat adalah 0,5678 | SEBAGIAN |
+| tool_wear K-i | detektor terkalibrasi per alat sebagai peringatan, ML logistik default untuk pemantauan | presisi run 0,50, FP 1 sampai 3 per alat; ML default balanced accuracy median 0,3385 dengan TP 63 dan FP 148 | BELUM TERUKUR karena label hanya punya urutan jendela tanpa stempel waktu | tanda delta berubah antar alat | empat alat saja. Peluang minimal satu alarm kebetulan di 4 dari 4 alat adalah 0,5678 | SEBAGIAN |
 | vib K tunggal | rule kanal sebagai peringatan, RF hanya untuk pemeringkatan, tanpa hybrid | rule presisi 0,87 sampai 0,95; RF AUPRC 0,441 sampai 0,912. Dua hybrid ditolak: statistik DAN rule FAR 19,2783 dengan recall 0,1426, dan rule DAN persistence FAR 1,4934 tetapi recall 0,1906 | BELUM TERUKUR | 4 well saja, tanpa seed berulang | ambang global tidak portabel, FAR menyebar 4,1 sampai 496 (119 kali). Tidak ada komposisi yang mencapai recall 0,5 di satu fold pun pada S6 | SEBAGIAN |
 | ssi K tunggal | persistence sebagai pemeringkatan, rule kanal untuk peringatan, tanpa hybrid | seluruh komposisi gagal pada syarat recall. H1p: FP 17 dengan 1 TP dari 132 onset dan recall 0,0. Persistence: presisi 0,0940 dan recall 0,0323. Terbaik pada FAR, terburuk pada deteksi | BELUM TERUKUR | 7 fold dapat diuji pada S2, 9 fold pada S6 termasuk 2 fold UNDERPOWERED | kanal CRPM absen 62,3 persen. Pada S2 anggaran 24 memberi presisi 0,0762, yaitu sekitar 12,1 alarm palsu per alarm benar | SEBAGIAN |
 | bit_wear K-1 | persistence sebagai pemeringkatan, tanpa alarm | gate A lolos 0 dari 7 fold untuk seluruh model bukan-sirkular; rule kanal torsi presisi 0,1492 dan FAR 241,948; ML kanal fisik presisi 0,6496 dengan FAR 110,432 | BELUM TERUKUR, tidak ada kunci bit maupun biaya | cakupan menit 0,0663 sampai 0,5303 sedangkan syarat 0,50, jadi 1 dari 7 fold lolos syarat cakupan | label praktis dapat direkonstruksi dari kanal fisik: ML kanal fisik recall 0,9968 hampir sama dengan ML ber-`MSE` dan `ROC_coef` 1,0000 | TERBATAS |
@@ -179,7 +179,7 @@ pilihan yang lebih baik daripada mengakui tidak ada pemenang.
 
 Jawaban singkat: komposisi R8 berubah pada hyd mode peringatan dini, dari H1 menjadi H1p, dan bertahan pada shk,
 stuck, tool_wear, vib, ssi, dan bit_wear. Perubahan itu diusulkan dengan angka, dan tetap memerlukan persetujuan
-user sebelum dipakai di engine.
+user sebelum dipakai di detektor.
 
 ### 4.1 Perubahan pada hyd, dengan angka
 
@@ -227,7 +227,7 @@ daripada H1, dan pemakainya harus tahu itu.
 |---|---|---|---|
 | shk K-i | single ML untuk tren, rule untuk peringatan | H2 ML DAN statistik | H2 memotong TP 76,04 persen dan menyisakan recall 0,0037 dengan 21 dari 181 onset, sedangkan ML saja memberi 64 dari 181 pada FAR 3,6217 |
 | stuck K-ii | triase TREN, H4 untuk verifikasi manual | tidak ada kandidat baru | recall median semua komponen tidak lebih dari 0,133, dan H4 memberi recall 0,001 dengan 17 dari 148 onset |
-| tool_wear K-i | engine terkalibrasi per alat | H3a dan H3b GWO | H3a degenerat dengan balanced accuracy 0,5 dan semua jendela positif. H3b 0,3993 naik di 2 alat dan turun di 2 alat |
+| tool_wear K-i | detektor terkalibrasi per alat | H3a dan H3b GWO | H3a degenerat dengan balanced accuracy 0,5 dan semua jendela positif. H3b 0,3993 naik di 2 alat dan turun di 2 alat |
 | vib | rule kanal peringatan, RF pemeringkatan | H1p rule DAN persistence | H1p menurunkan FP dari 1456 menjadi 183 dan FAR dari 22,0218 menjadi 1,4934 pada 3 dari 4 fold, tetapi recall 0,1906 dan 0 dari 4 fold mencapai 0,5. Menukar deteksi dengan ketenangan alarm bukan perbaikan |
 | ssi | persistence pemeringkatan, rule peringatan | H1p rule DAN persistence | H1p pada 9 fold menghasilkan 1 TP dan 17 FP dari 132 onset, dengan recall 0,0. Komposisi ini praktis tidak menyala pada positif |
 | bit_wear K-1 | persistence pemeringkatan | H5 dan H6 | gate A lolos 0 dari 7 fold; H6 punya presisi 0,6132 tetapi FAR median 12,270, yaitu 2,05 kali anggaran 6,0 |
@@ -395,7 +395,7 @@ itu karena itu adalah vonis atas angka yang sudah dilaporkan.
 
 ---
 
-> Catatan 2026-10-29: sembilan cacat minor yang disebut di bagian 8 sudah ditangani. Status per butir ada di `docs/RND_S5_DEFECT_STATUS.md`, dan perubahan engine-nya di `docs/RND_ENGINE_S6_INTEGRATION.md`.
+> Catatan 2026-10-29: sembilan cacat minor yang disebut di bagian 8 sudah ditangani. Status per butir ada di `docs/RND_S5_DEFECT_STATUS.md`, dan perubahan detektor-nya di `docs/RND_ENGINE_S6_INTEGRATION.md`.
 
 ## 9. Ringkasan lima baris dan yang belum terverifikasi
 
@@ -429,7 +429,7 @@ itu karena itu adalah vonis atas angka yang sudah dilaporkan.
    tidak ada objek yang diperiksa.
 9. Angka ssi S6 memakai 9 fold termasuk dua fold UNDERPOWERED, sehingga tidak sebanding dengan angka ssi S2 yang
    memakai 7 fold. Perbandingan ssi antar gelombang harus selalu menyebut penyebutnya.
-10. Perubahan komposisi hyd dari H1 ke H1p diusulkan di sini dan belum diterapkan pada engine mana pun. Penerapan
+10. Perubahan komposisi hyd dari H1 ke H1p diusulkan di sini dan belum diterapkan pada detektor mana pun. Penerapan
     memerlukan persetujuan user.
 11. Jumlah pikiran sequ-mcp untuk kartu ini tidak dilaporkan sebagai bukti, karena tidak dapat diperiksa dari
     artefak.

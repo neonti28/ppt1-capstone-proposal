@@ -1,7 +1,7 @@
 # RND-R7: REVIEW R&D ATAS HASIL ENGINEER DAN INSTRUKSI RISET LANJUTAN
 
 Kartu: `t_f366fdcf` · Board: `rnd-algo-2026` · Tanggal: 2026-10-27 (WIB)
-Objek review: `docs/RND_E3_HASIL.md` (pilot hyd K-i) dan `docs/RND_E0_AUDIT_ENGINE.md` (audit 7 engine)
+Objek review: `docs/RND_E3_HASIL.md` (pilot hyd K-i) dan `docs/RND_E0_AUDIT_ENGINE.md` (audit 7 mode)
 Workspace: `/mnt/d/Capstone 1(v2)`. Folder arsip `/mnt/d/Capstone 1` tidak disentuh.
 Dokumen hulu yang dibaca: `docs/RND_ALGO_RESEARCH_PLAN.md` (§2 aturan angka, §6 gate), `docs/V9_EVAL_C_LAYERC.md` (tabel tier §1 dan §2.5), `code/v9_i1_pipeline.py` (REGISTRY), `scratch/v9_i1/v9_i1_RESULTS.json`.
 
@@ -32,7 +32,7 @@ Tier tetap `PERINGATAN-BERPENGAWAS` untuk hyd K-i. Gate C tidak dinilai (gate A 
 
 | Butir | Isi |
 |---|---|
-| Klaim yang diuji | hyd K-i (status), engine rig, label proksi residu SPPA |
+| Klaim yang diuji | hyd K-i (status), detektor rig, label proksi residu SPPA |
 | Pembanding yang diminta kartu | baseline hyd K-i terbit: P 0,72 sampai 0,95; FP 2.091 turun ke 927; FAR 14,6 sampai 58,4; delay tidak lebih dari 3,5 menit |
 | Metode | eksekusi ulang perhitungan Engineer (`scratch/rnd/r7/r7_measure.py`, `r7_measure2.py`), rekonstruksi baseline dari bins, dan dua titik operasi alpha sebagai eksperimen pembeda |
 | Data | `scratch/v9_d1/datasets/hyd_ki.csv.gz` (52.509 baris, 9 well, 50 kolom), bins per well di `scratch/v9_d1/bins/` |

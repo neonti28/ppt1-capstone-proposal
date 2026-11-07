@@ -1,0 +1,240 @@
+{
+ "meta": {
+  "skrip": "scratch/ppt1/bab1_1_hitung.py",
+  "basis": "/mnt/d/Capstone 1(v2)"
+ },
+ "labels": {
+  "berkas": "data/volve/labels_curated_v2.csv",
+  "baris": 884,
+  "kolom": 20,
+  "kolom_nama": [
+   "event_id",
+   "wellbore",
+   "event_date",
+   "act_start",
+   "act_end",
+   "ddr_date_start",
+   "md",
+   "md_valid",
+   "source_code",
+   "state_detail",
+   "category",
+   "bha_relevant",
+   "evidence",
+   "match_rules",
+   "comments_full",
+   "comments_trunc300",
+   "outcome",
+   "outcome_reason",
+   "component",
+   "component_reason"
+  ],
+  "kategori_n": 9,
+  "kategori": {
+   "routine_no_failure_evidence": 496,
+   "surface_rig_equipment": 216,
+   "mixed_evidence": 47,
+   "bha_stuck_fishing": 38,
+   "failure_unlocated": 28,
+   "wellbore_fluid": 25,
+   "wireline_completion_intervention": 21,
+   "bha_downhole_equipment": 12,
+   "safety_personnel": 1
+  },
+  "bha_relevant": {
+   "no": 263,
+   "yes": 50,
+   "uncertain": 571
+  }
+ },
+ "durasi": {
+  "n_terpakai": 884,
+  "dibuang_timestamp_gagal": 0,
+  "dibuang_negatif": 0,
+  "dibuang_lebih_720_jam": 0,
+  "total_menit": 73500.0,
+  "total_jam": 1225.0,
+  "mean_menit": 83.14,
+  "median_menit": 45.0,
+  "p90_menit_cara1": 180.0,
+  "p90_menit_interpolasi": 180.0,
+  "max_menit": 780.0,
+  "min_menit": 10.0,
+  "jam_per_kategori": {
+   "routine_no_failure_evidence": {
+    "n": 496,
+    "jam": 601.1
+   },
+   "surface_rig_equipment": {
+    "n": 216,
+    "jam": 343.5
+   },
+   "mixed_evidence": {
+    "n": 47,
+    "jam": 101.5
+   },
+   "wellbore_fluid": {
+    "n": 25,
+    "jam": 50.5
+   },
+   "bha_stuck_fishing": {
+    "n": 38,
+    "jam": 47.3
+   },
+   "wireline_completion_intervention": {
+    "n": 21,
+    "jam": 40.2
+   },
+   "failure_unlocated": {
+    "n": 28,
+    "jam": 25.8
+   },
+   "bha_downhole_equipment": {
+    "n": 12,
+    "jam": 14.0
+   },
+   "safety_personnel": {
+    "n": 1,
+    "jam": 1.2
+   }
+  },
+  "wellbore_n": 10,
+  "kejadian_per_wellbore": {
+   "NO 15/9-F-14": 182,
+   "NO 15/9-F-5": 136,
+   "NO 15/9-F-15 D": 122,
+   "NO 15/9-F-15": 112,
+   "NO 15/9-F-9 A": 94,
+   "NO 15/9-F-15 C": 89,
+   "NO 15/9-F-7": 59,
+   "NO 15/9-F-9": 56,
+   "NO 15/9-F-15 A": 32,
+   "NO 15/9-F-15 B": 2
+  }
+ },
+ "tahun": {
+  "dari": "2007",
+  "sampai": "2015",
+  "per_tahun": {
+   "2007": 95,
+   "2008": 425,
+   "2009": 96,
+   "2010": 7,
+   "2013": 101,
+   "2014": 21,
+   "2015": 139
+  },
+  "kolom": "event_date"
+ },
+ "persen": {
+  "routine_no_failure_evidence": 56.1,
+  "bha_relevant_yes": 5.7,
+  "bha_relevant_uncertain": 64.6,
+  "wellbore_F14": 20.6,
+  "jam_bha_stuck_fishing": 3.9,
+  "jam_routine": 49.1,
+  "jam_surface_rig": 28.0,
+  "jam_kejadian_relevan_bha": 5.0
+ },
+ "witsml_parsed": {
+  "folder": "data/volve/witsml_parsed",
+  "csv_n": 10,
+  "baris_mentah_total": 9935708,
+  "baris_data_total": 9935698,
+  "per_berkas_baris_mentah": {
+   "F-10.csv": 773675,
+   "F-12.csv": 2081568,
+   "F-14.csv": 1648027,
+   "F-15A.csv": 778163,
+   "F-15_S.csv": 1883063,
+   "F-5.csv": 1286968,
+   "F-7.csv": 547501,
+   "F-9.csv": 457546,
+   "F-9_A.csv": 419707,
+   "VAR_F-5_alt.csv": 59490
+  }
+ },
+ "dataset_latih": {
+  "berkas_n": 6,
+  "baris_per_berkas": {
+   "hyd_ki.csv.gz": 52509,
+   "shk.csv.gz": 56495,
+   "ssi.csv.gz": 35906,
+   "stuck_k1.csv.gz": 5555,
+   "stuck_k2.csv.gz": 118567,
+   "vib.csv.gz": 23922
+  },
+  "baris_total": 292954,
+  "fold_per_dataset": {
+   "vib": 4,
+   "ssi": 9,
+   "shk": 9,
+   "stuck_k1": 2,
+   "hyd_ki": 9,
+   "stuck_k2": 4
+  },
+  "fold_total": 37,
+  "pelanggaran_bocor_total": 0,
+  "dataset_status": {
+   "vib": "OK",
+   "ssi": "OK",
+   "shk": "OK",
+   "stuck_k1": "OK",
+   "hyd_ki": "OK",
+   "stuck_k2": "OK"
+  }
+ },
+ "registry": {
+  "berkas": "scratch/v9_i1/v9_i1_RESULTS.json",
+  "engine_n": 7,
+  "head_n": 27,
+  "head_per_engine": {
+   "vib": 4,
+   "ssi": 4,
+   "shk": 4,
+   "stuck": 6,
+   "hyd": 4,
+   "bit_wear": 2,
+   "tool_wear": 3
+  },
+  "tier": {
+   "PERINGATAN-BERPENGAWAS": 12,
+   "TREN": 13,
+   "BELUM LAYAK PAKAI": 2
+  },
+  "layer": {
+   "L1": 11,
+   "L0": 5,
+   "L2": 9,
+   "L3": 2
+  }
+ },
+ "inventaris": {
+  "berkas": "docs/V10_D1_BAB_DATA.md §3.1",
+  "baris_tabel": 13,
+  "nomor": [
+   "1",
+   "2",
+   "3",
+   "4",
+   "5",
+   "6",
+   "7",
+   "8",
+   "9",
+   "10",
+   "11",
+   "12",
+   "13"
+  ]
+ },
+ "kutipan_md": {
+  "l2972_vib": "| 1 | **vib** | Getaran lateral BHA melebihi ambang operasional (whirl/GET tinggi) | deteksi **kondisi** (TLead tidak berlaku) | rule ambang + persistence + RF | rule **P 0,868–0,952** (1,10×) · R 0,276–0,595 · **FAR 9,99–49,94** · FP 197; RF **AUPRC 0,441–0,912** (2,07×) · CI memuat prev **0/4** · ΔB vs canary **4/4** · τ0,5 FAR **4,15–496,09 = 119,57×** | **TREN** (RF) + **PERINGATAN-BERPENGAWAS",
+  "l2973_ssi": "| 2 | **ssi** | Stick-slip torsional (putaran drillstring tersendat-lepas) | deteksi **kondisi** | rule definisi SSI + persistence + RF + hybrid | RF **AUPRC 0,015–0,459** (30,36×) · CI memuat prev **3/7 layak** (5/9 all) · ΔB vs prevalensi **7/7**; rule **R 0,000–0,032** · FAR 0,0–7,33 (≤6: 4/9); hybrid **FP 26→7 (−73,1 %)** · ≤rule **7/7** | **TREN** (RF) + **PERINGATAN hemat** (hybrid) | belum ",
+  "l2974_shk": "| 3 | **shk** | Bit bounce / shock risk sedang berlangsung (disfungsi getaran aksial-torsional) | deteksi **anomali** berlangsung | rule display + persistence + RF | rule **FAR 0,670–6,618** (9,87×) → **≤6 di 7/9 well** · P 0,00–0,935 · FP 121; RF **AUPRC 0,0069–0,1929** (28,07×) · CI memuat prev **7/9** · B3 **−212,5×** | **PERINGATAN-BERPENGAWAS** (rule) + **TREN** (RF) | RF jangan sbg alarm (CI",
+  "l2975_stuck_k1": "| 4 | **stuck K-i** | Pipa terjepit (blok status `STUCK_RT` persisten) yaitu konfirmasi, bukan ramalan | deteksi **kondisi** | rule display + persistence + hybrid | rule **P 0,9238–0,9662** (1,05×) · R 0,449–0,599 · FAR 8,32–61,0 (≤6 **0/2**) · FP 49; hanya **2 fold** (F-14, F-9_A) | **PERINGATAN-BERPENGAWAS** (cakupan terbatas) | FAR >6; portabilitas ke well lain **belum terukur** (cakupan 2/9 we",
+  "l2976_stuck_k2": "| 5 | **stuck K-ii** | Akan masuk kondisi terjepit dalam **≤10 menit** (onset 0→1) | prediksi **kejadian** | persistence-EVENT + rule E1 (2-dari-3) + E2 z-stat + RF | persistence-EVENT **B1 0–0,115** · **TLead 4,5–8,5 mnt** (med 7,0; 1,89×) · FAR 0–2,93 · FP 11; RF τ0,5 B1 0–0,045 · TLead 2–159; E2 CI memuat prev **4/4**; anchor absorbed **13/281 = 4,63 %** | **TREN / triage** | B1 jauh dari syara",
+  "l2977_hyd_k1": "| 6 | **hyd K-i** | Anomali hidraulik (tekanan standpipe menyimpang dari pola normal) yaitu konfirmasi status | deteksi **kondisi** | median/MAD pembentuk label + persistence + hybrid | hybrid **P 0,724–0,948** (1,31×) · R 0,52–0,87 · **FAR 14,62–58,43** (4,0×) · **FP 2091→927 (−55,7 %) 9/9**; persistence **CI memuat prev 0/9** (satu-satunya kelas); delay **0–3,5 mnt** | **PERINGATAN-BERPENGAWAS**",
+  "l3378_tier": "| **LAYAK alarm otomatis kritis** | **0 dari 7** | n/a | Syarat alarm (FAR≤1/24jam dgn recall>0 **+** B1≥80% **+** C2/C3) belum tercapai engine mana pun; sebagian karena FAR/B belum diukur, sebagian sudah terukur tapi di atas ambang. |"
+ }
+}

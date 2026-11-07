@@ -1,0 +1,245 @@
+{
+ "meta": {
+  "kartu": "t_56d8d11d RND-R5",
+  "generated_at": "2026-10-27 03:58:56",
+  "sumber": "/mnt/d/Capstone 1(v2)/scratch/v9_d1/datasets/hyd_ki.csv.gz",
+  "perintah": "scratch/rnd_r5/.venv/bin/python scratch/rnd_r5/anomaly_unsup.py",
+  "sklearn": "1.9.1",
+  "fitur": [
+   "TQA_mean",
+   "TQA_std",
+   "TQA_slope",
+   "TQA_last",
+   "RPM_mean",
+   "RPM_std",
+   "RPM_slope",
+   "RPM_last",
+   "SWOB_mean",
+   "SWOB_std",
+   "SWOB_slope",
+   "SWOB_last",
+   "HKLD_mean",
+   "HKLD_std",
+   "HKLD_slope",
+   "HKLD_last",
+   "ROP_mean",
+   "ROP_std",
+   "ROP_slope",
+   "ROP_last",
+   "BPOS_mean",
+   "BPOS_std",
+   "BPOS_slope",
+   "BPOS_last",
+   "depth_mean",
+   "depth_std",
+   "depth_slope",
+   "depth_last",
+   "dbtm_mean",
+   "dbtm_std",
+   "dbtm_slope",
+   "dbtm_last"
+  ],
+  "n_fitur": 32,
+  "contamination": 0.01,
+  "fit_cap": 1500,
+  "catatan": "Detektor dilatih HANYA pada baseline bersih (label tidak dipakai saat latih). Label y_hyd dipakai hanya untuk diagnosis recall/presisi setelah skor keluar."
+ },
+ "summary": {
+  "n_well_dipakai": 2,
+  "wells": [
+   "F-10",
+   "F-15_S"
+  ],
+  "iforest": {
+   "laju_alarm_baseline_median": 0.0109,
+   "laju_alarm_baseline_min": 0.0101,
+   "laju_alarm_baseline_max": 0.0117,
+   "recall_h10_median": 0.6131,
+   "presisi_menit_median": 0.224,
+   "transfer_laju_alarm_median": 0.5,
+   "transfer_laju_alarm_max": 1.0,
+   "transfer_pasangan": 2
+  },
+  "lof": {
+   "laju_alarm_baseline_median": 0.0089,
+   "laju_alarm_baseline_min": 0.0078,
+   "laju_alarm_baseline_max": 0.0101,
+   "recall_h10_median": 0.997,
+   "presisi_menit_median": 0.2032,
+   "transfer_laju_alarm_median": 1.0,
+   "transfer_laju_alarm_max": 1.0,
+   "transfer_pasangan": 2
+  },
+  "ocsvm": {
+   "laju_alarm_baseline_median": 0.0665,
+   "laju_alarm_baseline_min": 0.0623,
+   "laju_alarm_baseline_max": 0.0707,
+   "recall_h10_median": 1.0,
+   "presisi_menit_median": 0.2007,
+   "transfer_laju_alarm_median": 1.0,
+   "transfer_laju_alarm_max": 1.0,
+   "transfer_pasangan": 2
+  },
+  "ae": {
+   "laju_alarm_baseline_median": 0.0109,
+   "laju_alarm_baseline_min": 0.0101,
+   "laju_alarm_baseline_max": 0.0117,
+   "recall_h10_median": 1.0,
+   "presisi_menit_median": 0.2011,
+   "transfer_laju_alarm_median": 1.0,
+   "transfer_laju_alarm_max": 1.0,
+   "transfer_pasangan": 2
+  }
+ },
+ "per_well": {
+  "F-10": {
+   "status": "dipakai",
+   "n_rows": 7571,
+   "baseline_minutes": 257,
+   "fitur": 32,
+   "baris_dinilai": 6408,
+   "positif": 1176,
+   "iforest": {
+    "laju_alarm_baseline": 0.0117,
+    "episode_baseline": 2,
+    "far_per_24h": 11.21,
+    "recall_h10": 0.3793,
+    "presisi_menit_alarm": 0.2461,
+    "alarm_menit_total": 1353
+   },
+   "lof": {
+    "laju_alarm_baseline": 0.0078,
+    "episode_baseline": 1,
+    "far_per_24h": 5.6,
+    "recall_h10": 0.994,
+    "presisi_menit_alarm": 0.2198,
+    "alarm_menit_total": 5920
+   },
+   "ocsvm": {
+    "laju_alarm_baseline": 0.0623,
+    "episode_baseline": 2,
+    "far_per_24h": 11.21,
+    "recall_h10": 1.0,
+    "presisi_menit_alarm": 0.2147,
+    "alarm_menit_total": 6167
+   },
+   "ae": {
+    "laju_alarm_baseline": 0.0117,
+    "episode_baseline": 1,
+    "far_per_24h": 5.6,
+    "recall_h10": 1.0,
+    "presisi_menit_alarm": 0.2151,
+    "alarm_menit_total": 6154
+   },
+   "matrix_profile": {
+    "window_menit": 60,
+    "titik_diskord": 2,
+    "fraksi_diskord": 0.0101,
+    "episode_baseline": 1,
+    "panjang_seri": 257
+   }
+  },
+  "F-12": {
+   "status": "tidak dipakai",
+   "blok_maks_menit": 504,
+   "n_rows": 7390
+  },
+  "F-14": {
+   "status": "tidak dipakai",
+   "blok_maks_menit": 358,
+   "n_rows": 10401
+  },
+  "F-15A": {
+   "status": "tidak dipakai",
+   "blok_maks_menit": 291,
+   "n_rows": 6156
+  },
+  "F-15_S": {
+   "status": "dipakai",
+   "n_rows": 8355,
+   "baseline_minutes": 297,
+   "fitur": 32,
+   "baris_dinilai": 8300,
+   "positif": 974,
+   "iforest": {
+    "laju_alarm_baseline": 0.0101,
+    "episode_baseline": 2,
+    "far_per_24h": 9.7,
+    "recall_h10": 0.847,
+    "presisi_menit_alarm": 0.2018,
+    "alarm_menit_total": 6096
+   },
+   "lof": {
+    "laju_alarm_baseline": 0.0101,
+    "episode_baseline": 2,
+    "far_per_24h": 9.7,
+    "recall_h10": 1.0,
+    "presisi_menit_alarm": 0.1867,
+    "alarm_menit_total": 7896
+   },
+   "ocsvm": {
+    "laju_alarm_baseline": 0.0707,
+    "episode_baseline": 3,
+    "far_per_24h": 14.55,
+    "recall_h10": 1.0,
+    "presisi_menit_alarm": 0.1868,
+    "alarm_menit_total": 8024
+   },
+   "ae": {
+    "laju_alarm_baseline": 0.0101,
+    "episode_baseline": 2,
+    "far_per_24h": 9.7,
+    "recall_h10": 1.0,
+    "presisi_menit_alarm": 0.1872,
+    "alarm_menit_total": 8006
+   },
+   "matrix_profile": {
+    "window_menit": 60,
+    "titik_diskord": 3,
+    "fraksi_diskord": 0.0126,
+    "episode_baseline": 1,
+    "panjang_seri": 297
+   }
+  },
+  "F-5": {
+   "status": "tidak dipakai",
+   "blok_maks_menit": 418,
+   "n_rows": 6332
+  },
+  "F-7": {
+   "status": "tidak dipakai",
+   "blok_maks_menit": 171,
+   "n_rows": 2482
+  },
+  "F-9": {
+   "status": "tidak dipakai",
+   "blok_maks_menit": 97,
+   "n_rows": 1616
+  },
+  "F-9_A": {
+   "status": "tidak dipakai",
+   "blok_maks_menit": 361,
+   "n_rows": 2206
+  }
+ },
+ "transfer": [
+  {
+   "fit_di": "F-10",
+   "diuji_di": "F-15_S",
+   "baseline_menit_uji": 297,
+   "iforest": 0.0,
+   "lof": 1.0,
+   "ocsvm": 1.0,
+   "ae": 1.0
+  },
+  {
+   "fit_di": "F-15_S",
+   "diuji_di": "F-10",
+   "baseline_menit_uji": 257,
+   "iforest": 1.0,
+   "lof": 1.0,
+   "ocsvm": 1.0,
+   "ae": 1.0
+  }
+ ]
+}

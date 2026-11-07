@@ -1,0 +1,941 @@
+{
+  "task": "t_39eac1b2",
+  "judul": "Fishbone 6M dan 5W1H BAB I 1.2 Proposal PPT I, berbasis temuan nyata proyek",
+  "mitra": "PT Halliburton Indonesia, divisi Sperry Drilling",
+  "basis_data": [
+    "data/volve/labels_curated_v2.csv (884 kejadian)",
+    "scratch/v9_d1/v9_d1_01_summary.json (grid per sumur)",
+    "scratch/v9_e_ml/v9_e_ML_vib_RESULTS.json (FAR per fold)",
+    "scratch/v9_eval_a/v9_eval_a_RESULTS.json (n dan prevalensi per fold)",
+    "scratch/v9_eval_c/v9_eval_c_RESULTS.json (nodata sensor)",
+    "scratch/v9_i1/v9_i1_RESULTS.json (registry, tier, keputusan)"
+  ],
+  "angka_kunci": {
+    "n_kejadian": 884,
+    "total_menit": 73500.01666666666,
+    "total_jam": 1225.0002777777777,
+    "median_menit": 45.0,
+    "p90_menit": 180.0,
+    "maks_menit": 780.0,
+    "kategori": {
+      "surface_rig_equipment": 216,
+      "safety_personnel": 1,
+      "bha_stuck_fishing": 38,
+      "routine_no_failure_evidence": 496,
+      "mixed_evidence": 47,
+      "failure_unlocated": 28,
+      "bha_downhole_equipment": 12,
+      "wellbore_fluid": 25,
+      "wireline_completion_intervention": 21
+    },
+    "bha_relevant": {
+      "no": 263,
+      "yes": 50,
+      "uncertain": 571
+    },
+    "n_wellbore": 10,
+    "n_head": 27,
+    "n_engine": 7,
+    "heads_per_engine": {
+      "vib": 4,
+      "ssi": 4,
+      "shk": 4,
+      "stuck": 6,
+      "hyd": 4,
+      "bit_wear": 2,
+      "tool_wear": 3
+    },
+    "tier": {
+      "PERINGATAN-BERPENGAWAS": 12,
+      "TREN": 13,
+      "BELUM LAYAK PAKAI": 2
+    },
+    "lapisan": {
+      "L0": 5,
+      "L1": 11,
+      "L2": 9,
+      "L3": 2
+    },
+    "auto_critical_alarm_slots": 0,
+    "far_tau05_rf": {
+      "F-14": {
+        "FAR_24jam": 496.092486,
+        "recall": 0.865658,
+        "precision": 0.765539
+      },
+      "F-15A": {
+        "FAR_24jam": 385.438348,
+        "recall": 0.819183,
+        "precision": 0.488786
+      },
+      "F-15_S": {
+        "FAR_24jam": 4.14897,
+        "recall": 0.101828,
+        "precision": 0.852459
+      },
+      "F-5": {
+        "FAR_24jam": 174.900542,
+        "recall": 0.220325,
+        "precision": 0.402077
+      }
+    },
+    "far_ratio_tau05": 119.57,
+    "ssi_nodata": {
+      "n_nodata": 22385,
+      "n_total": 35906,
+      "frac": 0.6234
+    },
+    "shk_nodata": {
+      "n_nodata": 6831,
+      "n_total": 56495,
+      "frac": 0.1209
+    },
+    "vib_nodata_sum_layak": 2999,
+    "f14_bins": {
+      "n_bins": 96698,
+      "n_bins_drill": 12635,
+      "bins_with_crpm_obs": 11794,
+      "crpm_nodata_grid_frac": 0.878,
+      "crpm_nodata_drill_frac": 0.0666
+    },
+    "f14_ssi": {
+      "n": 5455,
+      "pos": 75,
+      "coverage_over_bins": 0.0564
+    },
+    "ssi_total_n": 35906,
+    "f10_bins_with_vib_obs": 0
+  },
+  "kategori_6m": {
+    "Man": 4,
+    "Method": 5,
+    "Machine": 4,
+    "Material": 4,
+    "Measurement": 5,
+    "Environment": 5
+  },
+  "status_ringkas": {
+    "TERBUKTI-DOKUMEN": 10,
+    "TERBUKTI": 15,
+    "HIPOTESIS": 2
+  },
+  "causes": [
+    {
+      "id": "M1",
+      "m": "Man",
+      "branch": "Validitas label buatan manusia",
+      "twig": "Kontrol-positif tidak lulus",
+      "cause": "Label stick-slip tidak pernah lulus kontrol-positif: 0 dari 10 kontrol-positif stuck gagal, sehingga presisi dan recall kelas stuck dihitung dari basis label yang belum tervalidasi.",
+      "status": "TERBUKTI-DOKUMEN",
+      "status_note": "Angka 0/10 tercatat di dokumen audit tim dengan metode sinkronisasi waktu; sesi ini tidak menjalankan ulang kontrol-positif tersebut.",
+      "evidence": [
+        {
+          "file": "docs/V8_M1_CAPABILITY_MAP.md",
+          "locator": "baris 198 (kolom G7)",
+          "value": "kontrol-positif stuck 0/10",
+          "cara_verifikasi": "dibaca langsung sesi ini"
+        },
+        {
+          "file": "docs/V8_PM_VERDICT.md",
+          "locator": "baris 202",
+          "value": "G7 = Validitas label lintas-well (kontrol-positif stuck 0/10)",
+          "cara_verifikasi": "dibaca langsung sesi ini"
+        },
+        {
+          "file": "docs/V4_MAINTENANCE_ML_OPTIONS.md",
+          "locator": "baris 149",
+          "value": "Kontrol-positif stuck 0/10 gagal (V8 §G7)",
+          "cara_verifikasi": "dibaca langsung sesi ini"
+        }
+      ],
+      "impact": "Head prediksi onset (stuck K-ii, hyd K-ii) tidak kredibel sebelum label beres.",
+      "impact_link": "HIPOTESIS",
+      "feeds_anchor": "label cacat (G7)"
+    },
+    {
+      "id": "M2",
+      "m": "Man",
+      "branch": "Validitas label buatan manusia",
+      "twig": "Relevansi BHA tidak diputuskan",
+      "cause": "Relevansi BHA ke komponen downhole dibiarkan tidak diputuskan: 571 dari 884 kejadian (64.6%) berstatus \"uncertain\", dan hanya 50 (5.7%) yang dinyatakan relevan BHA.",
+      "status": "TERBUKTI",
+      "status_note": "Dihitung ulang dari CSV mentah pada sesi ini.",
+      "evidence": [
+        {
+          "file": "data/volve/labels_curated_v2.csv",
+          "locator": "kolom bha_relevant, 884 baris",
+          "value": "uncertain 571 / no 263 / yes 50",
+          "cara_verifikasi": "dibaca langsung sesi ini"
+        }
+      ],
+      "impact": "Target kelas BHA tidak dapat didefinisikan tegas; kelas downhole hanya punya 50 contoh positif.",
+      "impact_link": "TERBUKTI",
+      "feeds_anchor": "label cacat (G7)"
+    },
+    {
+      "id": "M3",
+      "m": "Man",
+      "branch": "Validitas label buatan manusia",
+      "twig": "Label hidraulik memakai proksi",
+      "cause": "Label hidraulik K-ii dibentuk dari proksi perubahan volume pit (ΔV_pit), bukan dari pengukuran hidraulika lubang bor, sehingga risiko sirkularitas antara label dan fitur.",
+      "status": "TERBUKTI-DOKUMEN",
+      "status_note": "Tercatat sebagai komponen G7 dan sebagai definisi label di dokumen desain teknis.",
+      "evidence": [
+        {
+          "file": "docs/V8_M1_CAPABILITY_MAP.md",
+          "locator": "baris 198",
+          "value": "hyd K-ii label proxy",
+          "cara_verifikasi": "dibaca langsung sesi ini"
+        },
+        {
+          "file": "docs/ML_PROJECT_PROPOSAL_TECHNICAL_DESIGN.md",
+          "locator": "baris 300",
+          "value": "Definisi label per kelas: hyd K-ii z ΔV_pit",
+          "cara_verifikasi": "dibaca langsung sesi ini"
+        }
+      ],
+      "impact": "Recall kelas hidraulik tidak dapat ditafsirkan sebagai kemampuan mendeteksi peristiwa fisik.",
+      "impact_link": "HIPOTESIS",
+      "feeds_anchor": "label cacat (G7)"
+    },
+    {
+      "id": "M4",
+      "m": "Man",
+      "branch": "Rantai keputusan manusia",
+      "twig": "Beban interpretasi jatuh ke insinyur",
+      "cause": "Seluruh keluaran berhenti di manusia: tidak ada slot alarm otomatis kritis dan keputusan akhir diserahkan kepada insinyur pengeboran, sehingga nilai alat bergantung pada waktu baca insinyur yang belum pernah diukur.",
+      "status": "TERBUKTI",
+      "status_note": "Status keputusan terbaca dari JSON; besaran waktu baca insinyur tidak diukur.",
+      "evidence": [
+        {
+          "file": "scratch/v9_i1/v9_i1_RESULTS.json",
+          "locator": "auto_critical_alarm_slots",
+          "value": 0,
+          "cara_verifikasi": "dibaca langsung sesi ini"
+        },
+        {
+          "file": "scratch/v9_i1/v9_i1_RESULTS.json",
+          "locator": "human_review_required",
+          "value": true,
+          "cara_verifikasi": "dibaca langsung sesi ini"
+        },
+        {
+          "file": "scratch/v9_i1/v9_i1_RESULTS.json",
+          "locator": "decision_layer.nperingatan_l1",
+          "value": 11,
+          "cara_verifikasi": "dibaca langsung sesi ini"
+        }
+      ],
+      "impact": "Sebanyak 11 peringatan L1 harus dibaca manusia tanpa jalur eskalasi terukur.",
+      "impact_link": "HIPOTESIS",
+      "feeds_anchor": "tidak ada alarm otomatis (keputusan desain)"
+    },
+    {
+      "id": "Me1",
+      "m": "Method",
+      "branch": "Ambang tunggal lintas sumur",
+      "twig": "FAR tidak portabel",
+      "cause": "Satu nilai ambang (τ = 0,5) dipakai untuk semua sumur. Pada model dan ambang yang sama, laju alarm palsu bergerak dari 4.15 per 24 jam di F-15_S sampai 496.09 per 24 jam di F-14, yaitu rentang 119.57 kali.",
+      "status": "TERBUKTI",
+      "status_note": "Dihitung ulang dari JSON hasil eksekusi per fold pada sesi ini.",
+      "evidence": [
+        {
+          "file": "scratch/v9_e_ml/v9_e_ML_vib_RESULTS.json",
+          "locator": "folds[].models.rf.tau_metrics[\"0.5\"].FAR_24jam",
+          "value": "F-15_S 4.14897 s/d F-14 496.09249; rasio 119.57x",
+          "cara_verifikasi": "dibaca langsung sesi ini"
+        }
+      ],
+      "impact": "Ambang yang aman di satu sumur menghasilkan alarm palsu ratusan kali per hari di sumur lain.",
+      "impact_link": "TERBUKTI",
+      "feeds_anchor": "ambang tidak portabel (FAR 119,6x)"
+    },
+    {
+      "id": "Me2",
+      "m": "Method",
+      "branch": "Ambang tunggal lintas sumur",
+      "twig": "Recall ikut runtuh di ujung lain",
+      "cause": "Penetapan ambang yang sama juga meruntuhkan sensitivitas: recall pada τ = 0,5 adalah 0.1018 di F-15_S tetapi 0.8657 di F-14.",
+      "status": "TERBUKTI",
+      "status_note": "Nilai recall diambil dari blok JSON yang sama dengan FAR.",
+      "evidence": [
+        {
+          "file": "scratch/v9_e_ml/v9_e_ML_vib_RESULTS.json",
+          "locator": "folds[].models.rf.tau_metrics[\"0.5\"].recall",
+          "value": "F-15_S 0.1018 vs F-14 0.8657",
+          "cara_verifikasi": "dibaca langsung sesi ini"
+        }
+      ],
+      "impact": "Trade-off FAR dan recall tidak dapat diselesaikan dengan satu ambang global.",
+      "impact_link": "TERBUKTI",
+      "feeds_anchor": "ambang tidak portabel (FAR 119,6x)"
+    },
+    {
+      "id": "Me3",
+      "m": "Method",
+      "branch": "Ketidakpastian statistik",
+      "twig": "Interval kepercayaan menyentuh no-skill",
+      "cause": "Pada 5 dari 9 fold, selang kepercayaan 95% AUPRC menyentuh garis no-skill, sehingga keunggulan model atas tebakan acak belum dapat dipisahkan dari derau.",
+      "status": "TERBUKTI-DOKUMEN",
+      "status_note": "Tercatat pada dokumen desain teknis dan verdict; sesi ini tidak menghitung ulang CI95 per fold.",
+      "evidence": [
+        {
+          "file": "docs/ML_PROJECT_PROPOSAL_TECHNICAL_DESIGN.md",
+          "locator": "baris 562",
+          "value": "5/9 fold CI95 menyentuh no-skill",
+          "cara_verifikasi": "dibaca langsung sesi ini"
+        },
+        {
+          "file": "scratch/v9_e_ml/v9_e_ML_ssi_RESULTS.json",
+          "locator": "folds[].models.rf.ci95",
+          "value": "contoh fold F-10: [0,06008, 0,25484] dengan prevalensi 0,02257",
+          "cara_verifikasi": "dibaca langsung sesi ini"
+        }
+      ],
+      "impact": "Klaim keunggulan per sumur tidak dapat berdiri; hanya klaim agregat yang dapat dipertahankan.",
+      "impact_link": "HIPOTESIS",
+      "feeds_anchor": "ambang tidak portabel (FAR 119,6x)"
+    },
+    {
+      "id": "Me4",
+      "m": "Method",
+      "branch": "Resolusi waktu pipeline",
+      "twig": "Grid 60 detik melawan laju stream",
+      "cause": "Pipeline memaksa grid 60 detik dengan mode ALL-rows, sedangkan laju kanal permukaan diasumsikan sekitar 1 Hz. Bila laju nyata per sumur lebih rendah, satu bin dapat berisi kurang dari 10 sampel dan aturan SSI (minimal 10 sampel) tidak dapat dievaluasi.",
+      "status": "HIPOTESIS",
+      "status_note": "Mekanisme masuk akal dan konsisten dengan aturan SSI_MIN_SAMPLES=10, tetapi laju sampel nyata per sumur belum diukur pada sesi ini.",
+      "evidence": [
+        {
+          "file": "docs/ML_PROJECT_PROPOSAL_TECHNICAL_DESIGN.md",
+          "locator": "baris 296",
+          "value": "grid 60 dtk (rig) / 1 dtk (bengkel), jendela [t0-10, t0)",
+          "cara_verifikasi": "dibaca langsung sesi ini"
+        },
+        {
+          "file": "docs/ML_PROJECT_PROPOSAL_TECHNICAL_DESIGN.md",
+          "locator": "baris 1177",
+          "value": "Log time-series diubah menjadi grid menit (60 detik) dengan mode ALL-rows",
+          "cara_verifikasi": "dibaca langsung sesi ini"
+        },
+        {
+          "file": "scratch/v9_eval_c/v9_eval_c_RESULTS.json",
+          "locator": "C_rule_status.ssi.sensor_nodata_rule.n_nodata",
+          "value": 22385,
+          "cara_verifikasi": "dibaca langsung sesi ini"
+        }
+      ],
+      "impact": "Sebagian nodata yang dilaporkan sebagai keterbatasan sensor dapat berasal dari pilihan resolusi pipeline, bukan dari sensor.",
+      "impact_link": "HIPOTESIS",
+      "feeds_anchor": "data parsial (F-14 SSI_mwd=0)"
+    },
+    {
+      "id": "Me5",
+      "m": "Method",
+      "branch": "Hirarki keluaran",
+      "twig": "Tier tanpa ambang kenaikan terkuantifikasi",
+      "cause": "Registry berisi 7 engine dan 27 head yang tersebar ke empat lapis (L0 = 5, L1 = 11, L2 = 9, L3 = 2), dengan sebaran tier 13 TREN, 12 PERINGATAN-BERPENGAWAS, 2 BELUM LAYAK PAKAI, tanpa aturan kenaikan tier yang dinyatakan sebagai ambang angka.",
+      "status": "TERBUKTI",
+      "status_note": "Dihitung ulang dari JSON registry pada sesi ini.",
+      "evidence": [
+        {
+          "file": "scratch/v9_i1/v9_i1_RESULTS.json",
+          "locator": "engines[].heads",
+          "value": {
+            "vib": 4,
+            "ssi": 4,
+            "shk": 4,
+            "stuck": 6,
+            "hyd": 4,
+            "bit_wear": 2,
+            "tool_wear": 3
+          },
+          "cara_verifikasi": "dibaca langsung sesi ini"
+        },
+        {
+          "file": "scratch/v9_i1/v9_i1_RESULTS.json",
+          "locator": "decision_layer.ringkasan",
+          "value": {
+            "L0": 5,
+            "L1": 11,
+            "L2": 9,
+            "L3": 2
+          },
+          "cara_verifikasi": "dibaca langsung sesi ini"
+        },
+        {
+          "file": "scratch/v9_i1/v9_i1_RESULTS.json",
+          "locator": "engines[].heads[].tier",
+          "value": {
+            "PERINGATAN-BERPENGAWAS": 12,
+            "TREN": 13,
+            "BELUM LAYAK PAKAI": 2
+          },
+          "cara_verifikasi": "dibaca langsung sesi ini"
+        }
+      ],
+      "impact": "Pembaca tidak dapat memprediksi kapan sebuah head naik dari TREN ke PERINGATAN.",
+      "impact_link": "HIPOTESIS",
+      "feeds_anchor": "tidak ada alarm otomatis (keputusan desain)"
+    },
+    {
+      "id": "Ma1",
+      "m": "Machine",
+      "branch": "Arsitektur keluaran alat",
+      "twig": "Tidak ada slot alarm otomatis",
+      "cause": "Alat tidak memiliki slot alarm otomatis kritis sama sekali (auto_critical_alarm_slots = 0), dan 0 dari 7 engine memenuhi syarat alarm. Ini keputusan desain yang dinyatakan, bukan kegagalan implementasi.",
+      "status": "TERBUKTI",
+      "status_note": "Nilai terbaca langsung dari JSON; pernyataan 0/7 engine terbaca di verdict.",
+      "evidence": [
+        {
+          "file": "scratch/v9_i1/v9_i1_RESULTS.json",
+          "locator": "auto_critical_alarm_slots",
+          "value": 0,
+          "cara_verifikasi": "dibaca langsung sesi ini"
+        },
+        {
+          "file": "docs/V8_PM_VERDICT.md",
+          "locator": "baris 180",
+          "value": "LAYAK alarm otomatis kritis: 0 / 7",
+          "cara_verifikasi": "dibaca langsung sesi ini"
+        },
+        {
+          "file": "docs/V8_PM_VERDICT.md",
+          "locator": "baris 41",
+          "value": "Keputusan \"layak tren/peringatan TETAPI belum alarm otomatis\" = keputusan wajar",
+          "cara_verifikasi": "dibaca langsung sesi ini"
+        }
+      ],
+      "impact": "Nilai alat terbatas pada kesadaran situasi, tidak pada pencegahan otomatis.",
+      "impact_link": "TERBUKTI",
+      "feeds_anchor": "tidak ada alarm otomatis (keputusan desain)"
+    },
+    {
+      "id": "Ma2",
+      "m": "Machine",
+      "branch": "Cakupan parser",
+      "twig": "Lebih dari separuh berkas log tidak terbaca",
+      "cause": "Parser CSV lama hanya menangani 8 kolom keluaran, sehingga 3906 dari 7150 berkas log (54,6 persen, yaitu F-1 C 2156 berkas dan F-11 1750 berkas) tidak pernah diparse menjadi time-series. Kurva sains seperti HKLD, TORQUE, MSE, MOTOR_RPM, dan FLOWIN-OUT juga tidak masuk ke CSV lama.",
+      "status": "TERBUKTI-DOKUMEN",
+      "status_note": "Angka berasal dari audit header 7150 berkas oleh tim; sesi ini tidak mengulang pemindaian 19 GB.",
+      "evidence": [
+        {
+          "file": "docs/V6_D0_READERS_SYNTHESIS.md",
+          "locator": "baris 49",
+          "value": "F-1 C (2156) + F-11 (1750) = 3906 file = 54,6% TIDAK diparse",
+          "cara_verifikasi": "dibaca langsung sesi ini"
+        },
+        {
+          "file": "docs/V6_D0_READERS_SYNTHESIS.md",
+          "locator": "baris 49",
+          "value": "1022 kurva di sample, 47-88 mnemonic per wellbore terlewat dari CSV parser lama",
+          "cara_verifikasi": "dibaca langsung sesi ini"
+        }
+      ],
+      "impact": "Dua wellbore terbesar tidak punya representasi fitur, sehingga generalisasi lintas sumur tidak dapat diuji pada mereka.",
+      "impact_link": "HIPOTESIS",
+      "feeds_anchor": "data parsial (F-14 SSI_mwd=0)"
+    },
+    {
+      "id": "Ma3",
+      "m": "Machine",
+      "branch": "Efek agregasi pipeline",
+      "twig": "Puncak sinyal teredam oleh bin menit",
+      "cause": "Agregasi ALL-rows ke satu nilai per menit berpotensi meredam puncak getaran dan torsi berdurasi detik, sehingga label status (VIBLAT, SSI) menjadi lebih konservatif daripada kejadian fisiknya.",
+      "status": "HIPOTESIS",
+      "status_note": "Belum diuji dengan membandingkan statistik bin terhadap data mentah beresolusi tinggi.",
+      "evidence": [
+        {
+          "file": "docs/ML_PROJECT_PROPOSAL_TECHNICAL_DESIGN.md",
+          "locator": "baris 1179",
+          "value": "Pemilihan 60 detik menjaga keseimbangan antara resolusi sinyal pengeboran dan volume data",
+          "cara_verifikasi": "dibaca langsung sesi ini"
+        }
+      ],
+      "impact": "Bila benar, sebagian positif palsu dan negatif palsu berasal dari agregasi, bukan dari model.",
+      "impact_link": "HIPOTESIS",
+      "feeds_anchor": "tidak ada alarm otomatis (keputusan desain)"
+    },
+    {
+      "id": "Ma4",
+      "m": "Machine",
+      "branch": "Cakupan pembuktian prototipe",
+      "twig": "Satu segmen nyata untuk enam dataset",
+      "cause": "Prototipe dijalankan pada satu segmen nyata, yaitu F-14, yang kebetulan satu-satunya wellbore hadir di keenam dataset rig. Perilaku alat pada sumur lain belum diuji sebagai sistem utuh.",
+      "status": "TERBUKTI",
+      "status_note": "Terbaca dari metadata prototipe dan daftar segmen per kelas.",
+      "evidence": [
+        {
+          "file": "scratch/v9_i1/v9_i1_RESULTS.json",
+          "locator": "meta.segmen_rig",
+          "value": "F-14",
+          "cara_verifikasi": "dibaca langsung sesi ini"
+        },
+        {
+          "file": "scratch/v9_i1/v9_i1_RESULTS.json",
+          "locator": "segmen_info.*.n",
+          "value": {
+            "vib": 1989,
+            "ssi": 5455,
+            "shk": 11205,
+            "stuck_k1": 3201,
+            "stuck_k2": 95925,
+            "hyd_ki": 10401
+          },
+          "cara_verifikasi": "dibaca langsung sesi ini"
+        }
+      ],
+      "impact": "Klaim operasional lintas sumur belum punya bukti integrasi.",
+      "impact_link": "HIPOTESIS",
+      "feeds_anchor": "ambang tidak portabel (FAR 119,6x)"
+    },
+    {
+      "id": "Mt1",
+      "m": "Material",
+      "branch": "Integritas kanal permukaan",
+      "twig": "Dua kanal yang sebenarnya satu",
+      "cause": "Kanal WHIRL_RT dan BOUNCE_RT identik, yaitu 67 berkas pada 5 wellbore dan 1790 dari 1790 nilai identik di F-9, sehingga keduanya tidak boleh diperlakukan sebagai dua fitur atau dua gejala berbeda.",
+      "status": "TERBUKTI-DOKUMEN",
+      "status_note": "Audit tim menyatakan hasil ripgrep dan parse XML yang eksak; sesi ini tidak mengulang pemindaian 19 GB maupun parse 1790 baris.",
+      "evidence": [
+        {
+          "file": "docs/V6_A1_DATA_AUDIT.md",
+          "locator": "baris 100",
+          "value": "WHIRL 67 file; BOUNCE 70 file; keduanya 67; distribusi F-9 23 / F-14 19 / F-5 16 / F-15S 5 / F-1 4",
+          "cara_verifikasi": "dibaca langsung sesi ini"
+        },
+        {
+          "file": "docs/V6_A1_DATA_AUDIT.md",
+          "locator": "baris 101",
+          "value": "WHIRL == BOUNCE identik 1790/1790 di F-9 (1790 non-null bersama, 0 beda)",
+          "cara_verifikasi": "dibaca langsung sesi ini"
+        },
+        {
+          "file": "docs/V6_D0_READERS_SYNTHESIS.md",
+          "locator": "baris 174",
+          "value": "Row-level identik: 1790/1790 (F-9), 368/368 (F-5), 5/5 (F-15S), 15/15 (F-1); 67 file / 5 wellbore",
+          "cara_verifikasi": "dibaca langsung sesi ini"
+        }
+      ],
+      "impact": "Fitur ganda menggelembungkan dimensi tanpa informasi baru dan menyesatkan seleksi fitur.",
+      "impact_link": "HIPOTESIS",
+      "feeds_anchor": "kanal surface ter-alias (WHIRL == BOUNCE)"
+    },
+    {
+      "id": "Mt2",
+      "m": "Material",
+      "branch": "Kelengkapan kanal MWD",
+      "twig": "Nodata CRPM masif dan kanal mati per sumur",
+      "cause": "Kanal CRPM yang menjadi bahan rumus SSI tidak lengkap: 22385 dari 35906 jendela (62.34 persen) tanpa data pada agregat sembilan fold, dan dua sumur praktis mati kanal (F-7 982/982, F-9 1126/1126).",
+      "status": "TERBUKTI",
+      "status_note": "Agregat nodata terbaca dari JSON evaluasi; status kanal mati F-7 dan F-9 tercatat di dokumen audit. Rincian per sumur untuk seluruh sembilan sumur belum dihitung ulang.",
+      "evidence": [
+        {
+          "file": "scratch/v9_eval_c/v9_eval_c_RESULTS.json",
+          "locator": "C_rule_status.ssi.sensor_nodata_rule",
+          "value": {
+            "n_nodata": 22385,
+            "n_total": 35906,
+            "frac": 0.6234
+          },
+          "cara_verifikasi": "dibaca langsung sesi ini"
+        },
+        {
+          "file": "docs/V9_A1_AUDIT.md",
+          "locator": "baris 56",
+          "value": "n_nodata per well F-7 982/982 & F-9 1.126/1.126 = kelas mati sensor",
+          "cara_verifikasi": "dibaca langsung sesi ini"
+        },
+        {
+          "file": "scratch/v9_d1/v9_d1_01_summary.json",
+          "locator": "wells.F-14.bins_with_crpm_obs",
+          "value": "11794 dari n_bins 96698 (nodata 87.80% atas grid bin; nodata 6.66% atas bin drilling)",
+          "cara_verifikasi": "dibaca langsung sesi ini"
+        }
+      ],
+      "impact": "Deteksi stick-slip tidak dapat berdiri sebagai layanan penuh pada sumur dengan kanal mati.",
+      "impact_link": "TERBUKTI",
+      "feeds_anchor": "data parsial (F-14 SSI_mwd=0)"
+    },
+    {
+      "id": "Mt3",
+      "m": "Material",
+      "branch": "Makna basis kejadian",
+      "twig": "Kejadian tercatat bukan sama dengan kegagalan",
+      "cause": "Dari 884 kejadian terkurasi, 496 (56.1 persen) tidak memuat bukti kegagalan, 47 bukti campuran, dan 28 kegagalan tanpa lokasi. Hanya 50 kejadian menyangkut BHA (stuck atau fishing serta peralatan downhole).",
+      "status": "TERBUKTI",
+      "status_note": "Distribusi dihitung ulang penuh dari CSV pada sesi ini.",
+      "evidence": [
+        {
+          "file": "data/volve/labels_curated_v2.csv",
+          "locator": "kolom category, 884 baris",
+          "value": {
+            "surface_rig_equipment": 216,
+            "safety_personnel": 1,
+            "bha_stuck_fishing": 38,
+            "routine_no_failure_evidence": 496,
+            "mixed_evidence": 47,
+            "failure_unlocated": 28,
+            "bha_downhole_equipment": 12,
+            "wellbore_fluid": 25,
+            "wireline_completion_intervention": 21
+          },
+          "cara_verifikasi": "dibaca langsung sesi ini"
+        }
+      ],
+      "impact": "Setiap klaim dampak harus menyebut basis yang dipakai, karena 56,1 persen basis bukan kegagalan.",
+      "impact_link": "TERBUKTI",
+      "feeds_anchor": "label cacat (G7)"
+    },
+    {
+      "id": "Mt4",
+      "m": "Material",
+      "branch": "Ketidakseimbangan kelas",
+      "twig": "Prevalensi positif sangat rendah",
+      "cause": "Prevalensi positif per sumur sangat rendah dan tidak seragam, misalnya ssi F-15A 1 dari 194 atau 0,51 persen dan F-7 3 dari 982 atau 0,31 persen, sehingga AUPRC rendah tidak otomatis berarti model buruk.",
+      "status": "TERBUKTI",
+      "status_note": "Prevalensi dihitung dari n dan pos per fold yang terbaca di JSON evaluasi.",
+      "evidence": [
+        {
+          "file": "scratch/v9_eval_a/v9_eval_a_RESULTS.json",
+          "locator": "rule_status.classes.ssi.folds[].prev",
+          "value": {
+            "F-10": 0.022571,
+            "F-12": 0.019334,
+            "F-14": 0.013749,
+            "F-15A": 0.00515,
+            "F-15_S": 0.015912,
+            "F-5": 0.021638,
+            "F-7": 0.003055,
+            "F-9": 0.010657,
+            "F-9_A": 0.065398
+          },
+          "cara_verifikasi": "dibaca langsung sesi ini"
+        }
+      ],
+      "impact": "Ambang tunggal bertabrakan dengan prevalensi yang berbeda satu orde besaran antar sumur.",
+      "impact_link": "HIPOTESIS",
+      "feeds_anchor": "ambang tidak portabel (FAR 119,6x)"
+    },
+    {
+      "id": "Ms1",
+      "m": "Measurement",
+      "branch": "Basis waktu",
+      "twig": "Asal kalender tidak terverifikasi",
+      "cause": "Waktu pada dataset turunan adalah indeks menit internal (ts_bin), dan asal kalender dinyatakan belum diverifikasi. Join dengan tanggal kejadian pada CSV label karena itu rentan pergeseran.",
+      "status": "TERBUKTI",
+      "status_note": "Kalimat peringatan terbaca langsung pada metadata segmen. Besar pergeseran belum diukur.",
+      "evidence": [
+        {
+          "file": "scratch/v9_i1/v9_i1_RESULTS.json",
+          "locator": "segmen_info.vib.catatan_waktu",
+          "value": "ts_bin = indeks menit internal D1; asal kalender TIDAK diverifikasi di sesi ini",
+          "cara_verifikasi": "dibaca langsung sesi ini"
+        },
+        {
+          "file": "scratch/v9_i1/v9_i1_RESULTS.json",
+          "locator": "segmen_info.ssi",
+          "value": {
+            "ts_bin_min": 19947192,
+            "ts_bin_max": 20223025,
+            "n": 5455
+          },
+          "cara_verifikasi": "dibaca langsung sesi ini"
+        }
+      ],
+      "impact": "Kesalahan sejajar waktu memindahkan label terhadap fitur dan merusak recall secara sistematis.",
+      "impact_link": "HIPOTESIS",
+      "feeds_anchor": "label cacat (G7)"
+    },
+    {
+      "id": "Ms2",
+      "m": "Measurement",
+      "branch": "Satuan metrik",
+      "twig": "FAR dilaporkan dalam satuan berbeda",
+      "cause": "Laju alarm palsu muncul dalam beberapa satuan pada berkas hasil yang berbeda (FAR_24jam, far_24h, dan far per jendela), sehingga perbandingan lintas engine rawan salah baca bila satuannya tidak diseragamkan lebih dulu.",
+      "status": "TERBUKTI",
+      "status_note": "Perbedaan nama kunci teramati langsung pada tiga berkas JSON hasil eksekusi.",
+      "evidence": [
+        {
+          "file": "scratch/v9_e_ml/v9_e_ML_vib_RESULTS.json",
+          "locator": "folds[].models.rf.tau_metrics[\"0.5\"].FAR_24jam",
+          "value": "4.14897 s/d 496.09249",
+          "cara_verifikasi": "dibaca langsung sesi ini"
+        },
+        {
+          "file": "scratch/v9_e_rule/v9_e_RULE_01_status_results.json",
+          "locator": "classes.*.folds[].persistence.far_24h",
+          "value": "kunci bernama far_24h dengan satuan jam yang sama",
+          "cara_verifikasi": "dibaca langsung sesi ini"
+        }
+      ],
+      "impact": "Ambang kelayakan (misalnya FAR maksimum 1 per 24 jam) tidak dapat dibandingkan sebelum diseragamkan.",
+      "impact_link": "TERBUKTI",
+      "feeds_anchor": "ambang tidak portabel (FAR 119,6x)"
+    },
+    {
+      "id": "Ms3",
+      "m": "Measurement",
+      "branch": "Skala penilaian risiko",
+      "twig": "Skor FMEA tanpa skala berjustifikasi",
+      "cause": "Angka severity, occurrence, dan detection pada tabel FMEA draft ditulis langsung sebagai literal pada skrip pembuat dokumen, bukan hasil penilaian dengan skala rujukan. Perkalian RPN-nya sendiri konsisten, yang belum berdasar adalah nilai masukannya.",
+      "status": "TERBUKTI",
+      "status_note": "Terekam pada ledger angka kartu t_0eb03f13 dan sesi generator 13 Agustus 2026; bukan hasil pengukuran data.",
+      "evidence": [
+        {
+          "file": "docs/PPT1_LEDGER_ANGKA.md",
+          "locator": "grup A_draft_docx / temuan_kunci FMEA",
+          "value": "S/O/D literal di generator; RPN sendiri benar 5/5",
+          "cara_verifikasi": "dibaca langsung sesi ini"
+        },
+        {
+          "file": "scratch/ppt1/ledger.json",
+          "locator": "entri grup A (draft docx)",
+          "value": "9 ASUMSI terinventaris, termasuk skor FMEA",
+          "cara_verifikasi": "dibaca langsung sesi ini"
+        }
+      ],
+      "impact": "Prioritas perbaikan yang diturunkan dari RPN tidak dapat dipertahankan di sidang.",
+      "impact_link": "TERBUKTI",
+      "feeds_anchor": "label cacat (G7)"
+    },
+    {
+      "id": "Ms4",
+      "m": "Measurement",
+      "branch": "Target kinerja",
+      "twig": "Target belum pernah tercapai hasil terukur",
+      "cause": "Target recall 0,70 sampai 0,80 dan target lead time 10 sampai 30 menit belum dicapai oleh hasil terukur mana pun; lead time yang benar-benar terukur hanya 4,5 sampai 8,5 menit dan itu pun terbatas pada satu kelas.",
+      "status": "TERBUKTI-DOKUMEN",
+      "status_note": "Tercatat pada verdict staf dan ledger angka; sesi ini tidak menghitung ulang lead time.",
+      "evidence": [
+        {
+          "file": "docs/V8_PM_VERDICT.md",
+          "locator": "baris 186",
+          "value": "0 alarm otomatis, 3 peringatan operasional terbukti",
+          "cara_verifikasi": "dibaca langsung sesi ini"
+        },
+        {
+          "file": "docs/PPT1_LEDGER_ANGKA.md",
+          "locator": "temuan_kunci (target KPI)",
+          "value": "recall 0,70-0,80 dan lead 10-30 menit adalah TARGET, belum tercapai",
+          "cara_verifikasi": "dibaca langsung sesi ini"
+        }
+      ],
+      "impact": "Setiap kalimat proposal yang menyebut target harus ditulis sebagai target, bukan capaian.",
+      "impact_link": "TERBUKTI",
+      "feeds_anchor": "ambang tidak portabel (FAR 119,6x)"
+    },
+    {
+      "id": "Ms5",
+      "m": "Measurement",
+      "branch": "Definisi label vs metrik",
+      "twig": "Deteksi kondisi disamakan dengan prediksi onset",
+      "cause": "Label ssi didefinisikan sebagai deteksi kondisi berlangsung (SSI minimal 1), bukan onset, sehingga angka recall-nya tidak sebanding dengan head yang didefinisikan sebagai onset.",
+      "status": "TERBUKTI-DOKUMEN",
+      "status_note": "Definisi tercatat pada dokumen desain teknis; perbandingan metrik belum diuji ulang.",
+      "evidence": [
+        {
+          "file": "docs/ML_PROJECT_PROPOSAL_TECHNICAL_DESIGN.md",
+          "locator": "baris 3208",
+          "value": "ssi = deteksi kondisi, SSI(CRPM_RT) minimal 1, bukan onset/diagnosis",
+          "cara_verifikasi": "dibaca langsung sesi ini"
+        },
+        {
+          "file": "docs/ML_PROJECT_PROPOSAL_TECHNICAL_DESIGN.md",
+          "locator": "baris 1567",
+          "value": "y = 1[SSI >= 1]; SSI_MIN_SAMPLES=10",
+          "cara_verifikasi": "dibaca langsung sesi ini"
+        }
+      ],
+      "impact": "Tabel perbandingan lintas kelas mencampur dua jenis tugas yang berbeda.",
+      "impact_link": "HIPOTESIS",
+      "feeds_anchor": "label cacat (G7)"
+    },
+    {
+      "id": "En1",
+      "m": "Environment",
+      "branch": "Sensor peralatan downhole",
+      "twig": "Rating motor tidak tersedia",
+      "cause": "Rating motor (torqueMax, Pmax, rpmMax, powerMax) tidak ada pada 0 dari 192 berkas BHA, sehingga batas operasi motor tidak dapat dipakai sebagai pembanding beban terukur.",
+      "status": "TERBUKTI-DOKUMEN",
+      "status_note": "Klaim ketiadaan diuji tim dengan grep pada 192 berkas dan dinyatakan eksak; sesi ini tidak mengulang grep tersebut.",
+      "evidence": [
+        {
+          "file": "docs/V6_A1_DATA_AUDIT.md",
+          "locator": "baris 58",
+          "value": "Rating motor 0/192 (torqueMax/Pmax/revPerGallon/rpmMax/powerMax/torque); flowrateMx 9 file",
+          "cara_verifikasi": "dibaca langsung sesi ini"
+        },
+        {
+          "file": "docs/V10_D1_BAB_DATA.md",
+          "locator": "baris 173",
+          "value": "Rating motor 0 dari 192 berkas, absen terverifikasi",
+          "cara_verifikasi": "dibaca langsung sesi ini"
+        },
+        {
+          "file": "docs/ML_PROJECT_PROPOSAL_TECHNICAL_DESIGN.md",
+          "locator": "baris 1031",
+          "value": "Rating motor 0 dari 192 berkas",
+          "cara_verifikasi": "dibaca langsung sesi ini"
+        }
+      ],
+      "impact": "Beban motor tidak dapat dinormalkan, sehingga label keausan berbasis beban tidak dapat dibentuk.",
+      "impact_link": "HIPOTESIS",
+      "feeds_anchor": "keterbatasan sensor (tidak ada rating motor)"
+    },
+    {
+      "id": "En2",
+      "m": "Environment",
+      "branch": "Sensor tekanan formasi",
+      "twig": "Tekanan EDM tidak terukur sebagai deret",
+      "cause": "Tekanan pori EDM berfase ACTUAL hanya tersedia 8 baris dan semuanya berada di datum air laut (tvd 298,56 ft), sedangkan kurva tekanan formasi atau mud weight untuk indikator overbalance dinyatakan tidak ada setelah empat lapis pemeriksaan.",
+      "status": "TERBUKTI-DOKUMEN",
+      "status_note": "Angka 8 baris dan hasil 0 hit tercatat pada dokumen pemeriksaan data; sesi ini tidak membuka ulang XML EDM.",
+      "evidence": [
+        {
+          "file": "docs/V7_M2_SYNTHESIS.md",
+          "locator": "baris 58",
+          "value": "8 baris semua di datum air laut (tvd 298,56 ft); overbalance EDM = PLAN/PROTOTYPE",
+          "cara_verifikasi": "dibaca langsung sesi ini"
+        },
+        {
+          "file": "docs/V7_D1f_DATA_CHECK.md",
+          "locator": "baris 45",
+          "value": "kurva tekanan/mud weight/hydrostatic/pore pressure TIDAK ADA; 4 lapis pemeriksaan, 0 hit",
+          "cara_verifikasi": "dibaca langsung sesi ini"
+        }
+      ],
+      "impact": "Indikator overbalance tidak dapat dibangun, sehingga penyebab hidraulik tidak dapat divalidasi fisik.",
+      "impact_link": "HIPOTESIS",
+      "feeds_anchor": "keterbatasan sensor (tidak ada tekanan EDM)"
+    },
+    {
+      "id": "En3",
+      "m": "Environment",
+      "branch": "Riwayat peralatan",
+      "twig": "Tidak ada catatan kondisi bit",
+      "cause": "Informasi penajaman bit (dullingInfo) tidak ada pada 0 dari 161 berkas, sehingga keausan bit hanya dapat didekati dari identitas run, bukan dari kondisi bit yang tercatat.",
+      "status": "TERBUKTI-DOKUMEN",
+      "status_note": "Klaim ketiadaan dinyatakan eksak oleh audit tim; sesi ini tidak mengulang grep.",
+      "evidence": [
+        {
+          "file": "docs/V6_A1_DATA_AUDIT.md",
+          "locator": "baris 146",
+          "value": "Klaim \"rating motor 0/192\", \"dullingInfo 0/161\": independent EXACT",
+          "cara_verifikasi": "dibaca langsung sesi ini"
+        }
+      ],
+      "impact": "Kelas bit_wear hanya bisa berstatus tren, tidak bisa menjadi diagnosis keausan.",
+      "impact_link": "HIPOTESIS",
+      "feeds_anchor": "keterbatasan sensor (tidak ada rating motor)"
+    },
+    {
+      "id": "En4",
+      "m": "Environment",
+      "branch": "Variasi kondisi antar sumur",
+      "twig": "Porsi operasi pengeboran berbeda tajam",
+      "cause": "Porsi waktu pengeboran terhadap seluruh grid berbeda tajam antar sumur. Pada F-14, 12635 dari 96698 bin (13.1 persen) adalah bin pengeboran, sedangkan pada F-12 hanya 23931 dari 180958 bin (13.2 persen).",
+      "status": "TERBUKTI",
+      "status_note": "Dihitung ulang dari ringkasan grid pada sesi ini.",
+      "evidence": [
+        {
+          "file": "scratch/v9_d1/v9_d1_01_summary.json",
+          "locator": "wells.*.n_bins dan wells.*.n_bins_drill",
+          "value": {
+            "F-5": {
+              "n_bins": 67934,
+              "n_bins_drill": 10233
+            },
+            "F-7": {
+              "n_bins": 34533,
+              "n_bins_drill": 3671
+            },
+            "F-9": {
+              "n_bins": 25460,
+              "n_bins_drill": 2197
+            },
+            "F-9_A": {
+              "n_bins": 27282,
+              "n_bins_drill": 2530
+            },
+            "F-10": {
+              "n_bins": 41446,
+              "n_bins_drill": 13781
+            },
+            "F-12": {
+              "n_bins": 180958,
+              "n_bins_drill": 23931
+            },
+            "F-14": {
+              "n_bins": 96698,
+              "n_bins_drill": 12635
+            },
+            "F-15A": {
+              "n_bins": 44347,
+              "n_bins_drill": 11853
+            },
+            "F-15_S": {
+              "n_bins": 101630,
+              "n_bins_drill": 13543
+            }
+          },
+          "cara_verifikasi": "dibaca langsung sesi ini"
+        }
+      ],
+      "impact": "Prevalensi dan FAR yang dihitung atas seluruh grid tidak sebanding antar sumur.",
+      "impact_link": "TERBUKTI",
+      "feeds_anchor": "ambang tidak portabel (FAR 119,6x)"
+    },
+    {
+      "id": "En5",
+      "m": "Environment",
+      "branch": "Kualitas kanal getaran",
+      "twig": "Kanal ada tetapi tanpa observasi",
+      "cause": "Pada F-10 kanal VIBLAT_RT tercatat hadir, tetapi jumlah bin dengan observasi getaran adalah 0. Kanal yang ada di skema tidak menjamin ada data.",
+      "status": "TERBUKTI",
+      "status_note": "Nilai terbaca langsung dari ringkasan grid; penyebab operasionalnya belum diketahui.",
+      "evidence": [
+        {
+          "file": "scratch/v9_d1/v9_d1_01_summary.json",
+          "locator": "wells.F-10.bins_with_vib_obs",
+          "value": 0,
+          "cara_verifikasi": "dibaca langsung sesi ini"
+        },
+        {
+          "file": "scratch/v9_d1/v9_d1_01_summary.json",
+          "locator": "wells.F-10.label_channels_present",
+          "value": [
+            "SHKRSK_RT",
+            "STUCK_RT",
+            "VIBLAT_RT"
+          ],
+          "cara_verifikasi": "dibaca langsung sesi ini"
+        }
+      ],
+      "impact": "Uji vib tidak dapat dilakukan pada sumur yang kanalnya kosong; ini membatasi jumlah fold layak.",
+      "impact_link": "TERBUKTI",
+      "feeds_anchor": "data parsial (F-14 SSI_mwd=0)"
+    }
+  ],
+  "catatan_kejujuran_angka": {
+    "96,6 persen nodata CRPM F-14": {
+      "status": "TIDAK TEREPRODUKSI",
+      "dokumen": "docs/ML_PROJECT_PROPOSAL_TECHNICAL_DESIGN.md baris 563 dan 3312",
+      "hasil_uji": "Dari scratch/v9_d1/v9_d1_01_summary.json, F-14 memiliki bins_with_crpm_obs 11794 dari n_bins 96698 (nodata 87.80 persen) dan dari n_bins_drill 12635 (nodata 6.66 persen). Tidak ada penyebut yang menghasilkan 96,6 persen.",
+      "tindakan": "Angka itu tidak dipakai sebagai landasan. Yang dipakai adalah 62,34 persen agregat sembilan fold dan 87,80 persen untuk F-14 atas seluruh grid bin, keduanya dapat dihitung ulang."
+    },
+    "token SSI_mwd": {
+      "status": "TIDAK DITEMUKAN",
+      "hasil_uji": "Pencarian ripgrep pada docs/ v2 dan docs/ arsip: 0 kecocokan.",
+      "tindakan": "Frasa pada kartu dipetakan ke kuantitas terukur yang setara: jumlah jendela SSI valid F-14 = 5455 dari 96698 bin (5.64 persen), positif 75, serta nodata CRPM agregat 62.34 persen."
+    }
+  },
+  "sumber_tidak_dihitung_ulang": [
+    "Kontrol-positif 0/10 (dokumen audit, bukan eksekusi sesi ini)",
+    "WHIRL == BOUNCE 1790/1790 (dokumen audit; pemindaian 19 GB tidak diulang)",
+    "3906/7150 berkas tidak diparse (dokumen audit)",
+    "Rating motor 0/192 dan dullingInfo 0/161 (dokumen audit)",
+    "EDM ACTUAL 8 baris di datum (dokumen pemeriksaan)",
+    "CI95 5/9 fold menyentuh no-skill (dokumen desain)",
+    "Lead time terukur 4,5-8,5 menit (verdict staf)"
+  ]
+}

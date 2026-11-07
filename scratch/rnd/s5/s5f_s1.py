@@ -1,0 +1,13 @@
+import json, pathlib
+B = pathlib.Path("/mnt/d/Capstone 1(v2)/scratch/rnd")
+s1 = json.loads((B / "s1/s1_hyd_seeds.json").read_text(encoding="utf-8"))
+print("top:", list(s1.keys()))
+print("per_seed 42 keys:", list(s1["per_seed"]["42"].keys()))
+print("ringkas 42:", json.dumps(s1["per_seed"]["42"]["ringkas"], ensure_ascii=False))
+k = s1.get("kontrol_stokastik", {})
+print("kontrol keys:", list(k.keys()))
+print("kontrol dump:", json.dumps(k, ensure_ascii=False)[:900])
+print()
+sat = json.loads((B / "s1/s1_h_saturasi.json").read_text(encoding="utf-8"))
+print("saturasi top:", list(sat.keys()))
+print("saturasi dump:", json.dumps(sat, ensure_ascii=False)[:600])

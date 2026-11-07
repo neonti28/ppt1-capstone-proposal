@@ -1,0 +1,10 @@
+V1 FP E_RULE re-sum == tersimpan: 17/17
+V1b FP E1 onset re-sum (422) == tersimpan (422): True
+V2 B1 stuck RF tau0.05 re-extract == tersimpan: True ([0.5074626865671642, 1.0, 1.0, 1.0] vs [0.5074626865671642, 1.0, 1.0, 1.0])
+V3 B4(vib persistence) recompute alternatif (index-based, spesifikasi sama) == skrip02: True (n_alt=27 n_ref=27; blocks_alt=216)
+V4 vib: AUPRC 4/4, TP/FP 20/20
+V4 ssi: AUPRC 9/9, TP/FP 45/45
+V4 shk: AUPRC 9/9, TP/FP 45/45
+V4 identitas RF keseluruhan: SEMUA MATCH
+V5 FP(prediksi ulang) == FP fold E_RULE: 16/16
+V6 formula B3 self-consistency: 62/62

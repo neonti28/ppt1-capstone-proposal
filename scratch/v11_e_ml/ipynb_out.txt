@@ -1,0 +1,68 @@
+=== kandidat_1 ===
+  md: 255 baris non-kosong | ipynb: 37 sel {'markdown': 25, 'code': 12}, 715 baris non-kosong
+  md headings = 43 | ipynb headings = 78
+  heading di md TIDAK ada di ipynb: 0
+  heading di ipynb TIDAK ada di md: 35
+     + # ============ VIS 0: SETUP DAN MUAT DATA PRIMER ============
+     + # berkas primer (semua angka notebook berasal dari sini, bukan dari ingatan)
+     + # ============ VIS 1: DISTRIBUSI LABEL (DATA/LABELING) ============
+     + # (a) label per wellbore
+     + # (b) status relevansi BHA (hasil kurasi)
+     + # (c) kategori peristiwa teratas
+     + # ============ VIS 2: KELENGKAPAN DATA DAN KEKOSONGAN JENDELA ============
+     + # (a) heatmap kelengkapan per sumur x kanal
+     + # (b) unit dengan jendela kosong per kelas (kampanye T2-e primer)
+     + # ============ VIS 3: DISTRIBUSI FITUR DAN KORELASI ANTAR KANAL ============
+     + # (a) enam panel kecil: masing-masing kanal dengan skala sendiri
+     + # (b) korelasi antar kanal pada baris bersih (NaN dibuang dulu)
+     + # ============ VIS 4: PELATIHAN LOWO + CONFUSION MATRIX / ROC / PR / KALIBRASI ============
+     + # unit demo = seluruh peristiwa (661) + seluruh kontrol (6.618)
+     + # (a) confusion matrix pada ambang 0,5
+  baris md hilang di ipynb: 0 (0.0%)
+  baris ipynb di luar md: 460 (64.3%)
+     + > ## ARSIP VISUALISASI KAMPANYE LAMA (BUKAN BAGIAN NARASI PROPOSAL)
+     + >
+     + > Seluruh *code cell* dan visualisasi di bawah berasal dari versi dokumen sebelumnya
+     + > (kampanye evaluasi lama). Riwayat kegagalan kampanye tersebut sudah dipindah ke
+     + > `CHANGELOG.md`. Visualisasi dipertahankan di sini sebagai **arsip bukti** agar angka
+     + > lama tetap dapat diperiksa, tetapi bukan bagian dari narasi proposal saat ini.
+     + >
+     + > Berkas arsip: `docs/ML_PROJECT_PROPOSAL_TECHNICAL_DESIGN.v2_arsip.ipynb` (versi utuh lama)
+  baris kunci bab-ML: md=8 ipynb=10
+  sha256 md=75eb836c1a6b5aac ip_text_sha=2429c1da10f6a35a
+
+=== kandidat_2 ===
+  md: 2829 baris non-kosong | ipynb: 221 sel {'markdown': 209, 'code': 12}, 3288 baris non-kosong
+  md headings = 208 | ipynb headings = 243
+  heading di md TIDAK ada di ipynb: 0
+  heading di ipynb TIDAK ada di md: 35
+     + # ============ VIS 0: SETUP DAN MUAT DATA PRIMER ============
+     + # berkas primer (semua angka notebook berasal dari sini, bukan dari ingatan)
+     + # ============ VIS 1: DISTRIBUSI LABEL (DATA/LABELING) ============
+     + # (a) label per wellbore
+     + # (b) status relevansi BHA (hasil kurasi)
+     + # (c) kategori peristiwa teratas
+     + # ============ VIS 2: KELENGKAPAN DATA DAN KEKOSONGAN JENDELA ============
+     + # (a) heatmap kelengkapan per sumur x kanal
+     + # (b) unit dengan jendela kosong per kelas (kampanye T2-e primer)
+     + # ============ VIS 3: DISTRIBUSI FITUR DAN KORELASI ANTAR KANAL ============
+     + # (a) enam panel kecil: masing-masing kanal dengan skala sendiri
+     + # (b) korelasi antar kanal pada baris bersih (NaN dibuang dulu)
+     + # ============ VIS 4: PELATIHAN LOWO + CONFUSION MATRIX / ROC / PR / KALIBRASI ============
+     + # unit demo = seluruh peristiwa (661) + seluruh kontrol (6.618)
+     + # (a) confusion matrix pada ambang 0,5
+  baris md hilang di ipynb: 2 (0.1%)
+     -   B1 di **9/9 fold** (TLead median 5,0 mnt; angka kampanye V8 pra-reg onset `v8_e_shk_02b`,
+     -   bukan V9 yang hanya mengukur status) → ML menambah nilai peringatan dini di atas
+  baris ipynb di luar md: 461 (14.0%)
+     +   B1 di **9/9 fold** (TLead median 5,0 mnt; angka kampanye V8 pra-reg onset `v8_e_shk_02b`,\nbukan V9 yang hanya mengukur status) 
+     + > ## ARSIP VISUALISASI KAMPANYE LAMA (BUKAN BAGIAN NARASI PROPOSAL)
+     + >
+     + > Seluruh *code cell* dan visualisasi di bawah berasal dari versi dokumen sebelumnya
+     + > (kampanye evaluasi lama). Riwayat kegagalan kampanye tersebut sudah dipindah ke
+     + > `CHANGELOG.md`. Visualisasi dipertahankan di sini sebagai **arsip bukti** agar angka
+     + > lama tetap dapat diperiksa, tetapi bukan bagian dari narasi proposal saat ini.
+     + >
+  baris kunci bab-ML: md=82 ipynb=84
+  sha256 md=723f0817b99b6490 ip_text_sha=2cd899fc9096d82a
+

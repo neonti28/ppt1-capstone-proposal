@@ -2,7 +2,7 @@
 
 Kartu: `t_246de62e` · Board: `rnd-algo-2026` · Tanggal: 2026-10-27 (WIB)
 Workspace: `/mnt/d/Capstone 1(v2)` · Folder arsip `/mnt/d/Capstone 1` tidak disentuh.
-Ruang lingkup: 7 engine (vib, ssi, shk, stuck, hyd, bit_wear, tool_wear), 11 klaim (K-i/K-ii), 27 head.
+Ruang lingkup: 7 mode (vib, ssi, shk, stuck, hyd, bit_wear, tool_wear), 11 klaim (K-i/K-ii), 27 head.
 
 ## Riset pendahuluan
 

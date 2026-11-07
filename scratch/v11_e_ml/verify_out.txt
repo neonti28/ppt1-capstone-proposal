@@ -1,0 +1,181 @@
+=== A. fold counts, features, kontrak ===
+vib: folds=4 n_features=55 seed=42 taus=[0.05, 0.1, 0.2, 0.3, 0.5]
+   ci95=moving-block bootstrap circular, block=60, n_boot=1000, seed=42
+   jenis_task=status_detection | klaim=deteksi kondisi (status VIBLAT>=32.17405)
+   hyperparams.rf={'n_estimators': 300, 'min_samples_leaf': 5, 'class_weight': 'balanced_subsample', 'random_state': 42}
+   hyperparams.gb={'n_estimators': 200, 'learning_rate': 0.1, 'max_depth': 3, 'random_state': 42}
+   hyperparams.lr={'imputer': 'median fold-safe', 'scale': 'StandardScaler fold-safe', 'max_iter': 1000, 'class_weight': 'balanced', 'random_state': 42}
+   software={'sklearn': '1.9.1', 'numpy': '2.5.3', 'pandas': '2.3.3'}
+ssi: folds=9 n_features=55 seed=42 taus=[0.05, 0.1, 0.2, 0.3, 0.5]
+   ci95=moving-block bootstrap circular, block=60, n_boot=1000, seed=42
+   jenis_task=status_detection | klaim=deteksi kondisi (status SSI>=1)
+   hyperparams.rf={'n_estimators': 300, 'min_samples_leaf': 5, 'class_weight': 'balanced_subsample', 'random_state': 42}
+   hyperparams.gb={'n_estimators': 200, 'learning_rate': 0.1, 'max_depth': 3, 'random_state': 42}
+   hyperparams.lr={'imputer': 'median fold-safe', 'scale': 'StandardScaler fold-safe', 'max_iter': 1000, 'class_weight': 'balanced', 'random_state': 42}
+   software={'sklearn': '1.9.1', 'numpy': '2.5.3', 'pandas': '2.3.3'}
+shk: folds=9 n_features=55 seed=42 taus=[0.05, 0.1, 0.2, 0.3, 0.5]
+   ci95=moving-block bootstrap circular, block=60, n_boot=1000, seed=42
+   jenis_task=status_detection | klaim=deteksi anomali berlangsung (status SHKRSK>=1)
+   hyperparams.rf={'n_estimators': 300, 'min_samples_leaf': 5, 'class_weight': 'balanced_subsample', 'random_state': 42}
+   hyperparams.gb={'n_estimators': 200, 'learning_rate': 0.1, 'max_depth': 3, 'random_state': 42}
+   hyperparams.lr={'imputer': 'median fold-safe', 'scale': 'StandardScaler fold-safe', 'max_iter': 1000, 'class_weight': 'balanced', 'random_state': 42}
+   software={'sklearn': '1.9.1', 'numpy': '2.5.3', 'pandas': '2.3.3'}
+stuck_k2: folds=4 n_features=55 seed=42 taus=[0.05, 0.1, 0.2, 0.3, 0.5]
+   ci95=moving-block bootstrap circular, block=60, n_boot=1000, seed=42
+   jenis_task=onset_prediction | klaim=prediksi kejadian mendatang (onset STUCK 0->1, H=10 mnt)
+   hyperparams.rf={'n_estimators': 200, 'min_samples_leaf': 5, 'class_weight': 'balanced_subsample', 'random_state': 42}
+   hyperparams.gb={'n_estimators': 200, 'learning_rate': 0.1, 'max_depth': 3, 'random_state': 42}
+   hyperparams.lr={'imputer': 'median fold-safe', 'scale': 'StandardScaler fold-safe', 'max_iter': 1000, 'class_weight': 'balanced', 'random_state': 42}
+   software={'sklearn': '1.9.1', 'numpy': '2.5.3', 'pandas': '2.3.3'}
+TOTAL folds = 26
+feature list identical 4 engines: True
+n feature_cols: {'vib': 55, 'ssi': 55, 'shk': 55, 'stuck_k2': 55}
+
+=== B. agregat RF vs tabel kandidat 2 ===
+vib: json min=0.4405 max=0.9117 spread=0.4712 canary=4/4 fold layak pers=2/4 fold layak
+        K2  min=0.4405 max=0.9117 spread=0.4712 canary=4/4 pers=2/4
+   gb: min=0.2486 max=0.9164 spread=0.6678 canary=3/4 fold layak pers=1/4 fold layak
+   lr: min=0.1839 max=0.8752 spread=0.6913 canary=3/4 fold layak pers=2/4 fold layak
+ssi: json min=0.0151 max=0.4589 spread=0.4438 canary=5/7 fold layak pers=6/7 fold layak
+        K2  min=0.0151 max=0.4589 spread=0.4438 canary=5/7 pers=6/7
+   gb: min=0.0069 max=0.1406 spread=0.1338 canary=4/7 fold layak pers=5/7 fold layak
+   lr: min=0.0160 max=0.2082 spread=0.1922 canary=5/7 fold layak pers=6/7 fold layak
+shk: json min=0.0069 max=0.1929 spread=0.1860 canary=5/9 fold layak pers=4/9 fold layak
+        K2  min=0.0069 max=0.1929 spread=0.186 canary=5/9 pers=4/9
+   gb: min=0.0093 max=0.1171 spread=0.1078 canary=5/9 fold layak pers=4/9 fold layak
+   lr: min=0.0148 max=0.0997 spread=0.0850 canary=5/9 fold layak pers=4/9 fold layak
+stuck_k2: json min=0.0697 max=0.4443 spread=0.3747 canary=4/4 fold layak pers=0/4 fold layak
+        K2  min=0.0697 max=0.4443 spread=0.3747 canary=4/4 pers=0/4
+   gb: min=0.0192 max=0.2917 spread=0.2725 canary=4/4 fold layak pers=0/4 fold layak
+   lr: min=0.0132 max=0.3128 spread=0.2996 canary=4/4 fold layak pers=0/4 fold layak
+
+=== C. baris per fold (primer) ===
+vib fold0 F-14 n=1989 pos=1124 prev=0.5651 UP=False RF=0.9117 CI=[0.8212;0.9608] GB=0.9164 LR=0.8752 pers=0.7959 canary=0.6124 rand=0.5651
+vib fold1 F-15A n=6482 pos=1543 prev=0.2380 UP=False RF=0.5623 CI=[0.3972;0.6831] GB=0.4665 LR=0.6472 pers=0.5474 canary=0.4578 rand=0.2380
+vib fold2 F-15_S n=10903 pos=1532 prev=0.1405 UP=False RF=0.4914 CI=[0.3380;0.6186] GB=0.2486 LR=0.1839 pers=0.5166 canary=0.2770 rand=0.1405
+vib fold3 F-5 n=4548 pos=1230 prev=0.2704 UP=False RF=0.4405 CI=[0.3405;0.5535] GB=0.5193 LR=0.6606 pers=0.6675 canary=0.3093 rand=0.2704
+ssi fold0 F-10 n=7133 pos=161 prev=0.0226 UP=False RF=0.0839 CI=[0.0363;0.1935] GB=0.0430 LR=0.0826 pers=0.2025 canary=0.0302 rand=0.0226
+ssi fold1 F-12 n=4293 pos=83 prev=0.0193 UP=False RF=0.0550 CI=[0.0136;0.1645] GB=0.0684 LR=0.0810 pers=0.0203 canary=0.0709 rand=0.0193
+ssi fold2 F-14 n=5455 pos=75 prev=0.0137 UP=False RF=0.0286 CI=[0.0090;0.0753] GB=0.0163 LR=0.0171 pers=0.0122 canary=0.0305 rand=0.0137
+ssi fold3 F-15A n=6020 pos=31 prev=0.0051 UP=False RF=0.0631 CI=[0.0066;0.2004] GB=0.0367 LR=0.0160 pers=0.0088 canary=0.0139 rand=0.0051
+ssi fold4 F-15_S n=5342 pos=85 prev=0.0159 UP=False RF=0.1361 CI=[0.0601;0.2548] GB=0.0552 LR=0.0244 pers=0.0170 canary=0.0243 rand=0.0159
+ssi fold5 F-5 n=4714 pos=102 prev=0.0216 UP=False RF=0.1073 CI=[0.0450;0.2494] GB=0.0675 LR=0.0628 pers=0.0354 canary=0.0751 rand=0.0216
+ssi fold6 F-7 n=982 pos=3 prev=0.0031 UP=True RF=0.4589 CI=[0.0000;0.6961] GB=0.0069 LR=0.0301 pers=0.0000 canary=0.0201 rand=0.0031
+ssi fold7 F-9 n=1126 pos=12 prev=0.0107 UP=True RF=0.0151 CI=[0.0000;0.1161] GB=0.0163 LR=0.0451 pers=0.0117 canary=0.0097 rand=0.0107
+ssi fold8 F-9_A n=841 pos=55 prev=0.0654 UP=False RF=0.1357 CI=[0.0646;0.2806] GB=0.1406 LR=0.2082 pers=0.0672 canary=0.0860 rand=0.0654
+shk fold0 F-10 n=7899 pos=146 prev=0.0185 UP=False RF=0.0201 CI=[0.0100;0.0349] GB=0.0219 LR=0.0194 pers=0.0236 canary=0.0212 rand=0.0185
+shk fold1 F-12 n=5405 pos=217 prev=0.0401 UP=False RF=0.0456 CI=[0.0189;0.0945] GB=0.0324 LR=0.0892 pers=0.0492 canary=0.0652 rand=0.0401
+shk fold2 F-14 n=11205 pos=760 prev=0.0678 UP=False RF=0.1036 CI=[0.0626;0.1659] GB=0.0892 LR=0.0542 pers=0.1673 canary=0.0630 rand=0.0678
+shk fold3 F-15A n=6484 pos=41 prev=0.0063 UP=False RF=0.0069 CI=[0.0017;0.0155] GB=0.0093 LR=0.0203 pers=0.0063 canary=0.0121 rand=0.0063
+shk fold4 F-15_S n=11394 pos=259 prev=0.0227 UP=False RF=0.0265 CI=[0.0160;0.0404] GB=0.0246 LR=0.0148 pers=0.0393 canary=0.0251 rand=0.0227
+shk fold5 F-5 n=7140 pos=240 prev=0.0336 UP=False RF=0.0896 CI=[0.0473;0.1847] GB=0.0886 LR=0.0997 pers=0.0452 canary=0.0487 rand=0.0336
+shk fold6 F-7 n=2761 pos=267 prev=0.0967 UP=False RF=0.1015 CI=[0.0449;0.1829] GB=0.1171 LR=0.0906 pers=0.4457 canary=0.0789 rand=0.0967
+shk fold7 F-9 n=1851 pos=45 prev=0.0243 UP=False RF=0.1929 CI=[0.0318;0.4657] GB=0.1117 LR=0.0865 pers=0.0384 canary=0.0611 rand=0.0243
+shk fold8 F-9_A n=2356 pos=30 prev=0.0127 UP=False RF=0.0209 CI=[0.0016;0.0504] GB=0.0206 LR=0.0303 pers=0.0144 canary=0.0388 rand=0.0127
+stuck_k2 fold0 F-10 n=4216 pos=772 prev=0.1831 UP=False RF=0.1997 CI=[0.1386;0.2836] GB=0.2020 LR=0.2874 pers=0.9016 canary=0.1758 rand=0.1831
+stuck_k2 fold1 F-14 n=95925 pos=389 prev=0.0041 UP=False RF=0.0704 CI=[0.0276;0.1458] GB=0.0192 LR=0.0132 pers=0.8438 canary=0.0092 rand=0.0041
+stuck_k2 fold2 F-9 n=16184 pos=311 prev=0.0192 UP=False RF=0.0697 CI=[0.0300;0.1223] GB=0.0554 LR=0.0791 pers=0.8265 canary=0.0402 rand=0.0192
+stuck_k2 fold3 F-9_A n=2242 pos=503 prev=0.2244 UP=False RF=0.4443 CI=[0.3339;0.5647] GB=0.2917 LR=0.3128 pers=0.8890 canary=0.2569 rand=0.2244
+
+=== D. RF lift per fold vib (K2: 1.61/2.36/3.50/1.63) ===
+[1.6133, 2.362, 3.4972, 1.6289]
+
+=== E. persistence-onset primer ===
+{
+ "F-10": {
+  "n_events": 67,
+  "B1": 1.0,
+  "TLead_median": 9.0,
+  "n_detected": 67
+ },
+ "F-14": {
+  "n_events": 28,
+  "B1": 1.0,
+  "TLead_median": 9.0,
+  "n_detected": 28
+ },
+ "F-9": {
+  "n_events": 16,
+  "B1": 1.0,
+  "TLead_median": 10.5,
+  "n_detected": 16
+ },
+ "F-9_A": {
+  "n_events": 37,
+  "B1": 1.0,
+  "TLead_median": 9.0,
+  "n_detected": 37
+ }
+}
+
+=== F. hitung klaim shk: titik FAR<=60 dari 135 ===
+shk titik tau = 135 | FAR<=60: 53 | FAR<=6 & R>0: [('F-14', 'rf', '0.3', 0.69, 0.0053)]
+
+=== G. hitung klaim 402 titik uji & 10 titik FAR<=6 R>0 (semua engine, termasuk q95) ===
+total titik tau = 402 | FAR<=6 & R>0: 10
+    ('vib', 'F-15_S', 'rf', '0.5', 4.15, 0.1018)
+    ('ssi', 'F-10', 'rf', '0.3', 0.21, 0.0124)
+    ('ssi', 'F-12', 'rf', '0.3', 3.76, 0.0482)
+    ('ssi', 'F-14', 'gb', '0.3', 5.89, 0.0133)
+    ('ssi', 'F-14', 'gb', '0.5', 2.14, 0.0133)
+    ('ssi', 'F-15A', 'rf', '0.2', 4.33, 0.1613)
+    ('shk', 'F-14', 'rf', '0.3', 0.69, 0.0053)
+    ('stuck_k2', 'F-10', 'rf', '0.5', 1.25, 0.0052)
+    ('stuck_k2', 'F-14', 'rf', '0.5', 0.6, 0.0051)
+    ('stuck_k2', 'F-9_A', 'rf', '0.5', 0.0, 0.004)
+
+=== H. delta_B per fold RF (untuk tabel delta kandidat 2) ===
+vib fold0 F-14: RF-pers=+0.1192 RF-canary=+0.2993 RF-prev=+0.3466
+vib fold1 F-15A: RF-pers=+0.0149 RF-canary=+0.1044 RF-prev=+0.3242
+vib fold2 F-15_S: RF-pers=-0.0181 RF-canary=+0.2144 RF-prev=+0.3509
+vib fold3 F-5: RF-pers=-0.2268 RF-canary=+0.1313 RF-prev=+0.1701
+ssi fold0 F-10: RF-pers=-0.1168 RF-canary=+0.0538 RF-prev=+0.0614
+ssi fold1 F-12: RF-pers=+0.0382 RF-canary=-0.0159 RF-prev=+0.0357
+ssi fold2 F-14: RF-pers=+0.0089 RF-canary=-0.0019 RF-prev=+0.0148
+ssi fold3 F-15A: RF-pers=+0.0562 RF-canary=+0.0492 RF-prev=+0.0579
+ssi fold4 F-15_S: RF-pers=+0.1195 RF-canary=+0.1118 RF-prev=+0.1202
+ssi fold5 F-5: RF-pers=+0.0736 RF-canary=+0.0322 RF-prev=+0.0857
+ssi fold6 F-7: RF-pers=+0.0000 RF-canary=+0.4388 RF-prev=+0.4558
+ssi fold7 F-9: RF-pers=+0.0049 RF-canary=+0.0055 RF-prev=+0.0045
+ssi fold8 F-9_A: RF-pers=+0.0892 RF-canary=+0.0496 RF-prev=+0.0703
+shk fold0 F-10: RF-pers=-0.0034 RF-canary=-0.0011 RF-prev=+0.0016
+shk fold1 F-12: RF-pers=-0.0258 RF-canary=-0.0196 RF-prev=+0.0055
+shk fold2 F-14: RF-pers=-0.0842 RF-canary=+0.0406 RF-prev=+0.0358
+shk fold3 F-15A: RF-pers=+0.0006 RF-canary=-0.0053 RF-prev=+0.0005
+shk fold4 F-15_S: RF-pers=-0.0125 RF-canary=+0.0014 RF-prev=+0.0038
+shk fold5 F-5: RF-pers=+0.0659 RF-canary=+0.0409 RF-prev=+0.0560
+shk fold6 F-7: RF-pers=-0.3436 RF-canary=+0.0226 RF-prev=+0.0048
+shk fold7 F-9: RF-pers=+0.1591 RF-canary=+0.1318 RF-prev=+0.1686
+shk fold8 F-9_A: RF-pers=+0.0090 RF-canary=-0.0179 RF-prev=+0.0082
+stuck_k2 fold0 F-10: RF-pers=-0.7019 RF-canary=+0.0239 RF-prev=+0.0166
+stuck_k2 fold1 F-14: RF-pers=-0.7734 RF-canary=+0.0612 RF-prev=+0.0664
+stuck_k2 fold2 F-9: RF-pers=-0.7569 RF-canary=+0.0294 RF-prev=+0.0505
+stuck_k2 fold3 F-9_A: RF-pers=-0.4446 RF-canary=+0.1874 RF-prev=+0.2200
+
+=== I. stuck_k2 B1/TLead RF q95 + onset persistence ===
+F-10 rf q95: B1=0.6567164179104478 TLead=10.0 deteksi=44/67
+F-10 gb q95: B1=0.8507462686567164 TLead=10.0 deteksi=57/67
+F-10 lr q95: B1=0.6865671641791045 TLead=10.0 deteksi=46/67
+F-14 rf q95: B1=0.0 TLead=None deteksi=0/28
+F-14 gb q95: B1=0.39285714285714285 TLead=10.0 deteksi=11/28
+F-14 lr q95: B1=0.6785714285714286 TLead=10.0 deteksi=19/28
+F-9 rf q95: B1=1.0 TLead=11.5 deteksi=16/16
+F-9 gb q95: B1=0.5625 TLead=10.0 deteksi=9/16
+F-9 lr q95: B1=0.9375 TLead=12.0 deteksi=15/16
+F-9_A rf q95: B1=1.0 TLead=10.0 deteksi=37/37
+F-9_A gb q95: B1=0.6486486486486487 TLead=10.0 deteksi=24/37
+F-9_A lr q95: B1=0.2972972972972973 TLead=9.0 deteksi=11/37
+
+=== J. determinism + underpowered + assert/anti-circular meta ===
+vib determinism_check: {'fold': 0, 'model': 'rf', 'rerun_identical': False, 'max_abs_diff': 2.220446049250313e-16}
+   underpowered folds: []
+   dataset rows: /mnt/d/Capstone 1/scratch/v9_d1/datasets/vib.csv.gz f68727a5da407b44
+ssi determinism_check: None
+   underpowered folds: [('F-7', 3), ('F-9', 12)]
+   dataset rows: /mnt/d/Capstone 1/scratch/v9_d1/datasets/ssi.csv.gz 574392d9f3012cd2
+shk determinism_check: None
+   underpowered folds: []
+   dataset rows: /mnt/d/Capstone 1/scratch/v9_d1/datasets/shk.csv.gz aa5034ec5326b04d
+stuck_k2 determinism_check: None
+   underpowered folds: []
+   dataset rows: /mnt/d/Capstone 1/scratch/v9_d1/datasets/stuck_k2.csv.gz a8307db3c49ffa75

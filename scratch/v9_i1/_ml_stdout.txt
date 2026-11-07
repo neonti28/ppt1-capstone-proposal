@@ -1,0 +1,288 @@
+[2026-10-12 12:31:58] ==============================================================================
+[2026-10-12 12:31:58] V9-I1 RUN mulai | segmen rig = F-14 | ML=ON
+[2026-10-12 12:31:58] python=3.14.7 numpy=2.5.3 pandas=2.3.3
+[2026-10-12 12:32:01] muat vib: n=1989 {'n': 1989, 'ts_bin_min': 20189486, 'ts_bin_max': 20192503, 'rentang_menit': 3018, 'catatan_waktu': 'ts_bin = indeks menit internal D1 (grid 60 dtk, +1 per menit); asal kalender TIDAK diverifikasi di sesi ini — jangan dibaca sebagai tanggal'} | full(all well) n=23922
+[2026-10-12 12:32:01] muat ssi: n=5455 {'n': 5455, 'ts_bin_min': 19947192, 'ts_bin_max': 20223025, 'rentang_menit': 275834, 'catatan_waktu': 'ts_bin = indeks menit internal D1 (grid 60 dtk, +1 per menit); asal kalender TIDAK diverifikasi di sesi ini — jangan dibaca sebagai tanggal'} | full(all well) n=35906
+[2026-10-12 12:32:01] muat shk: n=11205 {'n': 11205, 'ts_bin_min': 19906551, 'ts_bin_max': 20224235, 'rentang_menit': 317685, 'catatan_waktu': 'ts_bin = indeks menit internal D1 (grid 60 dtk, +1 per menit); asal kalender TIDAK diverifikasi di sesi ini — jangan dibaca sebagai tanggal'} | full(all well) n=56495
+[2026-10-12 12:32:01] muat stuck_k1: n=3201 {'n': 3201, 'ts_bin_min': 20174233, 'ts_bin_max': 20179521, 'rentang_menit': 5289, 'catatan_waktu': 'ts_bin = indeks menit internal D1 (grid 60 dtk, +1 per menit); asal kalender TIDAK diverifikasi di sesi ini — jangan dibaca sebagai tanggal'} | full(all well) n=5555
+[2026-10-12 12:32:01] muat stuck_k2: n=95925 {'n': 95925, 'ts_bin_min': 19903021, 'ts_bin_max': 20262624, 'rentang_menit': 359604, 'catatan_waktu': 'ts_bin = indeks menit internal D1 (grid 60 dtk, +1 per menit); asal kalender TIDAK diverifikasi di sesi ini — jangan dibaca sebagai tanggal'} | full(all well) n=118567
+[2026-10-12 12:32:01] muat hyd_ki: n=10401 {'n': 10401, 'ts_bin_min': 19906551, 'ts_bin_max': 20224229, 'rentang_menit': 317679, 'catatan_waktu': 'ts_bin = indeks menit internal D1 (grid 60 dtk, +1 per menit); asal kalender TIDAK diverifikasi di sesi ini — jangan dibaca sebagai tanggal'} | full(all well) n=52509
+[2026-10-12 12:32:02] impor modul kampanye E_RULE: v9_e_RULE_01_status.py + v9_e_RULE_02_stuck_onset.py
+[2026-10-12 12:32:02] engine 1/7 vib ...
+[2026-10-12 12:32:05] engine 2/7 ssi ...
+[2026-10-12 12:32:09] engine 3/7 shk ...
+[2026-10-12 12:32:15] engine 4/7 stuck (K-i + K-ii) ...
+[2026-10-12 12:32:18] engine 5/7 hyd (K-i; K-ii = belum tersedia, ditulis eksplisit) ...
+[2026-10-12 12:32:18] engine 6/7 bit_wear (USROP, grid Kedalaman) ...
+[2026-10-12 12:32:19] USROP segmen: well=['USROP_A 2 N-SH_F-14d.csv'] n=47645
+[2026-10-12 12:32:19] engine 7/7 tool_wear (modul bengkel — domain terpisah) ...
+[2026-10-12 12:32:19] lapisan keputusan (assertion: 0 alarm otomatis, L1 wajib review manusia) ...
+[2026-10-12 12:32:19] ringkasan layer: {'L0': 5, 'L1': 11, 'L2': 9, 'L3': 2} | peringatan L1 = 11 | slot alarm otomatis = 0
+
+==============================================================================
+ALAT PdM ADVISORY — PROTOTIPE V9-I1 | segmen rig F-14
+==============================================================================
+
+[vib] deteksi kondisi getaran lateral (status VIBLAT_RT >= 32,17405 ft/s2)
+    jenis tugas : deteksi kondisi (bukan prediksi onset — TLead tidak berlaku)
+    sumber tier : docs/V9_EVAL_C_LAYERC.md §1 baris vib + §2.1
+  - rule_display                   tier=PERINGATAN-BERPENGAWAS   layer=L1
+      aktif         : 540/1989 (0.272)
+      metrik segmen : P=0.9444 R=0.4537 FP=30 FARseg=49.942 [FP/24jam-negatif (jendela 60 dtk)]
+      badge FAR     : FAR 10,0-49,9/24jam di 4 well (E_RULE §2.1); P 0,87-0,95
+      keyakinan     : presisi rule stabil antar-well (1,1x); recall 0,28-0,60
+      batas         : jangan klaim lead-time menit; ambang wajib kalibrasi per-well (D-A4) sebelum dipakai sbg alarm
+      human review  : True
+  - persistence                    tier=TREN                     layer=L0
+      aktif         : 1142/1989 (0.574)
+      metrik segmen : P=0.8336 R=0.847 FP=190 FARseg=316.301 [FP/24jam-negatif (jendela 60 dtk)]
+      badge FAR     : persistence = baseline konfirmasi-status (AUPRC V8 0,517-0,796)
+      keyakinan     : ΔB RF vs persistence hanya 2/4 fold — persistence setara ML di 2 fold
+      batas         : konfirmasi-status saja; bukan prediksi kegagalan mendatang
+      human review  : False
+  - hybrid_rule_and_persistence    tier=PERINGATAN-BERPENGAWAS   layer=L1
+      aktif         : 540/1989 (0.272)
+      metrik segmen : P=0.9444 R=0.4537 FP=30 FARseg=49.942 [FP/24jam-negatif (jendela 60 dtk)]
+      badge FAR     : hibrida ≡ rule utk kelas ini (E_RULE §2.1: FP = rule)
+      keyakinan     : rule t0-1 ⊆ persistence utk kelas definisi-kanal
+      batas         : sama dengan rule; keuntungan = konfirmasi dua langkah
+      human review  : True
+  - rf_lowo                        tier=TREN                     layer=L2
+      aktif         : 1271/1989 (0.639)
+      metrik segmen : P=0.7655 R=0.8657 FP=298 FARseg=496.092 [FP/24jam-negatif (jendela 60 dtk)]
+      AUPRC segmen  : 0.9117
+      badge FAR     : FAR τ0,5 menyebar 4,1-496 (119x) — TIDAK PORTABEL (EVAL_C C3)
+      keyakinan     : CI95 memuat prevalensi 0/4; ΔB vs canary 4/4
+      batas         : ranking/tren sahaja; JANGAN sbg ambang alarm global
+      human review  : False
+
+[ssi] deteksi kondisi stick-slip torsional (SSI(CRPM_RT) >= 1)
+    jenis tugas : deteksi kondisi
+    sumber tier : docs/V9_EVAL_C_LAYERC.md §1 baris ssi + §2.2
+  - rule_display                   tier=PERINGATAN-BERPENGAWAS   layer=L1
+      aktif         : 0/5455 (0.000)
+      metrik segmen : P=None R=0.0 FP=0 FARseg=0.0 [FP/24jam-negatif (jendela 60 dtk)]
+      badge FAR     : FP rule total 26 lintas fold (E_RULE §2.2)
+      keyakinan     : rule single-bin ≈ random antar-menit (jarang persisten)
+      batas         : nodata CRPM 62,3% baris — deteksi bergantung ketersediaan sensor
+      human review  : True
+  - persistence                    tier=TREN                     layer=L0
+      aktif         : 31/5455 (0.006)
+      metrik segmen : P=0.0323 R=0.0133 FP=30 FARseg=8.03 [FP/24jam-negatif (jendela 60 dtk)]
+      badge FAR     : persistence kalah 0/5 vs RF (angka V8)
+      keyakinan     : baseline lemah — jangan dibaca sbg detektor mandiri
+      batas         : konfirmasi-status saja
+      human review  : False
+  - hybrid_rule_and_persistence    tier=PERINGATAN-BERPENGAWAS   layer=L1
+      aktif         : 0/5455 (0.000)
+      metrik segmen : P=None R=0.0 FP=0 FARseg=0.0 [FP/24jam-negatif (jendela 60 dtk)]
+      badge FAR     : FP 26 -> 7 (-73,1%) konsisten 7/7 well; FAR hybrid 0-3,7 (EVAL_C §2.2)
+      keyakinan     : pemangkasan FP konsisten lintas 7 well
+      batas         : hemat-pemeriksaan, bukan alarm; 2 fold UNDERPOWERED dilabeli
+      human review  : True
+  - rf_lowo                        tier=TREN                     layer=L2
+      aktif         : 0/5455 (0.000)
+      metrik segmen : P=None R=0.0 FP=0 FARseg=0.0 [FP/24jam-negatif (jendela 60 dtk)]
+      AUPRC segmen  : 0.0286
+      badge FAR     : τ0,3 FAR 0-15,6; well FAR<=6 hanya 2/7 (EVAL_C C3)
+      keyakinan     : CI memuat prev 3/7 layak (5/9 all); AUPRC antar-well spread 30x
+      batas         : ranking sahaja; nodata 62,3% = keterbatasan sensor, bukan murni model
+      human review  : False
+
+[shk] deteksi anomali/dysfunction bit bounce (SHKRSK_RT >= 1)
+    jenis tugas : deteksi anomali sedang berlangsung
+    sumber tier : docs/V9_EVAL_C_LAYERC.md §1 baris shk + §2.3
+  - rule_display                   tier=PERINGATAN-BERPENGAWAS   layer=L1
+      aktif         : 103/11205 (0.009)
+      metrik segmen : P=0.534 R=0.0724 FP=48 FARseg=6.618 [FP/24jam-negatif (jendela 60 dtk)]
+      badge FAR     : FAR 0,67-6,6/24jam; <=6 di 7/9 well (EVAL_C §2.3)
+      keyakinan     : satu-satunya kelas rig dgn mayoritas fold lolos FAR<=6 tanpa kalibrasi
+      batas         : badge FAR wajib tampil; B3 EVAL_B negatif → periksa dulu, jangan auto
+      human review  : True
+  - persistence                    tier=TREN                     layer=L0
+      aktif         : 623/11205 (0.056)
+      metrik segmen : P=0.3708 R=0.3039 FP=392 FARseg=54.043 [FP/24jam-negatif (jendela 60 dtk)]
+      badge FAR     : persistence ≥ prevalence-random 7/9 (E_RULE §2.3)
+      keyakinan     : recall display-rule 0-0,38
+      batas         : konfirmasi-status saja
+      human review  : False
+  - hybrid_rule_and_persistence    tier=PERINGATAN-BERPENGAWAS   layer=L1
+      aktif         : 103/11205 (0.009)
+      metrik segmen : P=0.534 R=0.0724 FP=48 FARseg=6.618 [FP/24jam-negatif (jendela 60 dtk)]
+      badge FAR     : hibrida ≡ rule (E_RULE §2.3)
+      keyakinan     : rule ⊆ persistence utk kelas definisi-kanal
+      batas         : sama dengan rule
+      human review  : True
+  - rf_lowo                        tier=TREN                     layer=L2
+      aktif         : 0/11205 (0.000)
+      metrik segmen : P=None R=0.0 FP=0 FARseg=0.0 [FP/24jam-negatif (jendela 60 dtk)]
+      AUPRC segmen  : 0.1036
+      badge FAR     : τ0,3 FAR 0-96,5; well <=6 hanya 1/9 (EVAL_C C3)
+      keyakinan     : CI95 memuat prevalensi 7/9 well = sinyal lokal-wellbore
+      batas         : screening berbiaya-cek-tinggi (tau 0,05-0,10); JANGAN sbg alarm
+      human review  : False
+
+[stuck] K-i: deteksi kondisi blok STUCK_RT; K-ii: prediksi onset 0→1 (H=10 mnt)
+    jenis tugas : deteksi kondisi (K-i) + prediksi kejadian mendatang (K-ii)
+    sumber tier : docs/V9_EVAL_C_LAYERC.md §1 baris stuck K-i/K-ii + §2.4
+    catatan     : K-i dan K-ii = klaim TERPISAH; metrik segmen dicetak terpisah (n windows berbeda: K-i 3201, K-ii 95925)
+  - rule_display                   tier=PERINGATAN-BERPENGAWAS   layer=L1
+      aktif         : 210/3201 (0.066)
+      metrik segmen : P=0.9238 R=0.4491 FP=16 FARseg=8.321 [FP/24jam-negatif (jendela 60 dtk)]
+      badge FAR     : rule P 0,92-0,97; FAR 8,3-61,0 (hanya 2 well: F-14, F-9_A)
+      keyakinan     : cakupan 2/9 well → portabilitas BELUM TERUKUR
+      batas         : hanya layak di well yang diuji; replikasi F-9/F-10/F-15 diperlukan
+      human review  : True
+  - persistence                    tier=TREN                     layer=L0
+      aktif         : 451/3201 (0.141)
+      metrik segmen : P=0.6785 R=0.7083 FP=145 FARseg=75.406 [FP/24jam-negatif (jendela 60 dtk)]
+      badge FAR     : persistence 0,787 (F-9_A, kutipan V6)
+      keyakinan     : konfirmasi-status, bukan prediksi onset
+      batas         : K-i saja; tidak memberi peringatan dini
+      human review  : False
+  - hybrid_rule_and_persistence    tier=PERINGATAN-BERPENGAWAS   layer=L1
+      aktif         : 210/3201 (0.066)
+      metrik segmen : P=0.9238 R=0.4491 FP=16 FARseg=8.321 [FP/24jam-negatif (jendela 60 dtk)]
+      badge FAR     : hibrida stuck_k1 = E_RULE §2.4 (2 fold)
+      keyakinan     : rule-display ≥ persistence di 2/2 fold
+      batas         : cakupan 2 well
+      human review  : True
+  - e1_2of3                        tier=TREN                     layer=L2
+      aktif         : 313/95925 (0.003)
+      metrik segmen : P=0.0192 R=0.0154 FP=307 FARseg=4.627 [FP/24jam-negatif (jendela 60 dtk)]
+      badge FAR     : E1 FAR 2,1-29,0 (13,9x); B1 0-0,066; FP 422 (EVAL_C §2.4)
+      keyakinan     : rule mekanis mentah ≈ prevalence pada onset (E_RULE §4)
+      batas         : TRIAGE/riset ranking — belum layak peringatan (B1 di bawah 0,5)
+      human review  : False
+  - persistence_event              tier=TREN                     layer=L2
+      aktif         : 4/95925 (0.000)
+      metrik segmen : P=0.5 R=0.0051 FP=2 FARseg=0.03 [FP/24jam-negatif (jendela 60 dtk)]
+      badge FAR     : FAR 0-2,9; FP alarm total 11 (EVAL_C §2.4)
+      keyakinan     : TLead median 7,0 mnt (anchor 2,67-7,37); B1 0-0,115
+      batas         : peringatan-dini berbeban-wajar utk tinjauan manusia; bukan alarm
+      human review  : False
+  - rf_lowo                        tier=TREN                     layer=L2
+      aktif         : 42/95925 (0.000)
+      metrik segmen : P=0.0476 R=0.0051 FP=40 FARseg=0.603 [FP/24jam-negatif (jendela 60 dtk)]
+      AUPRC segmen  : 0.0704
+      badge FAR     : RF τ0,5 B1 0-0,045; signifikan CI hanya 1/4 (EVAL_C §2.4)
+      keyakinan     : canary depth ≥ RF (G2 gagal) — ranking lemah
+      batas         : ranking sahaja
+      human review  : False
+
+[hyd] K-i: deteksi kondisi residu SPPA |z|>2; K-ii: prediksi kick/loss proxy
+    jenis tugas : deteksi kondisi (K-i) + prediksi kejadian mendatang (K-ii)
+    sumber tier : docs/V9_EVAL_C_LAYERC.md §1 baris hyd K-i/K-ii + §2.5
+    catatan     : RF pada hyd-K-i DILARANG (D-A5, ΔB negatif 7/7) — tidak ada head RF di engine ini, by design
+  - rule_display                   tier=PERINGATAN-BERPENGAWAS   layer=L1
+      aktif         : 975/10401 (0.094)
+      metrik segmen : P=0.6226 R=0.7017 FP=368 FARseg=55.57 [FP/24jam-negatif (jendela 60 dtk)]
+      badge FAR     : rule t0-1 FP total 2.091 lintas fold (E_RULE §2.5)
+      keyakinan     : label = residu SPPA (PROXY — anotasi wajib)
+      batas         : FAR skala jendela 38-132 = beban blok, bukan alarm
+      human review  : True
+  - persistence                    tier=PERINGATAN-BERPENGAWAS   layer=L0
+      aktif         : 876/10401 (0.084)
+      metrik segmen : P=0.6313 R=0.6393 FP=323 FARseg=48.775 [FP/24jam-negatif (jendela 60 dtk)]
+      badge FAR     : persistence P 0,615-0,793; FAR_t 32,2-109,7/24jam
+      keyakinan     : CI95 memuat prevalensi 0/9 (satu-satunya kelas rig bersih)
+      batas         : RF DILARANG di kelas ini (D-A5: ΔB negatif 7/7)
+      human review  : False
+  - hybrid_rule_and_persistence    tier=PERINGATAN-BERPENGAWAS   layer=L1
+      aktif         : 626/10401 (0.060)
+      metrik segmen : P=0.8243 R=0.5965 FP=110 FARseg=16.611 [FP/24jam-negatif (jendela 60 dtk)]
+      badge FAR     : FAR 14,6-58,4 (9/9 well > 6); FP-cut -55,7% konsisten 9/9
+      keyakinan     : engine paling stabil utk L1 (EVAL_C §1)
+      batas         : BELUM ALARM-OTOMATIS (FAR>6 di 9/9); naik tier bila kalibrasi per-well terukur
+      human review  : True
+  - k2_tidak_tersedia              tier=BELUM LAYAK PAKAI        layer=L3
+      status        : BELUM TERSEDIA DI PROTOTIPE
+      badge FAR     : q95: P=R=0 (0 TP, FP 177); fisher CI memuat prev (EVAL_C §2.5)
+      keyakinan     : sign-flip 78,7% jendela; FlowOut absen = kendala sensor terukur
+      batas         : TIDAK DIJALANKAN di prototipe (data pit/GAINLOSSTOT belum diparse) — bukan kegagalan metode; RF V8 = referensi
+      human review  : True
+
+[bit_wear] K-1: deteksi status blok high_MSE; K-2: prediksi onset (pra-reg belum terbit)
+    jenis tugas : deteksi kondisi (K-1); K-2 onset = BELUM DIJALANKAN
+    sumber tier : docs/V9_EVAL_C_LAYERC.md §1 baris bit_wear + §2.6
+  - persistence                    tier=TREN                     layer=L2
+      aktif         : 4917/47645 (0.103)
+      metrik segmen : P=0.9927 R=0.9925 FP=36 FARseg=1.213 [FP/24jam-negatif (jendela 60 dtk)]
+      badge FAR     : P/R/FAR = BELUM TERUKUR (field tidak ada di JSON EVAL_A §2.6)
+      keyakinan     : persistence AUPRC 0,119-0,984; ΔB vs canary 5/5 scorable
+      batas         : ranking/tren saja; hibrida degradasi ke persistence (label Teale = kanal terlarang); dataset USROP ≠ rig Volve
+      human review  : False
+  - k2_onset_belum                 tier=BELUM LAYAK PAKAI        layer=L3
+      status        : BELUM DIJALANKAN
+      badge FAR     : nol angka (kampanye belum jalan)
+      keyakinan     : pra-reg K-2 belum terbit
+      batas         : K-2 BELUM boleh dipakai di tingkat apa pun sebelum kampanye berangka
+      human review  : True
+
+[tool_wear] K-i: deteksi perubahan-regime dalam-run (bengkel); K-ii: ranking lintas-alat
+    jenis tugas : deteksi perubahan-regime (K-i); K-ii = ranking
+    sumber tier : docs/V9_EVAL_C_LAYERC.md §1 baris tool_wear + §2.7
+    catatan     : label = identitas run (desain dataset); K-i detektor PERUBAHAN-REGIME — bukan klaim 'keausan spesifik' (precision run 0,50); lead DETIK bengkel, tidak dijumlah dengan lead menit rig (D-A7)
+    domain      : BENGKEL — lead detik; TIDAK dijumlahkan dengan lead rig menit (D-A7)
+  - calib_5of27                    tier=TREN                     layer=L2
+      aktif         : 305/469 (0.650)
+      metrik segmen : P=0.5672 R=0.7208 FP=132 FARseg=34.585 [FP/menit-negatif (jendela 1 dtk)]
+      badge FAR     : engine 5/27 (E_STAT §B): FP_R01 27-41 jendela (71-98% jendela evaluasi) — terlalu sensitif utk peringatan; deteksi R02 4/4 alat, TLead 20-36 dtk
+      keyakinan     : deteksi konsisten 4/4 alat (tes artefak termal 0/8); namun FP tinggi pada alat BARU (R01)
+      batas         : dipakai sbg GATING inspeksi + skor perubahan-regime sahaja; JANGAN jadi peringatan (FP besar); titik operasi layak = op_far_calibrated
+      human review  : False
+  - op_far_calibrated              tier=PERINGATAN-BERPENGAWAS   layer=L1
+      aktif         : 21/469 (0.045)
+      metrik segmen : P=0.619 R=0.0542 FP=8 FARseg=2.096 [FP/menit-negatif (jendela 1 dtk)]
+      badge FAR     : FAR-terkalibrasi target <=1 alarm/menit: FP_R01 1-3/alat; deteksi R02 4/4; TLead 20-36 dtk (E_STAT §C, EVAL_C §2.7)
+      keyakinan     : TLead median 20-36 dtk (dispersi 1,8x — terkecil antar engine); kalibrasi dalam-run = sifat desain
+      batas         : detektor PERUBAHAN-REGIME; precision run 0,50 → JANGAN dibaca sbg 'keausan spesifik'; domain bengkel, transfer ke rig TIDAK diklaim (D-A7)
+      human review  : True
+  - canary_3rms                    tier=TREN                     layer=L2
+      aktif         : 282/469 (0.601)
+      badge FAR     : canary 3-RMS AUPRC 0,516-0,612 (1,19x); identity-majority = prev (plafon lift 2,0)
+      keyakinan     : RF K-ii V9 TIDAK dijalankan → angka V8 = referensi
+      batas         : ranking lintas-alat saja; precision biner V8 0,50-0,56 ≈ peluang → jangan sbg alarm
+      human review  : False
+
+==============================================================================
+LAPISAN KEPUTUSAN
+  L0 status otomatis (rule/persistence = sistem hari-ini, tanpa notifikasi): 5 head
+      · vib/persistence [TREN] n_aktif=1142
+      · ssi/persistence [TREN] n_aktif=31
+      · shk/persistence [TREN] n_aktif=623
+      · stuck/persistence [TREN] n_aktif=451
+      · hyd/persistence [PERINGATAN-BERPENGAWAS] n_aktif=876
+  L1 peringatan human-in-loop (wajib konfirmasi operator; badge FAR tampil): 11 head
+      · vib/rule_display [PERINGATAN-BERPENGAWAS] n_aktif=540
+      · vib/hybrid_rule_and_persistence [PERINGATAN-BERPENGAWAS] n_aktif=540
+      · ssi/rule_display [PERINGATAN-BERPENGAWAS] n_aktif=0
+      · ssi/hybrid_rule_and_persistence [PERINGATAN-BERPENGAWAS] n_aktif=0
+      · shk/rule_display [PERINGATAN-BERPENGAWAS] n_aktif=103
+      · shk/hybrid_rule_and_persistence [PERINGATAN-BERPENGAWAS] n_aktif=103
+      · stuck/rule_display [PERINGATAN-BERPENGAWAS] n_aktif=210
+      · stuck/hybrid_rule_and_persistence [PERINGATAN-BERPENGAWAS] n_aktif=210
+      · hyd/rule_display [PERINGATAN-BERPENGAWAS] n_aktif=975
+      · hyd/hybrid_rule_and_persistence [PERINGATAN-BERPENGAWAS] n_aktif=626
+      · tool_wear/op_far_calibrated [PERINGATAN-BERPENGAWAS] n_aktif=21
+  L2 tren/skor (dasbor, tanpa notifikasi): 9 head
+      · vib/rf_lowo [TREN] n_aktif=1271
+      · ssi/rf_lowo [TREN] n_aktif=0
+      · shk/rf_lowo [TREN] n_aktif=0
+      · stuck/e1_2of3 [TREN] n_aktif=313
+      · stuck/persistence_event [TREN] n_aktif=4
+      · stuck/rf_lowo [TREN] n_aktif=42
+      · bit_wear/persistence [TREN] n_aktif=4917
+      · tool_wear/calib_5of27 [TREN] n_aktif=305
+      · tool_wear/canary_3rms [TREN] n_aktif=282
+  L3 keputusan manusia (klaim yang belum layak peringatan / belum tersedia): 2 head
+      · hyd/k2_tidak_tersedia [BELUM LAYAK PAKAI] status=BELUM TERSEDIA DI PROTOTIPE
+      · bit_wear/k2_onset_belum [BELUM LAYAK PAKAI] status=BELUM DIJALANKAN
+
+  Peringatan L1 (butuh konfirmasi manusia): 11
+  Slot ALARM OTOMATIS KRITIS: 0
+  Keputusan akhir: MANUSIA (insinyur pengeboran) — tidak ada output otomatis yang memicu tindakan tanpa konfirmasi
+  human_review_required: WAJIB (seluruh peringatan L1 & daftar L3)
+==============================================================================
+[2026-10-12 12:32:19] JSON primer ditulis: /mnt/d/Capstone 1/scratch/v9_i1/v9_i1_RESULTS.json (45879 byte)
+[2026-10-12 12:32:19] selesai dalam 21.55 s

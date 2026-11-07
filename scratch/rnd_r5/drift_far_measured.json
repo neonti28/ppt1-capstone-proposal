@@ -1,0 +1,84 @@
+{
+ "meta": {
+  "kartu": "t_56d8d11d RND-R5",
+  "generated_at": "2026-10-27 03:43:49",
+  "sumber": "/mnt/d/Capstone 1(v2)/scratch/v9_d1/datasets/hyd_ki.csv.gz",
+  "perintah": "python3 scratch/rnd_r5/measure_drift.py",
+  "parameter": {
+   "cusum_k_sigma": 0.5,
+   "cusum_h_sigma": 5.0,
+   "ph_delta_sigma": 0.005,
+   "ph_lambda_sigma": 50.0,
+   "min_baseline_minutes": 600,
+   "merge_gap_minutes": 30,
+   "horizon_minutes": 10,
+   "step_grid_seconds": 60
+  },
+  "catatan": "FAR dihitung dari episode alarm pada baseline bersih nyata, bukan dari ARL Gaussian iid. Baseline = blok kontigu pada grid 1 menit tanpa menit bolong dan tanpa label positif."
+ },
+ "summary": {
+  "channel": "TQA_mean",
+  "n_wells_total": 9,
+  "n_wells_dipakai": 0,
+  "baseline_minutes_min": null,
+  "baseline_minutes_max": null,
+  "cusum_far_24h_median": null,
+  "cusum_far_24h_min": null,
+  "cusum_far_24h_max": null,
+  "ph_far_24h_median": null,
+  "ph_far_24h_min": null,
+  "ph_far_24h_max": null,
+  "ac1_median": null,
+  "wells_clean_half2_at_calibrated_h": 0,
+  "total_positives": 0,
+  "recall_h10_pooled": null
+ },
+ "per_well": [],
+ "skipped": {
+  "F-10": {
+   "n_rows": 7571,
+   "block_max_minutes": 28,
+   "alasan": "tidak ada blok kontigu >= 600 menit tanpa label positif"
+  },
+  "F-12": {
+   "n_rows": 7390,
+   "block_max_minutes": 11,
+   "alasan": "tidak ada blok kontigu >= 600 menit tanpa label positif"
+  },
+  "F-14": {
+   "n_rows": 10401,
+   "block_max_minutes": 9,
+   "alasan": "tidak ada blok kontigu >= 600 menit tanpa label positif"
+  },
+  "F-15A": {
+   "n_rows": 6156,
+   "block_max_minutes": 14,
+   "alasan": "tidak ada blok kontigu >= 600 menit tanpa label positif"
+  },
+  "F-15_S": {
+   "n_rows": 8355,
+   "block_max_minutes": 18,
+   "alasan": "tidak ada blok kontigu >= 600 menit tanpa label positif"
+  },
+  "F-5": {
+   "n_rows": 6332,
+   "block_max_minutes": 9,
+   "alasan": "tidak ada blok kontigu >= 600 menit tanpa label positif"
+  },
+  "F-7": {
+   "n_rows": 2482,
+   "block_max_minutes": 6,
+   "alasan": "tidak ada blok kontigu >= 600 menit tanpa label positif"
+  },
+  "F-9": {
+   "n_rows": 1616,
+   "block_max_minutes": 7,
+   "alasan": "tidak ada blok kontigu >= 600 menit tanpa label positif"
+  },
+  "F-9_A": {
+   "n_rows": 2206,
+   "block_max_minutes": 12,
+   "alasan": "tidak ada blok kontigu >= 600 menit tanpa label positif"
+  }
+ }
+}

@@ -1,0 +1,9 @@
+[2026-10-12 04:30:43] == F-5: bins=67934 drill=10233 labels=['SHKRSK_RT', 'VIBLAT_RT'] crpm=True
+[2026-10-12 04:30:48] == F-7: bins=34533 drill=3671 labels=['SHKRSK_RT'] crpm=True
+[2026-10-12 04:30:55] == F-9: bins=25460 drill=2197 labels=['SHKRSK_RT', 'STUCK_RT', 'VIBLAT_RT'] crpm=True
+[2026-10-12 04:31:02] == F-9_A: bins=27282 drill=2530 labels=['SHKRSK_RT', 'STUCK_RT'] crpm=True
+[2026-10-12 04:31:15] == F-10: bins=41446 drill=13781 labels=['SHKRSK_RT', 'STUCK_RT', 'VIBLAT_RT'] crpm=True
+[2026-10-12 04:31:43] == F-12: bins=180958 drill=23931 labels=['SHKRSK_RT'] crpm=True
+[2026-10-12 04:32:10] == F-14: bins=96698 drill=12635 labels=['SHKRSK_RT', 'STUCK_RT', 'VIBLAT_RT'] crpm=True
+[2026-10-12 04:32:26] == F-15A: bins=44347 drill=11853 labels=['SHKRSK_RT', 'VIBLAT_RT'] crpm=True
+[2026-10-12 04:32:56] == F-15_S: bins=101630 drill=13543 labels=['SHKRSK_RT', 'VIBLAT_RT'] crpm=True

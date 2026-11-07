@@ -1,0 +1,336 @@
+{
+ "kandidat_1": {
+  "md_emdash_count": 14,
+  "md_emdash_linehits": 14,
+  "md_emdash_contexts": [
+   {
+    "line": 9,
+    "pos": 14,
+    "context": "| Versi | 3.0 — restrukturisasi solusi advisory (12 Oktober 2026) |"
+   },
+   {
+    "line": 10,
+    "pos": 38,
+    "context": "| Status | Proposal dan desain teknis — tahap prototipe |"
+   },
+   {
+    "line": 62,
+    "pos": 14,
+    "context": "Kegagalan BHA — mencakup *stick-slip*, *whirl*, *bit bounce*, *differential sticking*"
+   },
+   {
+    "line": 62,
+    "pos": 108,
+    "context": " *whirl*, *bit bounce*, *differential sticking*, dan keausan komponen — menyebabkan non-productive time (NPT) yang mahal, kerusakan peralatan"
+   },
+   {
+    "line": 136,
+    "pos": 94,
+    "context": "stik jendela waktu dari kanal sensor (mean, std, slope, last, fraksi) — 55 fitur dari 11 kanal MWD untuk mesin getaran, serta fitur turunan f"
+   },
+   {
+    "line": 182,
+    "pos": 169,
+    "context": "emua sumur pernah jadi uji. Ini menjawab pertanyaan bisnis yang benar — apakah mesin berguna pada sumur yang belum pernah dilihat. Pembagian "
+   },
+   {
+    "line": 188,
+    "pos": 14,
+    "context": "- **Lapisan A — Apakah deteksi bekerja?** Presisi, recall, tingkat alarm palsu, waktu"
+   },
+   {
+    "line": 189,
+    "pos": 14,
+    "context": "- **Lapisan B — Apakah bernilai pemeliharaan?** Adanya peringatan sebelum kondisi mem"
+   },
+   {
+    "line": 190,
+    "pos": 14,
+    "context": "- **Lapisan C — Cukup tepercaya untuk dipakai?** Ketahanan hasil pada periode, kondis"
+   },
+   {
+    "line": 256,
+    "pos": 14,
+    "context": "- **Tingkat 1 — Pemantauan tren:** nilai terukur untuk mendeteksi kondisi/perubahan p"
+   },
+   {
+    "line": 257,
+    "pos": 14,
+    "context": "- **Tingkat 2 — Peringatan berpengawas manusia:** peringatan sebelum kondisi memburuk"
+   },
+   {
+    "line": 258,
+    "pos": 14,
+    "context": "- **Tingkat 3 — Alarm otomatis kritis:** hanya setelah alarm palsu rendah terukur lin"
+   },
+   {
+    "line": 352,
+    "pos": 61,
+    "context": "Lampiran ini bersifat internal. Riwayat pengembangan lengkap — termasuk seluruh kampanye evaluasi, hasil yang tidak memenuhi ambang,"
+   },
+   {
+    "line": 352,
+    "pos": 162,
+    "context": "luasi, hasil yang tidak memenuhi ambang, dan penilaian berturut-turut — tercatat pada `CHANGELOG.md` [A-12] dan dokumen kerja primer di atas."
+   }
+  ],
+  "ipynb_md_sel_count": 339,
+  "ipynb_emdash_count": 14,
+  "ipynb_emdash_contexts": [
+   {
+    "line": 8,
+    "pos": 14,
+    "context": "| Versi | 3.0 — restrukturisasi solusi advisory (12 Oktober 2026) |"
+   },
+   {
+    "line": 9,
+    "pos": 38,
+    "context": "| Status | Proposal dan desain teknis — tahap prototipe |"
+   },
+   {
+    "line": 58,
+    "pos": 14,
+    "context": "Kegagalan BHA — mencakup *stick-slip*, *whirl*, *bit bounce*, *differential sticking*"
+   },
+   {
+    "line": 58,
+    "pos": 108,
+    "context": " *whirl*, *bit bounce*, *differential sticking*, dan keausan komponen — menyebabkan non-productive time (NPT) yang mahal, kerusakan peralatan"
+   },
+   {
+    "line": 125,
+    "pos": 94,
+    "context": "stik jendela waktu dari kanal sensor (mean, std, slope, last, fraksi) — 55 fitur dari 11 kanal MWD untuk mesin getaran, serta fitur turunan f"
+   },
+   {
+    "line": 168,
+    "pos": 169,
+    "context": "emua sumur pernah jadi uji. Ini menjawab pertanyaan bisnis yang benar — apakah mesin berguna pada sumur yang belum pernah dilihat. Pembagian "
+   },
+   {
+    "line": 174,
+    "pos": 14,
+    "context": "- **Lapisan A — Apakah deteksi bekerja?** Presisi, recall, tingkat alarm palsu, waktu"
+   },
+   {
+    "line": 175,
+    "pos": 14,
+    "context": "- **Lapisan B — Apakah bernilai pemeliharaan?** Adanya peringatan sebelum kondisi mem"
+   },
+   {
+    "line": 176,
+    "pos": 14,
+    "context": "- **Lapisan C — Cukup tepercaya untuk dipakai?** Ketahanan hasil pada periode, kondis"
+   },
+   {
+    "line": 237,
+    "pos": 14,
+    "context": "- **Tingkat 1 — Pemantauan tren:** nilai terukur untuk mendeteksi kondisi/perubahan p"
+   },
+   {
+    "line": 238,
+    "pos": 14,
+    "context": "- **Tingkat 2 — Peringatan berpengawas manusia:** peringatan sebelum kondisi memburuk"
+   },
+   {
+    "line": 239,
+    "pos": 14,
+    "context": "- **Tingkat 3 — Alarm otomatis kritis:** hanya setelah alarm palsu rendah terukur lin"
+   },
+   {
+    "line": 329,
+    "pos": 61,
+    "context": "Lampiran ini bersifat internal. Riwayat pengembangan lengkap — termasuk seluruh kampanye evaluasi, hasil yang tidak memenuhi ambang,"
+   },
+   {
+    "line": 329,
+    "pos": 162,
+    "context": "luasi, hasil yang tidak memenuhi ambang, dan penilaian berturut-turut — tercatat pada `CHANGELOG.md` [A-12] dan dokumen kerja primer di atas."
+   }
+  ],
+  "md_endash_count": 2,
+  "ipynb_endash_count": 2,
+  "md_endash_contexts": [
+   {
+    "line": 234,
+    "context": "| Penerapan | Belum dibangun | Rencana Tahap 1a–3a (§17) |"
+   },
+   {
+    "line": 297,
+    "context": "| Belum ditetapkan | Penyusunan naskah akhir PPT I (Bab II–IV), poster, sesi tinjauan dosen | Belum dimulai |"
+   }
+  ]
+ },
+ "kandidat_2": {
+  "md_emdash_count": 0,
+  "md_emdash_linehits": 0,
+  "md_emdash_contexts": [],
+  "ipynb_md_sel_count": 3565,
+  "ipynb_emdash_count": 0,
+  "ipynb_emdash_contexts": [],
+  "md_endash_count": 225,
+  "ipynb_endash_count": 225,
+  "md_endash_contexts": [
+   {
+    "line": 146,
+    "context": "`code/v9_i1_pipeline.py` (REGISTRY §1, baris 74–287, yakni **dibaca & DIJALANKAN**, bukan ditranskrip) ·"
+   },
+   {
+    "line": 147,
+    "context": "docs/V9_PM1_ARCHITECTURE.md` (§2 spesifikasi 7 engine, §3 S1–S9) ·"
+   },
+   {
+    "line": 164,
+    "context": "i angka → pemisahan tegas 7/11/27 → outline yang menutup (a)–(f) → delegasi per tim →"
+   },
+   {
+    "line": 189,
+    "context": "an batas pemakaian di REGISTRY (`v9_i1_pipeline.py` baris 74–287). Sebaran per engine: `4+4+4+6+4+2+3 = 27`."
+   },
+   {
+    "line": 193,
+    "context": " muncul di sebuah bab, ia harus merujuk daftar eksak di §1.1–§1.3 ini."
+   },
+   {
+    "line": 274,
+    "context": " 2. OUTLINE PROPOSAL BARU (seksi + isi + penutupan keluhan a–f)"
+   },
+   {
+    "line": 320,
+    "context": "i, metrik A (P/R/FAR/AUPRC/lift/CI vs baseline), B (TLead/B1–B4), C (C1–C4), dan **tier pemakaian** + batas."
+   },
+   {
+    "line": 320,
+    "context": " (P/R/FAR/AUPRC/lift/CI vs baseline), B (TLead/B1–B4), C (C1–C4), dan **tier pemakaian** + batas."
+   },
+   {
+    "line": 339,
+    "context": "| (f) arti tegas 7 / 11 / 27 | Bab 1 (§1.0–§1.4) | daftar nama eksak + rekap tier |"
+   },
+   {
+    "line": 361,
+    "context": "gine\", \"11 klaim\", \"27 head\" harus merujuk daftar eksak §1.1–§1.3; nama engine/head persis seperti kunci REGISTRY kode."
+   },
+   {
+    "line": 375,
+    "context": "| AC-2 | Outline menutup keluhan (a)–(f) | matriks §2.9 | **LULUS** (tiap butir punya bab) |"
+   },
+   {
+    "line": 394,
+    "context": "`code/v9_i1_pipeline.py` (REGISTRY §1, baris 74–287; **dijalankan**: IMPORT OK, 7 engine/27 head) ·"
+   },
+   {
+    "line": 395,
+    "context": "`docs/V9_PM1_ARCHITECTURE.md` (§2, §3 S1–S9) · `docs/V9_PM2_VERDICT.md` §e (11 baris tier) ·"
+   },
+   {
+    "line": 418,
+    "context": "dipoles ke nada proposal, dan keluhan operator (a)–(f) dipastikan tertutup."
+   },
+   {
+    "line": 419,
+    "context": "PM1_ARCHITECTURE.md` (§2 spesifikasi 7 engine, §3 kontrak S1–S9) ·"
+   },
+   {
+    "line": 438,
+    "context": "> beda: ssi 15–196, bit_wear 1,84, tool_wear 2,0); FAR dilaporkan pada ska"
+   },
+   {
+    "line": 454,
+    "context": "itations`** yaitu setiap rumus ditautkan ke nomor ledger [1]–[27]"
+   },
+   {
+    "line": 457,
+    "context": "> (§3.1–3.7) + kampanye V9; 0 angka baru."
+   },
+   {
+    "line": 473,
+    "context": "tidak ada baseline universal** (Evaluasi User.txt, prinsip 1–6)."
+   },
+   {
+    "line": 496,
+    "context": "tugas → metode yang menang → bukti V9\" (detail per engine §2–§3):"
+   },
+   {
+    "line": 533,
+    "context": "- **Bukti empiris V9.** RF AUPRC 0,4405–0,9117 (spread 0,4712, 4 fold LOWO); **ΔB>0 vs"
+   },
+   {
+    "line": 536,
+    "context": "  ber-blok-panjang; rule-display P 0,87–0,95 stabil 1,1× antar-well; SHAP top = TFLO/HKLD/"
+   },
+   {
+    "line": 557,
+    "context": "- **Bukti empiris V9.** RF AUPRC 0,0151–0,4589; **RF≥canary 5/7 fold layak**; **vs persistence"
+   },
+   {
+    "line": 582,
+    "context": "- **Bukti empiris V9.** persistence AUPRC **0,679–0,984** (4/4 fold menang vs RF); RF menang"
+   },
+   {
+    "line": 596,
+    "context": "ari data surface Volve dengan Crossformer (peringatan **2,67–7,37 menit**) [19],"
+   },
+   {
+    "line": 603,
+    "context": "s V9 (temuan penting).** Persistence-**horizon** AUPRC 0,827–0,902 (B1 93–97%)"
+   },
+   {
+    "line": 603,
+    "context": "penting).** Persistence-**horizon** AUPRC 0,827–0,902 (B1 93–97%)"
+   },
+   {
+    "line": 609,
+    "context": "- **Batas.** FAR 9,9–1.440/24jam; B1 maks 31,8% (<80%); kontrol-positif kejadian"
+   },
+   {
+    "line": 628,
+    "context": "- **Bukti empiris V9.** K-i persistence P 0,615–0,793, delay median 0–3,5 mnt, FAR_t"
+   },
+   {
+    "line": 628,
+    "context": " empiris V9.** K-i persistence P 0,615–0,793, delay median 0–3,5 mnt, FAR_t"
+   },
+   {
+    "line": 629,
+    "context": "  32–111/24jam (beban blok, bukan alarm); **hibrida rule AND per"
+   },
+   {
+    "line": 633,
+    "context": "- **Batas.** K-i label = PROXY (residu SPPA); FAR 14,6–58,4 >6 di 9/9 → belum alarm; K-ii"
+   },
+   {
+    "line": 635,
+    "context": "  4 kanal flow saling berkorelasi r=0,995–1,000 = semuanya aliran masuk); varian proxy 0 TP"
+   },
+   {
+    "line": 642,
+    "context": "`SHKRSK_RT` relevan.** Kanal MWD `SHKRSK_RT` (skala risiko 0–3) adalah"
+   },
+   {
+    "line": 644,
+    "context": "  **tidak cukup** untuk shock (AUC surface 0,80–0,82, `V6_R1` §3.3, dikonfirmasi peringatan"
+   },
+   {
+    "line": 651,
+    "context": "- **Bukti empiris V9.** RF AUPRC 0,0069–0,1929; ΔB vs canary 5/9; rule-display FAR 0,67–6,6"
+   },
+   {
+    "line": 651,
+    "context": "AUPRC 0,0069–0,1929; ΔB vs canary 5/9; rule-display FAR 0,67–6,6"
+   },
+   {
+    "line": 656,
+    "context": "  ≥2 vs F-14 40%); non-null SHKRSK_RT hanya 0,7–8% baris."
+   },
+   {
+    "line": 673,
+    "context": "erkalibrasi (≤1 alarm/menit) justru **deteksi 4/4 alat, FP 1–3, TLead 20–36 dtk**"
+   },
+   {
+    "line": 673,
+    "context": "(≤1 alarm/menit) justru **deteksi 4/4 alat, FP 1–3, TLead 20–36 dtk**"
+   }
+  ]
+ }
+}

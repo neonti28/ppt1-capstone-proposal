@@ -1,0 +1,11 @@
+[2026-10-12 10:12:05]    BW USROP_A 0 N-NA_F-9_Ad.csv: n=271 pos=3 pers=0.11851851851851851 (v6=None) canary=0.017700437341751342 (v6=None) nmatch={'n_test_match': True, 'pos_match': True}
+[2026-10-12 10:12:07]    BW USROP_A 1 N-S_F-7d.csv: n=124 pos=0 pers=None (v6=None) canary=None (v6=None) nmatch={'n_test_match': True, 'pos_match': True}
+[2026-10-12 10:12:08]    BW USROP_A 2 N-SH_F-14d.csv: n=949 pos=91 pers=0.6792052825924018 (v6=0.6792052825924018) canary=0.19127517114238235 (v6=0.19127517114238235) nmatch={'n_test_match': True, 'pos_match': True}
+[2026-10-12 10:12:09]    BW USROP_A 3 N-SH-F-15d.csv: n=1057 pos=155 pers=0.6978575032321129 (v6=0.6978575032321129) canary=0.28802368022066216 (v6=0.28802368022066216) nmatch={'n_test_match': True, 'pos_match': True}
+[2026-10-12 10:12:11]    BW USROP_A 4 N-SH_F-15Sd.csv: n=1031 pos=561 pers=0.9837378022700696 (v6=0.9837378022700696) canary=0.75551936756036 (v6=0.75551936756036) nmatch={'n_test_match': True, 'pos_match': True}
+[2026-10-12 10:12:12]    BW USROP_A 5 N-SH-F-5d.csv: n=367 pos=174 pers=0.870297273423366 (v6=0.870297273423366) canary=0.6914937539016541 (v6=0.6914937539016541) nmatch={'n_test_match': True, 'pos_match': True}
+[2026-10-12 10:12:14]    BW USROP_A 6 N-SH_F-9d.csv: n=154 pos=0 pers=None (v6=None) canary=None (v6=None) nmatch={'n_test_match': True, 'pos_match': True}
+[2026-10-12 10:12:15]    TW T01: n=120 pos=60 canary3rms=0.5164015727016399 prev=0.5 persDiag=0.9917366946778712
+[2026-10-12 10:12:15]    TW T02: n=112 pos=62 canary3rms=0.5947243576201562 prev=0.5535714285714286 persDiag=0.9928799767509445
+[2026-10-12 10:12:16]    TW T03: n=121 pos=60 canary3rms=0.6023527192818665 prev=0.49586776859504134 persDiag=0.9916666666666667
+[2026-10-12 10:12:17]    TW T04: n=116 pos=58 canary3rms=0.6123907846873864 prev=0.5 persDiag=0.9914542728635682

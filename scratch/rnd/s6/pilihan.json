@@ -1,0 +1,976 @@
+{
+ "meta": {
+  "kartu": "RND-S6",
+  "judul": "vonis PM gelombang 2 dan pemilihan komposisi terbaik",
+  "waktu": "2026-10-28 07:44:57",
+  "harness": "/mnt/d/Capstone 1(v2)/code/rnd_hybrid_harness.py",
+  "seed": [
+   42,
+   13
+  ],
+  "alpha_budget": 0.004166666666666667,
+  "far_maks": 6.0,
+  "recall_min": 0.5,
+  "sumber_angka": "scratch/rnd/s6/s6_kandidat.json lewat s6_verifikasi.json",
+  "pemeriksaan_terbit": {
+   "jumlah": 30,
+   "lulus": 30
+  },
+  "kebijakan": "docs/RND_EVALUATION_POLICY.md",
+  "baris_ledger_s6": 191
+ },
+ "tabel_perbandingan": [
+  {
+   "kelas": "hyd",
+   "tugas": "K-i peringatan dini",
+   "kandidat": "rule_kanal",
+   "asal": "pra-riset (V9 rule_display, L1)",
+   "lapisan_A": {
+    "fp_total": 2105,
+    "tp_total": 5579,
+    "presisi_median": 0.683544,
+    "recall_median": 0.750716,
+    "recall_min_fold": 0.652568,
+    "far24_kalender_median": 6.932,
+    "far24_kalender_maks": 24.2557,
+    "fold_far_le6": 3,
+    "fold_recall_ge05": 9,
+    "fold_gate_A": 0,
+    "n_fold": 9
+   },
+   "lapisan_B": {
+    "lead_median_menit": 6.0,
+    "n_diperingatkan": 307,
+    "n_onset": 390,
+    "alarm_palsu_per_onset": 5.3974,
+    "lead_persen_dari_henti_median_60menit": 10.0,
+    "catatan": "nilai uang, jam orang, dan pengurangan inspeksi BELUM TERUKUR (S4: biaya, work order, jadwal tidak ada)"
+   },
+   "lapisan_C": {
+    "cakupan_median": 0.0903,
+    "rasio_far_maks_min": 32.0334,
+    "fold_paruh_kedua_positif": 9,
+    "fold_recall_positif": 9,
+    "n_fold": 9,
+    "catatan": "kestabilan lintas kampanye BELUM TERUKUR karena tanggal kampanye tidak ada per baris"
+   },
+   "batas_pakai": "ambang global tidak portabel, FAR menyebar antar well",
+   "kekuatan_bukti": "TERUKUR, 9 fold x 2 seed",
+   "ledger": [
+    "S6-010",
+    "S6-011",
+    "S6-012",
+    "S6-013"
+   ],
+   "ledger_tambahan": []
+  },
+  {
+   "kelas": "hyd",
+   "tugas": "K-i peringatan dini",
+   "kandidat": "persistence",
+   "asal": "pra-riset (V9 persistence, L0)",
+   "lapisan_A": {
+    "fp_total": 1941,
+    "tp_total": 5243,
+    "presisi_median": 0.711409,
+    "recall_median": 0.679083,
+    "recall_min_fold": 0.605237,
+    "far24_kalender_median": 6.7404,
+    "far24_kalender_maks": 20.1644,
+    "fold_far_le6": 4,
+    "fold_recall_ge05": 9,
+    "fold_gate_A": 0,
+    "n_fold": 9
+   },
+   "lapisan_B": {
+    "lead_median_menit": 6.0,
+    "n_diperingatkan": 234,
+    "n_onset": 390,
+    "alarm_palsu_per_onset": 4.9769,
+    "lead_persen_dari_henti_median_60menit": 10.0,
+    "catatan": "nilai uang, jam orang, dan pengurangan inspeksi BELUM TERUKUR (S4: biaya, work order, jadwal tidak ada)"
+   },
+   "lapisan_C": {
+    "cakupan_median": 0.0903,
+    "rasio_far_maks_min": 33.9869,
+    "fold_paruh_kedua_positif": 9,
+    "fold_recall_positif": 9,
+    "n_fold": 9,
+    "catatan": "kestabilan lintas kampanye BELUM TERUKUR karena tanggal kampanye tidak ada per baris"
+   },
+   "batas_pakai": "konfirmasi status, RF dilarang di kelas ini",
+   "kekuatan_bukti": "TERUKUR, 9 fold x 2 seed",
+   "ledger": [
+    "S6-021",
+    "S6-022",
+    "S6-023",
+    "S6-024"
+   ],
+   "ledger_tambahan": []
+  },
+  {
+   "kelas": "hyd",
+   "tugas": "K-i peringatan dini",
+   "kandidat": "H1_stat_dan_rule",
+   "asal": "pasca-riset (R8 H1, diadopsi PM A-1)",
+   "lapisan_A": {
+    "fp_total": 935,
+    "tp_total": 3804,
+    "presisi_median": 0.778947,
+    "recall_median": 0.563815,
+    "recall_min_fold": 0.392749,
+    "far24_kalender_median": 3.5302,
+    "far24_kalender_maks": 8.9132,
+    "fold_far_le6": 7,
+    "fold_recall_ge05": 6,
+    "fold_gate_A": 0,
+    "n_fold": 9
+   },
+   "lapisan_B": {
+    "lead_median_menit": 11.5,
+    "n_diperingatkan": 219,
+    "n_onset": 390,
+    "alarm_palsu_per_onset": 2.3974,
+    "lead_persen_dari_henti_median_60menit": 19.17,
+    "catatan": "nilai uang, jam orang, dan pengurangan inspeksi BELUM TERUKUR (S4: biaya, work order, jadwal tidak ada)"
+   },
+   "lapisan_C": {
+    "cakupan_median": 0.0903,
+    "rasio_far_maks_min": 21.9591,
+    "fold_paruh_kedua_positif": 9,
+    "fold_recall_positif": 9,
+    "n_fold": 9,
+    "catatan": "kestabilan lintas kampanye BELUM TERUKUR karena tanggal kampanye tidak ada per baris"
+   },
+   "batas_pakai": "bukan untuk mode cakupan penuh",
+   "kekuatan_bukti": "TERUKUR, direproduksi tepat dari R8",
+   "ledger": [
+    "S6-043",
+    "S6-044",
+    "S6-045",
+    "S6-046"
+   ],
+   "ledger_tambahan": []
+  },
+  {
+   "kelas": "hyd",
+   "tugas": "K-i peringatan dini",
+   "kandidat": "H1p_rule_dan_persist",
+   "asal": "hybrid formula pra-riset V9 D-A3, diuji ulang S6 di 9 fold",
+   "lapisan_A": {
+    "fp_total": 927,
+    "tp_total": 4924,
+    "presisi_median": 0.824281,
+    "recall_median": 0.651862,
+    "recall_min_fold": 0.524673,
+    "far24_kalender_median": 4.0984,
+    "far24_kalender_maks": 9.6438,
+    "fold_far_le6": 7,
+    "fold_recall_ge05": 9,
+    "fold_gate_A": 0,
+    "n_fold": 9
+   },
+   "lapisan_B": {
+    "lead_median_menit": 8.0,
+    "n_diperingatkan": 218,
+    "n_onset": 390,
+    "alarm_palsu_per_onset": 2.3769,
+    "lead_persen_dari_henti_median_60menit": 13.33,
+    "catatan": "nilai uang, jam orang, dan pengurangan inspeksi BELUM TERUKUR (S4: biaya, work order, jadwal tidak ada)"
+   },
+   "lapisan_C": {
+    "cakupan_median": 0.0903,
+    "rasio_far_maks_min": 42.5963,
+    "fold_paruh_kedua_positif": 9,
+    "fold_recall_positif": 9,
+    "n_fold": 9,
+    "catatan": "kestabilan lintas kampanye BELUM TERUKUR karena tanggal kampanye tidak ada per baris"
+   },
+   "batas_pakai": "butuh riwayat y_prev 10 menit yang lengkap",
+   "kekuatan_bukti": "TERUKUR, menang di 9 dari 9 fold untuk recall",
+   "ledger": [
+    "S6-054",
+    "S6-055",
+    "S6-056",
+    "S6-057"
+   ],
+   "ledger_tambahan": []
+  },
+  {
+   "kelas": "hyd",
+   "tugas": "K-i peringatan dini",
+   "kandidat": "H1p3_rule_persist_stat",
+   "asal": "baru, tiga komponen hasil S6",
+   "lapisan_A": {
+    "fp_total": 568,
+    "tp_total": 3557,
+    "presisi_median": 0.86456,
+    "recall_median": 0.529551,
+    "recall_min_fold": 0.355488,
+    "far24_kalender_median": 2.0323,
+    "far24_kalender_maks": 5.9909,
+    "fold_far_le6": 9,
+    "fold_recall_ge05": 5,
+    "fold_gate_A": 1,
+    "n_fold": 9
+   },
+   "lapisan_B": {
+    "lead_median_menit": 12.5,
+    "n_diperingatkan": 183,
+    "n_onset": 390,
+    "alarm_palsu_per_onset": 1.4564,
+    "lead_persen_dari_henti_median_60menit": 20.83,
+    "catatan": "nilai uang, jam orang, dan pengurangan inspeksi BELUM TERUKUR (S4: biaya, work order, jadwal tidak ada)"
+   },
+   "lapisan_C": {
+    "cakupan_median": 0.0903,
+    "rasio_far_maks_min": 35.7026,
+    "fold_paruh_kedua_positif": 9,
+    "fold_recall_positif": 9,
+    "n_fold": 9,
+    "catatan": "kestabilan lintas kampanye BELUM TERUKUR karena tanggal kampanye tidak ada per baris"
+   },
+   "batas_pakai": "CUSUM tetap tersaturasi h=30",
+   "kekuatan_bukti": "TERUKUR, satu-satunya komposisi dengan FAR di bawah 6 pada 9 dari 9 fold",
+   "ledger": [
+    "S6-065",
+    "S6-066",
+    "S6-067",
+    "S6-068"
+   ],
+   "ledger_tambahan": []
+  },
+  {
+   "kelas": "hyd",
+   "tugas": "K-i peringatan dini",
+   "kandidat": "H1b_stat_atau_rule",
+   "asal": "pasca-riset (pembanding cakupan)",
+   "lapisan_A": {
+    "fp_total": 5531,
+    "tp_total": 5985,
+    "presisi_median": 0.469388,
+    "recall_median": 0.819477,
+    "recall_min_fold": 0.712991,
+    "far24_kalender_median": 14.7156,
+    "far24_kalender_maks": 79.6347,
+    "fold_far_le6": 2,
+    "fold_recall_ge05": 9,
+    "fold_gate_A": 0,
+    "n_fold": 9
+   },
+   "lapisan_B": {
+    "lead_median_menit": 3.0,
+    "n_diperingatkan": 329,
+    "n_onset": 390,
+    "alarm_palsu_per_onset": 14.1821,
+    "lead_persen_dari_henti_median_60menit": 5.0,
+    "catatan": "nilai uang, jam orang, dan pengurangan inspeksi BELUM TERUKUR (S4: biaya, work order, jadwal tidak ada)"
+   },
+   "lapisan_C": {
+    "cakupan_median": 0.0903,
+    "rasio_far_maks_min": 26.5999,
+    "fold_paruh_kedua_positif": 9,
+    "fold_recall_positif": 9,
+    "n_fold": 9,
+    "catatan": "kestabilan lintas kampanye BELUM TERUKUR karena tanggal kampanye tidak ada per baris"
+   },
+   "batas_pakai": "FAR median 14,7156",
+   "kekuatan_bukti": "TERUKUR, tidak dipilih",
+   "ledger": [
+    "S6-076",
+    "S6-077",
+    "S6-078",
+    "S6-079"
+   ],
+   "ledger_tambahan": []
+  },
+  {
+   "kelas": "vib",
+   "tugas": "K-i deteksi kondisi",
+   "kandidat": "persistence",
+   "asal": "pra-riset (V9 persistence, L0)",
+   "lapisan_A": {
+    "fp_total": 1456,
+    "tp_total": 4043,
+    "presisi_median": 0.728803,
+    "recall_median": 0.740465,
+    "recall_min_fold": 0.686684,
+    "far24_kalender_median": 22.0218,
+    "far24_kalender_maks": 144.4562,
+    "fold_far_le6": 0,
+    "fold_recall_ge05": 4,
+    "fold_gate_A": 0,
+    "n_fold": 4
+   },
+   "lapisan_B": {
+    "lead_median_menit": 1.0,
+    "n_diperingatkan": 168,
+    "n_onset": 216,
+    "alarm_palsu_per_onset": 6.7407,
+    "lead_persen_dari_henti_median_60menit": 1.67,
+    "catatan": "nilai uang, jam orang, dan pengurangan inspeksi BELUM TERUKUR (S4: biaya, work order, jadwal tidak ada)"
+   },
+   "lapisan_C": {
+    "cakupan_median": 0.20935,
+    "rasio_far_maks_min": 18.7771,
+    "fold_paruh_kedua_positif": 4,
+    "fold_recall_positif": 4,
+    "n_fold": 4,
+    "catatan": "kestabilan lintas kampanye BELUM TERUKUR karena tanggal kampanye tidak ada per baris"
+   },
+   "batas_pakai": "recall tertinggi, FAR 22,0218 per 24 jam",
+   "kekuatan_bukti": "TERUKUR, 4 fold, cocok S2",
+   "ledger": [
+    "S6-087",
+    "S6-088",
+    "S6-089",
+    "S6-090"
+   ],
+   "ledger_tambahan": []
+  },
+  {
+   "kelas": "vib",
+   "tugas": "K-i deteksi kondisi",
+   "kandidat": "rule_kanal",
+   "asal": "pra-riset (V9 rule_display, L1)",
+   "lapisan_A": {
+    "fp_total": 2293,
+    "tp_total": 1294,
+    "presisi_median": 0.485625,
+    "recall_median": 0.23613,
+    "recall_min_fold": 0.171671,
+    "far24_kalender_median": 37.3627,
+    "far24_kalender_maks": 59.3031,
+    "fold_far_le6": 0,
+    "fold_recall_ge05": 0,
+    "fold_gate_A": 0,
+    "n_fold": 4
+   },
+   "lapisan_B": {
+    "lead_median_menit": 6.5,
+    "n_diperingatkan": 133,
+    "n_onset": 216,
+    "alarm_palsu_per_onset": 10.6157,
+    "lead_persen_dari_henti_median_60menit": 10.83,
+    "catatan": "nilai uang, jam orang, dan pengurangan inspeksi BELUM TERUKUR (S4: biaya, work order, jadwal tidak ada)"
+   },
+   "lapisan_C": {
+    "cakupan_median": 0.20935,
+    "rasio_far_maks_min": 6.4621,
+    "fold_paruh_kedua_positif": 4,
+    "fold_recall_positif": 4,
+    "n_fold": 4,
+    "catatan": "kestabilan lintas kampanye BELUM TERUKUR karena tanggal kampanye tidak ada per baris"
+   },
+   "batas_pakai": "presisi 0,4856, FAR 37,3627",
+   "kekuatan_bukti": "TERUKUR, 4 fold, cocok S2",
+   "ledger": [
+    "S6-094",
+    "S6-095",
+    "S6-096",
+    "S6-097"
+   ],
+   "ledger_tambahan": []
+  },
+  {
+   "kelas": "vib",
+   "tugas": "K-i deteksi kondisi",
+   "kandidat": "H1_stat_dan_rule",
+   "asal": "pasca-riset (S2)",
+   "lapisan_A": {
+    "fp_total": 1033,
+    "tp_total": 762,
+    "presisi_median": 0.593005,
+    "recall_median": 0.142612,
+    "recall_min_fold": 0.075065,
+    "far24_kalender_median": 19.2783,
+    "far24_kalender_maks": 30.4118,
+    "fold_far_le6": 1,
+    "fold_recall_ge05": 0,
+    "fold_gate_A": 0,
+    "n_fold": 4
+   },
+   "lapisan_B": {
+    "lead_median_menit": 15.0,
+    "n_diperingatkan": 77,
+    "n_onset": 216,
+    "alarm_palsu_per_onset": 4.7824,
+    "lead_persen_dari_henti_median_60menit": 25.0,
+    "catatan": "nilai uang, jam orang, dan pengurangan inspeksi BELUM TERUKUR (S4: biaya, work order, jadwal tidak ada)"
+   },
+   "lapisan_C": {
+    "cakupan_median": 0.20935,
+    "rasio_far_maks_min": 12.4272,
+    "fold_paruh_kedua_positif": 4,
+    "fold_recall_positif": 4,
+    "n_fold": 4,
+    "catatan": "kestabilan lintas kampanye BELUM TERUKUR karena tanggal kampanye tidak ada per baris"
+   },
+   "batas_pakai": "kalah dari persistence pada tiga sumbu",
+   "kekuatan_bukti": "TERUKUR, 4 fold, cocok S2",
+   "ledger": [
+    "S6-101",
+    "S6-102",
+    "S6-103",
+    "S6-104"
+   ],
+   "ledger_tambahan": []
+  },
+  {
+   "kelas": "vib",
+   "tugas": "K-i deteksi kondisi",
+   "kandidat": "H1p_rule_dan_persist",
+   "asal": "hybrid formula pra-riset V9 D-A3, diuji ulang S6",
+   "lapisan_A": {
+    "fp_total": 183,
+    "tp_total": 1068,
+    "presisi_median": 0.861505,
+    "recall_median": 0.190589,
+    "recall_min_fold": 0.116841,
+    "far24_kalender_median": 1.4934,
+    "far24_kalender_maks": 34.2133,
+    "fold_far_le6": 3,
+    "fold_recall_ge05": 0,
+    "fold_gate_A": 0,
+    "n_fold": 4
+   },
+   "lapisan_B": {
+    "lead_median_menit": 8.5,
+    "n_diperingatkan": 90,
+    "n_onset": 216,
+    "alarm_palsu_per_onset": 0.8472,
+    "lead_persen_dari_henti_median_60menit": 14.17,
+    "catatan": "nilai uang, jam orang, dan pengurangan inspeksi BELUM TERUKUR (S4: biaya, work order, jadwal tidak ada)"
+   },
+   "lapisan_C": {
+    "cakupan_median": 0.20935,
+    "rasio_far_maks_min": 25.4279,
+    "fold_paruh_kedua_positif": 3,
+    "fold_recall_positif": 4,
+    "n_fold": 4,
+    "catatan": "kestabilan lintas kampanye BELUM TERUKUR karena tanggal kampanye tidak ada per baris"
+   },
+   "batas_pakai": "recall 0,1906, hanya layak peringatan hemat",
+   "kekuatan_bukti": "TERUKUR, presisi dan FAR terbaik di kelas ini",
+   "ledger": [
+    "S6-108",
+    "S6-109",
+    "S6-110",
+    "S6-111"
+   ],
+   "ledger_tambahan": []
+  },
+  {
+   "kelas": "ssi",
+   "tugas": "K-i deteksi kondisi",
+   "kandidat": "persistence",
+   "asal": "pra-riset (V9 persistence)",
+   "lapisan_A": {
+    "fp_total": 267,
+    "tp_total": 85,
+    "presisi_median": 0.094017,
+    "recall_median": 0.032258,
+    "recall_min_fold": 0.0,
+    "far24_kalender_median": 0.3589,
+    "far24_kalender_maks": 36.0644,
+    "fold_far_le6": 6,
+    "fold_recall_ge05": 0,
+    "fold_gate_A": 0,
+    "n_fold": 9
+   },
+   "lapisan_B": {
+    "lead_median_menit": 17.0,
+    "n_diperingatkan": 29,
+    "n_onset": 132,
+    "alarm_palsu_per_onset": 2.0227,
+    "lead_persen_dari_henti_median_60menit": 28.33,
+    "catatan": "nilai uang, jam orang, dan pengurangan inspeksi BELUM TERUKUR (S4: biaya, work order, jadwal tidak ada)"
+   },
+   "lapisan_C": {
+    "cakupan_median": 0.0765,
+    "rasio_far_maks_min": null,
+    "fold_paruh_kedua_positif": 1,
+    "fold_recall_positif": 7,
+    "n_fold": 9,
+    "catatan": "kestabilan lintas kampanye BELUM TERUKUR karena tanggal kampanye tidak ada per baris"
+   },
+   "batas_pakai": "presisi median 0,0940",
+   "kekuatan_bukti": "TERUKUR, 9 fold, cocok S2 pada 7 fold uji",
+   "ledger": [
+    "S6-115",
+    "S6-116",
+    "S6-117",
+    "S6-118"
+   ],
+   "ledger_tambahan": []
+  },
+  {
+   "kelas": "ssi",
+   "tugas": "K-i deteksi kondisi",
+   "kandidat": "rule_kanal",
+   "asal": "pra-riset (V9 rule_display)",
+   "lapisan_A": {
+    "fp_total": 2114,
+    "tp_total": 43,
+    "presisi_median": 0.009058,
+    "recall_median": 0.0,
+    "recall_min_fold": 0.0,
+    "far24_kalender_median": 1.9355,
+    "far24_kalender_maks": 30.525,
+    "fold_far_le6": 6,
+    "fold_recall_ge05": 0,
+    "fold_gate_A": 0,
+    "n_fold": 9
+   },
+   "lapisan_B": {
+    "lead_median_menit": 11.5,
+    "n_diperingatkan": 34,
+    "n_onset": 132,
+    "alarm_palsu_per_onset": 16.0152,
+    "lead_persen_dari_henti_median_60menit": 19.17,
+    "catatan": "nilai uang, jam orang, dan pengurangan inspeksi BELUM TERUKUR (S4: biaya, work order, jadwal tidak ada)"
+   },
+   "lapisan_C": {
+    "cakupan_median": 0.0765,
+    "rasio_far_maks_min": null,
+    "fold_paruh_kedua_positif": 3,
+    "fold_recall_positif": 4,
+    "n_fold": 9,
+    "catatan": "kestabilan lintas kampanye BELUM TERUKUR karena tanggal kampanye tidak ada per baris"
+   },
+   "batas_pakai": "recall median 0,0000",
+   "kekuatan_bukti": "TERUKUR, 9 fold",
+   "ledger": [
+    "S6-122",
+    "S6-123",
+    "S6-124",
+    "S6-125"
+   ],
+   "ledger_tambahan": []
+  },
+  {
+   "kelas": "ssi",
+   "tugas": "K-i deteksi kondisi",
+   "kandidat": "stat_cusum",
+   "asal": "pra-riset dan pasca-riset sama",
+   "lapisan_A": {
+    "fp_total": 4059,
+    "tp_total": 80,
+    "presisi_median": 0.015291,
+    "recall_median": 0.0,
+    "recall_min_fold": 0.0,
+    "far24_kalender_median": 2.2889,
+    "far24_kalender_maks": 123.3989,
+    "fold_far_le6": 5,
+    "fold_recall_ge05": 0,
+    "fold_gate_A": 0,
+    "n_fold": 9
+   },
+   "lapisan_B": {
+    "lead_median_menit": 7.75,
+    "n_diperingatkan": 40,
+    "n_onset": 132,
+    "alarm_palsu_per_onset": 30.75,
+    "lead_persen_dari_henti_median_60menit": 12.92,
+    "catatan": "nilai uang, jam orang, dan pengurangan inspeksi BELUM TERUKUR (S4: biaya, work order, jadwal tidak ada)"
+   },
+   "lapisan_C": {
+    "cakupan_median": 0.0765,
+    "rasio_far_maks_min": null,
+    "fold_paruh_kedua_positif": 4,
+    "fold_recall_positif": 4,
+    "n_fold": 9,
+    "catatan": "kestabilan lintas kampanye BELUM TERUKUR karena tanggal kampanye tidak ada per baris"
+   },
+   "batas_pakai": "presisi median 0,0153",
+   "kekuatan_bukti": "TERUKUR, 9 fold",
+   "ledger": [
+    "S6-129",
+    "S6-130",
+    "S6-131",
+    "S6-132"
+   ],
+   "ledger_tambahan": []
+  },
+  {
+   "kelas": "ssi",
+   "tugas": "K-i deteksi kondisi",
+   "kandidat": "H1_stat_dan_rule",
+   "asal": "pasca-riset (S2)",
+   "lapisan_A": {
+    "fp_total": 1847,
+    "tp_total": 34,
+    "presisi_median": 0.009425,
+    "recall_median": 0.0,
+    "recall_min_fold": 0.0,
+    "far24_kalender_median": 0.9762,
+    "far24_kalender_maks": 26.2385,
+    "fold_far_le6": 6,
+    "fold_recall_ge05": 0,
+    "fold_gate_A": 0,
+    "n_fold": 9
+   },
+   "lapisan_B": {
+    "lead_median_menit": 14.0,
+    "n_diperingatkan": 25,
+    "n_onset": 132,
+    "alarm_palsu_per_onset": 13.9924,
+    "lead_persen_dari_henti_median_60menit": 23.33,
+    "catatan": "nilai uang, jam orang, dan pengurangan inspeksi BELUM TERUKUR (S4: biaya, work order, jadwal tidak ada)"
+   },
+   "lapisan_C": {
+    "cakupan_median": 0.0765,
+    "rasio_far_maks_min": null,
+    "fold_paruh_kedua_positif": 3,
+    "fold_recall_positif": 3,
+    "n_fold": 9,
+    "catatan": "kestabilan lintas kampanye BELUM TERUKUR karena tanggal kampanye tidak ada per baris"
+   },
+   "batas_pakai": "gerbang DAN tertutup",
+   "kekuatan_bukti": "TERUKUR, 9 fold",
+   "ledger": [
+    "S6-136",
+    "S6-137",
+    "S6-138",
+    "S6-139"
+   ],
+   "ledger_tambahan": []
+  },
+  {
+   "kelas": "ssi",
+   "tugas": "K-i deteksi kondisi",
+   "kandidat": "H1p_rule_dan_persist",
+   "asal": "hybrid formula pra-riset V9 D-A3, diuji ulang S6",
+   "lapisan_A": {
+    "fp_total": 17,
+    "tp_total": 1,
+    "presisi_median": 0.0,
+    "recall_median": 0.0,
+    "recall_min_fold": 0.0,
+    "far24_kalender_median": 0.0,
+    "far24_kalender_maks": 0.0627,
+    "fold_far_le6": 9,
+    "fold_recall_ge05": 0,
+    "fold_gate_A": 0,
+    "n_fold": 9
+   },
+   "lapisan_B": {
+    "lead_median_menit": 8.0,
+    "n_diperingatkan": 1,
+    "n_onset": 132,
+    "alarm_palsu_per_onset": 0.1288,
+    "lead_persen_dari_henti_median_60menit": 13.33,
+    "catatan": "nilai uang, jam orang, dan pengurangan inspeksi BELUM TERUKUR (S4: biaya, work order, jadwal tidak ada)"
+   },
+   "lapisan_C": {
+    "cakupan_median": 0.0765,
+    "rasio_far_maks_min": null,
+    "fold_paruh_kedua_positif": 0,
+    "fold_recall_positif": 1,
+    "n_fold": 9,
+    "catatan": "kestabilan lintas kampanye BELUM TERUKUR karena tanggal kampanye tidak ada per baris"
+   },
+   "batas_pakai": "1 TP dari 132 onset, praktis mati",
+   "kekuatan_bukti": "TERUKUR, hasil menolak",
+   "ledger": [
+    "S6-143",
+    "S6-144",
+    "S6-145",
+    "S6-146"
+   ],
+   "ledger_tambahan": []
+  }
+ ],
+ "kutipan_kartu_lain": [
+  {
+   "kelas": "shk",
+   "tugas": "K-i status",
+   "kandidat": "ML LightGBM single",
+   "angka": {
+    "AUPRC": 0.0499,
+    "prevalensi": 0.024311,
+    "recall_median": 0.0829,
+    "fp": 2633,
+    "tp": 192
+   },
+   "sumber": "R8 bagian 5.1",
+   "catatan": "tidak diuji ulang di S6"
+  },
+  {
+   "kelas": "shk",
+   "tugas": "K-i status",
+   "kandidat": "H2 ML dan statistik",
+   "angka": {
+    "fp": 667,
+    "tp": 46,
+    "recall_median": 0.0037
+   },
+   "sumber": "R8 bagian 2",
+   "catatan": "ditolak PM, TP turun 76,04 persen"
+  },
+  {
+   "kelas": "stuck",
+   "tugas": "K-ii onset",
+   "kandidat": "H4 tiga komponen",
+   "angka": {
+    "fp": 41,
+    "tp": 17,
+    "presisi_median": 0.6404,
+    "recall_median": 0.001,
+    "onset_diperingatkan": 13,
+    "onset_total": 148
+   },
+   "sumber": "R8 bagian 7",
+   "catatan": "verifikasi manual bertarget, bukan alarm"
+  },
+  {
+   "kelas": "tool_wear",
+   "tugas": "K-i perubahan regime",
+   "kandidat": "op_far_calibrated",
+   "angka": {
+    "fp_r01": "1-3 per alat",
+    "tlead_detik": "20-36",
+    "presisi_run": 0.5672,
+    "peluang_kebetulan": 0.5678
+   },
+   "sumber": "R8 dan PM-101",
+   "catatan": "presisi run praktis sama dengan peluang kebetulan"
+  },
+  {
+   "kelas": "bit_wear",
+   "tugas": "K-1 status",
+   "kandidat": "persistence",
+   "angka": {
+    "auprc": "0,119-0,984",
+    "far_waktu": "tidak sah, grid kedalaman"
+   },
+   "sumber": "V9 dan PM",
+   "catatan": "tidak ada identitas bit dan run, K-2 belum dijalankan"
+  }
+ ],
+ "pilihan_per_kelas": {
+  "hyd": {
+   "tugas": "K-i peringatan dini",
+   "pilihan": "H1p_rule_dan_persist sebagai mode peringatan utama, H1p3_rule_persist_stat sebagai titik operasi tenang, rule kanal tetap untuk cakupan penuh",
+   "alasan": {
+    "recall_median_H1p": 0.651862,
+    "recall_min_fold_H1p": 0.524673,
+    "fold_recall_ge05_H1p": 9,
+    "presisi_median_H1p": 0.824281,
+    "fold_far_le6_H1p": 7,
+    "fold_far_le6_H1p3": 9,
+    "recall_median_H1p3": 0.529551,
+    "presisi_median_H1p3": 0.86456,
+    "delta_tp_H1p_lawan_H1": 1120,
+    "delta_tp_persen": 29.4427,
+    "delta_fp_H1p_lawan_H1": -8,
+    "delta_far_H1p_lawan_H1": 0.5682
+   },
+   "yang_dikorbankan": "lead median H1p 8,0 menit lawan H1 11,5 menit, dan FAR median H1p 4,0984 lawan 3,5302",
+   "catatan": "H1 tidak lagi pilihan pertama, tetapi tetap dicatat sebagai titik operasi pembanding"
+  },
+  "vib": {
+   "tugas": "K-i deteksi kondisi",
+   "pilihan": "rule kanal tetap status, H1p sebagai peringatan hemat, persistence tetap pembanding cakupan",
+   "alasan": {
+    "presisi_H1p": 0.861505,
+    "far_median_H1p": 1.4934,
+    "fp_H1p": 183,
+    "fp_rule": 2293,
+    "fp_persistence": 1456,
+    "recall_H1p": 0.190589,
+    "recall_persistence": 0.740465
+   },
+   "yang_dikorbankan": "recall 0,1906 lawan persistence 0,7405, jadi H1p bukan pengganti cakupan",
+   "catatan": "ini perbaikan beban alarm, bukan perbaikan deteksi"
+  },
+  "ssi": {
+   "tugas": "K-i deteksi kondisi",
+   "pilihan": "persistence dan ML tetap untuk pemantauan tren, hybrid rule dan persistence ditolak",
+   "alasan": {
+    "tp_H1p": 1,
+    "fp_H1p": 17,
+    "n_onset": 132,
+    "tp_H1": 34,
+    "fp_persistence": 267,
+    "presisi_persistence": 0.094017
+   },
+   "yang_dikorbankan": "tidak ada, karena kandidat yang diuji gagal",
+   "catatan": "hasil negatif, bukan penundaan"
+  },
+  "shk": {
+   "tugas": "K-i status",
+   "pilihan": "tidak berubah dari PM: ML single untuk tren, rule untuk peringatan",
+   "alasan": {},
+   "yang_dikorbankan": "-",
+   "catatan": "H1p belum diuji di kelas ini, jadi tidak boleh diklaim menang atau kalah"
+  },
+  "stuck": {
+   "tugas": "K-i dan K-ii",
+   "pilihan": "tidak berubah dari PM: rule status untuk K-i, triase manual untuk K-ii",
+   "alasan": {},
+   "yang_dikorbankan": "-",
+   "catatan": "H1p untuk K-ii belum diuji dan onset punya definisi berbeda"
+  },
+  "tool_wear": {
+   "tugas": "K-i perubahan regime",
+   "pilihan": "tidak berubah dari PM: op_far_calibrated untuk peringatan alat dikenal",
+   "alasan": {},
+   "yang_dikorbankan": "-",
+   "catatan": "H1p belum diuji, data toolwear_windows.csv tersedia"
+  },
+  "bit_wear": {
+   "tugas": "K-1 status",
+   "pilihan": "tidak berubah dari PM: persistence sebagai ranking",
+   "alasan": {},
+   "yang_dikorbankan": "-",
+   "catatan": "FAR waktu tidak sah karena baris berupa grid kedalaman"
+  }
+ },
+ "usulan_tier": [
+  {
+   "engine": "hyd K-i peringatan dini",
+   "tier_sekarang": "PERINGATAN-BERPENGAWAS",
+   "usulan": "tier tetap, engine H1 diganti H1p",
+   "alasan": "recall median 0,6519 dan presisi 0,8243 pada FP 927 lawan 935",
+   "syarat": "persetujuan user, bukti lintas seed sudah ada dua seed dengan nol selisih",
+   "status": "USULAN, bukan keputusan"
+  },
+  {
+   "engine": "hyd K-i titik operasi tenang",
+   "tier_sekarang": "PERINGATAN-BERPENGAWAS",
+   "usulan": "titik operasi kedua H1p3, bukan tier baru",
+   "alasan": "FAR di bawah 6 pada 9 dari 9 fold, recall median 0,5296",
+   "syarat": "persetujuan user, dan penerimaan bahwa empat fold di bawah recall 0,5",
+   "status": "USULAN, bukan keputusan"
+  },
+  {
+   "engine": "vib",
+   "tier_sekarang": "rule_display PERINGATAN-BERPENGAWAS, rf TREN",
+   "usulan": "tier tetap, tambah H1p sebagai peringatan hemat bertier TREN",
+   "alasan": "presisi 0,8615 dan FAR median 1,4934, tetapi recall 0,1906",
+   "syarat": "persetujuan user, kalibrasi per well belum ada",
+   "status": "USULAN, bukan keputusan"
+  },
+  {
+   "engine": "ssi",
+   "tier_sekarang": "hybrid rule dan persistence PERINGATAN-BERPENGAWAS",
+   "usulan": "tier tetap, hybrid rule dan persistence dihapus dari kandidat aktif",
+   "alasan": "H1p ssi hanya 1 TP dari 132 onset",
+   "syarat": "persetujuan user untuk mengubah registry",
+   "status": "USULAN, bukan keputusan"
+  },
+  {
+   "engine": "semua kelas",
+   "tier_sekarang": "ALARM-OTOMATIS 0 slot",
+   "usulan": "tetap 0 slot",
+   "alasan": "syarat EVAL_C bagian 4 belum dipenuhi kelas mana pun",
+   "syarat": "-",
+   "status": "TIDAK ADA USULAN KENAIKAN"
+  }
+ ],
+ "kandidat_baru": [
+  {
+   "nama": "H1p_rule_dan_persist",
+   "status": "SUDAH DIJALANKAN pada hyd, vib, ssi",
+   "hasil": "hyd menang, vib hemat alarm, ssi gagal",
+   "biaya_uji": "nol tambahan, termasuk dalam 170,4 detik untuk 3 kelas x 2 seed",
+   "syarat_data": "kolom y_prev_<kelas> dan riwayat 10 menit"
+  },
+  {
+   "nama": "H1p3_rule_persist_stat",
+   "status": "SUDAH DIJALANKAN pada hyd",
+   "hasil": "satu-satunya komposisi dengan 9 dari 9 fold FAR di bawah 6",
+   "biaya_uji": "nol tambahan, termasuk 170,4 detik",
+   "syarat_data": "ketiga sinyal tersedia, CUSUM tetap tersaturasi"
+  },
+  {
+   "nama": "H1p dan H1p3 pada shk, stuck K-i, bit_wear, tool_wear",
+   "status": "BELUM DIJALANKAN, diusulkan gelombang 3",
+   "hasil": "belum ada, dilarang diklaim",
+   "biaya_uji": "ESTIMASI 80 sampai 300 detik per kelas per seed, diukur dari 170,4 detik untuk 3 kelas x 2 seed",
+   "syarat_data": "shk.csv.gz dan lowo_shk.json, stuck_k1.csv.gz dan lowo_stuck_k1.json, USROP_labeled.csv, toolwear_windows.csv, semuanya ada"
+  }
+ ],
+ "tidak_boleh_diklaim": [
+  "H1p menang di semua kelas. Yang terukur: menang di hyd, menghemat alarm di vib, gagal di ssi.",
+  "Alarm otomatis siap untuk kelas mana pun.",
+  "Nilai rupiah atau jam henti yang dihemat.",
+  "Pengurangan pemeriksaan fisik per shift.",
+  "Kestabilan lintas kampanye pengeboran.",
+  "H1p3 sudah divalidasi di kelas selain hyd.",
+  "Kelas vib punya engine dengan FAR di bawah 6 pada semua fold. Yang terukur 3 dari 4 fold.",
+  "Angka ssi S6 sama penyebutnya dengan S2, karena S6 memakai 9 fold dan S2 memakai 7 fold yang dapat diuji.",
+  "H1p3 menggantikan H1 pada semua sumbu. H1p3 menurunkan TP 247 dan recall median 0,0342."
+ ],
+ "belum_terukur": [
+  {
+   "apa": "lapisan B dalam rupiah, jam henti terhindar, jam orang",
+   "sebab": "biaya, work order, dan jadwal inspeksi tidak ada di repo",
+   "bukti": "S4-N1, S4-N2, S4-N3"
+  },
+  {
+   "apa": "rasio alarm per inspeksi",
+   "sebab": "penyebut jadwal inspeksi tidak ada",
+   "bukti": "0 dari 23.447 record berkode inspect"
+  },
+  {
+   "apa": "kestabilan lintas kampanye",
+   "sebab": "tanggal kampanye tidak ada per baris",
+   "bukti": "R8-097"
+  },
+  {
+   "apa": "kalibrasi ambang per well prospektif",
+   "sebab": "belum pernah dijalankan",
+   "bukti": "PM-119"
+  },
+  {
+   "apa": "H1p dan H1p3 pada shk, stuck, bit_wear, tool_wear",
+   "sebab": "belum dijalankan",
+   "bukti": "tidak ada artefak"
+  },
+  {
+   "apa": "pengaruh well kalibrasi tunggal",
+   "sebab": "belum diuji kalibrasi bergilir",
+   "bukti": "S1 bagian 6.4"
+  }
+ ],
+ "roadmap_gelombang_3": [
+  {
+   "pekerjaan": "uji H1p dan H1p3 pada shk K-i",
+   "data": "scratch/v9_d1/datasets/shk.csv.gz dan scratch/v9_d1/lowo_shk.json",
+   "biaya": "ESTIMASI 80 sampai 200 detik per seed",
+   "gate": "FAR dan recall dilaporkan berpasangan pada titik operasi yang sama"
+  },
+  {
+   "pekerjaan": "uji H1p pada stuck K-i status",
+   "data": "scratch/v9_d1/datasets/stuck_k1.csv.gz dan lowo_stuck_k1.json",
+   "biaya": "ESTIMASI 80 sampai 200 detik per seed",
+   "gate": "presisi dan cakupan per well, cakupan kini hanya 2 well"
+  },
+  {
+   "pekerjaan": "uji H1p pada bit_wear K-1 tanpa metrik waktu",
+   "data": "data/USROP_labeled.csv",
+   "biaya": "ESTIMASI 120 sampai 300 detik per seed",
+   "gate": "tanpa FAR per 24 jam karena baris berupa grid kedalaman"
+  },
+  {
+   "pekerjaan": "uji H1p pada tool_wear K-i",
+   "data": "scratch/v6_e1/toolwear_windows.csv",
+   "biaya": "ESTIMASI 60 sampai 120 detik per seed",
+   "gate": "leave-one-tool-out empat alat, lapisan B tetap belum terukur"
+  },
+  {
+   "pekerjaan": "kalibrasi grid CUSUM diperluas untuk vib dan ssi",
+   "data": "dataset yang sama tanpa data baru",
+   "biaya": "ESTIMASI 100 sampai 250 detik per kelas",
+   "gate": "hasil dilaporkan sebagai titik operasi, bukan kenaikan tier"
+  },
+  {
+   "pekerjaan": "kalibrasi bergilir well kalibrasi",
+   "data": "fold yang sama",
+   "biaya": "ESTIMASI 9 kali jalannya per kelas",
+   "gate": "menjawab keberatan satu well kalibrasi"
+  }
+ ]
+}

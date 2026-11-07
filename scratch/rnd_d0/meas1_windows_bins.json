@@ -1,0 +1,788 @@
+{
+ "engines": {
+  "vib": {
+   "file": "scratch/v9_d1/datasets/vib.csv.gz",
+   "n_rows": 23922,
+   "n_cols": 63,
+   "n_wells": 4,
+   "wells": [
+    "F-14",
+    "F-15A",
+    "F-15_S",
+    "F-5"
+   ],
+   "label_col": "y_vib",
+   "n_pos_total": 5429,
+   "prevalence_total": 0.226945907532815,
+   "per_well": {
+    "F-14": {
+     "n_windows": 1989,
+     "n_pos": 1124,
+     "prevalence": 0.5651080945198592
+    },
+    "F-15A": {
+     "n_windows": 6482,
+     "n_pos": 1543,
+     "prevalence": 0.2380438136377661
+    },
+    "F-15_S": {
+     "n_windows": 10903,
+     "n_pos": 1532,
+     "prevalence": 0.1405117857470421
+    },
+    "F-5": {
+     "n_windows": 4548,
+     "n_pos": 1230,
+     "prevalence": 0.2704485488126649
+    }
+   },
+   "missing_mean_feat": {
+    "TQA": 0.0,
+    "SPPA": 0.0,
+    "TFLO": 0.061031686313853355,
+    "RPM": 0.0,
+    "SWOB": 0.0,
+    "HKLD": 0.0,
+    "ROP": 0.0001672100994900092,
+    "BPOS": 0.0,
+    "SPM": 1.0,
+    "depth": 0.0,
+    "dbtm": 0.0
+   },
+   "ts_span": [
+    "1970-08-22 16:11:26",
+    "1970-08-26 10:35:41"
+   ]
+  },
+  "ssi": {
+   "file": "scratch/v9_d1/datasets/ssi.csv.gz",
+   "n_rows": 35906,
+   "n_cols": 63,
+   "n_wells": 9,
+   "wells": [
+    "F-10",
+    "F-12",
+    "F-14",
+    "F-15A",
+    "F-15_S",
+    "F-5",
+    "F-7",
+    "F-9",
+    "F-9_A"
+   ],
+   "label_col": "y_ssi",
+   "n_pos_total": 607,
+   "prevalence_total": 0.016905252604021613,
+   "per_well": {
+    "F-10": {
+     "n_windows": 7133,
+     "n_pos": 161,
+     "prevalence": 0.022571148184494603
+    },
+    "F-12": {
+     "n_windows": 4293,
+     "n_pos": 83,
+     "prevalence": 0.019333799208013043
+    },
+    "F-14": {
+     "n_windows": 5455,
+     "n_pos": 75,
+     "prevalence": 0.013748854262144821
+    },
+    "F-15A": {
+     "n_windows": 6020,
+     "n_pos": 31,
+     "prevalence": 0.0051495016611295685
+    },
+    "F-15_S": {
+     "n_windows": 5342,
+     "n_pos": 85,
+     "prevalence": 0.015911643579183826
+    },
+    "F-5": {
+     "n_windows": 4714,
+     "n_pos": 102,
+     "prevalence": 0.021637675010606705
+    },
+    "F-7": {
+     "n_windows": 982,
+     "n_pos": 3,
+     "prevalence": 0.003054989816700611
+    },
+    "F-9": {
+     "n_windows": 1126,
+     "n_pos": 12,
+     "prevalence": 0.010657193605683837
+    },
+    "F-9_A": {
+     "n_windows": 841,
+     "n_pos": 55,
+     "prevalence": 0.06539833531510107
+    }
+   },
+   "missing_mean_feat": {
+    "TQA": 0.0,
+    "SPPA": 0.0,
+    "TFLO": 0.030384893889600625,
+    "RPM": 0.0,
+    "SWOB": 0.0,
+    "HKLD": 0.0,
+    "ROP": 0.03392190720213892,
+    "BPOS": 0.0,
+    "SPM": 1.0,
+    "depth": 0.0022001893833899625,
+    "dbtm": 0.0025622458642009694
+   },
+   "ts_span": [
+    "1970-08-17 03:40:45",
+    "1970-08-29 13:19:27"
+   ]
+  },
+  "shk": {
+   "file": "scratch/v9_d1/datasets/shk.csv.gz",
+   "n_rows": 56495,
+   "n_cols": 63,
+   "n_wells": 9,
+   "wells": [
+    "F-10",
+    "F-12",
+    "F-14",
+    "F-15A",
+    "F-15_S",
+    "F-5",
+    "F-7",
+    "F-9",
+    "F-9_A"
+   ],
+   "label_col": "y_shk",
+   "n_pos_total": 2005,
+   "prevalence_total": 0.035489866359854856,
+   "per_well": {
+    "F-10": {
+     "n_windows": 7899,
+     "n_pos": 146,
+     "prevalence": 0.01848335232307887
+    },
+    "F-12": {
+     "n_windows": 5405,
+     "n_pos": 217,
+     "prevalence": 0.04014801110083256
+    },
+    "F-14": {
+     "n_windows": 11205,
+     "n_pos": 760,
+     "prevalence": 0.0678268630075859
+    },
+    "F-15A": {
+     "n_windows": 6484,
+     "n_pos": 41,
+     "prevalence": 0.006323257248611968
+    },
+    "F-15_S": {
+     "n_windows": 11394,
+     "n_pos": 259,
+     "prevalence": 0.02273126206775496
+    },
+    "F-5": {
+     "n_windows": 7140,
+     "n_pos": 240,
+     "prevalence": 0.03361344537815126
+    },
+    "F-7": {
+     "n_windows": 2761,
+     "n_pos": 267,
+     "prevalence": 0.09670409272002897
+    },
+    "F-9": {
+     "n_windows": 1851,
+     "n_pos": 45,
+     "prevalence": 0.024311183144246355
+    },
+    "F-9_A": {
+     "n_windows": 2356,
+     "n_pos": 30,
+     "prevalence": 0.012733446519524618
+    }
+   },
+   "missing_mean_feat": {
+    "TQA": 0.0,
+    "SPPA": 0.0,
+    "TFLO": 0.02835649172493141,
+    "RPM": 0.0,
+    "SWOB": 0.0,
+    "HKLD": 0.0,
+    "ROP": 0.025878396318258255,
+    "BPOS": 0.0,
+    "SPM": 1.0,
+    "depth": 0.00015930613328613152,
+    "dbtm": 0.00015930613328613152
+   },
+   "ts_span": [
+    "1970-08-17 03:40:46",
+    "1970-08-29 13:19:29"
+   ]
+  },
+  "stuck_k1": {
+   "file": "scratch/v9_d1/datasets/stuck_k1.csv.gz",
+   "n_rows": 5555,
+   "n_cols": 63,
+   "n_wells": 2,
+   "wells": [
+    "F-14",
+    "F-9_A"
+   ],
+   "label_col": "y_stuck",
+   "n_pos_total": 2007,
+   "prevalence_total": 0.3612961296129613,
+   "per_well": {
+    "F-14": {
+     "n_windows": 3201,
+     "n_pos": 432,
+     "prevalence": 0.13495782567947517
+    },
+    "F-9_A": {
+     "n_windows": 2354,
+     "n_pos": 1575,
+     "prevalence": 0.6690739167374682
+    }
+   },
+   "missing_mean_feat": {
+    "TQA": 0.0,
+    "SPPA": 0.0,
+    "TFLO": 0.0,
+    "RPM": 0.0,
+    "SWOB": 0.0,
+    "HKLD": 0.0,
+    "ROP": 0.028982898289828984,
+    "BPOS": 0.0,
+    "SPM": 1.0,
+    "depth": 0.0,
+    "dbtm": 0.0
+   },
+   "ts_span": [
+    "1970-08-22 11:57:13",
+    "1970-08-29 13:19:29"
+   ]
+  },
+  "stuck_k2": {
+   "file": "scratch/v9_d1/datasets/stuck_k2.csv.gz",
+   "n_rows": 118567,
+   "n_cols": 62,
+   "n_wells": 4,
+   "wells": [
+    "F-10",
+    "F-14",
+    "F-9",
+    "F-9_A"
+   ],
+   "label_col": "y_stuck_onset",
+   "n_pos_total": 1975,
+   "prevalence_total": 0.01665724864422647,
+   "per_well": {
+    "F-10": {
+     "n_windows": 4216,
+     "n_pos": 772,
+     "prevalence": 0.18311195445920303
+    },
+    "F-14": {
+     "n_windows": 95925,
+     "n_pos": 389,
+     "prevalence": 0.004055251498566588
+    },
+    "F-9": {
+     "n_windows": 16184,
+     "n_pos": 311,
+     "prevalence": 0.01921651013346515
+    },
+    "F-9_A": {
+     "n_windows": 2242,
+     "n_pos": 503,
+     "prevalence": 0.22435325602140946
+    }
+   },
+   "missing_mean_feat": {
+    "TQA": 0.00526284716658092,
+    "SPPA": 0.005296583366366695,
+    "TFLO": 0.004967655418455388,
+    "RPM": 0.030640903455430264,
+    "SWOB": 0.0012988436917523425,
+    "HKLD": 0.0017964526385925257,
+    "ROP": 0.010272672834768527,
+    "BPOS": 0.0012988436917523425,
+    "SPM": 0.0029434834313088803,
+    "depth": 0.0,
+    "dbtm": 0.0014506565907883306
+   },
+   "ts_span": [
+    "1970-08-19 08:37:01",
+    "1970-08-29 13:16:46"
+   ]
+  },
+  "hyd_ki": {
+   "file": "scratch/v9_d1/datasets/hyd_ki.csv.gz",
+   "n_rows": 52509,
+   "n_cols": 50,
+   "n_wells": 9,
+   "wells": [
+    "F-10",
+    "F-12",
+    "F-14",
+    "F-15A",
+    "F-15_S",
+    "F-5",
+    "F-7",
+    "F-9",
+    "F-9_A"
+   ],
+   "label_col": "y_hyd",
+   "n_pos_total": 7172,
+   "prevalence_total": 0.13658610904797272,
+   "per_well": {
+    "F-10": {
+     "n_windows": 7571,
+     "n_pos": 1394,
+     "prevalence": 0.18412362963941356
+    },
+    "F-12": {
+     "n_windows": 7390,
+     "n_pos": 1426,
+     "prevalence": 0.1929634641407307
+    },
+    "F-14": {
+     "n_windows": 10401,
+     "n_pos": 865,
+     "prevalence": 0.08316508028074224
+    },
+    "F-15A": {
+     "n_windows": 6156,
+     "n_pos": 698,
+     "prevalence": 0.1133853151397011
+    },
+    "F-15_S": {
+     "n_windows": 8355,
+     "n_pos": 993,
+     "prevalence": 0.11885098743267504
+    },
+    "F-5": {
+     "n_windows": 6332,
+     "n_pos": 621,
+     "prevalence": 0.09807327858496526
+    },
+    "F-7": {
+     "n_windows": 2482,
+     "n_pos": 421,
+     "prevalence": 0.16962127316680098
+    },
+    "F-9": {
+     "n_windows": 1616,
+     "n_pos": 423,
+     "prevalence": 0.26175742574257427
+    },
+    "F-9_A": {
+     "n_windows": 2206,
+     "n_pos": 331,
+     "prevalence": 0.1500453309156845
+    }
+   },
+   "missing_mean_feat": {
+    "TQA": 0.0,
+    "RPM": 0.0,
+    "SWOB": 0.0,
+    "HKLD": 0.0,
+    "ROP": 0.030509055590470204,
+    "BPOS": 0.0,
+    "depth": 0.0015045039897922262,
+    "dbtm": 0.0016568588242015655
+   },
+   "ts_span": [
+    "1970-08-17 03:40:45",
+    "1970-08-29 13:19:19"
+   ]
+  }
+ },
+ "bins": {
+  "F-10": {
+   "file": "scratch/v9_d1/bins/F-10.csv.gz",
+   "n_bins": 41446,
+   "ts_start": "1970-08-27 23:53:28",
+   "ts_end": "1970-08-28 11:40:49",
+   "span_hours": 11.789166666666667,
+   "rows_total": 773674,
+   "rows_per_min_median": 14.0,
+   "rows_per_min_mean": 18.667036625971143,
+   "rows_per_min_p95": 34.0,
+   "gaps_gt_1min": 2,
+   "gaps_gt_5min": 1,
+   "longest_contiguous_bins": 41446,
+   "longest_drilling_bins": 645,
+   "miss_minute_bins": {
+    "TQA": 0.667591564927858,
+    "SPPA": 0.667591564927858,
+    "TFLO": 0.6688462095256479,
+    "RPM": 0.667495053804951,
+    "SWOB": 0.667495053804951,
+    "HKLD": 0.667495053804951,
+    "ROP": 0.7065338030207982,
+    "BPOS": 0.667495053804951
+   },
+   "label_cov": {
+    "VIBLAT": {
+     "bins_nonzero": 0,
+     "bins_total": 41446,
+     "frac_bins_with_signal": 0.0
+    },
+    "SHKRSK": {
+     "bins_nonzero": 13077,
+     "bins_total": 41446,
+     "frac_bins_with_signal": 0.3155189885634319
+    },
+    "STUCK": {
+     "bins_nonzero": 4823,
+     "bins_total": 41446,
+     "frac_bins_with_signal": 0.11636828644501279
+    },
+    "CRPM": {
+     "bins_nonzero": 10452,
+     "bins_total": 41446,
+     "frac_bins_with_signal": 0.252183564155769
+    }
+   }
+  },
+  "F-12": {
+   "file": "scratch/v9_d1/bins/F-12.csv.gz",
+   "n_bins": 180958,
+   "ts_start": "1970-08-16 23:09:10",
+   "ts_end": "1970-10-06 08:12:21",
+   "span_hours": 1209.0530555555556,
+   "rows_total": 2081567,
+   "rows_per_min_median": 11.0,
+   "rows_per_min_mean": 11.503039379303484,
+   "rows_per_min_p95": 26.0,
+   "gaps_gt_1min": 16,
+   "gaps_gt_5min": 7,
+   "longest_contiguous_bins": 180958,
+   "longest_drilling_bins": 917,
+   "miss_minute_bins": {
+    "TQA": 0.8678256833077289,
+    "SPPA": 0.8841664916721007,
+    "TFLO": 0.8679583107682446,
+    "RPM": 0.8677538434332829,
+    "SWOB": 0.8677538434332829,
+    "HKLD": 0.867759369577471,
+    "ROP": 0.8929143779219487,
+    "BPOS": 0.8734402458028935
+   },
+   "label_cov": {
+    "SHKRSK": {
+     "bins_nonzero": 19967,
+     "bins_total": 180958,
+     "frac_bins_with_signal": 0.11034052100487406
+    },
+    "CRPM": {
+     "bins_nonzero": 23730,
+     "bins_total": 180958,
+     "frac_bins_with_signal": 0.13113540158489814
+    }
+   }
+  },
+  "F-14": {
+   "file": "scratch/v9_d1/bins/F-14.csv.gz",
+   "n_bins": 96698,
+   "ts_start": "1970-08-19 08:37:00",
+   "ts_end": "1970-10-06 08:12:21",
+   "span_hours": 1151.5891666666666,
+   "rows_total": 1648026,
+   "rows_per_min_median": 13.0,
+   "rows_per_min_mean": 17.043020538170385,
+   "rows_per_min_p95": 32.0,
+   "gaps_gt_1min": 13,
+   "gaps_gt_5min": 8,
+   "longest_contiguous_bins": 96698,
+   "longest_drilling_bins": 248,
+   "miss_minute_bins": {
+    "TQA": 0.8693354567829737,
+    "SPPA": 0.8693354567829737,
+    "TFLO": 0.8693354567829737,
+    "RPM": 0.8693354567829737,
+    "SWOB": 0.8693354567829737,
+    "HKLD": 0.8693354567829737,
+    "ROP": 0.8707108730273635,
+    "BPOS": 0.8693354567829737
+   },
+   "label_cov": {
+    "VIBLAT": {
+     "bins_nonzero": 2235,
+     "bins_total": 96698,
+     "frac_bins_with_signal": 0.02311319779106083
+    },
+    "SHKRSK": {
+     "bins_nonzero": 13098,
+     "bins_total": 96698,
+     "frac_bins_with_signal": 0.135452646383586
+    },
+    "STUCK": {
+     "bins_nonzero": 4295,
+     "bins_total": 96698,
+     "frac_bins_with_signal": 0.044416637365819356
+    },
+    "CRPM": {
+     "bins_nonzero": 11794,
+     "bins_total": 96698,
+     "frac_bins_with_signal": 0.12196736230325343
+    }
+   }
+  },
+  "F-15A": {
+   "file": "scratch/v9_d1/bins/F-15A.csv.gz",
+   "n_bins": 44347,
+   "ts_start": "1970-08-26 00:37:47",
+   "ts_end": "1970-10-06 08:12:21",
+   "span_hours": 991.5761111111111,
+   "rows_total": 778162,
+   "rows_per_min_median": 14.0,
+   "rows_per_min_mean": 17.547117054141204,
+   "rows_per_min_p95": 34.0,
+   "gaps_gt_1min": 7,
+   "gaps_gt_5min": 3,
+   "longest_contiguous_bins": 44347,
+   "longest_drilling_bins": 608,
+   "miss_minute_bins": {
+    "TQA": 0.732721491870927,
+    "SPPA": 0.732721491870927,
+    "TFLO": 0.7330146345863305,
+    "RPM": 0.732721491870927,
+    "SWOB": 0.732721491870927,
+    "HKLD": 0.732721491870927,
+    "ROP": 0.7336009200171376,
+    "BPOS": 0.732721491870927
+   },
+   "label_cov": {
+    "VIBLAT": {
+     "bins_nonzero": 12088,
+     "bins_total": 44347,
+     "frac_bins_with_signal": 0.2725776264459828
+    },
+    "SHKRSK": {
+     "bins_nonzero": 12704,
+     "bins_total": 44347,
+     "frac_bins_with_signal": 0.28646808126818046
+    },
+    "CRPM": {
+     "bins_nonzero": 11548,
+     "bins_total": 44347,
+     "frac_bins_with_signal": 0.2604009290369134
+    }
+   }
+  },
+  "F-15_S": {
+   "file": "scratch/v9_d1/bins/F-15_S.csv.gz",
+   "n_bins": 101630,
+   "ts_start": "1970-08-24 12:08:09",
+   "ts_end": "1970-10-06 08:12:21",
+   "span_hours": 1028.07,
+   "rows_total": 1883062,
+   "rows_per_min_median": 13.0,
+   "rows_per_min_mean": 18.528603758732658,
+   "rows_per_min_p95": 42.0,
+   "gaps_gt_1min": 14,
+   "gaps_gt_5min": 6,
+   "longest_contiguous_bins": 101630,
+   "longest_drilling_bins": 373,
+   "miss_minute_bins": {
+    "TQA": 0.8667421037095346,
+    "SPPA": 0.8667519433238217,
+    "TFLO": 0.8956508904850929,
+    "RPM": 0.8667421037095346,
+    "SWOB": 0.8667421037095346,
+    "HKLD": 0.8667421037095346,
+    "ROP": 0.8681098100954443,
+    "BPOS": 0.8667421037095346
+   },
+   "label_cov": {
+    "VIBLAT": {
+     "bins_nonzero": 11939,
+     "bins_total": 101630,
+     "frac_bins_with_signal": 0.11747515497392502
+    },
+    "SHKRSK": {
+     "bins_nonzero": 13525,
+     "bins_total": 101630,
+     "frac_bins_with_signal": 0.13308078323329725
+    },
+    "CRPM": {
+     "bins_nonzero": 11711,
+     "bins_total": 101630,
+     "frac_bins_with_signal": 0.11523172291646168
+    }
+   }
+  },
+  "F-5": {
+   "file": "scratch/v9_d1/bins/F-5.csv.gz",
+   "n_bins": 67934,
+   "ts_start": "1970-08-19 12:56:54",
+   "ts_end": "1970-10-06 08:12:21",
+   "span_hours": 1147.2575,
+   "rows_total": 1286967,
+   "rows_per_min_median": 13.0,
+   "rows_per_min_mean": 18.94437247917096,
+   "rows_per_min_p95": 34.0,
+   "gaps_gt_1min": 6,
+   "gaps_gt_5min": 3,
+   "longest_contiguous_bins": 67934,
+   "longest_drilling_bins": 427,
+   "miss_minute_bins": {
+    "TQA": 0.8495451467600906,
+    "SPPA": 0.8493685047251744,
+    "TFLO": 0.8493685047251744,
+    "RPM": 0.8493685047251744,
+    "SWOB": 0.8493685047251744,
+    "HKLD": 0.8493685047251744,
+    "ROP": 0.8493685047251744,
+    "BPOS": 0.8493685047251744
+   },
+   "label_cov": {
+    "VIBLAT": {
+     "bins_nonzero": 6876,
+     "bins_total": 67934,
+     "frac_bins_with_signal": 0.1012158860070068
+    },
+    "SHKRSK": {
+     "bins_nonzero": 10314,
+     "bins_total": 67934,
+     "frac_bins_with_signal": 0.1518238290105102
+    },
+    "CRPM": {
+     "bins_nonzero": 7864,
+     "bins_total": 67934,
+     "frac_bins_with_signal": 0.11575941354844407
+    }
+   }
+  },
+  "F-7": {
+   "file": "scratch/v9_d1/bins/F-7.csv.gz",
+   "n_bins": 34533,
+   "ts_start": "1970-08-18 12:32:36",
+   "ts_end": "1970-10-06 08:12:21",
+   "span_hours": 1171.6625,
+   "rows_total": 547500,
+   "rows_per_min_median": 13.0,
+   "rows_per_min_mean": 15.85440013899748,
+   "rows_per_min_p95": 31.0,
+   "gaps_gt_1min": 7,
+   "gaps_gt_5min": 5,
+   "longest_contiguous_bins": 34533,
+   "longest_drilling_bins": 273,
+   "miss_minute_bins": {
+    "TQA": 0.8938117163293082,
+    "SPPA": 0.893695885095416,
+    "TFLO": 0.893695885095416,
+    "RPM": 0.893695885095416,
+    "SWOB": 0.893695885095416,
+    "HKLD": 0.893695885095416,
+    "ROP": 0.893695885095416,
+    "BPOS": 0.893695885095416
+   },
+   "label_cov": {
+    "SHKRSK": {
+     "bins_nonzero": 3065,
+     "bins_total": 34533,
+     "frac_bins_with_signal": 0.08875568296991283
+    },
+    "CRPM": {
+     "bins_nonzero": 2285,
+     "bins_total": 34533,
+     "frac_bins_with_signal": 0.06616859236093013
+    }
+   }
+  },
+  "F-9": {
+   "file": "scratch/v9_d1/bins/F-9.csv.gz",
+   "n_bins": 25460,
+   "ts_start": "1970-08-19 17:34:23",
+   "ts_end": "1970-10-06 08:12:21",
+   "span_hours": 1142.6327777777778,
+   "rows_total": 457545,
+   "rows_per_min_median": 13.0,
+   "rows_per_min_mean": 17.97113118617439,
+   "rows_per_min_p95": 33.0,
+   "gaps_gt_1min": 6,
+   "gaps_gt_5min": 5,
+   "longest_contiguous_bins": 25460,
+   "longest_drilling_bins": 125,
+   "miss_minute_bins": {
+    "TQA": 0.913707776904949,
+    "SPPA": 0.913707776904949,
+    "TFLO": 0.913707776904949,
+    "RPM": 0.913707776904949,
+    "SWOB": 0.913707776904949,
+    "HKLD": 0.913707776904949,
+    "ROP": 0.913707776904949,
+    "BPOS": 0.913707776904949
+   },
+   "label_cov": {
+    "VIBLAT": {
+     "bins_nonzero": 1190,
+     "bins_total": 25460,
+     "frac_bins_with_signal": 0.04673998428908091
+    },
+    "SHKRSK": {
+     "bins_nonzero": 3531,
+     "bins_total": 25460,
+     "frac_bins_with_signal": 0.13868813825608797
+    },
+    "STUCK": {
+     "bins_nonzero": 1074,
+     "bins_total": 25460,
+     "frac_bins_with_signal": 0.04218381775333857
+    },
+    "CRPM": {
+     "bins_nonzero": 2463,
+     "bins_total": 25460,
+     "frac_bins_with_signal": 0.09673998428908091
+    }
+   }
+  },
+  "F-9_A": {
+   "file": "scratch/v9_d1/bins/F-9_A.csv.gz",
+   "n_bins": 27282,
+   "ts_start": "1970-08-29 09:04:50",
+   "ts_end": "1970-10-06 08:12:21",
+   "span_hours": 911.1252777777778,
+   "rows_total": 419706,
+   "rows_per_min_median": 13.0,
+   "rows_per_min_mean": 15.38398944358918,
+   "rows_per_min_p95": 31.0,
+   "gaps_gt_1min": 1,
+   "gaps_gt_5min": 1,
+   "longest_contiguous_bins": 27282,
+   "longest_drilling_bins": 313,
+   "miss_minute_bins": {
+    "TQA": 0.9072648632798181,
+    "SPPA": 0.9072648632798181,
+    "TFLO": 0.9073015174840554,
+    "RPM": 0.9072648632798181,
+    "SWOB": 0.9072648632798181,
+    "HKLD": 0.9072648632798181,
+    "ROP": 0.9160252180925152,
+    "BPOS": 0.9072648632798181
+   },
+   "label_cov": {
+    "SHKRSK": {
+     "bins_nonzero": 2358,
+     "bins_total": 27282,
+     "frac_bins_with_signal": 0.08643061359137894
+    },
+    "STUCK": {
+     "bins_nonzero": 2354,
+     "bins_total": 27282,
+     "frac_bins_with_signal": 0.08628399677443002
+    },
+    "CRPM": {
+     "bins_nonzero": 797,
+     "bins_total": 27282,
+     "frac_bins_with_signal": 0.02921340077706913
+    }
+   }
+  }
+ }
+}

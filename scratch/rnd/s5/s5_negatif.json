@@ -1,0 +1,22 @@
+{
+ "kontrol": "dokumen asli memberi 0 selisih, dokumen dengan 2 angka diubah memberi 2 selisih, sehingga pengunci terbukti bisa gagal",
+ "selisih_pada_dokumen_rusak": [
+  [
+   "fp_total",
+   936.0,
+   935
+  ],
+  [
+   "precision_median",
+   0.7791,
+   0.7789
+  ]
+ ],
+ "nilai_pengunci_hluas": {
+  "fp_total": 237,
+  "tp_total": 1113,
+  "precision_median": 0.8235,
+  "recall_median": 0.1457,
+  "far24_kalender_median": 0.5845
+ }
+}

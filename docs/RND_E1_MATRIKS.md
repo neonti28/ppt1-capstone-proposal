@@ -1,9 +1,9 @@
-# RND-E1: MATRIKS KELAYAKAN ALGORITMA x ENGINE DAN SHORTLIST
+# RND-E1: MATRIKS KELAYAKAN ALGORITMA x Detektor DAN SHORTLIST
 
 Kartu: `t_9abcb3b3` · Board: `rnd-algo-2026` · Tanggal: 2026-10-27 (WIB)
 Workspace: `/mnt/d/Capstone 1(v2)` · Arsip `/mnt/d/Capstone 1` tidak disentuh
 Masukan: R1, R2, R3, R4, R5, R6, D0, P0, E0, dan tabel tier `docs/V9_EVAL_C_LAYERC.md`.
-Keluaran: matriks 28 algoritma x 7 engine (196 sel), skor prioritas berbobot, 6 kandidat, 3 finalis.
+Keluaran: matriks 28 algoritma x 7 mode (196 sel), skor prioritas berbobot, 6 kandidat, 3 finalis.
 
 ## Riset pendahuluan
 
@@ -22,7 +22,7 @@ Riset pendahuluan: sequentialthinking, 6 pikiran (`mcp__sequentialthinking__sequ
 
 | Butir | Keputusan |
 |---|---|
-| Algoritma yang masuk matriks | 28 baris, 196 sel, 7 engine |
+| Algoritma yang masuk matriks | 28 baris, 196 sel, 7 mode |
 | Algoritma dengan skor prioritas di atas 2,0 | 7 dari 28 |
 | Shortlist | 6 kandidat |
 | Finalis pilot | 3 kandidat |
@@ -38,10 +38,10 @@ Riset pendahuluan: sequentialthinking, 6 pikiran (`mcp__sequentialthinking__sequ
 
 | Skor | Arti |
 |---|---|
-| 0 | Tidak ada peran pada engine itu: metode tidak menyentuh gate C, A, atau B di kelas tersebut |
+| 0 | Tidak ada peran pada detektor itu: metode tidak menyentuh gate C, A, atau B di kelas tersebut |
 | 1 | Peran pinggiran atau pembanding: bisa dipakai, tetapi tidak mengubah keputusan tier |
-| 2 | Menyerang satu syarat gate pada engine itu |
-| 3 | Menyerang syarat gate yang justru menjadi kegagalan utama engine itu |
+| 2 | Menyerang satu syarat gate pada detektor itu |
+| 3 | Menyerang syarat gate yang justru menjadi kegagalan utama detektor itu |
 
 Rubrik ini keputusan dokumen (KONVENSI, ledger E1-006). Ia tidak boleh dibaca sebagai hasil ukur.
 
@@ -59,7 +59,7 @@ Setiap angka di tabel alasan menunjuk baris ledger. Angka yang tidak punya baris
 
 ---
 
-## 2. MATRIKS A: algoritma x 7 engine
+## 2. MATRIKS A: algoritma x 7 mode
 
 Format sel: `skor/status`, contoh `2/A` berarti skor kesesuaian 2 dan data ADA.
 Baris diurutkan menurut skor prioritas tertinggi algoritma tersebut (lihat bagian 5).
@@ -101,9 +101,9 @@ Bacaan cepat: sel `0/T` menandai prasyarat fisik yang tidak terpenuhi, misalnya 
 
 ## 3. Alasan satu baris untuk tiap sel
 
-Sel dengan skor 0 yang bukan karena prasyarat fisik dikelompokkan di akhir tiap engine, karena alasannya sama dan menuliskannya 12 kali tidak menambah informasi.
+Sel dengan skor 0 yang bukan karena prasyarat fisik dikelompokkan di akhir tiap mode, karena alasannya sama dan menuliskannya 12 kali tidak menambah informasi.
 
-### 3.1 Engine `vib`
+### 3.1 mode `vib`
 
 | Kode | Algoritma | Skor | Data | Alasan satu baris |
 |---|---|---|---|---|
@@ -120,9 +120,9 @@ Sel dengan skor 0 yang bukan karena prasyarat fisik dikelompokkan di akhir tiap 
 | A03 | SMA (Slime Mould Algorithm) | 1 | ADA | diusulkan R1 sebagai pemeriksaan silang BGWO, bukan jalur utama (ledger R4-01) |
 | A20 | Isolation Forest | 1 | ADA | kelas sudah berlabel, detektor tanpa label tidak menambah gate (ledger R4-01) |
 | A14 | Monte Carlo (pelaporan CI) | 1 | ADA | perannya pelaporan selang FAR, bukan menaikkan deteksi (ledger R4-01) |
-| lainnya | 15 algoritma | 0 | campuran | tidak ada peran pada engine ini; alasan per algoritma ada di bagian 8 dan di sel engine lain |
+| lainnya | 15 algoritma | 0 | campuran | tidak ada peran pada detektor ini; alasan per algoritma ada di bagian 8 dan di sel detektor lain |
 
-### 3.2 Engine `ssi`
+### 3.2 mode `ssi`
 
 | Kode | Algoritma | Skor | Data | Alasan satu baris |
 |---|---|---|---|---|
@@ -139,9 +139,9 @@ Sel dengan skor 0 yang bukan karena prasyarat fisik dikelompokkan di akhir tiap 
 | A03 | SMA (Slime Mould Algorithm) | 1 | SEBAGIAN | sama seperti BGWO tetapi bukti domain lebih lemah (ledger R4-26) |
 | A20 | Isolation Forest | 1 | SEBAGIAN | idem, dan nodata mendominasi (ledger R4-26) |
 | A14 | Monte Carlo (pelaporan CI) | 1 | SEBAGIAN | idem, dan CI sudah bisa dihitung analitik (ledger R4-26) |
-| lainnya | 15 algoritma | 0 | campuran | tidak ada peran pada engine ini; alasan per algoritma ada di bagian 8 dan di sel engine lain |
+| lainnya | 15 algoritma | 0 | campuran | tidak ada peran pada detektor ini; alasan per algoritma ada di bagian 8 dan di sel detektor lain |
 
-### 3.3 Engine `shk`
+### 3.3 mode `shk`
 
 | Kode | Algoritma | Skor | Data | Alasan satu baris |
 |---|---|---|---|---|
@@ -158,9 +158,9 @@ Sel dengan skor 0 yang bukan karena prasyarat fisik dikelompokkan di akhir tiap 
 | A03 | SMA (Slime Mould Algorithm) | 1 | ADA | pemeriksaan silang hasil seleksi fitur (ledger R4-09) |
 | A20 | Isolation Forest | 1 | ADA | idem (ledger R4-09) |
 | A14 | Monte Carlo (pelaporan CI) | 1 | ADA | idem (ledger R4-09) |
-| lainnya | 15 algoritma | 0 | campuran | tidak ada peran pada engine ini; alasan per algoritma ada di bagian 8 dan di sel engine lain |
+| lainnya | 15 algoritma | 0 | campuran | tidak ada peran pada detektor ini; alasan per algoritma ada di bagian 8 dan di sel detektor lain |
 
-### 3.4 Engine `stuck`
+### 3.4 mode `stuck`
 
 | Kode | Algoritma | Skor | Data | Alasan satu baris |
 |---|---|---|---|---|
@@ -183,9 +183,9 @@ Sel dengan skor 0 yang bukan karena prasyarat fisik dikelompokkan di akhir tiap 
 | A12 | Markov chain | 1 | SEBAGIAN | median episode satu menit berarti memori hampir nol sehingga orde-1 tidak informatif (R2 bagian 3) |
 | A13 | HMM | 1 | SEBAGIAN | state fisik tidak ada, jadi HMM hanya menghasilkan state yang kita karang (ledger R4-10) |
 | A14 | Monte Carlo (pelaporan CI) | 1 | SEBAGIAN | idem (ledger R4-10) |
-| lainnya | 9 algoritma | 0 | campuran | tidak ada peran pada engine ini; alasan per algoritma ada di bagian 8 dan di sel engine lain |
+| lainnya | 9 algoritma | 0 | campuran | tidak ada peran pada detektor ini; alasan per algoritma ada di bagian 8 dan di sel detektor lain |
 
-### 3.5 Engine `hyd`
+### 3.5 mode `hyd`
 
 | Kode | Algoritma | Skor | Data | Alasan satu baris |
 |---|---|---|---|---|
@@ -206,9 +206,9 @@ Sel dengan skor 0 yang bukan karena prasyarat fisik dikelompokkan di akhir tiap 
 | A11 | Cox proportional hazards | 1 | ADA | K-ii punya horizon 10 menit sehingga survival hampir tidak punya ruang (ledger L-28) |
 | A14 | Monte Carlo (pelaporan CI) | 1 | ADA | idem (ledger R4-12) |
 | A21 | LOF | 1 | SEBAGIAN | dijalankan sebagai pembanding, hasilnya jenuh menyala (ledger R5-067) |
-| lainnya | 11 algoritma | 0 | campuran | tidak ada peran pada engine ini; alasan per algoritma ada di bagian 8 dan di sel engine lain |
+| lainnya | 11 algoritma | 0 | campuran | tidak ada peran pada detektor ini; alasan per algoritma ada di bagian 8 dan di sel detektor lain |
 
-### 3.6 Engine `bit_wear`
+### 3.6 mode `bit_wear`
 
 | Kode | Algoritma | Skor | Data | Alasan satu baris |
 |---|---|---|---|---|
@@ -221,9 +221,9 @@ Sel dengan skor 0 yang bukan karena prasyarat fisik dikelompokkan di akhir tiap 
 | A18 | BOCPD | 1 | SEBAGIAN | ditunda sampai baseline kontigu mencukupi (ledger D0-752) |
 | A14 | Monte Carlo (pelaporan CI) | 1 | TIDAK | tanpa FAR terdefinisi, simulasi CI tidak punya besaran (ledger D0-752) |
 | A21 | LOF | 1 | TIDAK | idem, jenuh (ledger D0-752) |
-| lainnya | 19 algoritma | 0 | campuran | tidak ada peran pada engine ini; alasan per algoritma ada di bagian 8 dan di sel engine lain |
+| lainnya | 19 algoritma | 0 | campuran | tidak ada peran pada detektor ini; alasan per algoritma ada di bagian 8 dan di sel detektor lain |
 
-### 3.7 Engine `tool_wear`
+### 3.7 mode `tool_wear`
 
 | Kode | Algoritma | Skor | Data | Alasan satu baris |
 |---|---|---|---|---|
@@ -244,13 +244,13 @@ Sel dengan skor 0 yang bukan karena prasyarat fisik dikelompokkan di akhir tiap 
 | A18 | BOCPD | 1 | ADA | prior panjang rezim belum bisa diuji pada run pendek (ledger L-33) |
 | A12 | Markov chain | 1 | ADA | dua kondisi run memberi transisi regime yang bisa dihitung (ledger D0-766) |
 | A14 | Monte Carlo (pelaporan CI) | 1 | ADA | idem (ledger D0-766) |
-| lainnya | 11 algoritma | 0 | campuran | tidak ada peran pada engine ini; alasan per algoritma ada di bagian 8 dan di sel engine lain |
+| lainnya | 11 algoritma | 0 | campuran | tidak ada peran pada detektor ini; alasan per algoritma ada di bagian 8 dan di sel detektor lain |
 
 ---
 
 ## 4. MATRIKS B: lapisan evaluasi (R6) dan gate
 
-R6 tidak memberi skor per engine, karena isinya metode evaluasi, bukan model prediksi. Karena itu R6 tidak dipaksa masuk sebagai baris matriks A: memasukkannya akan membuat kolom engine berisi angka yang tidak bermakna. R6 dilaporkan sebagai matriks B dengan kolom gate.
+R6 tidak memberi skor per mode, karena isinya metode evaluasi, bukan model prediksi. Karena itu R6 tidak dipaksa masuk sebagai baris matriks A: memasukkannya akan membuat kolom detektor berisi angka yang tidak bermakna. R6 dilaporkan sebagai matriks B dengan kolom gate.
 
 | Metode | Gate C | Gate A | Gate B | Status pada data kita | Rujukan |
 |---|---|---|---|---|---|
@@ -280,7 +280,7 @@ Konsekuensi yang harus dibaca sebelum memilih finalis: dua uji yang paling serin
 | Biaya (0,10, terbalik) | 0,10 | Biaya membatasi berapa varian yang bisa dicoba, bukan apakah metodenya sah. Pembatas biaya yang ekstrem sudah tertangkap di sel skor, misalnya kNN-DTW 137.374,35 jam (ledger R3-40). Memberi bobot besar akan menghukum dua kali. |
 
 Rumus: skor = 0,50 x tier + 0,25 x data + 0,15 x risiko + 0,10 x biaya, dengan skala 0 sampai 3.
-Gerbang: bila potensi tier pada engine itu 0, skor dipaksa 0. Tanpa gerbang ini, metode pendukung seperti Monte Carlo menang karena dua komponen terbalik memberi lantai nilai, padahal kontribusinya ke tier nol. Gerbang dan koreksinya dicatat terbuka di ledger E1-005 dan E1-017.
+Gerbang: bila potensi tier pada detektor itu 0, skor dipaksa 0. Tanpa gerbang ini, metode pendukung seperti Monte Carlo menang karena dua komponen terbalik memberi lantai nilai, padahal kontribusinya ke tier nol. Gerbang dan koreksinya dicatat terbuka di ledger E1-005 dan E1-017.
 
 Tiga hal yang perlu dinyatakan jujur:
 
@@ -288,9 +288,9 @@ Tiga hal yang perlu dinyatakan jujur:
 2. Skor komponen biaya untuk LightGBM dan XGBoost (1) adalah batas bawah, karena biaya latihnya BELUM TERUKUR (ledger E1-018). Kalau nanti biaya terukur murah, skornya naik dan peringkatnya berubah. Itu dinyatakan sekarang supaya tidak dibaca sebagai penilaian final.
 3. Memilih enam kandidat lalu tiga finalis dari satu tabel berbobot adalah bentuk pemilihan setelah melihat hasil. Mitigasinya: kriteria finalis dikunci sebelum tabel dihitung, yaitu data ADA atau SEBAGIAN dan jalur eksplisit ke gate C, A, B. Semua finalis di bagian 7 memenuhi kriteria itu, dan kandidat yang skornya lebih tinggi tetapi tidak memenuhi kriteria dicatat sebagai bukan finalis beserta alasannya.
 
-### 5.2 Peringkat per engine sasaran
+### 5.2 Peringkat per mode sasaran
 
-| # | Kode | Algoritma | Engine sasaran | Tier | Data | Risiko | Biaya | Skor |
+| # | Kode | Algoritma | Mode sasaran | Tier | Data | Risiko | Biaya | Skor |
 |---|---|---|---|---|---|---|---|---|
 | 1 | A10 | Conformal (kuantil lintas-well dan dalam-well) | hyd | 3 | 3 | 2 | 3 | **2,85** |
 | 2 | A19 | Uji KS dua sampel | vib | 2 | 3 | 3 | 3 | **2,50** |
@@ -321,7 +321,7 @@ Tiga hal yang perlu dinyatakan jujur:
 | 27 | A27 | MCMC dan Bayesian network | vib | 0 | 3 | 0 | 1 | **0,00** |
 | 28 | A28 | Metaheuristik lain (EO, Horse Herd, HBO, Honey Badger, HHO, EPO, SSA-Salp, SSA-Sparrow, WOA+GWO) | vib | 0 | 3 | 1 | 1 | **0,00** |
 
-Engine sasaran adalah engine tempat algoritma itu direkomendasikan R1 sampai R6, bukan engine dengan skor tertinggi. Aturan ini dipakai supaya algoritma tidak diberi panggung pada engine yang jelas tidak membutuhkannya: tanpa aturan ini, Isolation Forest akan dinilai pada shk yang sudah berlabel dan tampak lebih baik daripada perannya yang sebenarnya, yaitu triase pada kelas tanpa label. Pemetaan engine sasaran ada di `scratch/rnd_e1/e1_build.py` konstanta `TARGET`.
+Mode sasaran adalah detektor tempat algoritma itu direkomendasikan R1 sampai R6, bukan detektor dengan skor tertinggi. Aturan ini dipakai supaya algoritma tidak diberi panggung pada detektor yang jelas tidak membutuhkannya: tanpa aturan ini, Isolation Forest akan dinilai pada shk yang sudah berlabel dan tampak lebih baik daripada perannya yang sebenarnya, yaitu triase pada kelas tanpa label. Pemetaan mode sasaran ada di `scratch/rnd_e1/e1_build.py` konstanta `TARGET`.
 
 Kolom tier, data, risiko, biaya adalah skor komponen 0 sampai 3. Kolom Skor adalah hasil rumus 5.1. Algoritma dengan skor 0 tidak muncul karena gerbang tier memaksanya ke 0.
 
@@ -329,9 +329,9 @@ Kolom tier, data, risiko, biaya adalah skor komponen 0 sampai 3. Kolom Skor adal
 
 ## 6. SHORTLIST: 6 kandidat
 
-Enam kandidat dipilih dari peringkat 5.2 dengan satu syarat tambahan: tiap kandidat harus punya engine dengan data ADA atau SEBAGIAN dan satu jalur gate yang bisa ditunjuk. Nomor urut adalah peringkat skor.
+Enam kandidat dipilih dari peringkat 5.2 dengan satu syarat tambahan: tiap kandidat harus punya detektor dengan data ADA atau SEBAGIAN dan satu jalur gate yang bisa ditunjuk. Nomor urut adalah peringkat skor.
 
-| # | Kode | Kandidat | Engine target | Skor | Kenapa masuk shortlist |
+| # | Kode | Kandidat | Detektor target | Skor | Kenapa masuk shortlist |
 |---|---|---|---|---|---|
 | 1 | A10 | Conformal (kuantil lintas-well dan dalam-well) | hyd | **2,85** | satu-satunya metode yang menyerang kegagalan C paling umum, yaitu portabilitas ambang; pada hyd satu-satunya gerbang tersisa adalah FAR |
 | 2 | A19 | Uji KS dua sampel | vib | **2,50** | gerbang diagnosis sebelum meminjam ambang antar well; R5 menempatkannya sebagai prioritas kedua setelah CUSUM dan PH |
@@ -475,7 +475,7 @@ Catatan kejujuran atas tabel ini: tujuh rujukan pertama terverifikasi pada lapis
 
 ## Ringkasan 5 baris
 
-1. Matriks 28 algoritma x 7 engine berisi 196 sel, dan 7 algoritma punya skor prioritas di atas 2,0 dari skala 3.
+1. Matriks 28 algoritma x 7 mode berisi 196 sel, dan 7 algoritma punya skor prioritas di atas 2,0 dari skala 3.
 2. Peringkat teratas bukan model yang lebih canggih, melainkan metode yang menyerang portabilitas ambang: conformal per well pada hyd dengan skor 2,85, disusul uji KS dan Page-Hinkley.
 3. Tiga finalis pilot adalah kalibrasi ambang prospektif (hyd), Page-Hinkley dan CUSUM dengan reset (tool_wear), serta boosting terkalibrasi (shk, ssi, stuck K-ii); ketiganya punya data ADA atau SEBAGIAN dan jalur gate C, A, B yang bisa ditunjuk.
 4. Sebanyak 13 algoritma atau keluarga algoritma ditolak permanen dengan alasan fisik atau biaya, 5 ditunda karena keadaan, dan satu DOI conformal populer ditolak karena menunjuk makalah lain.

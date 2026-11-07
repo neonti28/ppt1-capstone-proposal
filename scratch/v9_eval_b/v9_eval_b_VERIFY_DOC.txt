@@ -1,0 +1,70 @@
+PASS klaim vib ada
+PASS klaim ssi ada
+PASS klaim shk ada
+PASS klaim stuck K-i ada
+PASS klaim stuck K-ii ada
+PASS klaim hyd K-i ada
+PASS klaim hyd K-ii ada
+PASS klaim bit_wear K-1 ada
+PASS klaim bit_wear K-2 ada
+PASS klaim tool_wear K-i ada
+PASS klaim tool_wear K-ii ada
+PASS B3 vib persistence
+PASS B3 ssi hybrid +0,73
+PASS B3 hyd hybrid
+PASS B3 stuck RF tau0.5
+PASS B3 stuck pers-event
+PASS B3 stuck E2 negatif
+PASS B3 tool_wear terkalibrasi 0,909
+PASS B3 shk RF tau0.5
+PASS FP stuck RF tau0.05 = 32938 (32.938)
+PASS FP E1 onset 422
+PASS FP pers-event 11
+PASS B4 vib rule cov 26,4%
+PASS B4 vib rule margin 5,0
+PASS B4 shk rule cov 13,4%
+PASS B4 shk rule margin 4,5
+PASS B4 ssi RF0.05 cov 27,5%
+PASS B4 hyd hybrid cov 13,0%
+PASS B4 hyd hybrid margin 4,5
+PASS B4 hyd pers margin 7,0
+PASS B4 stuck_k1 rule cov 11,8%
+PASS blocks vib=216
+PASS blocks shk=164
+PASS blocks hyd_ki=277
+PASS blocks stuck_k1=76
+PASS ssi blocks 40/137
+PASS stuck RF0.05 B1 min 0,51
+PASS stuck RF0.05 TLead 10-11,5
+PASS horizon B1 0,93-0,97
+PASS anchor 2,67-7,37
+PASS hyd delay 0-3,5
+PASS hyd withinH10 31,6-65,4
+PASS tool cp TLead 35 dtk
+PASS tool kalibrasi 59 dtk
+PASS tool FAR-cal TLead 20-36
+PASS baseline/anchor: 'rule status-quo'
+PASS baseline/anchor: 'rule E1'
+PASS baseline/anchor: 'rule z-pit'
+PASS baseline/anchor: 'rule 3-RMS'
+PASS baseline/anchor: 'anchor kelas'
+PASS baseline/anchor: 'dilarang dipinjam'
+PASS tanpa vonis biner LULUS/GAGAL
+PASS negasi eksplisit ada
+PASS baris riset pendahuluan: scientific-critical-thinking
+PASS baris riset pendahuluan: verification-mandatory
+PASS baris riset pendahuluan: statistical-analysis
+PASS baris riset pendahuluan: what-if-oracle
+PASS baris riset pendahuluan: consciousness-council
+PASS baris riset pendahuluan: sequentialthinking
+PASS minimal 6 baris riset pendahuluan
+PASS JSON primer lebih dulu dari dokumen
+PASS angka verifikasi '17/17' di dokumen
+PASS angka verifikasi '22/22' di dokumen
+PASS angka verifikasi '110/110' di dokumen
+PASS angka verifikasi '16/16' di dokumen
+PASS angka verifikasi '62/62' di dokumen
+PASS angka verifikasi '27=27' di dokumen
+PASS bagian belum terukur ada
+
+=== verify_doc: 68 PASS, 0 FAIL ===

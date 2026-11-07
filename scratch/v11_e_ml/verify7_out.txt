@@ -1,0 +1,97 @@
+=== 1a. file v2: cek kolom pakai pandas ===
+  v2: rows=118567 cols=['well', 'ts_bin', 'feat_ts_max', 'lab_ts', 'lab_kind', 'y_stuck_onset']
+     dtypes={'well': 'object', 'ts_bin': 'int64', 'feat_ts_max': 'float64', 'lab_ts': 'float64', 'lab_kind': 'object', 'y_stuck_onset': 'int64'}
+     NaN: ts_bin=0 lab_ts=0 feat_ts_max=0
+     lab_kind top={'onset_horizon_neg': 116592, 'onset_event': 1975}
+     ts_bin head=[20649209, 20649210, 20650042] lab_ts head=[20649209.0, 20649210.0, 20650042.0]
+  OLD: rows=118567 cols=['well', 'ts_bin', 'feat_ts_max', 'lab_ts', 'lab_kind', 'y_stuck_onset']
+     dtypes={'well': 'object', 'ts_bin': 'int64', 'feat_ts_max': 'float64', 'lab_ts': 'float64', 'lab_kind': 'object', 'y_stuck_onset': 'int64'}
+     NaN: ts_bin=0 lab_ts=0 feat_ts_max=0
+     lab_kind top={'onset_horizon_neg': 116592, 'onset_event': 1975}
+     ts_bin head=[20649209, 20649210, 20650042] lab_ts head=[20649209.0, 20649210.0, 20650042.0]
+
+=== 1b. bandingkan hash kedua file (identik?) ===
+  v2: sha256[:32]=acb9ebeaa64b147983ca5f5fe0f940b6 size=21804228 mtime=2026-10-12 09:37:23
+  OLD: sha256[:32]=acb9ebeaa64b147983ca5f5fe0f940b6 size=21804228 mtime=2026-10-12 09:37:23
+
+=== 1c. dataset_sha256 di JSON hasil (primer) vs file ===
+  vib json_dataset_path=/mnt/d/Capstone 1/scratch/v9_d1/datasets/vib.csv.gz | sha_json=f68727a5da407b445d3b34d2730406ef7fa10f5834078f97df2709349b26f8d7 | sha_file[v2]=f68727a5da407b445d3b34d2730406ef7fa10f5834078f97df2709349b26f8d7 | cocok=True
+  vib json_dataset_path=/mnt/d/Capstone 1/scratch/v9_d1/datasets/vib.csv.gz | sha_json=f68727a5da407b445d3b34d2730406ef7fa10f5834078f97df2709349b26f8d7 | sha_file[OLD]=f68727a5da407b445d3b34d2730406ef7fa10f5834078f97df2709349b26f8d7 | cocok=True
+  ssi json_dataset_path=/mnt/d/Capstone 1/scratch/v9_d1/datasets/ssi.csv.gz | sha_json=574392d9f3012cd25974e28bee9ad6d10170e04025b1c557b019eb2682560d95 | sha_file[v2]=574392d9f3012cd25974e28bee9ad6d10170e04025b1c557b019eb2682560d95 | cocok=True
+  ssi json_dataset_path=/mnt/d/Capstone 1/scratch/v9_d1/datasets/ssi.csv.gz | sha_json=574392d9f3012cd25974e28bee9ad6d10170e04025b1c557b019eb2682560d95 | sha_file[OLD]=574392d9f3012cd25974e28bee9ad6d10170e04025b1c557b019eb2682560d95 | cocok=True
+  shk json_dataset_path=/mnt/d/Capstone 1/scratch/v9_d1/datasets/shk.csv.gz | sha_json=aa5034ec5326b04d3dc42b48f7350d90aaf776999855ed679a9a054cbcf3292d | sha_file[v2]=aa5034ec5326b04d3dc42b48f7350d90aaf776999855ed679a9a054cbcf3292d | cocok=True
+  shk json_dataset_path=/mnt/d/Capstone 1/scratch/v9_d1/datasets/shk.csv.gz | sha_json=aa5034ec5326b04d3dc42b48f7350d90aaf776999855ed679a9a054cbcf3292d | sha_file[OLD]=aa5034ec5326b04d3dc42b48f7350d90aaf776999855ed679a9a054cbcf3292d | cocok=True
+  stuck_k2 json_dataset_path=/mnt/d/Capstone 1/scratch/v9_d1/datasets/stuck_k2.csv.gz | sha_json=a8307db3c49ffa75187abea07fbbb73afbde8f23d94252a8a9a5a8577333271f | sha_file[v2]=4dfb2221aa8e385753daf505e8e61c5b7c0625350e31f094858e36678b8af142 | cocok=False
+  stuck_k2 json_dataset_path=/mnt/d/Capstone 1/scratch/v9_d1/datasets/stuck_k2.csv.gz | sha_json=a8307db3c49ffa75187abea07fbbb73afbde8f23d94252a8a9a5a8577333271f | sha_file[OLD]=4dfb2221aa8e385753daf505e8e61c5b7c0625350e31f094858e36678b8af142 | cocok=False
+
+=== 2. v9_d1_04_qc.json: v8_onsets_match per well ===
+  F-9: onsets_ffill=55 onsets_strict=61 onsets_scorable=55 v8_onsets_match=None positives=311
+  F-9_A: onsets_ffill=72 onsets_strict=72 onsets_scorable=72 v8_onsets_match=True positives=503
+  F-10: onsets_ffill=93 onsets_strict=111 onsets_scorable=93 v8_onsets_match=True positives=772
+  F-14: onsets_ffill=61 onsets_strict=81 onsets_scorable=61 v8_onsets_match=True positives=389
+  reference_onsets_v8 = {'F-9_A': 72, 'F-14': 61, 'F-10': 93}
+
+=== 3. MIN_DRILL_BINS / MIN_DRILL_ROWS ===
+  :32: MIN_DRILL_BINS = 5
+  :33: MIN_DRILL_ROWS = 60
+  :34: SSI_MIN_SAMPLES = 10
+  :93: ok = (n_tot >= SSI_MIN_SAMPLES) & (wmean > 0) & np.isfinite(ssi)
+  :171: F["feat_valid"] = (drill_bins >= MIN_DRILL_BINS) & (drill_rows >= MIN_DRILL_ROWS)
+
+=== 4. nama kanonik 7 engine (outline PM1) ===
+  docs/V10_PM1_OUTLINE.md:1: # V10-PM1 — KERANGKA PROPOSAL BARU: 7 ENGINE vs 11 KLAIM vs 27 HEAD + OUTLINE + DELEGASI
+  docs/V10_PM1_OUTLINE.md:15: `docs/V9_PM1_ARCHITECTURE.md` (§2 spesifikasi 7 engine, §3 S1–S9) ·
+  docs/V10_PM1_OUTLINE.md:40: (**7 ENGINE** = 7 kelas kerusakan yang dideteksi). Karena sebagian pertanyaan punya dua sisi —
+  docs/V10_PM1_OUTLINE.md:51: ## 1. PENJELASAN TEGAS: 7 ENGINE vs 11 KLAIM vs 27 HEAD
+  docs/V10_PM1_OUTLINE.md:55: - **7 ENGINE = 7 kelas hal yang dideteksi** (unit fisis/operasional: "apa yang rusak?"; satu engine per kelas kegagalan).
+  docs/V10_PM1_OUTLINE.md:60: 1. Pernyataan "**0 dari 7 engine layak alarm otomatis**" ditulis pada **level ENGINE** (tier adalah atribut head; tak ada engine yang seluruh head-nya berstatus alarm).
+  docs/V10_PM1_OUTLINE.md:63: ### 1.1 Tujuh engine (kelas kerusakan) — NAMA EKSAK dari REGISTRY
+  docs/V10_PM1_OUTLINE.md:67: | 1 | `vib` | Kondisi getaran lateral berbahaya (whirl/GET tinggi) | `VIBLAT_RT` (MWD), ambang ≥ 32,17405 ft/s² | 1 |
+  docs/V10_PM1_OUTLINE.md:68: | 2 | `ssi` | Stick-slip torsional (bit tersendat-sendat memutar) | `SSI(CRPM_RT)`, ambang ≥ 1 | 1 |
+  docs/V10_PM1_OUTLINE.md:69: | 3 | `shk` | Bit bounce / shock risk (bit memantul memukul formasi) | `SHKRSK_RT`, ambang ≥ 1 | 1 |
+  docs/V10_PM1_OUTLINE.md:71: | 5 | `hyd` | Anomali hidrolik — K-i residu tekanan return vs laju aliran; K-ii proxy kick/loss | `SPPA` residu thd `TFLO` | 2 |
+  docs/V10_PM1_OUTLINE.md:72: | 6 | `bit_wear` | Keausan/balling bit — K-1 blok high_MSE (Teale); K-2 onset | MSE Teale di `USROP` | 2 |
+  docs/V10_PM1_OUTLINE.md:73: | 7 | `tool_wear` | Keausan mata bor di bengkel — K-i perubahan-regime dalam-run; K-ii ranking lintas-alat | getaran bengkel 1000 Hz, 27 fitur | 2 |
+  docs/V10_PM1_OUTLINE.md:79: | 1 | `vib` K tunggal — deteksi kondisi getaran lateral (status `VIBLAT_RT ≥ 32,17405 ft/s²`) | vib | deteksi kondisi (bukan prediksi onset — TLead tidak berlaku) | aktif |
+  docs/V10_PM1_OUTLINE.md:80: | 2 | `ssi` K tunggal — deteksi kondisi stick-slip torsional (`SSI(CRPM_RT) ≥ 1`) | ssi | deteksi kondisi | aktif |
+  docs/V10_PM1_OUTLINE.md:81: | 3 | `shk` K tunggal — deteksi anomali/dysfunction bit bounce (`SHKRSK_RT ≥ 1`) | shk | deteksi anomali sedang berlangsung | aktif |
+  docs/V10_PM1_OUTLINE.md:84: | 6 | `hyd` `K-i` — deteksi kondisi residu `SPPA` \|z\| > 2 | hyd | deteksi kondisi (label PROXY) | aktif |
+  docs/V10_PM1_OUTLINE.md:85: | 7 | `hyd` `K-ii` — prediksi kick/loss proxy | hyd | prediksi kejadian mendatang | **TIDAK TERSEDIA** (data pit/GAINLOSSTOT belum diparse — ditulis eksplisit, bukan dihapus) |
+  docs/V10_PM1_OUTLINE.md:86: | 8 | `bit_wear` `K-1` — deteksi status blok high_MSE (Teale) | bit_wear | deteksi kondisi | aktif |
+  docs/V10_PM1_OUTLINE.md:87: | 9 | `bit_wear` `K-2` — prediksi onset keausan | bit_wear | prediksi onset | **BELUM** (pra-registrasi belum terbit; nol angka) |
+  docs/V10_PM1_OUTLINE.md:88: | 10 | `tool_wear` `K-i` — deteksi perubahan-regime dalam-run (bengkel) | tool_wear | deteksi perubahan-regime | aktif |
+  docs/V10_PM1_OUTLINE.md:89: | 11 | `tool_wear` `K-ii` — ranking keausan lintas-alat | tool_wear | ranking | aktif |
+  docs/V10_PM1_OUTLINE.md:100: | 1 | vib | `rule_display` | kondisi | PERINGATAN-BERPENGAWAS | L1 |
+  docs/V10_PM1_OUTLINE.md:101: | 2 | vib | `persistence` | kondisi | TREN | L0 |
+  docs/V10_PM1_OUTLINE.md:102: | 3 | vib | `hybrid_rule_and_persistence` | kondisi | PERINGATAN-BERPENGAWAS | L1 |
+  docs/V10_PM1_OUTLINE.md:103: | 4 | vib | `rf_lowo` | kondisi | TREN | L2 |
+  docs/V10_PM1_OUTLINE.md:104: | 5 | ssi | `rule_display` | kondisi | PERINGATAN-BERPENGAWAS | L1 |
+  docs/V10_PM1_OUTLINE.md:105: | 6 | ssi | `persistence` | kondisi | TREN | L0 |
+  docs/V10_PM1_OUTLINE.md:106: | 7 | ssi | `hybrid_rule_and_persistence` | kondisi | PERINGATAN-BERPENGAWAS | L1 |
+  docs/V10_PM1_OUTLINE.md:107: | 8 | ssi | `rf_lowo` | kondisi | TREN | L2 |
+  docs/V10_PM1_OUTLINE.md:108: | 9 | shk | `rule_display` | anomali | PERINGATAN-BERPENGAWAS | L1 |
+  docs/V10_PM1_OUTLINE.md:109: | 10 | shk | `persistence` | anomali | TREN | L0 |
+  docs/V10_PM1_OUTLINE.md:110: | 11 | shk | `hybrid_rule_and_persistence` | anomali | PERINGATAN-BERPENGAWAS | L1 |
+  docs/V10_PM1_OUTLINE.md:111: | 12 | shk | `rf_lowo` | anomali | TREN | L2 |
+  docs/V10_PM1_OUTLINE.md:118: | 19 | hyd | `rule_display` | K-i | PERINGATAN-BERPENGAWAS | L1 |
+  docs/V10_PM1_OUTLINE.md:119: | 20 | hyd | `persistence` | K-i | PERINGATAN-BERPENGAWAS | L0 |
+  docs/V10_PM1_OUTLINE.md:120: | 21 | hyd | `hybrid_rule_and_persistence` | K-i | PERINGATAN-BERPENGAWAS | L1 |
+  docs/V10_PM1_OUTLINE.md:121: | 22 | hyd | `k2_tidak_tersedia` | K-ii | BELUM LAYAK PAKAI | L3 |
+  docs/V10_PM1_OUTLINE.md:122: | 23 | bit_wear | `persistence` | K-1 | TREN | L2 |
+  docs/V10_PM1_OUTLINE.md:123: | 24 | bit_wear | `k2_onset_belum` | K-2 | BELUM LAYAK PAKAI | L3 |
+  docs/V10_PM1_OUTLINE.md:124: | 25 | tool_wear | `calib_5of27` | K-i | TREN | L2 |
+  docs/V10_PM1_OUTLINE.md:125: | 26 | tool_wear | `op_far_calibrated` | K-i | PERINGATAN-BERPENGAWAS | L1 |
+  docs/V10_PM1_OUTLINE.md:126: | 27 | tool_wear | `canary_3rms` | K-ii | TREN | L2 |
+  docs/V9_PM1_ARCHITECTURE.md:1: # V9-PM1 — ARSITEKTUR ALAT PdM ADVISORY: 7 ENGINE + SPESIFIKASI + DELEGASI TIM
+  docs/V9_PM1_ARCHITECTURE.md:32: > sumber+graph kartu → rancang 5 lapis arsitektur → spesifikasi 7 engine + cek
+  docs/V9_PM1_ARCHITECTURE.md:57: - Arsitektur alat advisory penuh (§1): data → fitur → 7 engine → lapisan keputusan →
+  docs/V9_PM1_ARCHITECTURE.md:59: - Spesifikasi tiap 7 engine (§2): jenis tugas, jenis engine, input, output, baseline
+  docs/V9_PM1_ARCHITECTURE.md:107: │  Alarm otomatis kritis tanpa manusia: 0 slot hari ini (0/7 engine)         │
+  docs/V9_PM1_ARCHITECTURE.md:126: | D-A1 | Grid 60 detik + jendela fitur 10 menit = tulang punggung semua kelas rig (tool_wear bengkel: jendela 1 detik, domain terpisah) | Kontrak V6 yang dipakai SEMUA evaluator V8 (reproduksi 7/7 <1e
+  docs/V9_PM1_ARCHITECTURE.md:128: | D-A3 | Status-confirmation module seragam (persistence + rule) = SATU modul murah untuk vib/ssi/stuck-K-i/hyd-K-i/bit_wear-K-1 | Persistence = engine status terbaik terukur di 4 kelas (hyd ΔB− 7/7; 
+  docs/V9_PM1_ARCHITECTURE.md:129: | D-A4 | Kalibrasi ambang SELALU lokal per wellbore; kalibrasi lintas-well DILARANG dipakai otomatis | shk: ambang budget-FAR latih → 0 alarm di semua fold uji; stuck: q95 jenuh 1,0/0,0; hyd: FAR test
+  docs/V9_PM1_ARCHITECTURE.md:130: | D-A5 | Larangan RF spesifik kelas: hyd-K-i DILANGGAN (ΔB negatif 7/7, replikasi eksak) — TIDAK digeneralisasi ke kelas lain | V8_M1 §B.2 C1; vib-RF menang 4/4 vs canary, ssi-RF 5/5 vs canary |
+  docs/V9_PM1_ARCHITECTURE.md:132: | D-A7 | tool_wear = modul terpisah (domain bengkel, lead detik) — lead-time-nya TIDAK dijumlahkan dengan lead-time rig (menit) | V8_M1 §B.2 C5; 4 alat, run 50–62 dtk, transfer ke drilling TIDAK dikla
+  docs/V9_PM1_ARCHITECTURE.md:156: | Input data | Kanal MWD/surface: TFLO, HKLD, SWOB, RPM, ROP, BPOS, depth/dbtm + turunan (V8-E_vib: SHAP top = TFLO_mean/last, depth, dbtm_last/mean, HKLD_mean) |
+  docs/V9_PM1_ARCHITECTURE.md:177: | Input data | Kanal selain CRPM: TFLO, SPPA, BPOS, HKLD, SWOB, RPM?, ROP, depth/dbtm (V8-E_ssi: SHAP top = TFLO_mean/last, SPPA_mean, BPOS_last/mean/std) |
+  docs/V9_PM1_ARCHITECTURE.md:196: | Label / anti-sirkular | K-1: blok `high_MSE` dari kolom label USROP (`high_MSE_bit_wear`); **kanal pembentuk MSE DILARANG jadi fitur** (E1d asersi anti-sirkular PASS); K-2: onset = transisi blok, je

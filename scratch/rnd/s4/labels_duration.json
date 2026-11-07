@@ -1,0 +1,914 @@
+{
+ "sumber": {
+  "path": "/mnt/d/Capstone 1(v2)/data/volve/labels_curated_v2.csv",
+  "bytes": 519171,
+  "baris": 884,
+  "kolom": [
+   "event_id",
+   "wellbore",
+   "event_date",
+   "act_start",
+   "act_end",
+   "ddr_date_start",
+   "md",
+   "md_valid",
+   "source_code",
+   "state_detail",
+   "category",
+   "bha_relevant",
+   "evidence",
+   "match_rules",
+   "comments_full",
+   "comments_trunc300",
+   "outcome",
+   "outcome_reason",
+   "component",
+   "component_reason"
+  ]
+ },
+ "n_baris": 884,
+ "n_durasi_valid": 884,
+ "n_tanpa_waktu": 0,
+ "n_durasi_negatif": 0,
+ "n_durasi_nol": 0,
+ "durasi_jam": {
+  "n": 884,
+  "sum": 1225.0,
+  "mean": 1.3857,
+  "median": 0.75,
+  "p25": 0.5,
+  "p75": 1.75,
+  "p90": 3.0,
+  "max": 13.0,
+  "min": 0.1667
+ },
+ "distribusi_durasi": {
+  "0-15m": 2,
+  "15-30m": 139,
+  "30-60m": 308,
+  "1-2j": 237,
+  "2-4j": 137,
+  "4-8j": 54,
+  "8-24j": 7,
+  ">24j": 0
+ },
+ "per_category": {
+  "routine_no_failure_evidence": {
+   "n": 496,
+   "sum_jam": 601.083,
+   "median_jam": 0.75,
+   "p90_jam": 2.5833
+  },
+  "surface_rig_equipment": {
+   "n": 216,
+   "sum_jam": 343.5,
+   "median_jam": 0.75,
+   "p90_jam": 3.75
+  },
+  "mixed_evidence": {
+   "n": 47,
+   "sum_jam": 101.5,
+   "median_jam": 1.75,
+   "p90_jam": 4.5
+  },
+  "wellbore_fluid": {
+   "n": 25,
+   "sum_jam": 50.5,
+   "median_jam": 1.75,
+   "p90_jam": 3.15
+  },
+  "bha_stuck_fishing": {
+   "n": 38,
+   "sum_jam": 47.25,
+   "median_jam": 0.75,
+   "p90_jam": 3.225
+  },
+  "wireline_completion_intervention": {
+   "n": 21,
+   "sum_jam": 40.167,
+   "median_jam": 1.5,
+   "p90_jam": 4.25
+  },
+  "failure_unlocated": {
+   "n": 28,
+   "sum_jam": 25.75,
+   "median_jam": 0.75,
+   "p90_jam": 1.75
+  },
+  "bha_downhole_equipment": {
+   "n": 12,
+   "sum_jam": 14.0,
+   "median_jam": 1.0,
+   "p90_jam": 1.75
+  },
+  "safety_personnel": {
+   "n": 1,
+   "sum_jam": 1.25,
+   "median_jam": 1.25,
+   "p90_jam": 1.25
+  }
+ },
+ "per_state_detail": {
+  "equipment failure": {
+   "n": 770,
+   "sum_jam": 1071.5,
+   "median_jam": 0.75,
+   "p90_jam": 3.0
+  },
+  "operation failed": {
+   "n": 82,
+   "sum_jam": 98.5,
+   "median_jam": 0.75,
+   "p90_jam": 2.475
+  },
+  "circulation loss": {
+   "n": 23,
+   "sum_jam": 49.0,
+   "median_jam": 2.0,
+   "p90_jam": 3.2
+  },
+  "stuck equipment": {
+   "n": 7,
+   "sum_jam": 4.25,
+   "median_jam": 0.5,
+   "p90_jam": 0.95
+  },
+  "injury": {
+   "n": 1,
+   "sum_jam": 1.25,
+   "median_jam": 1.25,
+   "p90_jam": 1.25
+  },
+  "mud loss": {
+   "n": 1,
+   "sum_jam": 0.5,
+   "median_jam": 0.5,
+   "p90_jam": 0.5
+  }
+ },
+ "per_source_code": {
+  "interruption -- other": {
+   "n": 372,
+   "sum_jam": 569.25,
+   "median_jam": 0.75,
+   "p90_jam": 3.5
+  },
+  "drilling -- casing": {
+   "n": 135,
+   "sum_jam": 178.25,
+   "median_jam": 0.75,
+   "p90_jam": 3.0
+  },
+  "interruption -- repair": {
+   "n": 150,
+   "sum_jam": 172.0,
+   "median_jam": 0.75,
+   "p90_jam": 2.5
+  },
+  "interruption -- maintain": {
+   "n": 59,
+   "sum_jam": 79.5,
+   "median_jam": 0.75,
+   "p90_jam": 3.05
+  },
+  "drilling -- trip": {
+   "n": 63,
+   "sum_jam": 66.75,
+   "median_jam": 0.5,
+   "p90_jam": 2.2
+  },
+  "interruption -- well control": {
+   "n": 23,
+   "sum_jam": 49.0,
+   "median_jam": 2.0,
+   "p90_jam": 3.2
+  },
+  "interruption -- rig up/down": {
+   "n": 19,
+   "sum_jam": 37.0,
+   "median_jam": 1.25,
+   "p90_jam": 4.75
+  },
+  "drilling -- drill": {
+   "n": 26,
+   "sum_jam": 34.5,
+   "median_jam": 1.0,
+   "p90_jam": 3.125
+  },
+  "plug abandon -- mill": {
+   "n": 20,
+   "sum_jam": 26.25,
+   "median_jam": 0.7501,
+   "p90_jam": 2.125
+  },
+  "interruption -- fish": {
+   "n": 13,
+   "sum_jam": 8.0,
+   "median_jam": 0.5,
+   "p90_jam": 1.0
+  },
+  "drilling -- bop/wellhead equipment": {
+   "n": 2,
+   "sum_jam": 2.0,
+   "median_jam": 1.0,
+   "p90_jam": 1.4
+  },
+  "drilling -- bop activities": {
+   "n": 1,
+   "sum_jam": 1.5,
+   "median_jam": 1.5,
+   "p90_jam": 1.5
+  },
+  "plug abandon -- cut": {
+   "n": 1,
+   "sum_jam": 1.0,
+   "median_jam": 1.0,
+   "p90_jam": 1.0
+  }
+ },
+ "per_wellbore": {
+  "NO 15/9-F-14": {
+   "n": 182,
+   "sum_jam": 269.0,
+   "median_jam": 1.0,
+   "p90_jam": 3.475
+  },
+  "NO 15/9-F-15": {
+   "n": 112,
+   "sum_jam": 216.5,
+   "median_jam": 1.0,
+   "p90_jam": 4.95
+  },
+  "NO 15/9-F-15 D": {
+   "n": 122,
+   "sum_jam": 168.5,
+   "median_jam": 0.75,
+   "p90_jam": 3.0
+  },
+  "NO 15/9-F-5": {
+   "n": 136,
+   "sum_jam": 146.0,
+   "median_jam": 0.75,
+   "p90_jam": 2.375
+  },
+  "NO 15/9-F-15 C": {
+   "n": 89,
+   "sum_jam": 126.0,
+   "median_jam": 1.0,
+   "p90_jam": 2.8
+  },
+  "NO 15/9-F-9 A": {
+   "n": 94,
+   "sum_jam": 87.75,
+   "median_jam": 0.5,
+   "p90_jam": 2.0
+  },
+  "NO 15/9-F-9": {
+   "n": 56,
+   "sum_jam": 85.25,
+   "median_jam": 1.0,
+   "p90_jam": 4.5
+  },
+  "NO 15/9-F-7": {
+   "n": 59,
+   "sum_jam": 81.5,
+   "median_jam": 0.75,
+   "p90_jam": 3.8
+  },
+  "NO 15/9-F-15 A": {
+   "n": 32,
+   "sum_jam": 41.0,
+   "median_jam": 0.75,
+   "p90_jam": 2.45
+  },
+  "NO 15/9-F-15 B": {
+   "n": 2,
+   "sum_jam": 3.5,
+   "median_jam": 1.75,
+   "p90_jam": 2.55
+  }
+ },
+ "per_outcome": {
+  "removed": {
+   "n": 43,
+   "sum_jam": 72.25,
+   "median_jam": 1.0,
+   "p90_jam": 3.4
+  },
+  "monitored": {
+   "n": 44,
+   "sum_jam": 60.5,
+   "median_jam": 1.0,
+   "p90_jam": 2.675
+  },
+  "installed": {
+   "n": 29,
+   "sum_jam": 58.5,
+   "median_jam": 1.5,
+   "p90_jam": 4.5
+  },
+  "repaired": {
+   "n": 40,
+   "sum_jam": 48.5,
+   "median_jam": 0.625,
+   "p90_jam": 2.8
+  },
+  "made_up": {
+   "n": 32,
+   "sum_jam": 44.5,
+   "median_jam": 1.0,
+   "p90_jam": 2.5
+  },
+  "replaced": {
+   "n": 26,
+   "sum_jam": 38.5,
+   "median_jam": 1.0,
+   "p90_jam": 3.0
+  },
+  "installed|removed": {
+   "n": 19,
+   "sum_jam": 24.5,
+   "median_jam": 0.75,
+   "p90_jam": 2.4
+  },
+  "resumed": {
+   "n": 7,
+   "sum_jam": 11.25,
+   "median_jam": 0.75,
+   "p90_jam": 3.65
+  },
+  "repaired|replaced": {
+   "n": 3,
+   "sum_jam": 10.75,
+   "median_jam": 2.75,
+   "p90_jam": 6.55
+  },
+  "removed|made_up": {
+   "n": 5,
+   "sum_jam": 9.5,
+   "median_jam": 1.25,
+   "p90_jam": 3.7
+  },
+  "monitored|removed": {
+   "n": 6,
+   "sum_jam": 9.25,
+   "median_jam": 1.25,
+   "p90_jam": 2.625
+  },
+  "aborted": {
+   "n": 1,
+   "sum_jam": 9.0,
+   "median_jam": 9.0,
+   "p90_jam": 9.0
+  },
+  "fished": {
+   "n": 5,
+   "sum_jam": 8.75,
+   "median_jam": 1.0,
+   "p90_jam": 3.8
+  },
+  "replaced|installed": {
+   "n": 4,
+   "sum_jam": 8.25,
+   "median_jam": 1.25,
+   "p90_jam": 4.45
+  },
+  "tested_ok": {
+   "n": 3,
+   "sum_jam": 8.0,
+   "median_jam": 3.0,
+   "p90_jam": 3.4
+  },
+  "jarred": {
+   "n": 3,
+   "sum_jam": 6.5,
+   "median_jam": 1.75,
+   "p90_jam": 3.75
+  },
+  "installed|made_up": {
+   "n": 2,
+   "sum_jam": 5.75,
+   "median_jam": 2.8751,
+   "p90_jam": 4.575
+  },
+  "replaced|removed": {
+   "n": 2,
+   "sum_jam": 5.25,
+   "median_jam": 2.625,
+   "p90_jam": 3.725
+  },
+  "replaced|monitored|installed": {
+   "n": 1,
+   "sum_jam": 5.0,
+   "median_jam": 5.0,
+   "p90_jam": 5.0
+  },
+  "monitored|installed": {
+   "n": 2,
+   "sum_jam": 4.0,
+   "median_jam": 2.0,
+   "p90_jam": 3.4
+  },
+  "repaired|monitored": {
+   "n": 2,
+   "sum_jam": 3.75,
+   "median_jam": 1.875,
+   "p90_jam": 2.775
+  },
+  "tested_ok|made_up": {
+   "n": 2,
+   "sum_jam": 3.0,
+   "median_jam": 1.5,
+   "p90_jam": 2.1
+  },
+  "fished|tightened": {
+   "n": 2,
+   "sum_jam": 2.0,
+   "median_jam": 1.0,
+   "p90_jam": 1.4
+  },
+  "replaced|installed|removed": {
+   "n": 1,
+   "sum_jam": 2.0,
+   "median_jam": 2.0,
+   "p90_jam": 2.0
+  },
+  "resumed|tested_ok": {
+   "n": 1,
+   "sum_jam": 2.0,
+   "median_jam": 2.0,
+   "p90_jam": 2.0
+  },
+  "repaired|removed": {
+   "n": 2,
+   "sum_jam": 1.75,
+   "median_jam": 0.875,
+   "p90_jam": 1.175
+  },
+  "replaced|monitored": {
+   "n": 1,
+   "sum_jam": 1.5,
+   "median_jam": 1.5,
+   "p90_jam": 1.5
+  },
+  "installed|removed|made_up": {
+   "n": 1,
+   "sum_jam": 1.0,
+   "median_jam": 1.0,
+   "p90_jam": 1.0
+  },
+  "resumed|monitored": {
+   "n": 1,
+   "sum_jam": 1.0,
+   "median_jam": 1.0,
+   "p90_jam": 1.0
+  },
+  "resumed|removed": {
+   "n": 2,
+   "sum_jam": 1.0,
+   "median_jam": 0.5,
+   "p90_jam": 0.5
+  },
+  "monitored|made_up": {
+   "n": 1,
+   "sum_jam": 0.75,
+   "median_jam": 0.75,
+   "p90_jam": 0.75
+  },
+  "aborted|monitored": {
+   "n": 1,
+   "sum_jam": 0.5,
+   "median_jam": 0.5,
+   "p90_jam": 0.5
+  },
+  "repaired|monitored|removed": {
+   "n": 1,
+   "sum_jam": 0.5,
+   "median_jam": 0.5,
+   "p90_jam": 0.5
+  },
+  "repaired|resumed": {
+   "n": 1,
+   "sum_jam": 0.5,
+   "median_jam": 0.5,
+   "p90_jam": 0.5
+  },
+  "fished|made_up": {
+   "n": 1,
+   "sum_jam": 0.25,
+   "median_jam": 0.25,
+   "p90_jam": 0.25
+  }
+ },
+ "per_component": {
+  "casing": {
+   "n": 64,
+   "sum_jam": 67.5,
+   "median_jam": 0.625,
+   "p90_jam": 1.925
+  },
+  "sub": {
+   "n": 28,
+   "sum_jam": 35.75,
+   "median_jam": 1.0,
+   "p90_jam": 2.475
+  },
+  "tractor": {
+   "n": 18,
+   "sum_jam": 35.75,
+   "median_jam": 1.75,
+   "p90_jam": 3.8
+  },
+  "toolstring": {
+   "n": 22,
+   "sum_jam": 23.667,
+   "median_jam": 0.5,
+   "p90_jam": 3.35
+  },
+  "centralizer": {
+   "n": 2,
+   "sum_jam": 17.0,
+   "median_jam": 8.5,
+   "p90_jam": 10.9
+  },
+  "liner": {
+   "n": 7,
+   "sum_jam": 12.25,
+   "median_jam": 1.0,
+   "p90_jam": 3.65
+  },
+  "perf_gun": {
+   "n": 11,
+   "sum_jam": 12.0,
+   "median_jam": 1.0,
+   "p90_jam": 2.0
+  },
+  "drill_string": {
+   "n": 5,
+   "sum_jam": 10.0,
+   "median_jam": 1.25,
+   "p90_jam": 4.1
+  },
+  "sub|casing": {
+   "n": 8,
+   "sum_jam": 8.75,
+   "median_jam": 0.75,
+   "p90_jam": 2.05
+  },
+  "perf_gun|toolstring": {
+   "n": 2,
+   "sum_jam": 7.75,
+   "median_jam": 3.875,
+   "p90_jam": 5.175
+  },
+  "jar": {
+   "n": 3,
+   "sum_jam": 7.0,
+   "median_jam": 1.75,
+   "p90_jam": 3.75
+  },
+  "shoe": {
+   "n": 7,
+   "sum_jam": 7.0,
+   "median_jam": 1.0,
+   "p90_jam": 1.3
+  },
+  "jar|sub": {
+   "n": 2,
+   "sum_jam": 6.75,
+   "median_jam": 3.375,
+   "p90_jam": 5.475
+  },
+  "screen": {
+   "n": 6,
+   "sum_jam": 6.75,
+   "median_jam": 0.875,
+   "p90_jam": 2.0
+  },
+  "bit": {
+   "n": 5,
+   "sum_jam": 6.0,
+   "median_jam": 0.75,
+   "p90_jam": 2.3
+  },
+  "drill_string|sub": {
+   "n": 1,
+   "sum_jam": 6.0,
+   "median_jam": 6.0,
+   "p90_jam": 6.0
+  },
+  "toolstring|tractor": {
+   "n": 1,
+   "sum_jam": 6.0,
+   "median_jam": 6.0,
+   "p90_jam": 6.0
+  },
+  "mwd_lwd|wlp": {
+   "n": 1,
+   "sum_jam": 5.5,
+   "median_jam": 5.5,
+   "p90_jam": 5.5
+  },
+  "sub|fishing_tool": {
+   "n": 1,
+   "sum_jam": 5.5,
+   "median_jam": 5.5,
+   "p90_jam": 5.5
+  },
+  "perf_gun|tractor": {
+   "n": 3,
+   "sum_jam": 5.0,
+   "median_jam": 1.25,
+   "p90_jam": 2.65
+  },
+  "bit|shoe": {
+   "n": 1,
+   "sum_jam": 4.75,
+   "median_jam": 4.75,
+   "p90_jam": 4.75
+  },
+  "mwd_lwd": {
+   "n": 7,
+   "sum_jam": 4.5,
+   "median_jam": 0.5,
+   "p90_jam": 1.0
+  },
+  "sub|toolstring": {
+   "n": 2,
+   "sum_jam": 4.5,
+   "median_jam": 2.25,
+   "p90_jam": 2.85
+  },
+  "tubing": {
+   "n": 6,
+   "sum_jam": 3.75,
+   "median_jam": 0.5,
+   "p90_jam": 0.875
+  },
+  "bit|mwd_lwd": {
+   "n": 3,
+   "sum_jam": 3.5,
+   "median_jam": 1.25,
+   "p90_jam": 1.85
+  },
+  "fishing_tool": {
+   "n": 5,
+   "sum_jam": 3.5,
+   "median_jam": 0.75,
+   "p90_jam": 1.15
+  },
+  "bit|jar": {
+   "n": 1,
+   "sum_jam": 3.0,
+   "median_jam": 3.0,
+   "p90_jam": 3.0
+  },
+  "screen|casing": {
+   "n": 2,
+   "sum_jam": 3.0,
+   "median_jam": 1.5,
+   "p90_jam": 1.9
+  },
+  "sub|perf_gun|toolstring": {
+   "n": 1,
+   "sum_jam": 3.0,
+   "median_jam": 3.0,
+   "p90_jam": 3.0
+  },
+  "packer": {
+   "n": 6,
+   "sum_jam": 2.75,
+   "median_jam": 0.5,
+   "p90_jam": 0.625
+  },
+  "perf_gun|toolstring|tractor": {
+   "n": 2,
+   "sum_jam": 2.75,
+   "median_jam": 1.375,
+   "p90_jam": 1.875
+  },
+  "packer|liner": {
+   "n": 2,
+   "sum_jam": 2.5,
+   "median_jam": 1.25,
+   "p90_jam": 1.45
+  },
+  "tubing|tractor": {
+   "n": 1,
+   "sum_jam": 2.25,
+   "median_jam": 2.25,
+   "p90_jam": 2.25
+  },
+  "mwd_lwd|drill_string": {
+   "n": 1,
+   "sum_jam": 2.0,
+   "median_jam": 2.0,
+   "p90_jam": 2.0
+  },
+  "packer|fishing_tool": {
+   "n": 2,
+   "sum_jam": 2.0,
+   "median_jam": 1.0,
+   "p90_jam": 1.4
+  },
+  "sub|perf_gun": {
+   "n": 1,
+   "sum_jam": 2.0,
+   "median_jam": 2.0,
+   "p90_jam": 2.0
+  },
+  "jar|toolstring": {
+   "n": 2,
+   "sum_jam": 1.75,
+   "median_jam": 0.875,
+   "p90_jam": 1.175
+  },
+  "sub|perf_gun|tractor": {
+   "n": 1,
+   "sum_jam": 1.75,
+   "median_jam": 1.75,
+   "p90_jam": 1.75
+  },
+  "shoe|jar|sub": {
+   "n": 1,
+   "sum_jam": 1.25,
+   "median_jam": 1.25,
+   "p90_jam": 1.25
+  },
+  "bit|centralizer": {
+   "n": 1,
+   "sum_jam": 1.0,
+   "median_jam": 1.0,
+   "p90_jam": 1.0
+  },
+  "bit|drill_collar|sub": {
+   "n": 1,
+   "sum_jam": 1.0,
+   "median_jam": 1.0,
+   "p90_jam": 1.0
+  },
+  "bit|motor": {
+   "n": 1,
+   "sum_jam": 1.0,
+   "median_jam": 1.0,
+   "p90_jam": 1.0
+  },
+  "bit|sub": {
+   "n": 1,
+   "sum_jam": 0.75,
+   "median_jam": 0.75,
+   "p90_jam": 0.75
+  },
+  "drill_collar": {
+   "n": 1,
+   "sum_jam": 0.5,
+   "median_jam": 0.5,
+   "p90_jam": 0.5
+  },
+  "drill_string|casing": {
+   "n": 1,
+   "sum_jam": 0.5,
+   "median_jam": 0.5,
+   "p90_jam": 0.5
+  },
+  "mwd_lwd|sub": {
+   "n": 1,
+   "sum_jam": 0.5,
+   "median_jam": 0.5,
+   "p90_jam": 0.5
+  },
+  "stabilizer|packer": {
+   "n": 1,
+   "sum_jam": 0.5,
+   "median_jam": 0.5,
+   "p90_jam": 0.5
+  },
+  "toolstring|wlp": {
+   "n": 1,
+   "sum_jam": 0.5,
+   "median_jam": 0.5,
+   "p90_jam": 0.5
+  },
+  "wlp": {
+   "n": 1,
+   "sum_jam": 0.25,
+   "median_jam": 0.25,
+   "p90_jam": 0.25
+  }
+ },
+ "n_wellbore": 10,
+ "tujuh_well_engine": {
+  "well": [
+   "NO 15/9-F-14",
+   "NO 15/9-F-15 A",
+   "NO 15/9-F-15",
+   "NO 15/9-F-5",
+   "NO 15/9-F-7",
+   "NO 15/9-F-9",
+   "NO 15/9-F-9 A"
+  ],
+  "n_kejadian": 671,
+  "sum_jam": 927.0,
+  "median_jam": 0.75,
+  "p90_jam": 3.0
+ },
+ "equipment_failure_state_detail": {
+  "definisi": "state_detail == 'equipment failure' (bukan kolom category)",
+  "n": 770,
+  "sum_jam": 1071.5,
+  "median_jam": 0.75,
+  "p90_jam": 3.0,
+  "max_jam": 13.0,
+  "per_wellbore": {
+   "NO 15/9-F-14": {
+    "n": 163,
+    "sum_jam": 241.5
+   },
+   "NO 15/9-F-15": {
+    "n": 80,
+    "sum_jam": 156.25
+   },
+   "NO 15/9-F-15 A": {
+    "n": 31,
+    "sum_jam": 40.5
+   },
+   "NO 15/9-F-15 B": {
+    "n": 2,
+    "sum_jam": 3.5
+   },
+   "NO 15/9-F-15 C": {
+    "n": 85,
+    "sum_jam": 121.75
+   },
+   "NO 15/9-F-15 D": {
+    "n": 122,
+    "sum_jam": 168.5
+   },
+   "NO 15/9-F-5": {
+    "n": 90,
+    "sum_jam": 104.75
+   },
+   "NO 15/9-F-7": {
+    "n": 55,
+    "sum_jam": 77.25
+   },
+   "NO 15/9-F-9": {
+    "n": 56,
+    "sum_jam": 85.25
+   },
+   "NO 15/9-F-9 A": {
+    "n": 86,
+    "sum_jam": 72.25
+   }
+  }
+ },
+ "kegagalan_beralasan": {
+  "definisi": "category != routine_no_failure_evidence",
+  "n": 388,
+  "sum_jam": 623.917,
+  "median_jam": 1.0,
+  "p90_jam": 3.75,
+  "per_kategori": {
+   "bha_downhole_equipment": {
+    "n": 12,
+    "sum_jam": 14.0,
+    "median_jam": 1.0
+   },
+   "bha_stuck_fishing": {
+    "n": 38,
+    "sum_jam": 47.25,
+    "median_jam": 0.75
+   },
+   "failure_unlocated": {
+    "n": 28,
+    "sum_jam": 25.75,
+    "median_jam": 0.75
+   },
+   "mixed_evidence": {
+    "n": 47,
+    "sum_jam": 101.5,
+    "median_jam": 1.75
+   },
+   "safety_personnel": {
+    "n": 1,
+    "sum_jam": 1.25,
+    "median_jam": 1.25
+   },
+   "surface_rig_equipment": {
+    "n": 216,
+    "sum_jam": 343.5,
+    "median_jam": 0.75
+   },
+   "wellbore_fluid": {
+    "n": 25,
+    "sum_jam": 50.5,
+    "median_jam": 1.75
+   },
+   "wireline_completion_intervention": {
+    "n": 21,
+    "sum_jam": 40.167,
+    "median_jam": 1.5
+   }
+  }
+ }
+}

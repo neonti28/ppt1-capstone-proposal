@@ -1,0 +1,349 @@
+{
+ "seed": 42,
+ "engines": {
+  "vib": {
+   "file": "/mnt/d/Capstone 1/scratch/v9_d1/datasets/vib.csv.gz",
+   "n_rows": 23922,
+   "n_features": 55,
+   "positives": 5429,
+   "y_col": "y_vib",
+   "per_well": {
+    "F-14": {
+     "n": 1989,
+     "pos": 1124,
+     "prev": 0.565108,
+     "underpowered": false
+    },
+    "F-15A": {
+     "n": 6482,
+     "pos": 1543,
+     "prev": 0.238044,
+     "underpowered": false
+    },
+    "F-15_S": {
+     "n": 10903,
+     "pos": 1532,
+     "prev": 0.140512,
+     "underpowered": false
+    },
+    "F-5": {
+     "n": 4548,
+     "pos": 1230,
+     "prev": 0.270449,
+     "underpowered": false
+    }
+   },
+   "leak_stamp_cols": [
+    "well",
+    "ts_bin",
+    "feat_ts_max",
+    "lab_ts",
+    "lab_kind"
+   ]
+  },
+  "ssi": {
+   "file": "/mnt/d/Capstone 1/scratch/v9_d1/datasets/ssi.csv.gz",
+   "n_rows": 35906,
+   "n_features": 55,
+   "positives": 607,
+   "y_col": "y_ssi",
+   "per_well": {
+    "F-10": {
+     "n": 7133,
+     "pos": 161,
+     "prev": 0.022571,
+     "underpowered": false
+    },
+    "F-12": {
+     "n": 4293,
+     "pos": 83,
+     "prev": 0.019334,
+     "underpowered": false
+    },
+    "F-14": {
+     "n": 5455,
+     "pos": 75,
+     "prev": 0.013749,
+     "underpowered": false
+    },
+    "F-15A": {
+     "n": 6020,
+     "pos": 31,
+     "prev": 0.00515,
+     "underpowered": false
+    },
+    "F-15_S": {
+     "n": 5342,
+     "pos": 85,
+     "prev": 0.015912,
+     "underpowered": false
+    },
+    "F-5": {
+     "n": 4714,
+     "pos": 102,
+     "prev": 0.021638,
+     "underpowered": false
+    },
+    "F-7": {
+     "n": 982,
+     "pos": 3,
+     "prev": 0.003055,
+     "underpowered": true
+    },
+    "F-9": {
+     "n": 1126,
+     "pos": 12,
+     "prev": 0.010657,
+     "underpowered": true
+    },
+    "F-9_A": {
+     "n": 841,
+     "pos": 55,
+     "prev": 0.065398,
+     "underpowered": false
+    }
+   },
+   "leak_stamp_cols": [
+    "well",
+    "ts_bin",
+    "feat_ts_max",
+    "lab_ts",
+    "lab_kind"
+   ]
+  },
+  "shk": {
+   "file": "/mnt/d/Capstone 1/scratch/v9_d1/datasets/shk.csv.gz",
+   "n_rows": 56495,
+   "n_features": 55,
+   "positives": 2005,
+   "y_col": "y_shk",
+   "per_well": {
+    "F-10": {
+     "n": 7899,
+     "pos": 146,
+     "prev": 0.018483,
+     "underpowered": false
+    },
+    "F-12": {
+     "n": 5405,
+     "pos": 217,
+     "prev": 0.040148,
+     "underpowered": false
+    },
+    "F-14": {
+     "n": 11205,
+     "pos": 760,
+     "prev": 0.067827,
+     "underpowered": false
+    },
+    "F-15A": {
+     "n": 6484,
+     "pos": 41,
+     "prev": 0.006323,
+     "underpowered": false
+    },
+    "F-15_S": {
+     "n": 11394,
+     "pos": 259,
+     "prev": 0.022731,
+     "underpowered": false
+    },
+    "F-5": {
+     "n": 7140,
+     "pos": 240,
+     "prev": 0.033613,
+     "underpowered": false
+    },
+    "F-7": {
+     "n": 2761,
+     "pos": 267,
+     "prev": 0.096704,
+     "underpowered": false
+    },
+    "F-9": {
+     "n": 1851,
+     "pos": 45,
+     "prev": 0.024311,
+     "underpowered": false
+    },
+    "F-9_A": {
+     "n": 2356,
+     "pos": 30,
+     "prev": 0.012733,
+     "underpowered": false
+    }
+   },
+   "leak_stamp_cols": [
+    "well",
+    "ts_bin",
+    "feat_ts_max",
+    "lab_ts",
+    "lab_kind"
+   ]
+  },
+  "stuck_k1": {
+   "file": "/mnt/d/Capstone 1/scratch/v9_d1/datasets/stuck_k1.csv.gz",
+   "n_rows": 5555,
+   "n_features": 55,
+   "positives": 2007,
+   "y_col": "y_stuck",
+   "per_well": {
+    "F-14": {
+     "n": 3201,
+     "pos": 432,
+     "prev": 0.134958,
+     "underpowered": false
+    },
+    "F-9_A": {
+     "n": 2354,
+     "pos": 1575,
+     "prev": 0.669074,
+     "underpowered": false
+    }
+   },
+   "leak_stamp_cols": [
+    "well",
+    "ts_bin",
+    "feat_ts_max",
+    "lab_ts",
+    "lab_kind"
+   ]
+  },
+  "hyd_ki": {
+   "file": "/mnt/d/Capstone 1/scratch/v9_d1/datasets/hyd_ki.csv.gz",
+   "n_rows": 52509,
+   "n_features": 40,
+   "positives": 7172,
+   "y_col": "y_hyd",
+   "per_well": {
+    "F-10": {
+     "n": 7571,
+     "pos": 1394,
+     "prev": 0.184124,
+     "underpowered": false
+    },
+    "F-12": {
+     "n": 7390,
+     "pos": 1426,
+     "prev": 0.192963,
+     "underpowered": false
+    },
+    "F-14": {
+     "n": 10401,
+     "pos": 865,
+     "prev": 0.083165,
+     "underpowered": false
+    },
+    "F-15A": {
+     "n": 6156,
+     "pos": 698,
+     "prev": 0.113385,
+     "underpowered": false
+    },
+    "F-15_S": {
+     "n": 8355,
+     "pos": 993,
+     "prev": 0.118851,
+     "underpowered": false
+    },
+    "F-5": {
+     "n": 6332,
+     "pos": 621,
+     "prev": 0.098073,
+     "underpowered": false
+    },
+    "F-7": {
+     "n": 2482,
+     "pos": 421,
+     "prev": 0.169621,
+     "underpowered": false
+    },
+    "F-9": {
+     "n": 1616,
+     "pos": 423,
+     "prev": 0.261757,
+     "underpowered": false
+    },
+    "F-9_A": {
+     "n": 2206,
+     "pos": 331,
+     "prev": 0.150045,
+     "underpowered": false
+    }
+   },
+   "leak_stamp_cols": [
+    "well",
+    "ts_bin",
+    "feat_ts_max",
+    "lab_ts",
+    "lab_kind"
+   ]
+  }
+ },
+ "per_well": {
+  "F-10": {
+   "hyd_ki": {
+    "label_bins": 13473,
+    "eligible": 7571,
+    "positives": 1394
+   }
+  },
+  "F-12": {
+   "hyd_ki": {
+    "label_bins": 20572,
+    "eligible": 7390,
+    "positives": 1426
+   }
+  },
+  "F-14": {
+   "hyd_ki": {
+    "label_bins": 12569,
+    "eligible": 10401,
+    "positives": 865
+   }
+  },
+  "F-15A": {
+   "hyd_ki": {
+    "label_bins": 11770,
+    "eligible": 6156,
+    "positives": 698
+   }
+  },
+  "F-15_S": {
+   "hyd_ki": {
+    "label_bins": 10547,
+    "eligible": 8355,
+    "positives": 993
+   }
+  },
+  "F-5": {
+   "hyd_ki": {
+    "label_bins": 10164,
+    "eligible": 6332,
+    "positives": 621
+   }
+  },
+  "F-7": {
+   "hyd_ki": {
+    "label_bins": 3620,
+    "eligible": 2482,
+    "positives": 421
+   }
+  },
+  "F-9": {
+   "hyd_ki": {
+    "label_bins": 2194,
+    "eligible": 1616,
+    "positives": 423
+   }
+  },
+  "F-9_A": {
+   "hyd_ki": {
+    "label_bins": 2503,
+    "eligible": 2206,
+    "positives": 331
+   }
+  }
+ },
+ "elapsed_s": 23.6
+}

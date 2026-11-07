@@ -1,0 +1,6 @@
+[2026-10-15 10:18:07] raw rows=419745 pit_cols=13
+[2026-10-15 10:18:07] grid=27322 v_pit nonnull=27249 v_act=27249 flow=27249
+[2026-10-15 10:18:07] LABEL: episodes=124 kick=39 loss=85
+[2026-10-15 10:18:07] pos_windows=1240 evaluable=23602
+[2026-10-15 10:18:07] score finite=23821 sign_flip=6377
+[2026-10-15 10:18:07] split_idx=19125 time=2009-07-10 23:35:00+00:00 thr_q95=3.6575 train_n=15185 test_n=8107 pos_test=30

@@ -1,0 +1,188 @@
+{
+ "S1": {
+  "path": "docs/RND_S1_SEED_ROBUSTNESS.md",
+  "bytes": 25445,
+  "lines": 279,
+  "em_dash": 0,
+  "en_dash": 0,
+  "riset_pendahuluan": [
+   "Riset pendahuluan: statistical-analysis, scikit-learn, scientific-critical-thinking, verification-mandatory."
+  ],
+  "sequ_count": 1,
+  "dois": [],
+  "headings": [
+   "1:# RND-S1: ketahanan lintas seed H1 hyd dan harness bersama (kartu t_6890a1c7)",
+   "18:## 1. Lingkup dan kebijakan pengikat",
+   "28:## 2. Metode: harness bersama code/rnd_hybrid_harness.py",
+   "44:## 3. Data dan pemeriksaan awal",
+   "64:## 4. Reproduksi angka terbit R8 pada seed 42",
+   "94:## 5. Lintas seed H1 dan kontrol stokastik",
+   "96:### 5.1 H1 eksak protokol R8, lima seed, sembilan fold per seed",
+   "116:### 5.2 Kontrol stokastik ML pada seed yang sama",
+   "136:## 6. Nilai lapisan A/B/C pada H1 (berlaku untuk kelima seed karena hasilnya identik)",
+   "138:### 6.1 Lapisan A, per fold (H1_stat_dan_rule)",
+   "158:### 6.2 Lapisan B, nilai maintenance",
+   "172:### 6.3 Lapisan C, ketepatan dan ketahanan",
+   "178:### 6.4 Saturasi ambang CUSUM, batas yang paling penting",
+   "184:### 6.5 Perluasan grid ambang (eksploratif, bukan protokol R8)",
+   "210:## 7. Banding dengan konfigurasi engine pra-riset (V9)",
+   "214:### 7.1 Bukti satuan sebanding",
+   "226:### 7.2 Perbandingan pada segmen F-14",
+   "243:## 8. Batas pemakaian, yang belum terukur, dan penutup",
+   "245:### 8.1 Batas pemakaian yang mengikat",
+   "253:### 8.2 Yang belum terukur dan mengapa",
+   "261:### 8.3 Ringkasan lima baris",
+   "269:### 8.4 Daftar yang belum terverifikasi"
+  ],
+  "lapisan": {
+   "Lapisan A": 2,
+   "Lapisan B": 2,
+   "Lapisan C": 2,
+   "lapisan A": 3,
+   "lapisan B": 0,
+   "lapisan C": 0
+  },
+  "belum_lines": [
+   "269:### 8.4 Daftar yang belum terverifikasi"
+  ],
+  "table_rows": 102
+ },
+ "S2": {
+  "path": "docs/RND_S2_HYBRID_VIB_SSI.md",
+  "bytes": 24464,
+  "lines": 311,
+  "em_dash": 0,
+  "en_dash": 0,
+  "riset_pendahuluan": [
+   "Riset pendahuluan: scikit-learn (dipakai nyata untuk `average_precision_score` dan `roc_auc_score` per fold, supaya kemampuan pemeringkatan ML dinilai terpisah dari pilihan ambang, dan untuk menjaga pemisahan latih, kalibrasi, serta uji tanpa kebocoran).",
+   "Riset pendahuluan: statistical-power (dipakai untuk menghitung selang Wilson 95 persen pada recall sebagai fungsi jumlah positif, sehingga aturan positif kurang dari 30 berarti tidak dapat diuji berdiri di atas presisi estimasi dan bukan pilihan sewenang-wenang; juga dipakai untuk menolak post-hoc power, sehingga yang dilaporkan adalah kurva sensitivitas anggaran, bukan power dari hasil yang sudah terlihat).",
+   "Riset pendahuluan: verification-mandatory (setiap angka dibangkitkan lewat resolver jalur JSON yang menghentikan generator bila jalur tidak ada, dokumen dan ledger membaca modul sumber yang sama `s2_common.py`, ledger memakai 7 kolom, dan idempotensi diuji dengan sha256 dua kali jalan).",
+   "Riset pendahuluan: sequentialthinking, 6 pikiran (`mcp__sequentialthinking__sequentialthinking`, thoughtNumber 1 sampai 6, server melaporkan thoughtHistoryLength 7 sampai 12 karena enam pikiran sebelumnya sudah ada di riwayat sesi yang sama). Ringkas: (1) target dan syarat ukur per kelas, (2) risiko sirkularitas kanal crpm dan aturan memilih kanal gerbang hanya dari well latih, (3) komposisi hybrid dari primitif harness dan arti kalibrasi, (4) justifikasi ambang 30 positif lewat presisi estimasi, (5) satuan FAR dan risiko laporan menyesatkan, (6) rencana eksekusi dan syarat bukti."
+  ],
+  "sequ_count": 3,
+  "dois": [],
+  "headings": [
+   "1:# RND-S2: HYBRID STATISTIK + RULE DAN ML + STATISTIK PADA KELAS vib DAN ssi",
+   "20:## 0. CARA MEMBACA DOKUMEN INI",
+   "26:## 1. PERTANYAAN, KEBIJAKAN, DAN KEPUTUSAN DESAIN",
+   "28:### 1.1 Pertanyaan",
+   "35:### 1.2 Kebijakan pengikat",
+   "39:### 1.3 Keputusan desain yang dikunci sebelum melihat hasil",
+   "49:## 2. DATA DAN KELAYAKAN UJI",
+   "51:### 2.1 Jumlah yang tersedia per kelas",
+   "62:### 2.2 Rincian per fold",
+   "89:### 2.3 Fold yang tidak dapat diuji",
+   "105:### 2.4 Cacat data yang membatasi tafsir",
+   "109:## 3. BENTUK HYBRID YANG DIUJI",
+   "127:## 4. LAPISAN A: APAKAH DETEKSI BEKERJA",
+   "131:### 4.1 Kelas vib",
+   "147:### 4.2 Kelas ssi",
+   "167:### 4.3 Kurva sensitivitas anggaran",
+   "197:### 4.4 Mengapa komposisi DAN runtuh",
+   "201:## 5. PERBANDINGAN HYBRID LAWAN SINGLE ENGINE TERBAIK",
+   "210:## 6. LAPISAN C: KETEPATAN DAN KETAHANAN",
+   "212:### 6.1 Kestabilan di dalam well",
+   "250:### 6.2 Variasi seed pada komponen ML",
+   "270:### 6.3 Cakupan menit",
+   "274:## 7. LAPISAN B: NILAI MAINTENANCE, BELUM TERUKUR",
+   "280:## 8. KEPUTUSAN DAN BATAS PENGGUNAAN",
+   "287:## 9. PROVENANCE DAN REPRODUKSI",
+   "295:## 10. RINGKASAN LIMA BARIS",
+   "303:## 11. YANG BELUM TERVERIFIKASI"
+  ],
+  "lapisan": {
+   "Lapisan A": 1,
+   "Lapisan B": 4,
+   "Lapisan C": 0,
+   "lapisan A": 0,
+   "lapisan B": 4,
+   "lapisan C": 1
+  },
+  "belum_lines": [],
+  "table_rows": 123
+ },
+ "S3": {
+  "path": "docs/RND_S3_HYBRID_BITWEAR.md",
+  "bytes": 21573,
+  "lines": 218,
+  "em_dash": 0,
+  "en_dash": 0,
+  "riset_pendahuluan": [
+   "## 0. Riset pendahuluan",
+   "Riset pendahuluan: exploratory-data-analysis, scikit-learn, statistical-analysis, scientific-critical-thinking, verification-mandatory.",
+   "Riset pendahuluan: sequentialthinking, 5 pikiran (`mcp__sequentialthinking__sequentialthinking`, thoughtNumber 1..5, thoughtHistoryLength 5). Ringkas: (1) memisahkan ketersediaan record dari ketersediaan identitas bit, (2) menetapkan bahwa label yang deterministik tidak boleh diuji dengan fitur yang membentuknya, (3) satuan evaluasi harus menit kalender atau sampel kedalaman, bukan baris mentah, (4) memilih bentuk hybrid statistik dan rule serta ML dan statistik, (5) mengunci cara membuktikan ketiadaan data lapisan B. Jumlah pikiran: **5**."
+  ],
+  "sequ_count": 3,
+  "dois": [],
+  "headings": [
+   "1:# RND-S3: HYBRID UNTUK BIT_WEAR DAN UJI KELAYAKAN DATA",
+   "7:## 0. Riset pendahuluan",
+   "21:## 1. Cara reproduksi",
+   "32:## 2. Kelayakan: hitungan yang menentukan boleh atau tidaknya uji hybrid",
+   "34:### 2.1 Record, well, dan label",
+   "50:### 2.2 Identitas bit dan run: tidak ada",
+   "62:### 2.3 Satuan baris: grid kedalaman, bukan waktu",
+   "76:### 2.4 Waktu kalender: ada, tetapi turunan interpolasi, dan cakupannya rendah",
+   "92:### 2.5 Label adalah fungsi deterministik dari dua kolom",
+   "100:### 2.6 Cacat satuan yang ditemukan dan diperbaiki",
+   "106:## 3. Uji hybrid yang dijalankan",
+   "127:## 4. Lapisan A: apakah deteksi bekerja",
+   "176:## 5. Lapisan C: ketepatan dan ketahanan",
+   "184:## 6. Lapisan B: belum terukur, dan buktinya",
+   "190:## 7. Baseline regime bengkel dan perbandingan yang sah",
+   "196:## 8. Vonis untuk kartu ini",
+   "202:## 9. Ringkasan lima baris",
+   "210:## 10. Yang belum terverifikasi"
+  ],
+  "lapisan": {
+   "Lapisan A": 1,
+   "Lapisan B": 2,
+   "Lapisan C": 2,
+   "lapisan A": 1,
+   "lapisan B": 4,
+   "lapisan C": 0
+  },
+  "belum_lines": [
+   "210:## 10. Yang belum terverifikasi"
+  ],
+  "table_rows": 86
+ },
+ "S4": {
+  "path": "docs/RND_S4_LAYER_B_DATA.md",
+  "bytes": 23162,
+  "lines": 207,
+  "em_dash": 0,
+  "en_dash": 0,
+  "riset_pendahuluan": [
+   "Riset pendahuluan: exploratory-data-analysis (dipakai untuk kerangka kerja terbatas dan lokal: setiap berkas dibaca read-only, ukuran dan jumlah baris dihitung, tidak ada penulisan ulang data mentah, dan setiap laporan menyebut cakupan yang dipindai beserta batasannya; prinsip \"not detected bukan tidak ada\" dipakai saat menyimpulkan ketiadaan biaya dan work order), verification-mandatory (setiap angka diambil dari eksekusi nyata lalu di-assert di `s4f_merge.py` terhadap JSON sumbernya, sehingga dokumen tidak bisa menyimpang dari bukti; klaim ketiadaan dibuktikan dengan hitungan token, bukan dengan ingatan dokumen lama), scientific-critical-thinking (memisahkan tiga hal yang sebelumnya tercampur di dokumen R7/R8/E3/E4/PM: jam henti, biaya, dan jadwal inspeksi; pembingkaian lama \"nilai maintenance belum terukur\" diuji ulang lalu dipersempit menjadi \"biaya, work order, jadwal inspeksi, dan jam henti terhindar belum terukur\").",
+   "Riset pendahuluan: sequentialthinking, 4 pikiran (`mcp__sequentialthinking__sequentialthinking`, thoughtNumber 1..4, thoughtHistoryLength 4). Ringkas: (1) klaim lama \"data lapisan B tidak ada\" diperlakukan sebagai hipotesis yang harus diuji dengan enumerasi, bukan diwarisi; (2) kandidat terkuat adalah record activity DDR karena membawa waktu mulai dan selesai per pekerjaan, dan tabel equipment failure pada DDR versi HTML; (3) pemisahan tiga skrip agar kegagalan satu jalur tidak menghapus bukti lain, termasuk pencatatan pemasangan pyarrow ke venv `rnd_e3` sebagai langkah nyata; (4) pengelompokan akhir tiga tingkat dan pembatasan metrik hanya pada yang penyebutnya benar-benar ada."
+  ],
+  "sequ_count": 3,
+  "dois": [],
+  "headings": [
+   "1:# RND-S4: PENDATAAN LAPISAN B (INSPEKSI, WORK ORDER, JAM HENTI, BIAYA)",
+   "15:## 1. CARA SAPUAN DILAKUKAN",
+   "31:## 2. KANDIDAT YANG DITEMUKAN (path absolut, ukuran, jumlah record, kolom relevan)",
+   "52:## 3. TIGA KELOMPOK",
+   "54:### 3.1 Tersedia dan bisa dipakai",
+   "80:### 3.2 Ada tetapi tidak memadai",
+   "97:### 3.3 Tidak ada",
+   "111:## 4. METRIK LAPISAN B YANG BENAR-BENAR DAPAT DIHITUNG",
+   "136:## 5. UJI SILANG DUA JALUR JAM HENTI",
+   "155:## 6. YANG HARUS DIKUMPULKAN, DAN DARI SIAPA",
+   "171:## 7. NILAI TIGA LAPISAN SETELAH KARTU INI",
+   "189:## 8. RINGKASAN LIMA BARIS",
+   "199:## 9. BELUM TERVERIFIKASI"
+  ],
+  "lapisan": {
+   "Lapisan A": 1,
+   "Lapisan B": 1,
+   "Lapisan C": 1,
+   "lapisan A": 1,
+   "lapisan B": 2,
+   "lapisan C": 1
+  },
+  "belum_lines": [],
+  "table_rows": 51
+ }
+}

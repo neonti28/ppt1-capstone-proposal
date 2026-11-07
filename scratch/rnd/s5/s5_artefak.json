@@ -1,0 +1,555 @@
+{
+ "n_berkas": 21,
+ "daftar": [
+  {
+   "kartu": "S1",
+   "berkas": "s1_h_saturasi.json",
+   "jalur": "scratch/rnd/s1/s1_h_saturasi.json",
+   "byte": 3606,
+   "sha12": "cd5258929f56",
+   "tipe": "objek",
+   "kunci_top": 16,
+   "koleksi": [
+    "h_grid",
+    15
+   ],
+   "hitung": [
+    [
+     "n_fold",
+     9
+    ]
+   ]
+  },
+  {
+   "kartu": "S1",
+   "berkas": "s1_hluas.json",
+   "jalur": "scratch/rnd/s1/s1_hluas.json",
+   "byte": 12141,
+   "sha12": "275cc5084273",
+   "tipe": "objek",
+   "kunci_top": 11,
+   "koleksi": [
+    "grid_luas",
+    24
+   ],
+   "hitung": [
+    [
+     "n_fold",
+     9
+    ],
+    [
+     "ringkas.n_fold",
+     9
+    ],
+    [
+     "per_fold[].rows.n_pos",
+     1394
+    ],
+    [
+     "per_fold[].rows.n_neg",
+     6177
+    ],
+    [
+     "per_fold[].events.n_kejadian",
+     10
+    ],
+    [
+     "per_fold[].separuh.awal.n_pos",
+     331
+    ]
+   ]
+  },
+  {
+   "kartu": "S1",
+   "berkas": "s1_hyd_seeds.json",
+   "jalur": "scratch/rnd/s1/s1_hyd_seeds.json",
+   "byte": 302269,
+   "sha12": "ff82bf151abf",
+   "tipe": "objek",
+   "kunci_top": 13,
+   "koleksi": [
+    "per_seed.42.folds",
+    36
+   ],
+   "hitung": [
+    [
+     "reproduksi.ringkas_r8.n_fold",
+     9
+    ],
+    [
+     "reproduksi.ringkas_kini.n_fold",
+     9
+    ],
+    [
+     "per_seed.42.ringkas.n_fold",
+     9
+    ],
+    [
+     "per_seed.42.folds[].rows.n_pos",
+     1394
+    ],
+    [
+     "per_seed.42.folds[].rows.n_neg",
+     6177
+    ],
+    [
+     "per_seed.42.folds[].events.n_kejadian",
+     102
+    ]
+   ]
+  },
+  {
+   "kartu": "S1",
+   "berkas": "s1_meta.json",
+   "jalur": "scratch/rnd/s1/s1_meta.json",
+   "byte": 1449,
+   "sha12": "cad5be87f12b",
+   "tipe": "objek",
+   "kunci_top": 21,
+   "koleksi": [
+    "dataset_shape",
+    2
+   ],
+   "hitung": [
+    [
+     "n_fold",
+     9
+    ]
+   ]
+  },
+  {
+   "kartu": "S2",
+   "berkas": "p2_probe.json",
+   "jalur": "scratch/rnd/s2/p2_probe.json",
+   "byte": 9388,
+   "sha12": "1f03829dcd0c",
+   "tipe": "objek",
+   "kunci_top": 2,
+   "koleksi": [
+    "vib.kolom",
+    63
+   ],
+   "hitung": [
+    [
+     "vib.n_well",
+     4
+    ],
+    [
+     "ssi.n_well",
+     9
+    ]
+   ]
+  },
+  {
+   "kartu": "S2",
+   "berkas": "p3_kanal.json",
+   "jalur": "scratch/rnd/s2/p3_kanal.json",
+   "byte": 2994,
+   "sha12": "e8e7211d4e2d",
+   "tipe": "objek",
+   "kunci_top": 2,
+   "koleksi": [
+    "vib.kolom_bins",
+    32
+   ],
+   "hitung": []
+  },
+  {
+   "kartu": "S2",
+   "berkas": "s2_meta.json",
+   "jalur": "scratch/rnd/s2/s2_meta.json",
+   "byte": 529,
+   "sha12": "a876ec90d583",
+   "tipe": "objek",
+   "kunci_top": 13,
+   "koleksi": [
+    "kanal",
+    11
+   ],
+   "hitung": []
+  },
+  {
+   "kartu": "S2",
+   "berkas": "s2_records_ssi.json",
+   "jalur": "scratch/rnd/s2/s2_records_ssi.json",
+   "byte": 343877,
+   "sha12": "d92af531fdf1",
+   "tipe": "objek",
+   "kunci_top": 15,
+   "koleksi": [
+    "fitur",
+    55
+   ],
+   "hitung": [
+    [
+     "n_baris",
+     35906
+    ],
+    [
+     "n_well",
+     9
+    ],
+    [
+     "n_fold",
+     9
+    ],
+    [
+     "folds[].n_pos",
+     161
+    ],
+    [
+     "folds[].n_neg",
+     6972
+    ],
+    [
+     "folds[].models.persistence.rows.n_pos",
+     161
+    ]
+   ]
+  },
+  {
+   "kartu": "S2",
+   "berkas": "s2_records_vib.json",
+   "jalur": "scratch/rnd/s2/s2_records_vib.json",
+   "byte": 157781,
+   "sha12": "1be569cf815f",
+   "tipe": "objek",
+   "kunci_top": 15,
+   "koleksi": [
+    "fitur",
+    55
+   ],
+   "hitung": [
+    [
+     "n_baris",
+     23922
+    ],
+    [
+     "n_well",
+     4
+    ],
+    [
+     "n_fold",
+     4
+    ],
+    [
+     "folds[].n_pos",
+     1124
+    ],
+    [
+     "folds[].n_neg",
+     865
+    ],
+    [
+     "folds[].models.persistence.rows.n_pos",
+     1124
+    ]
+   ]
+  },
+  {
+   "kartu": "S2",
+   "berkas": "s2_ringkas.json",
+   "jalur": "scratch/rnd/s2/s2_ringkas.json",
+   "byte": 85513,
+   "sha12": "1085a9dd6c24",
+   "tipe": "objek",
+   "kunci_top": 3,
+   "koleksi": [
+    "ssi.wells",
+    9
+   ],
+   "hitung": [
+    [
+     "vib.n_baris",
+     23922
+    ],
+    [
+     "vib.n_well",
+     4
+    ],
+    [
+     "vib.sensitivitas.H1_stat_dan_rule_b12.n_fold",
+     4
+    ],
+    [
+     "vib.sensitivitas.H1_stat_dan_rule_b192.n_fold",
+     4
+    ],
+    [
+     "vib.sensitivitas.H1_stat_dan_rule_b24.n_fold",
+     4
+    ],
+    [
+     "vib.sensitivitas.H1_stat_dan_rule_b48.n_fold",
+     4
+    ]
+   ]
+  },
+  {
+   "kartu": "S3",
+   "berkas": "s3a_feasibility.json",
+   "jalur": "scratch/rnd/s3/s3a_feasibility.json",
+   "byte": 8072,
+   "sha12": "af906244ae46",
+   "tipe": "objek",
+   "kunci_top": 7,
+   "koleksi": [
+    "inventaris.nama_kolom",
+    18
+   ],
+   "hitung": [
+    [
+     "label.n_well",
+     7
+    ],
+    [
+     "label.n_pos",
+     49732
+    ]
+   ]
+  },
+  {
+   "kartu": "S3",
+   "berkas": "s3b_hybrid.json",
+   "jalur": "scratch/rnd/s3/s3b_hybrid.json",
+   "byte": 72822,
+   "sha12": "8c6f829605c2",
+   "tipe": "objek",
+   "kunci_top": 7,
+   "koleksi": [
+    "records",
+    49
+   ],
+   "hitung": [
+    [
+     "records[].n_pos",
+     182
+    ],
+    [
+     "records[].rows.n_pos",
+     182
+    ],
+    [
+     "records[].rows.n_neg",
+     13564
+    ],
+    [
+     "records[].events.n_kejadian",
+     5
+    ],
+    [
+     "records[].separuh.awal.n_pos",
+     0
+    ],
+    [
+     "records[].separuh.akhir.n_pos",
+     182
+    ]
+   ]
+  },
+  {
+   "kartu": "S3",
+   "berkas": "s3c_ringkas.json",
+   "jalur": "scratch/rnd/s3/s3c_ringkas.json",
+   "byte": 34985,
+   "sha12": "b43d6b7fd608",
+   "tipe": "objek",
+   "kunci_top": 10,
+   "koleksi": [
+    "tabel",
+    49
+   ],
+   "hitung": [
+    [
+     "kelayakan.n_well",
+     7
+    ],
+    [
+     "kelayakan.n_pos",
+     49732
+    ],
+    [
+     "tabel[].n_pos",
+     182
+    ],
+    [
+     "tabel[].n_pos",
+     182
+    ],
+    [
+     "tabel[].n_pos",
+     182
+    ],
+    [
+     "tabel[].n_pos",
+     182
+    ]
+   ]
+  },
+  {
+   "kartu": "S4",
+   "berkas": "crosscheck.json",
+   "jalur": "scratch/rnd/s4/crosscheck.json",
+   "byte": 7049,
+   "sha12": "1d81851b7bbd",
+   "tipe": "objek",
+   "kunci_top": 4,
+   "koleksi": [
+    "silang_per_wellbore",
+    26
+   ],
+   "hitung": []
+  },
+  {
+   "kartu": "S4",
+   "berkas": "ddr_activity_stats.json",
+   "jalur": "scratch/rnd/s4/ddr_activity_stats.json",
+   "byte": 19860,
+   "sha12": "58e7e897a836",
+   "tipe": "objek",
+   "kunci_top": 3,
+   "koleksi": [
+    "laporan.wellbore_daftar",
+    26
+   ],
+   "hitung": [
+    [
+     "laporan.n_baris",
+     1759
+    ],
+    [
+     "activity.n_record",
+     23447
+    ]
+   ]
+  },
+  {
+   "kartu": "S4",
+   "berkas": "ddr_downtime_records.jsonl",
+   "jalur": "scratch/rnd/s4/ddr_downtime_records.jsonl",
+   "byte": 217645,
+   "sha12": "b1a99d8cb712",
+   "tipe": "JSONL",
+   "kunci_top": null,
+   "koleksi": [
+    "baris JSONL",
+    533
+   ],
+   "hitung": []
+  },
+  {
+   "kartu": "S4",
+   "berkas": "ddr_downtime_table.json",
+   "jalur": "scratch/rnd/s4/ddr_downtime_table.json",
+   "byte": 6300,
+   "sha12": "96b0e9f08784",
+   "tipe": "objek",
+   "kunci_top": 9,
+   "koleksi": [
+    "tabel.kolom",
+    7
+   ],
+   "hitung": [
+    [
+     "record.n_record",
+     533
+    ]
+   ]
+  },
+  {
+   "kartu": "S4",
+   "berkas": "inventory.json",
+   "jalur": "scratch/rnd/s4/inventory.json",
+   "byte": 15704,
+   "sha12": "51aa0f1c097e",
+   "tipe": "objek",
+   "kunci_top": 8,
+   "koleksi": [
+    "uji_silang.per_wellbore",
+    26
+   ],
+   "hitung": [
+    [
+     "kelompok.tersedia_dan_layak[].n_baris",
+     1759
+    ],
+    [
+     "kelompok.tersedia_dan_layak[].n_baris",
+     884
+    ],
+    [
+     "kelompok.ada_tetapi_tidak_memadai[].n_record",
+     533
+    ],
+    [
+     "kelompok.ada_tetapi_tidak_memadai[].n_laporan",
+     1212
+    ],
+    [
+     "kelompok.ada_tetapi_tidak_memadai[].n_baris",
+     4035
+    ],
+    [
+     "metrik_lapisan_b.B1_henti_perbaikan_per_kejadian.n_kejadian",
+     806
+    ]
+   ]
+  },
+  {
+   "kartu": "S4",
+   "berkas": "inventory_raw.json",
+   "jalur": "scratch/rnd/s4/inventory_raw.json",
+   "byte": 24974,
+   "sha12": "4bfb4ae03b98",
+   "tipe": "objek",
+   "kunci_top": 7,
+   "koleksi": [
+    "csv_di_data.berkas",
+    53
+   ],
+   "hitung": [
+    [
+     "katalog_volve.n_baris",
+     4035
+    ]
+   ]
+  },
+  {
+   "kartu": "S4",
+   "berkas": "labels_duration.json",
+   "jalur": "scratch/rnd/s4/labels_duration.json",
+   "byte": 15280,
+   "sha12": "5555d516e1d6",
+   "tipe": "objek",
+   "kunci_top": 18,
+   "koleksi": [
+    "sumber.kolom",
+    20
+   ],
+   "hitung": [
+    [
+     "n_baris",
+     884
+    ],
+    [
+     "tujuh_well_engine.n_kejadian",
+     671
+    ]
+   ]
+  },
+  {
+   "kartu": "S4",
+   "berkas": "token_scan.json",
+   "jalur": "scratch/rnd/s4/token_scan.json",
+   "byte": 3503,
+   "sha12": "8ef09d9b0723",
+   "tipe": "objek",
+   "kunci_top": 4,
+   "koleksi": [
+    "xml.contoh_berkas.kata_berakar_price",
+    2
+   ],
+   "hitung": []
+  }
+ ]
+}

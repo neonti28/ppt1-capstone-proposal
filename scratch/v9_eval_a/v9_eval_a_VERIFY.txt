@@ -1,0 +1,43 @@
+PASS 42 / FAIL 0 (total 42)
+  ok: vib RF AUPRC 0,441-0,912 (0.441, 0.912)
+  ok: ssi RF AUPRC 0,015-0,459 (0.015, 0.459)
+  ok: shk RF AUPRC 0,007-0,193 (0.007, 0.193)
+  ok: stuck_k2 RF AUPRC 0,070-0,444 (0.07, 0.444)
+  ok: FP rule vib = 197 197
+  ok: FP rule ssi = 26 26
+  ok: FP rule shk = 121 121
+  ok: FP rule stuck_k1 = 49 49
+  ok: FP rule hyd_ki = 2091 2091
+  ok: hyd_ki hybrid FP = 927 927
+  ok: stuck_k2 E1 FP alarm = 422 
+  ok: total titik FAR<=6 & R>0 = 10 10
+  ok: total titik FAR<=1 & R>0 = 4 4
+  ok: total grid = 390 390
+  ok: hybrid hyd_ki menang 8/9 8
+  ok: shk rule le6 = 7/9 7
+  ok: hyd_ki P 0,615-0,899 0.615-0.899
+  ok: hyd_ki FAR 32,4-110,7 32.4-110.7
+  ok: tool_wear part C FP 1-3 
+  ok: tool_wear part C TLead 20-36 dtk 20.0-36.0
+  ok: tool_wear cp 8/8 p05 & p002 
+  ok: dokumen memuat 'Riset pendahuluan: scientific-critical-thinking' 
+  ok: dokumen memuat 'Riset pendahuluan: verification-mandatory' 
+  ok: dokumen memuat 'Riset pendahuluan: statistical-analysis' 
+  ok: dokumen memuat 'Riset pendahuluan: what-if-oracle' 
+  ok: dokumen memuat 'Riset pendahuluan: consciousness-council' 
+  ok: dokumen memuat 'Riset pendahuluan: sequentialthinking' 
+  ok: dokumen memuat 'recompute 18/18' 
+  ok: dokumen memuat 'cross-team 6/6' 
+  ok: dokumen memuat 'memenuhi' 
+  ok: dokumen memuat 'belum terukur' 
+  ok: dokumen memuat 'BELUM DIVERIFIKASI' 
+  ok: dokumen memuat 'per 24 jam' 
+  ok: dokumen memuat 'per MENIT' 
+  ok: tanpa vonis LULUS/GAGAL biner []
+  ok: engine vib dibahas 
+  ok: engine ssi dibahas 
+  ok: engine shk dibahas 
+  ok: engine stuck dibahas 
+  ok: engine hyd dibahas 
+  ok: engine bit_wear dibahas 
+  ok: engine tool_wear dibahas 

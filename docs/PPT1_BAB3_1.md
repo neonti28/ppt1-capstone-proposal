@@ -216,7 +216,7 @@ Tiga anggota membagi lapisan intervensi, bukan kelas disfungsi. Pembagian ini di
 
 - Deteksi perubahan regime sudah dijalankan pada 4 dari 4 alat dengan TLead 20 sampai 36 detik (1,8 kali) dan false alarm terkalibrasi 1 sampai 3 per alat, tetapi presisi run hanya 0,50 karena titik ubah juga signifikan pada alat baru. Jejak: `docs/V9_EVAL_C_LAYERC.md:98`.
 - Uji artefak termal gagal membuktikan confound pada 0 dari 8 run, sehingga kritik urutan run tidak terbukti pada data ini. Jejak: `docs/V9_EVAL_C_LAYERC.md:98`.
-- Baseline ranking lintas alat stabil pada 1,19 kali (AUPRC 0,516 sampai 0,612) sedangkan engine Random Forest belum dijalankan di V9, sehingga mekanisme ranking masih terbuka. Jejak: `docs/V9_EVAL_C_LAYERC.md:99`.
+- Baseline ranking lintas alat stabil pada 1,19 kali (AUPRC 0,516 sampai 0,612) sedangkan model Random Forest belum dijalankan di V9, sehingga mekanisme ranking masih terbuka. Jejak: `docs/V9_EVAL_C_LAYERC.md:99`.
 - Fitur dekomposisi mode baru dinyatakan sebagai pengangkat AUPRC pada rancangan, tanpa artefak eksekusi, sehingga statusnya masih rencana. Jejak: `docs/V9_PM1_ARCHITECTURE.md:276`.
 
 **Status pelaksanaan.** Berjalan. Mekanisme progresi dan kalibrasi ambang selesai pada domain bengkel. Dekomposisi mode dan ranking belum dieksekusi.
@@ -260,7 +260,7 @@ Tiga anggota membagi lapisan intervensi, bukan kelas disfungsi. Pembagian ini di
 - Artefak autoencoder lama tidak diskriminatif karena 75 sampai 99 persen baris berada di atas ambang, sehingga komponen indeks kondisi harus dikerjakan ulang dan tidak boleh mengutip artefak itu sebagai bukti. Jejak: `docs/V4_MAINTENANCE_ML_OPTIONS.md:58`.
 - Alat saat ini berjalan dengan nol slot alarm otomatis dari 27 head, sehingga lapisan ini adalah syarat naik tier dan bukan tambahan opsional. Jejak: `scratch/v9_i1/v9_i1_RESULTS.json (kunci auto_critical_alarm_slots = 0; total head 4+4+4+6+4+2+3 = 27)`.
 
-**Status pelaksanaan.** Rencana (belum terealisasi). Kalibrasi ambang per sumur untuk hyd, vib, dan shk belum dijalankan. Kalibrasi false alarm yang sudah ada hanya di dalam engine tool_wear pada domain bengkel.
+**Status pelaksanaan.** Rencana (belum terealisasi). Kalibrasi ambang per sumur untuk hyd, vib, dan shk belum dijalankan. Kalibrasi false alarm yang sudah ada hanya di dalam mode tool_wear pada domain bengkel.
 
 **Asal usul.** Lever V4 6b dan opsi V4 nomor 1 dan 2. Kode sumber: 6b, V4-Opsi1, V4-Opsi2.
 

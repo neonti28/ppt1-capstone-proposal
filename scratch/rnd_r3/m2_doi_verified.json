@@ -1,0 +1,348 @@
+{
+  "generated_at": "2026-10-27T04:45:22",
+  "note": "Crossref = metadata; resolve = apakah doi.org bisa dibuka",
+  "known": [
+    {
+      "label": "Dragomiretskiy & Zosso 2014 VMD",
+      "doi": "10.1109/TSP.2013.2288675",
+      "crossref_http": 200,
+      "title": "Variational Mode Decomposition",
+      "first_author": "Dragomiretskiy Konstantin",
+      "year": 2014,
+      "container": "IEEE Transactions on Signal Processing",
+      "volume": "62",
+      "page": "531-544",
+      "type": "journal-article",
+      "status": "CROSSREF_OK",
+      "resolve_http": 202,
+      "final_url": "https://ieeexplore.ieee.org/document/6655981/"
+    },
+    {
+      "label": "Huang et al. 1998 EMD",
+      "doi": "10.1098/rspa.1998.0193",
+      "crossref_http": 200,
+      "title": "The empirical mode decomposition and the Hilbert spectrum for nonlinear and non-stationary time series analysis",
+      "first_author": "Huang Norden E.",
+      "year": 1998,
+      "container": "Proceedings of the Royal Society of London. Series A: Mathematical, Physical and Engineering Sciences",
+      "volume": "454",
+      "page": "903-995",
+      "type": "journal-article",
+      "status": "CROSSREF_OK",
+      "resolve_http": 403,
+      "final_url": "https://royalsocietypublishing.org/rspa/article/454/1971/903-995/80224",
+      "note": "HTTPError (penerbit menolak bot)"
+    },
+    {
+      "label": "Daubechies 1988 orthonormal bases wavelets",
+      "doi": "10.1002/cpa.3160410705",
+      "crossref_http": 200,
+      "title": "Orthonormal bases of compactly supported wavelets",
+      "first_author": "Daubechies Ingrid",
+      "year": 1988,
+      "container": "Communications on Pure and Applied Mathematics",
+      "volume": "41",
+      "page": "909-996",
+      "type": "journal-article",
+      "status": "CROSSREF_OK",
+      "resolve_http": 403,
+      "final_url": "https://onlinelibrary.wiley.com/doi/10.1002/cpa.3160410705",
+      "note": "HTTPError (penerbit menolak bot)"
+    },
+    {
+      "label": "Cortes & Vapnik 1995 support-vector networks",
+      "doi": "10.1007/BF00994018",
+      "crossref_http": 200,
+      "title": "Support-vector networks",
+      "first_author": "Cortes Corinna",
+      "year": 1995,
+      "container": "Machine Learning",
+      "volume": "20",
+      "page": "273-297",
+      "type": "journal-article",
+      "status": "CROSSREF_OK",
+      "resolve_http": 200,
+      "final_url": "https://link.springer.com/article/10.1007/BF00994018?error=cookies_not_supported&code=04e5aabe-5a60-4654-b0ec-c3c4dc359d77"
+    },
+    {
+      "label": "Ratanamahatana & Keogh 2004 DTW constraints",
+      "doi": "10.1007/978-3-540-30075-5_46",
+      "crossref_http": 200,
+      "title": "An a Priori Approach for Automatic Integration of Heterogeneous and Autonomous Databases",
+      "first_author": "Bellatreche Ladjel",
+      "year": 2004,
+      "container": "Lecture Notes in Computer Science",
+      "volume": null,
+      "page": "475-485",
+      "type": "book-chapter",
+      "status": "CROSSREF_OK",
+      "resolve_http": 200,
+      "final_url": "https://link.springer.com/chapter/10.1007/978-3-540-30075-5_46?error=cookies_not_supported&code=cf8fdab9-3cee-4c96-b207-67d7af706823"
+    },
+    {
+      "label": "Yeh et al. 2016 matrix profile I (STAMP)",
+      "doi": "10.1109/ICDM.2016.0179",
+      "crossref_http": 200,
+      "title": "Matrix Profile I: All Pairs Similarity Joins for Time Series: A Unifying View That Includes Motifs, Discords and Shapelets",
+      "first_author": "Yeh Chin-Chia Michael",
+      "year": 2016,
+      "container": "2016 IEEE 16th International Conference on Data Mining (ICDM)",
+      "volume": null,
+      "page": "1317-1322",
+      "type": "proceedings-article",
+      "status": "CROSSREF_OK",
+      "resolve_http": 202,
+      "final_url": "https://ieeexplore.ieee.org/document/7837992/"
+    },
+    {
+      "label": "Mirjalili et al. 2014 GWO",
+      "doi": "10.1016/j.advengsoft.2013.12.007",
+      "crossref_http": 200,
+      "title": "Grey Wolf Optimizer",
+      "first_author": "Mirjalili Seyedali",
+      "year": 2014,
+      "container": "Advances in Engineering Software",
+      "volume": "69",
+      "page": "46-61",
+      "type": "journal-article",
+      "status": "CROSSREF_OK",
+      "resolve_http": 200,
+      "final_url": "https://linkinghub.elsevier.com/retrieve/pii/S0965997813001853"
+    },
+    {
+      "label": "Mirjalili & Lewis 2016 WOA",
+      "doi": "10.1016/j.advengsoft.2016.01.008",
+      "crossref_http": 200,
+      "title": "The Whale Optimization Algorithm",
+      "first_author": "Mirjalili Seyedali",
+      "year": 2016,
+      "container": "Advances in Engineering Software",
+      "volume": "95",
+      "page": "51-67",
+      "type": "journal-article",
+      "status": "CROSSREF_OK",
+      "resolve_http": 200,
+      "final_url": "https://linkinghub.elsevier.com/retrieve/pii/S0965997816300163"
+    },
+    {
+      "label": "Reckmann et al. 2010 drilling vibration",
+      "doi": "10.2118/127413-MS",
+      "crossref_http": 200,
+      "title": "MWD Failure Rates Due to Drilling Dynamics",
+      "first_author": "Reckmann Hanno",
+      "year": 2010,
+      "container": "IADC/SPE Drilling Conference and Exhibition",
+      "volume": null,
+      "page": null,
+      "type": "proceedings-article",
+      "status": "CROSSREF_OK",
+      "resolve_http": 403,
+      "final_url": "https://onepetro.org/SPEDC/proceedings/10DC/10DC/SPE-127413-MS/106587",
+      "note": "HTTPError (penerbit menolak bot)"
+    },
+    {
+      "label": "Kyllingstad & Halsey 1988 stick-slip",
+      "doi": "10.2118/16659-PA",
+      "crossref_http": 200,
+      "title": "A Study of Slip/Stick Motion of the Bit",
+      "first_author": "Kyllingstad \u00c5.",
+      "year": 1988,
+      "container": "SPE Drilling Engineering",
+      "volume": "3",
+      "page": "369-373",
+      "type": "journal-article",
+      "status": "CROSSREF_OK",
+      "resolve_http": 403,
+      "final_url": "https://onepetro.org/DC/article/3/04/369/75677/A-Study-of-Slip-Stick-Motion-of-the-Bit",
+      "note": "HTTPError (penerbit menolak bot)"
+    },
+    {
+      "label": "Randall & Antoni 2011 bearing diagnostics tutorial",
+      "doi": "10.1098/rsta.2010.0331",
+      "crossref_http": 200,
+      "title": "Anthropogenic transformation of the terrestrial biosphere",
+      "first_author": "Ellis Erle C.",
+      "year": 2011,
+      "container": "Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences",
+      "volume": "369",
+      "page": "1010-1035",
+      "type": "journal-article",
+      "status": "CROSSREF_OK",
+      "resolve_http": 403,
+      "final_url": "https://royalsocietypublishing.org/rsta/article/369/1938/1010-1035/114314",
+      "note": "HTTPError (penerbit menolak bot)"
+    }
+  ],
+  "search": [
+    {
+      "tag": "bearing VMD SVM",
+      "query": "variational mode decomposition rolling bearing fault diagnosis support vector machine",
+      "hits": [
+        {
+          "doi": "10.3390/electronics12061290",
+          "title": "Research on Rolling Bearing Fault Diagnosis Based on Variational Modal Decomposition Parameter Optimization and an Improved Support Vector Machine",
+          "first_author": "Li Lin",
+          "year": 2023,
+          "container": "Electronics"
+        },
+        {
+          "doi": "10.1007/978-981-19-6226-4_73",
+          "title": "Fault Diagnosis Method of\u00a0Rolling Bearing Based on\u00a0Variational Mode Decomposition Algorithm of\u00a0Parameter Optimization and\u00a0Support Vector Machine",
+          "first_author": "Wang Yumin",
+          "year": 2022,
+          "container": "Lecture Notes in Electrical Engineering"
+        },
+        {
+          "doi": "10.1007/s42417-022-00525-9",
+          "title": "An Integrated Method Based on Sparrow Search Algorithm Improved Variational Mode Decomposition and Support Vector Machine for Fault Diagnosis of Rolling Bearing",
+          "first_author": "Wang Mengjiao",
+          "year": 2022,
+          "container": "Journal of Vibration Engineering &amp; Technologies"
+        },
+        {
+          "doi": "10.3901/jme.2007.04.088",
+          "title": "Rolling-bearings fault diagnosis based-on empirical mode decomposition and least square support vector machine",
+          "first_author": "WANG Taiyong",
+          "year": 2007,
+          "container": "Chinese Journal of Mechanical Engineering"
+        }
+      ]
+    },
+    {
+      "tag": "bearing VMD GWO SVM",
+      "query": "grey wolf optimizer variational mode decomposition bearing fault support vector machine",
+      "hits": [
+        {
+          "doi": "10.1016/j.knosys.2021.107297",
+          "title": "Application of variational mode decomposition and chaotic grey wolf optimizer with support vector regression for forecasting electric loads",
+          "first_author": "Zhang Zichen",
+          "year": 2021,
+          "container": "Knowledge-Based Systems"
+        },
+        {
+          "doi": "10.1016/j.measurement.2020.107901",
+          "title": "An integrated method based on hybrid grey wolf optimizer improved variational mode decomposition and deep neural network for fault diagnosis of rolling bearing",
+          "first_author": "Gai Jingbo",
+          "year": 2020,
+          "container": "Measurement"
+        },
+        {
+          "doi": "10.37473/dac/10.1155/2021/1956394",
+          "title": "Sensor Fault Diagnosis Method Based on \n                     \u03b1\n                  -Grey Wolf Optimization-Support Vector Machine",
+          "first_author": null,
+          "year": null,
+          "container": ""
+        },
+        {
+          "doi": "10.37473/fic/10.1155/2021/1956394",
+          "title": "Sensor Fault Diagnosis Method Based on \n                     \u03b1\n                  -Grey Wolf Optimization-Support Vector Machine",
+          "first_author": null,
+          "year": null,
+          "container": ""
+        }
+      ]
+    },
+    {
+      "tag": "drilling vibration decomposition",
+      "query": "drilling vibration signal decomposition empirical mode decomposition drillstring",
+      "hits": [
+        {
+          "doi": "10.1109/siu.2019.8806318",
+          "title": "Epileptic Seizure Classification with Multivariate Empirical Mode Decomposition and Hilbert Vibration Decomposition",
+          "first_author": "Buyukcakir Barkin",
+          "year": 2019,
+          "container": "2019 27th Signal Processing and Communications Applications Conference (SIU)"
+        },
+        {
+          "doi": "10.1115/1.4035480",
+          "title": "An Optimal Ensemble Empirical Mode Decomposition Method for Vibration Signal Decomposition",
+          "first_author": "Du Shi-Chang",
+          "year": 2017,
+          "container": "Journal of Vibration and Acoustics"
+        },
+        {
+          "doi": "10.1049/sil2.12232",
+          "title": "An effective electrocardiogram segments denoising method combined with ensemble empirical mode decomposition, empirical mode decomposition, and wavelet packet",
+          "first_author": "Yue Yaru",
+          "year": 2023,
+          "container": "IET Signal Processing"
+        },
+        {
+          "doi": "10.21203/rs.3.rs-2319670/v1",
+          "title": "A Signal Decomposition Method Based on Improved Complementary Ensemble Empirical Mode Decomposition for Human Pulse Wave Signal",
+          "first_author": "Chen Haichu",
+          "year": 2022,
+          "container": ""
+        }
+      ]
+    },
+    {
+      "tag": "whale optimization SVM bearing",
+      "query": "whale optimization algorithm support vector machine bearing fault diagnosis",
+      "hits": [
+        {
+          "doi": "10.1016/j.egyr.2021.09.188",
+          "title": "Transformer fault diagnosis method based on improved whale optimization algorithm to optimize support vector machine",
+          "first_author": "Fan Qingchuan",
+          "year": 2021,
+          "container": "Energy Reports"
+        },
+        {
+          "doi": "10.1016/j.asoc.2026.115779",
+          "title": "A multi-strategy enhanced whale optimization algorithm-based support vector machine for high-precision fault diagnosis of mine ventilator bearings",
+          "first_author": "Li Ning",
+          "year": 2026,
+          "container": "Applied Soft Computing"
+        },
+        {
+          "doi": "10.3724/sp.j.1187.2013.00162",
+          "title": "Research of fault diagnosis optimization of multi-bus ATS based on genetic algorithm-support vector machine algorithm",
+          "first_author": "Song Dongdong",
+          "year": 2013,
+          "container": "JOURNAL OF ELECTRONIC MEASUREMENT AND INSTRUMENT"
+        },
+        {
+          "doi": "10.1016/j.measurement.2013.09.019",
+          "title": "A roller bearing fault diagnosis method based on hierarchical entropy and support vector machine with particle swarm optimization algorithm",
+          "first_author": "Zhu Keheng",
+          "year": 2014,
+          "container": "Measurement"
+        }
+      ]
+    },
+    {
+      "tag": "matrix profile discord",
+      "query": "matrix profile time series discord motif discovery",
+      "hits": [
+        {
+          "doi": "10.1007/s10618-020-00685-w",
+          "title": "Matrix profile goes MAD: variable-length motif and discord discovery in data series",
+          "first_author": "Linardi Michele",
+          "year": 2020,
+          "container": "Data Mining and Knowledge Discovery"
+        },
+        {
+          "doi": "10.2139/ssrn.4617060",
+          "title": "Bridging the Gap: An Integrated Approach to Motif Discovery and Discord Detection in Time-Series Data",
+          "first_author": "Hu wentao",
+          "year": 2023,
+          "container": ""
+        },
+        {
+          "doi": "10.1016/j.knosys.2024.112509",
+          "title": "Multidimensional time series motif group discovery based on matrix profile",
+          "first_author": "Cao Danyang",
+          "year": 2024,
+          "container": "Knowledge-Based Systems"
+        },
+        {
+          "doi": "10.1145/3421558.3421586",
+          "title": "An Enhanced Time Series Motif Discovery Using Approximated Matrix Profile",
+          "first_author": "Onwongsa Chanapon",
+          "year": 2020,
+          "container": "2020 2nd International Conference on Image Processing and Machine Vision"
+        }
+      ]
+    }
+  ]
+}

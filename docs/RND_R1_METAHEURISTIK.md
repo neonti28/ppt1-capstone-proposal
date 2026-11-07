@@ -94,7 +94,7 @@ Tiga peran berbeda, dengan jenis ruang keputusan yang berbeda. Mencampurnya adal
 | **T1 Tuning hyperparameter** | RF atau LightGBM: `max_depth`, `min_samples_leaf`, `max_features`, `n_estimators`, dan untuk LightGBM `num_leaves`, `learning_rate`, `min_child_samples` | kontinu dan/atau kategorikal kecil | **4 sampai 6** | hitungan parameter pada kontrak model `docs/V9_PM1_ARCHITECTURE.md` §5 baris RF 200 pohon, seed 42 (3 parameter eksplisit) ditambah 3 parameter LightGBM yang lazim; rentang 4 sampai 6 adalah **target desain**, bukan hasil ukur |
 | **T2 Feature selection** | subset dari 55 fitur MWD (11 kanal x 5 statistik) | biner | **55** | `docs/V9_R1_JUSTIFICATION.md:169` dan `docs/V9_PM1_ARCHITECTURE.md:255` (11 kanal MWD x 5 statistik = 55 fitur) |
 | **T2b Feature selection getaran** | subset dari 27 fitur getaran (9 statistik x 3 sumbu X/Y/Z) | biner | **27** | `docs/V9_PM1_ARCHITECTURE.md:276`; ditegaskan `code/v9_i1_pipeline.py:605` (`assert len(feats) == 27`) |
-| **T3 Kalibrasi ambang per well** | satu ambang per engine per well (atau satu parameter bentuk ambang) | kontinu, 1 dimensi per well | **1 x jumlah well** = 9 untuk kelas 9 well, atau 4 untuk vib, 2 untuk stuck K-i | jumlah well per kelas: `docs/RND_D0_DATA_FEASIBILITY.md` §3; windows vib 23.922 di 4 well, hyd_ki 52.509 di 9 well, shk 56.495 di 9 well, ssi 35.906 di 9 well, stuck_k2 118.567 di 4 well, stuck_k1 5.555 di 2 well |
+| **T3 Kalibrasi ambang per well** | satu ambang per mode per well (atau satu parameter bentuk ambang) | kontinu, 1 dimensi per well | **1 x jumlah well** = 9 untuk kelas 9 well, atau 4 untuk vib, 2 untuk stuck K-i | jumlah well per kelas: `docs/RND_D0_DATA_FEASIBILITY.md` §3; windows vib 23.922 di 4 well, hyd_ki 52.509 di 9 well, shk 56.495 di 9 well, ssi 35.906 di 9 well, stuck_k2 118.567 di 4 well, stuck_k1 5.555 di 2 well |
 
 ### 1.2 Fakta yang mengubah seluruh penilaian: baseline sekarang tidak dituning sama sekali
 
@@ -181,7 +181,7 @@ Pembobotan: K1 dan K4 berbobot ganda karena keduanya yang menentukan lolos atau 
 
 **Kebutuhan evaluasi fitness.** Sama seperti GWO: satu skalar per kandidat, dan sebaiknya skalar yang menghukum dispersi antar fold.
 
-**Bukti literatur domain.** Empat rujukan 2022 sampai 2026, semuanya pada diagnosis bantalan, yaitu domain getaran yang dekat dengan engine vib:
+**Bukti literatur domain.** Empat rujukan 2022 sampai 2026, semuanya pada diagnosis bantalan, yaitu domain getaran yang dekat dengan mode vib:
 
 | Rujukan | Peran bukti |
 |---|---|
@@ -196,7 +196,7 @@ Catatan kritis: keempatnya memakai WOA untuk **mengoptimasi classifier atau para
 
 **Skor: 4.** Alasan: bukti domain paling banyak di antara semua algoritma pada dokumen ini (empat rujukan 2024 sampai 2026 khusus bantalan), mekanisme sederhana. Sama seperti GWO dikurangi karena biaya evaluasi dan karena seluruh bukti berpusat pada sinyal getaran mentah, bukan fitur tabular multi-kanal MWD.
 
-**Peran diusulkan: tuning hyperparameter (T1), kandidat kuat; untuk engine vib khususnya paling relevan.**
+**Peran diusulkan: tuning hyperparameter (T1), kandidat kuat; untuk mode vib khususnya paling relevan.**
 
 ### 2.3 PSO (Particle Swarm Optimization)
 
@@ -440,7 +440,7 @@ Dua rujukan pengeboran di atas adalah satu-satunya bukti pengeboran yang berhasi
 |---|---|
 | Ma 2022, "Composite Fault Diagnosis of Rolling Bearing Based on Chaotic Honey Badger Algorithm Optimizing VMD and ELM", Machines, `10.3390/machines10060469` | luak madu mengoptimasi VMD dan ELM pada diagnosis bantalan |
 | Ting 2025, "Improved Honey Badger Algorithm Based on Elite Tangent Search and Differential Mutation with Applications in Fault Diagnosis", Processes, `10.3390/pr13010256` | varian perbaikan untuk diagnosis gangguan |
-| Chen 2022, "Sensor Fault Diagnosis of Aero Engine Control System Based on Honey Badger Optimizer", IFAC-PapersOnLine, `10.1016/j.ifacol.2022.05.040` | diagnosis sensor pada sistem kendali mesin pesawat |
+| Chen 2022, "Sensor Fault Diagnosis of Aero Detektor Control System Based on Honey Badger Optimizer", IFAC-PapersOnLine, `10.1016/j.ifacol.2022.05.040` | diagnosis sensor pada sistem kendali mesin pesawat |
 
 **Kesesuaian dengan kasus kita.** Bukti domain cukup untuk T1. Tetapi kehadirannya di dokumen ini adalah konsekuensi disambiguasi nama, bukan permintaan kartu.
 
@@ -524,7 +524,7 @@ Rekonsiliasi jumlah: kartu meminta 12 nama. Dokumen menilai **14 unit**: 12 nama
 | Prioritas | Algoritma | Peran | Alasan yang bisa dipertahankan di depan PM |
 |---|---|---|---|
 | 1 | **BGWO** | T2 feature selection pada 55 fitur | satu-satunya algoritma yang dirancang untuk ruang biner dan punya bukti diagnosis bantalan langsung; dimensi 55 adalah masalah nyata karena kontrak sekarang memakai semua 55 fitur |
-| 2 | **GWO** atau **WOA** | T1 tuning hyperparameter 4 sampai 6 dimensi | bukti domain terkuat, parameter paling sedikit, ruang kontinu cocok; WOA lebih relevan untuk engine vib |
+| 2 | **GWO** atau **WOA** | T1 tuning hyperparameter 4 sampai 6 dimensi | bukti domain terkuat, parameter paling sedikit, ruang kontinu cocok; WOA lebih relevan untuk mode vib |
 | 3 | **SMA** | T2 alternatif dan T1 alternatif | satu-satunya yang punya bukti untuk dua peran sekaligus, sehingga bisa dipakai sebagai pemeriksaan silang hasil BGWO |
 
 ### 4.2 Syarat yang harus dipenuhi sebelum satu pun dijalankan

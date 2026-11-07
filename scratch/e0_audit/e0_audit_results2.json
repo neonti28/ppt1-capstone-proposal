@@ -1,0 +1,319 @@
+{
+ "stuck_k2_alarm_provenance": {
+  "n_rows": 118567,
+  "n_alarm_rows": 26,
+  "n_events": 268,
+  "n_rows_lab_kind_onset": 1975,
+  "alarm_lab_kind_counts": {
+   "onset_event": 15,
+   "onset_horizon_neg": 11
+  },
+  "alarm_lead_dist": {
+   "0": 11,
+   "1": 2,
+   "2": 1,
+   "4": 1,
+   "5": 2,
+   "6": 2,
+   "8": 4,
+   "9": 1,
+   "10": 2
+  },
+  "alarm_pos_rate": 0.5769,
+  "rows_onset_with_ts_ge_lab_ts": 0,
+  "alarm_trigger_sama_dgn_event_dihitung": 0,
+  "alarm_trigger_event_berbeda": 15
+ },
+ "tool_wear_kebetulan": {
+  "per_run": [
+   {
+    "alat": "T01",
+    "run": "R01",
+    "n": 60,
+    "y": 0
+   },
+   {
+    "alat": "T01",
+    "run": "R02",
+    "n": 60,
+    "y": 1
+   },
+   {
+    "alat": "T02",
+    "run": "R01",
+    "n": 50,
+    "y": 0
+   },
+   {
+    "alat": "T02",
+    "run": "R02",
+    "n": 62,
+    "y": 1
+   },
+   {
+    "alat": "T03",
+    "run": "R01",
+    "n": 61,
+    "y": 0
+   },
+   {
+    "alat": "T03",
+    "run": "R02",
+    "n": 60,
+    "y": 1
+   },
+   {
+    "alat": "T04",
+    "run": "R01",
+    "n": 58,
+    "y": 0
+   },
+   {
+    "alat": "T04",
+    "run": "R02",
+    "n": 58,
+    "y": 1
+   }
+  ],
+  "error": "TypeError('list indices must be integers or slices, not str')"
+ },
+ "bit_wear": {
+  "n_rows": 198928,
+  "n_pos": 49732,
+  "prev": 0.25,
+  "P_y(t+1)=1_given_y(t)=1": 0.9903,
+  "P_y(t+1)=1_given_y(t)=0": 0.0032,
+  "komposisi_label": {
+   "normal": 134013,
+   "high_MSE_bit_wear": 49732,
+   "low_ROP_efficiency": 15183
+  }
+ },
+ "registry": {
+  "n_head": 27,
+  "per_engine": {
+   "vib": 4,
+   "ssi": 4,
+   "shk": 4,
+   "stuck": 6,
+   "hyd": 4,
+   "bit_wear": 2,
+   "tool_wear": 3
+  },
+  "tier_counts": {
+   "PERINGATAN-BERPENGAWAS": 12,
+   "TREN": 13,
+   "BELUM LAYAK PAKAI": 2
+  },
+  "layer_counts": {
+   "L1": 11,
+   "L0": 5,
+   "L2": 9,
+   "L3": 2
+  },
+  "heads": [
+   {
+    "engine": "vib",
+    "head": "rule_display",
+    "tier": "PERINGATAN-BERPENGAWAS",
+    "layer": "L1",
+    "klaim": null
+   },
+   {
+    "engine": "vib",
+    "head": "persistence",
+    "tier": "TREN",
+    "layer": "L0",
+    "klaim": null
+   },
+   {
+    "engine": "vib",
+    "head": "hybrid_rule_and_persistence",
+    "tier": "PERINGATAN-BERPENGAWAS",
+    "layer": "L1",
+    "klaim": null
+   },
+   {
+    "engine": "vib",
+    "head": "rf_lowo",
+    "tier": "TREN",
+    "layer": "L2",
+    "klaim": null
+   },
+   {
+    "engine": "ssi",
+    "head": "rule_display",
+    "tier": "PERINGATAN-BERPENGAWAS",
+    "layer": "L1",
+    "klaim": null
+   },
+   {
+    "engine": "ssi",
+    "head": "persistence",
+    "tier": "TREN",
+    "layer": "L0",
+    "klaim": null
+   },
+   {
+    "engine": "ssi",
+    "head": "hybrid_rule_and_persistence",
+    "tier": "PERINGATAN-BERPENGAWAS",
+    "layer": "L1",
+    "klaim": null
+   },
+   {
+    "engine": "ssi",
+    "head": "rf_lowo",
+    "tier": "TREN",
+    "layer": "L2",
+    "klaim": null
+   },
+   {
+    "engine": "shk",
+    "head": "rule_display",
+    "tier": "PERINGATAN-BERPENGAWAS",
+    "layer": "L1",
+    "klaim": null
+   },
+   {
+    "engine": "shk",
+    "head": "persistence",
+    "tier": "TREN",
+    "layer": "L0",
+    "klaim": null
+   },
+   {
+    "engine": "shk",
+    "head": "hybrid_rule_and_persistence",
+    "tier": "PERINGATAN-BERPENGAWAS",
+    "layer": "L1",
+    "klaim": null
+   },
+   {
+    "engine": "shk",
+    "head": "rf_lowo",
+    "tier": "TREN",
+    "layer": "L2",
+    "klaim": null
+   },
+   {
+    "engine": "stuck",
+    "head": "rule_display",
+    "tier": "PERINGATAN-BERPENGAWAS",
+    "layer": "L1",
+    "klaim": "K-i"
+   },
+   {
+    "engine": "stuck",
+    "head": "persistence",
+    "tier": "TREN",
+    "layer": "L0",
+    "klaim": "K-i"
+   },
+   {
+    "engine": "stuck",
+    "head": "hybrid_rule_and_persistence",
+    "tier": "PERINGATAN-BERPENGAWAS",
+    "layer": "L1",
+    "klaim": "K-i"
+   },
+   {
+    "engine": "stuck",
+    "head": "e1_2of3",
+    "tier": "TREN",
+    "layer": "L2",
+    "klaim": "K-ii"
+   },
+   {
+    "engine": "stuck",
+    "head": "persistence_event",
+    "tier": "TREN",
+    "layer": "L2",
+    "klaim": "K-ii"
+   },
+   {
+    "engine": "stuck",
+    "head": "rf_lowo",
+    "tier": "TREN",
+    "layer": "L2",
+    "klaim": "K-ii"
+   },
+   {
+    "engine": "hyd",
+    "head": "rule_display",
+    "tier": "PERINGATAN-BERPENGAWAS",
+    "layer": "L1",
+    "klaim": "K-i"
+   },
+   {
+    "engine": "hyd",
+    "head": "persistence",
+    "tier": "PERINGATAN-BERPENGAWAS",
+    "layer": "L0",
+    "klaim": "K-i"
+   },
+   {
+    "engine": "hyd",
+    "head": "hybrid_rule_and_persistence",
+    "tier": "PERINGATAN-BERPENGAWAS",
+    "layer": "L1",
+    "klaim": "K-i"
+   },
+   {
+    "engine": "hyd",
+    "head": "k2_tidak_tersedia",
+    "tier": "BELUM LAYAK PAKAI",
+    "layer": "L3",
+    "klaim": "K-ii"
+   },
+   {
+    "engine": "bit_wear",
+    "head": "persistence",
+    "tier": "TREN",
+    "layer": "L2",
+    "klaim": "K-1"
+   },
+   {
+    "engine": "bit_wear",
+    "head": "k2_onset_belum",
+    "tier": "BELUM LAYAK PAKAI",
+    "layer": "L3",
+    "klaim": "K-2"
+   },
+   {
+    "engine": "tool_wear",
+    "head": "calib_5of27",
+    "tier": "TREN",
+    "layer": "L2",
+    "klaim": "K-i"
+   },
+   {
+    "engine": "tool_wear",
+    "head": "op_far_calibrated",
+    "tier": "PERINGATAN-BERPENGAWAS",
+    "layer": "L1",
+    "klaim": "K-i"
+   },
+   {
+    "engine": "tool_wear",
+    "head": "canary_3rms",
+    "tier": "TREN",
+    "layer": "L2",
+    "klaim": "K-ii"
+   }
+  ],
+  "heads_superv_layer_l0": [
+   {
+    "engine": "hyd",
+    "head": "persistence",
+    "tier": "PERINGATAN-BERPENGAWAS",
+    "layer": "L0",
+    "klaim": "K-i"
+   }
+  ]
+ },
+ "arsip_refs": {
+  "n": 0,
+  "contoh": []
+ }
+}

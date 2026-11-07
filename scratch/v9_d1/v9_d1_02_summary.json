@@ -1,0 +1,254 @@
+{
+ "F-10": {
+  "n_bins": 41446,
+  "n_candidates": 14583,
+  "feat_valid": 7899,
+  "leak_violation_in_builder": 0,
+  "per_class": {
+   "stuck": {
+    "eligible": 0,
+    "positives": 0,
+    "prev": null
+   },
+   "vib": {
+    "eligible": 0,
+    "positives": 0,
+    "prev": null
+   },
+   "shk": {
+    "eligible": 7899,
+    "positives": 146,
+    "prev": 0.01848335232307887
+   },
+   "ssi": {
+    "eligible": 7133,
+    "positives": 161,
+    "prev": 0.022571148184494603
+   }
+  }
+ },
+ "F-12": {
+  "n_bins": 180958,
+  "n_candidates": 35131,
+  "feat_valid": 7928,
+  "leak_violation_in_builder": 0,
+  "per_class": {
+   "stuck": {
+    "eligible": 0,
+    "positives": 0,
+    "prev": null
+   },
+   "vib": {
+    "eligible": 0,
+    "positives": 0,
+    "prev": null
+   },
+   "shk": {
+    "eligible": 5405,
+    "positives": 217,
+    "prev": 0.04014801110083256
+   },
+   "ssi": {
+    "eligible": 4293,
+    "positives": 83,
+    "prev": 0.019333799208013043
+   }
+  }
+ },
+ "F-14": {
+  "n_bins": 96698,
+  "n_candidates": 16831,
+  "feat_valid": 11391,
+  "leak_violation_in_builder": 0,
+  "per_class": {
+   "stuck": {
+    "eligible": 3201,
+    "positives": 432,
+    "prev": 0.13495782567947517
+   },
+   "vib": {
+    "eligible": 1989,
+    "positives": 1124,
+    "prev": 0.5651080945198592
+   },
+   "shk": {
+    "eligible": 11205,
+    "positives": 760,
+    "prev": 0.0678268630075859
+   },
+   "ssi": {
+    "eligible": 5455,
+    "positives": 75,
+    "prev": 0.013748854262144821
+   }
+  }
+ },
+ "F-15A": {
+  "n_bins": 44347,
+  "n_candidates": 17242,
+  "feat_valid": 6488,
+  "leak_violation_in_builder": 0,
+  "per_class": {
+   "stuck": {
+    "eligible": 0,
+    "positives": 0,
+    "prev": null
+   },
+   "vib": {
+    "eligible": 6482,
+    "positives": 1543,
+    "prev": 0.2380438136377661
+   },
+   "shk": {
+    "eligible": 6484,
+    "positives": 41,
+    "prev": 0.006323257248611968
+   },
+   "ssi": {
+    "eligible": 6020,
+    "positives": 31,
+    "prev": 0.0051495016611295685
+   }
+  }
+ },
+ "F-15_S": {
+  "n_bins": 101630,
+  "n_candidates": 17629,
+  "feat_valid": 11399,
+  "leak_violation_in_builder": 0,
+  "per_class": {
+   "stuck": {
+    "eligible": 0,
+    "positives": 0,
+    "prev": null
+   },
+   "vib": {
+    "eligible": 10903,
+    "positives": 1532,
+    "prev": 0.1405117857470421
+   },
+   "shk": {
+    "eligible": 11394,
+    "positives": 259,
+    "prev": 0.02273126206775496
+   },
+   "ssi": {
+    "eligible": 5342,
+    "positives": 85,
+    "prev": 0.015911643579183826
+   }
+  }
+ },
+ "F-5": {
+  "n_bins": 67934,
+  "n_candidates": 11779,
+  "feat_valid": 7166,
+  "leak_violation_in_builder": 0,
+  "per_class": {
+   "stuck": {
+    "eligible": 0,
+    "positives": 0,
+    "prev": null
+   },
+   "vib": {
+    "eligible": 4548,
+    "positives": 1230,
+    "prev": 0.2704485488126649
+   },
+   "shk": {
+    "eligible": 7140,
+    "positives": 240,
+    "prev": 0.03361344537815126
+   },
+   "ssi": {
+    "eligible": 4714,
+    "positives": 102,
+    "prev": 0.021637675010606705
+   }
+  }
+ },
+ "F-7": {
+  "n_bins": 34533,
+  "n_candidates": 4402,
+  "feat_valid": 2761,
+  "leak_violation_in_builder": 0,
+  "per_class": {
+   "stuck": {
+    "eligible": 0,
+    "positives": 0,
+    "prev": null
+   },
+   "vib": {
+    "eligible": 0,
+    "positives": 0,
+    "prev": null
+   },
+   "shk": {
+    "eligible": 2761,
+    "positives": 267,
+    "prev": 0.09670409272002897
+   },
+   "ssi": {
+    "eligible": 982,
+    "positives": 3,
+    "prev": 0.003054989816700611
+   }
+  }
+ },
+ "F-9": {
+  "n_bins": 25460,
+  "n_candidates": 3889,
+  "feat_valid": 1851,
+  "leak_violation_in_builder": 0,
+  "per_class": {
+   "stuck": {
+    "eligible": 0,
+    "positives": 0,
+    "prev": null
+   },
+   "vib": {
+    "eligible": 0,
+    "positives": 0,
+    "prev": null
+   },
+   "shk": {
+    "eligible": 1851,
+    "positives": 45,
+    "prev": 0.024311183144246355
+   },
+   "ssi": {
+    "eligible": 1126,
+    "positives": 12,
+    "prev": 0.010657193605683837
+   }
+  }
+ },
+ "F-9_A": {
+  "n_bins": 27282,
+  "n_candidates": 2845,
+  "feat_valid": 2356,
+  "leak_violation_in_builder": 0,
+  "per_class": {
+   "stuck": {
+    "eligible": 2354,
+    "positives": 1575,
+    "prev": 0.6690739167374682
+   },
+   "vib": {
+    "eligible": 0,
+    "positives": 0,
+    "prev": null
+   },
+   "shk": {
+    "eligible": 2356,
+    "positives": 30,
+    "prev": 0.012733446519524618
+   },
+   "ssi": {
+    "eligible": 841,
+    "positives": 55,
+    "prev": 0.06539833531510107
+   }
+  }
+ }
+}

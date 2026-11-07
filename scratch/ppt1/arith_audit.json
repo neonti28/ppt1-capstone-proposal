@@ -1,0 +1,124 @@
+{
+ "weights_sum": 1.0,
+ "scores": {
+  "A1": {
+   "nilai": [
+    5,
+    5,
+    4,
+    3,
+    4,
+    4
+   ],
+   "skor_docx": 4.35,
+   "wsm_hitung": 4.35,
+   "selisih": 0.0
+  },
+  "A2": {
+   "nilai": [
+    4,
+    3,
+    3,
+    4,
+    3,
+    3
+   ],
+   "skor_docx": 3.4,
+   "wsm_hitung": 3.35,
+   "selisih": 0.05
+  },
+  "A3": {
+   "nilai": [
+    3,
+    2,
+    5,
+    4,
+    5,
+    3
+   ],
+   "skor_docx": 3.55,
+   "wsm_hitung": 3.5,
+   "selisih": 0.05
+  },
+  "A4": {
+   "nilai": [
+    3,
+    2,
+    2,
+    5,
+    5,
+    2
+   ],
+   "skor_docx": 2.95,
+   "wsm_hitung": 3.0,
+   "selisih": -0.05
+  },
+  "A6": {
+   "nilai": [
+    2,
+    1,
+    3,
+    2,
+    5,
+    2
+   ],
+   "skor_docx": 2.45,
+   "wsm_hitung": 2.4,
+   "selisih": 0.05
+  }
+ },
+ "fmea": [
+  {
+   "mode": "Excessive vibration",
+   "S": 9,
+   "O": 7,
+   "D": 6,
+   "rpn_docx": 378,
+   "rpn_hitung": 378,
+   "cocok": true
+  },
+  {
+   "mode": "Stick-slip",
+   "S": 8,
+   "O": 7,
+   "D": 5,
+   "rpn_docx": 280,
+   "rpn_hitung": 280,
+   "cocok": true
+  },
+  {
+   "mode": "Pressure anomaly",
+   "S": 9,
+   "O": 6,
+   "D": 6,
+   "rpn_docx": 324,
+   "rpn_hitung": 324,
+   "cocok": true
+  },
+  {
+   "mode": "Telemetry failure",
+   "S": 7,
+   "O": 5,
+   "D": 7,
+   "rpn_docx": 245,
+   "rpn_hitung": 245,
+   "cocok": true
+  },
+  {
+   "mode": "Bit/BHA dysfunction",
+   "S": 8,
+   "O": 6,
+   "D": 5,
+   "rpn_docx": 240,
+   "rpn_hitung": 240,
+   "cocok": true
+  }
+ ],
+ "topsis_cc": {
+  "A1": 0.8306,
+  "A2": 0.5213,
+  "A3": 0.4255,
+  "A4": 0.3251,
+  "A6": 0.1731
+ }
+}

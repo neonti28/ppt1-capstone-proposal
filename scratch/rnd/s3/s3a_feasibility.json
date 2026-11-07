@@ -1,0 +1,365 @@
+{
+ "sumber": {
+  "usrop": "/mnt/d/Capstone 1(v2)/data/USROP_labeled.csv",
+  "timestamped": "/mnt/d/Capstone 1(v2)/data/volve/usrop_timestamped.csv"
+ },
+ "inventaris": {
+  "baris": 198928,
+  "kolom": 18,
+  "nama_kolom": [
+   "Unnamed: 0",
+   "Measured Depth m",
+   "Weight on Bit kkgf",
+   "Average Standpipe Pressure kPa",
+   "Average Surface Torque kN.m",
+   "Rate of Penetration m/h",
+   "Average Rotary Speed rpm",
+   "Mud Flow In L/min",
+   "Mud Density In g/cm3",
+   "Diameter mm",
+   "Average Hookload kkgf",
+   "Hole Depth (TVD) m",
+   "USROP Gamma gAPI",
+   "well",
+   "label",
+   "MSE",
+   "D_exp",
+   "ROC_coef"
+  ],
+  "token_bit": {},
+  "token_run": {},
+  "token_waktu": {},
+  "token_biaya": {}
+ },
+ "label": {
+  "total": {
+   "normal": 134013,
+   "high_MSE_bit_wear": 49732,
+   "low_ROP_efficiency": 15183
+  },
+  "per_well": [
+   {
+    "well": "USROP_A 3 N-SH-F-15d.csv",
+    "baris": 53041,
+    "high_MSE": 7622,
+    "low_ROP": 5278,
+    "normal": 40141,
+    "prevalensi_high_MSE": 0.1437,
+    "well_positif": true
+   },
+   {
+    "well": "USROP_A 4 N-SH_F-15Sd.csv",
+    "baris": 51708,
+    "high_MSE": 28051,
+    "low_ROP": 1026,
+    "normal": 22631,
+    "prevalensi_high_MSE": 0.542489,
+    "well_positif": true
+   },
+   {
+    "well": "USROP_A 2 N-SH_F-14d.csv",
+    "baris": 47645,
+    "high_MSE": 4918,
+    "low_ROP": 8053,
+    "normal": 34674,
+    "prevalensi_high_MSE": 0.103222,
+    "well_positif": true
+   },
+   {
+    "well": "USROP_A 5 N-SH-F-5d.csv",
+    "baris": 18548,
+    "high_MSE": 8959,
+    "low_ROP": 112,
+    "normal": 9477,
+    "prevalensi_high_MSE": 0.483017,
+    "well_positif": true
+   },
+   {
+    "well": "USROP_A 0 N-NA_F-9_Ad.csv",
+    "baris": 13746,
+    "high_MSE": 182,
+    "low_ROP": 714,
+    "normal": 12850,
+    "prevalensi_high_MSE": 0.01324,
+    "well_positif": true
+   },
+   {
+    "well": "USROP_A 6 N-SH_F-9d.csv",
+    "baris": 7851,
+    "high_MSE": 0,
+    "low_ROP": 0,
+    "normal": 7851,
+    "prevalensi_high_MSE": 0.0,
+    "well_positif": false
+   },
+   {
+    "well": "USROP_A 1 N-S_F-7d.csv",
+    "baris": 6389,
+    "high_MSE": 0,
+    "low_ROP": 0,
+    "normal": 6389,
+    "prevalensi_high_MSE": 0.0,
+    "well_positif": false
+   }
+  ],
+  "n_well": 7,
+  "n_well_tanpa_positif": 2,
+  "well_tanpa_positif": [
+   "USROP_A 1 N-S_F-7d.csv",
+   "USROP_A 6 N-SH_F-9d.csv"
+  ],
+  "n_pos": 49732,
+  "prevalensi": 0.25
+ },
+ "grid_kedalaman": [
+  {
+   "well": "USROP_A 0 N-NA_F-9_Ad.csv",
+   "n": 13745,
+   "median_m": 0.042,
+   "min_m": 0.003,
+   "maks_m": 35.01,
+   "fraksi_tepat_0_015": 0.0263,
+   "md_min": 491.033,
+   "md_max": 1205.999,
+   "md_rentang_m": 714.966,
+   "md_duplikat": 0
+  },
+  {
+   "well": "USROP_A 1 N-S_F-7d.csv",
+   "n": 6388,
+   "median_m": 0.051,
+   "min_m": 0.003,
+   "maks_m": 7.041,
+   "fraksi_tepat_0_015": 0.0235,
+   "md_min": 301.231,
+   "md_max": 633.536,
+   "md_rentang_m": 332.305,
+   "md_duplikat": 0
+  },
+  {
+   "well": "USROP_A 2 N-SH_F-14d.csv",
+   "n": 47642,
+   "median_m": 0.037,
+   "min_m": 0.003,
+   "maks_m": 94.9,
+   "fraksi_tepat_0_015": 0.043,
+   "md_min": 987.948,
+   "md_max": 3466.033,
+   "md_rentang_m": 2478.085,
+   "md_duplikat": 2
+  },
+  {
+   "well": "USROP_A 3 N-SH-F-15d.csv",
+   "n": 53038,
+   "median_m": 0.027,
+   "min_m": 0.003,
+   "maks_m": 166.497,
+   "fraksi_tepat_0_015": 0.0429,
+   "md_min": 1306.525,
+   "md_max": 4065.346,
+   "md_rentang_m": 2758.821,
+   "md_duplikat": 2
+  },
+  {
+   "well": "USROP_A 4 N-SH_F-15Sd.csv",
+   "n": 51707,
+   "median_m": 0.031,
+   "min_m": 0.003,
+   "maks_m": 24.552,
+   "fraksi_tepat_0_015": 0.0682,
+   "md_min": 1400.55,
+   "md_max": 4090.001,
+   "md_rentang_m": 2689.451,
+   "md_duplikat": 0
+  },
+  {
+   "well": "USROP_A 5 N-SH-F-5d.csv",
+   "n": 18547,
+   "median_m": 0.031,
+   "min_m": 0.003,
+   "maks_m": 39.076,
+   "fraksi_tepat_0_015": 0.0416,
+   "md_min": 2828.239,
+   "md_max": 3792.2,
+   "md_rentang_m": 963.961,
+   "md_duplikat": 0
+  },
+  {
+   "well": "USROP_A 6 N-SH_F-9d.csv",
+   "n": 7850,
+   "median_m": 0.045,
+   "min_m": 0.003,
+   "maks_m": 7.081,
+   "fraksi_tepat_0_015": 0.0245,
+   "md_min": 225.171,
+   "md_max": 633.536,
+   "md_rentang_m": 408.365,
+   "md_duplikat": 0
+  }
+ ],
+ "identitas": {
+  "kolom_bit": {},
+  "kolom_run": {},
+  "kolom_mengandung_bit": [
+   "Weight on Bit kkgf"
+  ],
+  "ada_kolom_identitas_bit": false,
+  "ada_kolom_run": false,
+  "diameter_unik": [
+   215.9,
+   311.15,
+   444.5
+  ],
+  "n_diameter_unik": 3,
+  "indeks_unik": 53041,
+  "indeks_duplikat": 145887
+ },
+ "sirkularitas": {
+  "mse_p75_positif": 256600.424079,
+  "roc_p25_positif": 1.6038e-05,
+  "baris": 198928,
+  "cocok": 198928,
+  "tidak_cocok": 0,
+  "akurasi_rekonstruksi": 1.0,
+  "catatan": "label = fungsi deterministik MSE>P75 lalu ROC<P25, bukan hasil observasi keausan",
+  "per_well_ambang_sendiri": [
+   {
+    "well": "USROP_A 0 N-NA_F-9_Ad.csv",
+    "mse_p75": 55732.984977,
+    "roc_p25": 2.0356e-05,
+    "cocok": 9345,
+    "baris": 13746,
+    "akurasi": 0.679834
+   },
+   {
+    "well": "USROP_A 1 N-S_F-7d.csv",
+    "mse_p75": 5608.116723,
+    "roc_p25": 5.6199e-05,
+    "cocok": 4287,
+    "baris": 6389,
+    "akurasi": 0.670997
+   },
+   {
+    "well": "USROP_A 2 N-SH_F-14d.csv",
+    "mse_p75": 140564.042172,
+    "roc_p25": 1.5023e-05,
+    "cocok": 40267,
+    "baris": 47645,
+    "akurasi": 0.845146
+   },
+   {
+    "well": "USROP_A 3 N-SH-F-15d.csv",
+    "mse_p75": 221980.003843,
+    "roc_p25": 1.8409e-05,
+    "cocok": 44355,
+    "baris": 53041,
+    "akurasi": 0.83624
+   },
+   {
+    "well": "USROP_A 4 N-SH_F-15Sd.csv",
+    "mse_p75": 439243.774351,
+    "roc_p25": 8.638e-06,
+    "cocok": 35898,
+    "baris": 51708,
+    "akurasi": 0.694245
+   },
+   {
+    "well": "USROP_A 5 N-SH-F-5d.csv",
+    "mse_p75": 463440.551178,
+    "roc_p25": 1.1212e-05,
+    "cocok": 14122,
+    "baris": 18548,
+    "akurasi": 0.761376
+   },
+   {
+    "well": "USROP_A 6 N-SH_F-9d.csv",
+    "mse_p75": 7529.477161,
+    "roc_p25": 4.6685e-05,
+    "cocok": 5398,
+    "baris": 7851,
+    "akurasi": 0.687556
+   }
+  ]
+ },
+ "waktu_kalender": {
+  "berkas": "/mnt/d/Capstone 1(v2)/data/volve/usrop_timestamped.csv",
+  "baris": 198928,
+  "join_status": {
+   "interpolated": 198927,
+   "out_of_range": 1
+  },
+  "per_well": [
+   {
+    "well": "USROP_A 3 N-SH-F-15d.csv",
+    "baris": 53041,
+    "terisi": 53041,
+    "fraksi_terisi": 1.0,
+    "rentang_jam": 688.248,
+    "baris_per_jam": 77.07,
+    "ts_min": "2008-12-11 14:07:29+00:00",
+    "ts_maks": "2009-01-09 06:22:23+00:00"
+   },
+   {
+    "well": "USROP_A 4 N-SH_F-15Sd.csv",
+    "baris": 51708,
+    "terisi": 51707,
+    "fraksi_terisi": 1.0,
+    "rentang_jam": 1538.487,
+    "baris_per_jam": 33.61,
+    "ts_min": "2008-09-24 22:45:30+00:00",
+    "ts_maks": "2008-11-28 01:14:43+00:00"
+   },
+   {
+    "well": "USROP_A 2 N-SH_F-14d.csv",
+    "baris": 47645,
+    "terisi": 47645,
+    "fraksi_terisi": 1.0,
+    "rentang_jam": 4534.969,
+    "baris_per_jam": 10.51,
+    "ts_min": "2007-12-07 23:01:53+00:00",
+    "ts_maks": "2008-06-13 22:00:00+00:00"
+   },
+   {
+    "well": "USROP_A 5 N-SH-F-5d.csv",
+    "baris": 18548,
+    "terisi": 18548,
+    "fraksi_terisi": 1.0,
+    "rentang_jam": 297.469,
+    "baris_per_jam": 62.35,
+    "ts_min": "2008-07-19 07:01:50+00:00",
+    "ts_maks": "2008-07-31 16:30:00+00:00"
+   },
+   {
+    "well": "USROP_A 0 N-NA_F-9_Ad.csv",
+    "baris": 13746,
+    "terisi": 13746,
+    "fraksi_terisi": 1.0,
+    "rentang_jam": 113.778,
+    "baris_per_jam": 120.81,
+    "ts_min": "2009-07-03 04:13:20+00:00",
+    "ts_maks": "2009-07-07 22:00:00+00:00"
+   },
+   {
+    "well": "USROP_A 6 N-SH_F-9d.csv",
+    "baris": 7851,
+    "terisi": 7851,
+    "fraksi_terisi": 1.0,
+    "rentang_jam": 400.25,
+    "baris_per_jam": 19.62,
+    "ts_min": "2007-11-28 23:00:00+00:00",
+    "ts_maks": "2007-12-15 15:15:00+00:00"
+   },
+   {
+    "well": "USROP_A 1 N-S_F-7d.csv",
+    "baris": 6389,
+    "terisi": 6389,
+    "fraksi_terisi": 1.0,
+    "rentang_jam": 305.482,
+    "baris_per_jam": 20.91,
+    "ts_min": "2007-09-23 04:01:05+00:00",
+    "ts_maks": "2007-10-05 21:30:00+00:00"
+   }
+  ],
+  "catatan": "est_timestamp adalah interpolasi md ke waktu dari DDR, bukan waktu terukur per baris"
+ }
+}

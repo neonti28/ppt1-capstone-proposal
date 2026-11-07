@@ -1,0 +1,9 @@
+[PASS] D1: jumlah head JSON = 27; dokumen menyebut '27 head' = True
+[PASS] D2: ringkasan layer JSON = {'L0': 5, 'L1': 11, 'L2': 9, 'L3': 2}; pola blok ada di dokumen = True
+[PASS] D3: slot alarm 0 + 11 peringatan L1 == dokumen
+[PASS] D4: 7/7 sampel angka cocok; selisih=[]
+[PASS] D5: angka sampel tertulis di dokumen; hilang=[]
+[PASS] D6: TEST_LOG = 288 baris, JSON = 45879 byte (dokumen: '288 baris', '45,879')
+[PASS] D7: verifikasi = 13 PASS + 'SEMUA PASS' = True
+[PASS] D8: 6 baris riset pendahuluan (hilang=[]); acceptance a-d = True
+TOTAL: SEMUA PASS

@@ -1,0 +1,619 @@
+{
+ "kartu": "t_6890a1c7",
+ "model": "H1_hluas",
+ "sifat": "EKSPLORATIF, bukan protokol R8",
+ "grid_lama": [
+  0.5,
+  1,
+  1.5,
+  2,
+  2.5,
+  3,
+  4,
+  5,
+  6,
+  8,
+  10,
+  12,
+  15,
+  20,
+  30
+ ],
+ "grid_luas": [
+  0.5,
+  1,
+  1.5,
+  2,
+  2.5,
+  3,
+  4,
+  5,
+  6,
+  8,
+  10,
+  12,
+  15,
+  20,
+  30,
+  40,
+  60,
+  80,
+  100,
+  150,
+  200,
+  300,
+  400,
+  600
+ ],
+ "alpha_budget": 0.004166666666666667,
+ "n_fold": 9,
+ "n_lolos_anggaran": 9,
+ "ringkas": {
+  "n_fold": 9,
+  "fp_total": 237,
+  "tp_total": 1113,
+  "fp_kejadian_total": 65,
+  "precision_median": 0.8235,
+  "precision_min": 0.6632,
+  "precision_maks": 0.9452,
+  "recall_median": 0.1457,
+  "recall_min": 0.0495,
+  "recall_maks": 0.5035,
+  "far24_kalender_median": 0.5845,
+  "far24_kalender_min": 0.121,
+  "far24_kalender_maks": 2.3586,
+  "far24_kalender_rentang": 2.2376,
+  "far24_baris_median": 7.8165,
+  "far24_baris_min": 0.9325,
+  "far24_baris_maks": 41.0394,
+  "cakupan_median": 0.0903,
+  "lead_median_median": 25.0,
+  "lead_median_min": 2.0,
+  "lead_median_maks": 47.0,
+  "n_onset": 390,
+  "n_diperingatkan": 109,
+  "fold_far_le6": 9,
+  "fold_gate_A_baru": 0,
+  "fold_recall_gt0": 9
+ },
+ "banding": {
+  "fp_total": {
+   "lama": 935,
+   "baru": 237,
+   "delta": -698
+  },
+  "tp_total": {
+   "lama": 3804,
+   "baru": 1113,
+   "delta": -2691
+  },
+  "precision_median": {
+   "lama": 0.7789,
+   "baru": 0.8235,
+   "delta": 0.0446
+  },
+  "recall_median": {
+   "lama": 0.5638,
+   "baru": 0.1457,
+   "delta": -0.4181
+  },
+  "far24_kalender_median": {
+   "lama": 3.5302,
+   "baru": 0.5845,
+   "delta": -2.9457
+  },
+  "far24_baris_median": {
+   "lama": 32.256,
+   "baru": 7.8165,
+   "delta": -24.4395
+  },
+  "lead_median_median": {
+   "lama": 11.5,
+   "baru": 25.0,
+   "delta": 13.5
+  },
+  "n_diperingatkan": {
+   "lama": 219,
+   "baru": 109,
+   "delta": -110
+  },
+  "fold_far_le6": {
+   "lama": 7,
+   "baru": 9,
+   "delta": 2
+  },
+  "cakupan_median": {
+   "lama": 0.0903,
+   "baru": 0.0903,
+   "delta": 0.0
+  }
+ },
+ "per_fold": [
+  {
+   "rows": {
+    "tp": 69,
+    "fp": 4,
+    "fn": 1325,
+    "tn": 6173,
+    "precision": 0.9452054794520548,
+    "recall": 0.04949784791965567,
+    "menit_alarm": 73,
+    "n_pos": 1394,
+    "n_neg": 6177
+   },
+   "events": {
+    "tp_kejadian": 9,
+    "fp_kejadian": 1,
+    "n_kejadian": 10
+   },
+   "cakupan": 0.673,
+   "menit_kalender": 11249.0,
+   "menit_neg_kalender": 9855.0,
+   "far24_kalender": 0.5845,
+   "far24_kalender_kejadian": 0.1461,
+   "far24_baris": 0.9325,
+   "garwood_atas_fp": 1.4965,
+   "lead": {
+    "n_onset": 23,
+    "n_diperingatkan": 2,
+    "lead_median_min": 27.5,
+    "lead_min_min": 14,
+    "lead_maks_min": 41
+   },
+   "separuh": {
+    "awal": {
+     "precision": 1.0,
+     "recall": 0.030211480362537766,
+     "fp": 0,
+     "n_pos": 331
+    },
+    "akhir": {
+     "precision": 0.9365079365079365,
+     "recall": 0.055503292568203196,
+     "fp": 4,
+     "n_pos": 1063
+    }
+   },
+   "prev": 0.184124,
+   "gate_A_baru": false,
+   "fold": "F-10",
+   "model": "H1_hluas",
+   "h_terpilih": 300.0,
+   "cal_well": "F-12",
+   "laju_alarm_kalibrasi": 0.003924221921515561,
+   "lolos_anggaran": true
+  },
+  {
+   "rows": {
+    "tp": 326,
+    "fp": 39,
+    "fn": 1100,
+    "tn": 5925,
+    "precision": 0.8931506849315068,
+    "recall": 0.22861150070126227,
+    "menit_alarm": 365,
+    "n_pos": 1426,
+    "n_neg": 5964
+   },
+   "events": {
+    "tp_kejadian": 25,
+    "fp_kejadian": 9,
+    "n_kejadian": 34
+   },
+   "cakupan": 0.0855,
+   "menit_kalender": 86454.0,
+   "menit_neg_kalender": 85028.0,
+   "far24_kalender": 0.6605,
+   "far24_kalender_kejadian": 0.1524,
+   "far24_baris": 9.4165,
+   "garwood_atas_fp": 0.9029,
+   "lead": {
+    "n_onset": 92,
+    "n_diperingatkan": 30,
+    "lead_median_min": 17.5,
+    "lead_min_min": 2,
+    "lead_maks_min": 59
+   },
+   "separuh": {
+    "awal": {
+     "precision": 0.9194029850746268,
+     "recall": 0.262350936967632,
+     "fp": 27,
+     "n_pos": 1174
+    },
+    "akhir": {
+     "precision": 0.6,
+     "recall": 0.07142857142857142,
+     "fp": 12,
+     "n_pos": 252
+    }
+   },
+   "prev": 0.192963,
+   "gate_A_baru": false,
+   "fold": "F-12",
+   "model": "H1_hluas",
+   "h_terpilih": 150.0,
+   "cal_well": "F-10",
+   "laju_alarm_kalibrasi": 0.003037907806102232,
+   "lolos_anggaran": true
+  },
+  {
+   "rows": {
+    "tp": 126,
+    "fp": 64,
+    "fn": 739,
+    "tn": 9472,
+    "precision": 0.6631578947368421,
+    "recall": 0.14566473988439307,
+    "menit_alarm": 190,
+    "n_pos": 865,
+    "n_neg": 9536
+   },
+   "events": {
+    "tp_kejadian": 16,
+    "fp_kejadian": 16,
+    "n_kejadian": 32
+   },
+   "cakupan": 0.0327,
+   "menit_kalender": 317679.0,
+   "menit_neg_kalender": 316814.0,
+   "far24_kalender": 0.2909,
+   "far24_kalender_kejadian": 0.0727,
+   "far24_baris": 9.6644,
+   "garwood_atas_fp": 0.3715,
+   "lead": {
+    "n_onset": 58,
+    "n_diperingatkan": 20,
+    "lead_median_min": 25.0,
+    "lead_min_min": 2,
+    "lead_maks_min": 56
+   },
+   "separuh": {
+    "awal": {
+     "precision": 0.5764705882352941,
+     "recall": 0.1436950146627566,
+     "fp": 36,
+     "n_pos": 341
+    },
+    "akhir": {
+     "precision": 0.7333333333333333,
+     "recall": 0.14694656488549618,
+     "fp": 28,
+     "n_pos": 524
+    }
+   },
+   "prev": 0.083165,
+   "gate_A_baru": false,
+   "fold": "F-14",
+   "model": "H1_hluas",
+   "h_terpilih": 150.0,
+   "cal_well": "F-10",
+   "laju_alarm_kalibrasi": 0.003037907806102232,
+   "lolos_anggaran": true
+  },
+  {
+   "rows": {
+    "tp": 57,
+    "fp": 14,
+    "fn": 641,
+    "tn": 5444,
+    "precision": 0.8028169014084507,
+    "recall": 0.08166189111747851,
+    "menit_alarm": 71,
+    "n_pos": 698,
+    "n_neg": 5458
+   },
+   "events": {
+    "tp_kejadian": 9,
+    "fp_kejadian": 4,
+    "n_kejadian": 13
+   },
+   "cakupan": 0.1915,
+   "menit_kalender": 32141.0,
+   "menit_neg_kalender": 31443.0,
+   "far24_kalender": 0.6412,
+   "far24_kalender_kejadian": 0.1832,
+   "far24_baris": 3.6937,
+   "garwood_atas_fp": 1.0758,
+   "lead": {
+    "n_onset": 33,
+    "n_diperingatkan": 12,
+    "lead_median_min": 35.0,
+    "lead_min_min": 5,
+    "lead_maks_min": 60
+   },
+   "separuh": {
+    "awal": {
+     "precision": 0.8,
+     "recall": 0.17647058823529413,
+     "fp": 3,
+     "n_pos": 68
+    },
+    "akhir": {
+     "precision": 0.8035714285714286,
+     "recall": 0.07142857142857142,
+     "fp": 11,
+     "n_pos": 630
+    }
+   },
+   "prev": 0.113385,
+   "gate_A_baru": false,
+   "fold": "F-15A",
+   "model": "H1_hluas",
+   "h_terpilih": 150.0,
+   "cal_well": "F-10",
+   "laju_alarm_kalibrasi": 0.003037907806102232,
+   "lolos_anggaran": true
+  },
+  {
+   "rows": {
+    "tp": 56,
+    "fp": 12,
+    "fn": 937,
+    "tn": 7350,
+    "precision": 0.8235294117647058,
+    "recall": 0.05639476334340383,
+    "menit_alarm": 68,
+    "n_pos": 993,
+    "n_neg": 7362
+   },
+   "events": {
+    "tp_kejadian": 15,
+    "fp_kejadian": 6,
+    "n_kejadian": 21
+   },
+   "cakupan": 0.0903,
+   "menit_kalender": 92488.0,
+   "menit_neg_kalender": 91495.0,
+   "far24_kalender": 0.1889,
+   "far24_kalender_kejadian": 0.0944,
+   "far24_baris": 2.3472,
+   "garwood_atas_fp": 0.3299,
+   "lead": {
+    "n_onset": 64,
+    "n_diperingatkan": 5,
+    "lead_median_min": 11.0,
+    "lead_min_min": 4,
+    "lead_maks_min": 42
+   },
+   "separuh": {
+    "awal": {
+     "precision": 0.8363636363636363,
+     "recall": 0.0757825370675453,
+     "fp": 9,
+     "n_pos": 607
+    },
+    "akhir": {
+     "precision": 0.7692307692307693,
+     "recall": 0.025906735751295335,
+     "fp": 3,
+     "n_pos": 386
+    }
+   },
+   "prev": 0.118851,
+   "gate_A_baru": false,
+   "fold": "F-15_S",
+   "model": "H1_hluas",
+   "h_terpilih": 150.0,
+   "cal_well": "F-10",
+   "laju_alarm_kalibrasi": 0.003037907806102232,
+   "lolos_anggaran": true
+  },
+  {
+   "rows": {
+    "tp": 114,
+    "fp": 31,
+    "fn": 507,
+    "tn": 5680,
+    "precision": 0.7862068965517242,
+    "recall": 0.18357487922705315,
+    "menit_alarm": 145,
+    "n_pos": 621,
+    "n_neg": 5711
+   },
+   "events": {
+    "tp_kejadian": 17,
+    "fp_kejadian": 8,
+    "n_kejadian": 25
+   },
+   "cakupan": 0.0171,
+   "menit_kalender": 369549.0,
+   "menit_neg_kalender": 368928.0,
+   "far24_kalender": 0.121,
+   "far24_kalender_kejadian": 0.0312,
+   "far24_baris": 7.8165,
+   "garwood_atas_fp": 0.1717,
+   "lead": {
+    "n_onset": 40,
+    "n_diperingatkan": 15,
+    "lead_median_min": 35.0,
+    "lead_min_min": 1,
+    "lead_maks_min": 58
+   },
+   "separuh": {
+    "awal": {
+     "precision": 0.56,
+     "recall": 0.12844036697247707,
+     "fp": 22,
+     "n_pos": 218
+    },
+    "akhir": {
+     "precision": 0.9052631578947369,
+     "recall": 0.21339950372208435,
+     "fp": 9,
+     "n_pos": 403
+    }
+   },
+   "prev": 0.098073,
+   "gate_A_baru": false,
+   "fold": "F-5",
+   "model": "H1_hluas",
+   "h_terpilih": 150.0,
+   "cal_well": "F-10",
+   "laju_alarm_kalibrasi": 0.003037907806102232,
+   "lolos_anggaran": true
+  },
+  {
+   "rows": {
+    "tp": 132,
+    "fp": 37,
+    "fn": 289,
+    "tn": 2024,
+    "precision": 0.7810650887573964,
+    "recall": 0.31353919239904987,
+    "menit_alarm": 169,
+    "n_pos": 421,
+    "n_neg": 2061
+   },
+   "events": {
+    "tp_kejadian": 15,
+    "fp_kejadian": 6,
+    "n_kejadian": 21
+   },
+   "cakupan": 0.1079,
+   "menit_kalender": 23011.0,
+   "menit_neg_kalender": 22590.0,
+   "far24_kalender": 2.3586,
+   "far24_kalender_kejadian": 0.3825,
+   "far24_baris": 25.8515,
+   "garwood_atas_fp": 3.251,
+   "lead": {
+    "n_onset": 28,
+    "n_diperingatkan": 10,
+    "lead_median_min": 24.5,
+    "lead_min_min": 1,
+    "lead_maks_min": 55
+   },
+   "separuh": {
+    "awal": {
+     "precision": 0.8076923076923077,
+     "recall": 0.3,
+     "fp": 5,
+     "n_pos": 70
+    },
+    "akhir": {
+     "precision": 0.7762237762237763,
+     "recall": 0.3162393162393162,
+     "fp": 32,
+     "n_pos": 351
+    }
+   },
+   "prev": 0.169621,
+   "gate_A_baru": false,
+   "fold": "F-7",
+   "model": "H1_hluas",
+   "h_terpilih": 150.0,
+   "cal_well": "F-10",
+   "laju_alarm_kalibrasi": 0.003037907806102232,
+   "lolos_anggaran": true
+  },
+  {
+   "rows": {
+    "tp": 213,
+    "fp": 34,
+    "fn": 210,
+    "tn": 1159,
+    "precision": 0.8623481781376519,
+    "recall": 0.5035460992907801,
+    "menit_alarm": 247,
+    "n_pos": 423,
+    "n_neg": 1193
+   },
+   "events": {
+    "tp_kejadian": 29,
+    "fp_kejadian": 14,
+    "n_kejadian": 43
+   },
+   "cakupan": 0.0707,
+   "menit_kalender": 22858.0,
+   "menit_neg_kalender": 22435.0,
+   "far24_kalender": 2.1823,
+   "far24_kalender_kejadian": 0.8986,
+   "far24_baris": 41.0394,
+   "garwood_atas_fp": 3.0496,
+   "lead": {
+    "n_onset": 28,
+    "n_diperingatkan": 14,
+    "lead_median_min": 2.0,
+    "lead_min_min": 1,
+    "lead_maks_min": 47
+   },
+   "separuh": {
+    "awal": {
+     "precision": 0.8815165876777251,
+     "recall": 0.5486725663716814,
+     "fp": 25,
+     "n_pos": 339
+    },
+    "akhir": {
+     "precision": 0.75,
+     "recall": 0.32142857142857145,
+     "fp": 9,
+     "n_pos": 84
+    }
+   },
+   "prev": 0.261757,
+   "gate_A_baru": false,
+   "fold": "F-9",
+   "model": "H1_hluas",
+   "h_terpilih": 150.0,
+   "cal_well": "F-10",
+   "laju_alarm_kalibrasi": 0.003037907806102232,
+   "lolos_anggaran": true
+  },
+  {
+   "rows": {
+    "tp": 20,
+    "fp": 2,
+    "fn": 311,
+    "tn": 1873,
+    "precision": 0.9090909090909091,
+    "recall": 0.06042296072507553,
+    "menit_alarm": 22,
+    "n_pos": 331,
+    "n_neg": 1875
+   },
+   "events": {
+    "tp_kejadian": 2,
+    "fp_kejadian": 1,
+    "n_kejadian": 3
+   },
+   "cakupan": 0.3004,
+   "menit_kalender": 7344.0,
+   "menit_neg_kalender": 7013.0,
+   "far24_kalender": 0.4107,
+   "far24_kalender_kejadian": 0.2053,
+   "far24_baris": 1.536,
+   "garwood_atas_fp": 1.4835,
+   "lead": {
+    "n_onset": 24,
+    "n_diperingatkan": 1,
+    "lead_median_min": 47.0,
+    "lead_min_min": 47,
+    "lead_maks_min": 47
+   },
+   "separuh": {
+    "awal": {
+     "precision": 1.0,
+     "recall": 0.1342281879194631,
+     "fp": 0,
+     "n_pos": 149
+    },
+    "akhir": {
+     "precision": 0.0,
+     "recall": 0.0,
+     "fp": 2,
+     "n_pos": 182
+    }
+   },
+   "prev": 0.150045,
+   "gate_A_baru": false,
+   "fold": "F-9_A",
+   "model": "H1_hluas",
+   "h_terpilih": 150.0,
+   "cal_well": "F-10",
+   "laju_alarm_kalibrasi": 0.003037907806102232,
+   "lolos_anggaran": true
+  }
+ ]
+}

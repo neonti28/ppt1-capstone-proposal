@@ -1,0 +1,68 @@
+{
+ "meta": {
+  "task": "V9-E_RULE 04 hyd-K-ii baselines",
+  "seed": 42,
+  "recipe": "VERBATIM V8-E_hyd claim2",
+  "n_grid": 27322,
+  "split": 19125,
+  "n_episodes": 124,
+  "generated_at": "2026-10-12 10:12:23"
+ },
+ "test": {
+  "fold": {
+   "test_well": "F-9_A(temporal-30%akhir)",
+   "n": 8107,
+   "pos": 30,
+   "prev": 0.0037005057357838906,
+   "underpowered": false
+  },
+  "prevalence_random": {
+   "auprc_emp": 0.005641357641265351,
+   "prev_analytic": 0.0037005057357838906,
+   "plafon": 270.23333333333335
+  },
+  "always_negative": {
+   "tp": 0,
+   "fp": 0,
+   "fn": 30,
+   "tn": 8077,
+   "precision": null,
+   "recall": 0.0,
+   "n_neg": 8077,
+   "far_24h": 0.0,
+   "auprc": 0.0037005057357838906,
+   "note": "recall=0 BY CONSTRUCTION (V8: 'onset persistence' = selalu-negatif)"
+  },
+  "rule_zpit": {
+   "n_alarm_in_evalrows": 0,
+   "fp_in_evalrows": 0,
+   "note": "blok episode +30 mnt Dibuang dari baris evaluasi -> alarm rule=0 pada baris eval BY CONSTRUCTION; TLead=0 (deteksi saat-kejadian)",
+   "tlead_minutes": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "tlead_all_zero": true,
+   "n_episode_minutes": 1348,
+   "b1_horizon_pct": 0.0,
+   "inspection_load": {
+    "episode_minutes_total": 1348,
+    "episode_minutes_test": 35
+   }
+  }
+ },
+ "crosscheck_v8": {
+  "n_episodes_match": true,
+  "v8_n_episodes": 124,
+  "v8_prev_test_cons": 0.0037,
+  "v8_prev_test_flow": 0.0037,
+  "my_prev_test": 0.0037005057357838906
+ }
+}

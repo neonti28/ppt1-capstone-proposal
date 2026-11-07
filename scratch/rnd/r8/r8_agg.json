@@ -1,0 +1,4118 @@
+{
+ "task": {
+  "hyd": {
+   "elapsed_s": 6.7,
+   "alpha_budget": 0.004166666666666667,
+   "seed": 42,
+   "model": {
+    "H1_stat_dan_rule": {
+     "n_fold": 9,
+     "per_fold": {
+      "F-10": {
+       "precision": 0.928654970760234,
+       "recall": 0.569583931133429,
+       "fp": 61,
+       "tp": 794,
+       "n_pos": 1394,
+       "far24": 8.9132,
+       "far24_kej": 1.7534,
+       "cakupan": 0.673,
+       "prev": 0.184124,
+       "lead": {
+        "n_onset": 23,
+        "n_diperingatkan": 10,
+        "lead_median_min": 18.5,
+        "lead_min_min": 1,
+        "lead_maks_min": 52
+       },
+       "separuh": {
+        "awal": {
+         "precision": 0.9252336448598131,
+         "recall": 0.5981873111782477,
+         "fp": 16,
+         "n_pos": 331
+        },
+        "akhir": {
+         "precision": 0.9297971918876755,
+         "recall": 0.5606773283160865,
+         "fp": 45,
+         "n_pos": 1063
+        }
+       },
+       "thr": null,
+       "h": 30,
+       "auprc": null,
+       "auc": null
+      },
+      "F-12": {
+       "precision": 0.8436516264428122,
+       "recall": 0.5638148667601683,
+       "fp": 149,
+       "tp": 804,
+       "n_pos": 1426,
+       "far24": 2.5234,
+       "far24_kej": 0.5419,
+       "cakupan": 0.0855,
+       "prev": 0.192963,
+       "lead": {
+        "n_onset": 92,
+        "n_diperingatkan": 56,
+        "lead_median_min": 11.5,
+        "lead_min_min": 1,
+        "lead_maks_min": 53
+       },
+       "separuh": {
+        "awal": {
+         "precision": 0.8780487804878049,
+         "recall": 0.5826235093696763,
+         "fp": 95,
+         "n_pos": 1174
+        },
+        "akhir": {
+         "precision": 0.6896551724137931,
+         "recall": 0.47619047619047616,
+         "fp": 54,
+         "n_pos": 252
+        }
+       },
+       "thr": null,
+       "h": 30,
+       "auprc": null,
+       "auc": null
+      },
+      "F-14": {
+       "precision": 0.6732522796352584,
+       "recall": 0.5121387283236994,
+       "fp": 215,
+       "tp": 443,
+       "n_pos": 865,
+       "far24": 0.9772,
+       "far24_kej": 0.2545,
+       "cakupan": 0.0327,
+       "prev": 0.083165,
+       "lead": {
+        "n_onset": 58,
+        "n_diperingatkan": 37,
+        "lead_median_min": 11.0,
+        "lead_min_min": 1,
+        "lead_maks_min": 57
+       },
+       "separuh": {
+        "awal": {
+         "precision": 0.5992366412213741,
+         "recall": 0.4604105571847507,
+         "fp": 105,
+         "n_pos": 341
+        },
+        "akhir": {
+         "precision": 0.7222222222222222,
+         "recall": 0.5458015267175572,
+         "fp": 110,
+         "n_pos": 524
+        }
+       },
+       "thr": null,
+       "h": 30,
+       "auprc": null,
+       "auc": null
+      },
+      "F-15A": {
+       "precision": 0.7403598971722365,
+       "recall": 0.41260744985673353,
+       "fp": 101,
+       "tp": 288,
+       "n_pos": 698,
+       "far24": 4.6255,
+       "far24_kej": 1.2365,
+       "cakupan": 0.1915,
+       "prev": 0.113385,
+       "lead": {
+        "n_onset": 33,
+        "n_diperingatkan": 22,
+        "lead_median_min": 8.0,
+        "lead_min_min": 2,
+        "lead_maks_min": 55
+       },
+       "separuh": {
+        "awal": {
+         "precision": 0.5957446808510638,
+         "recall": 0.4117647058823529,
+         "fp": 19,
+         "n_pos": 68
+        },
+        "akhir": {
+         "precision": 0.7602339181286549,
+         "recall": 0.4126984126984127,
+         "fp": 82,
+         "n_pos": 630
+        }
+       },
+       "thr": null,
+       "h": 30,
+       "auprc": null,
+       "auc": null
+      },
+      "F-15_S": {
+       "precision": 0.7602339181286549,
+       "recall": 0.39274924471299094,
+       "fp": 123,
+       "tp": 390,
+       "n_pos": 993,
+       "far24": 1.9358,
+       "far24_kej": 0.4407,
+       "cakupan": 0.0903,
+       "prev": 0.118851,
+       "lead": {
+        "n_onset": 64,
+        "n_diperingatkan": 27,
+        "lead_median_min": 12.0,
+        "lead_min_min": 1,
+        "lead_maks_min": 48
+       },
+       "separuh": {
+        "awal": {
+         "precision": 0.8442622950819673,
+         "recall": 0.5090609555189456,
+         "fp": 57,
+         "n_pos": 607
+        },
+        "akhir": {
+         "precision": 0.5510204081632653,
+         "recall": 0.20984455958549222,
+         "fp": 66,
+         "n_pos": 386
+        }
+       },
+       "thr": null,
+       "h": 30,
+       "auprc": null,
+       "auc": null
+      },
+      "F-5": {
+       "precision": 0.7976653696498055,
+       "recall": 0.6602254428341385,
+       "fp": 104,
+       "tp": 410,
+       "n_pos": 621,
+       "far24": 0.4059,
+       "far24_kej": 0.1795,
+       "cakupan": 0.0171,
+       "prev": 0.098073,
+       "lead": {
+        "n_onset": 40,
+        "n_diperingatkan": 25,
+        "lead_median_min": 5.0,
+        "lead_min_min": 1,
+        "lead_maks_min": 48
+       },
+       "separuh": {
+        "awal": {
+         "precision": 0.7160493827160493,
+         "recall": 0.5321100917431193,
+         "fp": 46,
+         "n_pos": 218
+        },
+        "akhir": {
+         "precision": 0.8352272727272727,
+         "recall": 0.7295285359801489,
+         "fp": 58,
+         "n_pos": 403
+        }
+       },
+       "thr": null,
+       "h": 30,
+       "auprc": null,
+       "auc": null
+      },
+      "F-7": {
+       "precision": 0.7612359550561798,
+       "recall": 0.6437054631828979,
+       "fp": 85,
+       "tp": 271,
+       "n_pos": 421,
+       "far24": 5.4183,
+       "far24_kej": 1.6574,
+       "cakupan": 0.1079,
+       "prev": 0.169621,
+       "lead": {
+        "n_onset": 28,
+        "n_diperingatkan": 15,
+        "lead_median_min": 16.0,
+        "lead_min_min": 1,
+        "lead_maks_min": 58
+       },
+       "separuh": {
+        "awal": {
+         "precision": 0.6571428571428571,
+         "recall": 0.32857142857142857,
+         "fp": 12,
+         "n_pos": 70
+        },
+        "akhir": {
+         "precision": 0.7725856697819314,
+         "recall": 0.7065527065527065,
+         "fp": 73,
+         "n_pos": 351
+        }
+       },
+       "thr": null,
+       "h": 30,
+       "auprc": null,
+       "auc": null
+      },
+      "F-9": {
+       "precision": 0.8231511254019293,
+       "recall": 0.6052009456264775,
+       "fp": 55,
+       "tp": 256,
+       "n_pos": 423,
+       "far24": 3.5302,
+       "far24_kej": 1.4763,
+       "cakupan": 0.0707,
+       "prev": 0.261757,
+       "lead": {
+        "n_onset": 28,
+        "n_diperingatkan": 18,
+        "lead_median_min": 2.0,
+        "lead_min_min": 1,
+        "lead_maks_min": 50
+       },
+       "separuh": {
+        "awal": {
+         "precision": 0.8587786259541985,
+         "recall": 0.6637168141592921,
+         "fp": 37,
+         "n_pos": 339
+        },
+        "akhir": {
+         "precision": 0.6326530612244898,
+         "recall": 0.36904761904761907,
+         "fp": 18,
+         "n_pos": 84
+        }
+       },
+       "thr": null,
+       "h": 30,
+       "auprc": null,
+       "auc": null
+      },
+      "F-9_A": {
+       "precision": 0.7789473684210526,
+       "recall": 0.4471299093655589,
+       "fp": 42,
+       "tp": 148,
+       "n_pos": 331,
+       "far24": 8.624,
+       "far24_kej": 2.6693,
+       "cakupan": 0.3004,
+       "prev": 0.150045,
+       "lead": {
+        "n_onset": 24,
+        "n_diperingatkan": 9,
+        "lead_median_min": 38.0,
+        "lead_min_min": 1,
+        "lead_maks_min": 55
+       },
+       "separuh": {
+        "awal": {
+         "precision": 0.8807339449541285,
+         "recall": 0.6442953020134228,
+         "fp": 13,
+         "n_pos": 149
+        },
+        "akhir": {
+         "precision": 0.6419753086419753,
+         "recall": 0.2857142857142857,
+         "fp": 29,
+         "n_pos": 182
+        }
+       },
+       "thr": null,
+       "h": 30,
+       "auprc": null,
+       "auc": null
+      }
+     },
+     "fp_total": 935,
+     "tp_total": 3804,
+     "menit_alarm_total": 4739,
+     "fp_kejadian_total": 263,
+     "n_onset": 390,
+     "n_diperingatkan": 219,
+     "fold_far_le6": 7,
+     "fold_recall_gt0": 9
+    },
+    "H1b_stat_atau_rule": {
+     "n_fold": 9,
+     "per_fold": {
+      "F-10": {
+       "precision": 0.7065158858373721,
+       "recall": 0.9411764705882353,
+       "fp": 545,
+       "tp": 1312,
+       "n_pos": 1394,
+       "far24": 79.6347,
+       "far24_kej": 13.8813,
+       "cakupan": 0.673,
+       "prev": 0.184124,
+       "lead": {
+        "n_onset": 23,
+        "n_diperingatkan": 18,
+        "lead_median_min": 13.5,
+        "lead_min_min": 1,
+        "lead_maks_min": 48
+       },
+       "separuh": {
+        "awal": {
+         "precision": 0.6367432150313153,
+         "recall": 0.9214501510574018,
+         "fp": 174,
+         "n_pos": 331
+        },
+        "akhir": {
+         "precision": 0.7307692307692307,
+         "recall": 0.9473189087488241,
+         "fp": 371,
+         "n_pos": 1063
+        }
+       },
+       "thr": null,
+       "h": 30,
+       "auprc": null,
+       "auc": null
+      },
+      "F-12": {
+       "precision": 0.6070528967254408,
+       "recall": 0.8450210378681627,
+       "fp": 780,
+       "tp": 1205,
+       "n_pos": 1426,
+       "far24": 13.2098,
+       "far24_kej": 2.6589,
+       "cakupan": 0.0855,
+       "prev": 0.192963,
+       "lead": {
+        "n_onset": 92,
+        "n_diperingatkan": 79,
+        "lead_median_min": 2.0,
+        "lead_min_min": 1,
+        "lead_maks_min": 60
+       },
+       "separuh": {
+        "awal": {
+         "precision": 0.682092555331992,
+         "recall": 0.8662691652470187,
+         "fp": 474,
+         "n_pos": 1174
+        },
+        "akhir": {
+         "precision": 0.3805668016194332,
+         "recall": 0.746031746031746,
+         "fp": 306,
+         "n_pos": 252
+        }
+       },
+       "thr": null,
+       "h": 30,
+       "auprc": null,
+       "auc": null
+      },
+      "F-14": {
+       "precision": 0.3780487804878049,
+       "recall": 0.7526011560693642,
+       "fp": 1071,
+       "tp": 651,
+       "n_pos": 865,
+       "far24": 4.868,
+       "far24_kej": 0.5772,
+       "cakupan": 0.0327,
+       "prev": 0.083165,
+       "lead": {
+        "n_onset": 58,
+        "n_diperingatkan": 50,
+        "lead_median_min": 7.5,
+        "lead_min_min": 1,
+        "lead_maks_min": 56
+       },
+       "separuh": {
+        "awal": {
+         "precision": 0.28554070473876064,
+         "recall": 0.6891495601173021,
+         "fp": 588,
+         "n_pos": 341
+        },
+        "akhir": {
+         "precision": 0.46273637374860954,
+         "recall": 0.7938931297709924,
+         "fp": 483,
+         "n_pos": 524
+        }
+       },
+       "thr": null,
+       "h": 30,
+       "auprc": null,
+       "auc": null
+      },
+      "F-15A": {
+       "precision": 0.46467165419783873,
+       "recall": 0.8008595988538681,
+       "fp": 644,
+       "tp": 559,
+       "n_pos": 698,
+       "far24": 29.4934,
+       "far24_kej": 4.7171,
+       "cakupan": 0.1915,
+       "prev": 0.113385,
+       "lead": {
+        "n_onset": 33,
+        "n_diperingatkan": 25,
+        "lead_median_min": 3.0,
+        "lead_min_min": 1,
+        "lead_maks_min": 49
+       },
+       "separuh": {
+        "awal": {
+         "precision": 0.14240506329113925,
+         "recall": 0.6617647058823529,
+         "fp": 271,
+         "n_pos": 68
+        },
+        "akhir": {
+         "precision": 0.5794813979706878,
+         "recall": 0.8158730158730159,
+         "fp": 373,
+         "n_pos": 630
+        }
+       },
+       "thr": null,
+       "h": 30,
+       "auprc": null,
+       "auc": null
+      },
+      "F-15_S": {
+       "precision": 0.4467455621301775,
+       "recall": 0.7603222557905337,
+       "fp": 935,
+       "tp": 755,
+       "n_pos": 993,
+       "far24": 14.7156,
+       "far24_kej": 2.5496,
+       "cakupan": 0.0903,
+       "prev": 0.118851,
+       "lead": {
+        "n_onset": 64,
+        "n_diperingatkan": 50,
+        "lead_median_min": 3.0,
+        "lead_min_min": 1,
+        "lead_maks_min": 59
+       },
+       "separuh": {
+        "awal": {
+         "precision": 0.5406593406593406,
+         "recall": 0.8105436573311368,
+         "fp": 418,
+         "n_pos": 607
+        },
+        "akhir": {
+         "precision": 0.3371794871794872,
+         "recall": 0.6813471502590673,
+         "fp": 517,
+         "n_pos": 386
+        }
+       },
+       "thr": null,
+       "h": 30,
+       "auprc": null,
+       "auc": null
+      },
+      "F-5": {
+       "precision": 0.42200452147701584,
+       "recall": 0.9017713365539453,
+       "fp": 767,
+       "tp": 560,
+       "n_pos": 621,
+       "far24": 2.9938,
+       "far24_kej": 0.3942,
+       "cakupan": 0.0171,
+       "prev": 0.098073,
+       "lead": {
+        "n_onset": 40,
+        "n_diperingatkan": 36,
+        "lead_median_min": 1.0,
+        "lead_min_min": 1,
+        "lead_maks_min": 52
+       },
+       "separuh": {
+        "awal": {
+         "precision": 0.2916666666666667,
+         "recall": 0.8990825688073395,
+         "fp": 476,
+         "n_pos": 218
+        },
+        "akhir": {
+         "precision": 0.5557251908396946,
+         "recall": 0.9032258064516129,
+         "fp": 291,
+         "n_pos": 403
+        }
+       },
+       "thr": null,
+       "h": 30,
+       "auprc": null,
+       "auc": null
+      },
+      "F-7": {
+       "precision": 0.46938775510204084,
+       "recall": 0.8194774346793349,
+       "fp": 390,
+       "tp": 345,
+       "n_pos": 421,
+       "far24": 24.8606,
+       "far24_kej": 4.2709,
+       "cakupan": 0.1079,
+       "prev": 0.169621,
+       "lead": {
+        "n_onset": 28,
+        "n_diperingatkan": 27,
+        "lead_median_min": 7.0,
+        "lead_min_min": 1,
+        "lead_maks_min": 53
+       },
+       "separuh": {
+        "awal": {
+         "precision": 0.2482758620689655,
+         "recall": 0.5142857142857142,
+         "fp": 109,
+         "n_pos": 70
+        },
+        "akhir": {
+         "precision": 0.523728813559322,
+         "recall": 0.8803418803418803,
+         "fp": 281,
+         "n_pos": 351
+        }
+       },
+       "thr": null,
+       "h": 30,
+       "auprc": null,
+       "auc": null
+      },
+      "F-9": {
+       "precision": 0.6429840142095915,
+       "recall": 0.8557919621749409,
+       "fp": 201,
+       "tp": 362,
+       "n_pos": 423,
+       "far24": 12.9013,
+       "far24_kej": 1.8614,
+       "cakupan": 0.0707,
+       "prev": 0.261757,
+       "lead": {
+        "n_onset": 28,
+        "n_diperingatkan": 25,
+        "lead_median_min": 1.0,
+        "lead_min_min": 1,
+        "lead_maks_min": 41
+       },
+       "separuh": {
+        "awal": {
+         "precision": 0.7524752475247525,
+         "recall": 0.8967551622418879,
+         "fp": 100,
+         "n_pos": 339
+        },
+        "akhir": {
+         "precision": 0.36477987421383645,
+         "recall": 0.6904761904761905,
+         "fp": 101,
+         "n_pos": 84
+        }
+       },
+       "thr": null,
+       "h": 30,
+       "auprc": null,
+       "auc": null
+      },
+      "F-9_A": {
+       "precision": 0.543778801843318,
+       "recall": 0.7129909365558912,
+       "fp": 198,
+       "tp": 236,
+       "n_pos": 331,
+       "far24": 40.6559,
+       "far24_kej": 8.8293,
+       "cakupan": 0.3004,
+       "prev": 0.150045,
+       "lead": {
+        "n_onset": 24,
+        "n_diperingatkan": 19,
+        "lead_median_min": 5.0,
+        "lead_min_min": 1,
+        "lead_maks_min": 58
+       },
+       "separuh": {
+        "awal": {
+         "precision": 0.6078431372549019,
+         "recall": 0.8322147651006712,
+         "fp": 80,
+         "n_pos": 149
+        },
+        "akhir": {
+         "precision": 0.48695652173913045,
+         "recall": 0.6153846153846154,
+         "fp": 118,
+         "n_pos": 182
+        }
+       },
+       "thr": null,
+       "h": 30,
+       "auprc": null,
+       "auc": null
+      }
+     },
+     "fp_total": 5531,
+     "tp_total": 5985,
+     "menit_alarm_total": 11516,
+     "fp_kejadian_total": 884,
+     "n_onset": 390,
+     "n_diperingatkan": 329,
+     "fold_far_le6": 2,
+     "fold_recall_gt0": 9
+    },
+    "rule_kanal": {
+     "n_fold": 9,
+     "per_fold": {
+      "F-10": {
+       "precision": 0.886223440712817,
+       "recall": 0.9275466284074605,
+       "fp": 166,
+       "tp": 1293,
+       "n_pos": 1394,
+       "far24": 24.2557,
+       "far24_kej": 10.6667,
+       "cakupan": 0.673,
+       "prev": 0.184124,
+       "lead": {
+        "n_onset": 23,
+        "n_diperingatkan": 15,
+        "lead_median_min": 14.0,
+        "lead_min_min": 1,
+        "lead_maks_min": 59
+       },
+       "separuh": {
+        "awal": {
+         "precision": 0.8245125348189415,
+         "recall": 0.8942598187311178,
+         "fp": 63,
+         "n_pos": 331
+        },
+        "akhir": {
+         "precision": 0.9063636363636364,
+         "recall": 0.9379115710253998,
+         "fp": 103,
+         "n_pos": 1063
+        }
+       },
+       "thr": null,
+       "h": 30,
+       "auprc": null,
+       "auc": null
+      },
+      "F-12": {
+       "precision": 0.7597911227154047,
+       "recall": 0.8162692847124825,
+       "fp": 368,
+       "tp": 1164,
+       "n_pos": 1426,
+       "far24": 6.2323,
+       "far24_kej": 2.7097,
+       "cakupan": 0.0855,
+       "prev": 0.192963,
+       "lead": {
+        "n_onset": 92,
+        "n_diperingatkan": 75,
+        "lead_median_min": 2.0,
+        "lead_min_min": 1,
+        "lead_maks_min": 60
+       },
+       "separuh": {
+        "awal": {
+         "precision": 0.7729772191673213,
+         "recall": 0.838160136286201,
+         "fp": 289,
+         "n_pos": 1174
+        },
+        "akhir": {
+         "precision": 0.694980694980695,
+         "recall": 0.7142857142857143,
+         "fp": 79,
+         "n_pos": 252
+        }
+       },
+       "thr": null,
+       "h": 30,
+       "auprc": null,
+       "auc": null
+      },
+      "F-14": {
+       "precision": 0.6225641025641026,
+       "recall": 0.7017341040462428,
+       "fp": 368,
+       "tp": 607,
+       "n_pos": 865,
+       "far24": 1.6727,
+       "far24_kej": 0.5545,
+       "cakupan": 0.0327,
+       "prev": 0.083165,
+       "lead": {
+        "n_onset": 58,
+        "n_diperingatkan": 49,
+        "lead_median_min": 9.0,
+        "lead_min_min": 1,
+        "lead_maks_min": 57
+       },
+       "separuh": {
+        "awal": {
+         "precision": 0.5291375291375291,
+         "recall": 0.6656891495601173,
+         "fp": 202,
+         "n_pos": 341
+        },
+        "akhir": {
+         "precision": 0.6959706959706959,
+         "recall": 0.7251908396946565,
+         "fp": 166,
+         "n_pos": 524
+        }
+       },
+       "thr": null,
+       "h": 30,
+       "auprc": null,
+       "auc": null
+      },
+      "F-15A": {
+       "precision": 0.6743886743886743,
+       "recall": 0.7507163323782235,
+       "fp": 253,
+       "tp": 524,
+       "n_pos": 698,
+       "far24": 11.5867,
+       "far24_kej": 4.1217,
+       "cakupan": 0.1915,
+       "prev": 0.113385,
+       "lead": {
+        "n_onset": 33,
+        "n_diperingatkan": 24,
+        "lead_median_min": 6.0,
+        "lead_min_min": 1,
+        "lead_maks_min": 55
+       },
+       "separuh": {
+        "awal": {
+         "precision": 0.3697478991596639,
+         "recall": 0.6470588235294118,
+         "fp": 75,
+         "n_pos": 68
+        },
+        "akhir": {
+         "precision": 0.729483282674772,
+         "recall": 0.7619047619047619,
+         "fp": 178,
+         "n_pos": 630
+        }
+       },
+       "thr": null,
+       "h": 30,
+       "auprc": null,
+       "auc": null
+      },
+      "F-15_S": {
+       "precision": 0.6531400966183575,
+       "recall": 0.6807653575025177,
+       "fp": 359,
+       "tp": 676,
+       "n_pos": 993,
+       "far24": 5.6501,
+       "far24_kej": 2.2034,
+       "cakupan": 0.0903,
+       "prev": 0.118851,
+       "lead": {
+        "n_onset": 64,
+        "n_diperingatkan": 44,
+        "lead_median_min": 5.5,
+        "lead_min_min": 1,
+        "lead_maks_min": 59
+       },
+       "separuh": {
+        "awal": {
+         "precision": 0.7483660130718954,
+         "recall": 0.7545304777594728,
+         "fp": 154,
+         "n_pos": 607
+        },
+        "akhir": {
+         "precision": 0.5153664302600472,
+         "recall": 0.5647668393782384,
+         "fp": 205,
+         "n_pos": 386
+        }
+       },
+       "thr": null,
+       "h": 30,
+       "auprc": null,
+       "auc": null
+      },
+      "F-5": {
+       "precision": 0.717201166180758,
+       "recall": 0.7922705314009661,
+       "fp": 194,
+       "tp": 492,
+       "n_pos": 621,
+       "far24": 0.7572,
+       "far24_kej": 0.4215,
+       "cakupan": 0.0171,
+       "prev": 0.098073,
+       "lead": {
+        "n_onset": 40,
+        "n_diperingatkan": 29,
+        "lead_median_min": 3.0,
+        "lead_min_min": 1,
+        "lead_maks_min": 58
+       },
+       "separuh": {
+        "awal": {
+         "precision": 0.6809338521400778,
+         "recall": 0.8027522935779816,
+         "fp": 82,
+         "n_pos": 218
+        },
+        "akhir": {
+         "precision": 0.7389277389277389,
+         "recall": 0.7866004962779156,
+         "fp": 112,
+         "n_pos": 403
+        }
+       },
+       "thr": null,
+       "h": 30,
+       "auprc": null,
+       "auc": null
+      },
+      "F-7": {
+       "precision": 0.631578947368421,
+       "recall": 0.7695961995249406,
+       "fp": 189,
+       "tp": 324,
+       "n_pos": 421,
+       "far24": 12.0478,
+       "far24_kej": 5.4183,
+       "cakupan": 0.1079,
+       "prev": 0.169621,
+       "lead": {
+        "n_onset": 28,
+        "n_diperingatkan": 27,
+        "lead_median_min": 11.0,
+        "lead_min_min": 1,
+        "lead_maks_min": 58
+       },
+       "separuh": {
+        "awal": {
+         "precision": 0.31868131868131866,
+         "recall": 0.4142857142857143,
+         "fp": 62,
+         "n_pos": 70
+        },
+        "akhir": {
+         "precision": 0.6990521327014217,
+         "recall": 0.8404558404558404,
+         "fp": 127,
+         "n_pos": 351
+        }
+       },
+       "thr": null,
+       "h": 30,
+       "auprc": null,
+       "auc": null
+      },
+      "F-9": {
+       "precision": 0.7237851662404092,
+       "recall": 0.6690307328605201,
+       "fp": 108,
+       "tp": 283,
+       "n_pos": 423,
+       "far24": 6.932,
+       "far24_kej": 3.1451,
+       "cakupan": 0.0707,
+       "prev": 0.261757,
+       "lead": {
+        "n_onset": 28,
+        "n_diperingatkan": 25,
+        "lead_median_min": 2.0,
+        "lead_min_min": 1,
+        "lead_maks_min": 50
+       },
+       "separuh": {
+        "awal": {
+         "precision": 0.8451178451178452,
+         "recall": 0.7404129793510325,
+         "fp": 46,
+         "n_pos": 339
+        },
+        "akhir": {
+         "precision": 0.3404255319148936,
+         "recall": 0.38095238095238093,
+         "fp": 62,
+         "n_pos": 84
+        }
+       },
+       "thr": null,
+       "h": 30,
+       "auprc": null,
+       "auc": null
+      },
+      "F-9_A": {
+       "precision": 0.6835443037974683,
+       "recall": 0.6525679758308157,
+       "fp": 100,
+       "tp": 216,
+       "n_pos": 331,
+       "far24": 20.5333,
+       "far24_kej": 10.0613,
+       "cakupan": 0.3004,
+       "prev": 0.150045,
+       "lead": {
+        "n_onset": 24,
+        "n_diperingatkan": 19,
+        "lead_median_min": 14.0,
+        "lead_min_min": 1,
+        "lead_maks_min": 58
+       },
+       "separuh": {
+        "awal": {
+         "precision": 0.8104575163398693,
+         "recall": 0.8322147651006712,
+         "fp": 29,
+         "n_pos": 149
+        },
+        "akhir": {
+         "precision": 0.5644171779141104,
+         "recall": 0.5054945054945055,
+         "fp": 71,
+         "n_pos": 182
+        }
+       },
+       "thr": null,
+       "h": 30,
+       "auprc": null,
+       "auc": null
+      }
+     },
+     "fp_total": 2105,
+     "tp_total": 5579,
+     "menit_alarm_total": 7684,
+     "fp_kejadian_total": 876,
+     "n_onset": 390,
+     "n_diperingatkan": 307,
+     "fold_far_le6": 3,
+     "fold_recall_gt0": 9
+    },
+    "stat_cusum": {
+     "n_fold": 9,
+     "per_fold": {
+      "F-10": {
+       "precision": 0.6488427773343974,
+       "recall": 0.5832137733142038,
+       "fp": 440,
+       "tp": 813,
+       "n_pos": 1394,
+       "far24": 64.2922,
+       "far24_kej": 5.2603,
+       "cakupan": 0.673,
+       "prev": 0.184124,
+       "lead": {
+        "n_onset": 23,
+        "n_diperingatkan": 15,
+        "lead_median_min": 15.0,
+        "lead_min_min": 1,
+        "lead_maks_min": 52
+       },
+       "separuh": {
+        "awal": {
+         "precision": 0.6197604790419161,
+         "recall": 0.6253776435045317,
+         "fp": 127,
+         "n_pos": 331
+        },
+        "akhir": {
+         "precision": 0.6594124047878128,
+         "recall": 0.5700846660395108,
+         "fp": 313,
+         "n_pos": 1063
+        }
+       },
+       "thr": null,
+       "h": 30,
+       "auprc": null,
+       "auc": null
+      },
+      "F-12": {
+       "precision": 0.60099573257468,
+       "recall": 0.5925666199158486,
+       "fp": 561,
+       "tp": 845,
+       "n_pos": 1426,
+       "far24": 9.5009,
+       "far24_kej": 0.525,
+       "cakupan": 0.0855,
+       "prev": 0.192963,
+       "lead": {
+        "n_onset": 92,
+        "n_diperingatkan": 62,
+        "lead_median_min": 9.0,
+        "lead_min_min": 1,
+        "lead_maks_min": 53
+       },
+       "separuh": {
+        "awal": {
+         "precision": 0.7191574724172518,
+         "recall": 0.610732538330494,
+         "fp": 280,
+         "n_pos": 1174
+        },
+        "akhir": {
+         "precision": 0.31295843520782396,
+         "recall": 0.5079365079365079,
+         "fp": 281,
+         "n_pos": 252
+        }
+       },
+       "thr": null,
+       "h": 30,
+       "auprc": null,
+       "auc": null
+      },
+      "F-14": {
+       "precision": 0.34661921708185056,
+       "recall": 0.5630057803468208,
+       "fp": 918,
+       "tp": 487,
+       "n_pos": 865,
+       "far24": 4.1725,
+       "far24_kej": 0.3045,
+       "cakupan": 0.0327,
+       "prev": 0.083165,
+       "lead": {
+        "n_onset": 58,
+        "n_diperingatkan": 40,
+        "lead_median_min": 8.0,
+        "lead_min_min": 1,
+        "lead_maks_min": 56
+       },
+       "separuh": {
+        "awal": {
+         "precision": 0.25152439024390244,
+         "recall": 0.4838709677419355,
+         "fp": 491,
+         "n_pos": 341
+        },
+        "akhir": {
+         "precision": 0.42990654205607476,
+         "recall": 0.6145038167938931,
+         "fp": 427,
+         "n_pos": 524
+        }
+       },
+       "thr": null,
+       "h": 30,
+       "auprc": null,
+       "auc": null
+      },
+      "F-15A": {
+       "precision": 0.39631901840490796,
+       "recall": 0.46275071633237824,
+       "fp": 492,
+       "tp": 323,
+       "n_pos": 698,
+       "far24": 22.5322,
+       "far24_kej": 1.7403,
+       "cakupan": 0.1915,
+       "prev": 0.113385,
+       "lead": {
+        "n_onset": 33,
+        "n_diperingatkan": 24,
+        "lead_median_min": 4.0,
+        "lead_min_min": 1,
+        "lead_maks_min": 49
+       },
+       "separuh": {
+        "awal": {
+         "precision": 0.11885245901639344,
+         "recall": 0.4264705882352941,
+         "fp": 215,
+         "n_pos": 68
+        },
+        "akhir": {
+         "precision": 0.5148861646234676,
+         "recall": 0.4666666666666667,
+         "fp": 277,
+         "n_pos": 630
+        }
+       },
+       "thr": null,
+       "h": 30,
+       "auprc": null,
+       "auc": null
+      },
+      "F-15_S": {
+       "precision": 0.401541095890411,
+       "recall": 0.47230614300100704,
+       "fp": 699,
+       "tp": 469,
+       "n_pos": 993,
+       "far24": 11.0013,
+       "far24_kej": 0.8184,
+       "cakupan": 0.0903,
+       "prev": 0.118851,
+       "lead": {
+        "n_onset": 64,
+        "n_diperingatkan": 36,
+        "lead_median_min": 7.5,
+        "lead_min_min": 1,
+        "lead_maks_min": 58
+       },
+       "separuh": {
+        "awal": {
+         "precision": 0.516566265060241,
+         "recall": 0.5650741350906096,
+         "fp": 321,
+         "n_pos": 607
+        },
+        "akhir": {
+         "precision": 0.25,
+         "recall": 0.32642487046632124,
+         "fp": 378,
+         "n_pos": 386
+        }
+       },
+       "thr": null,
+       "h": 30,
+       "auprc": null,
+       "auc": null
+      },
+      "F-5": {
+       "precision": 0.41385281385281386,
+       "recall": 0.7697262479871175,
+       "fp": 677,
+       "tp": 478,
+       "n_pos": 621,
+       "far24": 2.6425,
+       "far24_kej": 0.1913,
+       "cakupan": 0.0171,
+       "prev": 0.098073,
+       "lead": {
+        "n_onset": 40,
+        "n_diperingatkan": 35,
+        "lead_median_min": 3.0,
+        "lead_min_min": 1,
+        "lead_maks_min": 55
+       },
+       "separuh": {
+        "awal": {
+         "precision": 0.23743500866551126,
+         "recall": 0.6284403669724771,
+         "fp": 440,
+         "n_pos": 218
+        },
+        "akhir": {
+         "precision": 0.5899653979238755,
+         "recall": 0.8461538461538461,
+         "fp": 237,
+         "n_pos": 403
+        }
+       },
+       "thr": null,
+       "h": 30,
+       "auprc": null,
+       "auc": null
+      },
+      "F-7": {
+       "precision": 0.5051903114186851,
+       "recall": 0.6935866983372921,
+       "fp": 286,
+       "tp": 292,
+       "n_pos": 421,
+       "far24": 18.2311,
+       "far24_kej": 0.8287,
+       "cakupan": 0.1079,
+       "prev": 0.169621,
+       "lead": {
+        "n_onset": 28,
+        "n_diperingatkan": 17,
+        "lead_median_min": 8.0,
+        "lead_min_min": 1,
+        "lead_maks_min": 59
+       },
+       "separuh": {
+        "awal": {
+         "precision": 0.33707865168539325,
+         "recall": 0.42857142857142855,
+         "fp": 59,
+         "n_pos": 70
+        },
+        "akhir": {
+         "precision": 0.5357873210633947,
+         "recall": 0.7464387464387464,
+         "fp": 227,
+         "n_pos": 351
+        }
+       },
+       "thr": null,
+       "h": 30,
+       "auprc": null,
+       "auc": null
+      },
+      "F-9": {
+       "precision": 0.6935817805383023,
+       "recall": 0.7919621749408984,
+       "fp": 148,
+       "tp": 335,
+       "n_pos": 423,
+       "far24": 9.4994,
+       "far24_kej": 0.1926,
+       "cakupan": 0.0707,
+       "prev": 0.261757,
+       "lead": {
+        "n_onset": 28,
+        "n_diperingatkan": 20,
+        "lead_median_min": 1.0,
+        "lead_min_min": 1,
+        "lead_maks_min": 55
+       },
+       "separuh": {
+        "awal": {
+         "precision": 0.7533875338753387,
+         "recall": 0.8200589970501475,
+         "fp": 91,
+         "n_pos": 339
+        },
+        "akhir": {
+         "precision": 0.5,
+         "recall": 0.6785714285714286,
+         "fp": 57,
+         "n_pos": 84
+        }
+       },
+       "thr": null,
+       "h": 30,
+       "auprc": null,
+       "auc": null
+      },
+      "F-9_A": {
+       "precision": 0.5454545454545454,
+       "recall": 0.5075528700906344,
+       "fp": 140,
+       "tp": 168,
+       "n_pos": 331,
+       "far24": 28.7466,
+       "far24_kej": 1.848,
+       "cakupan": 0.3004,
+       "prev": 0.150045,
+       "lead": {
+        "n_onset": 24,
+        "n_diperingatkan": 11,
+        "lead_median_min": 24.0,
+        "lead_min_min": 1,
+        "lead_maks_min": 48
+       },
+       "separuh": {
+        "awal": {
+         "precision": 0.6,
+         "recall": 0.6442953020134228,
+         "fp": 64,
+         "n_pos": 149
+        },
+        "akhir": {
+         "precision": 0.4864864864864865,
+         "recall": 0.3956043956043956,
+         "fp": 76,
+         "n_pos": 182
+        }
+       },
+       "thr": null,
+       "h": 30,
+       "auprc": null,
+       "auc": null
+      }
+     },
+     "fp_total": 4361,
+     "tp_total": 4210,
+     "menit_alarm_total": 8571,
+     "fp_kejadian_total": 298,
+     "n_onset": 390,
+     "n_diperingatkan": 260,
+     "fold_far_le6": 2,
+     "fold_recall_gt0": 9
+    }
+   }
+  },
+  "shk": {
+   "elapsed_s": 15.0,
+   "alpha_budget": 0.004166666666666667,
+   "seed": 42,
+   "model": {
+    "H2_ML_dan_stat": {
+     "n_fold": 9,
+     "per_fold": {
+      "F-10": {
+       "precision": null,
+       "recall": 0.0,
+       "fp": 0,
+       "tp": 0,
+       "n_pos": 146,
+       "far24": 0.0,
+       "far24_kej": 0.0,
+       "cakupan": 0.677,
+       "prev": 0.018483,
+       "lead": {
+        "n_onset": 15,
+        "n_diperingatkan": 0,
+        "lead_median_min": null,
+        "lead_min_min": null,
+        "lead_maks_min": null
+       },
+       "separuh": {
+        "awal": {
+         "precision": null,
+         "recall": 0.0,
+         "fp": 0,
+         "n_pos": 109
+        },
+        "akhir": {
+         "precision": null,
+         "recall": 0.0,
+         "fp": 0,
+         "n_pos": 37
+        }
+       },
+       "thr": 0.398253,
+       "h": 30,
+       "auprc": 0.0218,
+       "auc": 0.5912
+      },
+      "F-12": {
+       "precision": 0.026717557251908396,
+       "recall": 0.03225806451612903,
+       "fp": 255,
+       "tp": 7,
+       "n_pos": 217,
+       "far24": 4.2577,
+       "far24_kej": 0.935,
+       "cakupan": 0.0625,
+       "prev": 0.040148,
+       "lead": {
+        "n_onset": 20,
+        "n_diperingatkan": 5,
+        "lead_median_min": 13.0,
+        "lead_min_min": 1,
+        "lead_maks_min": 60
+       },
+       "separuh": {
+        "awal": {
+         "precision": 0.02734375,
+         "recall": 0.07865168539325842,
+         "fp": 249,
+         "n_pos": 89
+        },
+        "akhir": {
+         "precision": 0.0,
+         "recall": 0.0,
+         "fp": 6,
+         "n_pos": 128
+        }
+       },
+       "thr": 0.04018,
+       "h": 30,
+       "auprc": 0.0499,
+       "auc": 0.5491
+      },
+      "F-14": {
+       "precision": 0.3492063492063492,
+       "recall": 0.02894736842105263,
+       "fp": 41,
+       "tp": 22,
+       "n_pos": 760,
+       "far24": 0.1863,
+       "far24_kej": 0.0727,
+       "cakupan": 0.0353,
+       "prev": 0.067827,
+       "lead": {
+        "n_onset": 62,
+        "n_diperingatkan": 9,
+        "lead_median_min": 20.0,
+        "lead_min_min": 2,
+        "lead_maks_min": 38
+       },
+       "separuh": {
+        "awal": {
+         "precision": 0.44680851063829785,
+         "recall": 0.11229946524064172,
+         "fp": 26,
+         "n_pos": 187
+        },
+        "akhir": {
+         "precision": 0.0625,
+         "recall": 0.0017452006980802793,
+         "fp": 15,
+         "n_pos": 573
+        }
+       },
+       "thr": 0.028578,
+       "h": 30,
+       "auprc": 0.0783,
+       "auc": 0.4932
+      },
+      "F-15A": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "fp": 30,
+       "tp": 0,
+       "n_pos": 41,
+       "far24": 1.3458,
+       "far24_kej": 0.1346,
+       "cakupan": 0.2017,
+       "prev": 0.006323,
+       "lead": {
+        "n_onset": 6,
+        "n_diperingatkan": 0,
+        "lead_median_min": null,
+        "lead_min_min": null,
+        "lead_maks_min": null
+       },
+       "separuh": {
+        "awal": {
+         "precision": 0.0,
+         "recall": 0.0,
+         "fp": 4,
+         "n_pos": 18
+        },
+        "akhir": {
+         "precision": 0.0,
+         "recall": 0.0,
+         "fp": 26,
+         "n_pos": 23
+        }
+       },
+       "thr": 0.095145,
+       "h": 30,
+       "auprc": 0.0076,
+       "auc": 0.5795
+      },
+      "F-15_S": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "fp": 8,
+       "tp": 0,
+       "n_pos": 259,
+       "far24": 0.1249,
+       "far24_kej": 0.0624,
+       "cakupan": 0.1232,
+       "prev": 0.022731,
+       "lead": {
+        "n_onset": 25,
+        "n_diperingatkan": 0,
+        "lead_median_min": null,
+        "lead_min_min": null,
+        "lead_maks_min": null
+       },
+       "separuh": {
+        "awal": {
+         "precision": null,
+         "recall": 0.0,
+         "fp": 0,
+         "n_pos": 90
+        },
+        "akhir": {
+         "precision": 0.0,
+         "recall": 0.0,
+         "fp": 8,
+         "n_pos": 169
+        }
+       },
+       "thr": 0.060093,
+       "h": 30,
+       "auprc": 0.0354,
+       "auc": 0.6845
+      },
+      "F-5": {
+       "precision": 0.052083333333333336,
+       "recall": 0.020833333333333332,
+       "fp": 91,
+       "tp": 5,
+       "n_pos": 240,
+       "far24": 0.3547,
+       "far24_kej": 0.1208,
+       "cakupan": 0.0193,
+       "prev": 0.033613,
+       "lead": {
+        "n_onset": 30,
+        "n_diperingatkan": 2,
+        "lead_median_min": 24.0,
+        "lead_min_min": 1,
+        "lead_maks_min": 47
+       },
+       "separuh": {
+        "awal": {
+         "precision": 0.0684931506849315,
+         "recall": 0.029940119760479042,
+         "fp": 68,
+         "n_pos": 167
+        },
+        "akhir": {
+         "precision": 0.0,
+         "recall": 0.0,
+         "fp": 23,
+         "n_pos": 73
+        }
+       },
+       "thr": 0.064516,
+       "h": 30,
+       "auprc": 0.0634,
+       "auc": 0.5834
+      },
+      "F-7": {
+       "precision": 0.07142857142857142,
+       "recall": 0.003745318352059925,
+       "fp": 13,
+       "tp": 1,
+       "n_pos": 267,
+       "far24": 0.8175,
+       "far24_kej": 0.2515,
+       "cakupan": 0.1192,
+       "prev": 0.096704,
+       "lead": {
+        "n_onset": 14,
+        "n_diperingatkan": 1,
+        "lead_median_min": 54.0,
+        "lead_min_min": 54,
+        "lead_maks_min": 54
+       },
+       "separuh": {
+        "awal": {
+         "precision": 0.07142857142857142,
+         "recall": 0.018867924528301886,
+         "fp": 13,
+         "n_pos": 53
+        },
+        "akhir": {
+         "precision": null,
+         "recall": 0.0,
+         "fp": 0,
+         "n_pos": 214
+        }
+       },
+       "thr": 0.086094,
+       "h": 30,
+       "auprc": 0.102,
+       "auc": 0.5785
+      },
+      "F-9": {
+       "precision": 0.048458149779735685,
+       "recall": 0.24444444444444444,
+       "fp": 216,
+       "tp": 11,
+       "n_pos": 45,
+       "far24": 13.6134,
+       "far24_kej": 2.8361,
+       "cakupan": 0.0809,
+       "prev": 0.024311,
+       "lead": {
+        "n_onset": 6,
+        "n_diperingatkan": 3,
+        "lead_median_min": 24.0,
+        "lead_min_min": 1,
+        "lead_maks_min": 59
+       },
+       "separuh": {
+        "awal": {
+         "precision": 0.05789473684210526,
+         "recall": 0.34375,
+         "fp": 179,
+         "n_pos": 32
+        },
+        "akhir": {
+         "precision": 0.0,
+         "recall": 0.0,
+         "fp": 37,
+         "n_pos": 13
+        }
+       },
+       "thr": 0.036272,
+       "h": 30,
+       "auprc": 0.2086,
+       "auc": 0.7413
+      },
+      "F-9_A": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "fp": 13,
+       "tp": 0,
+       "n_pos": 30,
+       "far24": 2.556,
+       "far24_kej": 1.1797,
+       "cakupan": 0.3204,
+       "prev": 0.012733,
+       "lead": {
+        "n_onset": 3,
+        "n_diperingatkan": 1,
+        "lead_median_min": 8.0,
+        "lead_min_min": 8,
+        "lead_maks_min": 8
+       },
+       "separuh": {
+        "awal": {
+         "precision": 0.0,
+         "recall": null,
+         "fp": 5,
+         "n_pos": 0
+        },
+        "akhir": {
+         "precision": 0.0,
+         "recall": 0.0,
+         "fp": 8,
+         "n_pos": 30
+        }
+       },
+       "thr": 0.094916,
+       "h": 30,
+       "auprc": 0.0369,
+       "auc": 0.773
+      }
+     },
+     "fp_total": 667,
+     "tp_total": 46,
+     "menit_alarm_total": 713,
+     "fp_kejadian_total": 165,
+     "n_onset": 181,
+     "n_diperingatkan": 21,
+     "fold_far_le6": 8,
+     "fold_recall_gt0": 5
+    },
+    "H2b_ML_dan_stat_atau_rule": {
+     "n_fold": 9,
+     "per_fold": {
+      "F-10": {
+       "precision": null,
+       "recall": 0.0,
+       "fp": 0,
+       "tp": 0,
+       "n_pos": 146,
+       "far24": 0.0,
+       "far24_kej": 0.0,
+       "cakupan": 0.677,
+       "prev": 0.018483,
+       "lead": {
+        "n_onset": 15,
+        "n_diperingatkan": 0,
+        "lead_median_min": null,
+        "lead_min_min": null,
+        "lead_maks_min": null
+       },
+       "separuh": {
+        "awal": {
+         "precision": null,
+         "recall": 0.0,
+         "fp": 0,
+         "n_pos": 109
+        },
+        "akhir": {
+         "precision": null,
+         "recall": 0.0,
+         "fp": 0,
+         "n_pos": 37
+        }
+       },
+       "thr": 0.398253,
+       "h": 30,
+       "auprc": 0.0218,
+       "auc": 0.5912
+      },
+      "F-12": {
+       "precision": 0.034031413612565446,
+       "recall": 0.059907834101382486,
+       "fp": 369,
+       "tp": 13,
+       "n_pos": 217,
+       "far24": 6.1611,
+       "far24_kej": 1.0853,
+       "cakupan": 0.0625,
+       "prev": 0.040148,
+       "lead": {
+        "n_onset": 20,
+        "n_diperingatkan": 6,
+        "lead_median_min": 13.5,
+        "lead_min_min": 1,
+        "lead_maks_min": 60
+       },
+       "separuh": {
+        "awal": {
+         "precision": 0.032171581769437,
+         "recall": 0.1348314606741573,
+         "fp": 361,
+         "n_pos": 89
+        },
+        "akhir": {
+         "precision": 0.1111111111111111,
+         "recall": 0.0078125,
+         "fp": 8,
+         "n_pos": 128
+        }
+       },
+       "thr": 0.04018,
+       "h": 30,
+       "auprc": 0.0499,
+       "auc": 0.5491
+      },
+      "F-14": {
+       "precision": 0.32038834951456313,
+       "recall": 0.04342105263157895,
+       "fp": 70,
+       "tp": 33,
+       "n_pos": 760,
+       "far24": 0.3181,
+       "far24_kej": 0.1499,
+       "cakupan": 0.0353,
+       "prev": 0.067827,
+       "lead": {
+        "n_onset": 62,
+        "n_diperingatkan": 11,
+        "lead_median_min": 21.0,
+        "lead_min_min": 2,
+        "lead_maks_min": 57
+       },
+       "separuh": {
+        "awal": {
+         "precision": 0.36046511627906974,
+         "recall": 0.1657754010695187,
+         "fp": 55,
+         "n_pos": 187
+        },
+        "akhir": {
+         "precision": 0.11764705882352941,
+         "recall": 0.0034904013961605585,
+         "fp": 15,
+         "n_pos": 573
+        }
+       },
+       "thr": 0.028578,
+       "h": 30,
+       "auprc": 0.0783,
+       "auc": 0.4932
+      },
+      "F-15A": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "fp": 35,
+       "tp": 0,
+       "n_pos": 41,
+       "far24": 1.5701,
+       "far24_kej": 0.2243,
+       "cakupan": 0.2017,
+       "prev": 0.006323,
+       "lead": {
+        "n_onset": 6,
+        "n_diperingatkan": 0,
+        "lead_median_min": null,
+        "lead_min_min": null,
+        "lead_maks_min": null
+       },
+       "separuh": {
+        "awal": {
+         "precision": 0.0,
+         "recall": 0.0,
+         "fp": 4,
+         "n_pos": 18
+        },
+        "akhir": {
+         "precision": 0.0,
+         "recall": 0.0,
+         "fp": 31,
+         "n_pos": 23
+        }
+       },
+       "thr": 0.095145,
+       "h": 30,
+       "auprc": 0.0076,
+       "auc": 0.5795
+      },
+      "F-15_S": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "fp": 10,
+       "tp": 0,
+       "n_pos": 259,
+       "far24": 0.1561,
+       "far24_kej": 0.0937,
+       "cakupan": 0.1232,
+       "prev": 0.022731,
+       "lead": {
+        "n_onset": 25,
+        "n_diperingatkan": 0,
+        "lead_median_min": null,
+        "lead_min_min": null,
+        "lead_maks_min": null
+       },
+       "separuh": {
+        "awal": {
+         "precision": null,
+         "recall": 0.0,
+         "fp": 0,
+         "n_pos": 90
+        },
+        "akhir": {
+         "precision": 0.0,
+         "recall": 0.0,
+         "fp": 10,
+         "n_pos": 169
+        }
+       },
+       "thr": 0.060093,
+       "h": 30,
+       "auprc": 0.0354,
+       "auc": 0.6845
+      },
+      "F-5": {
+       "precision": 0.0782608695652174,
+       "recall": 0.0375,
+       "fp": 106,
+       "tp": 9,
+       "n_pos": 240,
+       "far24": 0.4132,
+       "far24_kej": 0.1481,
+       "cakupan": 0.0193,
+       "prev": 0.033613,
+       "lead": {
+        "n_onset": 30,
+        "n_diperingatkan": 5,
+        "lead_median_min": 5.0,
+        "lead_min_min": 1,
+        "lead_maks_min": 47
+       },
+       "separuh": {
+        "awal": {
+         "precision": 0.0989010989010989,
+         "recall": 0.05389221556886228,
+         "fp": 82,
+         "n_pos": 167
+        },
+        "akhir": {
+         "precision": 0.0,
+         "recall": 0.0,
+         "fp": 24,
+         "n_pos": 73
+        }
+       },
+       "thr": 0.064516,
+       "h": 30,
+       "auprc": 0.0634,
+       "auc": 0.5834
+      },
+      "F-7": {
+       "precision": 0.125,
+       "recall": 0.011235955056179775,
+       "fp": 21,
+       "tp": 3,
+       "n_pos": 267,
+       "far24": 1.3205,
+       "far24_kej": 0.6917,
+       "cakupan": 0.1192,
+       "prev": 0.096704,
+       "lead": {
+        "n_onset": 14,
+        "n_diperingatkan": 2,
+        "lead_median_min": 36.0,
+        "lead_min_min": 18,
+        "lead_maks_min": 54
+       },
+       "separuh": {
+        "awal": {
+         "precision": 0.125,
+         "recall": 0.05660377358490566,
+         "fp": 21,
+         "n_pos": 53
+        },
+        "akhir": {
+         "precision": null,
+         "recall": 0.0,
+         "fp": 0,
+         "n_pos": 214
+        }
+       },
+       "thr": 0.086094,
+       "h": 30,
+       "auprc": 0.102,
+       "auc": 0.5785
+      },
+      "F-9": {
+       "precision": 0.03942652329749104,
+       "recall": 0.24444444444444444,
+       "fp": 268,
+       "tp": 11,
+       "n_pos": 45,
+       "far24": 16.8908,
+       "far24_kej": 4.4748,
+       "cakupan": 0.0809,
+       "prev": 0.024311,
+       "lead": {
+        "n_onset": 6,
+        "n_diperingatkan": 4,
+        "lead_median_min": 2.5,
+        "lead_min_min": 1,
+        "lead_maks_min": 59
+       },
+       "separuh": {
+        "awal": {
+         "precision": 0.048034934497816595,
+         "recall": 0.34375,
+         "fp": 218,
+         "n_pos": 32
+        },
+        "akhir": {
+         "precision": 0.0,
+         "recall": 0.0,
+         "fp": 50,
+         "n_pos": 13
+        }
+       },
+       "thr": 0.036272,
+       "h": 30,
+       "auprc": 0.2086,
+       "auc": 0.7413
+      },
+      "F-9_A": {
+       "precision": 0.09375,
+       "recall": 0.1,
+       "fp": 29,
+       "tp": 3,
+       "n_pos": 30,
+       "far24": 5.7018,
+       "far24_kej": 2.1628,
+       "cakupan": 0.3204,
+       "prev": 0.012733,
+       "lead": {
+        "n_onset": 3,
+        "n_diperingatkan": 1,
+        "lead_median_min": 8.0,
+        "lead_min_min": 8,
+        "lead_maks_min": 8
+       },
+       "separuh": {
+        "awal": {
+         "precision": 0.0,
+         "recall": null,
+         "fp": 6,
+         "n_pos": 0
+        },
+        "akhir": {
+         "precision": 0.11538461538461539,
+         "recall": 0.1,
+         "fp": 23,
+         "n_pos": 30
+        }
+       },
+       "thr": 0.094916,
+       "h": 30,
+       "auprc": 0.0369,
+       "auc": 0.773
+      }
+     },
+     "fp_total": 908,
+     "tp_total": 72,
+     "menit_alarm_total": 980,
+     "fp_kejadian_total": 240,
+     "n_onset": 181,
+     "n_diperingatkan": 29,
+     "fold_far_le6": 7,
+     "fold_recall_gt0": 6
+    },
+    "ML_saja": {
+     "n_fold": 9,
+     "per_fold": {
+      "F-10": {
+       "precision": null,
+       "recall": 0.0,
+       "fp": 0,
+       "tp": 0,
+       "n_pos": 146,
+       "far24": 0.0,
+       "far24_kej": 0.0,
+       "cakupan": 0.677,
+       "prev": 0.018483,
+       "lead": {
+        "n_onset": 15,
+        "n_diperingatkan": 0,
+        "lead_median_min": null,
+        "lead_min_min": null,
+        "lead_maks_min": null
+       },
+       "separuh": {
+        "awal": {
+         "precision": null,
+         "recall": 0.0,
+         "fp": 0,
+         "n_pos": 109
+        },
+        "akhir": {
+         "precision": null,
+         "recall": 0.0,
+         "fp": 0,
+         "n_pos": 37
+        }
+       },
+       "thr": 0.398253,
+       "h": 30,
+       "auprc": 0.0218,
+       "auc": 0.5912
+      },
+      "F-12": {
+       "precision": 0.05378973105134474,
+       "recall": 0.20276497695852536,
+       "fp": 774,
+       "tp": 44,
+       "n_pos": 217,
+       "far24": 12.9233,
+       "far24_kej": 2.2541,
+       "cakupan": 0.0625,
+       "prev": 0.040148,
+       "lead": {
+        "n_onset": 20,
+        "n_diperingatkan": 13,
+        "lead_median_min": 13.0,
+        "lead_min_min": 1,
+        "lead_maks_min": 55
+       },
+       "separuh": {
+        "awal": {
+         "precision": 0.03940886699507389,
+         "recall": 0.2696629213483146,
+         "fp": 585,
+         "n_pos": 89
+        },
+        "akhir": {
+         "precision": 0.09569377990430622,
+         "recall": 0.15625,
+         "fp": 189,
+         "n_pos": 128
+        }
+       },
+       "thr": 0.04018,
+       "h": 30,
+       "auprc": 0.0499,
+       "auc": 0.5491
+      },
+      "F-14": {
+       "precision": 0.1547911547911548,
+       "recall": 0.08289473684210526,
+       "fp": 344,
+       "tp": 63,
+       "n_pos": 760,
+       "far24": 1.563,
+       "far24_kej": 0.3862,
+       "cakupan": 0.0353,
+       "prev": 0.067827,
+       "lead": {
+        "n_onset": 62,
+        "n_diperingatkan": 14,
+        "lead_median_min": 12.0,
+        "lead_min_min": 1,
+        "lead_maks_min": 56
+       },
+       "separuh": {
+        "awal": {
+         "precision": 0.1605351170568562,
+         "recall": 0.25668449197860965,
+         "fp": 251,
+         "n_pos": 187
+        },
+        "akhir": {
+         "precision": 0.1388888888888889,
+         "recall": 0.02617801047120419,
+         "fp": 93,
+         "n_pos": 573
+        }
+       },
+       "thr": 0.028578,
+       "h": 30,
+       "auprc": 0.0783,
+       "auc": 0.4932
+      },
+      "F-15A": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "fp": 51,
+       "tp": 0,
+       "n_pos": 41,
+       "far24": 2.2879,
+       "far24_kej": 0.4037,
+       "cakupan": 0.2017,
+       "prev": 0.006323,
+       "lead": {
+        "n_onset": 6,
+        "n_diperingatkan": 0,
+        "lead_median_min": null,
+        "lead_min_min": null,
+        "lead_maks_min": null
+       },
+       "separuh": {
+        "awal": {
+         "precision": 0.0,
+         "recall": 0.0,
+         "fp": 8,
+         "n_pos": 18
+        },
+        "akhir": {
+         "precision": 0.0,
+         "recall": 0.0,
+         "fp": 43,
+         "n_pos": 23
+        }
+       },
+       "thr": 0.095145,
+       "h": 30,
+       "auprc": 0.0076,
+       "auc": 0.5795
+      },
+      "F-15_S": {
+       "precision": 0.004291845493562232,
+       "recall": 0.003861003861003861,
+       "fp": 232,
+       "tp": 1,
+       "n_pos": 259,
+       "far24": 3.6217,
+       "far24_kej": 1.124,
+       "cakupan": 0.1232,
+       "prev": 0.022731,
+       "lead": {
+        "n_onset": 25,
+        "n_diperingatkan": 6,
+        "lead_median_min": 30.5,
+        "lead_min_min": 1,
+        "lead_maks_min": 60
+       },
+       "separuh": {
+        "awal": {
+         "precision": 0.0,
+         "recall": 0.0,
+         "fp": 39,
+         "n_pos": 90
+        },
+        "akhir": {
+         "precision": 0.005154639175257732,
+         "recall": 0.005917159763313609,
+         "fp": 193,
+         "n_pos": 169
+        }
+       },
+       "thr": 0.060093,
+       "h": 30,
+       "auprc": 0.0354,
+       "auc": 0.6845
+      },
+      "F-5": {
+       "precision": 0.09741550695825049,
+       "recall": 0.20416666666666666,
+       "fp": 454,
+       "tp": 49,
+       "n_pos": 240,
+       "far24": 1.7697,
+       "far24_kej": 0.534,
+       "cakupan": 0.0193,
+       "prev": 0.033613,
+       "lead": {
+        "n_onset": 30,
+        "n_diperingatkan": 21,
+        "lead_median_min": 8.0,
+        "lead_min_min": 1,
+        "lead_maks_min": 58
+       },
+       "separuh": {
+        "awal": {
+         "precision": 0.1393188854489164,
+         "recall": 0.2694610778443114,
+         "fp": 278,
+         "n_pos": 167
+        },
+        "akhir": {
+         "precision": 0.022222222222222223,
+         "recall": 0.0547945205479452,
+         "fp": 176,
+         "n_pos": 73
+        }
+       },
+       "thr": 0.064516,
+       "h": 30,
+       "auprc": 0.0634,
+       "auc": 0.5834
+      },
+      "F-7": {
+       "precision": 0.02564102564102564,
+       "recall": 0.011235955056179775,
+       "fp": 114,
+       "tp": 3,
+       "n_pos": 267,
+       "far24": 7.1686,
+       "far24_kej": 1.5092,
+       "cakupan": 0.1192,
+       "prev": 0.096704,
+       "lead": {
+        "n_onset": 14,
+        "n_diperingatkan": 4,
+        "lead_median_min": 32.0,
+        "lead_min_min": 5,
+        "lead_maks_min": 55
+       },
+       "separuh": {
+        "awal": {
+         "precision": 0.02564102564102564,
+         "recall": 0.05660377358490566,
+         "fp": 114,
+         "n_pos": 53
+        },
+        "akhir": {
+         "precision": null,
+         "recall": 0.0,
+         "fp": 0,
+         "n_pos": 214
+        }
+       },
+       "thr": 0.086094,
+       "h": 30,
+       "auprc": 0.102,
+       "auc": 0.5785
+      },
+      "F-9": {
+       "precision": 0.04560810810810811,
+       "recall": 0.6,
+       "fp": 565,
+       "tp": 27,
+       "n_pos": 45,
+       "far24": 35.6092,
+       "far24_kej": 5.1681,
+       "cakupan": 0.0809,
+       "prev": 0.024311,
+       "lead": {
+        "n_onset": 6,
+        "n_diperingatkan": 4,
+        "lead_median_min": 1.0,
+        "lead_min_min": 1,
+        "lead_maks_min": 1
+       },
+       "separuh": {
+        "awal": {
+         "precision": 0.036458333333333336,
+         "recall": 0.4375,
+         "fp": 370,
+         "n_pos": 32
+        },
+        "akhir": {
+         "precision": 0.0625,
+         "recall": 1.0,
+         "fp": 195,
+         "n_pos": 13
+        }
+       },
+       "thr": 0.036272,
+       "h": 30,
+       "auprc": 0.2086,
+       "auc": 0.7413
+      },
+      "F-9_A": {
+       "precision": 0.04807692307692308,
+       "recall": 0.16666666666666666,
+       "fp": 99,
+       "tp": 5,
+       "n_pos": 30,
+       "far24": 19.4648,
+       "far24_kej": 6.6849,
+       "cakupan": 0.3204,
+       "prev": 0.012733,
+       "lead": {
+        "n_onset": 3,
+        "n_diperingatkan": 2,
+        "lead_median_min": 23.5,
+        "lead_min_min": 1,
+        "lead_maks_min": 46
+       },
+       "separuh": {
+        "awal": {
+         "precision": 0.0,
+         "recall": null,
+         "fp": 34,
+         "n_pos": 0
+        },
+        "akhir": {
+         "precision": 0.07142857142857142,
+         "recall": 0.16666666666666666,
+         "fp": 65,
+         "n_pos": 30
+        }
+       },
+       "thr": 0.094916,
+       "h": 30,
+       "auprc": 0.0369,
+       "auc": 0.773
+      }
+     },
+     "fp_total": 2633,
+     "tp_total": 192,
+     "menit_alarm_total": 2825,
+     "fp_kejadian_total": 578,
+     "n_onset": 181,
+     "n_diperingatkan": 64,
+     "fold_far_le6": 5,
+     "fold_recall_gt0": 7
+    },
+    "rule_kanal": {
+     "n_fold": 9,
+     "per_fold": {
+      "F-10": {
+       "precision": 0.015241882041086813,
+       "recall": 0.15753424657534246,
+       "fp": 1486,
+       "tp": 23,
+       "n_pos": 146,
+       "far24": 185.7178,
+       "far24_kej": 12.6228,
+       "cakupan": 0.677,
+       "prev": 0.018483,
+       "lead": {
+        "n_onset": 15,
+        "n_diperingatkan": 5,
+        "lead_median_min": 4.0,
+        "lead_min_min": 1,
+        "lead_maks_min": 43
+       },
+       "separuh": {
+        "awal": {
+         "precision": 0.03763440860215054,
+         "recall": 0.12844036697247707,
+         "fp": 358,
+         "n_pos": 109
+        },
+        "akhir": {
+         "precision": 0.0079155672823219,
+         "recall": 0.24324324324324326,
+         "fp": 1128,
+         "n_pos": 37
+        }
+       },
+       "thr": 0.398253,
+       "h": 30,
+       "auprc": 0.0218,
+       "auc": 0.5912
+      },
+      "F-12": {
+       "precision": 0.022131147540983605,
+       "recall": 0.12442396313364056,
+       "fp": 1193,
+       "tp": 27,
+       "n_pos": 217,
+       "far24": 19.9193,
+       "far24_kej": 3.9738,
+       "cakupan": 0.0625,
+       "prev": 0.040148,
+       "lead": {
+        "n_onset": 20,
+        "n_diperingatkan": 11,
+        "lead_median_min": 9.0,
+        "lead_min_min": 1,
+        "lead_maks_min": 58
+       },
+       "separuh": {
+        "awal": {
+         "precision": 0.019097222222222224,
+         "recall": 0.24719101123595505,
+         "fp": 1130,
+         "n_pos": 89
+        },
+        "akhir": {
+         "precision": 0.07352941176470588,
+         "recall": 0.0390625,
+         "fp": 63,
+         "n_pos": 128
+        }
+       },
+       "thr": 0.04018,
+       "h": 30,
+       "auprc": 0.0499,
+       "auc": 0.5491
+      },
+      "F-14": {
+       "precision": 0.21168582375478928,
+       "recall": 0.29078947368421054,
+       "fp": 823,
+       "tp": 221,
+       "n_pos": 760,
+       "far24": 3.7394,
+       "far24_kej": 0.7861,
+       "cakupan": 0.0353,
+       "prev": 0.067827,
+       "lead": {
+        "n_onset": 62,
+        "n_diperingatkan": 51,
+        "lead_median_min": 9.0,
+        "lead_min_min": 1,
+        "lead_maks_min": 58
+       },
+       "separuh": {
+        "awal": {
+         "precision": 0.1050328227571116,
+         "recall": 0.25668449197860965,
+         "fp": 409,
+         "n_pos": 187
+        },
+        "akhir": {
+         "precision": 0.29471890971039183,
+         "recall": 0.3019197207678883,
+         "fp": 414,
+         "n_pos": 573
+        }
+       },
+       "thr": 0.028578,
+       "h": 30,
+       "auprc": 0.0783,
+       "auc": 0.4932
+      },
+      "F-15A": {
+       "precision": 0.0012315270935960591,
+       "recall": 0.024390243902439025,
+       "fp": 811,
+       "tp": 1,
+       "n_pos": 41,
+       "far24": 36.3813,
+       "far24_kej": 6.3252,
+       "cakupan": 0.2017,
+       "prev": 0.006323,
+       "lead": {
+        "n_onset": 6,
+        "n_diperingatkan": 5,
+        "lead_median_min": 32.0,
+        "lead_min_min": 2,
+        "lead_maks_min": 58
+       },
+       "separuh": {
+        "awal": {
+         "precision": 0.0,
+         "recall": 0.0,
+         "fp": 128,
+         "n_pos": 18
+        },
+        "akhir": {
+         "precision": 0.0014619883040935672,
+         "recall": 0.043478260869565216,
+         "fp": 683,
+         "n_pos": 23
+        }
+       },
+       "thr": 0.095145,
+       "h": 30,
+       "auprc": 0.0076,
+       "auc": 0.5795
+      },
+      "F-15_S": {
+       "precision": 0.03155127081507449,
+       "recall": 0.138996138996139,
+       "fp": 1105,
+       "tp": 36,
+       "n_pos": 259,
+       "far24": 17.2501,
+       "far24_kej": 4.7613,
+       "cakupan": 0.1232,
+       "prev": 0.022731,
+       "lead": {
+        "n_onset": 25,
+        "n_diperingatkan": 16,
+        "lead_median_min": 17.5,
+        "lead_min_min": 1,
+        "lead_maks_min": 47
+       },
+       "separuh": {
+        "awal": {
+         "precision": 0.01683937823834197,
+         "recall": 0.14444444444444443,
+         "fp": 759,
+         "n_pos": 90
+        },
+        "akhir": {
+         "precision": 0.06233062330623306,
+         "recall": 0.13609467455621302,
+         "fp": 346,
+         "n_pos": 169
+        }
+       },
+       "thr": 0.060093,
+       "h": 30,
+       "auprc": 0.0354,
+       "auc": 0.6845
+      },
+      "F-5": {
+       "precision": 0.03439153439153439,
+       "recall": 0.10833333333333334,
+       "fp": 730,
+       "tp": 26,
+       "n_pos": 240,
+       "far24": 2.8455,
+       "far24_kej": 0.6315,
+       "cakupan": 0.0193,
+       "prev": 0.033613,
+       "lead": {
+        "n_onset": 30,
+        "n_diperingatkan": 14,
+        "lead_median_min": 5.5,
+        "lead_min_min": 1,
+        "lead_maks_min": 56
+       },
+       "separuh": {
+        "awal": {
+         "precision": 0.04040404040404041,
+         "recall": 0.0718562874251497,
+         "fp": 285,
+         "n_pos": 167
+        },
+        "akhir": {
+         "precision": 0.030501089324618737,
+         "recall": 0.1917808219178082,
+         "fp": 445,
+         "n_pos": 73
+        }
+       },
+       "thr": 0.064516,
+       "h": 30,
+       "auprc": 0.0634,
+       "auc": 0.5834
+      },
+      "F-7": {
+       "precision": 0.1265597147950089,
+       "recall": 0.26591760299625467,
+       "fp": 490,
+       "tp": 71,
+       "n_pos": 267,
+       "far24": 30.8122,
+       "far24_kej": 7.3572,
+       "cakupan": 0.1192,
+       "prev": 0.096704,
+       "lead": {
+        "n_onset": 14,
+        "n_diperingatkan": 12,
+        "lead_median_min": 11.5,
+        "lead_min_min": 1,
+        "lead_maks_min": 37
+       },
+       "separuh": {
+        "awal": {
+         "precision": 0.07563025210084033,
+         "recall": 0.16981132075471697,
+         "fp": 110,
+         "n_pos": 53
+        },
+        "akhir": {
+         "precision": 0.14027149321266968,
+         "recall": 0.2897196261682243,
+         "fp": 380,
+         "n_pos": 214
+        }
+       },
+       "thr": 0.086094,
+       "h": 30,
+       "auprc": 0.102,
+       "auc": 0.5785
+      },
+      "F-9": {
+       "precision": 0.020224719101123594,
+       "recall": 0.2,
+       "fp": 436,
+       "tp": 9,
+       "n_pos": 45,
+       "far24": 27.479,
+       "far24_kej": 7.1218,
+       "cakupan": 0.0809,
+       "prev": 0.024311,
+       "lead": {
+        "n_onset": 6,
+        "n_diperingatkan": 4,
+        "lead_median_min": 2.0,
+        "lead_min_min": 1,
+        "lead_maks_min": 10
+       },
+       "separuh": {
+        "awal": {
+         "precision": 0.02735562310030395,
+         "recall": 0.28125,
+         "fp": 320,
+         "n_pos": 32
+        },
+        "akhir": {
+         "precision": 0.0,
+         "recall": 0.0,
+         "fp": 116,
+         "n_pos": 13
+        }
+       },
+       "thr": 0.036272,
+       "h": 30,
+       "auprc": 0.2086,
+       "auc": 0.7413
+      },
+      "F-9_A": {
+       "precision": 0.01971830985915493,
+       "recall": 0.23333333333333334,
+       "fp": 348,
+       "tp": 7,
+       "n_pos": 30,
+       "far24": 68.4216,
+       "far24_kej": 14.746,
+       "cakupan": 0.3204,
+       "prev": 0.012733,
+       "lead": {
+        "n_onset": 3,
+        "n_diperingatkan": 2,
+        "lead_median_min": 30.5,
+        "lead_min_min": 9,
+        "lead_maks_min": 52
+       },
+       "separuh": {
+        "awal": {
+         "precision": 0.0,
+         "recall": null,
+         "fp": 164,
+         "n_pos": 0
+        },
+        "akhir": {
+         "precision": 0.03664921465968586,
+         "recall": 0.23333333333333334,
+         "fp": 184,
+         "n_pos": 30
+        }
+       },
+       "thr": 0.094916,
+       "h": 30,
+       "auprc": 0.0369,
+       "auc": 0.773
+      }
+     },
+     "fp_total": 7422,
+     "tp_total": 421,
+     "menit_alarm_total": 7843,
+     "fp_kejadian_total": 1425,
+     "n_onset": 181,
+     "n_diperingatkan": 120,
+     "fold_far_le6": 2,
+     "fold_recall_gt0": 9
+    },
+    "stat_cusum": {
+     "n_fold": 9,
+     "per_fold": {
+      "F-10": {
+       "precision": 0.020914020139426802,
+       "recall": 0.18493150684931506,
+       "fp": 1264,
+       "tp": 27,
+       "n_pos": 146,
+       "far24": 157.9726,
+       "far24_kej": 13.9976,
+       "cakupan": 0.677,
+       "prev": 0.018483,
+       "lead": {
+        "n_onset": 15,
+        "n_diperingatkan": 6,
+        "lead_median_min": 14.0,
+        "lead_min_min": 1,
+        "lead_maks_min": 59
+       },
+       "separuh": {
+        "awal": {
+         "precision": 0.04941860465116279,
+         "recall": 0.1559633027522936,
+         "fp": 327,
+         "n_pos": 109
+        },
+        "akhir": {
+         "precision": 0.010559662090813094,
+         "recall": 0.2702702702702703,
+         "fp": 937,
+         "n_pos": 37
+        }
+       },
+       "thr": 0.398253,
+       "h": 30,
+       "auprc": 0.0218,
+       "auc": 0.5912
+      },
+      "F-12": {
+       "precision": 0.03741152679474216,
+       "recall": 0.17050691244239632,
+       "fp": 952,
+       "tp": 37,
+       "n_pos": 217,
+       "far24": 15.8954,
+       "far24_kej": 1.1688,
+       "cakupan": 0.0625,
+       "prev": 0.040148,
+       "lead": {
+        "n_onset": 20,
+        "n_diperingatkan": 10,
+        "lead_median_min": 5.0,
+        "lead_min_min": 1,
+        "lead_maks_min": 37
+       },
+       "separuh": {
+        "awal": {
+         "precision": 0.034739454094292806,
+         "recall": 0.3146067415730337,
+         "fp": 778,
+         "n_pos": 89
+        },
+        "akhir": {
+         "precision": 0.04918032786885246,
+         "recall": 0.0703125,
+         "fp": 174,
+         "n_pos": 128
+        }
+       },
+       "thr": 0.04018,
+       "h": 30,
+       "auprc": 0.0499,
+       "auc": 0.5491
+      },
+      "F-14": {
+       "precision": 0.18397827562797012,
+       "recall": 0.35657894736842105,
+       "fp": 1202,
+       "tp": 271,
+       "n_pos": 760,
+       "far24": 5.4615,
+       "far24_kej": 0.4089,
+       "cakupan": 0.0353,
+       "prev": 0.067827,
+       "lead": {
+        "n_onset": 62,
+        "n_diperingatkan": 43,
+        "lead_median_min": 7.0,
+        "lead_min_min": 1,
+        "lead_maks_min": 57
+       },
+       "separuh": {
+        "awal": {
+         "precision": 0.11273792093704246,
+         "recall": 0.4117647058823529,
+         "fp": 606,
+         "n_pos": 187
+        },
+        "akhir": {
+         "precision": 0.24556962025316456,
+         "recall": 0.33856893542757416,
+         "fp": 596,
+         "n_pos": 573
+        }
+       },
+       "thr": 0.028578,
+       "h": 30,
+       "auprc": 0.0783,
+       "auc": 0.4932
+      },
+      "F-15A": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "fp": 839,
+       "tp": 0,
+       "n_pos": 41,
+       "far24": 37.6374,
+       "far24_kej": 3.4093,
+       "cakupan": 0.2017,
+       "prev": 0.006323,
+       "lead": {
+        "n_onset": 6,
+        "n_diperingatkan": 3,
+        "lead_median_min": 35.0,
+        "lead_min_min": 33,
+        "lead_maks_min": 47
+       },
+       "separuh": {
+        "awal": {
+         "precision": 0.0,
+         "recall": 0.0,
+         "fp": 239,
+         "n_pos": 18
+        },
+        "akhir": {
+         "precision": 0.0,
+         "recall": 0.0,
+         "fp": 600,
+         "n_pos": 23
+        }
+       },
+       "thr": 0.095145,
+       "h": 30,
+       "auprc": 0.0076,
+       "auc": 0.5795
+      },
+      "F-15_S": {
+       "precision": 0.005089058524173028,
+       "recall": 0.023166023166023165,
+       "fp": 1173,
+       "tp": 6,
+       "n_pos": 259,
+       "far24": 18.3116,
+       "far24_kej": 1.5611,
+       "cakupan": 0.1232,
+       "prev": 0.022731,
+       "lead": {
+        "n_onset": 25,
+        "n_diperingatkan": 4,
+        "lead_median_min": 11.0,
+        "lead_min_min": 1,
+        "lead_maks_min": 22
+       },
+       "separuh": {
+        "awal": {
+         "precision": 0.0049813200498132005,
+         "recall": 0.044444444444444446,
+         "fp": 799,
+         "n_pos": 90
+        },
+        "akhir": {
+         "precision": 0.005319148936170213,
+         "recall": 0.011834319526627219,
+         "fp": 374,
+         "n_pos": 169
+        }
+       },
+       "thr": 0.060093,
+       "h": 30,
+       "auprc": 0.0354,
+       "auc": 0.6845
+      },
+      "F-5": {
+       "precision": 0.040731504571903575,
+       "recall": 0.20416666666666666,
+       "fp": 1154,
+       "tp": 49,
+       "n_pos": 240,
+       "far24": 4.4982,
+       "far24_kej": 0.3079,
+       "cakupan": 0.0193,
+       "prev": 0.033613,
+       "lead": {
+        "n_onset": 30,
+        "n_diperingatkan": 13,
+        "lead_median_min": 1.0,
+        "lead_min_min": 1,
+        "lead_maks_min": 55
+       },
+       "separuh": {
+        "awal": {
+         "precision": 0.053833605220228384,
+         "recall": 0.19760479041916168,
+         "fp": 580,
+         "n_pos": 167
+        },
+        "akhir": {
+         "precision": 0.02711864406779661,
+         "recall": 0.2191780821917808,
+         "fp": 574,
+         "n_pos": 73
+        }
+       },
+       "thr": 0.064516,
+       "h": 30,
+       "auprc": 0.0634,
+       "auc": 0.5834
+      },
+      "F-7": {
+       "precision": 0.07653910149750416,
+       "recall": 0.17228464419475656,
+       "fp": 555,
+       "tp": 46,
+       "n_pos": 267,
+       "far24": 34.8996,
+       "far24_kej": 1.6349,
+       "cakupan": 0.1192,
+       "prev": 0.096704,
+       "lead": {
+        "n_onset": 14,
+        "n_diperingatkan": 9,
+        "lead_median_min": 5.0,
+        "lead_min_min": 1,
+        "lead_maks_min": 54
+       },
+       "separuh": {
+        "awal": {
+         "precision": 0.08849557522123894,
+         "recall": 0.18867924528301888,
+         "fp": 103,
+         "n_pos": 53
+        },
+        "akhir": {
+         "precision": 0.07377049180327869,
+         "recall": 0.16822429906542055,
+         "fp": 452,
+         "n_pos": 214
+        }
+       },
+       "thr": 0.086094,
+       "h": 30,
+       "auprc": 0.102,
+       "auc": 0.5785
+      },
+      "F-9": {
+       "precision": 0.02181818181818182,
+       "recall": 0.26666666666666666,
+       "fp": 538,
+       "tp": 12,
+       "n_pos": 45,
+       "far24": 33.9076,
+       "far24_kej": 1.0084,
+       "cakupan": 0.0809,
+       "prev": 0.024311,
+       "lead": {
+        "n_onset": 6,
+        "n_diperingatkan": 3,
+        "lead_median_min": 23.0,
+        "lead_min_min": 1,
+        "lead_maks_min": 55
+       },
+       "separuh": {
+        "awal": {
+         "precision": 0.028985507246376812,
+         "recall": 0.375,
+         "fp": 402,
+         "n_pos": 32
+        },
+        "akhir": {
+         "precision": 0.0,
+         "recall": 0.0,
+         "fp": 136,
+         "n_pos": 13
+        }
+       },
+       "thr": 0.036272,
+       "h": 30,
+       "auprc": 0.2086,
+       "auc": 0.7413
+      },
+      "F-9_A": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "fp": 319,
+       "tp": 0,
+       "n_pos": 30,
+       "far24": 62.7198,
+       "far24_kej": 5.3086,
+       "cakupan": 0.3204,
+       "prev": 0.012733,
+       "lead": {
+        "n_onset": 3,
+        "n_diperingatkan": 1,
+        "lead_median_min": 8.0,
+        "lead_min_min": 8,
+        "lead_maks_min": 8
+       },
+       "separuh": {
+        "awal": {
+         "precision": 0.0,
+         "recall": null,
+         "fp": 162,
+         "n_pos": 0
+        },
+        "akhir": {
+         "precision": 0.0,
+         "recall": 0.0,
+         "fp": 157,
+         "n_pos": 30
+        }
+       },
+       "thr": 0.094916,
+       "h": 30,
+       "auprc": 0.0369,
+       "auc": 0.773
+      }
+     },
+     "fp_total": 7996,
+     "tp_total": 448,
+     "menit_alarm_total": 8444,
+     "fp_kejadian_total": 596,
+     "n_onset": 181,
+     "n_diperingatkan": 92,
+     "fold_far_le6": 2,
+     "fold_recall_gt0": 7
+    }
+   }
+  },
+  "toolwear": {
+   "elapsed_s": 58.3,
+   "alpha_budget": 0.004166666666666667,
+   "seed": 42,
+   "model": {
+    "H3a_GWO_objF1": {
+     "n_fold": 4,
+     "per_fold": {
+      "T01": {
+       "bacc": 0.5,
+       "f1": 0.6667,
+       "precision": 0.5,
+       "recall": 1.0,
+       "tp": 60,
+       "fp": 60,
+       "fn": 0,
+       "thr": 0.05,
+       "C": 0.01,
+       "prev": 0.5,
+       "delta_bacc": 0.4167
+      },
+      "T02": {
+       "bacc": 0.5,
+       "f1": 0.7126,
+       "precision": 0.5535714285714286,
+       "recall": 1.0,
+       "tp": 62,
+       "fp": 50,
+       "fn": 0,
+       "thr": 0.05,
+       "C": 0.30367284288220275,
+       "prev": 0.5536,
+       "delta_bacc": -0.0323
+      },
+      "T03": {
+       "bacc": 0.5,
+       "f1": 0.663,
+       "precision": 0.49586776859504134,
+       "recall": 1.0,
+       "tp": 60,
+       "fp": 61,
+       "fn": 0,
+       "thr": 0.05,
+       "C": 2.492391318892786,
+       "prev": 0.4959,
+       "delta_bacc": 0.1678
+      },
+      "T04": {
+       "bacc": 0.5,
+       "f1": 0.6667,
+       "precision": 0.5,
+       "recall": 1.0,
+       "tp": 58,
+       "fp": 58,
+       "fn": 0,
+       "thr": 0.05,
+       "C": 0.01782733400433781,
+       "prev": 0.5,
+       "delta_bacc": 0.1552
+      }
+     },
+     "tp_total": 240,
+     "fp_total": 229,
+     "fn_total": 0
+    },
+    "H3b_GWO_objBacc": {
+     "n_fold": 4,
+     "per_fold": {
+      "T01": {
+       "bacc": 0.5083,
+       "f1": 0.0328,
+       "precision": 1.0,
+       "recall": 0.016666666666666666,
+       "tp": 1,
+       "fp": 0,
+       "fn": 59,
+       "thr": 0.95,
+       "C": 30.0,
+       "prev": 0.5,
+       "delta_bacc": 0.425
+      },
+      "T02": {
+       "bacc": 0.5,
+       "f1": 0.0,
+       "precision": null,
+       "recall": 0.0,
+       "tp": 0,
+       "fp": 0,
+       "fn": 62,
+       "thr": 0.9280601164730803,
+       "C": 0.032252076302770945,
+       "prev": 0.5536,
+       "delta_bacc": -0.0323
+      },
+      "T03": {
+       "bacc": 0.2986,
+       "f1": 0.3796,
+       "precision": 0.33766233766233766,
+       "recall": 0.43333333333333335,
+       "tp": 26,
+       "fp": 51,
+       "fn": 34,
+       "thr": 0.5717943839172295,
+       "C": 30.0,
+       "prev": 0.4959,
+       "delta_bacc": -0.0336
+      },
+      "T04": {
+       "bacc": 0.2931,
+       "f1": 0.3279,
+       "precision": 0.3125,
+       "recall": 0.3448275862068966,
+       "tp": 20,
+       "fp": 44,
+       "fn": 38,
+       "thr": 0.5490692225903118,
+       "C": 0.23880121957262174,
+       "prev": 0.5,
+       "delta_bacc": -0.0517
+      }
+     },
+     "tp_total": 47,
+     "fp_total": 95,
+     "fn_total": 193
+    },
+    "ML_default": {
+     "n_fold": 4,
+     "per_fold": {
+      "T01": {
+       "bacc": 0.0833,
+       "f1": 0.0179,
+       "precision": 0.019230769230769232,
+       "recall": 0.016666666666666666,
+       "tp": 1,
+       "fp": 51,
+       "fn": 59,
+       "thr": 0.5,
+       "C": 1.0,
+       "prev": 0.5,
+       "delta_bacc": 0.0
+      },
+      "T02": {
+       "bacc": 0.5323,
+       "f1": 0.1212,
+       "precision": 1.0,
+       "recall": 0.06451612903225806,
+       "tp": 4,
+       "fp": 0,
+       "fn": 58,
+       "thr": 0.5,
+       "C": 1.0,
+       "prev": 0.5536,
+       "delta_bacc": 0.0
+      },
+      "T03": {
+       "bacc": 0.3322,
+       "f1": 0.4414,
+       "precision": 0.3764705882352941,
+       "recall": 0.5333333333333333,
+       "tp": 32,
+       "fp": 53,
+       "fn": 28,
+       "thr": 0.5,
+       "C": 1.0,
+       "prev": 0.4959,
+       "delta_bacc": 0.0
+      },
+      "T04": {
+       "bacc": 0.3448,
+       "f1": 0.4062,
+       "precision": 0.37142857142857144,
+       "recall": 0.4482758620689655,
+       "tp": 26,
+       "fp": 44,
+       "fn": 32,
+       "thr": 0.5,
+       "C": 1.0,
+       "prev": 0.5,
+       "delta_bacc": 0.0
+      }
+     },
+     "tp_total": 63,
+     "fp_total": 148,
+     "fn_total": 177
+    }
+   }
+  },
+  "stuck": {
+   "elapsed_s": 18.8,
+   "alpha_budget": 0.004166666666666667,
+   "seed": 42,
+   "model": {
+    "H4_tiga_komponen": {
+     "n_fold": 4,
+     "per_fold": {
+      "F-10": {
+       "precision": 0.2807017543859649,
+       "recall": 0.02072538860103627,
+       "fp": 41,
+       "tp": 16,
+       "n_pos": 772,
+       "far24": 4.6543,
+       "far24_kej": 2.1569,
+       "cakupan": 0.3133,
+       "prev": 0.183112,
+       "lead": {
+        "n_onset": 67,
+        "n_diperingatkan": 13,
+        "lead_median_min": 8.0,
+        "lead_min_min": 1,
+        "lead_maks_min": 49
+       },
+       "separuh": {
+        "awal": {
+         "precision": null,
+         "recall": 0.0,
+         "fp": 0,
+         "n_pos": 316
+        },
+        "akhir": {
+         "precision": 0.2807017543859649,
+         "recall": 0.03508771929824561,
+         "fp": 41,
+         "n_pos": 456
+        }
+       },
+       "thr": 0.232067,
+       "h": 10,
+       "auprc": 0.2464,
+       "auc": null
+      },
+      "F-14": {
+       "precision": null,
+       "recall": 0.0,
+       "fp": 0,
+       "tp": 0,
+       "n_pos": 389,
+       "far24": 0.0,
+       "far24_kej": 0.0,
+       "cakupan": 0.2668,
+       "prev": 0.004055,
+       "lead": {
+        "n_onset": 28,
+        "n_diperingatkan": 0,
+        "lead_median_min": null,
+        "lead_min_min": null,
+        "lead_maks_min": null
+       },
+       "separuh": {
+        "awal": {
+         "precision": null,
+         "recall": 0.0,
+         "fp": 0,
+         "n_pos": 389
+        },
+        "akhir": {
+         "precision": null,
+         "recall": null,
+         "fp": 0,
+         "n_pos": 0
+        }
+       },
+       "thr": 0.721841,
+       "h": 30,
+       "auprc": 0.0508,
+       "auc": null
+      },
+      "F-9": {
+       "precision": null,
+       "recall": 0.0,
+       "fp": 0,
+       "tp": 0,
+       "n_pos": 311,
+       "far24": 0.0,
+       "far24_kej": 0.0,
+       "cakupan": 0.0405,
+       "prev": 0.019217,
+       "lead": {
+        "n_onset": 16,
+        "n_diperingatkan": 0,
+        "lead_median_min": null,
+        "lead_min_min": null,
+        "lead_maks_min": null
+       },
+       "separuh": {
+        "awal": {
+         "precision": null,
+         "recall": null,
+         "fp": 0,
+         "n_pos": 0
+        },
+        "akhir": {
+         "precision": null,
+         "recall": 0.0,
+         "fp": 0,
+         "n_pos": 311
+        }
+       },
+       "thr": 0.967099,
+       "h": 30,
+       "auprc": 0.0504,
+       "auc": null
+      },
+      "F-9_A": {
+       "precision": 1.0,
+       "recall": 0.0019880715705765406,
+       "fp": 0,
+       "tp": 1,
+       "n_pos": 503,
+       "far24": 0.0,
+       "far24_kej": 0.0,
+       "cakupan": 0.2595,
+       "prev": 0.224353,
+       "lead": {
+        "n_onset": 37,
+        "n_diperingatkan": 0,
+        "lead_median_min": null,
+        "lead_min_min": null,
+        "lead_maks_min": null
+       },
+       "separuh": {
+        "awal": {
+         "precision": null,
+         "recall": 0.0,
+         "fp": 0,
+         "n_pos": 247
+        },
+        "akhir": {
+         "precision": 1.0,
+         "recall": 0.00390625,
+         "fp": 0,
+         "n_pos": 256
+        }
+       },
+       "thr": 0.085796,
+       "h": 30,
+       "auprc": 0.3763,
+       "auc": null
+      }
+     },
+     "fp_total": 41,
+     "tp_total": 17,
+     "menit_alarm_total": 58,
+     "fp_kejadian_total": 19,
+     "n_onset": 148,
+     "n_diperingatkan": 13,
+     "fold_far_le6": 4,
+     "fold_recall_gt0": 2
+    },
+    "H4b_strict_ML_dan_stat_dan_rule": {
+     "n_fold": 4,
+     "per_fold": {
+      "F-10": {
+       "precision": 0.3055555555555556,
+       "recall": 0.014248704663212436,
+       "fp": 25,
+       "tp": 11,
+       "n_pos": 772,
+       "far24": 2.838,
+       "far24_kej": 1.2487,
+       "cakupan": 0.3133,
+       "prev": 0.183112,
+       "lead": {
+        "n_onset": 67,
+        "n_diperingatkan": 7,
+        "lead_median_min": 8.0,
+        "lead_min_min": 1,
+        "lead_maks_min": 50
+       },
+       "separuh": {
+        "awal": {
+         "precision": null,
+         "recall": 0.0,
+         "fp": 0,
+         "n_pos": 316
+        },
+        "akhir": {
+         "precision": 0.3055555555555556,
+         "recall": 0.02412280701754386,
+         "fp": 25,
+         "n_pos": 456
+        }
+       },
+       "thr": 0.232067,
+       "h": 10,
+       "auprc": 0.2464,
+       "auc": null
+      },
+      "F-14": {
+       "precision": null,
+       "recall": 0.0,
+       "fp": 0,
+       "tp": 0,
+       "n_pos": 389,
+       "far24": 0.0,
+       "far24_kej": 0.0,
+       "cakupan": 0.2668,
+       "prev": 0.004055,
+       "lead": {
+        "n_onset": 28,
+        "n_diperingatkan": 0,
+        "lead_median_min": null,
+        "lead_min_min": null,
+        "lead_maks_min": null
+       },
+       "separuh": {
+        "awal": {
+         "precision": null,
+         "recall": 0.0,
+         "fp": 0,
+         "n_pos": 389
+        },
+        "akhir": {
+         "precision": null,
+         "recall": null,
+         "fp": 0,
+         "n_pos": 0
+        }
+       },
+       "thr": 0.721841,
+       "h": 30,
+       "auprc": 0.0508,
+       "auc": null
+      },
+      "F-9": {
+       "precision": null,
+       "recall": 0.0,
+       "fp": 0,
+       "tp": 0,
+       "n_pos": 311,
+       "far24": 0.0,
+       "far24_kej": 0.0,
+       "cakupan": 0.0405,
+       "prev": 0.019217,
+       "lead": {
+        "n_onset": 16,
+        "n_diperingatkan": 0,
+        "lead_median_min": null,
+        "lead_min_min": null,
+        "lead_maks_min": null
+       },
+       "separuh": {
+        "awal": {
+         "precision": null,
+         "recall": null,
+         "fp": 0,
+         "n_pos": 0
+        },
+        "akhir": {
+         "precision": null,
+         "recall": 0.0,
+         "fp": 0,
+         "n_pos": 311
+        }
+       },
+       "thr": 0.967099,
+       "h": 30,
+       "auprc": 0.0504,
+       "auc": null
+      },
+      "F-9_A": {
+       "precision": null,
+       "recall": 0.0,
+       "fp": 0,
+       "tp": 0,
+       "n_pos": 503,
+       "far24": 0.0,
+       "far24_kej": 0.0,
+       "cakupan": 0.2595,
+       "prev": 0.224353,
+       "lead": {
+        "n_onset": 37,
+        "n_diperingatkan": 0,
+        "lead_median_min": null,
+        "lead_min_min": null,
+        "lead_maks_min": null
+       },
+       "separuh": {
+        "awal": {
+         "precision": null,
+         "recall": 0.0,
+         "fp": 0,
+         "n_pos": 247
+        },
+        "akhir": {
+         "precision": null,
+         "recall": 0.0,
+         "fp": 0,
+         "n_pos": 256
+        }
+       },
+       "thr": 0.085796,
+       "h": 30,
+       "auprc": 0.3763,
+       "auc": null
+      }
+     },
+     "fp_total": 25,
+     "tp_total": 11,
+     "menit_alarm_total": 36,
+     "fp_kejadian_total": 11,
+     "n_onset": 148,
+     "n_diperingatkan": 7,
+     "fold_far_le6": 4,
+     "fold_recall_gt0": 1
+    },
+    "ML_saja": {
+     "n_fold": 4,
+     "per_fold": {
+      "F-10": {
+       "precision": 0.25925925925925924,
+       "recall": 0.06347150259067358,
+       "fp": 140,
+       "tp": 49,
+       "n_pos": 772,
+       "far24": 15.8928,
+       "far24_kej": 4.7678,
+       "cakupan": 0.3133,
+       "prev": 0.183112,
+       "lead": {
+        "n_onset": 67,
+        "n_diperingatkan": 27,
+        "lead_median_min": 7.0,
+        "lead_min_min": 1,
+        "lead_maks_min": 43
+       },
+       "separuh": {
+        "awal": {
+         "precision": null,
+         "recall": 0.0,
+         "fp": 0,
+         "n_pos": 316
+        },
+        "akhir": {
+         "precision": 0.25925925925925924,
+         "recall": 0.1074561403508772,
+         "fp": 140,
+         "n_pos": 456
+        }
+       },
+       "thr": 0.232067,
+       "h": 10,
+       "auprc": 0.2464,
+       "auc": null
+      },
+      "F-14": {
+       "precision": 0.20512820512820512,
+       "recall": 0.02056555269922879,
+       "fp": 31,
+       "tp": 8,
+       "n_pos": 389,
+       "far24": 0.1243,
+       "far24_kej": 0.0722,
+       "cakupan": 0.2668,
+       "prev": 0.004055,
+       "lead": {
+        "n_onset": 28,
+        "n_diperingatkan": 2,
+        "lead_median_min": 17.0,
+        "lead_min_min": 16,
+        "lead_maks_min": 18
+       },
+       "separuh": {
+        "awal": {
+         "precision": 0.38095238095238093,
+         "recall": 0.02056555269922879,
+         "fp": 13,
+         "n_pos": 389
+        },
+        "akhir": {
+         "precision": 0.0,
+         "recall": null,
+         "fp": 18,
+         "n_pos": 0
+        }
+       },
+       "thr": 0.721841,
+       "h": 30,
+       "auprc": 0.0508,
+       "auc": null
+      },
+      "F-9": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "fp": 21,
+       "tp": 0,
+       "n_pos": 311,
+       "far24": 0.0757,
+       "far24_kej": 0.0252,
+       "cakupan": 0.0405,
+       "prev": 0.019217,
+       "lead": {
+        "n_onset": 16,
+        "n_diperingatkan": 0,
+        "lead_median_min": null,
+        "lead_min_min": null,
+        "lead_maks_min": null
+       },
+       "separuh": {
+        "awal": {
+         "precision": null,
+         "recall": null,
+         "fp": 0,
+         "n_pos": 0
+        },
+        "akhir": {
+         "precision": 0.0,
+         "recall": 0.0,
+         "fp": 21,
+         "n_pos": 311
+        }
+       },
+       "thr": 0.967099,
+       "h": 30,
+       "auprc": 0.0504,
+       "auc": null
+      },
+      "F-9_A": {
+       "precision": 0.6285714285714286,
+       "recall": 0.0437375745526839,
+       "fp": 13,
+       "tp": 22,
+       "n_pos": 503,
+       "far24": 2.3006,
+       "far24_kej": 0.177,
+       "cakupan": 0.2595,
+       "prev": 0.224353,
+       "lead": {
+        "n_onset": 37,
+        "n_diperingatkan": 7,
+        "lead_median_min": 9.0,
+        "lead_min_min": 1,
+        "lead_maks_min": 50
+       },
+       "separuh": {
+        "awal": {
+         "precision": null,
+         "recall": 0.0,
+         "fp": 0,
+         "n_pos": 247
+        },
+        "akhir": {
+         "precision": 0.6285714285714286,
+         "recall": 0.0859375,
+         "fp": 13,
+         "n_pos": 256
+        }
+       },
+       "thr": 0.085796,
+       "h": 30,
+       "auprc": 0.3763,
+       "auc": null
+      }
+     },
+     "fp_total": 205,
+     "tp_total": 79,
+     "menit_alarm_total": 284,
+     "fp_kejadian_total": 68,
+     "n_onset": 148,
+     "n_diperingatkan": 36,
+     "fold_far_le6": 3,
+     "fold_recall_gt0": 3
+    },
+    "rule_kanal": {
+     "n_fold": 4,
+     "per_fold": {
+      "F-10": {
+       "precision": 0.2531969309462916,
+       "recall": 0.12823834196891193,
+       "fp": 292,
+       "tp": 99,
+       "n_pos": 772,
+       "far24": 33.1478,
+       "far24_kej": 4.0867,
+       "cakupan": 0.3133,
+       "prev": 0.183112,
+       "lead": {
+        "n_onset": 67,
+        "n_diperingatkan": 22,
+        "lead_median_min": 4.5,
+        "lead_min_min": 1,
+        "lead_maks_min": 60
+       },
+       "separuh": {
+        "awal": {
+         "precision": 0.2233502538071066,
+         "recall": 0.13924050632911392,
+         "fp": 153,
+         "n_pos": 316
+        },
+        "akhir": {
+         "precision": 0.28350515463917525,
+         "recall": 0.1206140350877193,
+         "fp": 139,
+         "n_pos": 456
+        }
+       },
+       "thr": 0.232067,
+       "h": 10,
+       "auprc": 0.2464,
+       "auc": null
+      },
+      "F-14": {
+       "precision": 0.018361581920903956,
+       "recall": 0.033419023136246784,
+       "fp": 695,
+       "tp": 13,
+       "n_pos": 389,
+       "far24": 2.7861,
+       "far24_kej": 0.8859,
+       "cakupan": 0.2668,
+       "prev": 0.004055,
+       "lead": {
+        "n_onset": 28,
+        "n_diperingatkan": 7,
+        "lead_median_min": 11.0,
+        "lead_min_min": 1,
+        "lead_maks_min": 56
+       },
+       "separuh": {
+        "awal": {
+         "precision": 0.022608695652173914,
+         "recall": 0.033419023136246784,
+         "fp": 562,
+         "n_pos": 389
+        },
+        "akhir": {
+         "precision": 0.0,
+         "recall": null,
+         "fp": 133,
+         "n_pos": 0
+        }
+       },
+       "thr": 0.721841,
+       "h": 30,
+       "auprc": 0.0508,
+       "auc": null
+      },
+      "F-9": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "fp": 172,
+       "tp": 0,
+       "n_pos": 311,
+       "far24": 0.6199,
+       "far24_kej": 0.2523,
+       "cakupan": 0.0405,
+       "prev": 0.019217,
+       "lead": {
+        "n_onset": 16,
+        "n_diperingatkan": 0,
+        "lead_median_min": null,
+        "lead_min_min": null,
+        "lead_maks_min": null
+       },
+       "separuh": {
+        "awal": {
+         "precision": 0.0,
+         "recall": null,
+         "fp": 106,
+         "n_pos": 0
+        },
+        "akhir": {
+         "precision": 0.0,
+         "recall": 0.0,
+         "fp": 66,
+         "n_pos": 311
+        }
+       },
+       "thr": 0.967099,
+       "h": 30,
+       "auprc": 0.0504,
+       "auc": null
+      },
+      "F-9_A": {
+       "precision": 0.49572649572649574,
+       "recall": 0.23061630218687873,
+       "fp": 118,
+       "tp": 116,
+       "n_pos": 503,
+       "far24": 20.8824,
+       "far24_kej": 4.6012,
+       "cakupan": 0.2595,
+       "prev": 0.224353,
+       "lead": {
+        "n_onset": 37,
+        "n_diperingatkan": 20,
+        "lead_median_min": 2.0,
+        "lead_min_min": 1,
+        "lead_maks_min": 47
+       },
+       "separuh": {
+        "awal": {
+         "precision": 0.5084745762711864,
+         "recall": 0.3643724696356275,
+         "fp": 87,
+         "n_pos": 247
+        },
+        "akhir": {
+         "precision": 0.45614035087719296,
+         "recall": 0.1015625,
+         "fp": 31,
+         "n_pos": 256
+        }
+       },
+       "thr": 0.085796,
+       "h": 30,
+       "auprc": 0.3763,
+       "auc": null
+      }
+     },
+     "fp_total": 1277,
+     "tp_total": 228,
+     "menit_alarm_total": 1505,
+     "fp_kejadian_total": 353,
+     "n_onset": 148,
+     "n_diperingatkan": 49,
+     "fold_far_le6": 2,
+     "fold_recall_gt0": 3
+    },
+    "stat_cusum": {
+     "n_fold": 4,
+     "per_fold": {
+      "F-10": {
+       "precision": 0.21856639247943596,
+       "recall": 0.24093264248704663,
+       "fp": 665,
+       "tp": 186,
+       "n_pos": 772,
+       "far24": 75.4907,
+       "far24_kej": 3.5191,
+       "cakupan": 0.3133,
+       "prev": 0.183112,
+       "lead": {
+        "n_onset": 67,
+        "n_diperingatkan": 32,
+        "lead_median_min": 1.0,
+        "lead_min_min": 1,
+        "lead_maks_min": 50
+       },
+       "separuh": {
+        "awal": {
+         "precision": 0.15071283095723015,
+         "recall": 0.23417721518987342,
+         "fp": 417,
+         "n_pos": 316
+        },
+        "akhir": {
+         "precision": 0.3111111111111111,
+         "recall": 0.24561403508771928,
+         "fp": 248,
+         "n_pos": 456
+        }
+       },
+       "thr": 0.232067,
+       "h": 10,
+       "auprc": 0.2464,
+       "auc": null
+      },
+      "F-14": {
+       "precision": 0.0364963503649635,
+       "recall": 0.07712082262210797,
+       "fp": 792,
+       "tp": 30,
+       "n_pos": 389,
+       "far24": 3.1749,
+       "far24_kej": 0.2846,
+       "cakupan": 0.2668,
+       "prev": 0.004055,
+       "lead": {
+        "n_onset": 28,
+        "n_diperingatkan": 11,
+        "lead_median_min": 12.0,
+        "lead_min_min": 1,
+        "lead_maks_min": 59
+       },
+       "separuh": {
+        "awal": {
+         "precision": 0.042134831460674156,
+         "recall": 0.07712082262210797,
+         "fp": 682,
+         "n_pos": 389
+        },
+        "akhir": {
+         "precision": 0.0,
+         "recall": null,
+         "fp": 110,
+         "n_pos": 0
+        }
+       },
+       "thr": 0.721841,
+       "h": 30,
+       "auprc": 0.0508,
+       "auc": null
+      },
+      "F-9": {
+       "precision": 0.0,
+       "recall": 0.0,
+       "fp": 98,
+       "tp": 0,
+       "n_pos": 311,
+       "far24": 0.3532,
+       "far24_kej": 0.0288,
+       "cakupan": 0.0405,
+       "prev": 0.019217,
+       "lead": {
+        "n_onset": 16,
+        "n_diperingatkan": 0,
+        "lead_median_min": null,
+        "lead_min_min": null,
+        "lead_maks_min": null
+       },
+       "separuh": {
+        "awal": {
+         "precision": 0.0,
+         "recall": null,
+         "fp": 88,
+         "n_pos": 0
+        },
+        "akhir": {
+         "precision": 0.0,
+         "recall": 0.0,
+         "fp": 10,
+         "n_pos": 311
+        }
+       },
+       "thr": 0.967099,
+       "h": 30,
+       "auprc": 0.0504,
+       "auc": null
+      },
+      "F-9_A": {
+       "precision": 0.5191256830601093,
+       "recall": 0.18886679920477137,
+       "fp": 88,
+       "tp": 95,
+       "n_pos": 503,
+       "far24": 15.5733,
+       "far24_kej": 0.7079,
+       "cakupan": 0.2595,
+       "prev": 0.224353,
+       "lead": {
+        "n_onset": 37,
+        "n_diperingatkan": 18,
+        "lead_median_min": 6.0,
+        "lead_min_min": 1,
+        "lead_maks_min": 47
+       },
+       "separuh": {
+        "awal": {
+         "precision": 0.6181818181818182,
+         "recall": 0.27530364372469635,
+         "fp": 42,
+         "n_pos": 247
+        },
+        "akhir": {
+         "precision": 0.3698630136986301,
+         "recall": 0.10546875,
+         "fp": 46,
+         "n_pos": 256
+        }
+       },
+       "thr": 0.085796,
+       "h": 30,
+       "auprc": 0.3763,
+       "auc": null
+      }
+     },
+     "fp_total": 1643,
+     "tp_total": 311,
+     "menit_alarm_total": 1954,
+     "fp_kejadian_total": 114,
+     "n_onset": 148,
+     "n_diperingatkan": 61,
+     "fold_far_le6": 2,
+     "fold_recall_gt0": 3
+    }
+   }
+  }
+ },
+ "turunan": {
+  "hyd": {
+   "fp_rule": 2105,
+   "fp_stat": 4361,
+   "fp_H1": 935,
+   "potong_FP_pct": 55.58,
+   "potong_FP_vs_stat_pct": 78.56,
+   "tp_rule": 5579,
+   "tp_H1": 3804,
+   "tp_stat": 4210,
+   "ingat_rule": 307,
+   "ingat_H1": 219,
+   "onset": 390,
+   "far_rule": [
+    0.7572,
+    24.2557
+   ],
+   "far_H1": [
+    0.4059,
+    8.9132
+   ]
+  },
+  "shk": {
+   "fp_ML": 2633,
+   "fp_H2": 667,
+   "tp_ML": 192,
+   "tp_H2": 46,
+   "potong_FP_pct": 74.67,
+   "drop_TP_pct": 76.04,
+   "auprc": [
+    0.0218,
+    0.0499,
+    0.0783,
+    0.0076,
+    0.0354,
+    0.0634,
+    0.102,
+    0.2086,
+    0.0369
+   ],
+   "prev": [
+    0.018483,
+    0.040148,
+    0.067827,
+    0.006323,
+    0.022731,
+    0.033613,
+    0.096704,
+    0.024311,
+    0.012733
+   ]
+  },
+  "toolwear": {
+   "bacc_default": [
+    0.0833,
+    0.5323,
+    0.3322,
+    0.3448
+   ],
+   "bacc_gwo_bacc": [
+    0.5083,
+    0.5,
+    0.2986,
+    0.2931
+   ],
+   "bacc_gwo_f1": [
+    0.5,
+    0.5,
+    0.5,
+    0.5
+   ],
+   "tp_default": 63,
+   "fp_default": 148,
+   "tp_gwo_bacc": 47,
+   "fp_gwo_bacc": 95,
+   "n_uji": 4,
+   "n_window": 388
+  },
+  "stuck": {
+   "fp_ML": 205,
+   "fp_H4": 41,
+   "tp_ML": 79,
+   "tp_H4": 17,
+   "recall_max_semua": 0.24093264248704663,
+   "onset": 148,
+   "ingat_H4": 13
+  }
+ }
+}

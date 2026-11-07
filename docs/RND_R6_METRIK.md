@@ -34,7 +34,7 @@ Satuan: alarm palsu per 24 jam waktu operasi NEGATIF (bukan per 24 jam kalender,
 Verifikasi rumus pada kode dan data:
 - Jalur ML (`code/v9_e_ML_01_train.py:20` dan `:118`, `far24 = 1440.0 * fp / n_neg`) direproduksi ulang dari komponen mentah pada 26 fold: selisih absolut maksimum `5,684e-14` (`rnd_r6_RESULTS.json` S2b). Artinya rumus jalur ML konsisten sampai presisi mesin.
 - Jalur hyd K-i (`code/v9_e_STAT_01_hyd_ki.py:70`, `far_24 = fp / jam_neg * 24`) memakai penyebut jam negatif teramati, bukan `n_neg/60`. Selisih absolut maksimum `1,9229` per 24 jam (fold F-12: tersimpan `98,0195`, hitung ulang dengan `n_neg/60` menghasilkan `96,0966`), dengan rentang selisih 0,0228 sampai 1,9229 pada 9 fold (S2). Contoh F-10: `far_per_neg_hour = 1,34919` menyiratkan penyebut `102,28` jam, sedangkan `n_neg/60 = 102,95` jam.
-- Akibat yang harus dicatat: dua definisi penyebut hidup berdampingan dan berbeda sampai 2,0 persen relatif. Tidak satu pun fold hyd berada dekat ambang 6 (FAR tersimpan terendah 32,38), sehingga perbedaan ini tidak mengubah keputusan FAR <= 6, tetapi wajib disatukan sebelum angka FAR dipakai untuk perbandingan antar-engine pada ambang.
+- Akibat yang harus dicatat: dua definisi penyebut hidup berdampingan dan berbeda sampai 2,0 persen relatif. Tidak satu pun fold hyd berada dekat ambang 6 (FAR tersimpan terendah 32,38), sehingga perbedaan ini tidak mengubah keputusan FAR <= 6, tetapi wajib disatukan sebelum angka FAR dipakai untuk perbandingan antar-detektor pada ambang.
 
 ### 1.2 B1 (cakupan onset)
 
@@ -42,7 +42,7 @@ Verifikasi rumus pada kode dan data:
 B1 = jumlah onset dengan >= 1 alarm pada [t_onset - H, t_onset] / jumlah onset
 ```
 
-Satuan: proporsi (0 sampai 1), tanpa dimensi, dihitung pada horizon `H = 10 menit` (`scratch/v9_e_stat/v9_e_stat_02_stuck_e2_RESULTS.json`, field `task`). B1 bukan recall jendela: penyebutnya episode onset, bukan jendela positif. Pada data nyata: 281 onset di 4 well (F-10 93, F-14 61, F-9 55, F-9_A 72). B1 engine tergabung `0,1281` dengan Wilson 95 persen `[0,0940; 0,1723]`, B1 persistence tergabung `0,8719` dengan Wilson 95 persen `[0,8277; 0,9060]` (S12).
+Satuan: proporsi (0 sampai 1), tanpa dimensi, dihitung pada horizon `H = 10 menit` (`scratch/v9_e_stat/v9_e_stat_02_stuck_e2_RESULTS.json`, field `task`). B1 bukan recall jendela: penyebutnya episode onset, bukan jendela positif. Pada data nyata: 281 onset di 4 well (F-10 93, F-14 61, F-9 55, F-9_A 72). B1 detektor tergabung `0,1281` dengan Wilson 95 persen `[0,0940; 0,1723]`, B1 persistence tergabung `0,8719` dengan Wilson 95 persen `[0,8277; 0,9060]` (S12).
 
 Resolusi B1 dibatasi jumlah onset: satu onset mengubah B1 sebesar `1/281 = 0,0036` (0,356 poin persen). Pada level per well resolusi jauh lebih kasar, misalnya F-9 dengan 55 onset: satu onset = 1,82 poin persen.
 
@@ -80,7 +80,7 @@ lift = AUPRC / prevalensi          (tanpa dimensi, garis dasar acak = 1,0)
 plafon = 1 / prevalensi            (lift maksimum yang mungkin)
 ```
 
-Lift wajib dilaporkan bersama plafon, karena lift besar pada prevalensi sangat kecil dapat berarti model lemah. Kasus nyata yang membuktikan hal ini: ssi F-7 lift `150,205` dengan prevalensi `0,00305` dan plafon `327,3` (nilai JSON dari prevalensi tak dibulatkan `0,003055`; bila dihitung dari prevalensi bulat `0,00305`, hasilnya `1/0,00305 = 327,87` atau `327,9`), sedangkan ssi F-15A lift `12,252` dengan prevalensi `0,00515` dan plafon `194,2` (S14b). Tanpa plafon, F-7 tampak 4 kali lebih baik daripada kebanyakan engine, padahal AUPRC absolutnya `0,4589` pada prevalensi 0,3 persen dan hanya `3` jendela positif dari `982` jendela uji di fold itu (`scratch/v9_e_ml/v9_e_ML_ssi_RESULTS.json` folds[6] `pos_test` = 3, `n_neg` = 979, `prev_test` = 0,003055). Koreksi ini menggantikan angka 9 jendela positif yang tertulis pada draf pertama dokumen.
+Lift wajib dilaporkan bersama plafon, karena lift besar pada prevalensi sangat kecil dapat berarti model lemah. Kasus nyata yang membuktikan hal ini: ssi F-7 lift `150,205` dengan prevalensi `0,00305` dan plafon `327,3` (nilai JSON dari prevalensi tak dibulatkan `0,003055`; bila dihitung dari prevalensi bulat `0,00305`, hasilnya `1/0,00305 = 327,87` atau `327,9`), sedangkan ssi F-15A lift `12,252` dengan prevalensi `0,00515` dan plafon `194,2` (S14b). Tanpa plafon, F-7 tampak 4 kali lebih baik daripada kebanyakan detektor, padahal AUPRC absolutnya `0,4589` pada prevalensi 0,3 persen dan hanya `3` jendela positif dari `982` jendela uji di fold itu (`scratch/v9_e_ml/v9_e_ML_ssi_RESULTS.json` folds[6] `pos_test` = 3, `n_neg` = 979, `prev_test` = 0,003055). Koreksi ini menggantikan angka 9 jendela positif yang tertulis pada draf pertama dokumen.
 
 Ringkasan lift hyd K-i persistence (S14): F-5 lift `6,103` (plafon 10,196), F-14 `5,340` (12,024), F-10 `4,576` (5,431), F-15A `4,320` (8,820), F-9_A `3,609` (6,665), F-15_S `3,572` (8,414), F-12 `3,331` (5,182), F-7 `2,984` (5,895), F-9 `2,388` (3,820).
 
@@ -103,12 +103,12 @@ Ringkasan lift hyd K-i persistence (S14): F-5 lift `6,103` (plafon 10,196), F-14
 ### 2.1 Prinsip keluarga uji
 
 Keluarga uji harus dideklarasikan sebelum hitung, beserta unit independennya. Untuk alat PdM ini unit independen adalah well (9), bukan jendela (puluhan ribu), karena jendela di dalam satu well berkorelasi tinggi. RND-R5 sudah mengukur autokorelasi lag-1 pada deret yang sama di atas 0,97 (`docs/RND_R5_DRIFT.md`), sehingga memperlakukan jendela sebagai sampel independen adalah pseudoreplikasi. Dua keluarga yang dipakai di sini:
-- F1: 4 engine ML (vib, ssi, shk, stuck_k2) pada RF ambang 0,5, hipotesis nol presisi sama dengan prevalensi terkumpul, satu sisi.
+- F1: 4 mode ML (vib, ssi, shk, stuck_k2) pada RF ambang 0,5, hipotesis nol presisi sama dengan prevalensi terkumpul, satu sisi.
 - F2: 9 fold hyd K-i persistence, hipotesis nol presisi sama dengan prevalensi fold, satu sisi.
 
 ### 2.2 DeLong untuk AUROC, dan mengapa AUPRC tidak memakai DeLong
 
-Uji DeLong membandingkan dua AUROC berkorelasi memakai komponen struktural (V01, V10) per observasi. Fungsi `delong_auc()` sudah ditulis dan diuji pada data sintetis: AUC `0,8186`, galat baku `0,0141`, CI95 `[0,7910; 0,8463]` (S9). Angka itu adalah uji kewajaran fungsi, bukan hasil engine, dan tidak boleh dikutip sebagai kinerja.
+Uji DeLong membandingkan dua AUROC berkorelasi memakai komponen struktural (V01, V10) per observasi. Fungsi `delong_auc()` sudah ditulis dan diuji pada data sintetis: AUC `0,8186`, galat baku `0,0141`, CI95 `[0,7910; 0,8463]` (S9). Angka itu adalah uji kewajaran fungsi, bukan hasil detektor, dan tidak boleh dikutip sebagai kinerja.
 
 Status pada data nyata: TIDAK DIHITUNG. JSON V9 menyimpan metrik agregat (AUPRC, presisi, recall, FAR), bukan skor per jendela, sedangkan DeLong membutuhkan skor per observasi untuk tiap komponen. Karena itu DeLong untuk data ini BELUM TERUKUR, bukan "tidak berbeda". Tindakan yang harus diambil pada run berikutnya: simpan `skor` per jendela per fold per model.
 
@@ -116,7 +116,7 @@ Untuk AUPRC, DeLong tidak berlaku karena bentuk asimtotiknya berbeda; selang AUP
 
 ### 2.3 Bootstrap berpasangan untuk delta metrik
 
-Desain yang dipakai (S7, S15): 9 well, tiap well 800 jendela negatif, AP dihitung per well, delta = rata-rata AP engine A dikurangi rata-rata AP engine B, bootstrap 120 kali resampel blok per well (`n_boot` = 120 pada setiap baris hasil S7 dan S15), tolak H0 bila CI95 delta tidak memuat 0. Catatan: string `S7_mde_delta_auprc_simulasi.desain` menulis 150 kali, sedangkan jumlah yang benar-benar dipakai terekam sebagai `n_boot` = 120; yang dilaporkan adalah 120.
+Desain yang dipakai (S7, S15): 9 well, tiap well 800 jendela negatif, AP dihitung per well, delta = rata-rata AP detektor A dikurangi rata-rata AP detektor B, bootstrap 120 kali resampel blok per well (`n_boot` = 120 pada setiap baris hasil S7 dan S15), tolak H0 bila CI95 delta tidak memuat 0. Catatan: string `S7_mde_delta_auprc_simulasi.desain` menulis 150 kali, sedangkan jumlah yang benar-benar dipakai terekam sebagai `n_boot` = 120; yang dilaporkan adalah 120.
 
 Hasil pada prevalensi 1,69 persen (setara ssi): delta median `0,0056` pada pemisahan 0,15 (daya 0,30), `0,0090` pada 0,25 (0,412), `0,0145` pada 0,35 (0,55), `0,0232` pada 0,50 (0,792), `0,0804` pada 1,0 (1,0), `0,1904` pada 1,5 (1,0).
 
@@ -130,13 +130,13 @@ Wilson dipakai untuk presisi dan B1 karena proporsi dengan n kecil atau mendekat
 
 Presisi hyd K-i per fold: lebar CI95 antara `0,0321` (F-10, n = 1361) dan `0,1024` (F-9_A, n = 298). Semua selang presisi ada di dalam `[0,5836; 0,9135]` (S3). Konsekuensi praktis: dua well dengan presisi berbeda kurang dari sekitar 6 sampai 10 poin persen belum dapat dibedakan pada n alarm ratusan.
 
-B1 tergabung: `0,1281` dengan Wilson `[0,0940; 0,1723]` pada 281 onset (S12). Lebar selang 7,8 poin persen berarti B1 engine pada data ini hanya dapat dibedakan dari B1 persistence (`0,8719`, `[0,8277; 0,9060]`) secara jelas, tetapi tidak dapat dipakai untuk memeringkat engine yang selisihnya di bawah sekitar 8 poin persen.
+B1 tergabung: `0,1281` dengan Wilson `[0,0940; 0,1723]` pada 281 onset (S12). Lebar selang 7,8 poin persen berarti B1 detektor pada data ini hanya dapat dibedakan dari B1 persistence (`0,8719`, `[0,8277; 0,9060]`) secara jelas, tetapi tidak dapat dipakai untuk memeringkat detektor yang selisihnya di bawah sekitar 8 poin persen.
 
 ### 2.5 Fisher untuk dua proporsi independen
 
 Contoh nyata: presisi hyd K-i persistence F-10 (TP 1223, FP 138) dibandingkan F-12 (TP 1143, FP 398). Tabel 2x2 memberi odds ratio `3,0859` dan p dua sisi di bawah `2,2e-308` (underflow float64; SciPy melaporkan `0,0`), artinya perbedaan presisi antar dua well itu nyata dan bukan variasi sampling (S13).
 
-Batas yang harus ditulis: Fisher sah untuk dua kelompok independen. Untuk dua engine yang dinilai pada jendela yang SAMA, uji yang sah adalah McNemar pada tabel ketidaksesuaian berpasangan, dan hitungan berpasangan itu belum tersedia di JSON V9. Karena itu perbandingan engine pada jendela yang sama berstatus BELUM TERUKUR sampai skor per jendela disimpan.
+Batas yang harus ditulis: Fisher sah untuk dua kelompok independen. Untuk dua detektor yang dinilai pada jendela yang SAMA, uji yang sah adalah McNemar pada tabel ketidaksesuaian berpasangan, dan hitungan berpasangan itu belum tersedia di JSON V9. Karena itu perbandingan detektor pada jendela yang sama berstatus BELUM TERUKUR sampai skor per jendela disimpan.
 
 ### 2.6 Uji tanda pada unit well, dan satu bug yang ditemukan lalu diperbaiki
 
@@ -173,10 +173,10 @@ Pelajaran metodologis yang penting dari F1: pada `stuck_k2`, presisi terkumpul `
 | Pertanyaan | Data yang ada | Uji yang sah | Status pada data ini |
 |---|---|---|---|
 | Dua AUROC berkorelasi | skor per jendela | DeLong | BELUM TERUKUR (skor tidak disimpan) |
-| Delta AUPRC antar engine | AP per well | bootstrap blok per well | TERUKUR (simulasi; data nyata butuh skor) |
-| Presisi satu engine | TP, FP | Wilson | TERUKUR |
-| Presisi dua engine, jendela sama | TP, FP, FN per jendela | McNemar | BELUM TERUKUR (hitungan berpasangan tidak ada) |
-| Presisi dua well/engine berbeda | TP, FP dua kelompok | Fisher eksak | TERUKUR |
+| Delta AUPRC antar mode | AP per well | bootstrap blok per well | TERUKUR (simulasi; data nyata butuh skor) |
+| Presisi satu mode | TP, FP | Wilson | TERUKUR |
+| Presisi dua detektor, jendela sama | TP, FP, FN per jendela | McNemar | BELUM TERUKUR (hitungan berpasangan tidak ada) |
+| Presisi dua well/detektor berbeda | TP, FP dua kelompok | Fisher eksak | TERUKUR |
 | Laju FAR | FP, jam negatif | Poisson eksak Garwood | TERUKUR |
 | Arah perbaikan antar well | tanda delta per well | uji tanda eksak | TERUKUR (n = 4, 7, 9) |
 | Banyak uji dalam satu keluarga | kumpulan p | Holm, BH | TERUKUR |
@@ -286,7 +286,7 @@ Koreksi yang dilakukan pada run provenance, semuanya perbaikan angka salah tulis
 ## 8. BELUM TERVERIFIKASI
 
 1. DeLong pada data nyata: BELUM TERUKUR karena skor per jendela tidak disimpan di JSON V9 (fungsi hanya diuji pada data sintetis).
-2. McNemar untuk dua engine pada jendela yang sama: BELUM TERUKUR karena hitungan ketidaksesuaian berpasangan tidak tersedia.
+2. McNemar untuk dua detektor pada jendela yang sama: BELUM TERUKUR karena hitungan ketidaksesuaian berpasangan tidak tersedia.
 3. Uji kestabilan lintas seed (A4): BELUM DIJALANKAN; semua hasil memakai SEED = 42.
 4. Seluruh hasil kekuatan uji (S6, S7, S15) berasal dari simulasi dengan asumsi well homogen (800 jendela negatif per well, parameter identik). Angka MDE nyata akan lebih lebar bila heterogenitas antar-well dimasukkan; besarnya belum diukur.
 5. Rasio lebar CI 0,57 (S7b) hanya sah untuk simulasi homogen dan tidak dapat dipindahkan ke data nyata.

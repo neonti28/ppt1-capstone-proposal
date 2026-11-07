@@ -1,0 +1,152 @@
+{
+ "seed": 42,
+ "recipe": "v6_e1_10_bins verbatim (chunksize=250000)",
+ "wells": {
+  "F-5": {
+   "n_bins": 67934,
+   "n_bins_drill": 10233,
+   "label_channels_present": [
+    "SHKRSK_RT",
+    "VIBLAT_RT"
+   ],
+   "crpm_present": true,
+   "spm_present": true,
+   "depth_present": true,
+   "size_bytes": 1448166,
+   "bins_with_stuck_obs": null,
+   "bins_with_vib_obs": 6876,
+   "bins_with_shk_obs": 10314,
+   "bins_with_crpm_obs": 7864
+  },
+  "F-7": {
+   "n_bins": 34533,
+   "n_bins_drill": 3671,
+   "label_channels_present": [
+    "SHKRSK_RT"
+   ],
+   "crpm_present": true,
+   "spm_present": true,
+   "depth_present": true,
+   "size_bytes": 533122,
+   "bins_with_stuck_obs": null,
+   "bins_with_vib_obs": null,
+   "bins_with_shk_obs": 3065,
+   "bins_with_crpm_obs": 2285
+  },
+  "F-9": {
+   "n_bins": 25460,
+   "n_bins_drill": 2197,
+   "label_channels_present": [
+    "SHKRSK_RT",
+    "STUCK_RT",
+    "VIBLAT_RT"
+   ],
+   "crpm_present": true,
+   "spm_present": true,
+   "depth_present": true,
+   "size_bytes": 378833,
+   "bins_with_stuck_obs": 1074,
+   "bins_with_vib_obs": 1190,
+   "bins_with_shk_obs": 3531,
+   "bins_with_crpm_obs": 2463
+  },
+  "F-9_A": {
+   "n_bins": 27282,
+   "n_bins_drill": 2530,
+   "label_channels_present": [
+    "SHKRSK_RT",
+    "STUCK_RT"
+   ],
+   "crpm_present": true,
+   "spm_present": true,
+   "depth_present": true,
+   "size_bytes": 344364,
+   "bins_with_stuck_obs": 2354,
+   "bins_with_vib_obs": null,
+   "bins_with_shk_obs": 2358,
+   "bins_with_crpm_obs": 797
+  },
+  "F-10": {
+   "n_bins": 41446,
+   "n_bins_drill": 13781,
+   "label_channels_present": [
+    "SHKRSK_RT",
+    "STUCK_RT",
+    "VIBLAT_RT"
+   ],
+   "crpm_present": true,
+   "spm_present": true,
+   "depth_present": true,
+   "size_bytes": 1491901,
+   "bins_with_stuck_obs": 4823,
+   "bins_with_vib_obs": 0,
+   "bins_with_shk_obs": 13077,
+   "bins_with_crpm_obs": 10452
+  },
+  "F-12": {
+   "n_bins": 180958,
+   "n_bins_drill": 23931,
+   "label_channels_present": [
+    "SHKRSK_RT"
+   ],
+   "crpm_present": true,
+   "spm_present": true,
+   "depth_present": true,
+   "size_bytes": 2943390,
+   "bins_with_stuck_obs": null,
+   "bins_with_vib_obs": null,
+   "bins_with_shk_obs": 19967,
+   "bins_with_crpm_obs": 23730
+  },
+  "F-14": {
+   "n_bins": 96698,
+   "n_bins_drill": 12635,
+   "label_channels_present": [
+    "SHKRSK_RT",
+    "STUCK_RT",
+    "VIBLAT_RT"
+   ],
+   "crpm_present": true,
+   "spm_present": true,
+   "depth_present": true,
+   "size_bytes": 1879557,
+   "bins_with_stuck_obs": 4295,
+   "bins_with_vib_obs": 2235,
+   "bins_with_shk_obs": 13098,
+   "bins_with_crpm_obs": 11794
+  },
+  "F-15A": {
+   "n_bins": 44347,
+   "n_bins_drill": 11853,
+   "label_channels_present": [
+    "SHKRSK_RT",
+    "VIBLAT_RT"
+   ],
+   "crpm_present": true,
+   "spm_present": true,
+   "depth_present": true,
+   "size_bytes": 1364268,
+   "bins_with_stuck_obs": null,
+   "bins_with_vib_obs": 12088,
+   "bins_with_shk_obs": 12704,
+   "bins_with_crpm_obs": 11548
+  },
+  "F-15_S": {
+   "n_bins": 101630,
+   "n_bins_drill": 13543,
+   "label_channels_present": [
+    "SHKRSK_RT",
+    "VIBLAT_RT"
+   ],
+   "crpm_present": true,
+   "spm_present": true,
+   "depth_present": true,
+   "size_bytes": 1916614,
+   "bins_with_stuck_obs": null,
+   "bins_with_vib_obs": 11939,
+   "bins_with_shk_obs": 13525,
+   "bins_with_crpm_obs": 11711
+  }
+ },
+ "elapsed_s": 151.2
+}

@@ -1,0 +1,74 @@
+[
+ {
+  "tag": "Dragomiretskiy2014_VMD",
+  "doi": "10.1109/TSP.2013.2288675",
+  "crossref": "200",
+  "title": "Variational Mode Decomposition",
+  "year": 2014,
+  "first_author": "Dragomiretskiy Konstantin",
+  "container": "IEEE Transactions on Signal Processing"
+ },
+ {
+  "tag": "Huang1998_EMD",
+  "doi": "10.1098/rspa.1998.0193",
+  "crossref": "200",
+  "title": "The empirical mode decomposition and the Hilbert spectrum for nonlinear and non-stationary time series analysis",
+  "year": 1998,
+  "first_author": "Huang Norden E.",
+  "container": "Proceedings of the Royal Society of London. Series A: Mathematical, Physical and Engineering Sciences"
+ },
+ {
+  "tag": "Mirjalili2014_GWO",
+  "doi": "10.1016/j.advengsoft.2013.12.007",
+  "crossref": "200",
+  "title": "Grey Wolf Optimizer",
+  "year": 2014,
+  "first_author": "Mirjalili Seyedali",
+  "container": "Advances in Engineering Software"
+ },
+ {
+  "tag": "Mirjalili2016_WOA",
+  "doi": "10.1016/j.advengsoft.2016.01.008",
+  "crossref": "200",
+  "title": "The Whale Optimization Algorithm",
+  "year": 2016,
+  "first_author": "Mirjalili Seyedali",
+  "container": "Advances in Engineering Software"
+ },
+ {
+  "tag": "Rakthanmanon2012_DTW",
+  "doi": "10.1145/2339530.2339576",
+  "crossref": "200",
+  "title": "Searching and mining trillions of time series subsequences under dynamic time warping",
+  "year": 2012,
+  "first_author": "Rakthanmanon Thanawin",
+  "container": "Proceedings of the 18th ACM SIGKDD international conference on Knowledge discovery and data mining"
+ },
+ {
+  "tag": "Yeh2016_MatrixProfile",
+  "doi": "10.1109/ICDM.2016.0172",
+  "crossref": "200",
+  "title": "The Development of a Smart Taxicab Scheduling System: A Multi-source Data Fusion Perspective",
+  "year": 2016,
+  "first_author": "Wang Yang",
+  "container": "2016 IEEE 16th International Conference on Data Mining (ICDM)"
+ },
+ {
+  "tag": "Reckmann2010_DrillingVib",
+  "doi": "10.2118/127413-MS",
+  "crossref": "200",
+  "title": "MWD Failure Rates Due to Drilling Dynamics",
+  "year": 2010,
+  "first_author": "Reckmann Hanno",
+  "container": "IADC/SPE Drilling Conference and Exhibition"
+ },
+ {
+  "tag": "Torrence1998_Wavelet",
+  "doi": "10.1175/1520-0477(1998)079<0061:APGTWA>2.0.CO;2",
+  "crossref": "200",
+  "title": "A Practical Guide to Wavelet Analysis",
+  "year": 1998,
+  "first_author": "Torrence Christopher",
+  "container": "Bulletin of the American Meteorological Society"
+ }
+]

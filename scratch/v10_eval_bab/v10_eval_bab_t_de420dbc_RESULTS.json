@@ -1,0 +1,63 @@
+{
+  "task": "t_de420dbc V10-EVAL BAB 7",
+  "board": "capstone-v10-proposal",
+  "generated": "2026-10-14",
+  "role": "Penerus Evaluator Lapisan A/B/C V9 (kartu induk t_e43490bf EVAL_C)",
+  "parent": "t_cf741053 (V10_PM1_OUTLINE)",
+  "output_doc": "/mnt/d/Capstone 1(v2)/docs/V10_EVAL_BAB.md",
+  "sources_primary": [
+    "scratch/v9_eval_c/v9_eval_c_RESULTS.json",
+    "scratch/v9_i1/v9_i1_RESULTS.json",
+    "scratch/v9_e_ml/*.json",
+    "scratch/v9_e_stat/*.json",
+    "scratch/v9_e_rule/*.json"
+  ],
+  "sources_doc": [
+    "docs/V9_EVAL_A_LAYERA.md",
+    "docs/V9_EVAL_B_LAYERB.md",
+    "docs/V9_EVAL_C_LAYERC.md",
+    "docs/V8_M1_CAPABILITY_MAP.md",
+    "docs/V9_PM2_VERDICT.md §e",
+    "docs/V10_PM1_OUTLINE.md"
+  ],
+  "verification_scripts": [
+    "scratch/v10_eval_bab/t_de420dbc_verify.py",
+    "scratch/v10_eval_bab/t_de420dbc_extract.py",
+    "scratch/v10_eval_bab/t_de420dbc_acceptance.py"
+  ],
+  "verifikasi": "13/13 angka kunci cocok (recompute independen dari JSON primer); acceptance 11 klaim + tier + angka = LULUS",
+  "angka_kunci": {
+    "vib": {"rule_P": [0.8676, 0.9519], "rule_FAR_24h": [9.99, 49.94], "rule_FP": 197,
+            "rf_AUPRC": [0.4405, 0.9117], "rf_AUPRC_ratio": 2.07, "rf_CI_memuat_prev": "0/4",
+            "rf_tau0.5_FAR": [4.14897, 496.09249], "rf_tau0.5_FAR_ratio": 119.57, "n_well_FARle6": "1/4"},
+    "ssi": {"rf_AUPRC": [0.0151, 0.4589], "rf_AUPRC_ratio": 30.36, "rf_CI_memuat_prev": "3/7 layak (5/9 all)",
+            "hybrid_FP": [26, 7], "hybrid_reduction_pct": 73.1, "nodata_CRPM": "22385/35906=0.6234",
+            "rule_recall": [0.0, 0.0323]},
+    "shk": {"rule_FAR_24h": [0.670, 6.618], "rule_FARle6_wells": "7/9", "rule_FP": 121,
+            "rf_AUPRC": [0.00687, 0.19289], "rf_AUPRC_ratio": 28.07, "rf_CI_memuat_prev": "7/9",
+            "B3_rf_tau005": -212.5},
+    "stuck_Ki": {"rule_P": [0.9238, 0.9662], "rule_FAR_24h": [8.32, 61.0], "rule_FP": 49, "n_folds": 2},
+    "stuck_Kii": {"persistence_event_B1": [0.0, 0.1154], "TLead_median_min": [4.5, 8.5], "TLead_median": 7.0,
+                  "far24h": [0.0, 2.93], "fp_alarm_total": 11, "E2_CI_memuat_prev": "4/4",
+                  "anchor_absorbed": "13/281=0.0463"},
+    "hyd_Ki": {"hybrid_P": [0.7236, 0.9484], "hybrid_FAR_24h": [14.62, 58.43], "hybrid_FP": [2091, 927],
+               "hybrid_reduction_pct": 55.7, "folds_not_increasing": "9/9", "persistence_CI_memuat_prev": "0/9",
+               "delay_median_min": [0.0, 3.5]},
+    "hyd_Kii": {"fisher_AUPRC": 0.022, "fisher_CI": [0.0025, 0.0684], "prev": 0.003701,
+                "q95_TP": 0, "q95_FP": 177, "q95_FAR_24h": 31.56, "sign_flip_frac": 0.7866,
+                "n_test": 8107, "flowout": "TIDAK TERSEDIA"},
+    "bit_wear_K1": {"AUPRC_scorable": [0.1185, 0.9837], "ratio": 8.3, "n_scorable": 5, "n_folds": 7,
+                    "dB_vs_canary": "5/5", "lift": [1.806, 10.667], "P_R_FAR": "BELUM TERUKUR"},
+    "bit_wear_K2": "BELUM DIJALANKAN (pra-reg belum terbit)",
+    "tool_wear_Ki": {"cp_sig": "8/8 (p<=0.05) & 8/8 (p<=0.002)", "precision_runlevel": 0.5,
+                     "op_far_FP": [1, 3], "op_far_TLead_s": [20.0, 36.0], "TLead_ratio": 1.8,
+                     "thermal_artifact": "0/8"},
+    "tool_wear_Kii": {"canary_AUPRC": [0.5164, 0.6124], "canary_ratio": 1.19, "lift_ceiling": 2.0,
+                      "RF_V9": "BELUM DIJALANKAN (V8 referensi)"}
+  },
+  "registry_27_head": {"n": 27, "L0": 5, "L1": 11, "L2": 9, "L3": 2,
+                       "tier": {"TREN": 13, "PERINGATAN-BERPENGAWAS": 12, "BELUM_LAYAK_PAKAI": 2},
+                       "auto_critical_alarm_slots": 0, "keputusan_akhir": "MANUSIA"},
+  "temuan_pusat": "TIDAK ada klaim memenuhi ALARM-OTOMATIS penuh; 2 kandidat terkuat = hyd K-i hybrid & tool_wear K-i FAR-terkalibrasi (PERINGATAN-BERPENGAWAS). Kegagalan paling umum = portabilitas ambang global antar-well (vib FAR 119x), bukan kegagalan deteksi.",
+  "acceptance": {"11_klaim_lengkap": true, "konsisten_EVAL_C": true, "tanpa_vonis_biner": true}
+}

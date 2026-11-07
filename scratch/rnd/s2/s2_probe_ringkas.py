@@ -1,0 +1,16 @@
+import json
+
+r = json.load(open("s2_ringkas.json"))
+m = json.load(open("s2_meta.json"))
+print("ringkas keys:", list(r.keys()))
+print("vib keys:", list(r["vib"].keys()))
+print("wells[0]:", json.dumps(r["vib"]["wells"][0], ensure_ascii=False)[:500])
+print("agregat persistence:", json.dumps(r["vib"]["agregat"]["persistence"], ensure_ascii=False))
+print("agregat keys:", list(r["vib"]["agregat"]["persistence"].keys()))
+print("banding vib:", json.dumps(r["vib"]["banding_hybrid_lawan_single"], ensure_ascii=False))
+print("lapisan_c vib persistence:", json.dumps(r["vib"]["lapisan_c_separuh"]["persistence"], ensure_ascii=False))
+print("variasi_seed vib[0]:", json.dumps(r["vib"]["variasi_seed_ml"][0], ensure_ascii=False))
+print("justifikasi[0]:", json.dumps(r["justifikasi_ambang_positif"][0], ensure_ascii=False))
+print("justifikasi n:", [j["n_pos"] for j in r["justifikasi_ambang_positif"]])
+print("meta:", json.dumps(m, ensure_ascii=False))
+print("ssi tak_dapat:", json.dumps(r["ssi"]["tak_dapat_diuji"], ensure_ascii=False))

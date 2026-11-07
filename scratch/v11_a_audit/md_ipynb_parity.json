@@ -1,0 +1,48 @@
+{
+ "kandidat_1": {
+  "md_total_lines": 352,
+  "md_substansial_lines": 255,
+  "ipynb_markdown_lines": 339,
+  "md_lines_missing_in_ipynb": 0,
+  "missing_detail": [],
+  "ipynb_extra_lines_not_in_md": 8,
+  "extra_preview": [
+   "> ## ARSIP VISUALISASI KAMPANYE LAMA (BUKAN BAGIAN NARASI PROPOSAL)",
+   ">",
+   "> Seluruh *code cell* dan visualisasi di bawah berasal dari versi dokumen sebelumnya",
+   "> (kampanye evaluasi lama). Riwayat kegagalan kampanye tersebut sudah dipindah ke",
+   "> `CHANGELOG.md`. Visualisasi dipertahankan di sini sebagai **arsip bukti** agar angka",
+   "> lama tetap dapat diperiksa, tetapi bukan bagian dari narasi proposal saat ini.",
+   "> Berkas arsip: `docs/ML_PROJECT_PROPOSAL_TECHNICAL_DESIGN.v2_arsip.ipynb` (versi utuh lama)",
+   "> dan `docs/ML_PROJECT_PROPOSAL_TECHNICAL_DESIGN.v2_arsip.md`."
+  ]
+ },
+ "kandidat_2": {
+  "md_total_lines": 3557,
+  "md_substansial_lines": 2829,
+  "ipynb_markdown_lines": 3565,
+  "md_lines_missing_in_ipynb": 2,
+  "missing_detail": [
+   {
+    "md_line": 648,
+    "text": "  B1 di **9/9 fold** (TLead median 5,0 mnt; angka kampanye V8 pra-reg onset `v8_e_shk_02b`,"
+   },
+   {
+    "md_line": 649,
+    "text": "  bukan V9 yang hanya mengukur status) → ML menambah nilai peringatan dini di atas"
+   }
+  ],
+  "ipynb_extra_lines_not_in_md": 9,
+  "extra_preview": [
+   "B1 di **9/9 fold** (TLead median 5,0 mnt; angka kampanye V8 pra-reg onset `v8_e_shk_02b`,\\nbukan V9 yang hanya mengukur status) → ML menambah nilai peringatan dini di atas",
+   "> ## ARSIP VISUALISASI KAMPANYE LAMA (BUKAN BAGIAN NARASI PROPOSAL)",
+   ">",
+   "> Seluruh *code cell* dan visualisasi di bawah berasal dari versi dokumen sebelumnya",
+   "> (kampanye evaluasi lama). Riwayat kegagalan kampanye tersebut sudah dipindah ke",
+   "> `CHANGELOG.md`. Visualisasi dipertahankan di sini sebagai **arsip bukti** agar angka",
+   "> lama tetap dapat diperiksa, tetapi bukan bagian dari narasi proposal saat ini.",
+   "> Berkas arsip: `docs/ML_PROJECT_PROPOSAL_TECHNICAL_DESIGN.v2_arsip.ipynb` (versi utuh lama)",
+   "> dan `docs/ML_PROJECT_PROPOSAL_TECHNICAL_DESIGN.v2_arsip.md`."
+  ]
+ }
+}

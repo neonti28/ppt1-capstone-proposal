@@ -1,0 +1,124 @@
+{
+ "seed": 42,
+ "H_min": 10,
+ "gap_seg_min": 30,
+ "recipe": "V8 extract_folds2 label + S1 strict-past features (55)",
+ "reference_onsets_v8": {
+  "F-9_A": 72,
+  "F-14": 61,
+  "F-10": 93
+ },
+ "wells": {
+  "F-9": {
+   "stuck_nonnull_raw": 5728,
+   "stuck_valcounts_raw": {
+    "0.0": 5347,
+    "1.0": 381
+   },
+   "grid_minutes": 4113479,
+   "ops_rows": 25349,
+   "inblock_rows": 9163,
+   "onsets_ffill": 55,
+   "onsets_strict": 61,
+   "onsets_scorable": 55,
+   "onset_skipped": {
+    "no_prior_windows": 0,
+    "all_horizon_inblock_or_gap": 0
+   },
+   "eligible_rows": 16184,
+   "positives": 311,
+   "v8_onsets_match": null
+  },
+  "F-9_A": {
+   "stuck_nonnull_raw": 45712,
+   "stuck_valcounts_raw": {
+    "0.0": 23122,
+    "3.0": 19056,
+    "1.0": 3171,
+    "2.0": 363
+   },
+   "grid_minutes": 3280052,
+   "ops_rows": 4331,
+   "inblock_rows": 13725,
+   "onsets_ffill": 72,
+   "onsets_strict": 72,
+   "onsets_scorable": 72,
+   "onset_skipped": {
+    "no_prior_windows": 0,
+    "all_horizon_inblock_or_gap": 0
+   },
+   "eligible_rows": 2242,
+   "positives": 503,
+   "v8_onsets_match": true
+  },
+  "F-10": {
+   "stuck_nonnull_raw": 9545,
+   "stuck_valcounts_raw": {
+    "0.0": 5462,
+    "3.0": 3982,
+    "1.0": 74,
+    "2.0": 27
+   },
+   "grid_minutes": 42442,
+   "ops_rows": 21728,
+   "inblock_rows": 37199,
+   "onsets_ffill": 93,
+   "onsets_strict": 111,
+   "onsets_scorable": 93,
+   "onset_skipped": {
+    "no_prior_windows": 0,
+    "all_horizon_inblock_or_gap": 0
+   },
+   "eligible_rows": 4216,
+   "positives": 772,
+   "v8_onsets_match": true
+  },
+  "F-14": {
+   "stuck_nonnull_raw": 5147,
+   "stuck_valcounts_raw": {
+    "0.0": 4753,
+    "1.0": 371,
+    "2.0": 19,
+    "3.0": 4
+   },
+   "grid_minutes": 4145722,
+   "ops_rows": 96501,
+   "inblock_rows": 556,
+   "onsets_ffill": 61,
+   "onsets_strict": 81,
+   "onsets_scorable": 61,
+   "onset_skipped": {
+    "no_prior_windows": 0,
+    "all_horizon_inblock_or_gap": 0
+   },
+   "eligible_rows": 95925,
+   "positives": 389,
+   "v8_onsets_match": true
+  }
+ },
+ "dataset": {
+  "file": "/mnt/d/Capstone 1/scratch/v9_d1/datasets/stuck_k2.csv.gz",
+  "n_rows": 118567,
+  "n_features": 55,
+  "positives": 1975,
+  "per_well": {
+   "F-9": {
+    "n": 16184,
+    "pos": 311
+   },
+   "F-9_A": {
+    "n": 2242,
+    "pos": 503
+   },
+   "F-10": {
+    "n": 4216,
+    "pos": 772
+   },
+   "F-14": {
+    "n": 95925,
+    "pos": 389
+   }
+  }
+ },
+ "elapsed_s": 13.6
+}

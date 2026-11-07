@@ -1,0 +1,45 @@
+{
+ "engine": "vib",
+ "n_rows": 23922,
+ "wells": [
+  "F-14",
+  "F-15A",
+  "F-15_S",
+  "F-5"
+ ],
+ "n_folds": 4,
+ "folds": [
+  {
+   "test_well": "F-14",
+   "train_wells": [
+    "F-15A",
+    "F-15_S",
+    "F-5"
+   ]
+  },
+  {
+   "test_well": "F-15A",
+   "train_wells": [
+    "F-14",
+    "F-15_S",
+    "F-5"
+   ]
+  },
+  {
+   "test_well": "F-15_S",
+   "train_wells": [
+    "F-14",
+    "F-15A",
+    "F-5"
+   ]
+  },
+  {
+   "test_well": "F-5",
+   "train_wells": [
+    "F-14",
+    "F-15A",
+    "F-15_S"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,865 @@
+{
+  "checks": [
+    {
+      "check": "V1 FAR konsisten A1 LOWO_test_F-10 ",
+      "lulus": true,
+      "detail": "json=86.72170956775133 hitung=86.72170956775133"
+    },
+    {
+      "check": "V1 FAR konsisten A1 LOWO_test_F-12 ",
+      "lulus": true,
+      "detail": "json=295.2917505030181 hitung=295.2917505030181"
+    },
+    {
+      "check": "V1 FAR konsisten A1 LOWO_test_F-14 ",
+      "lulus": true,
+      "detail": "json=77.91946308724832 hitung=77.91946308724832"
+    },
+    {
+      "check": "V1 FAR konsisten A1 LOWO_test_F-15A ",
+      "lulus": true,
+      "detail": "json=543.4957860021987 hitung=543.4957860021987"
+    },
+    {
+      "check": "V1 FAR konsisten A1 LOWO_test_F-15_S ",
+      "lulus": true,
+      "detail": "json=1.9559902200488999 hitung=1.9559902200488999"
+    },
+    {
+      "check": "V1 FAR konsisten A1 LOWO_test_F-5 ",
+      "lulus": true,
+      "detail": "json=213.56680091052357 hitung=213.56680091052357"
+    },
+    {
+      "check": "V1 FAR konsisten A1 LOWO_test_F-7 ",
+      "lulus": true,
+      "detail": "json=252.22707423580783 hitung=252.22707423580783"
+    },
+    {
+      "check": "V1 FAR konsisten A1 LOWO_test_F-9 ",
+      "lulus": true,
+      "detail": "json=0.0 hitung=0.0"
+    },
+    {
+      "check": "V1 FAR konsisten A1 LOWO_test_F-9_A ",
+      "lulus": true,
+      "detail": "json=29.183999999999997 hitung=29.183999999999997"
+    },
+    {
+      "check": "V1 FAR konsisten A1 LOWO_test_F-10 ",
+      "lulus": true,
+      "detail": "json=202.58377853326857 hitung=202.58377853326857"
+    },
+    {
+      "check": "V1 FAR konsisten A1 LOWO_test_F-12 ",
+      "lulus": true,
+      "detail": "json=52.63581488933602 hitung=52.63581488933602"
+    },
+    {
+      "check": "V1 FAR konsisten A1 LOWO_test_F-14 ",
+      "lulus": true,
+      "detail": "json=12.533557046979865 hitung=12.533557046979865"
+    },
+    {
+      "check": "V1 FAR konsisten A1 LOWO_test_F-15A ",
+      "lulus": true,
+      "detail": "json=151.44008794430195 hitung=151.44008794430195"
+    },
+    {
+      "check": "V1 FAR konsisten A1 LOWO_test_F-15_S ",
+      "lulus": true,
+      "detail": "json=13.49633251833741 hitung=13.49633251833741"
+    },
+    {
+      "check": "V1 FAR konsisten A1 LOWO_test_F-5 ",
+      "lulus": true,
+      "detail": "json=297.5310803712134 hitung=297.5310803712134"
+    },
+    {
+      "check": "V1 FAR konsisten A1 LOWO_test_F-7 ",
+      "lulus": true,
+      "detail": "json=352.1397379912663 hitung=352.1397379912663"
+    },
+    {
+      "check": "V1 FAR konsisten A1 LOWO_test_F-9 ",
+      "lulus": true,
+      "detail": "json=54.31684828164292 hitung=54.31684828164292"
+    },
+    {
+      "check": "V1 FAR konsisten A1 LOWO_test_F-9_A ",
+      "lulus": true,
+      "detail": "json=25.344 hitung=25.344"
+    },
+    {
+      "check": "V1 FAR konsisten A1 LOWO_test_F-10 ",
+      "lulus": true,
+      "detail": "json=0.23312287518212724 hitung=0.23312287518212724"
+    },
+    {
+      "check": "V1 FAR konsisten A1 LOWO_test_F-12 ",
+      "lulus": true,
+      "detail": "json=175.53319919517102 hitung=175.53319919517102"
+    },
+    {
+      "check": "V1 FAR konsisten A1 LOWO_test_F-14 ",
+      "lulus": true,
+      "detail": "json=28.54026845637584 hitung=28.54026845637584"
+    },
+    {
+      "check": "V1 FAR konsisten A1 LOWO_test_F-15A ",
+      "lulus": true,
+      "detail": "json=24.80029314767314 hitung=24.80029314767314"
+    },
+    {
+      "check": "V1 FAR konsisten A1 LOWO_test_F-15_S ",
+      "lulus": true,
+      "detail": "json=22.102689486552567 hitung=22.102689486552567"
+    },
+    {
+      "check": "V1 FAR konsisten A1 LOWO_test_F-5 ",
+      "lulus": true,
+      "detail": "json=132.37611626685344 hitung=132.37611626685344"
+    },
+    {
+      "check": "V1 FAR konsisten A1 LOWO_test_F-7 ",
+      "lulus": true,
+      "detail": "json=258.5152838427947 hitung=258.5152838427947"
+    },
+    {
+      "check": "V1 FAR konsisten A1 LOWO_test_F-9 ",
+      "lulus": true,
+      "detail": "json=70.00838222967309 hitung=70.00838222967309"
+    },
+    {
+      "check": "V1 FAR konsisten A1 LOWO_test_F-9_A ",
+      "lulus": true,
+      "detail": "json=59.903999999999996 hitung=59.903999999999996"
+    },
+    {
+      "check": "V1 FAR konsisten A1 LOWO_test_F-10 ",
+      "lulus": true,
+      "detail": "json=9.091792132102963 hitung=9.091792132102963"
+    },
+    {
+      "check": "V1 FAR konsisten A1 LOWO_test_F-12 ",
+      "lulus": true,
+      "detail": "json=286.84104627766595 hitung=286.84104627766595"
+    },
+    {
+      "check": "V1 FAR konsisten A1 LOWO_test_F-14 ",
+      "lulus": true,
+      "detail": "json=75.65436241610739 hitung=75.65436241610739"
+    },
+    {
+      "check": "V1 FAR konsisten A1 LOWO_test_F-15A ",
+      "lulus": true,
+      "detail": "json=37.20043972150971 hitung=37.20043972150971"
+    },
+    {
+      "check": "V1 FAR konsisten A1 LOWO_test_F-15_S ",
+      "lulus": true,
+      "detail": "json=28.753056234718827 hitung=28.753056234718827"
+    },
+    {
+      "check": "V1 FAR konsisten A1 LOWO_test_F-5 ",
+      "lulus": true,
+      "detail": "json=247.35422868149186 hitung=247.35422868149186"
+    },
+    {
+      "check": "V1 FAR konsisten A1 LOWO_test_F-7 ",
+      "lulus": true,
+      "detail": "json=266.2008733624454 hitung=266.2008733624454"
+    },
+    {
+      "check": "V1 FAR konsisten A1 LOWO_test_F-9 ",
+      "lulus": true,
+      "detail": "json=59.14501257334451 hitung=59.14501257334451"
+    },
+    {
+      "check": "V1 FAR konsisten A1 LOWO_test_F-9_A ",
+      "lulus": true,
+      "detail": "json=19.200000000000003 hitung=19.200000000000003"
+    },
+    {
+      "check": "V1 FAR konsisten A1 LOWO_test_F-10 ",
+      "lulus": true,
+      "detail": "json=36.36716852841185 hitung=36.36716852841185"
+    },
+    {
+      "check": "V1 FAR konsisten A1 LOWO_test_F-12 ",
+      "lulus": true,
+      "detail": "json=291.1871227364185 hitung=291.1871227364185"
+    },
+    {
+      "check": "V1 FAR konsisten A1 LOWO_test_F-14 ",
+      "lulus": true,
+      "detail": "json=34.88255033557047 hitung=34.88255033557047"
+    },
+    {
+      "check": "V1 FAR konsisten A1 LOWO_test_F-15A ",
+      "lulus": true,
+      "detail": "json=256.181751557347 hitung=256.181751557347"
+    },
+    {
+      "check": "V1 FAR konsisten A1 LOWO_test_F-15_S ",
+      "lulus": true,
+      "detail": "json=10.366748166259168 hitung=10.366748166259168"
+    },
+    {
+      "check": "V1 FAR konsisten A1 LOWO_test_F-5 ",
+      "lulus": true,
+      "detail": "json=63.28839082472421 hitung=63.28839082472421"
+    },
+    {
+      "check": "V1 FAR konsisten A1 LOWO_test_F-7 ",
+      "lulus": true,
+      "detail": "json=347.2489082969432 hitung=347.2489082969432"
+    },
+    {
+      "check": "V1 FAR konsisten A1 LOWO_test_F-9 ",
+      "lulus": true,
+      "detail": "json=108.63369656328584 hitung=108.63369656328584"
+    },
+    {
+      "check": "V1 FAR konsisten A1 LOWO_test_F-9_A ",
+      "lulus": true,
+      "detail": "json=19.968 hitung=19.968"
+    },
+    {
+      "check": "V1 FAR konsisten A1b LOWO_test_F-10 ",
+      "lulus": true,
+      "detail": "json=7.459932005828072 hitung=7.459932005828072"
+    },
+    {
+      "check": "V1 FAR konsisten A1b LOWO_test_F-12 ",
+      "lulus": true,
+      "detail": "json=24.14486921529175 hitung=24.14486921529175"
+    },
+    {
+      "check": "V1 FAR konsisten A1b LOWO_test_F-14 ",
+      "lulus": true,
+      "detail": "json=2.2651006711409396 hitung=2.2651006711409396"
+    },
+    {
+      "check": "V1 FAR konsisten A1b LOWO_test_F-15A ",
+      "lulus": true,
+      "detail": "json=20.05130084279956 hitung=20.05130084279956"
+    },
+    {
+      "check": "V1 FAR konsisten A1b LOWO_test_F-15_S ",
+      "lulus": true,
+      "detail": "json=1.9559902200488999 hitung=1.9559902200488999"
+    },
+    {
+      "check": "V1 FAR konsisten A1b LOWO_test_F-5 ",
+      "lulus": true,
+      "detail": "json=6.807914550866748 hitung=6.807914550866748"
+    },
+    {
+      "check": "V1 FAR konsisten A1b LOWO_test_F-7 ",
+      "lulus": true,
+      "detail": "json=6.986899563318777 hitung=6.986899563318777"
+    },
+    {
+      "check": "V1 FAR konsisten A1b LOWO_test_F-9 ",
+      "lulus": true,
+      "detail": "json=6.035205364626991 hitung=6.035205364626991"
+    },
+    {
+      "check": "V1 FAR konsisten A1b LOWO_test_F-9_A ",
+      "lulus": true,
+      "detail": "json=0.0 hitung=0.0"
+    },
+    {
+      "check": "V1 FAR konsisten A2_reset LOWO_test_F-10 ",
+      "lulus": true,
+      "detail": "json=146.86741136474015 hitung=146.86741136474015"
+    },
+    {
+      "check": "V1 FAR konsisten A2_reset LOWO_test_F-12 ",
+      "lulus": true,
+      "detail": "json=188.57142857142856 hitung=188.57142857142856"
+    },
+    {
+      "check": "V1 FAR konsisten A2_reset LOWO_test_F-14 ",
+      "lulus": true,
+      "detail": "json=151.15771812080536 hitung=151.15771812080536"
+    },
+    {
+      "check": "V1 FAR konsisten A2_reset LOWO_test_F-15A ",
+      "lulus": true,
+      "detail": "json=143.78893367533894 hitung=143.78893367533894"
+    },
+    {
+      "check": "V1 FAR konsisten A2_reset LOWO_test_F-15_S ",
+      "lulus": true,
+      "detail": "json=133.00733496332518 hitung=133.00733496332518"
+    },
+    {
+      "check": "V1 FAR konsisten A2_reset LOWO_test_F-5 ",
+      "lulus": true,
+      "detail": "json=199.1945368586937 hitung=199.1945368586937"
+    },
+    {
+      "check": "V1 FAR konsisten A2_reset LOWO_test_F-7 ",
+      "lulus": true,
+      "detail": "json=232.66375545851528 hitung=232.66375545851528"
+    },
+    {
+      "check": "V1 FAR konsisten A2_reset LOWO_test_F-9 ",
+      "lulus": true,
+      "detail": "json=194.3336127409891 hitung=194.3336127409891"
+    },
+    {
+      "check": "V1 FAR konsisten A2_reset LOWO_test_F-9_A ",
+      "lulus": true,
+      "detail": "json=127.488 hitung=127.488"
+    },
+    {
+      "check": "V1 FAR konsisten A2_tanpa_reset LOWO_test_F-10 ",
+      "lulus": true,
+      "detail": "json=1440.0 hitung=1440.0"
+    },
+    {
+      "check": "V1 FAR konsisten A2_tanpa_reset LOWO_test_F-12 ",
+      "lulus": true,
+      "detail": "json=1439.275653923541 hitung=1439.275653923541"
+    },
+    {
+      "check": "V1 FAR konsisten A2_tanpa_reset LOWO_test_F-14 ",
+      "lulus": true,
+      "detail": "json=1440.0 hitung=1440.0"
+    },
+    {
+      "check": "V1 FAR konsisten A2_tanpa_reset LOWO_test_F-15A ",
+      "lulus": true,
+      "detail": "json=1440.0 hitung=1440.0"
+    },
+    {
+      "check": "V1 FAR konsisten A2_tanpa_reset LOWO_test_F-15_S ",
+      "lulus": true,
+      "detail": "json=1403.2273838630808 hitung=1403.2273838630808"
+    },
+    {
+      "check": "V1 FAR konsisten A2_tanpa_reset LOWO_test_F-5 ",
+      "lulus": true,
+      "detail": "json=1440.0 hitung=1440.0"
+    },
+    {
+      "check": "V1 FAR konsisten A2_tanpa_reset LOWO_test_F-7 ",
+      "lulus": true,
+      "detail": "json=1440.0 hitung=1440.0"
+    },
+    {
+      "check": "V1 FAR konsisten A2_tanpa_reset LOWO_test_F-9 ",
+      "lulus": true,
+      "detail": "json=1440.0 hitung=1440.0"
+    },
+    {
+      "check": "V1 FAR konsisten A2_tanpa_reset LOWO_test_F-9_A ",
+      "lulus": true,
+      "detail": "json=1330.944 hitung=1330.944"
+    },
+    {
+      "check": "V1 FAR konsisten baseline LOWO_test_F-10 persistence",
+      "lulus": true,
+      "detail": "json=32.17095677513356 hitung=32.17095677513356"
+    },
+    {
+      "check": "V1 FAR konsisten baseline LOWO_test_F-10 hybrid_rule_lag1_and_persistence",
+      "lulus": true,
+      "detail": "json=2.7974745021855267 hitung=2.7974745021855267"
+    },
+    {
+      "check": "V1 FAR konsisten baseline LOWO_test_F-12 persistence",
+      "lulus": true,
+      "detail": "json=96.09657947686115 hitung=96.09657947686115"
+    },
+    {
+      "check": "V1 FAR konsisten baseline LOWO_test_F-12 hybrid_rule_lag1_and_persistence",
+      "lulus": true,
+      "detail": "json=14.48692152917505 hitung=14.48692152917505"
+    },
+    {
+      "check": "V1 FAR konsisten baseline LOWO_test_F-14 persistence",
+      "lulus": true,
+      "detail": "json=48.7751677852349 hitung=48.7751677852349"
+    },
+    {
+      "check": "V1 FAR konsisten baseline LOWO_test_F-14 hybrid_rule_lag1_and_persistence",
+      "lulus": true,
+      "detail": "json=3.020134228187919 hitung=3.020134228187919"
+    },
+    {
+      "check": "V1 FAR konsisten baseline LOWO_test_F-15A persistence",
+      "lulus": true,
+      "detail": "json=62.26456577500916 hitung=62.26456577500916"
+    },
+    {
+      "check": "V1 FAR konsisten baseline LOWO_test_F-15A hybrid_rule_lag1_and_persistence",
+      "lulus": true,
+      "detail": "json=4.2213264932209595 hitung=4.2213264932209595"
+    },
+    {
+      "check": "V1 FAR konsisten baseline LOWO_test_F-15_S persistence",
+      "lulus": true,
+      "detail": "json=73.74083129584352 hitung=73.74083129584352"
+    },
+    {
+      "check": "V1 FAR konsisten baseline LOWO_test_F-15_S hybrid_rule_lag1_and_persistence",
+      "lulus": true,
+      "detail": "json=7.04156479217604 hitung=7.04156479217604"
+    },
+    {
+      "check": "V1 FAR konsisten baseline LOWO_test_F-5 persistence",
+      "lulus": true,
+      "detail": "json=38.32603747154614 hitung=38.32603747154614"
+    },
+    {
+      "check": "V1 FAR konsisten baseline LOWO_test_F-5 hybrid_rule_lag1_and_persistence",
+      "lulus": true,
+      "detail": "json=2.773594817019786 hitung=2.773594817019786"
+    },
+    {
+      "check": "V1 FAR konsisten baseline LOWO_test_F-7 persistence",
+      "lulus": true,
+      "detail": "json=109.6943231441048 hitung=109.6943231441048"
+    },
+    {
+      "check": "V1 FAR konsisten baseline LOWO_test_F-7 hybrid_rule_lag1_and_persistence",
+      "lulus": true,
+      "detail": "json=11.179039301310043 hitung=11.179039301310043"
+    },
+    {
+      "check": "V1 FAR konsisten baseline LOWO_test_F-9 persistence",
+      "lulus": true,
+      "detail": "json=89.32103939647946 hitung=89.32103939647946"
+    },
+    {
+      "check": "V1 FAR konsisten baseline LOWO_test_F-9 hybrid_rule_lag1_and_persistence",
+      "lulus": true,
+      "detail": "json=19.31265716680637 hitung=19.31265716680637"
+    },
+    {
+      "check": "V1 FAR konsisten baseline LOWO_test_F-9_A persistence",
+      "lulus": true,
+      "detail": "json=66.048 hitung=66.048"
+    },
+    {
+      "check": "V1 FAR konsisten baseline LOWO_test_F-9_A hybrid_rule_lag1_and_persistence",
+      "lulus": true,
+      "detail": "json=6.144 hitung=6.144"
+    },
+    {
+      "check": "V2 total FP persistence",
+      "lulus": true,
+      "detail": "hitung=1941 json=1941"
+    },
+    {
+      "check": "V2 total FP hybrid proxy",
+      "lulus": true,
+      "detail": "hitung=195 json=195"
+    },
+    {
+      "check": "V3 gate A per seed = ringkasan run",
+      "lulus": true,
+      "detail": "hitung={'42': 2, '43': 0, '44': 1, '45': 0, '46': 0} json={'42': 2, '43': 0, '44': 1, '45': 0, '46': 0}"
+    },
+    {
+      "check": "V5a fitur A1 bebas kolom turunan label",
+      "lulus": true,
+      "detail": "bocor=[]"
+    },
+    {
+      "check": "V5b fitur A1b memuat kolom turunan label (pelanggaran L3)",
+      "lulus": true,
+      "detail": "bocor=['y_prev_hyd', 'valid_prev_hyd']"
+    },
+    {
+      "check": "V6 FP persistence F-10",
+      "lulus": true,
+      "detail": "hitung=138 json=138"
+    },
+    {
+      "check": "V6 FP hybrid F-10",
+      "lulus": true,
+      "detail": "hitung=12 json=12"
+    },
+    {
+      "check": "V6 FP persistence F-12",
+      "lulus": true,
+      "detail": "hitung=398 json=398"
+    },
+    {
+      "check": "V6 FP hybrid F-12",
+      "lulus": true,
+      "detail": "hitung=60 json=60"
+    },
+    {
+      "check": "V6 FP persistence F-14",
+      "lulus": true,
+      "detail": "hitung=323 json=323"
+    },
+    {
+      "check": "V6 FP hybrid F-14",
+      "lulus": true,
+      "detail": "hitung=20 json=20"
+    },
+    {
+      "check": "V6 FP persistence F-15A",
+      "lulus": true,
+      "detail": "hitung=236 json=236"
+    },
+    {
+      "check": "V6 FP hybrid F-15A",
+      "lulus": true,
+      "detail": "hitung=16 json=16"
+    },
+    {
+      "check": "V6 FP persistence F-15_S",
+      "lulus": true,
+      "detail": "hitung=377 json=377"
+    },
+    {
+      "check": "V6 FP hybrid F-15_S",
+      "lulus": true,
+      "detail": "hitung=36 json=36"
+    },
+    {
+      "check": "V6 FP persistence F-5",
+      "lulus": true,
+      "detail": "hitung=152 json=152"
+    },
+    {
+      "check": "V6 FP hybrid F-5",
+      "lulus": true,
+      "detail": "hitung=11 json=11"
+    },
+    {
+      "check": "V6 FP persistence F-7",
+      "lulus": true,
+      "detail": "hitung=157 json=157"
+    },
+    {
+      "check": "V6 FP hybrid F-7",
+      "lulus": true,
+      "detail": "hitung=16 json=16"
+    },
+    {
+      "check": "V6 FP persistence F-9",
+      "lulus": true,
+      "detail": "hitung=74 json=74"
+    },
+    {
+      "check": "V6 FP hybrid F-9",
+      "lulus": true,
+      "detail": "hitung=16 json=16"
+    },
+    {
+      "check": "V6 FP persistence F-9_A",
+      "lulus": true,
+      "detail": "hitung=86 json=86"
+    },
+    {
+      "check": "V6 FP hybrid F-9_A",
+      "lulus": true,
+      "detail": "hitung=8 json=8"
+    }
+  ],
+  "v1_max_deviasi_far": 0.0,
+  "v3_gate_A": {
+    "A1": {
+      "n_fold": 45,
+      "n_gate_A_lulus": 3,
+      "folds_lulus": [
+        "F-15_S",
+        "F-9",
+        "F-10"
+      ]
+    },
+    "A1b": {
+      "n_fold": 9,
+      "n_gate_A_lulus": 3,
+      "folds_lulus": [
+        "F-14",
+        "F-15_S",
+        "F-9_A"
+      ]
+    },
+    "A2_reset": {
+      "n_fold": 9,
+      "n_gate_A_lulus": 0,
+      "folds_lulus": []
+    },
+    "A2_tanpa_reset": {
+      "n_fold": 9,
+      "n_gate_A_lulus": 0,
+      "folds_lulus": []
+    },
+    "baseline_persistence": {
+      "n_fold": 9,
+      "n_gate_A_lulus": 0,
+      "folds_lulus": []
+    },
+    "baseline_hybrid_proxy": {
+      "n_fold": 9,
+      "n_gate_A_lulus": 0,
+      "folds_lulus": []
+    }
+  },
+  "v3b_gate_A_baseline_hitung_manual": {
+    "persistence": [],
+    "hybrid_proxy": [
+      "F-10",
+      "F-14",
+      "F-15A",
+      "F-5"
+    ]
+  },
+  "v3c_gate_A_per_seed": {
+    "42": 2,
+    "43": 0,
+    "44": 1,
+    "45": 0,
+    "46": 0
+  },
+  "v4_rentang": {
+    "A1_seed42_far": {
+      "n": 9,
+      "min": 0.0,
+      "max": 543.4957860021987,
+      "median": 86.72170956775133
+    },
+    "A1_seed42_recall": {
+      "n": 9,
+      "min": 0.0010070493454179255,
+      "max": 0.505730659025788,
+      "median": 0.07398843930635839
+    },
+    "A1_semua_seed_far": {
+      "n": 45,
+      "min": 0.0,
+      "max": 543.4957860021987,
+      "median": 63.28839082472421
+    },
+    "A1b_far": {
+      "n": 9,
+      "min": 0.0,
+      "max": 24.14486921529175,
+      "median": 6.807914550866748
+    },
+    "A1b_recall": {
+      "n": 9,
+      "min": 0.0,
+      "max": 0.36231884057971014,
+      "median": 0.15710186513629842
+    },
+    "A1b_precision": {
+      "n": 8,
+      "min": 0.47368421052631576,
+      "max": 0.9645390070921985,
+      "median": 0.8162443362980366
+    },
+    "A2_reset_far": {
+      "n": 9,
+      "min": 127.488,
+      "max": 232.66375545851528,
+      "median": 151.15771812080536
+    },
+    "A2_reset_recall": {
+      "n": 9,
+      "min": 0.3870967741935484,
+      "max": 0.8037825059101655,
+      "median": 0.5445086705202312
+    },
+    "A2_tanpa_reset_far": {
+      "n": 9,
+      "min": 1330.944,
+      "max": 1440.0,
+      "median": 1440.0
+    },
+    "A2_tanpa_reset_recall": {
+      "n": 9,
+      "min": 0.8882175226586103,
+      "max": 1.0,
+      "median": 1.0
+    },
+    "baseline_persistence_far": {
+      "n": 9,
+      "min": 32.17095677513356,
+      "max": 109.6943231441048,
+      "median": 66.048
+    },
+    "baseline_hybrid_far": {
+      "n": 9,
+      "min": 2.773594817019786,
+      "max": 19.31265716680637,
+      "median": 6.144
+    },
+    "baseline_persistence_recall": {
+      "n": 9,
+      "min": 0.6052366565961732,
+      "max": 0.8773314203730272,
+      "median": 0.6790830945558739
+    },
+    "baseline_hybrid_recall": {
+      "n": 9,
+      "min": 0.5921450151057401,
+      "max": 0.8751793400286944,
+      "median": 0.664756446991404
+    }
+  },
+  "v5_audit_fitur": {
+    "n_fitur_A1": 41,
+    "n_fitur_A1b": 43,
+    "tambahan_A1b": [
+      "y_prev_hyd",
+      "valid_prev_hyd"
+    ],
+    "kolom_turunan_label_dipakai_A1b": [
+      "y_prev_hyd",
+      "valid_prev_hyd"
+    ],
+    "kolom_turunan_label_didefinisikan": [
+      "y_hyd",
+      "y_prev_hyd",
+      "valid_prev_hyd",
+      "obs_hyd",
+      "anom_hyd",
+      "lab_ts",
+      "lab_kind",
+      "feat_ts_max"
+    ]
+  },
+  "v6_recompute_baseline": {
+    "F-10": {
+      "n": 7571,
+      "n_pos": 1394,
+      "fp_pers": 138,
+      "fp_hyb": 12
+    },
+    "F-12": {
+      "n": 7390,
+      "n_pos": 1426,
+      "fp_pers": 398,
+      "fp_hyb": 60
+    },
+    "F-14": {
+      "n": 10401,
+      "n_pos": 865,
+      "fp_pers": 323,
+      "fp_hyb": 20
+    },
+    "F-15A": {
+      "n": 6156,
+      "n_pos": 698,
+      "fp_pers": 236,
+      "fp_hyb": 16
+    },
+    "F-15_S": {
+      "n": 8355,
+      "n_pos": 993,
+      "fp_pers": 377,
+      "fp_hyb": 36
+    },
+    "F-5": {
+      "n": 6332,
+      "n_pos": 621,
+      "fp_pers": 152,
+      "fp_hyb": 11
+    },
+    "F-7": {
+      "n": 2482,
+      "n_pos": 421,
+      "fp_pers": 157,
+      "fp_hyb": 16
+    },
+    "F-9": {
+      "n": 1616,
+      "n_pos": 423,
+      "fp_pers": 74,
+      "fp_hyb": 16
+    },
+    "F-9_A": {
+      "n": 2206,
+      "n_pos": 331,
+      "fp_pers": 86,
+      "fp_hyb": 8
+    }
+  },
+  "v6_total": {
+    "persistence": 1941,
+    "hybrid": 195,
+    "n_baris": 52509
+  },
+  "v7_syarat_4x_fp_gagal": {
+    "A1": [
+      "F-10",
+      "F-12",
+      "F-14",
+      "F-15A",
+      "F-5",
+      "F-7",
+      "F-9_A",
+      "F-10",
+      "F-12",
+      "F-14",
+      "F-15A",
+      "F-15_S",
+      "F-5",
+      "F-7",
+      "F-9",
+      "F-9_A",
+      "F-12",
+      "F-14",
+      "F-15A",
+      "F-15_S",
+      "F-5",
+      "F-7",
+      "F-9",
+      "F-9_A",
+      "F-10",
+      "F-12",
+      "F-14",
+      "F-15A",
+      "F-15_S",
+      "F-5",
+      "F-7",
+      "F-9",
+      "F-9_A",
+      "F-10",
+      "F-12",
+      "F-14",
+      "F-15A",
+      "F-15_S",
+      "F-5",
+      "F-7",
+      "F-9",
+      "F-9_A"
+    ],
+    "A1b": [
+      "F-10",
+      "F-12",
+      "F-15A",
+      "F-5",
+      "F-7",
+      "F-9"
+    ],
+    "A2_reset": [
+      "F-10",
+      "F-12",
+      "F-14",
+      "F-15A",
+      "F-15_S",
+      "F-5",
+      "F-7",
+      "F-9",
+      "F-9_A"
+    ]
+  },
+  "ringkasan": {
+    "n_gagal": 0,
+    "gagal": [],
+    "verdict": "SEMUA PEMERIKSAAN LULUS"
+  }
+}

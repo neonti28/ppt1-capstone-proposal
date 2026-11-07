@@ -1,0 +1,56 @@
+{
+ "kartu": "t_6890a1c7",
+ "tanggal": "2026-10-28 02:50:22",
+ "elapsed_s": 66.9,
+ "python": "3.11.15",
+ "executable": "/home/neonti/.venvs/rnd_e3/bin/python",
+ "pandas": "3.1.0",
+ "numpy": "2.4.6",
+ "dataset": "/mnt/d/Capstone 1(v2)/scratch/v9_d1/datasets/hyd_ki.csv.gz",
+ "dataset_shape": [
+  52509,
+  50
+ ],
+ "dataset_sha256": "4a701ed63291e4550c0696055db82f134e7295c9fbf73cbb9899e20d2c3ef99b",
+ "fold_file": "/mnt/d/Capstone 1(v2)/scratch/v9_d1/lowo_hyd_ki.json",
+ "n_fold": 9,
+ "wells": {
+  "F-10": 7571,
+  "F-12": 7390,
+  "F-14": 10401,
+  "F-15A": 6156,
+  "F-15_S": 8355,
+  "F-5": 6332,
+  "F-7": 2482,
+  "F-9": 1616,
+  "F-9_A": 2206
+ },
+ "per_well_pos": {
+  "F-10": 1394,
+  "F-12": 1426,
+  "F-14": 865,
+  "F-15A": 698,
+  "F-15_S": 993,
+  "F-5": 621,
+  "F-7": 421,
+  "F-9": 423,
+  "F-9_A": 331
+ },
+ "per_well_menit_kalender": {
+  "F-10": 11249,
+  "F-12": 86454,
+  "F-14": 317679,
+  "F-15A": 32141,
+  "F-15_S": 92488,
+  "F-5": 369549,
+  "F-7": 23011,
+  "F-9": 22858,
+  "F-9_A": 7344
+ },
+ "r8_artefak": "/mnt/d/Capstone 1(v2)/scratch/rnd/r8/r8_hyd.json",
+ "r8_sha256": "8aecb3376bcfd9c08e59607a5127ee870bb3d75d08da2f5036ea63855243707a",
+ "skrip": "/mnt/d/Capstone 1(v2)/code/rnd_s1_run.py",
+ "harness": "/mnt/d/Capstone 1(v2)/code/rnd_hybrid_harness.py",
+ "harness_sha256": "2d8e6f32d274ffc36a7cdcc65a1435671df5c4e5fd01a03182b97fb7d181658c",
+ "perintah": "/home/neonti/.venvs/rnd_e3/bin/python code/rnd_s1_run.py --seeds 42,7,13,21,33 --kontrol"
+}

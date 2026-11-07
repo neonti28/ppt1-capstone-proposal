@@ -1,0 +1,839 @@
+{
+ "leakage": {
+  "vib": {
+   "n_rows": 23922,
+   "n_feat_ts_max_nan": 0,
+   "n_feat_ts_max_ge_lab_ts": 0,
+   "max_feat_ts_max_minus_lab_ts": -1.0,
+   "min_feat_ts_max_minus_lab_ts": -6.0,
+   "n_feat_ts_max_ge_ts_bin": 0,
+   "n_features": 55,
+   "label_channel_in_features": [
+    "SPPA_mean",
+    "SPPA_std",
+    "SPPA_slope",
+    "SPPA_last",
+    "SPPA_frac",
+    "TFLO_mean",
+    "TFLO_std",
+    "TFLO_slope",
+    "TFLO_last",
+    "TFLO_frac",
+    "SPM_mean",
+    "SPM_std",
+    "SPM_slope",
+    "SPM_last",
+    "SPM_frac"
+   ]
+  },
+  "ssi": {
+   "n_rows": 35906,
+   "n_feat_ts_max_nan": 0,
+   "n_feat_ts_max_ge_lab_ts": 0,
+   "max_feat_ts_max_minus_lab_ts": -1.0,
+   "min_feat_ts_max_minus_lab_ts": -6.0,
+   "n_feat_ts_max_ge_ts_bin": 0,
+   "n_features": 55,
+   "label_channel_in_features": [
+    "SPPA_mean",
+    "SPPA_std",
+    "SPPA_slope",
+    "SPPA_last",
+    "SPPA_frac",
+    "TFLO_mean",
+    "TFLO_std",
+    "TFLO_slope",
+    "TFLO_last",
+    "TFLO_frac",
+    "SPM_mean",
+    "SPM_std",
+    "SPM_slope",
+    "SPM_last",
+    "SPM_frac"
+   ]
+  },
+  "shk": {
+   "n_rows": 56495,
+   "n_feat_ts_max_nan": 0,
+   "n_feat_ts_max_ge_lab_ts": 0,
+   "max_feat_ts_max_minus_lab_ts": -1.0,
+   "min_feat_ts_max_minus_lab_ts": -6.0,
+   "n_feat_ts_max_ge_ts_bin": 0,
+   "n_features": 55,
+   "label_channel_in_features": [
+    "SPPA_mean",
+    "SPPA_std",
+    "SPPA_slope",
+    "SPPA_last",
+    "SPPA_frac",
+    "TFLO_mean",
+    "TFLO_std",
+    "TFLO_slope",
+    "TFLO_last",
+    "TFLO_frac",
+    "SPM_mean",
+    "SPM_std",
+    "SPM_slope",
+    "SPM_last",
+    "SPM_frac"
+   ]
+  },
+  "stuck_k1": {
+   "n_rows": 5555,
+   "n_feat_ts_max_nan": 0,
+   "n_feat_ts_max_ge_lab_ts": 0,
+   "max_feat_ts_max_minus_lab_ts": -1.0,
+   "min_feat_ts_max_minus_lab_ts": -6.0,
+   "n_feat_ts_max_ge_ts_bin": 0,
+   "n_features": 55,
+   "label_channel_in_features": [
+    "SPPA_mean",
+    "SPPA_std",
+    "SPPA_slope",
+    "SPPA_last",
+    "SPPA_frac",
+    "TFLO_mean",
+    "TFLO_std",
+    "TFLO_slope",
+    "TFLO_last",
+    "TFLO_frac",
+    "SPM_mean",
+    "SPM_std",
+    "SPM_slope",
+    "SPM_last",
+    "SPM_frac"
+   ]
+  },
+  "hyd_ki": {
+   "n_rows": 52509,
+   "n_feat_ts_max_nan": 0,
+   "n_feat_ts_max_ge_lab_ts": 0,
+   "max_feat_ts_max_minus_lab_ts": -1.0,
+   "min_feat_ts_max_minus_lab_ts": -6.0,
+   "n_feat_ts_max_ge_ts_bin": 0,
+   "n_features": 40,
+   "label_channel_in_features": []
+  },
+  "stuck_k2": {
+   "n_rows": 118567,
+   "n_feat_ts_max_nan": 0,
+   "n_feat_ts_max_ge_lab_ts": 0,
+   "max_feat_ts_max_minus_lab_ts": -1.0,
+   "min_feat_ts_max_minus_lab_ts": -11.0,
+   "n_feat_ts_max_ge_ts_bin": 0,
+   "n_features": 55,
+   "label_channel_in_features": [
+    "SPPA_mean",
+    "SPPA_std",
+    "SPPA_slope",
+    "SPPA_last",
+    "SPPA_frac",
+    "TFLO_mean",
+    "TFLO_std",
+    "TFLO_slope",
+    "TFLO_last",
+    "TFLO_frac",
+    "SPM_mean",
+    "SPM_std",
+    "SPM_slope",
+    "SPM_last",
+    "SPM_frac"
+   ]
+  }
+ },
+ "rule": {
+  "vib": {
+   "n": 23922,
+   "rule_hash_run1": "8ac69651728df3db",
+   "rule_hash_run2": "8ac69651728df3db",
+   "rule_bit_identik": true,
+   "nodata_hash_identik": true,
+   "rule_all": {
+    "n": 23922,
+    "pos": 5429,
+    "neg": 18493,
+    "tp": 2243,
+    "fp": 197,
+    "fn": 3186,
+    "P": 0.9193,
+    "R": 0.4132,
+    "far24": 15.34
+   },
+   "rule_subset_sudah_berlangsung": {
+    "n": 5499,
+    "pos": 4043,
+    "neg": 1456,
+    "tp": 2243,
+    "fp": 197,
+    "fn": 1800,
+    "P": 0.9193,
+    "R": 0.5548,
+    "far24": 194.835
+   },
+   "rule_subset_onset_baru": {
+    "n": 18423,
+    "pos": 1386,
+    "neg": 17037,
+    "tp": 0,
+    "fp": 0,
+    "fn": 1386,
+    "P": null,
+    "R": 0.0,
+    "far24": 0.0
+   },
+   "persistence_all": {
+    "n": 23922,
+    "pos": 5429,
+    "neg": 18493,
+    "tp": 4043,
+    "fp": 1456,
+    "fn": 1386,
+    "P": 0.7352,
+    "R": 0.7447,
+    "far24": 113.375
+   },
+   "frac_pos_sudah_berlangsung": 0.7447,
+   "frac_pos_onset_baru": 0.2553,
+   "rule_pos_rate_pada_sudah_berlangsung": 0.4437,
+   "rule_pos_rate_pada_onset_baru": 0.0,
+   "cakupan_waktu_per_well": {
+    "F-14": {
+     "n": 1989,
+     "span_menit": 3018,
+     "cakupan": 0.659
+    },
+    "F-15A": {
+     "n": 6482,
+     "span_menit": 32141,
+     "cakupan": 0.2017
+    },
+    "F-15_S": {
+     "n": 10903,
+     "span_menit": 92501,
+     "cakupan": 0.1179
+    },
+    "F-5": {
+     "n": 4548,
+     "span_menit": 20961,
+     "cakupan": 0.217
+    }
+   },
+   "n_neg_dipakai_penyebut": 18493,
+   "jam_negatif_efektif": 308.22
+  },
+  "ssi": {
+   "n": 35906,
+   "rule_hash_run1": "71ff04a8e92b27c1",
+   "rule_hash_run2": "71ff04a8e92b27c1",
+   "rule_bit_identik": true,
+   "nodata_hash_identik": true,
+   "rule_all": {
+    "n": 35906,
+    "pos": 607,
+    "neg": 35299,
+    "tp": 7,
+    "fp": 26,
+    "fn": 600,
+    "P": 0.2121,
+    "R": 0.0115,
+    "far24": 1.061
+   },
+   "rule_subset_sudah_berlangsung": {
+    "n": 352,
+    "pos": 85,
+    "neg": 267,
+    "tp": 2,
+    "fp": 7,
+    "fn": 83,
+    "P": 0.2222,
+    "R": 0.0235,
+    "far24": 37.753
+   },
+   "rule_subset_onset_baru": {
+    "n": 35554,
+    "pos": 522,
+    "neg": 35032,
+    "tp": 5,
+    "fp": 19,
+    "fn": 517,
+    "P": 0.2083,
+    "R": 0.0096,
+    "far24": 0.781
+   },
+   "persistence_all": {
+    "n": 35906,
+    "pos": 607,
+    "neg": 35299,
+    "tp": 85,
+    "fp": 267,
+    "fn": 522,
+    "P": 0.2415,
+    "R": 0.14,
+    "far24": 10.892
+   },
+   "frac_pos_sudah_berlangsung": 0.14,
+   "frac_pos_onset_baru": 0.86,
+   "rule_pos_rate_pada_sudah_berlangsung": 0.0256,
+   "rule_pos_rate_pada_onset_baru": 0.0007,
+   "cakupan_waktu_per_well": {
+    "F-10": {
+     "n": 7133,
+     "span_menit": 11247,
+     "cakupan": 0.6342
+    },
+    "F-12": {
+     "n": 4293,
+     "span_menit": 85643,
+     "cakupan": 0.0501
+    },
+    "F-14": {
+     "n": 5455,
+     "span_menit": 275834,
+     "cakupan": 0.0198
+    },
+    "F-15A": {
+     "n": 6020,
+     "span_menit": 32133,
+     "cakupan": 0.1873
+    },
+    "F-15_S": {
+     "n": 5342,
+     "span_menit": 81764,
+     "cakupan": 0.0653
+    },
+    "F-5": {
+     "n": 4714,
+     "span_menit": 322772,
+     "cakupan": 0.0146
+    },
+    "F-7": {
+     "n": 982,
+     "span_menit": 12837,
+     "cakupan": 0.0765
+    },
+    "F-9": {
+     "n": 1126,
+     "span_menit": 2287,
+     "cakupan": 0.4923
+    },
+    "F-9_A": {
+     "n": 841,
+     "span_menit": 1173,
+     "cakupan": 0.717
+    }
+   },
+   "n_neg_dipakai_penyebut": 35299,
+   "jam_negatif_efektif": 588.32
+  },
+  "shk": {
+   "n": 56495,
+   "rule_hash_run1": "3f1025e236f6c655",
+   "rule_hash_run2": "3f1025e236f6c655",
+   "rule_bit_identik": true,
+   "nodata_hash_identik": true,
+   "rule_all": {
+    "n": 56495,
+    "pos": 2005,
+    "neg": 54490,
+    "tp": 192,
+    "fp": 121,
+    "fn": 1813,
+    "P": 0.6134,
+    "R": 0.0958,
+    "far24": 3.198
+   },
+   "rule_subset_sudah_berlangsung": {
+    "n": 1530,
+    "pos": 474,
+    "neg": 1056,
+    "tp": 192,
+    "fp": 121,
+    "fn": 282,
+    "P": 0.6134,
+    "R": 0.4051,
+    "far24": 165.0
+   },
+   "rule_subset_onset_baru": {
+    "n": 54965,
+    "pos": 1531,
+    "neg": 53434,
+    "tp": 0,
+    "fp": 0,
+    "fn": 1531,
+    "P": null,
+    "R": 0.0,
+    "far24": 0.0
+   },
+   "persistence_all": {
+    "n": 56495,
+    "pos": 2005,
+    "neg": 54490,
+    "tp": 474,
+    "fp": 1056,
+    "fn": 1531,
+    "P": 0.3098,
+    "R": 0.2364,
+    "far24": 27.907
+   },
+   "frac_pos_sudah_berlangsung": 0.2364,
+   "frac_pos_onset_baru": 0.7636,
+   "rule_pos_rate_pada_sudah_berlangsung": 0.2046,
+   "rule_pos_rate_pada_onset_baru": 0.0,
+   "cakupan_waktu_per_well": {
+    "F-10": {
+     "n": 7899,
+     "span_menit": 11668,
+     "cakupan": 0.677
+    },
+    "F-12": {
+     "n": 5405,
+     "span_menit": 86461,
+     "cakupan": 0.0625
+    },
+    "F-14": {
+     "n": 11205,
+     "span_menit": 317685,
+     "cakupan": 0.0353
+    },
+    "F-15A": {
+     "n": 6484,
+     "span_menit": 32141,
+     "cakupan": 0.2017
+    },
+    "F-15_S": {
+     "n": 11394,
+     "span_menit": 92502,
+     "cakupan": 0.1232
+    },
+    "F-5": {
+     "n": 7140,
+     "span_menit": 369665,
+     "cakupan": 0.0193
+    },
+    "F-7": {
+     "n": 2761,
+     "span_menit": 23167,
+     "cakupan": 0.1192
+    },
+    "F-9": {
+     "n": 1851,
+     "span_menit": 22893,
+     "cakupan": 0.0809
+    },
+    "F-9_A": {
+     "n": 2356,
+     "span_menit": 7354,
+     "cakupan": 0.3204
+    }
+   },
+   "n_neg_dipakai_penyebut": 54490,
+   "jam_negatif_efektif": 908.17
+  },
+  "stuck_k1": {
+   "n": 5555,
+   "rule_hash_run1": "35ef2718c148c5f0",
+   "rule_hash_run2": "35ef2718c148c5f0",
+   "rule_bit_identik": true,
+   "nodata_hash_identik": true,
+   "rule_all": {
+    "n": 5555,
+    "pos": 2007,
+    "neg": 3548,
+    "tp": 1138,
+    "fp": 49,
+    "fn": 869,
+    "P": 0.9587,
+    "R": 0.567,
+    "far24": 19.887
+   },
+   "rule_subset_sudah_berlangsung": {
+    "n": 1999,
+    "pos": 1563,
+    "neg": 436,
+    "tp": 1138,
+    "fp": 49,
+    "fn": 425,
+    "P": 0.9587,
+    "R": 0.7281,
+    "far24": 161.835
+   },
+   "rule_subset_onset_baru": {
+    "n": 3556,
+    "pos": 444,
+    "neg": 3112,
+    "tp": 0,
+    "fp": 0,
+    "fn": 444,
+    "P": null,
+    "R": 0.0,
+    "far24": 0.0
+   },
+   "persistence_all": {
+    "n": 5555,
+    "pos": 2007,
+    "neg": 3548,
+    "tp": 1563,
+    "fp": 436,
+    "fn": 444,
+    "P": 0.7819,
+    "R": 0.7788,
+    "far24": 176.956
+   },
+   "frac_pos_sudah_berlangsung": 0.7788,
+   "frac_pos_onset_baru": 0.2212,
+   "rule_pos_rate_pada_sudah_berlangsung": 0.5938,
+   "rule_pos_rate_pada_onset_baru": 0.0,
+   "cakupan_waktu_per_well": {
+    "F-14": {
+     "n": 3201,
+     "span_menit": 5289,
+     "cakupan": 0.6052
+    },
+    "F-9_A": {
+     "n": 2354,
+     "span_menit": 7354,
+     "cakupan": 0.3201
+    }
+   },
+   "n_neg_dipakai_penyebut": 3548,
+   "jam_negatif_efektif": 59.13,
+   "e1_all": {
+    "n": 5555,
+    "pos": 2007,
+    "neg": 3548,
+    "tp": 49,
+    "fp": 160,
+    "fn": 1958,
+    "P": 0.2344,
+    "R": 0.0244,
+    "far24": 64.938
+   },
+   "e1_subset_onset_baru": {
+    "n": 3556,
+    "pos": 444,
+    "neg": 3112,
+    "tp": 32,
+    "fp": 119,
+    "fn": 412,
+    "P": 0.2119,
+    "R": 0.0721,
+    "far24": 55.064
+   },
+   "e1_subset_sudah_berlangsung": {
+    "n": 1999,
+    "pos": 1563,
+    "neg": 436,
+    "tp": 17,
+    "fp": 41,
+    "fn": 1546,
+    "P": 0.2931,
+    "R": 0.0109,
+    "far24": 135.413
+   }
+  },
+  "hyd_ki": {
+   "n": 52509,
+   "rule_hash_run1": "4857a79b8e7abd0d",
+   "rule_hash_run2": "4857a79b8e7abd0d",
+   "rule_bit_identik": true,
+   "nodata_hash_identik": true,
+   "rule_all": {
+    "n": 52509,
+    "pos": 7172,
+    "neg": 45337,
+    "tp": 5579,
+    "fp": 2105,
+    "fn": 1593,
+    "P": 0.7261,
+    "R": 0.7779,
+    "far24": 66.859
+   },
+   "rule_subset_sudah_berlangsung": {
+    "n": 7184,
+    "pos": 5243,
+    "neg": 1941,
+    "tp": 4924,
+    "fp": 927,
+    "fn": 319,
+    "P": 0.8416,
+    "R": 0.9392,
+    "far24": 687.728
+   },
+   "rule_subset_onset_baru": {
+    "n": 45325,
+    "pos": 1929,
+    "neg": 43396,
+    "tp": 655,
+    "fp": 1178,
+    "fn": 1274,
+    "P": 0.3573,
+    "R": 0.3396,
+    "far24": 39.089
+   },
+   "persistence_all": {
+    "n": 52509,
+    "pos": 7172,
+    "neg": 45337,
+    "tp": 5243,
+    "fp": 1941,
+    "fn": 1929,
+    "P": 0.7298,
+    "R": 0.731,
+    "far24": 61.65
+   },
+   "frac_pos_sudah_berlangsung": 0.731,
+   "frac_pos_onset_baru": 0.269,
+   "rule_pos_rate_pada_sudah_berlangsung": 0.8144,
+   "rule_pos_rate_pada_onset_baru": 0.0404,
+   "cakupan_waktu_per_well": {
+    "F-10": {
+     "n": 7571,
+     "span_menit": 11249,
+     "cakupan": 0.673
+    },
+    "F-12": {
+     "n": 7390,
+     "span_menit": 86454,
+     "cakupan": 0.0855
+    },
+    "F-14": {
+     "n": 10401,
+     "span_menit": 317679,
+     "cakupan": 0.0327
+    },
+    "F-15A": {
+     "n": 6156,
+     "span_menit": 32141,
+     "cakupan": 0.1915
+    },
+    "F-15_S": {
+     "n": 8355,
+     "span_menit": 92488,
+     "cakupan": 0.0903
+    },
+    "F-5": {
+     "n": 6332,
+     "span_menit": 369549,
+     "cakupan": 0.0171
+    },
+    "F-7": {
+     "n": 2482,
+     "span_menit": 23011,
+     "cakupan": 0.1079
+    },
+    "F-9": {
+     "n": 1616,
+     "span_menit": 22858,
+     "cakupan": 0.0707
+    },
+    "F-9_A": {
+     "n": 2206,
+     "span_menit": 7344,
+     "cakupan": 0.3004
+    }
+   },
+   "n_neg_dipakai_penyebut": 45337,
+   "jam_negatif_efektif": 755.62
+  }
+ },
+ "identity_rule_window_vs_label": {
+  "vib": {
+   "n_checked": 23922,
+   "n_mismatch": 0,
+   "identity": true,
+   "note": "rule jendela LABEL = pembentuk label (sirkular per konstruksi)"
+  },
+  "ssi": {
+   "n_checked": 35906,
+   "n_mismatch": 0,
+   "identity": true,
+   "note": "rule jendela LABEL = pembentuk label (sirkular per konstruksi)"
+  },
+  "shk": {
+   "n_checked": 56495,
+   "n_mismatch": 0,
+   "identity": true,
+   "note": "rule jendela LABEL = pembentuk label (sirkular per konstruksi)"
+  },
+  "stuck_k1": {
+   "n_checked": 5555,
+   "n_mismatch": 0,
+   "identity": true,
+   "note": "rule jendela LABEL = pembentuk label (sirkular per konstruksi)"
+  },
+  "hyd_ki": {
+   "n_checked": 52509,
+   "n_mismatch": 23,
+   "identity": false,
+   "note": "rule jendela LABEL = pembentuk label (sirkular per konstruksi)"
+  }
+ },
+ "determinisme_rf": {
+  "uji_well": "F-14",
+  "n_train": 21933,
+  "n_test": 1989,
+  "n_fitur": 55,
+  "skor_bit_identik": false,
+  "hash1": "e264e022999293c7",
+  "hash2": "a7903ead074fd021",
+  "max_abs_diff": 2.220446049250313e-16,
+  "n_jobs": -1,
+  "random_state": 42
+ },
+ "tool_wear": {
+  "n_baris": 469,
+  "per_alat_run": {
+   "T01_R01": 60,
+   "T01_R02": 60,
+   "T02_R01": 50,
+   "T02_R02": 62,
+   "T03_R01": 61,
+   "T03_R02": 60,
+   "T04_R01": 58,
+   "T04_R02": 58
+  },
+  "y_per_run": {
+   "T01_R01": 0.0,
+   "T01_R02": 1.0,
+   "T02_R01": 0.0,
+   "T02_R02": 1.0,
+   "T03_R01": 0.0,
+   "T03_R02": 1.0,
+   "T04_R01": 0.0,
+   "T04_R02": 1.0
+  },
+  "langkah_start_sample": [
+   {
+    "alat": "T01",
+    "run": "R01",
+    "n": 60,
+    "langkah_min": 1000,
+    "langkah_max": 1000,
+    "langkah_unik": [
+     1000
+    ]
+   },
+   {
+    "alat": "T01",
+    "run": "R02",
+    "n": 60,
+    "langkah_min": 1000,
+    "langkah_max": 1000,
+    "langkah_unik": [
+     1000
+    ]
+   },
+   {
+    "alat": "T02",
+    "run": "R01",
+    "n": 50,
+    "langkah_min": 1000,
+    "langkah_max": 1000,
+    "langkah_unik": [
+     1000
+    ]
+   },
+   {
+    "alat": "T02",
+    "run": "R02",
+    "n": 62,
+    "langkah_min": 1000,
+    "langkah_max": 1000,
+    "langkah_unik": [
+     1000
+    ]
+   },
+   {
+    "alat": "T03",
+    "run": "R01",
+    "n": 61,
+    "langkah_min": 1000,
+    "langkah_max": 1000,
+    "langkah_unik": [
+     1000
+    ]
+   },
+   {
+    "alat": "T03",
+    "run": "R02",
+    "n": 60,
+    "langkah_min": 1000,
+    "langkah_max": 1000,
+    "langkah_unik": [
+     1000
+    ]
+   },
+   {
+    "alat": "T04",
+    "run": "R01",
+    "n": 58,
+    "langkah_min": 1000,
+    "langkah_max": 1000,
+    "langkah_unik": [
+     1000
+    ]
+   },
+   {
+    "alat": "T04",
+    "run": "R02",
+    "n": 58,
+    "langkah_min": 1000,
+    "langkah_max": 1000,
+    "langkah_unik": [
+     1000
+    ]
+   }
+  ],
+  "rumus_kuantil": [
+   {
+    "n_eval": 100,
+    "q": 0.983333
+   },
+   {
+    "n_eval": 469,
+    "q": 0.983333
+   },
+   {
+    "n_eval": 1000,
+    "q": 0.983333
+   },
+   {
+    "n_eval": 5000,
+    "q": 0.983333
+   }
+  ],
+  "catatan_kuantil": "q = 1 - TARGET*(n/60)/n = 1 - 1/60 = 0,983333 untuk setiap n; menyusut jadi konstanta"
+ },
+ "bit_wear": {
+  "n_baris": 198928,
+  "kolom": [
+   "Unnamed: 0",
+   "Measured Depth m",
+   "Weight on Bit kkgf",
+   "Average Standpipe Pressure kPa",
+   "Average Surface Torque kN.m",
+   "Rate of Penetration m/h",
+   "Average Rotary Speed rpm",
+   "Mud Flow In L/min",
+   "Mud Density In g/cm3",
+   "Diameter mm",
+   "Average Hookload kkgf",
+   "Hole Depth (TVD) m",
+   "USROP Gamma gAPI",
+   "well",
+   "label",
+   "MSE",
+   "D_exp",
+   "ROC_coef"
+  ],
+  "komposisi_label": {
+   "normal": 134013,
+   "high_MSE_bit_wear": 49732,
+   "low_ROP_efficiency": 15183
+  },
+  "n_pos": 49732,
+  "prev": 0.25,
+  "P_y(t+1)_given_y(t)": 0.9903,
+  "catatan": "persistence di v9_i1_pipeline.py:580 = label digeser 1 baris; presisi persistence karena itu = P(label tetap) bukan skill model"
+ }
+}

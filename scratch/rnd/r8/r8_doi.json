@@ -1,0 +1,80 @@
+[
+ {
+  "doi": "10.1093/biomet/41.1-2.100",
+  "penulis_pertama": "Page",
+  "tahun_klaim": 1954,
+  "lapis1_registrasi": "302",
+  "lapis2": {
+   "status": 200,
+   "sumber": "crossref",
+   "judul": "CONTINUOUS INSPECTION SCHEMES",
+   "tahun": 1954,
+   "penulis": "PAGE"
+  }
+ },
+ {
+  "doi": "10.1007/b106715",
+  "penulis_pertama": "Vovk",
+  "tahun_klaim": 2005,
+  "lapis1_registrasi": "302",
+  "lapis2": {
+   "status": 200,
+   "sumber": "crossref",
+   "judul": "Algorithmic Learning in a Random World",
+   "tahun": 2005,
+   "penulis": null
+  }
+ },
+ {
+  "doi": "10.1109/ICDM.2008.17",
+  "penulis_pertama": "Liu",
+  "tahun_klaim": 2008,
+  "lapis1_registrasi": "302",
+  "lapis2": {
+   "status": 200,
+   "sumber": "crossref",
+   "judul": "Isolation Forest",
+   "tahun": 2008,
+   "penulis": "Liu"
+  }
+ },
+ {
+  "doi": "10.1016/j.advengsoft.2013.12.007",
+  "penulis_pertama": "Mirjalili",
+  "tahun_klaim": 2014,
+  "lapis1_registrasi": "302",
+  "lapis2": {
+   "status": 200,
+   "sumber": "crossref",
+   "judul": "Grey Wolf Optimizer",
+   "tahun": 2014,
+   "penulis": "Mirjalili"
+  }
+ },
+ {
+  "doi": "10.48550/arXiv.1803.03639",
+  "penulis_pertama": "Tatbul",
+  "tahun_klaim": 2018,
+  "lapis1_registrasi": "302",
+  "lapis2": {
+   "status": 200,
+   "sumber": "datacite",
+   "judul": "Precision and Recall for Time Series",
+   "tahun": 2018,
+   "penulis": "Tatbul"
+  }
+ },
+ {
+  "doi": "10.1145/1541880.1541882",
+  "penulis_pertama": "Chandola",
+  "tahun_klaim": 2009,
+  "lapis1_registrasi": "302",
+  "lapis2": {
+   "status": 200,
+   "sumber": "crossref",
+   "judul": "Anomaly detection",
+   "tahun": 2009,
+   "penulis": "Chandola"
+  }
+ }
+]

@@ -54,13 +54,13 @@ Protokol ini dikunci SEBELUM pilot dijalankan. Sebelas keputusan yang mengikat:
 Tiga finalis diambil dari `docs/RND_E1_MATRIKS.md` §7. Angka tier di bawah adalah keadaan
 REGISTRY saat protokol ditulis, bukan hasil pilot.
 
-| Finalis | Algoritma | Engine / klaim | Fold | Tier sekarang | Gerbang yang gagal sekarang |
+| Finalis | Algoritma | Mode / klaim | Fold | Tier sekarang | Gerbang yang gagal sekarang |
 |---|---|---|---|---|---|
 | F1 | Conformal kuantil (lintas well dan dalam well) | hyd K-i | 9 well | PERINGATAN-BERPENGAWAS | gate A: FAR 14,6 sampai 58,4 per 24 jam di 9 dari 9 well |
 | F2 | Page-Hinkley dengan reset | tool_wear K-i | 4 alat x 2 run | PERINGATAN-BERPENGAWAS (bengkel) | gate B: presisi run 0,50, dan gate A pada satuan per menit (lihat §6.2) |
 | F3 | Boosting terkalibrasi (LightGBM atau XGBoost) | shk | 9 well | PERINGATAN-BERPENGAWAS (rule) dan TREN (RF) | gate C: CI RF memuat prevalensi di 7 dari 9 fold |
 
-Keadaan REGISTRY terukur saat ini: 7 engine, 27 head, dengan 12 head PERINGATAN-BERPENGAWAS,
+Keadaan REGISTRY terukur saat ini: 7 mode, 27 head, dengan 12 head PERINGATAN-BERPENGAWAS,
 13 head TREN, 2 head BELUM LAYAK PAKAI, dan **0 slot ALARM-OTOMATIS** (ledger E2-006).
 Artinya pilot ini tidak boleh menghasilkan satu pun head bertier ALARM-OTOMATIS kecuali ketiga gate
 terpenuhi pada angka yang dapat diaudit.
@@ -198,7 +198,7 @@ diatribusikan ke metode atau ke pustaka.
 ### 3.4 Runtime maksimum
 
 Anggaran dihitung dari jumlah fold nyata, bukan taksiran rasa. Jangkar yang sudah terukur: satu
-lintasan prototipe 7 engine pada seluruh data selesai dalam 21,55 detik (`scratch/v9_i1/v9_i1_RESULTS.json`
+lintasan prototipe 7 mode pada seluruh data selesai dalam 21,55 detik (`scratch/v9_i1/v9_i1_RESULTS.json`
 `meta.elapsed_s`), tetapi lintasan itu hanya memuat rule, persistence, dan RF, bukan latih boosting
 dengan kalibrasi bersarang.
 
@@ -265,7 +265,7 @@ Karena itu F2 tidak boleh dijanjikan sebagai perbaikan gate A tanpa mengubah mek
 
 | Pos | Isi |
 |---|---|
-| Baseline | rule 3-RMS dalam-run (FP R01: 41, 33, 40, 36 per alat), engine 5/27 (deteksi 4/4 tetapi FAR 42,857 sampai 58,571 FP per menit, terlalu sensitif), titik operasi terkalibrasi (FP 1, 3, 1, 3; TLead 20, 24, 25, 36 detik) |
+| Baseline | rule 3-RMS dalam-run (FP R01: 41, 33, 40, 36 per alat), detektor 5/27 (deteksi 4/4 tetapi FAR 42,857 sampai 58,571 FP per menit, terlalu sensitif), titik operasi terkalibrasi (FP 1, 3, 1, 3; TLead 20, 24, 25, 36 detik) |
 | Metrik utama | FP per menit pada segmen evaluasi R01, dilaporkan PER ALAT |
 | Metrik sekunder | TLead ke akhir R02 (detik), cakupan alarm di R02 (persen jendela), presisi run, jumlah fitur yang melewati 3 sigma, dispersi lintas keluarga fitur |
 | Kriteria sukses angka | (a) FP per menit tidak lebih dari 1,0 di **keempat alat**; (b) deteksi R02 tetap 4 dari 4; (c) TLead median tidak turun di bawah 20 detik dan TLead tiap alat tidak turun lebih dari 20 persen dari baseline alat itu; (d) presisi run tidak kurang dari 0,80 |

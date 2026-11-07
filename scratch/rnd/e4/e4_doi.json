@@ -1,0 +1,100 @@
+[
+  {
+    "penulis": "Kaufman",
+    "tahun": "2012",
+    "judul": "Leakage in Data Mining: Formulation, Detection, and Avoidance",
+    "doi": "10.1145/2382577.2382579",
+    "lapis1": 302,
+    "lapis2_sumber": "crossref",
+    "lapis2": 200,
+    "judul_record": "Leakage in data mining",
+    "tahun_record": 2012,
+    "penulis_record": "Kaufman"
+  },
+  {
+    "penulis": "Kapoor",
+    "tahun": "2023",
+    "judul": "Leakage and the reproducibility crisis in machine-learning-based science",
+    "doi": "10.1016/j.patter.2023.100804",
+    "lapis1": 302,
+    "lapis2_sumber": "crossref",
+    "lapis2": 200,
+    "judul_record": "Leakage and the reproducibility crisis in machine-learning-based science",
+    "tahun_record": 2023,
+    "penulis_record": "Kapoor"
+  },
+  {
+    "penulis": "Saito",
+    "tahun": "2015",
+    "judul": "The Precision-Recall Plot Is More Informative than the ROC Plot When Evaluating Binary Classifiers on Imbalanced Datasets",
+    "doi": "10.1371/journal.pone.0118432",
+    "lapis1": 302,
+    "lapis2_sumber": "crossref",
+    "lapis2": 200,
+    "judul_record": "The Precision-Recall Plot Is More Informative than the ROC Plot When Evaluating Binary Classifiers on Imbalanced Datasets",
+    "tahun_record": 2015,
+    "penulis_record": "Saito"
+  },
+  {
+    "penulis": "Angelopoulos",
+    "tahun": "2021",
+    "judul": "A Gentle Introduction to Conformal Prediction and Distribution-Free Uncertainty Quantification",
+    "doi": "10.48550/arXiv.2107.07511",
+    "lapis1": 302,
+    "lapis2_crossref": 404,
+    "lapis2_sumber": "datacite",
+    "lapis2": 200,
+    "judul_record": null,
+    "tahun_record": 2021,
+    "penulis_record": null
+  },
+  {
+    "penulis": "Lei",
+    "tahun": "2018",
+    "judul": "Distribution-Free Predictive Inference for Regression",
+    "doi": "10.1080/01621459.2017.1307116",
+    "lapis1": 302,
+    "lapis2_sumber": "crossref",
+    "lapis2": 200,
+    "judul_record": "Distribution-Free Predictive Inference for Regression",
+    "tahun_record": 2018,
+    "penulis_record": "Lei"
+  },
+  {
+    "penulis": "Tatbul",
+    "tahun": "2018",
+    "judul": "Precision and Recall for Time Series",
+    "doi": "10.48550/arXiv.1803.03639",
+    "lapis1": 302,
+    "lapis2_crossref": 404,
+    "lapis2_sumber": "datacite",
+    "lapis2": 200,
+    "judul_record": null,
+    "tahun_record": 2018,
+    "penulis_record": null
+  },
+  {
+    "penulis": "Page",
+    "tahun": "1954",
+    "judul": "Continuous Inspection Schemes",
+    "doi": "10.1093/biomet/41.1-2.100",
+    "lapis1": 302,
+    "lapis2_sumber": "crossref",
+    "lapis2": 200,
+    "judul_record": "CONTINUOUS INSPECTION SCHEMES",
+    "tahun_record": 1954,
+    "penulis_record": "PAGE"
+  },
+  {
+    "penulis": "Siffer",
+    "tahun": "2017",
+    "judul": "Anomaly Detection in Streams with Extreme Value Theory",
+    "doi": "10.1145/3097983.3098144",
+    "lapis1": 302,
+    "lapis2_sumber": "crossref",
+    "lapis2": 200,
+    "judul_record": "Anomaly Detection in Streams with Extreme Value Theory",
+    "tahun_record": 2017,
+    "penulis_record": "Siffer"
+  }
+]

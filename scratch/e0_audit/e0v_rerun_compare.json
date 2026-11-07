@@ -1,0 +1,44 @@
+{
+ "n_field_identik": 466,
+ "n_field_beda": 2,
+ "beda": [
+  {
+   "path": "root.determinisme_rf.hash1",
+   "lama": "04515f105be41673",
+   "baru": "e264e022999293c7"
+  },
+  {
+   "path": "root.determinisme_rf.hash2",
+   "lama": "4bf4487e1749a400",
+   "baru": "a7903ead074fd021"
+  }
+ ],
+ "rule_hash_baru": {
+  "vib": [
+   "8ac69651728df3db",
+   "8ac69651728df3db"
+  ],
+  "ssi": [
+   "71ff04a8e92b27c1",
+   "71ff04a8e92b27c1"
+  ],
+  "shk": [
+   "3f1025e236f6c655",
+   "3f1025e236f6c655"
+  ],
+  "stuck_k1": [
+   "35ef2718c148c5f0",
+   "35ef2718c148c5f0"
+  ],
+  "hyd_ki": [
+   "4857a79b8e7abd0d",
+   "4857a79b8e7abd0d"
+  ]
+ },
+ "rf_baru": {
+  "hash1": "e264e022999293c7",
+  "hash2": "a7903ead074fd021",
+  "skor_bit_identik": false,
+  "max_abs_diff": 2.220446049250313e-16
+ }
+}

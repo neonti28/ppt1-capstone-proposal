@@ -1,0 +1,82 @@
+[
+ {
+  "label": "Vovk 2005 Algorithmic Learning in a Random World",
+  "doi": "10.1007/b106715",
+  "crossref_http": 200,
+  "title": "Algorithmic Learning in a Random World",
+  "first_author": "",
+  "year": 2005,
+  "container": "",
+  "doi_org_http": 302
+ },
+ {
+  "label": "Chen & Guestrin 2016 XGBoost",
+  "doi": "10.1145/2939672.2939785",
+  "crossref_http": 200,
+  "title": "XGBoost",
+  "first_author": "Chen",
+  "year": 2016,
+  "container": "Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining",
+  "doi_org_http": 302
+ },
+ {
+  "label": "DeLong 1988 comparing AUC",
+  "doi": "10.2307/2531595",
+  "crossref_http": 200,
+  "title": "Comparing the Areas under Two or More Correlated Receiver Operating Characteristic Curves: A Nonparametric Approach",
+  "first_author": "DeLong",
+  "year": 1988,
+  "container": "Biometrics",
+  "doi_org_http": 302
+ },
+ {
+  "label": "Liu 2008 Isolation Forest",
+  "doi": "10.1109/ICDM.2008.17",
+  "crossref_http": 200,
+  "title": "Isolation Forest",
+  "first_author": "Liu",
+  "year": 2008,
+  "container": "2008 Eighth IEEE International Conference on Data Mining",
+  "doi_org_http": 302
+ },
+ {
+  "label": "Page 1954 continuous inspection",
+  "doi": "10.1093/biomet/41.1-2.100",
+  "crossref_http": 200,
+  "title": "CONTINUOUS INSPECTION SCHEMES",
+  "first_author": "PAGE",
+  "year": 1954,
+  "container": "Biometrika",
+  "doi_org_http": 302
+ },
+ {
+  "label": "Romano 2019 conformalized quantile regression",
+  "doi": "10.1214/18-AOS1801",
+  "crossref_http": 200,
+  "title": "Statistical inference for model parameters in stochastic gradient descent",
+  "first_author": "Chen",
+  "year": 2020,
+  "container": "The Annals of Statistics",
+  "doi_org_http": 302
+ },
+ {
+  "label": "Niculescu-Mizil 2005 predicting good probabilities",
+  "doi": "10.1145/1102351.1102430",
+  "crossref_http": 200,
+  "title": "Predicting good probabilities with supervised learning",
+  "first_author": "Niculescu-Mizil",
+  "year": 2005,
+  "container": "Proceedings of the 22nd international conference on Machine learning  - ICML '05",
+  "doi_org_http": 302
+ },
+ {
+  "label": "Teale 1965 concept of specific energy",
+  "doi": "10.1016/0148-9062(65)90022-7",
+  "crossref_http": 200,
+  "title": "The concept of specific energy in rock drilling",
+  "first_author": "Teale",
+  "year": 1965,
+  "container": "International Journal of Rock Mechanics and Mining Sciences &amp; Geomechanics Abstracts",
+  "doi_org_http": 302
+ }
+]

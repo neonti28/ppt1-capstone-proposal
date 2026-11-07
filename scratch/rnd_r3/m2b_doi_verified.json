@@ -1,0 +1,292 @@
+{
+  "generated_at": "2026-10-27T04:46:23",
+  "candidates": [
+    {
+      "label": "Randall & Antoni 2011 bearing tutorial (kandidat benar)",
+      "doi": "10.1016/j.ymssp.2010.07.017",
+      "crossref_http": 200,
+      "title": "Rolling element bearing diagnostics\u2014A tutorial",
+      "first_author": "Randall Robert B.",
+      "year": 2011,
+      "container": "Mechanical Systems and Signal Processing",
+      "volume": "25",
+      "page": "485-520",
+      "type": "journal-article",
+      "status": "CROSSREF_OK",
+      "resolve_http": 200,
+      "final_url": "https://linkinghub.elsevier.com/retrieve/pii/S0888327010002530"
+    },
+    {
+      "label": "Keogh & Ratanamahatana 2005 exact indexing DTW",
+      "doi": "10.1007/s10115-004-0154-9",
+      "crossref_http": 200,
+      "title": "Exact indexing of dynamic time warping",
+      "first_author": "Keogh Eamonn",
+      "year": 2005,
+      "container": "Knowledge and Information Systems",
+      "volume": "7",
+      "page": "358-386",
+      "type": "journal-article",
+      "status": "CROSSREF_OK",
+      "resolve_http": 200,
+      "final_url": "https://link.springer.com/article/10.1007/s10115-004-0154-9?error=cookies_not_supported&code=64fbde71-307c-42cd-88e6-4a082803efba"
+    },
+    {
+      "label": "Xi et al. 2006 numerosity reduction",
+      "doi": "10.1145/1143844.1143955",
+      "crossref_http": 200,
+      "title": "PAC model-free reinforcement learning",
+      "first_author": "Strehl Alexander L.",
+      "year": 2006,
+      "container": "Proceedings of the 23rd international conference on Machine learning  - ICML '06",
+      "volume": null,
+      "page": "881-888",
+      "type": "proceedings-article",
+      "status": "CROSSREF_OK",
+      "resolve_http": 403,
+      "final_url": "https://portal.acm.org/citation.cfm?doid=1143844.1143955",
+      "note": "HTTPError (penerbit menolak bot)"
+    },
+    {
+      "label": "Wu & Huang 2009 EEMD",
+      "doi": "10.1142/S1793536909000047",
+      "crossref_http": 200,
+      "title": "ENSEMBLE EMPIRICAL MODE DECOMPOSITION: A NOISE-ASSISTED DATA ANALYSIS METHOD",
+      "first_author": "WU ZHAOHUA",
+      "year": 2009,
+      "container": "Advances in Adaptive Data Analysis",
+      "volume": "01",
+      "page": "1-41",
+      "type": "journal-article",
+      "status": "CROSSREF_OK",
+      "resolve_http": 403,
+      "final_url": "https://www.worldscientific.com/doi/abs/10.1142/S1793536909000047",
+      "note": "HTTPError (penerbit menolak bot)"
+    },
+    {
+      "label": "Wang & Markert 2016 filter bank property of VMD",
+      "doi": "10.1016/j.sigpro.2015.11.003",
+      "crossref_http": 200,
+      "title": "A service components pipeline model based on multi-source data extraction",
+      "first_author": "Weng Yu",
+      "year": 2016,
+      "container": "Signal Processing",
+      "volume": "124",
+      "page": "5-12",
+      "type": "journal-article",
+      "status": "CROSSREF_OK",
+      "resolve_http": 200,
+      "final_url": "https://linkinghub.elsevier.com/retrieve/pii/S0165168415003837"
+    },
+    {
+      "label": "Yan, Gao & Chen 2014 wavelets rotary machine review",
+      "doi": "10.1016/j.sigpro.2013.11.025",
+      "crossref_http": 200,
+      "title": "On the perturbation of measurement matrix in non-convex compressed sensing",
+      "first_author": "Ince Taner",
+      "year": 2014,
+      "container": "Signal Processing",
+      "volume": "98",
+      "page": "143-149",
+      "type": "journal-article",
+      "status": "CROSSREF_OK",
+      "resolve_http": 200,
+      "final_url": "https://linkinghub.elsevier.com/retrieve/pii/S0165168413004611"
+    },
+    {
+      "label": "MDPI 2023 rolling bearing VMD (kandidat aplikasi)",
+      "doi": "10.3390/electronics12061290",
+      "crossref_http": 200,
+      "title": "Research on Rolling Bearing Fault Diagnosis Based on Variational Modal Decomposition Parameter Optimization and an Improved Support Vector Machine",
+      "first_author": "Li Lin",
+      "year": 2023,
+      "container": "Electronics",
+      "volume": "12",
+      "page": "1290",
+      "type": "journal-article",
+      "status": "CROSSREF_OK",
+      "resolve_http": 403,
+      "final_url": "https://www.mdpi.com/2079-9292/12/6/1290",
+      "note": "HTTPError (penerbit menolak bot)"
+    },
+    {
+      "label": "Knowledge-Based Systems 2021 VMD + chaotic GWO + SVR",
+      "doi": "10.1016/j.knosys.2021.107297",
+      "crossref_http": 200,
+      "title": "Application of variational mode decomposition and chaotic grey wolf optimizer with support vector regression for forecasting electric loads",
+      "first_author": "Zhang Zichen",
+      "year": 2021,
+      "container": "Knowledge-Based Systems",
+      "volume": "228",
+      "page": "107297",
+      "type": "journal-article",
+      "status": "CROSSREF_OK",
+      "resolve_http": 200,
+      "final_url": "https://linkinghub.elsevier.com/retrieve/pii/S0950705121005591"
+    },
+    {
+      "label": "Measurement 2020 hybrid GWO improved VMD",
+      "doi": "10.1016/j.measurement.2020.107901",
+      "crossref_http": 200,
+      "title": "An integrated method based on hybrid grey wolf optimizer improved variational mode decomposition and deep neural network for fault diagnosis of rolling bearing",
+      "first_author": "Gai Jingbo",
+      "year": 2020,
+      "container": "Measurement",
+      "volume": "162",
+      "page": "107901",
+      "type": "journal-article",
+      "status": "CROSSREF_OK",
+      "resolve_http": 200,
+      "final_url": "https://linkinghub.elsevier.com/retrieve/pii/S0263224120304395"
+    },
+    {
+      "label": "Elsevier 2026 multi-strategy WOA SVM",
+      "doi": "10.1016/j.asoc.2026.115779",
+      "crossref_http": 200,
+      "title": "A multi-strategy enhanced whale optimization algorithm-based support vector machine for high-precision fault diagnosis of mine ventilator bearings",
+      "first_author": "Li Ning",
+      "year": 2026,
+      "container": "Applied Soft Computing",
+      "volume": "202",
+      "page": "115779",
+      "type": "journal-article",
+      "status": "CROSSREF_OK",
+      "resolve_http": 200,
+      "final_url": "https://linkinghub.elsevier.com/retrieve/pii/S1568494626012275"
+    },
+    {
+      "label": "Antoni 2011? kandidat tidak dipakai",
+      "doi": "10.1016/j.ymssp.2010.07.025",
+      "status": "CROSSREF_FAIL",
+      "error": "HTTPError: HTTP Error 404: Not Found",
+      "resolve_http": 404,
+      "final_url": "https://doi.org/10.1016/j.ymssp.2010.07.025",
+      "note": "HTTPError (penerbit menolak bot)"
+    }
+  ],
+  "search": [
+    {
+      "tag": "drilling stick-slip decomposition",
+      "query": "stick slip vibration drillstring signal decomposition downhole measurement",
+      "hits": [
+        {
+          "doi": "10.1016/j.measurement.2022.112034",
+          "title": "Pattern recognition of stick-slip vibration in combined signals of DrillString vibration",
+          "first_author": "Li Yafeng",
+          "year": 2022,
+          "container": "Measurement"
+        },
+        {
+          "doi": "10.2118/52821-ms",
+          "title": "Analysis of the Stick-Slip Phenomenon Using Downhole Drillstring Rotation Data",
+          "first_author": "Robnett E. W.",
+          "year": 1999,
+          "container": "SPE/IADC Drilling Conference"
+        },
+        {
+          "doi": "10.54691/m0jpnb39",
+          "title": "The Influence of Different Rocks on Drillstring Stick-Slip Vibration",
+          "first_author": "Shi Changshuai",
+          "year": 2026,
+          "container": "Scientific Journal of Technology"
+        },
+        {
+          "doi": "10.1109/ascc.2017.8287589",
+          "title": "Downhole-friction-estimation-based rotary speed control for drillstring system with stick-slip vibrations",
+          "first_author": "Lu Chengda",
+          "year": 2017,
+          "container": "2017 11th Asian Control Conference (ASCC)"
+        },
+        {
+          "doi": "10.23919/chicc.2018.8483801",
+          "title": "Observer-Based Tracking Control for Suppressing Stick-Slip Vibration of Drillstring System",
+          "first_author": "Cheng Jun",
+          "year": 2018,
+          "container": "2018 37th Chinese Control Conference (CCC)"
+        }
+      ]
+    },
+    {
+      "tag": "drilling vibration EMD denoising",
+      "query": "empirical mode decomposition drilling fluid pulse signal denoising while drilling",
+      "hits": [
+        {
+          "doi": "10.2118/204454-pa",
+          "title": "Measurement While Drilling Mud Pulse Signal Denoising and Extraction Approach Based on Particle-Swarm-Optimized Time-Varying Filtering Empirical Mode Decomposition",
+          "first_author": "Zhong Xianyou",
+          "year": 2020,
+          "container": "SPE Drilling &amp; Completion"
+        },
+        {
+          "doi": "10.1016/s1876-3804(12)60107-4",
+          "title": "Extracting pulse signals in measurement while drilling using optimum denoising methods based on the ensemble empirical mode decomposition",
+          "first_author": "ZHENG Yi",
+          "year": 2012,
+          "container": "Petroleum Exploration and Development"
+        },
+        {
+          "doi": "10.1109/tim.2023.3264044",
+          "title": "A Bayesian Optimized Variational Mode Decomposition-Based Denoising Method for Measurement While Drilling Signal of Down-the-Hole Drilling",
+          "first_author": "Ding Weijie",
+          "year": 2023,
+          "container": "IEEE Transactions on Instrumentation and Measurement"
+        },
+        {
+          "doi": "10.23919/ccc50068.2020.9189647",
+          "title": "Identification of drilling stick-slip vibration conditions based on Empirical Mode Decomposition threshold denoising and Support Vector Machine",
+          "first_author": "Zhang Ke",
+          "year": 2020,
+          "container": "2020 39th Chinese Control Conference (CCC)"
+        },
+        {
+          "doi": "10.1109/icct50939.2020.9295662",
+          "title": "Measure While Drilling Pulse Signal Transmission Speed Theory",
+          "first_author": "Tao Liu",
+          "year": 2020,
+          "container": "2020 IEEE 20th International Conference on Communication Technology (ICCT)"
+        }
+      ]
+    },
+    {
+      "tag": "SVM imbalance FAR PdM",
+      "query": "support vector machine class imbalance fault detection false alarm rate calibration",
+      "hits": [
+        {
+          "doi": "10.1049/joe.2018.8584",
+          "title": "Detection of weak monocycle sinusoidal signals with a low constant false alarm rate based on the support vector machine",
+          "first_author": "Tan Bo",
+          "year": 2019,
+          "container": "The Journal of Engineering"
+        },
+        {
+          "doi": "10.1145/3787120.3787122",
+          "title": "Effective False Alarm Reduction : Integrating Dual-Kernels and Random Projection in One-Class Support Vector Machine",
+          "first_author": "Wijaya Imam",
+          "year": 2025,
+          "container": "Proceedings of the 2025 5th International Conference on Artificial Intelligence and Application Technologies"
+        },
+        {
+          "doi": "10.1109/iccia52082.2021.9403529",
+          "title": "Support Vector Machine for False Alarm Detection in Wind Turbine Management",
+          "first_author": "Peco Chacon Ana Maria",
+          "year": 2021,
+          "container": "2021 7th International Conference on Control, Instrumentation and Automation (ICCIA)"
+        },
+        {
+          "doi": "10.1016/j.neucom.2014.05.035",
+          "title": "Fault detection based on a robust one class support vector machine",
+          "first_author": "Yin Shen",
+          "year": 2014,
+          "container": "Neurocomputing"
+        },
+        {
+          "doi": "10.26678/abcm.cobem2023.cob2023-0179",
+          "title": "Quadrotor Fault Detection and Diagnosis using Multi-class Support Vector Machine",
+          "first_author": "Fiore Petrus",
+          "year": 2025,
+          "container": "Proceedings of the 27th International Congress of Mechanical Engineering"
+        }
+      ]
+    }
+  ]
+}

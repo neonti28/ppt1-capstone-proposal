@@ -46,7 +46,7 @@ Seluruh angka pada tabel ini dihitung ulang pada sesi ini dari berkas primer.
 | Kejadian tanpa bukti kegagalan | **496 dari 884 = 56,1 persen** | kolom `category` nilai `routine_no_failure_evidence` |
 | Kejadian relevan BHA | **50 dari 884 = 5,7 persen** | kolom `bha_relevant` nilai `yes` |
 | Kejadian relevansi BHA belum pasti | **571 dari 884 = 64,6 persen** | kolom `bha_relevant` nilai `uncertain` |
-| Engine dan head | **7 engine, 27 head** (4+4+4+6+4+2+3) | `scratch/v9_i1/v9_i1_RESULTS.json` `engines[].heads` |
+| Detektor dan head | **7 mode, 27 head** (4+4+4+6+4+2+3) | `scratch/v9_i1/v9_i1_RESULTS.json` `engines[].heads` |
 | Sebaran lapis keputusan | **L0 = 5, L1 = 11, L2 = 9, L3 = 2** | `decision_layer.ringkasan` |
 | Sebaran tier | **13 TREN, 12 PERINGATAN-BERPENGAWAS, 2 BELUM LAYAK PAKAI** | `engines[].heads[].tier` |
 | Slot alarm otomatis kritis | **0** | `auto_critical_alarm_slots` |
@@ -85,7 +85,7 @@ Diagram terdiri atas satu tulang punggung (efek) dan enam cabang, dengan 27 rant
 | Me2 | Ambang tunggal lintas sumur | Ambang yang sama juga meruntuhkan sensitivitas: recall pada τ = 0,5 adalah **0,1018** di F-15_S tetapi **0,8657** di F-14 | TERBUKTI | berkas JSON yang sama, kunci `...recall` |
 | Me3 | Ketidakpastian statistik | Pada **5 dari 9** fold, selang kepercayaan 95 persen AUPRC menyentuh garis no-skill, sehingga keunggulan atas tebakan acak belum terpisah dari derau | TERBUKTI-DOKUMEN | `docs/ML_PROJECT_PROPOSAL_TECHNICAL_DESIGN.md` baris 562; contoh CI95 fold F-10 `[0,06008; 0,25484]` pada `scratch/v9_e_ml/v9_e_ML_ssi_RESULTS.json` |
 | Me4 | Resolusi waktu pipeline | Pipeline memaksa grid 60 detik mode ALL-rows, sedangkan laju kanal permukaan diasumsikan sekitar 1 Hz. Bila laju nyata per sumur lebih rendah, satu bin dapat berisi kurang dari 10 sampel dan aturan SSI tidak dapat dievaluasi | HIPOTESIS | `docs/ML_PROJECT_PROPOSAL_TECHNICAL_DESIGN.md` baris 296 dan 1177; `SSI_MIN_SAMPLES = 10` baris 1567 |
-| Me5 | Hirarki keluaran | 7 engine dan 27 head tersebar ke empat lapis dengan sebaran tier 13/12/2, tanpa aturan kenaikan tier yang dinyatakan sebagai ambang angka | TERBUKTI | `scratch/v9_i1/v9_i1_RESULTS.json` → `engines[].heads`, `decision_layer.ringkasan` |
+| Me5 | Hirarki keluaran | 7 mode dan 27 head tersebar ke empat lapis dengan sebaran tier 13/12/2, tanpa aturan kenaikan tier yang dinyatakan sebagai ambang angka | TERBUKTI | `scratch/v9_i1/v9_i1_RESULTS.json` → `engines[].heads`, `decision_layer.ringkasan` |
 
 **Catatan penting untuk Me1 dan Me2.** Kedua angka berasal dari satu kunci JSON yang sama, pada model dan ambang yang identik. Yang berubah hanya sumur uji. Inilah bukti langsung bahwa ambang global tidak portabel, dan sekaligus alasan mengapa target "satu ambang untuk semua sumur" harus digugurkan pada BAB III.
 
@@ -93,7 +93,7 @@ Diagram terdiri atas satu tulang punggung (efek) dan enam cabang, dengan 27 rant
 
 | ID | Cabang | Ranting (sebab spesifik) | Status | Jejak |
 |---|---|---|---|---|
-| Ma1 | Arsitektur keluaran alat | Alat tidak memiliki slot alarm otomatis kritis sama sekali (**0**), dan **0 dari 7** engine memenuhi syarat alarm. Ini keputusan desain yang dinyatakan, bukan cacat implementasi | TERBUKTI | `scratch/v9_i1/v9_i1_RESULTS.json` `auto_critical_alarm_slots`; `docs/V8_PM_VERDICT.md` baris 180 dan 41 |
+| Ma1 | Arsitektur keluaran alat | Alat tidak memiliki slot alarm otomatis kritis sama sekali (**0**), dan **0 dari 7** detektor memenuhi syarat alarm. Ini keputusan desain yang dinyatakan, bukan cacat implementasi | TERBUKTI | `scratch/v9_i1/v9_i1_RESULTS.json` `auto_critical_alarm_slots`; `docs/V8_PM_VERDICT.md` baris 180 dan 41 |
 | Ma2 | Cakupan parser | Parser CSV lama hanya menangani 8 kolom keluaran, sehingga **3906 dari 7150 berkas log (54,6 persen)** tidak pernah diparse: F-1 C sebanyak 2156 berkas dan F-11 sebanyak 1750 berkas. Kurva HKLD, TORQUE, MSE, MOTOR_RPM, dan FLOWIN-OUT juga tidak masuk | TERBUKTI-DOKUMEN | `docs/V6_D0_READERS_SYNTHESIS.md` baris 49 |
 | Ma3 | Efek agregasi pipeline | Agregasi ALL-rows ke satu nilai per menit berpotensi meredam puncak getaran dan torsi berdurasi detik, sehingga label status menjadi lebih konservatif daripada kejadian fisiknya | HIPOTESIS | `docs/ML_PROJECT_PROPOSAL_TECHNICAL_DESIGN.md` baris 1179 |
 | Ma4 | Cakupan pembuktian prototipe | Prototipe dijalankan pada satu segmen nyata (F-14), yang kebetulan satu-satunya wellbore hadir di keenam dataset rig. Perilaku alat sebagai sistem utuh pada sumur lain belum diuji | TERBUKTI | `scratch/v9_i1/v9_i1_RESULTS.json` `meta.segmen_rig` dan `segmen_info.*.n` |
@@ -114,7 +114,7 @@ Diagram terdiri atas satu tulang punggung (efek) dan enam cabang, dengan 27 rant
 | ID | Cabang | Ranting (sebab spesifik) | Status | Jejak |
 |---|---|---|---|---|
 | Ms1 | Basis waktu | Waktu pada dataset turunan adalah **indeks menit internal** (`ts_bin`), dan asal kalender dinyatakan belum diverifikasi, sehingga join dengan tanggal kejadian pada CSV label rentan pergeseran | TERBUKTI | `scratch/v9_i1/v9_i1_RESULTS.json` → `segmen_info.vib.catatan_waktu`; rentang `segmen_info.ssi.ts_bin_min` 19947192 sampai 20223025 |
-| Ms2 | Satuan metrik | Laju alarm palsu muncul dalam beberapa satuan pada berkas berbeda (`FAR_24jam`, `far_24h`, serta laju per jendela), sehingga perbandingan lintas engine rawan salah baca bila satuan tidak diseragamkan | TERBUKTI | `scratch/v9_e_ml/v9_e_ML_vib_RESULTS.json` (`FAR_24jam`) dibanding `scratch/v9_e_rule/v9_e_RULE_01_status_results.json` (`far_24h`) |
+| Ms2 | Satuan metrik | Laju alarm palsu muncul dalam beberapa satuan pada berkas berbeda (`FAR_24jam`, `far_24h`, serta laju per jendela), sehingga perbandingan lintas detektor rawan salah baca bila satuan tidak diseragamkan | TERBUKTI | `scratch/v9_e_ml/v9_e_ML_vib_RESULTS.json` (`FAR_24jam`) dibanding `scratch/v9_e_rule/v9_e_RULE_01_status_results.json` (`far_24h`) |
 | Ms3 | Skala penilaian risiko | Angka severity, occurrence, dan detection pada FMEA draft **ditulis langsung sebagai literal** pada skrip pembuat dokumen, bukan hasil penilaian dengan skala rujukan. Perkalian RPN konsisten, yang belum berdasar adalah nilai masukannya | TERBUKTI | `docs/PPT1_LEDGER_ANGKA.md` (grup A draft docx, temuan kunci FMEA); `scratch/ppt1/ledger.json` |
 | Ms4 | Target kinerja | Target recall 0,70 sampai 0,80 dan target lead time 10 sampai 30 menit **belum dicapai** hasil terukur mana pun; lead time yang terukur hanya **4,5 sampai 8,5 menit** dan terbatas pada satu kelas | TERBUKTI-DOKUMEN | `docs/V8_PM_VERDICT.md` baris 186; `docs/PPT1_LEDGER_ANGKA.md` temuan kunci target KPI |
 | Ms5 | Definisi label versus metrik | Label ssi didefinisikan sebagai deteksi **kondisi berlangsung** (SSI minimal 1), bukan onset, sehingga recall-nya tidak sebanding dengan head yang didefinisikan sebagai onset | TERBUKTI-DOKUMEN | `docs/ML_PROJECT_PROPOSAL_TECHNICAL_DESIGN.md` baris 3208 dan 1567 |
@@ -156,14 +156,14 @@ Tabel ini disusun agar setiap sel konsisten dengan angka pada Bagian 2 dan Bagia
 
 | Unsur | Isi | Dasar dan status |
 |---|---|---|
-| **What** (apa masalahnya) | Belum tersedia peringatan dini kegagalan BHA yang layak dioperasikan sebagai alarm: **0 dari 7** engine memenuhi syarat alarm, **0** slot alarm otomatis kritis, **2 dari 27** head berstatus BELUM LAYAK PAKAI, dan **5 dari 9** fold CI95 menyentuh no-skill | `v9_i1_RESULTS.json`, `V8_PM_VERDICT.md` baris 180, dokumen desain baris 562. TERBUKTI dan TERBUKTI-DOKUMEN |
+| **What** (apa masalahnya) | Belum tersedia peringatan dini kegagalan BHA yang layak dioperasikan sebagai alarm: **0 dari 7** detektor memenuhi syarat alarm, **0** slot alarm otomatis kritis, **2 dari 27** head berstatus BELUM LAYAK PAKAI, dan **5 dari 9** fold CI95 menyentuh no-skill | `v9_i1_RESULTS.json`, `V8_PM_VERDICT.md` baris 180, dokumen desain baris 562. TERBUKTI dan TERBUKTI-DOKUMEN |
 | **Why** (mengapa penting) | Terdapat **884 kejadian** terkurasi dengan total **73.500 menit (1.225 jam)** waktu tercatat, median **45 menit**, p90 **180 menit**, maksimum **780 menit**. Namun **496 (56,1 persen)** di antaranya tidak memuat bukti kegagalan, sehingga nilai masalah harus dinyatakan atas basis yang jelas, bukan atas seluruh 1.225 jam | `labels_curated_v2.csv`. TERBUKTI |
 | **Who** (siapa yang terlibat) | Pengguna hasil: insinyur pengeboran dan insinyur optimasi Sperry Drilling, karena keputusan akhir dinyatakan berada pada manusia (`human_review_required: true`). Penyedia data dan kurator label: pihak internal mitra. Pelaksana: mahasiswa. Pengarah akademik: dosen pembimbing. Tidak ada peran otomatis yang ditambahkan | `v9_i1_RESULTS.json`, `V8_PM_VERDICT.md` baris 41. TERBUKTI |
 | **Where** (di mana) | Lingkungan data: **10 wellbore** lapangan Volve dengan penamaan NO 15/9-F-*. Segmen pembuktian prototipe: **F-14**, satu-satunya wellbore yang hadir di keenam dataset rig (vib 1989, ssi 5455, shk 11205, stuck_k1 3201, stuck_k2 95925, hyd_ki 10401 jendela). Cakupan fisik: kanal permukaan dan sebagian kanal MWD, tanpa tekanan formasi dan tanpa rating motor | `labels_curated_v2.csv`, `v9_i1_RESULTS.json`, `V6_A1_DATA_AUDIT.md` baris 58, `V7_D1f_DATA_CHECK.md` baris 45. TERBUKTI dan TERBUKTI-DOKUMEN |
 | **When** (kapan) | Rentang data **2007 sampai 2015** (F-14 sendiri mencakup rentang panjang dengan hanya 13,1 persen bin pengeboran). Horizon peringatan yang dicita-citakan **10 sampai 30 menit** sebelum kejadian, sedangkan lead yang terukur baru **4,5 sampai 8,5 menit** dan belum pada semua kelas. Basis waktu internal masih berupa indeks menit tanpa verifikasi kalender | `V11_DATA1.md` baris 65 untuk rentang, `V8_PM_VERDICT.md` baris 186 untuk lead, `v9_i1_RESULTS.json` `catatan_waktu`. TERBUKTI dan TERBUKTI-DOKUMEN |
 | **How** (bagaimana) | Alur: log sumur menjadi grid bin **60 detik** mode ALL-rows, menjadi **6 dataset latih 292.954 baris**, diuji dengan **37 fold** LOWO (4+9+9+2+9+4) tanpa pelanggaran anti-bocor, dinilai dengan FAR, recall, AUPRC, dan CI95, lalu disusun menjadi lapis keputusan **L0 sampai L3** dengan manusia di ujung rantai | `ML_PROJECT_PROPOSAL_TECHNICAL_DESIGN.md` baris 1177 dan 1317, `V10_A1_AUDIT.md` baris 155, `v9_i1_RESULTS.json` `decision_layer`. TERBUKTI |
 
-**Uji konsistensi 5W1H.** Tiga angka muncul di lebih dari satu sel dan harus sama: jumlah kejadian (884) pada Why dan basis Where, jumlah engine (7) pada What dan Who, serta lead time (10 sampai 30 menit sebagai target, 4,5 sampai 8,5 menit sebagai hasil) pada When. Ketiganya konsisten dengan Bagian 2 dan Bagian 3.
+**Uji konsistensi 5W1H.** Tiga angka muncul di lebih dari satu sel dan harus sama: jumlah kejadian (884) pada Why dan basis Where, jumlah detektor (7) pada What dan Who, serta lead time (10 sampai 30 menit sebagai target, 4,5 sampai 8,5 menit sebagai hasil) pada When. Ketiganya konsisten dengan Bagian 2 dan Bagian 3.
 
 ---
 
@@ -177,7 +177,7 @@ Gambar G1 adalah diagram tulang ikan dengan orientasi kiri ke kanan. Kepala di k
 |---|---|---|---|
 | B1 | atas 1 | **MAN** (4) | M1 kontrol-positif 0/10; M2 relevansi BHA 571/884 belum pasti; M3 label hidraulik proksi; M4 beban baca manusia 11 peringatan |
 | B2 | bawah 1 | **METHOD** (5) | Me1 FAR 4,15 sampai 496,09 (119,57 kali); Me2 recall 0,10 sampai 0,87; Me3 CI95 5/9 menyentuh no-skill; Me4 grid 60 detik melawan 1 Hz; Me5 tier 13/12/2 tanpa ambang naik |
-| B3 | atas 2 | **MACHINE** (4) | Ma1 slot alarm 0 dan 0/7 engine; Ma2 3906/7150 berkas tidak diparse; Ma3 puncak teredam agregasi; Ma4 satu segmen bukti F-14 |
+| B3 | atas 2 | **MACHINE** (4) | Ma1 slot alarm 0 dan 0/7 mode; Ma2 3906/7150 berkas tidak diparse; Ma3 puncak teredam agregasi; Ma4 satu segmen bukti F-14 |
 | B4 | bawah 2 | **MATERIAL** (4) | Mt1 WHIRL sama dengan BOUNCE 1790/1790; Mt2 nodata CRPM 22.385/35.906; Mt3 496/884 tanpa bukti gagal; Mt4 prevalensi 0,31 sampai 6,54 persen |
 | B5 | atas 3 | **MEASUREMENT** (5) | Ms1 basis waktu tanpa kalender; Ms2 satuan FAR tidak seragam; Ms3 S/O/D literal generator; Ms4 target belum tercapai; Ms5 kondisi disamakan dengan onset |
 | B6 | bawah 3 | **ENVIRONMENT** (5) | En1 rating motor 0/192; En2 tekanan EDM 8 baris datum; En3 dullingInfo 0/161; En4 porsi drilling 13,1 persen; En5 VIBLAT F-10 nol observasi |
@@ -277,7 +277,7 @@ Kedua catatan ini bukan penilaian atas dokumen tim. Keduanya adalah jejak penelu
 | Berkas | Dipakai untuk |
 |---|---|
 | `data/volve/labels_curated_v2.csv` | 884 kejadian, distribusi kategori, `bha_relevant`, durasi |
-| `scratch/v9_i1/v9_i1_RESULTS.json` | 7 engine, 27 head, lapis L0 sampai L3, tier, slot alarm, metadata segmen |
+| `scratch/v9_i1/v9_i1_RESULTS.json` | 7 mode, 27 head, lapis L0 sampai L3, tier, slot alarm, metadata segmen |
 | `scratch/v9_e_ml/v9_e_ML_vib_RESULTS.json` | FAR dan recall per fold pada τ = 0,5 |
 | `scratch/v9_e_ml/v9_e_ML_ssi_RESULTS.json` | CI95 AUPRC contoh fold, prevalensi |
 | `scratch/v9_eval_a/v9_eval_a_RESULTS.json` | n dan prevalensi per fold sembilan sumur |

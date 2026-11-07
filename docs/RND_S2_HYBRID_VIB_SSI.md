@@ -33,14 +33,14 @@ Rujukan metode: konstanta metode di dokumen ini adalah konvensi internal repo de
 
 ### 1.1 Pertanyaan
 
-Untuk kelas kerusakan vib K-i dan ssi K-i, apakah dua bentuk hybrid berikut mengalahkan engine tunggal terbaik pada kelas yang sama:
+Untuk kelas kerusakan vib K-i dan ssi K-i, apakah dua bentuk hybrid berikut mengalahkan detektor tunggal terbaik pada kelas yang sama:
 
 1. Bentuk (a): statistik + rule, yaitu detektor perubahan CUSUM yang dipadukan dengan gerbang rule kanal.
 2. Bentuk (b): ML + statistik dengan kalibrasi, yaitu skor LightGBM yang ambangnya dikalibrasi pada well kalibrasi, lalu digerbangi residu statistik.
 
 ### 1.2 Kebijakan pengikat
 
-`docs/RND_EVALUATION_POLICY.md` menetapkan bahwa gate bukan izin pakai, bahwa engine boleh berbeda antar kelas kerusakan, bahwa hybrid diizinkan, dan bahwa perbandingan selalu memakai baseline yang relevan untuk tugas itu. Karena itu baseline pada kartu ini adalah persistence `y_prev` yang memang disediakan pembentuk dataset sebagai baseline status, bukan baseline hyd.
+`docs/RND_EVALUATION_POLICY.md` menetapkan bahwa gate bukan izin pakai, bahwa detektor boleh berbeda antar kelas kerusakan, bahwa hybrid diizinkan, dan bahwa perbandingan selalu memakai baseline yang relevan untuk tugas itu. Karena itu baseline pada kartu ini adalah persistence `y_prev` yang memang disediakan pembentuk dataset sebagai baseline status, bukan baseline hyd.
 
 ### 1.3 Keputusan desain yang dikunci sebelum melihat hasil
 
@@ -50,7 +50,7 @@ Untuk kelas kerusakan vib K-i dan ssi K-i, apakah dua bentuk hybrid berikut meng
 4. Fold dengan positif kurang dari 30 ditandai tidak dapat diuji dan tidak masuk agregat.
 5. FAR dilaporkan pada dua satuan, kalender dan baris. Satuan kalender adalah satuan gate.
 6. Ambang ML disiapkan dalam dua versi, conformal pada satuan baris dan anggaran pada satuan menit kalender, keduanya dari well kalibrasi.
-7. Perbandingan hybrid lawan single engine memakai urutan yang ditetapkan di kode: jumlah fold yang lolos FAR dan recall lebih dulu, lalu recall median, lalu FAR median, lalu presisi median.
+7. Perbandingan hybrid lawan single detektor memakai urutan yang ditetapkan di kode: jumlah fold yang lolos FAR dan recall lebih dulu, lalu recall median, lalu FAR median, lalu presisi median.
 
 ## 2. DATA DAN KELAYAKAN UJI
 
@@ -204,7 +204,7 @@ Pada ssi, ML mencapai recall median 0,8434 pada FAR 39,8085 dengan presisi media
 
 Ambang CUSUM tersaturasi pada nilai tertinggi grid, yaitu 30, di 8 dari 13 fold, dan pada 15 di 5 fold. Ketika anggaran FAR dipaksa sangat kecil pada well kalibrasi, CUSUM hanya bisa memenuhi anggaran dengan ambang setinggi mungkin, sehingga keluarannya hampir selalu nol. Gerbang DAN dengan komponen yang hampir selalu nol akan mematikan sinyal pasangannya. Itulah sebabnya H2 ML dan statistik pada vib punya FAR median 0,0000 dengan recall median 0,0049, dan pada ssi recall median 0,0000. Itu bukan bukti komposisinya aman, melainkan bukti komponen statistiknya tidak berfungsi pada anggaran ini.
 
-## 5. PERBANDINGAN HYBRID LAWAN SINGLE ENGINE TERBAIK
+## 5. PERBANDINGAN HYBRID LAWAN SINGLE Detektor TERBAIK
 
 | Kelas | Single terbaik | Hybrid terbaik | Selisih recall median | Selisih presisi median | Rasio FAR median | Selisih fold lolos |
 |---|---|---|---|---|---|---|
@@ -275,7 +275,7 @@ Pada vib 2 dari 4 fold memberi selisih nol, sedangkan pada ssi 6 dari 7 fold ber
 
 ### 6.3 Cakupan menit
 
-Cakupan menit adalah rasio jumlah baris terhadap rentang menit kalender well. Cakupan median vib adalah 0,2094 dan ssi 0,0653. Gate A pada harness mensyaratkan cakupan tidak kurang dari 0,50, sehingga syarat itu gagal di semua fold pada kedua kelas. Kegagalan cakupan bukan alasan membuang engine, sesuai kebijakan bagian 1, tetapi ia membatasi arti FAR pada satuan kalender karena penyebut kalender jauh lebih besar daripada jumlah baris berdata.
+Cakupan menit adalah rasio jumlah baris terhadap rentang menit kalender well. Cakupan median vib adalah 0,2094 dan ssi 0,0653. Gate A pada harness mensyaratkan cakupan tidak kurang dari 0,50, sehingga syarat itu gagal di semua fold pada kedua kelas. Kegagalan cakupan bukan alasan membuang detektor, sesuai kebijakan bagian 1, tetapi ia membatasi arti FAR pada satuan kalender karena penyebut kalender jauh lebih besar daripada jumlah baris berdata.
 
 ## 7. LAPISAN B: NILAI MAINTENANCE, BELUM TERUKUR
 
@@ -286,7 +286,7 @@ Sebagai catatan batas, harness tetap menghasilkan lead median terhadap onset lab
 ## 8. KEPUTUSAN DAN BATAS PENGGUNAAN
 
 1. Untuk vib, tidak ada hybrid yang mengungguli persistence. Bentuk (a) dan bentuk (b) sama sama gagal, dan kegagalannya bukan karena ambang terlalu ketat, karena kurva sensitivitas pada bagian 4.3 tetap di bawah baseline pada FAR yang lebih longgar.
-2. Untuk ssi, tidak ada engine yang layak sebagai alarm kritis. ML punya kemampuan peringkat yang nyata dengan AUC well uji antara 0,5387 dan 0,9067, tetapi pada anggaran gate presisi median hanya 0,0762, sehingga pemakaian yang jujur adalah pemantauan tren dengan ambang longgar dan pengawasan manusia.
+2. Untuk ssi, tidak ada detektor yang layak sebagai alarm kritis. ML punya kemampuan peringkat yang nyata dengan AUC well uji antara 0,5387 dan 0,9067, tetapi pada anggaran gate presisi median hanya 0,0762, sehingga pemakaian yang jujur adalah pemantauan tren dengan ambang longgar dan pengawasan manusia.
 3. Komposisi DAN dengan komponen statistik yang tersaturasi adalah pola yang harus dihindari pada anggaran FAR kecil. Komposisi ATAU mempertahankan recall tetapi membayar dengan FAR lebih besar.
 4. Gate bukan izin pakai, dan nol fold yang lolos di kedua kelas adalah pernyataan kemampuan, bukan vonis buang.
 

@@ -1,0 +1,194 @@
+{
+ "kartu": "t_6890a1c7",
+ "tanggal": "2026-10-28 04:11:26",
+ "pertanyaan": "apakah h=30 terkalibrasi atau tersaturasi di batas grid",
+ "anggaran_alpha": 0.004166666666666667,
+ "h_grid": [
+  0.5,
+  1,
+  1.5,
+  2,
+  2.5,
+  3,
+  4,
+  5,
+  6,
+  8,
+  10,
+  12,
+  15,
+  20,
+  30
+ ],
+ "h_grid_maks": 30.0,
+ "cusum_k": 0.5,
+ "per_fold": [
+  {
+   "fold": "F-10",
+   "cal_well": "F-12",
+   "n_cal": 7390,
+   "h_grid_maks": 30.0,
+   "laju_alarm_h_maks": 0.04411366711772666,
+   "lolos_anggaran": false,
+   "h_dipilih": 30.0,
+   "saturasi": true
+  },
+  {
+   "fold": "F-12",
+   "cal_well": "F-10",
+   "n_cal": 7571,
+   "h_grid_maks": 30.0,
+   "laju_alarm_h_maks": 0.017567032096156385,
+   "lolos_anggaran": false,
+   "h_dipilih": 30.0,
+   "saturasi": true
+  },
+  {
+   "fold": "F-14",
+   "cal_well": "F-10",
+   "n_cal": 7571,
+   "h_grid_maks": 30.0,
+   "laju_alarm_h_maks": 0.017567032096156385,
+   "lolos_anggaran": false,
+   "h_dipilih": 30.0,
+   "saturasi": true
+  },
+  {
+   "fold": "F-15A",
+   "cal_well": "F-10",
+   "n_cal": 7571,
+   "h_grid_maks": 30.0,
+   "laju_alarm_h_maks": 0.017567032096156385,
+   "lolos_anggaran": false,
+   "h_dipilih": 30.0,
+   "saturasi": true
+  },
+  {
+   "fold": "F-15_S",
+   "cal_well": "F-10",
+   "n_cal": 7571,
+   "h_grid_maks": 30.0,
+   "laju_alarm_h_maks": 0.017567032096156385,
+   "lolos_anggaran": false,
+   "h_dipilih": 30.0,
+   "saturasi": true
+  },
+  {
+   "fold": "F-5",
+   "cal_well": "F-10",
+   "n_cal": 7571,
+   "h_grid_maks": 30.0,
+   "laju_alarm_h_maks": 0.017567032096156385,
+   "lolos_anggaran": false,
+   "h_dipilih": 30.0,
+   "saturasi": true
+  },
+  {
+   "fold": "F-7",
+   "cal_well": "F-10",
+   "n_cal": 7571,
+   "h_grid_maks": 30.0,
+   "laju_alarm_h_maks": 0.017567032096156385,
+   "lolos_anggaran": false,
+   "h_dipilih": 30.0,
+   "saturasi": true
+  },
+  {
+   "fold": "F-9",
+   "cal_well": "F-10",
+   "n_cal": 7571,
+   "h_grid_maks": 30.0,
+   "laju_alarm_h_maks": 0.017567032096156385,
+   "lolos_anggaran": false,
+   "h_dipilih": 30.0,
+   "saturasi": true
+  },
+  {
+   "fold": "F-9_A",
+   "cal_well": "F-10",
+   "n_cal": 7571,
+   "h_grid_maks": 30.0,
+   "laju_alarm_h_maks": 0.017567032096156385,
+   "lolos_anggaran": false,
+   "h_dipilih": 30.0,
+   "saturasi": true
+  }
+ ],
+ "n_fold": 9,
+ "n_saturasi": 9,
+ "well_kalibrasi_unik": [
+  "F-10",
+  "F-12"
+ ],
+ "pindai_h_luar_grid_well": "F-12",
+ "pindai": [
+  {
+   "h": 40.0,
+   "laju_alarm": 0.030581867388362653,
+   "lolos_anggaran": false
+  },
+  {
+   "h": 50.0,
+   "laju_alarm": 0.02435723951285521,
+   "lolos_anggaran": false
+  },
+  {
+   "h": 60.0,
+   "laju_alarm": 0.02178619756427605,
+   "lolos_anggaran": false
+  },
+  {
+   "h": 80.0,
+   "laju_alarm": 0.015967523680649527,
+   "lolos_anggaran": false
+  },
+  {
+   "h": 100.0,
+   "laju_alarm": 0.012449255751014885,
+   "lolos_anggaran": false
+  },
+  {
+   "h": 120.0,
+   "laju_alarm": 0.010690121786197564,
+   "lolos_anggaran": false
+  },
+  {
+   "h": 150.0,
+   "laju_alarm": 0.008254397834912044,
+   "lolos_anggaran": false
+  },
+  {
+   "h": 200.0,
+   "laju_alarm": 0.006089309878213802,
+   "lolos_anggaran": false
+  },
+  {
+   "h": 250.0,
+   "laju_alarm": 0.004736129905277402,
+   "lolos_anggaran": false
+  },
+  {
+   "h": 300.0,
+   "laju_alarm": 0.003924221921515561,
+   "lolos_anggaran": true
+  },
+  {
+   "h": 400.0,
+   "laju_alarm": 0.002976995940460081,
+   "lolos_anggaran": true
+  },
+  {
+   "h": 500.0,
+   "laju_alarm": 0.002165087956698241,
+   "lolos_anggaran": true
+  },
+  {
+   "h": 600.0,
+   "laju_alarm": 0.0017591339648173206,
+   "lolos_anggaran": true
+  }
+ ],
+ "h_terkecil_lolos_anggaran_di_luar_grid": 300.0,
+ "kesimpulan": "saturasi",
+ "elapsed_s": 3.0
+}

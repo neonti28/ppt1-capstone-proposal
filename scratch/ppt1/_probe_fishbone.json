@@ -1,0 +1,83 @@
+{
+  "labels": {
+    "file": "data/volve/labels_curated_v2.csv",
+    "baris": 884,
+    "kolom": 20,
+    "kategori": {
+      "surface_rig_equipment": 216,
+      "safety_personnel": 1,
+      "bha_stuck_fishing": 38,
+      "routine_no_failure_evidence": 496,
+      "mixed_evidence": 47,
+      "failure_unlocated": 28,
+      "bha_downhole_equipment": 12,
+      "wellbore_fluid": 25,
+      "wireline_completion_intervention": 21
+    },
+    "bha_relevant": {
+      "no": 263,
+      "yes": 50,
+      "uncertain": 571
+    },
+    "outcome_kosong": 587,
+    "wellbore_n": 10,
+    "wellbore": {
+      "NO 15/9-F-14": 182,
+      "NO 15/9-F-15": 112,
+      "NO 15/9-F-15 A": 32,
+      "NO 15/9-F-15 B": 2,
+      "NO 15/9-F-15 C": 89,
+      "NO 15/9-F-15 D": 122,
+      "NO 15/9-F-5": 136,
+      "NO 15/9-F-7": 59,
+      "NO 15/9-F-9": 56,
+      "NO 15/9-F-9 A": 94
+    },
+    "durasi": {
+      "valid": 884,
+      "gagal": 0,
+      "total_menit": 73500.0,
+      "total_jam": 1225.0,
+      "median_menit": 45.0,
+      "p90_menit": 180.0,
+      "per_kategori": {
+        "surface_rig_equipment": {
+          "n": 216,
+          "jam": 343.5
+        },
+        "safety_personnel": {
+          "n": 1,
+          "jam": 1.2
+        },
+        "bha_stuck_fishing": {
+          "n": 38,
+          "jam": 47.3
+        },
+        "routine_no_failure_evidence": {
+          "n": 496,
+          "jam": 601.1
+        },
+        "mixed_evidence": {
+          "n": 47,
+          "jam": 101.5
+        },
+        "failure_unlocated": {
+          "n": 28,
+          "jam": 25.8
+        },
+        "bha_downhole_equipment": {
+          "n": 12,
+          "jam": 14.0
+        },
+        "wellbore_fluid": {
+          "n": 25,
+          "jam": 50.5
+        },
+        "wireline_completion_intervention": {
+          "n": 21,
+          "jam": 40.2
+        }
+      }
+    }
+  }
+}

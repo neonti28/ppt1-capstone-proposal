@@ -1,0 +1,906 @@
+{
+ "v9_i1_head_metrics": {
+  "vib": {
+   "rule_display": {
+    "tier": "PERINGATAN-BERPENGAWAS",
+    "layer": "L1",
+    "metrik_segmen": {
+     "n": 1989,
+     "pos": 1124,
+     "neg": 865,
+     "tp": 510,
+     "fp": 30,
+     "fn": 614,
+     "precision": 0.9444,
+     "recall": 0.4537,
+     "far_segmen": 49.942,
+     "far_unit": "FP/24jam-negatif (jendela 60 dtk)"
+    },
+    "n_aktif": 540,
+    "frac_aktif": 0.2715
+   },
+   "persistence": {
+    "tier": "TREN",
+    "layer": "L0",
+    "metrik_segmen": {
+     "n": 1989,
+     "pos": 1124,
+     "neg": 865,
+     "tp": 952,
+     "fp": 190,
+     "fn": 172,
+     "precision": 0.8336,
+     "recall": 0.847,
+     "far_segmen": 316.301,
+     "far_unit": "FP/24jam-negatif (jendela 60 dtk)"
+    },
+    "n_aktif": 1142,
+    "frac_aktif": 0.5742
+   },
+   "hybrid_rule_and_persistence": {
+    "tier": "PERINGATAN-BERPENGAWAS",
+    "layer": "L1",
+    "metrik_segmen": {
+     "n": 1989,
+     "pos": 1124,
+     "neg": 865,
+     "tp": 510,
+     "fp": 30,
+     "fn": 614,
+     "precision": 0.9444,
+     "recall": 0.4537,
+     "far_segmen": 49.942,
+     "far_unit": "FP/24jam-negatif (jendela 60 dtk)"
+    },
+    "n_aktif": 540,
+    "frac_aktif": 0.2715
+   },
+   "rf_lowo": {
+    "tier": "TREN",
+    "layer": "L2",
+    "metrik_segmen": {
+     "n": 1989,
+     "pos": 1124,
+     "neg": 865,
+     "tp": 973,
+     "fp": 298,
+     "fn": 151,
+     "precision": 0.7655,
+     "recall": 0.8657,
+     "far_segmen": 496.092,
+     "far_unit": "FP/24jam-negatif (jendela 60 dtk)"
+    },
+    "n_aktif": 1271,
+    "frac_aktif": 0.639
+   }
+  },
+  "ssi": {
+   "rule_display": {
+    "tier": "PERINGATAN-BERPENGAWAS",
+    "layer": "L1",
+    "metrik_segmen": {
+     "n": 5455,
+     "pos": 75,
+     "neg": 5380,
+     "tp": 0,
+     "fp": 0,
+     "fn": 75,
+     "precision": null,
+     "recall": 0.0,
+     "far_segmen": 0.0,
+     "far_unit": "FP/24jam-negatif (jendela 60 dtk)"
+    },
+    "n_aktif": 0,
+    "frac_aktif": 0.0
+   },
+   "persistence": {
+    "tier": "TREN",
+    "layer": "L0",
+    "metrik_segmen": {
+     "n": 5455,
+     "pos": 75,
+     "neg": 5380,
+     "tp": 1,
+     "fp": 30,
+     "fn": 74,
+     "precision": 0.0323,
+     "recall": 0.0133,
+     "far_segmen": 8.03,
+     "far_unit": "FP/24jam-negatif (jendela 60 dtk)"
+    },
+    "n_aktif": 31,
+    "frac_aktif": 0.0057
+   },
+   "hybrid_rule_and_persistence": {
+    "tier": "PERINGATAN-BERPENGAWAS",
+    "layer": "L1",
+    "metrik_segmen": {
+     "n": 5455,
+     "pos": 75,
+     "neg": 5380,
+     "tp": 0,
+     "fp": 0,
+     "fn": 75,
+     "precision": null,
+     "recall": 0.0,
+     "far_segmen": 0.0,
+     "far_unit": "FP/24jam-negatif (jendela 60 dtk)"
+    },
+    "n_aktif": 0,
+    "frac_aktif": 0.0
+   },
+   "rf_lowo": {
+    "tier": "TREN",
+    "layer": "L2",
+    "metrik_segmen": {
+     "n": 5455,
+     "pos": 75,
+     "neg": 5380,
+     "tp": 0,
+     "fp": 0,
+     "fn": 75,
+     "precision": null,
+     "recall": 0.0,
+     "far_segmen": 0.0,
+     "far_unit": "FP/24jam-negatif (jendela 60 dtk)"
+    },
+    "n_aktif": 0,
+    "frac_aktif": 0.0
+   }
+  },
+  "shk": {
+   "rule_display": {
+    "tier": "PERINGATAN-BERPENGAWAS",
+    "layer": "L1",
+    "metrik_segmen": {
+     "n": 11205,
+     "pos": 760,
+     "neg": 10445,
+     "tp": 55,
+     "fp": 48,
+     "fn": 705,
+     "precision": 0.534,
+     "recall": 0.0724,
+     "far_segmen": 6.618,
+     "far_unit": "FP/24jam-negatif (jendela 60 dtk)"
+    },
+    "n_aktif": 103,
+    "frac_aktif": 0.0092
+   },
+   "persistence": {
+    "tier": "TREN",
+    "layer": "L0",
+    "metrik_segmen": {
+     "n": 11205,
+     "pos": 760,
+     "neg": 10445,
+     "tp": 231,
+     "fp": 392,
+     "fn": 529,
+     "precision": 0.3708,
+     "recall": 0.3039,
+     "far_segmen": 54.043,
+     "far_unit": "FP/24jam-negatif (jendela 60 dtk)"
+    },
+    "n_aktif": 623,
+    "frac_aktif": 0.0556
+   },
+   "hybrid_rule_and_persistence": {
+    "tier": "PERINGATAN-BERPENGAWAS",
+    "layer": "L1",
+    "metrik_segmen": {
+     "n": 11205,
+     "pos": 760,
+     "neg": 10445,
+     "tp": 55,
+     "fp": 48,
+     "fn": 705,
+     "precision": 0.534,
+     "recall": 0.0724,
+     "far_segmen": 6.618,
+     "far_unit": "FP/24jam-negatif (jendela 60 dtk)"
+    },
+    "n_aktif": 103,
+    "frac_aktif": 0.0092
+   },
+   "rf_lowo": {
+    "tier": "TREN",
+    "layer": "L2",
+    "metrik_segmen": {
+     "n": 11205,
+     "pos": 760,
+     "neg": 10445,
+     "tp": 0,
+     "fp": 0,
+     "fn": 760,
+     "precision": null,
+     "recall": 0.0,
+     "far_segmen": 0.0,
+     "far_unit": "FP/24jam-negatif (jendela 60 dtk)"
+    },
+    "n_aktif": 0,
+    "frac_aktif": 0.0
+   }
+  },
+  "stuck": {
+   "rule_display": {
+    "tier": "PERINGATAN-BERPENGAWAS",
+    "layer": "L1",
+    "metrik_segmen": {
+     "n": 3201,
+     "pos": 432,
+     "neg": 2769,
+     "tp": 194,
+     "fp": 16,
+     "fn": 238,
+     "precision": 0.9238,
+     "recall": 0.4491,
+     "far_segmen": 8.321,
+     "far_unit": "FP/24jam-negatif (jendela 60 dtk)"
+    },
+    "n_aktif": 210,
+    "frac_aktif": 0.0656
+   },
+   "persistence": {
+    "tier": "TREN",
+    "layer": "L0",
+    "metrik_segmen": {
+     "n": 3201,
+     "pos": 432,
+     "neg": 2769,
+     "tp": 306,
+     "fp": 145,
+     "fn": 126,
+     "precision": 0.6785,
+     "recall": 0.7083,
+     "far_segmen": 75.406,
+     "far_unit": "FP/24jam-negatif (jendela 60 dtk)"
+    },
+    "n_aktif": 451,
+    "frac_aktif": 0.1409
+   },
+   "hybrid_rule_and_persistence": {
+    "tier": "PERINGATAN-BERPENGAWAS",
+    "layer": "L1",
+    "metrik_segmen": {
+     "n": 3201,
+     "pos": 432,
+     "neg": 2769,
+     "tp": 194,
+     "fp": 16,
+     "fn": 238,
+     "precision": 0.9238,
+     "recall": 0.4491,
+     "far_segmen": 8.321,
+     "far_unit": "FP/24jam-negatif (jendela 60 dtk)"
+    },
+    "n_aktif": 210,
+    "frac_aktif": 0.0656
+   },
+   "e1_2of3": {
+    "tier": "TREN",
+    "layer": "L2",
+    "metrik_segmen": {
+     "n": 95925,
+     "pos": 389,
+     "neg": 95536,
+     "tp": 6,
+     "fp": 307,
+     "fn": 383,
+     "precision": 0.0192,
+     "recall": 0.0154,
+     "far_segmen": 4.627,
+     "far_unit": "FP/24jam-negatif (jendela 60 dtk)"
+    },
+    "n_aktif": 313,
+    "frac_aktif": 0.0033
+   },
+   "persistence_event": {
+    "tier": "TREN",
+    "layer": "L2",
+    "metrik_segmen": {
+     "n": 95925,
+     "pos": 389,
+     "neg": 95536,
+     "tp": 2,
+     "fp": 2,
+     "fn": 387,
+     "precision": 0.5,
+     "recall": 0.0051,
+     "far_segmen": 0.03,
+     "far_unit": "FP/24jam-negatif (jendela 60 dtk)"
+    },
+    "n_aktif": 4,
+    "frac_aktif": 0.0
+   },
+   "rf_lowo": {
+    "tier": "TREN",
+    "layer": "L2",
+    "metrik_segmen": {
+     "n": 95925,
+     "pos": 389,
+     "neg": 95536,
+     "tp": 2,
+     "fp": 40,
+     "fn": 387,
+     "precision": 0.0476,
+     "recall": 0.0051,
+     "far_segmen": 0.603,
+     "far_unit": "FP/24jam-negatif (jendela 60 dtk)"
+    },
+    "n_aktif": 42,
+    "frac_aktif": 0.0004
+   }
+  },
+  "hyd": {
+   "rule_display": {
+    "tier": "PERINGATAN-BERPENGAWAS",
+    "layer": "L1",
+    "metrik_segmen": {
+     "n": 10401,
+     "pos": 865,
+     "neg": 9536,
+     "tp": 607,
+     "fp": 368,
+     "fn": 258,
+     "precision": 0.6226,
+     "recall": 0.7017,
+     "far_segmen": 55.57,
+     "far_unit": "FP/24jam-negatif (jendela 60 dtk)"
+    },
+    "n_aktif": 975,
+    "frac_aktif": 0.0937
+   },
+   "persistence": {
+    "tier": "PERINGATAN-BERPENGAWAS",
+    "layer": "L0",
+    "metrik_segmen": {
+     "n": 10401,
+     "pos": 865,
+     "neg": 9536,
+     "tp": 553,
+     "fp": 323,
+     "fn": 312,
+     "precision": 0.6313,
+     "recall": 0.6393,
+     "far_segmen": 48.775,
+     "far_unit": "FP/24jam-negatif (jendela 60 dtk)"
+    },
+    "n_aktif": 876,
+    "frac_aktif": 0.0842
+   },
+   "hybrid_rule_and_persistence": {
+    "tier": "PERINGATAN-BERPENGAWAS",
+    "layer": "L1",
+    "metrik_segmen": {
+     "n": 10401,
+     "pos": 865,
+     "neg": 9536,
+     "tp": 516,
+     "fp": 110,
+     "fn": 349,
+     "precision": 0.8243,
+     "recall": 0.5965,
+     "far_segmen": 16.611,
+     "far_unit": "FP/24jam-negatif (jendela 60 dtk)"
+    },
+    "n_aktif": 626,
+    "frac_aktif": 0.0602
+   },
+   "k2_tidak_tersedia": {
+    "tier": "BELUM LAYAK PAKAI",
+    "layer": "L3",
+    "metrik_segmen": null,
+    "n_aktif": null,
+    "frac_aktif": null
+   }
+  },
+  "bit_wear": {
+   "persistence": {
+    "tier": "TREN",
+    "layer": "L2",
+    "metrik_segmen": {
+     "n": 47645,
+     "pos": 4918,
+     "neg": 42727,
+     "tp": 4881,
+     "fp": 36,
+     "fn": 37,
+     "precision": 0.9927,
+     "recall": 0.9925,
+     "far_segmen": 1.213,
+     "far_unit": "FP/24jam-negatif (jendela 60 dtk)"
+    },
+    "n_aktif": 4917,
+    "frac_aktif": 0.1032
+   },
+   "k2_onset_belum": {
+    "tier": "BELUM LAYAK PAKAI",
+    "layer": "L3",
+    "metrik_segmen": null,
+    "n_aktif": null,
+    "frac_aktif": null
+   }
+  },
+  "tool_wear": {
+   "calib_5of27": {
+    "tier": "TREN",
+    "layer": "L2",
+    "metrik_segmen": {
+     "n": 469,
+     "pos": 240,
+     "neg": 229,
+     "tp": 173,
+     "fp": 132,
+     "fn": 67,
+     "precision": 0.5672,
+     "recall": 0.7208,
+     "far_segmen": 34.585,
+     "far_unit": "FP/menit-negatif (jendela 1 dtk)"
+    },
+    "n_aktif": 305,
+    "frac_aktif": 0.6503
+   },
+   "op_far_calibrated": {
+    "tier": "PERINGATAN-BERPENGAWAS",
+    "layer": "L1",
+    "metrik_segmen": {
+     "n": 469,
+     "pos": 240,
+     "neg": 229,
+     "tp": 13,
+     "fp": 8,
+     "fn": 227,
+     "precision": 0.619,
+     "recall": 0.0542,
+     "far_segmen": 2.096,
+     "far_unit": "FP/menit-negatif (jendela 1 dtk)"
+    },
+    "n_aktif": 21,
+    "frac_aktif": 0.0448
+   },
+   "canary_3rms": {
+    "tier": "TREN",
+    "layer": "L2",
+    "metrik_segmen": null,
+    "n_aktif": 282,
+    "frac_aktif": 0.6013
+   }
+  }
+ },
+ "tool_wear_kebetulan": [],
+ "tool_wear_op_head": {
+  "metrik_segmen": {
+   "n": 469,
+   "pos": 240,
+   "neg": 229,
+   "tp": 13,
+   "fp": 8,
+   "fn": 227,
+   "precision": 0.619,
+   "recall": 0.0542,
+   "far_segmen": 2.096,
+   "far_unit": "FP/menit-negatif (jendela 1 dtk)"
+  },
+  "thr_featcount": null,
+  "target_fp_per_min": null
+ },
+ "rule_json": {
+  "vib": {
+   "identity": {
+    "n_checked": 23922,
+    "n_mismatch": 0,
+    "identity": true,
+    "note": "rule jendela LABEL = pembentuk label (sirkular per konstruksi)"
+   },
+   "rule_P": [
+    0.9444,
+    0.8676,
+    0.8984,
+    0.9519
+   ],
+   "rule_R": [
+    0.4537,
+    0.2761,
+    0.3753,
+    0.5951
+   ],
+   "rule_FP": [
+    30.0,
+    65.0,
+    65.0,
+    37.0
+   ],
+   "rule_FAR24": [
+    49.94,
+    18.95,
+    9.99,
+    16.06
+   ],
+   "hybrid_P": [
+    0.9444,
+    0.8676,
+    0.8984,
+    0.9519
+   ],
+   "hybrid_FP": [
+    30.0,
+    65.0,
+    65.0,
+    37.0
+   ],
+   "pers_P": [
+    0.8336,
+    0.6832,
+    0.684,
+    0.7736
+   ],
+   "n_folds": 4,
+   "wells": [
+    "F-14",
+    "F-15A",
+    "F-15_S",
+    "F-5"
+   ]
+  },
+  "ssi": {
+   "identity": {
+    "n_checked": 35906,
+    "n_mismatch": 0,
+    "identity": true,
+    "note": "rule jendela LABEL = pembentuk label (sirkular per konstruksi)"
+   },
+   "rule_P": [
+    0.4,
+    0.0,
+    0.25,
+    0.1111,
+    0.5,
+    0.2
+   ],
+   "rule_R": [
+    0.0124,
+    0.0,
+    0.0,
+    0.0323,
+    0.0118,
+    0.0196,
+    0.0,
+    0.0,
+    0.0182
+   ],
+   "rule_FP": [
+    3.0,
+    6.0,
+    0.0,
+    3.0,
+    8.0,
+    2.0,
+    0.0,
+    0.0,
+    4.0
+   ],
+   "rule_FAR24": [
+    0.62,
+    2.05,
+    0.0,
+    0.72,
+    2.19,
+    0.62,
+    0.0,
+    0.0,
+    7.33
+   ],
+   "hybrid_P": [
+    0.6667,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "hybrid_FP": [
+    1.0,
+    1.0,
+    0.0,
+    2.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    2.0
+   ],
+   "pers_P": [
+    0.4333,
+    0.0652,
+    0.0323,
+    0.1111,
+    0.0769,
+    0.1552,
+    0.0,
+    0.1515
+   ],
+   "n_folds": 9,
+   "wells": [
+    "F-10",
+    "F-12",
+    "F-14",
+    "F-15A",
+    "F-15_S",
+    "F-5",
+    "F-7",
+    "F-9",
+    "F-9_A"
+   ]
+  },
+  "shk": {
+   "identity": {
+    "n_checked": 56495,
+    "n_mismatch": 0,
+    "identity": true,
+    "note": "rule jendela LABEL = pembentuk label (sirkular per konstruksi)"
+   },
+   "rule_P": [
+    0.2857,
+    0.5789,
+    0.534,
+    0.0,
+    0.4054,
+    0.125,
+    0.9352,
+    0.3333,
+    0.3333
+   ],
+   "rule_R": [
+    0.0411,
+    0.0507,
+    0.0724,
+    0.0,
+    0.0579,
+    0.0083,
+    0.3783,
+    0.0222,
+    0.0333
+   ],
+   "rule_FP": [
+    15.0,
+    8.0,
+    48.0,
+    3.0,
+    22.0,
+    14.0,
+    7.0,
+    2.0,
+    2.0
+   ],
+   "rule_FAR24": [
+    2.79,
+    2.22,
+    6.62,
+    0.67,
+    2.85,
+    2.92,
+    4.04,
+    1.59,
+    1.24
+   ],
+   "hybrid_P": [
+    0.2857,
+    0.5789,
+    0.534,
+    0.0,
+    0.4054,
+    0.125,
+    0.9352,
+    0.3333,
+    0.3333
+   ],
+   "hybrid_FP": [
+    15.0,
+    8.0,
+    48.0,
+    3.0,
+    22.0,
+    14.0,
+    7.0,
+    2.0,
+    2.0
+   ],
+   "pers_P": [
+    0.076,
+    0.1881,
+    0.3708,
+    0.0,
+    0.1434,
+    0.1792,
+    0.6968,
+    0.3333,
+    0.05
+   ],
+   "n_folds": 9,
+   "wells": [
+    "F-10",
+    "F-12",
+    "F-14",
+    "F-15A",
+    "F-15_S",
+    "F-5",
+    "F-7",
+    "F-9",
+    "F-9_A"
+   ]
+  },
+  "stuck_k1": {
+   "identity": {
+    "n_checked": 5555,
+    "n_mismatch": 0,
+    "identity": true,
+    "note": "rule jendela LABEL = pembentuk label (sirkular per konstruksi)"
+   },
+   "rule_P": [
+    0.9238,
+    0.9662
+   ],
+   "rule_R": [
+    0.4491,
+    0.5994
+   ],
+   "rule_FP": [
+    16.0,
+    33.0
+   ],
+   "rule_FAR24": [
+    8.32,
+    61.0
+   ],
+   "hybrid_P": [
+    0.9238,
+    0.9662
+   ],
+   "hybrid_FP": [
+    16.0,
+    33.0
+   ],
+   "pers_P": [
+    0.6785,
+    0.812
+   ],
+   "n_folds": 2,
+   "wells": [
+    "F-14",
+    "F-9_A"
+   ]
+  },
+  "hyd_ki": {
+   "identity": {
+    "n_checked": 52509,
+    "n_mismatch": 0,
+    "identity": true,
+    "note": "rule jendela LABEL = pembentuk label (sirkular per konstruksi)"
+   },
+   "rule_P": [
+    0.8862,
+    0.7598,
+    0.6226,
+    0.6744,
+    0.6531,
+    0.7172,
+    0.6316,
+    0.7238,
+    0.7162
+   ],
+   "rule_R": [
+    0.9275,
+    0.8163,
+    0.7017,
+    0.7507,
+    0.6808,
+    0.7923,
+    0.7696,
+    0.669,
+    0.6556
+   ],
+   "rule_FP": [
+    166.0,
+    368.0,
+    368.0,
+    253.0,
+    359.0,
+    194.0,
+    189.0,
+    108.0,
+    86.0
+   ],
+   "rule_FAR24": [
+    38.7,
+    88.85,
+    55.57,
+    66.75,
+    70.22,
+    48.92,
+    132.05,
+    130.36,
+    66.05
+   ],
+   "hybrid_P": [
+    0.9484,
+    0.8158,
+    0.8243,
+    0.8154,
+    0.7236,
+    0.8849,
+    0.7853,
+    0.8676,
+    0.8356
+   ],
+   "hybrid_FP": [
+    66.0,
+    242.0,
+    110.0,
+    103.0,
+    199.0,
+    58.0,
+    76.0,
+    36.0,
+    37.0
+   ],
+   "pers_P": [
+    0.8986,
+    0.7417,
+    0.6313,
+    0.6676,
+    0.6145,
+    0.7536,
+    0.648,
+    0.7927,
+    0.7114
+   ],
+   "n_folds": 9,
+   "wells": [
+    "F-10",
+    "F-12",
+    "F-14",
+    "F-15A",
+    "F-15_S",
+    "F-5",
+    "F-7",
+    "F-9",
+    "F-9_A"
+   ]
+  }
+ },
+ "bit_wear_pipeline": {
+  "n_rows": 198928,
+  "n_pos": 49732,
+  "wells": {
+   "USROP_A 3 N-SH-F-15d.csv": 53041,
+   "USROP_A 4 N-SH_F-15Sd.csv": 51708,
+   "USROP_A 2 N-SH_F-14d.csv": 47645,
+   "USROP_A 5 N-SH-F-5d.csv": 18548,
+   "USROP_A 0 N-NA_F-9_Ad.csv": 13746,
+   "USROP_A 6 N-SH_F-9d.csv": 7851,
+   "USROP_A 1 N-S_F-7d.csv": 6389
+  },
+  "P_pers_pipeline_style": 0.5668,
+  "n_boundary_rows": 6,
+  "depth_min": 225.171,
+  "depth_max": 4090.001,
+  "depth_step_median": 0.015000000000100044
+ },
+ "arsip_refs": {
+  "total_py": 65,
+  "v9_py": 0,
+  "v9_contoh": [],
+  "semua_contoh": [
+   "04_fault_injection.py:34: OUT_ROOT = Path(\"/mnt/d/Capstone 1/data/sim-fault\")",
+   "22_j2_stuck_extract.py:12: BASE = \"/mnt/d/Capstone 1/data/volve/witsml_parsed\"",
+   "22_j2_stuck_extract.py:13: OUT = \"/mnt/d/Capstone 1/data/predictive/j2_stuck\"",
+   "23_j2_stuck_campaign.py:23: DATA = \"/mnt/d/Capstone 1/data/predictive/j2_stuck\"",
+   "23_j2_stuck_campaign.py:334: with open(\"/mnt/d/Capstone 1/docs/V5_J2_STUCK.json\", \"w\") as fh:",
+   "24_j2_stuck_verify.py:18: DATA = \"/mnt/d/Capstone 1/data/predictive/j2_stuck\"",
+   "24_j2_stuck_verify.py:49: res = json.load(open(\"/mnt/d/Capstone 1/docs/V5_J2_STUCK.json\"))",
+   "24_j2_stuck_verify.py:141: with open(\"/mnt/d/Capstone 1/docs/V5_J2_VERIFY.json\", \"w\") as fh:",
+   "34_verify_t1_fixes.py:3: csvrows = list(csv.DictReader(open('/mnt/d/Capstone 1/docs/V2_TSPP_AE_SCORES.csv')))",
+   "34_verify_t1_fixes.py:4: doc = open('/mnt/d/Capstone 1/docs/V2_ML_RESULTS.md').read()"
+  ]
+ }
+}

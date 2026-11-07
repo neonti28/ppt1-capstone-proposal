@@ -1,0 +1,171 @@
+{
+ "meta": {
+  "sumber_data": "/mnt/d/Capstone 1(v2)/scratch/v6_e1/toolwear_windows.csv",
+  "n_jendela": 469,
+  "n_fitur": 27,
+  "target_fp_per_menit": 1.0
+ },
+ "per_alat": [
+  {
+   "alat": "T01",
+   "n_R01": 60,
+   "n_kalibrasi": 18,
+   "n_eval_R01": 42,
+   "n_R02": 60,
+   "q_rumus": 0.983333,
+   "q_setelah_clip": 0.983333,
+   "q_sama_untuk_semua_panjang": true,
+   "A_ambang_insample": {
+    "thr": 12.316666666666663,
+    "fp_R01": 1,
+    "frac_R01_alarm": 0.0238,
+    "far_fp_per_menit_R01": 1.429,
+    "det_R02": true,
+    "frac_R02_alarm": 0.0333
+   },
+   "B_ambang_kausal": {
+    "thr": 4.716666666666665,
+    "fp_R01": 41,
+    "frac_R01_alarm": 0.9762,
+    "far_fp_per_menit_R01": 58.571,
+    "det_R02": true,
+    "frac_R02_alarm": 0.9667
+   },
+   "skor_unik_eval": [
+    0,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13
+   ]
+  },
+  {
+   "alat": "T02",
+   "n_R01": 50,
+   "n_kalibrasi": 15,
+   "n_eval_R01": 35,
+   "n_R02": 62,
+   "q_rumus": 0.983333,
+   "q_setelah_clip": 0.983333,
+   "q_sama_untuk_semua_panjang": true,
+   "A_ambang_insample": {
+    "thr": 10.0,
+    "fp_R01": 3,
+    "frac_R01_alarm": 0.0857,
+    "far_fp_per_menit_R01": 5.143,
+    "det_R02": true,
+    "frac_R02_alarm": 0.0645
+   },
+   "B_ambang_kausal": {
+    "thr": 3.0,
+    "fp_R01": 31,
+    "frac_R01_alarm": 0.8857,
+    "far_fp_per_menit_R01": 53.143,
+    "det_R02": true,
+    "frac_R02_alarm": 0.7903
+   },
+   "skor_unik_eval": [
+    1,
+    2,
+    3,
+    4,
+    6,
+    7,
+    8,
+    9,
+    10
+   ]
+  },
+  {
+   "alat": "T03",
+   "n_R01": 61,
+   "n_kalibrasi": 19,
+   "n_eval_R01": 42,
+   "n_R02": 60,
+   "q_rumus": 0.983333,
+   "q_setelah_clip": 0.983333,
+   "q_sama_untuk_semua_panjang": true,
+   "A_ambang_insample": {
+    "thr": 8.633333333333326,
+    "fp_R01": 1,
+    "frac_R01_alarm": 0.0238,
+    "far_fp_per_menit_R01": 1.429,
+    "det_R02": true,
+    "frac_R02_alarm": 0.05
+   },
+   "B_ambang_kausal": {
+    "thr": 4.399999999999999,
+    "fp_R01": 30,
+    "frac_R01_alarm": 0.7143,
+    "far_fp_per_menit_R01": 42.857,
+    "det_R02": true,
+    "frac_R02_alarm": 0.55
+   },
+   "skor_unik_eval": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    10
+   ]
+  },
+  {
+   "alat": "T04",
+   "n_R01": 58,
+   "n_kalibrasi": 18,
+   "n_eval_R01": 40,
+   "n_R02": 58,
+   "q_rumus": 0.983333,
+   "q_setelah_clip": 0.983333,
+   "q_sama_untuk_semua_panjang": true,
+   "A_ambang_insample": {
+    "thr": 10.0,
+    "fp_R01": 3,
+    "frac_R01_alarm": 0.075,
+    "far_fp_per_menit_R01": 4.5,
+    "det_R02": true,
+    "frac_R02_alarm": 0.069
+   },
+   "B_ambang_kausal": {
+    "thr": 5.149999999999995,
+    "fp_R01": 24,
+    "frac_R01_alarm": 0.6,
+    "far_fp_per_menit_R01": 36.0,
+    "det_R02": true,
+    "frac_R02_alarm": 0.431
+   },
+   "skor_unik_eval": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ]
+  }
+ ],
+ "agregat": {
+  "n_alat": 4,
+  "A_total_fp_R01": 8,
+  "B_total_fp_R01": 126,
+  "n_eval_total": 159,
+  "A_det_alat": 4,
+  "B_det_alat": 4,
+  "A_far_per_menit_gabungan": 3.019,
+  "B_far_per_menit_gabungan": 47.547
+ }
+}

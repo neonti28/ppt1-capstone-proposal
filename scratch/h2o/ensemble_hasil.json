@@ -1,0 +1,497 @@
+{
+  "per_sumur": {
+    "F-14": {
+      "n_kandidat": 11,
+      "n_uji": 1369,
+      "n_positif": 59,
+      "adil": {
+        "leader_cv": 0.0848,
+        "mean_top2": 0.0971,
+        "median_top2": 0.0971,
+        "rankmean_top2": 0.0919,
+        "mean_top3": 0.0972,
+        "median_top3": 0.0917,
+        "rankmean_top3": 0.0899,
+        "mean_top5": 0.0929,
+        "median_top5": 0.0953,
+        "rankmean_top5": 0.0923,
+        "mean_top10": 0.089,
+        "median_top10": 0.0977,
+        "rankmean_top10": 0.0922,
+        "mean_top20": 0.089,
+        "median_top20": 0.0986,
+        "rankmean_top20": 0.0922,
+        "weighted_cv_all": 0.0892,
+        "weighted_cv_top5": 0.0928,
+        "borda_all": 0.0922,
+        "mean_all": 0.089,
+        "rf_baseline": 0.1008,
+        "reglog_baseline": 0.092,
+        "lantai_mayoritas": 0.0431
+      },
+      "oracle": {
+        "best_single_uji": 0.1063,
+        "indeks_best_single": 4,
+        "best_mean_top2_uji": 0.1063,
+        "best_mean_top3_uji": 0.1029,
+        "best_mean_top5_uji": 0.1019,
+        "best_mean_top10_uji": 0.089,
+        "greedy_uji": 0.1063,
+        "greedy_uji_anggota": [
+          4
+        ]
+      },
+      "kandidat_teratas": [
+        {
+          "model": "XGBoost_3_AutoML_3_20261106_225612",
+          "aucpr_cv": 0.0891
+        },
+        {
+          "model": "GBM_3_AutoML_3_20261106_225612",
+          "aucpr_cv": 0.0881
+        },
+        {
+          "model": "XRT_1_AutoML_3_20261106_225612",
+          "aucpr_cv": 0.0847
+        },
+        {
+          "model": "XGBoost_2_AutoML_3_20261106_225612",
+          "aucpr_cv": 0.0836
+        },
+        {
+          "model": "GBM_2_AutoML_3_20261106_225612",
+          "aucpr_cv": 0.0817
+        }
+      ]
+    },
+    "F-15A": {
+      "n_kandidat": 11,
+      "n_uji": 476,
+      "n_positif": 24,
+      "adil": {
+        "leader_cv": 0.0588,
+        "mean_top2": 0.0959,
+        "median_top2": 0.0959,
+        "rankmean_top2": 0.0941,
+        "mean_top3": 0.1349,
+        "median_top3": 0.1359,
+        "rankmean_top3": 0.1183,
+        "mean_top5": 0.1462,
+        "median_top5": 0.1372,
+        "rankmean_top5": 0.1785,
+        "mean_top10": 0.1537,
+        "median_top10": 0.1734,
+        "rankmean_top10": 0.128,
+        "mean_top20": 0.154,
+        "median_top20": 0.1748,
+        "rankmean_top20": 0.126,
+        "weighted_cv_all": 0.1525,
+        "weighted_cv_top5": 0.1456,
+        "borda_all": 0.126,
+        "mean_all": 0.154,
+        "rf_baseline": 0.0948,
+        "reglog_baseline": 0.0513,
+        "lantai_mayoritas": 0.0504
+      },
+      "oracle": {
+        "best_single_uji": 0.1669,
+        "indeks_best_single": 2,
+        "best_mean_top2_uji": 0.1836,
+        "best_mean_top3_uji": 0.1921,
+        "best_mean_top5_uji": 0.1995,
+        "best_mean_top10_uji": 0.1957,
+        "greedy_uji": 0.2018,
+        "greedy_uji_anggota": [
+          2,
+          3,
+          8,
+          4
+        ]
+      },
+      "kandidat_teratas": [
+        {
+          "model": "XGBoost_1_AutoML_4_20261106_230620",
+          "aucpr_cv": 0.0844
+        },
+        {
+          "model": "XGBoost_2_AutoML_4_20261106_230620",
+          "aucpr_cv": 0.0838
+        },
+        {
+          "model": "XGBoost_3_AutoML_4_20261106_230620",
+          "aucpr_cv": 0.0828
+        },
+        {
+          "model": "GBM_5_AutoML_4_20261106_230620",
+          "aucpr_cv": 0.0825
+        },
+        {
+          "model": "GBM_1_AutoML_4_20261106_230620",
+          "aucpr_cv": 0.0813
+        }
+      ]
+    },
+    "F-15_S": {
+      "n_kandidat": 11,
+      "n_uji": 898,
+      "n_positif": 69,
+      "adil": {
+        "leader_cv": 0.1164,
+        "mean_top2": 0.1101,
+        "median_top2": 0.1101,
+        "rankmean_top2": 0.1067,
+        "mean_top3": 0.109,
+        "median_top3": 0.1055,
+        "rankmean_top3": 0.1065,
+        "mean_top5": 0.1086,
+        "median_top5": 0.1054,
+        "rankmean_top5": 0.1049,
+        "mean_top10": 0.1184,
+        "median_top10": 0.1079,
+        "rankmean_top10": 0.109,
+        "mean_top20": 0.1178,
+        "median_top20": 0.1081,
+        "rankmean_top20": 0.1092,
+        "weighted_cv_all": 0.1181,
+        "weighted_cv_top5": 0.1086,
+        "borda_all": 0.1092,
+        "mean_all": 0.1178,
+        "rf_baseline": 0.1063,
+        "reglog_baseline": 0.1156,
+        "lantai_mayoritas": 0.0768
+      },
+      "oracle": {
+        "best_single_uji": 0.1499,
+        "indeks_best_single": 6,
+        "best_mean_top2_uji": 0.1324,
+        "best_mean_top3_uji": 0.131,
+        "best_mean_top5_uji": 0.1216,
+        "best_mean_top10_uji": 0.1184,
+        "greedy_uji": 0.1499,
+        "greedy_uji_anggota": [
+          6
+        ]
+      },
+      "kandidat_teratas": [
+        {
+          "model": "GBM_3_AutoML_5_20261106_231628",
+          "aucpr_cv": 0.0869
+        },
+        {
+          "model": "GBM_5_AutoML_5_20261106_231628",
+          "aucpr_cv": 0.0861
+        },
+        {
+          "model": "XRT_1_AutoML_5_20261106_231628",
+          "aucpr_cv": 0.086
+        },
+        {
+          "model": "DRF_1_AutoML_5_20261106_231628",
+          "aucpr_cv": 0.0858
+        },
+        {
+          "model": "GBM_2_AutoML_5_20261106_231628",
+          "aucpr_cv": 0.0858
+        }
+      ]
+    },
+    "F-5": {
+      "n_kandidat": 11,
+      "n_uji": 932,
+      "n_positif": 27,
+      "adil": {
+        "leader_cv": 0.0272,
+        "mean_top2": 0.0313,
+        "median_top2": 0.0313,
+        "rankmean_top2": 0.0326,
+        "mean_top3": 0.0311,
+        "median_top3": 0.0325,
+        "rankmean_top3": 0.0327,
+        "mean_top5": 0.034,
+        "median_top5": 0.0343,
+        "rankmean_top5": 0.0357,
+        "mean_top10": 0.0304,
+        "median_top10": 0.0352,
+        "rankmean_top10": 0.0364,
+        "mean_top20": 0.0304,
+        "median_top20": 0.0341,
+        "rankmean_top20": 0.0364,
+        "weighted_cv_all": 0.0303,
+        "weighted_cv_top5": 0.034,
+        "borda_all": 0.0364,
+        "mean_all": 0.0304,
+        "rf_baseline": 0.0325,
+        "reglog_baseline": 0.0479,
+        "lantai_mayoritas": 0.029
+      },
+      "oracle": {
+        "best_single_uji": 0.0503,
+        "indeks_best_single": 8,
+        "best_mean_top2_uji": 0.0511,
+        "best_mean_top3_uji": 0.0428,
+        "best_mean_top5_uji": 0.0392,
+        "best_mean_top10_uji": 0.031,
+        "greedy_uji": 0.0511,
+        "greedy_uji_anggota": [
+          8,
+          9
+        ]
+      },
+      "kandidat_teratas": [
+        {
+          "model": "GBM_1_AutoML_6_20261106_232635",
+          "aucpr_cv": 0.0988
+        },
+        {
+          "model": "GBM_4_AutoML_6_20261106_232635",
+          "aucpr_cv": 0.098
+        },
+        {
+          "model": "GBM_5_AutoML_6_20261106_232635",
+          "aucpr_cv": 0.0974
+        },
+        {
+          "model": "GBM_2_AutoML_6_20261106_232635",
+          "aucpr_cv": 0.0973
+        },
+        {
+          "model": "GBM_3_AutoML_6_20261106_232635",
+          "aucpr_cv": 0.0965
+        }
+      ]
+    },
+    "F-7": {
+      "n_kandidat": 10,
+      "n_uji": 301,
+      "n_positif": 24,
+      "adil": {
+        "leader_cv": 0.0951,
+        "mean_top2": 0.0992,
+        "median_top2": 0.0992,
+        "rankmean_top2": 0.0996,
+        "mean_top3": 0.1002,
+        "median_top3": 0.1012,
+        "rankmean_top3": 0.1012,
+        "mean_top5": 0.1022,
+        "median_top5": 0.0978,
+        "rankmean_top5": 0.0994,
+        "mean_top10": 0.0995,
+        "median_top10": 0.1009,
+        "rankmean_top10": 0.1001,
+        "mean_top20": 0.0995,
+        "median_top20": 0.1009,
+        "rankmean_top20": 0.1001,
+        "weighted_cv_all": 0.0994,
+        "weighted_cv_top5": 0.1022,
+        "borda_all": 0.1001,
+        "mean_all": 0.0995,
+        "rf_baseline": 0.0884,
+        "reglog_baseline": 0.0993,
+        "lantai_mayoritas": 0.0797
+      },
+      "oracle": {
+        "best_single_uji": 0.1032,
+        "indeks_best_single": 3,
+        "best_mean_top2_uji": 0.1049,
+        "best_mean_top3_uji": 0.1055,
+        "best_mean_top5_uji": 0.1049,
+        "best_mean_top10_uji": 0.0995,
+        "greedy_uji": 0.1055,
+        "greedy_uji_anggota": [
+          3,
+          1,
+          2
+        ]
+      },
+      "kandidat_teratas": [
+        {
+          "model": "XGBoost_2_AutoML_7_20261106_233643",
+          "aucpr_cv": 0.1018
+        },
+        {
+          "model": "XGBoost_3_AutoML_7_20261106_233643",
+          "aucpr_cv": 0.0905
+        },
+        {
+          "model": "GBM_4_AutoML_7_20261106_233643",
+          "aucpr_cv": 0.0883
+        },
+        {
+          "model": "GBM_2_AutoML_7_20261106_233643",
+          "aucpr_cv": 0.0877
+        },
+        {
+          "model": "GBM_1_AutoML_7_20261106_233643",
+          "aucpr_cv": 0.0849
+        }
+      ]
+    },
+    "F-9": {
+      "n_kandidat": 9,
+      "n_uji": 300,
+      "n_positif": 24,
+      "adil": {
+        "leader_cv": 0.4643,
+        "mean_top2": 0.4676,
+        "median_top2": 0.4676,
+        "rankmean_top2": 0.467,
+        "mean_top3": 0.4427,
+        "median_top3": 0.451,
+        "rankmean_top3": 0.4493,
+        "mean_top5": 0.4671,
+        "median_top5": 0.4576,
+        "rankmean_top5": 0.4727,
+        "mean_top10": 0.462,
+        "median_top10": 0.47,
+        "rankmean_top10": 0.4746,
+        "mean_top20": 0.462,
+        "median_top20": 0.47,
+        "rankmean_top20": 0.4746,
+        "weighted_cv_all": 0.4619,
+        "weighted_cv_top5": 0.4674,
+        "borda_all": 0.4746,
+        "mean_all": 0.462,
+        "rf_baseline": 0.4729,
+        "reglog_baseline": 0.2741,
+        "lantai_mayoritas": 0.08
+      },
+      "oracle": {
+        "best_single_uji": 0.4643,
+        "indeks_best_single": 0,
+        "best_mean_top2_uji": 0.4776,
+        "best_mean_top3_uji": 0.4785,
+        "best_mean_top5_uji": 0.4791,
+        "greedy_uji": 0.4794,
+        "greedy_uji_anggota": [
+          0,
+          4,
+          3,
+          1
+        ]
+      },
+      "kandidat_teratas": [
+        {
+          "model": "GBM_1_AutoML_8_20261106_234650",
+          "aucpr_cv": 0.0732
+        },
+        {
+          "model": "GBM_3_AutoML_8_20261106_234650",
+          "aucpr_cv": 0.0721
+        },
+        {
+          "model": "XGBoost_1_AutoML_8_20261106_234650",
+          "aucpr_cv": 0.0716
+        },
+        {
+          "model": "GBM_2_AutoML_8_20261106_234650",
+          "aucpr_cv": 0.0716
+        },
+        {
+          "model": "XGBoost_2_AutoML_8_20261106_234650",
+          "aucpr_cv": 0.0715
+        }
+      ]
+    },
+    "F-9_A": {
+      "n_kandidat": 12,
+      "n_uji": 343,
+      "n_positif": 16,
+      "adil": {
+        "leader_cv": 0.0809,
+        "mean_top2": 0.0794,
+        "median_top2": 0.0794,
+        "rankmean_top2": 0.0791,
+        "mean_top3": 0.0797,
+        "median_top3": 0.0812,
+        "rankmean_top3": 0.0794,
+        "mean_top5": 0.0796,
+        "median_top5": 0.0814,
+        "rankmean_top5": 0.0797,
+        "mean_top10": 0.0771,
+        "median_top10": 0.0814,
+        "rankmean_top10": 0.0795,
+        "mean_top20": 0.0766,
+        "median_top20": 0.0808,
+        "rankmean_top20": 0.0794,
+        "weighted_cv_all": 0.0767,
+        "weighted_cv_top5": 0.0796,
+        "borda_all": 0.0794,
+        "mean_all": 0.0766,
+        "rf_baseline": 0.0785,
+        "reglog_baseline": 0.0624,
+        "lantai_mayoritas": 0.0466
+      },
+      "oracle": {
+        "best_single_uji": 0.0824,
+        "indeks_best_single": 3,
+        "best_mean_top2_uji": 0.0817,
+        "best_mean_top3_uji": 0.082,
+        "best_mean_top5_uji": 0.0802,
+        "best_mean_top10_uji": 0.077,
+        "greedy_uji": 0.0824,
+        "greedy_uji_anggota": [
+          3
+        ]
+      },
+      "kandidat_teratas": [
+        {
+          "model": "GBM_5_AutoML_10_20261107_104108",
+          "aucpr_cv": 0.1046
+        },
+        {
+          "model": "GBM_3_AutoML_10_20261107_104108",
+          "aucpr_cv": 0.1034
+        },
+        {
+          "model": "GBM_1_AutoML_10_20261107_104108",
+          "aucpr_cv": 0.1023
+        },
+        {
+          "model": "GBM_2_AutoML_10_20261107_104108",
+          "aucpr_cv": 0.1019
+        },
+        {
+          "model": "GBM_4_AutoML_10_20261107_104108",
+          "aucpr_cv": 0.1002
+        }
+      ]
+    }
+  },
+  "catatan": {
+    "adil": "pemilihan dan bobot hanya dari AUCPR CV internal AutoML",
+    "oracle": "pemilihan memakai AUPRC sumur uji, hanya batas atas, tidak boleh diklaim"
+  },
+  "rerata_adil": {
+    "borda_all": 0.1454,
+    "lantai_mayoritas": 0.0579,
+    "leader_cv": 0.1325,
+    "mean_all": 0.147,
+    "mean_top10": 0.1472,
+    "mean_top2": 0.1401,
+    "mean_top20": 0.147,
+    "mean_top3": 0.1421,
+    "mean_top5": 0.1472,
+    "median_top10": 0.1524,
+    "median_top2": 0.1401,
+    "median_top20": 0.1525,
+    "median_top3": 0.1427,
+    "median_top5": 0.1441,
+    "rankmean_top10": 0.1457,
+    "rankmean_top2": 0.1387,
+    "rankmean_top20": 0.1454,
+    "rankmean_top3": 0.1396,
+    "rankmean_top5": 0.1519,
+    "reglog_baseline": 0.1061,
+    "rf_baseline": 0.1392,
+    "weighted_cv_all": 0.1469,
+    "weighted_cv_top5": 0.1472
+  },
+  "rerata_oracle": {
+    "best_mean_top10_uji": 0.1018,
+    "best_mean_top2_uji": 0.1625,
+    "best_mean_top3_uji": 0.1621,
+    "best_mean_top5_uji": 0.1609,
+    "best_single_uji": 0.1605,
+    "greedy_uji": 0.1681
+  }
+}

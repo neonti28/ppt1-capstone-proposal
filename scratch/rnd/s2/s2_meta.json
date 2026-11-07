@@ -1,0 +1,38 @@
+{
+ "mulai": "2026-10-28 06:08:15",
+ "kanal": [
+  "TQA",
+  "SPPA",
+  "TFLO",
+  "RPM",
+  "SWOB",
+  "HKLD",
+  "ROP",
+  "BPOS",
+  "spm",
+  "depth",
+  "dbtm"
+ ],
+ "thr_grid": [
+  1.5,
+  2.0,
+  2.5,
+  3.0
+ ],
+ "budget_grid": [
+  12,
+  24,
+  48,
+  96,
+  192
+ ],
+ "min_pos_uji": 30,
+ "seed_utama": 42,
+ "seed_uji": 13,
+ "alpha_budget": 0.004166666666666667,
+ "far_maks": 6.0,
+ "versi_harness": "/mnt/d/Capstone 1(v2)/code/rnd_hybrid_harness.py",
+ "panggil_harness_sinyal": 277,
+ "durasi_detik": 152.2,
+ "selesai": "2026-10-28 06:10:47"
+}

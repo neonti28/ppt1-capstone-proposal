@@ -293,7 +293,7 @@ Empat BoK didalami, bukan sepuluh. Alasannya: BoK 14 dan BoK 3 wajib muncul kare
 **Keputusan yang diambil melalui BoK ini.**
 
 - Batas sistem: data rig Volve dan data bengkel alat masuk ke dalam batas. Aktuasi, yaitu menutup blowout preventer atau mengubah beban bit secara otomatis, berada di luar batas, karena PPT I merancang sistem informasi keputusan dan bukan sistem kendali proses.
-- Fungsi: tujuh engine, sebelas klaim, dua puluh tujuh head, dengan hubungan 7 bagian dari 11 bagian dari 27, sehingga penjumlahan ketiganya dinyatakan salah kategori.
+- Fungsi: tujuh detektor, sebelas klaim, dua puluh tujuh head, dengan hubungan 7 bagian dari 11 bagian dari 27, sehingga penjumlahan ketiganya dinyatakan salah kategori.
 - Integrasi: dua puluh tujuh head dipetakan ke empat lapisan keputusan L0 lima, L1 sebelas, L2 sembilan, L3 dua, dengan penanda wajib review manusia pada tiga belas head.
 
 **Standar dan metrik acuan.**
@@ -306,7 +306,7 @@ Empat BoK didalami, bukan sepuluh. Alasannya: BoK 14 dan BoK 3 wajib muncul kare
 
 | Keterangan | Nilai | Jejak |
 |---|---|---|
-| Tiga angka pengikat alat | 7 engine, 11 klaim, 27 head | `docs/ML_PROJECT_PROPOSAL_TECHNICAL_DESIGN.md:57` |
+| Tiga angka pengikat alat | 7 mode, 11 klaim, 27 head | `docs/ML_PROJECT_PROPOSAL_TECHNICAL_DESIGN.md:57` |
 | Lapisan keputusan L0 sampai L3 | 5 / 11 / 9 / 2 sama dengan 27 | `docs/ML_PROJECT_PROPOSAL_TECHNICAL_DESIGN.md:3142` |
 | Head dengan review manusia wajib | 13 dari 27 | `scratch/v9_i1/v9_i1_RESULTS.json kunci engines, dalam daftar heads, kunci human_review_required` |
 | Head yang berstatus belum layak pakai | 2 dari 27 | `scratch/v9_i1/v9_i1_RESULTS.json kunci engines, nilai tier BELUM LAYAK PAKAI` |
@@ -584,7 +584,7 @@ Format yang dipakai adalah kalimat peran, kebutuhan, dan manfaat, lalu dilengkap
 | Kriteria penerimaan | Ambang | Jejak | Status |
 |---|---|---|---|
 | Setiap head membawa tier, batas pemakaian, dan lencana false alarm. | 27 dari 27 head terisi ketiga kunci tersebut | `scratch/v9_i1/v9_i1_RESULTS.json kunci engines, dalam daftar heads, kunci tier, batas_pemakaian, badge_far` | lulus |
-| Head yang belum layak pakai tidak dipakai di tingkat mana pun. | 2 head berstatus belum layak pakai dinyatakan terbuka | `scratch/v9_i1/v9_i1_RESULTS.json, nilai tier BELUM LAYAK PAKAI pada engine hyd dan bit_wear` | lulus |
+| Head yang belum layak pakai tidak dipakai di tingkat mana pun. | 2 head berstatus belum layak pakai dinyatakan terbuka | `scratch/v9_i1/v9_i1_RESULTS.json, nilai tier BELUM LAYAK PAKAI pada mode hyd dan bit_wear` | lulus |
 | Setiap angka pada laporan manajemen menunjuk berkas dan baris atau kunci JSON. | nol angka tanpa jejak pada pemeriksa | `scratch/ppt1/check_bab3_2.py; docs/PPT1_LEDGER_ANGKA.md` | lulus pada dokumen ini, diperiksa skrip |
 
 #### 3.3.3.5 U5 Insinyur data dan kinerja
@@ -601,7 +601,7 @@ Format yang dipakai adalah kalimat peran, kebutuhan, dan manfaat, lalu dilengkap
 
 | Kriteria penerimaan | Ambang | Jejak | Status |
 |---|---|---|---|
-| Registry dapat dihitung ulang dari skrip yang tersimpan. | code/v9_i1_pipeline.py tersedia dan head terhitung 27 dari 7 engine | `code/v9_i1_pipeline.py; docs/ML_PROJECT_PROPOSAL_TECHNICAL_DESIGN.md:57` | sebagian, karena skrip tersedia dan jumlah head terverifikasi dari JSON, tetapi eksekusi ulang belum dijalankan pada kartu ini |
+| Registry dapat dihitung ulang dari skrip yang tersimpan. | code/v9_i1_pipeline.py tersedia dan head terhitung 27 dari 7 mode | `code/v9_i1_pipeline.py; docs/ML_PROJECT_PROPOSAL_TECHNICAL_DESIGN.md:57` | sebagian, karena skrip tersedia dan jumlah head terverifikasi dari JSON, tetapi eksekusi ulang belum dijalankan pada kartu ini |
 | Setiap lapisan keputusan dapat ditelusuri ke head asalnya. | jumlah head pada empat lapisan sama dengan 27 | `scratch/v9_i1/v9_i1_RESULTS.json kunci decision_layer, lapisan L0 sampai L3` | lulus |
 | Perubahan definisi label tercatat sebagai versi, bukan sebagai penimpaan. | satu varian onset dikunci dan varian lain dicatat | `docs/V4_MAINTENANCE_ML_OPTIONS.md:145` | terbuka, karena audit label belum dijalankan |
 
@@ -688,7 +688,7 @@ Larangan yang perlu dipegang subbab 3.4: jangan memakai skala 1 sampai 5 untuk k
 | Prevalensi unit stand | 10 sampai 40 persen, berstatus asumsi | `docs/V7_R1_SOLUTIONS.md:111` |
 | Ambang kelayakan pemantauan | FAR maksimal 6 per 24 jam | `docs/V8_R1_ABC_SPEC.md:240` |
 | Keluaran screening shk | FAR 18 sampai 63 per 24 jam, presisi 0,00 sampai 0,12 | `docs/V8_E_shk_CAPABILITY.md:106` |
-| Tiga angka pengikat | 7 engine, 11 klaim, 27 head | `docs/ML_PROJECT_PROPOSAL_TECHNICAL_DESIGN.md:57` |
+| Tiga angka pengikat | 7 mode, 11 klaim, 27 head | `docs/ML_PROJECT_PROPOSAL_TECHNICAL_DESIGN.md:57` |
 | Lapisan keputusan | 5 / 11 / 9 / 2 sama dengan 27 | `docs/ML_PROJECT_PROPOSAL_TECHNICAL_DESIGN.md:3142` |
 | Sumber data | Volve terbuka dan empat set data eksternal | `docs/ML_PROJECT_PROPOSAL_TECHNICAL_DESIGN.md:12` |
 | Batas muktamad cakupan | satu lapangan, bengkel berbeda dari rig, hyd proksi | `docs/ML_PROJECT_PROPOSAL_TECHNICAL_DESIGN.md:327` |

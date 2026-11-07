@@ -1,0 +1,89 @@
+=== A. jendela ketat-lalu & eligibility (klaim k2 §1.2/§2.1) ===
+  code/v9_d1_02_rig_windows.py:6: - FITUR = bin [t0-10, t0)  (masa lalu; 11 kanal x mean/std/slope/last/frac = 55)
+  code/v9_d1_02_rig_windows.py:9: - feat_valid >=5/10 bin drilling + >=60 baris drilling
+  code/v9_d1_02_rig_windows.py:12: - feat_ts_max  = menit terakhir yang BENAR-BENAR berkontribusi ke fitur (t0 - k_min)
+  code/v9_d1_02_rig_windows.py:13: (strict < t0; bila tak ada bin fitur = NaN)
+  code/v9_d1_02_rig_windows.py:14: - lab_ts       = menit mulai jendela label (= t0) untuk label status
+  code/v9_d1_02_rig_windows.py:31: W = 10
+  code/v9_d1_02_rig_windows.py:55: """Salinan logika v6_e1_20_windows.build + stempel leak (feat_ts_max)."""
+  code/v9_d1_02_rig_windows.py:114: drill_bins = np.zeros(len(Ac))
+  code/v9_d1_02_rig_windows.py:115: drill_rows = np.zeros(len(Ac))
+  code/v9_d1_02_rig_windows.py:125: drill_bins += (rd > 0).astype(np.float64)
+  code/v9_d1_02_rig_windows.py:126: drill_rows += rd
+  code/v9_d1_02_rig_windows.py:154: F["feat_drill_bins"] = drill_bins
+  code/v9_d1_02_rig_windows.py:155: F["feat_drill_rows"] = drill_rows
+  code/v9_d1_02_rig_windows.py:171: F["feat_valid"] = (drill_bins >= MIN_DRILL_BINS) & (drill_rows >= MIN_DRILL_ROWS)
+  code/v9_d1_02_rig_windows.py:174: F["feat_ts_max"] = np.where(np.isfinite(min_k_present), Ac - min_k_present, np.nan)
+  code/v9_d1_02_rig_windows.py:175: F["lab_ts"] = F.index.to_numpy(dtype=float)   # jendela label status mulai di t0
+  code/v9_d1_02_rig_windows.py:202: leak_bad = int((F["feat_ts_max"] >= F["lab_ts"]).sum())
+  code/v9_d1_02_rig_windows.py:206: "feat_valid": int(F["feat_valid"].sum()),
+  code/v9_d1_02_rig_windows.py:211: v = F[f"valid_{name}"].astype(bool) & F["feat_valid"]
+  code/v9_d1_02_rig_windows.py:217: log(f"== {well}: bins={len(b)} cand={len(F)} feat_valid={summary[well]['feat_valid']} "
+  code/v9_d1_03_rig_datasets.py:6: Semua memakai fitur jendela [t0-10, t0) dari v9_d1_02 (kolom V6-identik).
+  code/v9_d1_03_rig_datasets.py:9: Kolom meta anti-bocor: well, ts_bin, feat_ts_max, lab_ts, lab_kind.
+  code/v9_d1_03_rig_datasets.py:10: Eligibility: feat_valid & valid_<kelas> (baris tak layak TIDAK diekspor; jumlahnya
+  code/v9_d1_03_rig_datasets.py:27: W = 10
+  code/v9_d1_03_rig_datasets.py:36: META_W = ["ts_bin", "feat_ts_max", "lab_ts", "lab_kind"]   # kolom di master windows
+  code/v9_d1_03_rig_datasets.py:113: m = f["feat_valid"].astype(bool) & f[f"valid_{cls}"].astype(bool)
+  code/v9_d1_03_rig_datasets.py:118: m = f["feat_valid"].astype(bool) & f["valid_hyd"].astype(bool)
+  code/v9_d1_04_stuck_k2.py:8: - onset = edge 0->1 (NaN dilewati / strict=False)
+  code/v9_d1_04_stuck_k2.py:14: KETAT-LALU [t0-10, t0) — bukan rolling t-9..t ala V8 — agar stempel anti-bocor
+  code/v9_d1_04_stuck_k2.py:15: (feat_ts_max < lab_ts) berlaku utk baris negatif (lab_ts=t0) maupun positif (t_e).
+  code/v9_d1_04_stuck_k2.py:72: def features_strict_past(g, chan_cols, seg, store):
+  code/v9_d1_04_stuck_k2.py:73: """Fitur [t0-10, t0) per menit, segment-aware; HANYA baris `store` disimpan.
+  code/v9_d1_04_stuck_k2.py:205: F = features_strict_past(g, chan_cols, seg, mask)
+  code/v9_d1_04_stuck_k2.py:210: feat_ts_max_all = (last_present.astype("int64") // 10**9 // 60).astype(np.float64)
+  code/v9_d1_04_stuck_k2.py:211: feat_ts_max_all = feat_ts_max_all.where(last_present.notna(), np.nan)
+  code/v9_d1_04_stuck_k2.py:214: lab_ts_all = pd.Series((g.index.astype("int64") // 10**9 // 60).astype(np.float64),
+  code/v9_d1_04_stuck_k2.py:217: lab_ts_out = lab_ts_all.copy()
+  code/v9_d1_04_stuck_k2.py:221: (lab_ts_all >= minute - H) & (lab_ts_all < minute))
+  code/v9_d1_04_stuck_k2.py:222: lab_ts_out[sel] = float(minute)
+  code/v9_d1_04_stuck_k2.py:230: # membuat ts_bin/lab_ts kosong di file merged (checker anti-bocor vakuum).
+  code/v9_d1_04_stuck_k2.py:232: lab_ts_all[mask].to_numpy().astype(np.int64))
+  code/v9_d1_04_stuck_k2.py:233: sub.insert(2, "feat_ts_max", feat_ts_max_all.to_numpy()[mask])
+  code/v9_d1_04_stuck_k2.py:234: sub.insert(3, "lab_ts", lab_ts_out[mask].to_numpy())
+  code/v9_d1_04_stuck_k2.py:245: "onsets_strict": len(on_s),
+  code/v9_d1_04_stuck_k2.py:256: f"inb={wq['inblock_rows']} onsets ffill/strict={len(on_f)}/{len(on_s)} "
+  code/v9_d1_04_stuck_k2.py:282: "recipe": "V8 extract_folds2 label + S1 strict-past features (55)",
+
+=== B. run-length label positif stuck_k2 (klaim k2: median run 10 menit) ===
+n run positif = 148 | median = 10.0 | mean = 13.34 | distribusi: {10: 100, 13: 5, 11: 5, 15: 5, 16: 4, 20: 4, 12: 4, 22: 3, 14: 2, 18: 2, 21: 2, 19: 2}
+  F-10: n_run=67 median=10
+  F-14: n_run=28 median=10.0
+  F-9: n_run=16 median=10.5
+  F-9_A: n_run=37 median=10
+
+=== C. output v9_d1_04 (invarian onsets per well; klaim F-9=55) ===
+  file: _stuck_k2_F-14_run.log
+  file: lowo_stuck_k1.json
+    {"engine": "stuck_k1", "n_rows": 5555, "wells": ["F-14", "F-9_A"], "n_folds": 2, "folds": [{"test_well": "F-14", "train_wells": ["F-9_A"]}, {"test_well": "F-9_A", "train_wells": ["F-14"]}]}
+  file: lowo_stuck_k2.json
+    {"engine": "stuck_k2", "n_rows": 118567, "wells": ["F-10", "F-14", "F-9", "F-9_A"], "n_folds": 4, "folds": [{"test_well": "F-10", "train_wells": ["F-14", "F-9", "F-9_A"]}, {"test_well": "F-14", "train_wells": ["F-10", "F-9", "F-9_A"]}, {"test_well": "F-9", "train_wells": ["F-10", "F-14", "F-9_A"]}, {"test_well": "F-9_A", "train_wells": ["F-10", "F-14", "F-9"]}]}
+  file: v9_d1_04_qc.json
+    {"seed": 42, "H_min": 10, "gap_seg_min": 30, "recipe": "V8 extract_folds2 label + S1 strict-past features (55)", "reference_onsets_v8": {"F-9_A": 72, "F-14": 61, "F-10": 93}, "wells": {"F-9": {"stuck_nonnull_raw": 5728, "stuck_valcounts_raw": {"0.0": 5347, "1.0": 381}, "grid_minutes": 4113479, "ops_rows": 25349, "inblock_rows": 9163, "onsets_ffill": 55, "onsets_strict": 61, "onsets_scorable": 55, "onset_skipped": {"no_prior_windows": 0, "all_horizon_inblock_or_gap": 0}, "eligible_rows": 16184, "positives": 311, "v8_onsets_match": null}, "F-9_A": {"stuck_nonnull_raw": 45712, "stuck_valcounts_raw": {"0.0": 23122, "3.0": 19056, "1.0": 3171, "2.0": 363}, "grid_minutes": 3280052, "ops_rows": 4331, "inblock_rows": 13725, "onsets_ffill": 72, "onsets_strict": 72, "onsets_scorable": 72, "onset_skipped": {"no_prior_windows": 0, "all_horizon_inblock_or_gap": 0}, "eligible_rows": 2242, "positives": 
+  file: v9_d1_04_run_log.txt
+  file: v9_d1_04_stuck_k2_driver.log
+  file: v9_d1_04b_f14_chunk.log
+  kandidat sumber onsets: v9_d1_04_qc.json
+         "onsets_ffill": 55,
+         "onsets_scorable": 55,
+
+=== D. mtime (jejak regenerate dataset stuck_k2) ===
+  2026-10-12 09:37:23   21804228  scratch/v9_d1/datasets/stuck_k2.csv.gz
+  2026-10-12 10:03:32      41081  scratch/v9_e_ml/v9_e_ML_stuck_k2_RESULTS.json
+  2026-10-12 10:03:32       1800  scratch/v9_e_ml/v9_e_ML_stuck_k2_RUN_LOG.txt
+  2026-10-12 08:46:23       1322  scratch/v9_d1/v9_d1_05_leak_lowo.json
+  2026-10-12 10:23:03      38169  docs/V9_E_ML_ENGINE.md
+  2026-10-15 06:14:36.327576     249874  docs/ML_PROJECT_PROPOSAL_TECHNICAL_DESIGN.md
+  2026-10-15 02:19:53.125252      24285  docs/ML_PROJECT_PROPOSAL_TECHNICAL_DESIGN.v3_arsip.md
+  2026-10-14 18:12:41.335690      16508  code/v9_e_ML_01_train.py
+  2026-10-14 18:12:39.893385      13933  code/v9_d1_04_stuck_k2.py
+
+=== E. nama 7 engine / 27 head di protokol V11 (primer kosakata) ===
+
+=== F. md=ipynb tingkat BAB ML (potong bab per kandidat) ===
+  K2 bab4 md chars=31493 ipynb chars=31517
+  baris md bab4 hilang persis di ipynb: 0/371
+  K1 §8-13 md chars=7470
+  baris K1 §8-13 hilang di ipynb: 0/70
+  ipynb K1 memuat '## 8. Data'? True | '## 13. Metrik Evaluasi'? True

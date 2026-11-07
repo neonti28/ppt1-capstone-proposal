@@ -1,0 +1,57 @@
+{
+  "t_lead_s_semua_run": {
+    "T01/R01": 34,
+    "T01/R02": 34,
+    "T02/R01": 21,
+    "T02/R02": 36,
+    "T03/R01": 26,
+    "T03/R02": 39,
+    "T04/R01": 29,
+    "T04/R02": 27
+  },
+  "t_lead_s_R02": {
+    "T01/R02": 34,
+    "T02/R02": 36,
+    "T03/R02": 39,
+    "T04/R02": 27
+  },
+  "stat_semua_run": {
+    "n": 8,
+    "min": 21,
+    "max": 39,
+    "median": 31.5,
+    "rasio_maks_min": 1.8571
+  },
+  "stat_R02": {
+    "n": 4,
+    "min": 27,
+    "max": 39,
+    "median": 35.0,
+    "rasio_maks_min": 1.4444
+  },
+  "TLead_to_end_R02_s": {
+    "values": [
+      34,
+      36,
+      39,
+      27
+    ],
+    "median": 35.0,
+    "min": 27,
+    "anchor": "alat TUMPUL di akhir R02 (deskripsi Mendeley)"
+  },
+  "klaim_EVAL_C": "TLead 20-36 dtk (med 24,5; rasio 1,8x) — docs/V9_EVAL_C_LAYERC.md §2.7",
+  "cross_family_spread_s": {
+    "median": 16.5,
+    "range": [
+      8,
+      40
+    ]
+  },
+  "cek_median_24_5": {
+    "median_semua": 31.5,
+    "median_R02": 35.0,
+    "median_TLead_to_end": 35.0,
+    "cocok_24_5": false
+  }
+}

@@ -1,7 +1,7 @@
 # BAB II PENGOLAHAN DATA & ANALISIS
 
 Seluruh isi bab ini bertumpu pada data publik Equinor Volve (884 interupsi terkurasi,
-10 wellbore, telemetri WITSML 118 kanal) dan pada hasil riset engine yang sudah
+10 wellbore, telemetri WITSML 118 kanal) dan pada hasil riset detektor yang sudah
 dihasilkan tim. Tiap tool memakai satu sub-bab, sesuai format Buku Pedoman §3.2.
 
 **Basis hitung yang dipakai seluruh bab:** 884 baris label; 496 di antaranya
@@ -83,7 +83,7 @@ flowchart TD
 flowchart TD
   S1[Kanal sensor<br/>WITSML 118 kanal] --> S2[Penyimpanan &<br/>parse data]
   S2 --> S3[DDR / catatan aktivitas<br/>23.447 baris, 39.398 jam]
-  S3 --> S4[Dashboard engine<br/>7 engine / 27 head]
+  S3 --> S4[Dashboard pemantauan<br/>7 mode / 27 head]
   S4 --> S5[Drilling engineer<br/>di kantor]
   S4 --> S6[Supervisor rig<br/>shift]
   S5 --> S7[Keputusan: lanjut,<br/>kurangi parameter, atau trip]
@@ -170,17 +170,17 @@ akar huruf risiko, dengan definisi eksplisit di bawah ini supaya skor bisa diaud
 | Nilai | Definisi |
 |---|---|
 | 1-3 | terdeteksi otomatis oleh indikator yang sudah ada, termasuk hilangnya data sendiri |
-| 4-6 | terdeteksi oleh head engine, tetapi masih di taraf peringatan berpengawas |
-| 7-8 | hanya terdeteksi setelah gejala muncul, engine belum layak |
+| 4-6 | terdeteksi oleh head detektor, tetapi masih di taraf peringatan berpengawas |
+| 7-8 | hanya terdeteksi setelah gejala muncul, detektor belum layak |
 | 9-10 | tidak terdeteksi sampai dampaknya terjadi |
 
 ### 2.4.2 Tabel FMECA
 
 | No | Mode kegagalan | Efek | S | Laju/1.000 jam | O | D | RPN | Dasar S, O, D |
 |---|---|---|---|---|---|---|---|---|
-| 1 | Gagalan peralatan permukaan rig | NPT langsung, tanpa progres, biaya rig tetap jalan | 8 | 178,22 | 10 | 4 | **320** | O dari 216 kejadian; D diturunkan dari ketersediaan indikator rig, bukan engine |
+| 1 | Gagalan peralatan permukaan rig | NPT langsung, tanpa progres, biaya rig tetap jalan | 8 | 178,22 | 10 | 4 | **320** | O dari 216 kejadian; D diturunkan dari ketersediaan indikator rig, bukan detektor |
 | 2 | Kegagalan fluida sumur (kick/loss) | risiko well control, HSE, kerusakan formasi | 10 | 20,63 | 7 | 7 | **490** | O dari 25 kejadian; D tinggi karena head hyd K-ii berstatus belum tersedia |
-| 3 | Stuck pipe / fishing | kehilangan BHA, biaya fishing, NPT panjang | 10 | 31,35 | 8 | 5 | **400** | O dari 38 kejadian; D dari engine stuck yang sudah diuji tapi tier peringatan |
+| 3 | Stuck pipe / fishing | kehilangan BHA, biaya fishing, NPT panjang | 10 | 31,35 | 8 | 5 | **400** | O dari 38 kejadian; D dari mode stuck yang sudah diuji tapi tier peringatan |
 | 4 | Kegagalan BHA / peralatan downhole | kerusakan alat mahal, operasi berhenti | 9 | 9,90 | 6 | 7 | **378** | O dari 12 kejadian; hanya 50 dari 884 kejadian berlabel `bha_relevant=yes` |
 | 5 | Kegagalan telemetri / kehilangan data | kehilangan visibilitas, keputusan tanpa bukti | 7 | — | 6 | 3 | **126** | O dari porsi jendela tanpa data (contoh head vib 356 dari 1.989 jendela); D rendah karena kehilangan data justru paling mudah terlihat |
 | 6 | Intervensi wireline / completion di luar rencana | penundaan, biaya intervensi | 6 | 17,33 | 7 | 5 | **210** | O dari 21 kejadian |
@@ -195,12 +195,12 @@ sehingga pembaca bisa menghitung ulang dengan skala lain.
 ### 2.4.3 Pembacaan hasil
 
 Mode 2 (fluida sumur) memperoleh RPN tertinggi karena Severity maksimum dipadukan
-dengan Detectability buruk: engine yang seharusnya menangkapnya, `hyd K-ii`, masih
+dengan Detectability buruk: detektor yang seharusnya menangkapnya, `hyd K-ii`, masih
 berstatus belum tersedia di prototipe. Ini adalah argumen inti kenapa solusi harus
 menutup keterbatasan deteksi, bukan sekadar menampilkan grafik.
 
 Mode 3 (stuck pipe) dan 4 (BHA) berada di peringkat berikutnya. Keduanya justru punya
-engine yang sudah diuji (`stuck`, `bit_wear`), sehingga celahnya ada pada keandalan
+detektor yang sudah diuji (`stuck`, `bit_wear`), sehingga celahnya ada pada keandalan
 deteksi, bukan pada ketiadaan data.
 
 Mode 1 punya frekuensi tertinggi tetapi Severity lebih rendah dan deteksi relatif
@@ -236,7 +236,7 @@ flowchart TD
 
   A1 --> OR2{"OR"}
   OR2 --> B1["Gangguan fluida sumur<br/>25 kejadian"]
-  OR2 --> B2["Getaran / stick-slip di luar ambang<br/>engine vib & ssi"]
+  OR2 --> B2["Getaran / stick-slip di luar ambang<br/>mode vib & ssi"]
   OR2 --> B3["Kanali parsial, telemetri hilang<br/>356/1989 jendela tanpa data"]
 
   A2 --> OR3{"OR"}
@@ -246,7 +246,7 @@ flowchart TD
 
   A3 --> OR4{"OR"}
   OR4 --> D1["Tidak ada kanal pengukuran langsung<br/>untuk mode yang diincar"]
-  OR4 --> D2["Engine belum layak<br/>hyd K-ii, bit_wear"]
+  OR4 --> D2["Detektor belum layak<br/>hyd K-ii, bit_wear"]
   OR4 --> D3["Posisi/BHA tidak terpantau<br/>161 bhaRun vs 192 tubular"]
 ```
 

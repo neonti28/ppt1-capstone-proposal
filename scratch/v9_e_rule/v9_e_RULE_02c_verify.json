@@ -1,0 +1,51 @@
+{
+ "stuck_k2_repair": {
+  "rows": 118567,
+  "y_identical": true,
+  "leak_violations": 0,
+  "both_nonnull": 118567
+ },
+ "other_datasets": {
+  "vib": {
+   "n": 23922,
+   "nan_ts_bin": 0,
+   "nan_lab_ts": 0,
+   "both_nonnull": 23922,
+   "leak_violations": 0
+  },
+  "ssi": {
+   "n": 35906,
+   "nan_ts_bin": 0,
+   "nan_lab_ts": 0,
+   "both_nonnull": 35906,
+   "leak_violations": 0
+  },
+  "shk": {
+   "n": 56495,
+   "nan_ts_bin": 0,
+   "nan_lab_ts": 0,
+   "both_nonnull": 56495,
+   "leak_violations": 0
+  },
+  "stuck_k1": {
+   "n": 5555,
+   "nan_ts_bin": 0,
+   "nan_lab_ts": 0,
+   "both_nonnull": 5555,
+   "leak_violations": 0
+  },
+  "hyd_ki": {
+   "n": 52509,
+   "nan_ts_bin": 0,
+   "nan_lab_ts": 0,
+   "both_nonnull": 52509,
+   "leak_violations": 0
+  },
+  "stuck_k2_repair": {
+   "n": 118567,
+   "nan_ts_bin": 0,
+   "nan_lab_ts": 0,
+   "leak_violations": 0
+  }
+ }
+}

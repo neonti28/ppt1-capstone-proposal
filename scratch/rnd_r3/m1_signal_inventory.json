@@ -1,0 +1,881 @@
+{
+  "generated_at": "2026-10-27T04:48:52",
+  "sumber": "data/volve/witsml_parsed/<WELL>.csv",
+  "gap_breaker_sec": 60.0,
+  "window_candidates": [
+    256,
+    512,
+    1024
+  ],
+  "channels": [
+    {
+      "well": "F-10",
+      "channel": "SHKRSK_RT",
+      "status": "ADA",
+      "n_baris_mentah": 69192,
+      "n_sampel": 903,
+      "dt_median_s": 1.0,
+      "laju_hz": 1.0,
+      "nyquist_hz": 0.5,
+      "n_segmen_kontinu": 4,
+      "segmen_terpanjang_sampel": 471,
+      "segmen_terpanjang_jam": 0.13083333333333333,
+      "gap_gt_60s": 3,
+      "jendela": {
+        "256": {
+          "total": 2,
+          "di_segmen_terpanjang": 1
+        },
+        "512": {
+          "total": 0,
+          "di_segmen_terpanjang": 0
+        },
+        "1024": {
+          "total": 0,
+          "di_segmen_terpanjang": 0
+        }
+      },
+      "spektral": {
+        "n_fft": 471,
+        "fs_hz": 1.0,
+        "nyquist_hz": 0.5,
+        "freq_resolution_hz": 0.0021231422505307855,
+        "dominant_freq_hz": 0.03397027600849257,
+        "dominant_period_s": 29.4375,
+        "frac_power_below_half_nyquist": 0.5764380066313426,
+        "frac_power_below_0p01hz": 0.008217878294912632,
+        "n_bins_0_to_1hz": 235,
+        "peak_spectral_share": 0.017804332925111136
+      }
+    },
+    {
+      "well": "F-10",
+      "channel": "CRPM_RT",
+      "status": "ADA",
+      "n_baris_mentah": 64295,
+      "n_sampel": 750,
+      "dt_median_s": 1.0,
+      "laju_hz": 1.0,
+      "nyquist_hz": 0.5,
+      "n_segmen_kontinu": 4,
+      "segmen_terpanjang_sampel": 435,
+      "segmen_terpanjang_jam": 0.12083333333333333,
+      "gap_gt_60s": 3,
+      "jendela": {
+        "256": {
+          "total": 1,
+          "di_segmen_terpanjang": 1
+        },
+        "512": {
+          "total": 0,
+          "di_segmen_terpanjang": 0
+        },
+        "1024": {
+          "total": 0,
+          "di_segmen_terpanjang": 0
+        }
+      },
+      "spektral": {
+        "n_fft": 435,
+        "fs_hz": 1.0,
+        "nyquist_hz": 0.5,
+        "freq_resolution_hz": 0.0022988505747126436,
+        "dominant_freq_hz": 0.004597701149425287,
+        "dominant_period_s": 217.5,
+        "frac_power_below_half_nyquist": 0.8042918433241875,
+        "frac_power_below_0p01hz": 0.22363299895739186,
+        "n_bins_0_to_1hz": 217,
+        "peak_spectral_share": 0.08187123349347132
+      }
+    },
+    {
+      "well": "F-10",
+      "channel": "TQA",
+      "status": "ADA",
+      "n_baris_mentah": 258441,
+      "n_sampel": 1250,
+      "dt_median_s": 1.0,
+      "laju_hz": 1.0,
+      "nyquist_hz": 0.5,
+      "n_segmen_kontinu": 4,
+      "segmen_terpanjang_sampel": 709,
+      "segmen_terpanjang_jam": 0.19694444444444445,
+      "gap_gt_60s": 3,
+      "jendela": {
+        "256": {
+          "total": 3,
+          "di_segmen_terpanjang": 2
+        },
+        "512": {
+          "total": 1,
+          "di_segmen_terpanjang": 1
+        },
+        "1024": {
+          "total": 0,
+          "di_segmen_terpanjang": 0
+        }
+      },
+      "spektral": {
+        "n_fft": 709,
+        "fs_hz": 1.0,
+        "nyquist_hz": 0.5,
+        "freq_resolution_hz": 0.0014104372355430183,
+        "dominant_freq_hz": 0.0014104372355430183,
+        "dominant_period_s": 709.0,
+        "frac_power_below_half_nyquist": 0.8236142470201799,
+        "frac_power_below_0p01hz": 0.45983919980025084,
+        "n_bins_0_to_1hz": 354,
+        "peak_spectral_share": 0.3202736897246329
+      }
+    },
+    {
+      "well": "F-12",
+      "channel": "CRPM_RT",
+      "status": "ADA",
+      "n_baris_mentah": 169185,
+      "n_sampel": 1972,
+      "dt_median_s": 1.0,
+      "laju_hz": 1.0,
+      "nyquist_hz": 0.5,
+      "n_segmen_kontinu": 8,
+      "segmen_terpanjang_sampel": 531,
+      "segmen_terpanjang_jam": 0.1475,
+      "gap_gt_60s": 7,
+      "jendela": {
+        "256": {
+          "total": 4,
+          "di_segmen_terpanjang": 2
+        },
+        "512": {
+          "total": 1,
+          "di_segmen_terpanjang": 1
+        },
+        "1024": {
+          "total": 0,
+          "di_segmen_terpanjang": 0
+        }
+      },
+      "spektral": {
+        "n_fft": 531,
+        "fs_hz": 1.0,
+        "nyquist_hz": 0.5,
+        "freq_resolution_hz": 0.0018832391713747645,
+        "dominant_freq_hz": 0.03389830508474576,
+        "dominant_period_s": 29.5,
+        "frac_power_below_half_nyquist": 0.6027259435483627,
+        "frac_power_below_0p01hz": 0.05936078963944761,
+        "n_bins_0_to_1hz": 265,
+        "peak_spectral_share": 0.0235549751750595
+      }
+    },
+    {
+      "well": "F-12",
+      "channel": "SHKRSK_RT",
+      "status": "ADA",
+      "n_baris_mentah": 25970,
+      "n_sampel": 1778,
+      "dt_median_s": 1.0,
+      "laju_hz": 1.0,
+      "nyquist_hz": 0.5,
+      "n_segmen_kontinu": 9,
+      "segmen_terpanjang_sampel": 445,
+      "segmen_terpanjang_jam": 0.12361111111111112,
+      "gap_gt_60s": 8,
+      "jendela": {
+        "256": {
+          "total": 3,
+          "di_segmen_terpanjang": 1
+        },
+        "512": {
+          "total": 0,
+          "di_segmen_terpanjang": 0
+        },
+        "1024": {
+          "total": 0,
+          "di_segmen_terpanjang": 0
+        }
+      },
+      "spektral": {
+        "n_fft": 445,
+        "fs_hz": 1.0,
+        "nyquist_hz": 0.5,
+        "freq_resolution_hz": 0.0022471910112359553,
+        "dominant_freq_hz": 0.0022471910112359553,
+        "dominant_period_s": 444.99999999999994,
+        "frac_power_below_half_nyquist": 0.5074947239901071,
+        "frac_power_below_0p01hz": 0.044309227964517875,
+        "n_bins_0_to_1hz": 222,
+        "peak_spectral_share": 0.02876731454708419
+      }
+    },
+    {
+      "well": "F-14",
+      "channel": "VIBLAT_RT",
+      "status": "ADA",
+      "n_baris_mentah": 2247,
+      "n_sampel": 180,
+      "dt_median_s": 1.0,
+      "laju_hz": 1.0,
+      "nyquist_hz": 0.5,
+      "n_segmen_kontinu": 1,
+      "segmen_terpanjang_sampel": 180,
+      "segmen_terpanjang_jam": 0.05,
+      "gap_gt_60s": 0,
+      "jendela": {
+        "256": {
+          "total": 0,
+          "di_segmen_terpanjang": 0
+        },
+        "512": {
+          "total": 0,
+          "di_segmen_terpanjang": 0
+        },
+        "1024": {
+          "total": 0,
+          "di_segmen_terpanjang": 0
+        }
+      },
+      "spektral": {
+        "n_fft": 180,
+        "fs_hz": 1.0,
+        "nyquist_hz": 0.5,
+        "freq_resolution_hz": 0.005555555555555556,
+        "dominant_freq_hz": 0.05555555555555556,
+        "dominant_period_s": 18.0,
+        "frac_power_below_half_nyquist": 0.5026461411955387,
+        "frac_power_below_0p01hz": 0.005988674415199075,
+        "n_bins_0_to_1hz": 90,
+        "peak_spectral_share": 0.04435594102011119
+      }
+    },
+    {
+      "well": "F-14",
+      "channel": "SHKRSK_RT",
+      "status": "ADA",
+      "n_baris_mentah": 21643,
+      "n_sampel": 1045,
+      "dt_median_s": 1.0,
+      "laju_hz": 1.0,
+      "nyquist_hz": 0.5,
+      "n_segmen_kontinu": 5,
+      "segmen_terpanjang_sampel": 369,
+      "segmen_terpanjang_jam": 0.1025,
+      "gap_gt_60s": 4,
+      "jendela": {
+        "256": {
+          "total": 2,
+          "di_segmen_terpanjang": 1
+        },
+        "512": {
+          "total": 0,
+          "di_segmen_terpanjang": 0
+        },
+        "1024": {
+          "total": 0,
+          "di_segmen_terpanjang": 0
+        }
+      },
+      "spektral": {
+        "n_fft": 369,
+        "fs_hz": 1.0,
+        "nyquist_hz": 0.5,
+        "freq_resolution_hz": 0.0027100271002710027,
+        "dominant_freq_hz": 0.45257452574525747,
+        "dominant_period_s": 2.2095808383233533,
+        "frac_power_below_half_nyquist": 0.4928495261857709,
+        "frac_power_below_0p01hz": 0.012095003010913208,
+        "n_bins_0_to_1hz": 184,
+        "peak_spectral_share": 0.0107674763999128
+      }
+    },
+    {
+      "well": "F-14",
+      "channel": "CRPM_RT",
+      "status": "ADA",
+      "n_baris_mentah": 23110,
+      "n_sampel": 949,
+      "dt_median_s": 1.0,
+      "laju_hz": 1.0,
+      "nyquist_hz": 0.5,
+      "n_segmen_kontinu": 4,
+      "segmen_terpanjang_sampel": 335,
+      "segmen_terpanjang_jam": 0.09305555555555556,
+      "gap_gt_60s": 3,
+      "jendela": {
+        "256": {
+          "total": 2,
+          "di_segmen_terpanjang": 1
+        },
+        "512": {
+          "total": 0,
+          "di_segmen_terpanjang": 0
+        },
+        "1024": {
+          "total": 0,
+          "di_segmen_terpanjang": 0
+        }
+      },
+      "spektral": {
+        "n_fft": 335,
+        "fs_hz": 1.0,
+        "nyquist_hz": 0.5,
+        "freq_resolution_hz": 0.0029850746268656717,
+        "dominant_freq_hz": 0.005970149253731343,
+        "dominant_period_s": 167.5,
+        "frac_power_below_half_nyquist": 0.878292502103516,
+        "frac_power_below_0p01hz": 0.09031244633036775,
+        "n_bins_0_to_1hz": 167,
+        "peak_spectral_share": 0.05742258115492611
+      }
+    },
+    {
+      "well": "F-15A",
+      "channel": "VIBLAT_RT",
+      "status": "ADA",
+      "n_baris_mentah": 50794,
+      "n_sampel": 991,
+      "dt_median_s": 1.0,
+      "laju_hz": 1.0,
+      "nyquist_hz": 0.5,
+      "n_segmen_kontinu": 5,
+      "segmen_terpanjang_sampel": 486,
+      "segmen_terpanjang_jam": 0.135,
+      "gap_gt_60s": 4,
+      "jendela": {
+        "256": {
+          "total": 1,
+          "di_segmen_terpanjang": 1
+        },
+        "512": {
+          "total": 0,
+          "di_segmen_terpanjang": 0
+        },
+        "1024": {
+          "total": 0,
+          "di_segmen_terpanjang": 0
+        }
+      },
+      "spektral": {
+        "n_fft": 486,
+        "fs_hz": 1.0,
+        "nyquist_hz": 0.5,
+        "freq_resolution_hz": 0.00205761316872428,
+        "dominant_freq_hz": 0.00205761316872428,
+        "dominant_period_s": 485.99999999999994,
+        "frac_power_below_half_nyquist": 0.7442739790990877,
+        "frac_power_below_0p01hz": 0.17014960640115756,
+        "n_bins_0_to_1hz": 243,
+        "peak_spectral_share": 0.1078350692377398
+      }
+    },
+    {
+      "well": "F-15A",
+      "channel": "CRPM_RT",
+      "status": "ADA",
+      "n_baris_mentah": 50413,
+      "n_sampel": 931,
+      "dt_median_s": 1.0,
+      "laju_hz": 1.0,
+      "nyquist_hz": 0.5,
+      "n_segmen_kontinu": 5,
+      "segmen_terpanjang_sampel": 419,
+      "segmen_terpanjang_jam": 0.11638888888888889,
+      "gap_gt_60s": 4,
+      "jendela": {
+        "256": {
+          "total": 2,
+          "di_segmen_terpanjang": 1
+        },
+        "512": {
+          "total": 0,
+          "di_segmen_terpanjang": 0
+        },
+        "1024": {
+          "total": 0,
+          "di_segmen_terpanjang": 0
+        }
+      },
+      "spektral": {
+        "n_fft": 419,
+        "fs_hz": 1.0,
+        "nyquist_hz": 0.5,
+        "freq_resolution_hz": 0.002386634844868735,
+        "dominant_freq_hz": 0.007159904534606206,
+        "dominant_period_s": 139.66666666666666,
+        "frac_power_below_half_nyquist": 0.9366802396685233,
+        "frac_power_below_0p01hz": 0.2771151706110192,
+        "n_bins_0_to_1hz": 209,
+        "peak_spectral_share": 0.10652013988805699
+      }
+    },
+    {
+      "well": "F-15A",
+      "channel": "SHKRSK_RT",
+      "status": "ADA",
+      "n_baris_mentah": 52126,
+      "n_sampel": 1065,
+      "dt_median_s": 1.0,
+      "laju_hz": 1.0,
+      "nyquist_hz": 0.5,
+      "n_segmen_kontinu": 3,
+      "segmen_terpanjang_sampel": 488,
+      "segmen_terpanjang_jam": 0.13555555555555557,
+      "gap_gt_60s": 2,
+      "jendela": {
+        "256": {
+          "total": 3,
+          "di_segmen_terpanjang": 1
+        },
+        "512": {
+          "total": 0,
+          "di_segmen_terpanjang": 0
+        },
+        "1024": {
+          "total": 0,
+          "di_segmen_terpanjang": 0
+        }
+      },
+      "spektral": {
+        "n_fft": 488,
+        "fs_hz": 1.0,
+        "nyquist_hz": 0.5,
+        "freq_resolution_hz": 0.0020491803278688526,
+        "dominant_freq_hz": 0.00819672131147541,
+        "dominant_period_s": 122.0,
+        "frac_power_below_half_nyquist": 0.4792743078732578,
+        "frac_power_below_0p01hz": 0.028252360736382678,
+        "n_bins_0_to_1hz": 244,
+        "peak_spectral_share": 0.016115457993938372
+      }
+    },
+    {
+      "well": "F-15_S",
+      "channel": "VIBLAT_RT",
+      "status": "ADA",
+      "n_baris_mentah": 141114,
+      "n_sampel": 952,
+      "dt_median_s": 1.0,
+      "laju_hz": 1.0,
+      "nyquist_hz": 0.5,
+      "n_segmen_kontinu": 6,
+      "segmen_terpanjang_sampel": 351,
+      "segmen_terpanjang_jam": 0.0975,
+      "gap_gt_60s": 5,
+      "jendela": {
+        "256": {
+          "total": 2,
+          "di_segmen_terpanjang": 1
+        },
+        "512": {
+          "total": 0,
+          "di_segmen_terpanjang": 0
+        },
+        "1024": {
+          "total": 0,
+          "di_segmen_terpanjang": 0
+        }
+      },
+      "spektral": {
+        "n_fft": 351,
+        "fs_hz": 1.0,
+        "nyquist_hz": 0.5,
+        "freq_resolution_hz": 0.002849002849002849,
+        "dominant_freq_hz": 0.002849002849002849,
+        "dominant_period_s": 351.0,
+        "frac_power_below_half_nyquist": 0.823030895417381,
+        "frac_power_below_0p01hz": 0.3371154226495468,
+        "n_bins_0_to_1hz": 175,
+        "peak_spectral_share": 0.3205370394974438
+      }
+    },
+    {
+      "well": "F-15_S",
+      "channel": "CRPM_RT",
+      "status": "ADA",
+      "n_baris_mentah": 137170,
+      "n_sampel": 939,
+      "dt_median_s": 1.0,
+      "laju_hz": 1.0,
+      "nyquist_hz": 0.5,
+      "n_segmen_kontinu": 5,
+      "segmen_terpanjang_sampel": 339,
+      "segmen_terpanjang_jam": 0.09416666666666666,
+      "gap_gt_60s": 4,
+      "jendela": {
+        "256": {
+          "total": 2,
+          "di_segmen_terpanjang": 1
+        },
+        "512": {
+          "total": 0,
+          "di_segmen_terpanjang": 0
+        },
+        "1024": {
+          "total": 0,
+          "di_segmen_terpanjang": 0
+        }
+      },
+      "spektral": {
+        "n_fft": 339,
+        "fs_hz": 1.0,
+        "nyquist_hz": 0.5,
+        "freq_resolution_hz": 0.0029498525073746312,
+        "dominant_freq_hz": 0.02359882005899705,
+        "dominant_period_s": 42.375,
+        "frac_power_below_half_nyquist": 0.761223844907656,
+        "frac_power_below_0p01hz": 0.11767592723054508,
+        "n_bins_0_to_1hz": 169,
+        "peak_spectral_share": 0.07103665264209459
+      }
+    },
+    {
+      "well": "F-15_S",
+      "channel": "SHKRSK_RT",
+      "status": "ADA",
+      "n_baris_mentah": 152923,
+      "n_sampel": 1089,
+      "dt_median_s": 1.0,
+      "laju_hz": 1.0,
+      "nyquist_hz": 0.5,
+      "n_segmen_kontinu": 5,
+      "segmen_terpanjang_sampel": 467,
+      "segmen_terpanjang_jam": 0.1297222222222222,
+      "gap_gt_60s": 4,
+      "jendela": {
+        "256": {
+          "total": 2,
+          "di_segmen_terpanjang": 1
+        },
+        "512": {
+          "total": 0,
+          "di_segmen_terpanjang": 0
+        },
+        "1024": {
+          "total": 0,
+          "di_segmen_terpanjang": 0
+        }
+      },
+      "spektral": {
+        "n_fft": 467,
+        "fs_hz": 1.0,
+        "nyquist_hz": 0.5,
+        "freq_resolution_hz": 0.0021413276231263384,
+        "dominant_freq_hz": 0.05139186295503212,
+        "dominant_period_s": 19.458333333333332,
+        "frac_power_below_half_nyquist": 0.49523978900983995,
+        "frac_power_below_0p01hz": 0.015574881597176538,
+        "n_bins_0_to_1hz": 233,
+        "peak_spectral_share": 0.01522736469747412
+      }
+    },
+    {
+      "well": "F-5",
+      "channel": "VIBLAT_RT",
+      "status": "ADA",
+      "n_baris_mentah": 43565,
+      "n_sampel": 480,
+      "dt_median_s": 1.0,
+      "laju_hz": 1.0,
+      "nyquist_hz": 0.5,
+      "n_segmen_kontinu": 2,
+      "segmen_terpanjang_sampel": 398,
+      "segmen_terpanjang_jam": 0.11055555555555556,
+      "gap_gt_60s": 1,
+      "jendela": {
+        "256": {
+          "total": 1,
+          "di_segmen_terpanjang": 1
+        },
+        "512": {
+          "total": 0,
+          "di_segmen_terpanjang": 0
+        },
+        "1024": {
+          "total": 0,
+          "di_segmen_terpanjang": 0
+        }
+      },
+      "spektral": {
+        "n_fft": 398,
+        "fs_hz": 1.0,
+        "nyquist_hz": 0.5,
+        "freq_resolution_hz": 0.002512562814070352,
+        "dominant_freq_hz": 0.002512562814070352,
+        "dominant_period_s": 398.0,
+        "frac_power_below_half_nyquist": 0.7814329309283543,
+        "frac_power_below_0p01hz": 0.3560667219356928,
+        "n_bins_0_to_1hz": 199,
+        "peak_spectral_share": 0.2938866417805663
+      }
+    },
+    {
+      "well": "F-5",
+      "channel": "CRPM_RT",
+      "status": "ADA",
+      "n_baris_mentah": 46529,
+      "n_sampel": 579,
+      "dt_median_s": 1.0,
+      "laju_hz": 1.0,
+      "nyquist_hz": 0.5,
+      "n_segmen_kontinu": 3,
+      "segmen_terpanjang_sampel": 384,
+      "segmen_terpanjang_jam": 0.10666666666666667,
+      "gap_gt_60s": 2,
+      "jendela": {
+        "256": {
+          "total": 1,
+          "di_segmen_terpanjang": 1
+        },
+        "512": {
+          "total": 0,
+          "di_segmen_terpanjang": 0
+        },
+        "1024": {
+          "total": 0,
+          "di_segmen_terpanjang": 0
+        }
+      },
+      "spektral": {
+        "n_fft": 384,
+        "fs_hz": 1.0,
+        "nyquist_hz": 0.5,
+        "freq_resolution_hz": 0.0026041666666666665,
+        "dominant_freq_hz": 0.0026041666666666665,
+        "dominant_period_s": 384.0,
+        "frac_power_below_half_nyquist": 0.8422146616633674,
+        "frac_power_below_0p01hz": 0.22792747346868714,
+        "n_bins_0_to_1hz": 192,
+        "peak_spectral_share": 0.17635534774663023
+      }
+    },
+    {
+      "well": "F-5",
+      "channel": "SHKRSK_RT",
+      "status": "ADA",
+      "n_baris_mentah": 53738,
+      "n_sampel": 726,
+      "dt_median_s": 1.0,
+      "laju_hz": 1.0,
+      "nyquist_hz": 0.5,
+      "n_segmen_kontinu": 4,
+      "segmen_terpanjang_sampel": 398,
+      "segmen_terpanjang_jam": 0.11055555555555556,
+      "gap_gt_60s": 3,
+      "jendela": {
+        "256": {
+          "total": 1,
+          "di_segmen_terpanjang": 1
+        },
+        "512": {
+          "total": 0,
+          "di_segmen_terpanjang": 0
+        },
+        "1024": {
+          "total": 0,
+          "di_segmen_terpanjang": 0
+        }
+      },
+      "spektral": {
+        "n_fft": 398,
+        "fs_hz": 1.0,
+        "nyquist_hz": 0.5,
+        "freq_resolution_hz": 0.002512562814070352,
+        "dominant_freq_hz": 0.2613065326633166,
+        "dominant_period_s": 3.8269230769230766,
+        "frac_power_below_half_nyquist": 0.5029691551251685,
+        "frac_power_below_0p01hz": 0.027167402538066484,
+        "n_bins_0_to_1hz": 199,
+        "peak_spectral_share": 0.020587226260585477
+      }
+    },
+    {
+      "well": "F-7",
+      "channel": "SHKRSK_RT",
+      "status": "ADA",
+      "n_baris_mentah": 3659,
+      "n_sampel": 281,
+      "dt_median_s": 1.0,
+      "laju_hz": 1.0,
+      "nyquist_hz": 0.5,
+      "n_segmen_kontinu": 4,
+      "segmen_terpanjang_sampel": 150,
+      "segmen_terpanjang_jam": 0.041666666666666664,
+      "gap_gt_60s": 3,
+      "jendela": {
+        "256": {
+          "total": 0,
+          "di_segmen_terpanjang": 0
+        },
+        "512": {
+          "total": 0,
+          "di_segmen_terpanjang": 0
+        },
+        "1024": {
+          "total": 0,
+          "di_segmen_terpanjang": 0
+        }
+      },
+      "spektral": {
+        "n_fft": 150,
+        "fs_hz": 1.0,
+        "nyquist_hz": 0.5,
+        "freq_resolution_hz": 0.006666666666666667,
+        "dominant_freq_hz": 0.006666666666666667,
+        "dominant_period_s": 150.0,
+        "frac_power_below_half_nyquist": 0.7529877195273922,
+        "frac_power_below_0p01hz": 0.53492827114024,
+        "n_bins_0_to_1hz": 75,
+        "peak_spectral_share": 0.53492827114024
+      }
+    },
+    {
+      "well": "F-9",
+      "channel": "VIBLAT_RT",
+      "status": "ADA",
+      "n_baris_mentah": 6475,
+      "n_sampel": 78,
+      "dt_median_s": 1.0,
+      "laju_hz": 1.0,
+      "nyquist_hz": 0.5,
+      "n_segmen_kontinu": 1,
+      "segmen_terpanjang_sampel": 78,
+      "segmen_terpanjang_jam": 0.021666666666666667,
+      "gap_gt_60s": 0,
+      "jendela": {
+        "256": {
+          "total": 0,
+          "di_segmen_terpanjang": 0
+        },
+        "512": {
+          "total": 0,
+          "di_segmen_terpanjang": 0
+        },
+        "1024": {
+          "total": 0,
+          "di_segmen_terpanjang": 0
+        }
+      },
+      "spektral": {
+        "n_fft": 78,
+        "fs_hz": 1.0,
+        "nyquist_hz": 0.5,
+        "freq_resolution_hz": 0.01282051282051282,
+        "dominant_freq_hz": 0.01282051282051282,
+        "dominant_period_s": 78.0,
+        "frac_power_below_half_nyquist": 0.7593613602540181,
+        "frac_power_below_0p01hz": 0.0,
+        "n_bins_0_to_1hz": 39,
+        "peak_spectral_share": 0.1627646585402375
+      }
+    },
+    {
+      "well": "F-9",
+      "channel": "STUCK_RT",
+      "status": "ADA",
+      "n_baris_mentah": 5728,
+      "n_sampel": 73,
+      "dt_median_s": 1.0,
+      "laju_hz": 1.0,
+      "nyquist_hz": 0.5,
+      "n_segmen_kontinu": 1,
+      "segmen_terpanjang_sampel": 73,
+      "segmen_terpanjang_jam": 0.020277777777777777,
+      "gap_gt_60s": 0,
+      "jendela": {
+        "256": {
+          "total": 0,
+          "di_segmen_terpanjang": 0
+        },
+        "512": {
+          "total": 0,
+          "di_segmen_terpanjang": 0
+        },
+        "1024": {
+          "total": 0,
+          "di_segmen_terpanjang": 0
+        }
+      },
+      "spektral": {
+        "n_fft": 73,
+        "fs_hz": 1.0,
+        "nyquist_hz": 0.5,
+        "freq_resolution_hz": 0.0136986301369863,
+        "dominant_freq_hz": 0.0410958904109589,
+        "dominant_period_s": 24.333333333333336,
+        "frac_power_below_half_nyquist": 0.7027712093131956,
+        "frac_power_below_0p01hz": 0.0,
+        "n_bins_0_to_1hz": 36,
+        "peak_spectral_share": 0.18500683390538872
+      }
+    },
+    {
+      "well": "F-9_A",
+      "channel": "SHKRSK_RT",
+      "status": "ADA",
+      "n_baris_mentah": 45927,
+      "n_sampel": 178,
+      "dt_median_s": 1.0,
+      "laju_hz": 1.0,
+      "nyquist_hz": 0.5,
+      "n_segmen_kontinu": 2,
+      "segmen_terpanjang_sampel": 112,
+      "segmen_terpanjang_jam": 0.03111111111111111,
+      "gap_gt_60s": 1,
+      "jendela": {
+        "256": {
+          "total": 0,
+          "di_segmen_terpanjang": 0
+        },
+        "512": {
+          "total": 0,
+          "di_segmen_terpanjang": 0
+        },
+        "1024": {
+          "total": 0,
+          "di_segmen_terpanjang": 0
+        }
+      },
+      "spektral": null
+    },
+    {
+      "well": "F-9_A",
+      "channel": "STUCK_RT",
+      "status": "ADA",
+      "n_baris_mentah": 45712,
+      "n_sampel": 178,
+      "dt_median_s": 1.0,
+      "laju_hz": 1.0,
+      "nyquist_hz": 0.5,
+      "n_segmen_kontinu": 2,
+      "segmen_terpanjang_sampel": 112,
+      "segmen_terpanjang_jam": 0.03111111111111111,
+      "gap_gt_60s": 1,
+      "jendela": {
+        "256": {
+          "total": 0,
+          "di_segmen_terpanjang": 0
+        },
+        "512": {
+          "total": 0,
+          "di_segmen_terpanjang": 0
+        },
+        "1024": {
+          "total": 0,
+          "di_segmen_terpanjang": 0
+        }
+      },
+      "spektral": {
+        "n_fft": 112,
+        "fs_hz": 1.0,
+        "nyquist_hz": 0.5,
+        "freq_resolution_hz": 0.008928571428571428,
+        "dominant_freq_hz": 0.15178571428571427,
+        "dominant_period_s": 6.588235294117648,
+        "frac_power_below_half_nyquist": 0.8379936894511851,
+        "frac_power_below_0p01hz": 0.007565907990424915,
+        "n_bins_0_to_1hz": 56,
+        "peak_spectral_share": 0.14675907552987016
+      }
+    }
+  ]
+}

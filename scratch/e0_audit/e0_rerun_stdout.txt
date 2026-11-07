@@ -1,0 +1,30 @@
+[05:41:42] == 1. cek kebocoran masa depan pada dataset terpakai
+[05:41:43]    vib: rows=23922 leak=0 labelch=['SPPA_mean', 'SPPA_std', 'SPPA_slope', 'SPPA_last', 'SPPA_frac', 'TFLO_mean', 'TFLO_std', 'TFLO_slope', 'TFLO_last', 'TFLO_frac', 'SPM_mean', 'SPM_std', 'SPM_slope', 'SPM_last', 'SPM_frac']
+[05:41:43]    ssi: rows=35906 leak=0 labelch=['SPPA_mean', 'SPPA_std', 'SPPA_slope', 'SPPA_last', 'SPPA_frac', 'TFLO_mean', 'TFLO_std', 'TFLO_slope', 'TFLO_last', 'TFLO_frac', 'SPM_mean', 'SPM_std', 'SPM_slope', 'SPM_last', 'SPM_frac']
+[05:41:44]    shk: rows=56495 leak=0 labelch=['SPPA_mean', 'SPPA_std', 'SPPA_slope', 'SPPA_last', 'SPPA_frac', 'TFLO_mean', 'TFLO_std', 'TFLO_slope', 'TFLO_last', 'TFLO_frac', 'SPM_mean', 'SPM_std', 'SPM_slope', 'SPM_last', 'SPM_frac']
+[05:41:44]    stuck_k1: rows=5555 leak=0 labelch=['SPPA_mean', 'SPPA_std', 'SPPA_slope', 'SPPA_last', 'SPPA_frac', 'TFLO_mean', 'TFLO_std', 'TFLO_slope', 'TFLO_last', 'TFLO_frac', 'SPM_mean', 'SPM_std', 'SPM_slope', 'SPM_last', 'SPM_frac']
+[05:41:45]    hyd_ki: rows=52509 leak=0 labelch=[]
+[05:41:47]    stuck_k2: rows=118567 leak=0 labelch=['SPPA_mean', 'SPPA_std', 'SPPA_slope', 'SPPA_last', 'SPPA_frac', 'TFLO_mean', 'TFLO_std', 'TFLO_slope', 'TFLO_last', 'TFLO_frac', 'SPM_mean', 'SPM_std', 'SPM_slope', 'SPM_last', 'SPM_frac']
+[05:41:47] == 2. rule: determinisme, sirkularitas, penyebut FAR
+[05:41:50]    vib: n=23922 ruleP=0.9193 ruleP_onset=None ruleP_ongoing=0.9193 onset_frac=0.2553 identik=True
+[05:41:52]    ssi: n=35906 ruleP=0.2121 ruleP_onset=0.2083 ruleP_ongoing=0.2222 onset_frac=0.86 identik=True
+[05:41:53]    shk: n=56495 ruleP=0.6134 ruleP_onset=None ruleP_ongoing=0.6134 onset_frac=0.7636 identik=True
+[05:41:54]    stuck_k1: n=5555 ruleP=0.9587 ruleP_onset=None ruleP_ongoing=0.9587 onset_frac=0.2212 identik=True
+[05:41:55]    hyd_ki: n=52509 ruleP=0.7261 ruleP_onset=0.3573 ruleP_ongoing=0.8416 onset_frac=0.269 identik=True
+[05:41:55] == 2b. identitas rule jendela-label vs label (sirkularitas konstruksi)
+[05:41:56]    vib: {'n_checked': 23922, 'n_mismatch': 0, 'identity': True, 'note': 'rule jendela LABEL = pembentuk label (sirkular per konstruksi)'}
+[05:41:56]    ssi: {'n_checked': 35906, 'n_mismatch': 0, 'identity': True, 'note': 'rule jendela LABEL = pembentuk label (sirkular per konstruksi)'}
+[05:41:57]    shk: {'n_checked': 56495, 'n_mismatch': 0, 'identity': True, 'note': 'rule jendela LABEL = pembentuk label (sirkular per konstruksi)'}
+[05:41:57]    stuck_k1: {'n_checked': 5555, 'n_mismatch': 0, 'identity': True, 'note': 'rule jendela LABEL = pembentuk label (sirkular per konstruksi)'}
+[05:41:58]    hyd_ki: {'n_checked': 52509, 'n_mismatch': 23, 'identity': False, 'note': 'rule jendela LABEL = pembentuk label (sirkular per konstruksi)'}
+[05:41:58] == 3. determinisme RF (dua fit, data sama)
+/home/neonti/.venvs/rnd_r3/lib/python3.11/site-packages/sklearn/impute/_base.py:647: UserWarning: Skipping features without any observed values: ['SPM_mean' 'SPM_std' 'SPM_slope' 'SPM_last']. At least one non-missing value is needed for imputation with strategy='median'.
+  warnings.warn(
+/home/neonti/.venvs/rnd_r3/lib/python3.11/site-packages/sklearn/impute/_base.py:647: UserWarning: Skipping features without any observed values: ['SPM_mean' 'SPM_std' 'SPM_slope' 'SPM_last']. At least one non-missing value is needed for imputation with strategy='median'.
+  warnings.warn(
+[05:42:04]    RF: {'uji_well': 'F-14', 'n_train': 21933, 'n_test': 1989, 'n_fitur': 55, 'skor_bit_identik': False, 'hash1': 'e264e022999293c7', 'hash2': 'a7903ead074fd021', 'max_abs_diff': 2.220446049250313e-16, 'n_jobs': -1, 'random_state': 42}
+[05:42:04] == 4. tool_wear: satuan jendela, rumus kuantil, TLead
+[05:42:04]    tool_wear: 469 baris; langkah=[{'alat': 'T01', 'run': 'R01', 'n': 60, 'langkah_min': 1000, 'langkah_max': 1000, 'langkah_unik': [1000]}, {'alat': 'T01', 'run': 'R02', 'n': 60, 'langkah_min': 1000, 'langkah_max': 1000, 'langkah_unik': [1000]}, {'alat': 'T02', 'run': 'R01', 'n': 50, 'langkah_min': 1000, 'langkah_max': 1000, 'langkah_unik': [1000]}, {'alat': 'T02', 'run': 'R02', 'n': 62, 'langkah_min': 1000, 'langkah_max': 1000, 'langkah_unik': [1000]}, {'alat': 'T03', 'run': 'R01', 'n': 61, 'langkah_min': 1000, 'langkah_max': 1000, 'langkah_unik': [1000]}, {'alat': 'T03', 'run': 'R02', 'n': 60, 'langkah_min': 1000, 'langkah_max': 1000, 'langkah_unik': [1000]}, {'alat': 'T04', 'run': 'R01', 'n': 58, 'langkah_min': 1000, 'langkah_max': 1000, 'langkah_unik': [1000]}, {'alat': 'T04', 'run': 'R02', 'n': 58, 'langkah_min': 1000, 'langkah_max': 1000, 'langkah_unik': [1000]}]
+[05:42:04] == 5. bit_wear: sirkularitas persistence
+[05:42:04]    bit_wear: 49732 pos dari 198928
+[05:42:04] SELESAI -> e0_audit_results.json

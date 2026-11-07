@@ -1,0 +1,1 @@
+[2026-10-12 10:12:23] hyd_k2: grid=27322 episodes=124 prev_test=0.0037005057357838906 rand=0.005641357641265351 zpit_alarms_eval=0 xcheck={'n_episodes_match': True, 'v8_n_episodes': 124, 'v8_prev_test_cons': 0.0037, 'v8_prev_test_flow': 0.0037, 'my_prev_test': 0.0037005057357838906}

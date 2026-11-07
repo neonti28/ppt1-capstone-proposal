@@ -1,0 +1,8 @@
+dasar salinan asli: 42 lolos, 0 gagal
+kasus1 (angka koefisien diubah): 41 lolos, 1 gagal, ditolak=ya
+kasus2 (rujukan baris di luar rentang): 41 lolos, 1 gagal, ditolak=ya
+kasus3 (em-dash disisipkan): 41 lolos, 1 gagal, ditolak=ya
+kasus4 (tabel draft dihapus): 41 lolos, 1 gagal, ditolak=ya
+kasus5 (kata fiktif disisipkan): 41 lolos, 1 gagal, ditolak=ya
+kasus6 (kunci JSON salah): 41 lolos, 1 gagal, ditolak=ya
+hasil uji negatif: semua kasus sesuai harapan

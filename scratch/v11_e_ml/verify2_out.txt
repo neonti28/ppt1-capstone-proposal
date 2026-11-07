@@ -1,0 +1,62 @@
+=== A. lowo_*.json: jumlah fold & well uji & jumlah well total ===
+lowo_hyd_ki.json: n_fold=9 test_wells=['F-10', 'F-12', 'F-14', 'F-15A', 'F-15_S', 'F-5', 'F-7', 'F-9', 'F-9_A'] union_train_wells=['F-10', 'F-12', 'F-14', 'F-15A', 'F-15_S', 'F-5', 'F-7', 'F-9', 'F-9_A'] keys=['engine', 'n_rows', 'wells', 'n_folds', 'folds']
+lowo_shk.json: n_fold=9 test_wells=['F-10', 'F-12', 'F-14', 'F-15A', 'F-15_S', 'F-5', 'F-7', 'F-9', 'F-9_A'] union_train_wells=['F-10', 'F-12', 'F-14', 'F-15A', 'F-15_S', 'F-5', 'F-7', 'F-9', 'F-9_A'] keys=['engine', 'n_rows', 'wells', 'n_folds', 'folds']
+lowo_ssi.json: n_fold=9 test_wells=['F-10', 'F-12', 'F-14', 'F-15A', 'F-15_S', 'F-5', 'F-7', 'F-9', 'F-9_A'] union_train_wells=['F-10', 'F-12', 'F-14', 'F-15A', 'F-15_S', 'F-5', 'F-7', 'F-9', 'F-9_A'] keys=['engine', 'n_rows', 'wells', 'n_folds', 'folds']
+lowo_stuck_k1.json: n_fold=2 test_wells=['F-14', 'F-9_A'] union_train_wells=['F-14', 'F-9_A'] keys=['engine', 'n_rows', 'wells', 'n_folds', 'folds']
+lowo_stuck_k2.json: n_fold=4 test_wells=['F-10', 'F-14', 'F-9', 'F-9_A'] union_train_wells=['F-10', 'F-14', 'F-9', 'F-9_A'] keys=['engine', 'n_rows', 'wells', 'n_folds', 'folds']
+lowo_vib.json: n_fold=4 test_wells=['F-14', 'F-15A', 'F-15_S', 'F-5'] union_train_wells=['F-14', 'F-15A', 'F-15_S', 'F-5'] keys=['engine', 'n_rows', 'wells', 'n_folds', 'folds']
+
+=== B. sumber label di kode (klaim kandidat 2 §1) ===
+  code/v9_d1_02_rig_windows.py:7: - LABEL = bin [t0, t0+10)  (status: vib VIBLAT>=32.17405, shk SHKRSK>=1,
+  code/v9_d1_02_rig_windows.py:34: SSI_MIN_SAMPLES = 10
+  code/v9_d1_02_rig_windows.py:35: VIB_THRESH = 32.17405
+  code/v9_d1_02_rig_windows.py:39: LABDEF = {"stuck": ("stuck_max", "stuck_n", 1.0),
+  code/v9_d1_02_rig_windows.py:40: "vib": ("vib_max", "vib_n", VIB_THRESH),
+  code/v9_d1_02_rig_windows.py:67: for name, (mx, nn, thr) in LABDEF.items():
+  code/v9_d1_02_rig_windows.py:93: ok = (n_tot >= SSI_MIN_SAMPLES) & (wmean > 0) & np.isfinite(ssi)
+  code/v9_d1_02_rig_windows.py:182: for name in list(LABDEF) + ["ssi"]:
+  code/v9_d1_02_rig_windows.py:210: for name in list(LABDEF) + ["ssi"]:
+  code/v9_d1_04_stuck_k2.py:2: """V9-D1 04 — dataset `stuck_k2` (prediksi onset stuck pipe, H=10 menit).
+  code/v9_d1_04_stuck_k2.py:41: H = 10
+  code/v9_e_ML_01_train.py:82: ALLOWED = {"vib": "deteksi kondisi (status VIBLAT>=32.17405)",
+  code/v9_e_ML_01_train.py:85: "stuck_k2": "prediksi kejadian mendatang (onset STUCK 0->1, H=10 mnt)"}
+
+=== C. labels_curated_v2.csv: 884 event (50/571/263) ===
+  header: ['event_id', 'wellbore', 'event_date', 'act_start', 'act_end', 'ddr_date_start', 'md', 'md_valid', 'source_code', 'state_detail', 'category', 'bha_relevant', 'evidence', 'match_rules', 'comments_full', 'comments_trunc300', 'outcome', 'outcome_reason', 'component', 'component_reason'] n_rows = 884
+   md_valid: {'True': 629, 'False': 255}
+   state_detail: {'equipment failure': 770, 'injury': 1, 'operation failed': 82, 'stuck equipment': 7, 'circulation loss': 23, 'mud loss': 1}
+   bha_relevant: {'no': 263, 'yes': 50, 'uncertain': 571}
+   outcome_reason: {'routine_operations_no_outcome_stated': 134, 'narrative_too_short': 167, 'no_outcome_keywords_found': 286, '': 297}
+   component_reason: {'no_bha_component_keywords': 426, 'surface_equipment_only': 159, '': 254, 'narrative_too_short': 45}
+
+=== D. leak-checker output (klaim 0 pelanggaran 6/6 dataset) ===
+  v9_d1_05_leak_lowo.json
+   {"vib": {"status": "OK", "n_rows": 23922, "leak_violations_feat_ge_lab": 0, "rows_with_nan_feat_ts": 0, "wells": ["F-14", "F-15A", "F-15_S", "F-5"], "n_folds": 4}, "ssi": {"status": "OK", "n_rows": 35906, "leak_violations_feat_ge_lab": 0, "rows_with_nan_feat_ts": 0, "wells": ["F-10", "F-12", "F-14", "F-15A", "F-15_S", "F-5", "F-7", "F-9", "F-9_A"], "n_folds": 9}, "shk": {"status": "OK", "n_rows": 56495, "leak_violations_feat_ge_lab": 0, "rows_with_nan_feat_ts": 0, "wells": ["F-10", "F-12", "F-14", "F-15A", "F-15_S", "F-5", "F-7", "F-9", "F-9_A"], "n_folds": 9}, "stuck_k1": {"status": "OK", "n_rows": 5555, "leak_violations_feat_ge_lab": 0, "rows_with_nan_feat_ts": 0, "wells": ["F-14", "F-9_A"], "n_folds": 2}, "hyd_ki": {"status": "OK", "n_rows": 52509, "leak_violations_feat_ge_lab": 0, "rows_with_nan_feat_ts": 0, "wells": ["F-10", "F-12", "F-14", "F-15A", "F-15_S", "F-5", "F-7", "F-9", "F-9_A"], "n_folds": 9}, "stuck_k2": {"status": "OK", "n_rows": 118567, "leak_violations_feat_ge_lab": 0, "rows_with_nan_feat_ts": 0, "wells": ["F-10", "F-14", "F-9", "F-9_A"], "n_folds": 4}}
+
+=== E. baris dataset stuck_k2 (klaim 118.567 baris) ===
+  rows = 118567 n_cols = 62
+  header: ['well', 'ts_bin', 'feat_ts_max', 'lab_ts', 'lab_kind', 'TQA_mean', 'TQA_std', 'TQA_slope', 'TQA_last', 'TQA_frac', 'SPPA_mean', 'SPPA_std', 'SPPA_slope', 'SPPA_last', 'SPPA_frac', 'TFLO_mean', 'TFLO_std', 'TFLO_slope', 'TFLO_last', 'TFLO_frac', 'RPM_mean', 'RPM_std', 'RPM_slope', 'RPM_last', 'RPM_frac', 'SWOB_mean', 'SWOB_std', 'SWOB_slope', 'SWOB_last', 'SWOB_frac', 'HKLD_mean', 'HKLD_std', 'HKLD_slope', 'HKLD_last', 'HKLD_frac', 'ROP_mean', 'ROP_std', 'ROP_slope', 'ROP_last', 'ROP_frac', 'BPOS_mean', 'BPOS_std', 'BPOS_slope', 'BPOS_last', 'BPOS_frac', 'SPM_mean', 'SPM_std', 'SPM_slope', 'SPM_last', 'SPM_frac', 'depth_mean', 'depth_std', 'depth_slope', 'depth_last', 'depth_frac', 'dbtm_mean', 'dbtm_std', 'dbtm_slope', 'dbtm_last', 'dbtm_frac', 'y_stuck_onset', 'y_prev_stuck_onset']
+
+=== F. onset counts per well (klaim k2: F-9_A 72, F-10 93, F-14 61, F-9 55) ===
+  v9_d1_04:2: """V9-D1 04 — dataset `stuck_k2` (prediksi onset stuck pipe, H=10 menit).
+  v9_d1_04:8: - onset = edge 0->1 (NaN dilewati / strict=False)
+  v9_d1_04:9: - inblock = menit dengan STUCK_ffill>=1 (jendela onset ikut inblock -> Dibuang)
+  v9_d1_04:20: Invarian validasi: onsets_ffill wajib = V8 (F-9_A 72, F-14 61, F-10 93).
+  v9_d1_04:40: REF_ONSETS = {"F-9_A": 72, "F-14": 61, "F-10": 93}
+  v9_d1_04:250: "v8_onsets_match": (len(on_f) == REF_ONSETS[well]) if well in REF_ONSETS else None,
+  v9_d1_04:258: f"pos={wq['positives']} v8_match={wq['v8_onsets_match']}")
+  v9_d1_04:283: "reference_onsets_v8": REF_ONSETS, "wells": {}}
+
+  file scratch/v9_d1:
+    lowo_hyd_ki.json
+    lowo_shk.json
+    lowo_ssi.json
+    lowo_stuck_k1.json
+    lowo_stuck_k2.json
+    lowo_vib.json
+    v9_d1_01_crosscheck_v6.json
+    v9_d1_01_summary.json
+    v9_d1_02_summary.json
+    v9_d1_03_qc.json
+    v9_d1_04_qc.json
+    v9_d1_05_leak_lowo.json

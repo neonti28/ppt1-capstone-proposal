@@ -1,0 +1,660 @@
+{
+ "ledger": {
+  "S1": {
+   "n": 84,
+   "kelas_hasil": {
+    "MATCH": 37,
+    "derivasi_tidak_diuji_otomatis": 17,
+    "MISMATCH": 4,
+    "tidak_resolve": 20,
+    "MATCH_sebagian": 1,
+    "sel_bukan_angka": 5
+   },
+   "kelas_sumber": {
+    "RUN-KITA": 61,
+    "DERIVASI": 17,
+    "KONVENSI": 1,
+    "BELUM-TERUKUR": 5
+   },
+   "mismatch": [
+    {
+     "kode": "S1-012",
+     "sel": "7",
+     "berkas": "s1_hyd_seeds.json",
+     "jalur": "reproduksi.lulus",
+     "daun": [],
+     "rujukan": "s1_hyd_seeds.json reproduksi.lulus jumlah nilai True (fp, presisi, recall, lead, tp, onset"
+    },
+    {
+     "kode": "S1-013",
+     "sel": "5",
+     "berkas": "s1_hyd_seeds.json",
+     "jalur": "seed_list",
+     "daun": [
+      42.0,
+      7.0,
+      13.0,
+      21.0,
+      33.0
+     ],
+     "rujukan": "s1_hyd_seeds.json seed_list = 42,7,13,21,33"
+    },
+    {
+     "kode": "S1-016",
+     "sel": "9",
+     "berkas": "s1_meta.json",
+     "jalur": "wells",
+     "daun": [
+      7571.0,
+      7390.0,
+      10401.0,
+      6156.0,
+      8355.0,
+      6332.0
+     ],
+     "rujukan": "s1_meta.json wells jumlah kunci"
+    },
+    {
+     "kode": "S1-051",
+     "sel": "2",
+     "berkas": "s1_h_saturasi.json",
+     "jalur": "well_kalibrasi_unik",
+     "daun": [],
+     "rujukan": "s1_h_saturasi.json well_kalibrasi_unik (train_wells[0] hanya F-10 dan F-12)"
+    }
+   ],
+   "tidak_resolve": [
+    [
+     "S1-017",
+     "4a701ed63291e455"
+    ],
+    [
+     "S1-044",
+     "0.00416667"
+    ],
+    [
+     "S1-052",
+     "10401"
+    ],
+    [
+     "S1-053",
+     "865"
+    ],
+    [
+     "S1-055",
+     "607"
+    ],
+    [
+     "S1-057",
+     "368"
+    ],
+    [
+     "S1-058",
+     "0.622564"
+    ],
+    [
+     "S1-059",
+     "55.57"
+    ],
+    [
+     "S1-060",
+     "32.4664"
+    ],
+    [
+     "S1-061",
+     "516"
+    ],
+    [
+     "S1-062",
+     "110"
+    ],
+    [
+     "S1-063",
+     "0.8243"
+    ],
+    [
+     "S1-064",
+     "0.5965"
+    ],
+    [
+     "S1-065",
+     "16.611"
+    ],
+    [
+     "S1-066",
+     "443"
+    ],
+    [
+     "S1-067",
+     "215"
+    ],
+    [
+     "S1-068",
+     "0.673252"
+    ],
+    [
+     "S1-069",
+     "0.512139"
+    ],
+    [
+     "S1-077",
+     "0.673"
+    ],
+    [
+     "S1-078",
+     "0.0171"
+    ],
+    [
+     "S1-079",
+     "tidak terukur"
+    ],
+    [
+     "S1-080",
+     "tidak terukur"
+    ],
+    [
+     "S1-081",
+     "tidak terukur"
+    ],
+    [
+     "S1-082",
+     "tidak terukur"
+    ],
+    [
+     "S1-083",
+     "tidak terukur"
+    ]
+   ]
+  },
+  "S2": {
+   "n": 455,
+   "kelas_hasil": {
+    "MATCH": 385,
+    "MATCH_sebagian": 42,
+    "derivasi_tidak_diuji_otomatis": 23,
+    "tidak_resolve": 5
+   },
+   "kelas_sumber": {
+    "RUN-KITA": 424,
+    "KONVENSI": 7,
+    "DERIVASI": 23,
+    "STANDAR": 1
+   },
+   "mismatch": [],
+   "tidak_resolve": [
+    [
+     "S2-444",
+     "32,17405"
+    ],
+    [
+     "S2-445",
+     "0,50"
+    ],
+    [
+     "S2-446",
+     "0,50"
+    ],
+    [
+     "S2-454",
+     "10"
+    ],
+    [
+     "S2-455",
+     "60"
+    ]
+   ]
+  },
+  "S3": {
+   "n": 92,
+   "kelas_hasil": {
+    "MATCH_sebagian": 28,
+    "MATCH": 45,
+    "sel_bukan_angka": 4,
+    "MISMATCH": 2,
+    "tidak_resolve": 12,
+    "derivasi_tidak_diuji_otomatis": 1
+   },
+   "kelas_sumber": {
+    "RUN-KITA": 86,
+    "KONVENSI": 4,
+    "DERIVASI": 1,
+    "BELUM-TERUKUR": 1
+   },
+   "mismatch": [
+    {
+     "kode": "S3-016",
+     "sel": "1,32% sampai 54,25%",
+     "berkas": "s3a_feasibility.json",
+     "jalur": "label.per_well",
+     "daun": [
+      53041.0,
+      7622.0,
+      5278.0,
+      40141.0,
+      0.1437,
+      51708.0
+     ],
+     "rujukan": "s3a_feasibility.json label.per_well[*].prevalensi_high_MSE"
+    },
+    {
+     "kode": "S3-032",
+     "sel": "7",
+     "berkas": "s3b_hybrid.json",
+     "jalur": "folds",
+     "daun": [
+      30.0,
+      0.000533,
+      178793.0,
+      49550.0,
+      0.01324,
+      30.0
+     ],
+     "rujukan": "s3b_hybrid.json folds[*].laju_stat.saturasi"
+    }
+   ],
+   "tidak_resolve": [
+    [
+     "S3-007",
+     "tidak ada"
+    ],
+    [
+     "S3-008",
+     "tidak ada"
+    ],
+    [
+     "S3-029",
+     "0,004167"
+    ],
+    [
+     "S3-036",
+     "1"
+    ],
+    [
+     "S3-037",
+     "6,0"
+    ],
+    [
+     "S3-038",
+     "0,50"
+    ],
+    [
+     "S3-039",
+     "0,50"
+    ],
+    [
+     "S3-040",
+     "1000000"
+    ],
+    [
+     "S3-041",
+     "0,11 lawan 113,78"
+    ],
+    [
+     "S3-086",
+     "0,5672"
+    ],
+    [
+     "S3-087",
+     "0,7208"
+    ],
+    [
+     "S3-088",
+     "1, 3, 1, 3"
+    ],
+    [
+     "S3-089",
+     "25, 36, 24, 20"
+    ],
+    [
+     "S3-090",
+     "469"
+    ],
+    [
+     "S3-091",
+     "kosong"
+    ],
+    [
+     "S3-092",
+     "BELUM TERUKUR"
+    ]
+   ]
+  },
+  "S4": {
+   "n": 95,
+   "kelas_hasil": {
+    "MATCH": 45,
+    "tidak_resolve": 32,
+    "MATCH_sebagian": 9,
+    "derivasi_tidak_diuji_otomatis": 4,
+    "sel_bukan_angka": 5
+   },
+   "kelas_sumber": {
+    "RUN-KITA": 86,
+    "DERIVASI": 4,
+    "KONVENSI": 1,
+    "BELUM-TERUKUR": 4
+   },
+   "mismatch": [],
+   "tidak_resolve": [
+    [
+     "S4-002",
+     "2180278"
+    ],
+    [
+     "S4-003",
+     "17"
+    ],
+    [
+     "S4-009",
+     "806 / 1215.0 / 1.0 / 3.5 / 12."
+    ],
+    [
+     "S4-010",
+     "310 / 562.75 / 1.0 / 4.5 / 15."
+    ],
+    [
+     "S4-022",
+     "26 dengan pola min/menit, 20 d"
+    ],
+    [
+     "S4-023",
+     "cost 0 (lama) / cost 0 XML dan"
+    ],
+    [
+     "S4-024",
+     "work order 0 XML / 0 HTML / wo"
+    ],
+    [
+     "S4-031",
+     "0.6345"
+    ],
+    [
+     "S4-032",
+     "1.0107"
+    ],
+    [
+     "S4-033",
+     "0.5026"
+    ],
+    [
+     "S4-042",
+     "1202 / 2680.917 / 1.0 / 5.5 / "
+    ],
+    [
+     "S4-043",
+     "445 / 1925.5 / 2.5 / 10.9 / 24"
+    ],
+    [
+     "S4-044",
+     "806 / 1215.0 / 1.0 / 3.5 / 12."
+    ],
+    [
+     "S4-045",
+     "202 / 590.0 / 1.5 / 6.0 / 18.0"
+    ],
+    [
+     "S4-046",
+     "246 / 568.333 / 1.5 / 5.0 / 16"
+    ],
+    [
+     "S4-047",
+     "310 / 562.75 / 1.0 / 4.5 / 15."
+    ],
+    [
+     "S4-048",
+     "229 / 522.003 / 1.3333 / 5.75 "
+    ],
+    [
+     "S4-049",
+     "75 / 160.75 / 2.0 / 4.3 / 7.0"
+    ],
+    [
+     "S4-050",
+     "33 / 62.25 / 1.25 / 4.3 / 6.0"
+    ],
+    [
+     "S4-051",
+     "29 / 55.75 / 1.75 / 3.05 / 5.7"
+    ],
+    [
+     "S4-060",
+     "85613 byte / 661 record / 17 k"
+    ],
+    [
+     "S4-061",
+     "56815359 byte / 198928 record "
+    ],
+    [
+     "S4-062",
+     "218119 byte / 884 record / 8 k"
+    ],
+    [
+     "S4-063",
+     "10 berkas / 4606027369 byte"
+    ],
+    [
+     "S4-064",
+     "645763"
+    ],
+    [
+     "S4-065",
+     "519171"
+    ],
+    [
+     "S4-066",
+     "26.0.0"
+    ],
+    [
+     "S4-067",
+     "0"
+    ],
+    [
+     "S4-069",
+     "12 kutipan diperiksa / 0 menul"
+    ],
+    [
+     "S4-070",
+     "1759 XML / 1759 HTML / 0 gagal"
+    ],
+    [
+     "S4-071",
+     "1"
+    ],
+    [
+     "S4-072",
+     "service order 0 / purchase ord"
+    ],
+    [
+     "S4-073",
+     "maintenance 303"
+    ],
+    [
+     "S4-090",
+     "tidak terukur"
+    ],
+    [
+     "S4-091",
+     "tidak terukur"
+    ],
+    [
+     "S4-092",
+     "tidak terukur"
+    ],
+    [
+     "S4-093",
+     "tidak terukur"
+    ]
+   ]
+  }
+ },
+ "artefak": [
+  {
+   "kartu": "S1",
+   "berkas": "s1_h_saturasi.json",
+   "bytes": 3606,
+   "buka": true,
+   "top": "dict",
+   "n_top": 16
+  },
+  {
+   "kartu": "S1",
+   "berkas": "s1_hluas.json",
+   "bytes": 12141,
+   "buka": true,
+   "top": "dict",
+   "n_top": 11
+  },
+  {
+   "kartu": "S1",
+   "berkas": "s1_hyd_seeds.json",
+   "bytes": 302269,
+   "buka": true,
+   "top": "dict",
+   "n_top": 13
+  },
+  {
+   "kartu": "S1",
+   "berkas": "s1_meta.json",
+   "bytes": 1449,
+   "buka": true,
+   "top": "dict",
+   "n_top": 21
+  },
+  {
+   "kartu": "S2",
+   "berkas": "p2_probe.json",
+   "bytes": 9388,
+   "buka": true,
+   "top": "dict",
+   "n_top": 2
+  },
+  {
+   "kartu": "S2",
+   "berkas": "p3_kanal.json",
+   "bytes": 2994,
+   "buka": true,
+   "top": "dict",
+   "n_top": 2
+  },
+  {
+   "kartu": "S2",
+   "berkas": "s2_meta.json",
+   "bytes": 529,
+   "buka": true,
+   "top": "dict",
+   "n_top": 13
+  },
+  {
+   "kartu": "S2",
+   "berkas": "s2_records_ssi.json",
+   "bytes": 343877,
+   "buka": true,
+   "top": "dict",
+   "n_top": 15
+  },
+  {
+   "kartu": "S2",
+   "berkas": "s2_records_vib.json",
+   "bytes": 157781,
+   "buka": true,
+   "top": "dict",
+   "n_top": 15
+  },
+  {
+   "kartu": "S2",
+   "berkas": "s2_ringkas.json",
+   "bytes": 85513,
+   "buka": true,
+   "top": "dict",
+   "n_top": 3
+  },
+  {
+   "kartu": "S3",
+   "berkas": "s3a_feasibility.json",
+   "bytes": 8072,
+   "buka": true,
+   "top": "dict",
+   "n_top": 7
+  },
+  {
+   "kartu": "S3",
+   "berkas": "s3b_hybrid.json",
+   "bytes": 72822,
+   "buka": true,
+   "top": "dict",
+   "n_top": 7
+  },
+  {
+   "kartu": "S3",
+   "berkas": "s3c_ringkas.json",
+   "bytes": 34985,
+   "buka": true,
+   "top": "dict",
+   "n_top": 10
+  },
+  {
+   "kartu": "S4",
+   "berkas": "crosscheck.json",
+   "bytes": 7049,
+   "buka": true,
+   "top": "dict",
+   "n_top": 4
+  },
+  {
+   "kartu": "S4",
+   "berkas": "ddr_activity_stats.json",
+   "bytes": 19860,
+   "buka": true,
+   "top": "dict",
+   "n_top": 3
+  },
+  {
+   "kartu": "S4",
+   "berkas": "ddr_downtime_records.jsonl",
+   "bytes": 217645,
+   "buka": true,
+   "top": "JSONL",
+   "n_top": 533
+  },
+  {
+   "kartu": "S4",
+   "berkas": "ddr_downtime_table.json",
+   "bytes": 6300,
+   "buka": true,
+   "top": "dict",
+   "n_top": 9
+  },
+  {
+   "kartu": "S4",
+   "berkas": "inventory.json",
+   "bytes": 15704,
+   "buka": true,
+   "top": "dict",
+   "n_top": 8
+  },
+  {
+   "kartu": "S4",
+   "berkas": "inventory_raw.json",
+   "bytes": 24974,
+   "buka": true,
+   "top": "dict",
+   "n_top": 7
+  },
+  {
+   "kartu": "S4",
+   "berkas": "labels_duration.json",
+   "bytes": 15280,
+   "buka": true,
+   "top": "dict",
+   "n_top": 18
+  },
+  {
+   "kartu": "S4",
+   "berkas": "token_scan.json",
+   "bytes": 3503,
+   "buka": true,
+   "top": "dict",
+   "n_top": 4
+  }
+ ]
+}

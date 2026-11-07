@@ -1,0 +1,35 @@
+{
+ "bit_wear_urutan_berkas": {
+  "n_rows": 198928,
+  "n_pos": 49732,
+  "n_prev_pos": 49732,
+  "P_y1_given_prev_pos": 0.9903
+ },
+ "bit_wear_depth_sort_global": {
+  "n_rows": 198928,
+  "n_pos": 49732,
+  "n_prev_pos": 49731,
+  "P_y1_given_prev_pos": 0.5668,
+  "n_pasangan_lintas_well": 133539,
+  "fraksi_pasangan_lintas_well": 0.6713
+ },
+ "bit_wear_well_depth_sort": {
+  "n_rows": 198928,
+  "n_pos": 49732,
+  "n_prev_pos": 49732,
+  "P_y1_given_prev_pos": 0.9903
+ },
+ "bit_wear_F14_saja": {
+  "n_rows": 47645,
+  "n_pos": 4918,
+  "n_prev_pos": 4917,
+  "P_y1_given_prev_pos": 0.9927
+ },
+ "vib_positif": {
+  "n_pos": 5429,
+  "n_pos_dgn_y_prev_1": 5213,
+  "n_pos_onset_baru": 216,
+  "fraksi_onset_baru": 0.0398,
+  "konsisten_dgn_persistence_R": 0.9602
+ }
+}

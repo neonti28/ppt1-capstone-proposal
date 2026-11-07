@@ -1,0 +1,7515 @@
+{
+  "finalis": "A1 LightGBM + conformal cross-conformal (CV+)",
+  "seed_list": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "folds": [
+    {
+      "tp": 100,
+      "fp": 372,
+      "fn": 1294,
+      "tn": 5805,
+      "n_neg": 6177,
+      "precision": 0.211864406779661,
+      "recall": 0.07173601147776183,
+      "far_per_24h": 86.72170956775133,
+      "jam_neg": 102.95,
+      "fold": "LOWO_test_F-10",
+      "test_well": "F-10",
+      "seed": 42,
+      "alpha": 0.1,
+      "threshold": 0.266141,
+      "fallback": false,
+      "tp_inner": [
+        63,
+        55,
+        223,
+        2,
+        105,
+        37,
+        102,
+        30
+      ],
+      "n": 7571,
+      "n_pos": 1394,
+      "prev": 0.184124,
+      "auprc": 0.1816,
+      "garwood_upper_95": 95.99796322229734,
+      "syarat_4x_fp": false,
+      "alarm_per_shift": 28.907,
+      "det": {
+        "onsets": 23,
+        "detected_any": 8,
+        "detected_within_H10": 8,
+        "pct_detected": 0.3478,
+        "delay_median_min": 2.5
+      },
+      "gate_A_lulus": false,
+      "ci95_auprc": [
+        0.1234,
+        0.2567
+      ],
+      "ci_memuat_prev": true
+    },
+    {
+      "tp": 141,
+      "fp": 1223,
+      "fn": 1285,
+      "tn": 4741,
+      "n_neg": 5964,
+      "precision": 0.10337243401759531,
+      "recall": 0.09887798036465638,
+      "far_per_24h": 295.2917505030181,
+      "jam_neg": 99.4,
+      "fold": "LOWO_test_F-12",
+      "test_well": "F-12",
+      "seed": 42,
+      "alpha": 0.1,
+      "threshold": 0.200093,
+      "fallback": false,
+      "tp_inner": [
+        118,
+        75,
+        222,
+        6,
+        199,
+        49,
+        153,
+        27
+      ],
+      "n": 7390,
+      "n_pos": 1426,
+      "prev": 0.192963,
+      "auprc": 0.1549,
+      "garwood_upper_95": 312.3170021277891,
+      "syarat_4x_fp": false,
+      "alarm_per_shift": 98.431,
+      "det": {
+        "onsets": 92,
+        "detected_any": 12,
+        "detected_within_H10": 10,
+        "pct_detected": 0.1087,
+        "delay_median_min": 1.0
+      },
+      "gate_A_lulus": false,
+      "ci95_auprc": [
+        0.1146,
+        0.2192
+      ],
+      "ci_memuat_prev": true
+    },
+    {
+      "tp": 64,
+      "fp": 516,
+      "fn": 801,
+      "tn": 9020,
+      "n_neg": 9536,
+      "precision": 0.1103448275862069,
+      "recall": 0.07398843930635839,
+      "far_per_24h": 77.91946308724832,
+      "jam_neg": 158.93333333333334,
+      "fold": "LOWO_test_F-14",
+      "test_well": "F-14",
+      "seed": 42,
+      "alpha": 0.1,
+      "threshold": 0.238677,
+      "fallback": false,
+      "tp_inner": [
+        134,
+        38,
+        227,
+        72,
+        142,
+        36,
+        75,
+        13
+      ],
+      "n": 10401,
+      "n_pos": 865,
+      "prev": 0.083165,
+      "auprc": 0.118,
+      "garwood_upper_95": 84.94194034086397,
+      "syarat_4x_fp": false,
+      "alarm_per_shift": 25.973,
+      "det": {
+        "onsets": 58,
+        "detected_any": 9,
+        "detected_within_H10": 9,
+        "pct_detected": 0.1552,
+        "delay_median_min": 2.0
+      },
+      "gate_A_lulus": false,
+      "ci95_auprc": [
+        0.0592,
+        0.19
+      ],
+      "ci_memuat_prev": true
+    },
+    {
+      "tp": 353,
+      "fp": 2060,
+      "fn": 345,
+      "tn": 3398,
+      "n_neg": 5458,
+      "precision": 0.1462909241607957,
+      "recall": 0.505730659025788,
+      "far_per_24h": 543.4957860021987,
+      "jam_neg": 90.96666666666667,
+      "fold": "LOWO_test_F-15A",
+      "test_well": "F-15A",
+      "seed": 42,
+      "alpha": 0.2,
+      "threshold": 0.164944,
+      "fallback": false,
+      "tp_inner": [
+        534,
+        71,
+        109,
+        35,
+        189,
+        61,
+        120,
+        5
+      ],
+      "n": 6156,
+      "n_pos": 698,
+      "prev": 0.113385,
+      "auprc": 0.1367,
+      "garwood_upper_95": 567.4840657242355,
+      "syarat_4x_fp": false,
+      "alarm_per_shift": 181.165,
+      "det": {
+        "onsets": 33,
+        "detected_any": 28,
+        "detected_within_H10": 25,
+        "pct_detected": 0.7576,
+        "delay_median_min": 0.0
+      },
+      "gate_A_lulus": false,
+      "ci95_auprc": [
+        0.086,
+        0.205
+      ],
+      "ci_memuat_prev": true
+    },
+    {
+      "tp": 1,
+      "fp": 10,
+      "fn": 992,
+      "tn": 7352,
+      "n_neg": 7362,
+      "precision": 0.09090909090909091,
+      "recall": 0.0010070493454179255,
+      "far_per_24h": 1.9559902200488999,
+      "jam_neg": 122.7,
+      "fold": "LOWO_test_F-15_S",
+      "test_well": "F-15_S",
+      "seed": 42,
+      "alpha": 0.05,
+      "threshold": 0.283107,
+      "fallback": false,
+      "tp_inner": [
+        2,
+        2,
+        87,
+        10,
+        83,
+        38,
+        95,
+        7
+      ],
+      "n": 8355,
+      "n_pos": 993,
+      "prev": 0.118851,
+      "auprc": 0.1243,
+      "garwood_upper_95": 3.5971356561403964,
+      "syarat_4x_fp": true,
+      "alarm_per_shift": 0.652,
+      "det": {
+        "onsets": 64,
+        "detected_any": 1,
+        "detected_within_H10": 1,
+        "pct_detected": 0.0156,
+        "delay_median_min": 0.0
+      },
+      "gate_A_lulus": true,
+      "ci95_auprc": [
+        0.0847,
+        0.1655
+      ],
+      "ci_memuat_prev": true
+    },
+    {
+      "tp": 103,
+      "fp": 847,
+      "fn": 518,
+      "tn": 4864,
+      "n_neg": 5711,
+      "precision": 0.10842105263157895,
+      "recall": 0.16586151368760063,
+      "far_per_24h": 213.56680091052357,
+      "jam_neg": 95.18333333333334,
+      "fold": "LOWO_test_F-5",
+      "test_well": "F-5",
+      "seed": 42,
+      "alpha": 0.2,
+      "threshold": 0.187697,
+      "fallback": false,
+      "tp_inner": [
+        214,
+        65,
+        480,
+        42,
+        7,
+        55,
+        66,
+        5
+      ],
+      "n": 6332,
+      "n_pos": 621,
+      "prev": 0.098073,
+      "auprc": 0.1845,
+      "garwood_upper_95": 228.4474350250117,
+      "syarat_4x_fp": false,
+      "alarm_per_shift": 71.189,
+      "det": {
+        "onsets": 40,
+        "detected_any": 11,
+        "detected_within_H10": 10,
+        "pct_detected": 0.25,
+        "delay_median_min": 0.0
+      },
+      "gate_A_lulus": false,
+      "ci95_auprc": [
+        0.0631,
+        0.3888
+      ],
+      "ci_memuat_prev": true
+    },
+    {
+      "tp": 41,
+      "fp": 361,
+      "fn": 380,
+      "tn": 1700,
+      "n_neg": 2061,
+      "precision": 0.10199004975124377,
+      "recall": 0.09738717339667459,
+      "far_per_24h": 252.22707423580783,
+      "jam_neg": 34.35,
+      "fold": "LOWO_test_F-7",
+      "test_well": "F-7",
+      "seed": 42,
+      "alpha": 0.05,
+      "threshold": 0.251741,
+      "fallback": false,
+      "tp_inner": [
+        91,
+        24,
+        38,
+        38,
+        4,
+        91,
+        95,
+        1
+      ],
+      "n": 2482,
+      "n_pos": 421,
+      "prev": 0.169621,
+      "auprc": 0.1309,
+      "garwood_upper_95": 279.6358355018722,
+      "syarat_4x_fp": false,
+      "alarm_per_shift": 84.076,
+      "det": {
+        "onsets": 28,
+        "detected_any": 8,
+        "detected_within_H10": 7,
+        "pct_detected": 0.25,
+        "delay_median_min": 0.5
+      },
+      "gate_A_lulus": false,
+      "ci95_auprc": [
+        0.0814,
+        0.2026
+      ],
+      "ci_memuat_prev": true
+    },
+    {
+      "tp": 20,
+      "fp": 0,
+      "fn": 403,
+      "tn": 1193,
+      "n_neg": 1193,
+      "precision": 1.0,
+      "recall": 0.04728132387706856,
+      "far_per_24h": 0.0,
+      "jam_neg": 19.883333333333333,
+      "fold": "LOWO_test_F-9",
+      "test_well": "F-9",
+      "seed": 42,
+      "alpha": 0.05,
+      "threshold": 0.278598,
+      "fallback": false,
+      "tp_inner": [
+        40,
+        92,
+        32,
+        34,
+        2,
+        8,
+        8,
+        4
+      ],
+      "n": 1616,
+      "n_pos": 423,
+      "prev": 0.261757,
+      "auprc": 0.5172,
+      "garwood_upper_95": 4.452629014186142,
+      "syarat_4x_fp": null,
+      "alarm_per_shift": 0.0,
+      "det": {
+        "onsets": 28,
+        "detected_any": 1,
+        "detected_within_H10": 0,
+        "pct_detected": 0.0,
+        "delay_median_min": 16.0
+      },
+      "gate_A_lulus": true,
+      "ci95_auprc": [
+        0.2217,
+        0.7596
+      ],
+      "ci_memuat_prev": true
+    },
+    {
+      "tp": 2,
+      "fp": 38,
+      "fn": 329,
+      "tn": 1837,
+      "n_neg": 1875,
+      "precision": 0.05,
+      "recall": 0.006042296072507553,
+      "far_per_24h": 29.183999999999997,
+      "jam_neg": 31.25,
+      "fold": "LOWO_test_F-9_A",
+      "test_well": "F-9_A",
+      "seed": 42,
+      "alpha": 0.1,
+      "threshold": 0.227404,
+      "fallback": false,
+      "tp_inner": [
+        78,
+        114,
+        50,
+        116,
+        2,
+        124,
+        35,
+        71
+      ],
+      "n": 2206,
+      "n_pos": 331,
+      "prev": 0.150045,
+      "auprc": 0.1604,
+      "garwood_upper_95": 40.05732012999138,
+      "syarat_4x_fp": false,
+      "alarm_per_shift": 9.728,
+      "det": {
+        "onsets": 24,
+        "detected_any": 2,
+        "detected_within_H10": 2,
+        "pct_detected": 0.0833,
+        "delay_median_min": 4.5
+      },
+      "gate_A_lulus": false,
+      "ci95_auprc": [
+        0.0715,
+        0.2921
+      ],
+      "ci_memuat_prev": true
+    },
+    {
+      "tp": 198,
+      "fp": 869,
+      "fn": 1196,
+      "tn": 5308,
+      "n_neg": 6177,
+      "precision": 0.18556701030927836,
+      "recall": 0.14203730272596843,
+      "far_per_24h": 202.58377853326857,
+      "jam_neg": 102.95,
+      "fold": "LOWO_test_F-10",
+      "test_well": "F-10",
+      "seed": 43,
+      "alpha": 0.2,
+      "threshold": 0.151632,
+      "fallback": false,
+      "tp_inner": [
+        362,
+        93,
+        125,
+        33,
+        167,
+        70,
+        163,
+        258
+      ],
+      "n": 7571,
+      "n_pos": 1394,
+      "prev": 0.184124,
+      "auprc": 0.1642,
+      "garwood_upper_95": 216.51330811563702,
+      "syarat_4x_fp": false,
+      "alarm_per_shift": 67.528,
+      "det": {
+        "onsets": 23,
+        "detected_any": 7,
+        "detected_within_H10": 5,
+        "pct_detected": 0.2174,
+        "delay_median_min": 7.0
+      },
+      "gate_A_lulus": false
+    },
+    {
+      "tp": 10,
+      "fp": 218,
+      "fn": 1416,
+      "tn": 5746,
+      "n_neg": 5964,
+      "precision": 0.043859649122807015,
+      "recall": 0.0070126227208976155,
+      "far_per_24h": 52.63581488933602,
+      "jam_neg": 99.4,
+      "fold": "LOWO_test_F-12",
+      "test_well": "F-12",
+      "seed": 43,
+      "alpha": 0.05,
+      "threshold": 0.253679,
+      "fallback": false,
+      "tp_inner": [
+        14,
+        65,
+        34,
+        1,
+        197,
+        47,
+        93,
+        17
+      ],
+      "n": 7390,
+      "n_pos": 1426,
+      "prev": 0.192963,
+      "auprc": 0.1622,
+      "garwood_upper_95": 60.10624956155959,
+      "syarat_4x_fp": false,
+      "alarm_per_shift": 17.545,
+      "det": {
+        "onsets": 92,
+        "detected_any": 4,
+        "detected_within_H10": 3,
+        "pct_detected": 0.0326,
+        "delay_median_min": 1.0
+      },
+      "gate_A_lulus": false
+    },
+    {
+      "tp": 36,
+      "fp": 83,
+      "fn": 829,
+      "tn": 9453,
+      "n_neg": 9536,
+      "precision": 0.3025210084033613,
+      "recall": 0.04161849710982659,
+      "far_per_24h": 12.533557046979865,
+      "jam_neg": 158.93333333333334,
+      "fold": "LOWO_test_F-14",
+      "test_well": "F-14",
+      "seed": 43,
+      "alpha": 0.05,
+      "threshold": 0.333918,
+      "fallback": false,
+      "tp_inner": [
+        67,
+        6,
+        148,
+        36,
+        112,
+        35,
+        15,
+        2
+      ],
+      "n": 10401,
+      "n_pos": 865,
+      "prev": 0.083165,
+      "auprc": 0.1058,
+      "garwood_upper_95": 15.53722970092944,
+      "syarat_4x_fp": false,
+      "alarm_per_shift": 4.178,
+      "det": {
+        "onsets": 58,
+        "detected_any": 3,
+        "detected_within_H10": 3,
+        "pct_detected": 0.0517,
+        "delay_median_min": 4.0
+      },
+      "gate_A_lulus": false
+    },
+    {
+      "tp": 205,
+      "fp": 574,
+      "fn": 493,
+      "tn": 4884,
+      "n_neg": 5458,
+      "precision": 0.2631578947368421,
+      "recall": 0.29369627507163326,
+      "far_per_24h": 151.44008794430195,
+      "jam_neg": 90.96666666666667,
+      "fold": "LOWO_test_F-15A",
+      "test_well": "F-15A",
+      "seed": 43,
+      "alpha": 0.1,
+      "threshold": 0.22316,
+      "fallback": false,
+      "tp_inner": [
+        112,
+        44,
+        66,
+        3,
+        118,
+        44,
+        77,
+        6
+      ],
+      "n": 6156,
+      "n_pos": 698,
+      "prev": 0.113385,
+      "auprc": 0.2355,
+      "garwood_upper_95": 164.3515825112681,
+      "syarat_4x_fp": false,
+      "alarm_per_shift": 50.48,
+      "det": {
+        "onsets": 33,
+        "detected_any": 16,
+        "detected_within_H10": 16,
+        "pct_detected": 0.4848,
+        "delay_median_min": 0.0
+      },
+      "gate_A_lulus": false
+    },
+    {
+      "tp": 2,
+      "fp": 69,
+      "fn": 991,
+      "tn": 7293,
+      "n_neg": 7362,
+      "precision": 0.028169014084507043,
+      "recall": 0.002014098690835851,
+      "far_per_24h": 13.49633251833741,
+      "jam_neg": 122.7,
+      "fold": "LOWO_test_F-15_S",
+      "test_well": "F-15_S",
+      "seed": 43,
+      "alpha": 0.1,
+      "threshold": 0.206903,
+      "fallback": false,
+      "tp_inner": [
+        94,
+        20,
+        118,
+        12,
+        88,
+        45,
+        118,
+        6
+      ],
+      "n": 8355,
+      "n_pos": 993,
+      "prev": 0.118851,
+      "auprc": 0.1329,
+      "garwood_upper_95": 17.080472585827927,
+      "syarat_4x_fp": false,
+      "alarm_per_shift": 4.499,
+      "det": {
+        "onsets": 64,
+        "detected_any": 2,
+        "detected_within_H10": 2,
+        "pct_detected": 0.0312,
+        "delay_median_min": 3.0
+      },
+      "gate_A_lulus": false
+    },
+    {
+      "tp": 196,
+      "fp": 1180,
+      "fn": 425,
+      "tn": 4531,
+      "n_neg": 5711,
+      "precision": 0.14244186046511628,
+      "recall": 0.31561996779388085,
+      "far_per_24h": 297.5310803712134,
+      "jam_neg": 95.18333333333334,
+      "fold": "LOWO_test_F-5",
+      "test_well": "F-5",
+      "seed": 43,
+      "alpha": 0.2,
+      "threshold": 0.187836,
+      "fallback": false,
+      "tp_inner": [
+        171,
+        115,
+        427,
+        38,
+        23,
+        65,
+        55,
+        28
+      ],
+      "n": 6332,
+      "n_pos": 621,
+      "prev": 0.098073,
+      "auprc": 0.1962,
+      "garwood_upper_95": 315.00411964998045,
+      "syarat_4x_fp": false,
+      "alarm_per_shift": 99.177,
+      "det": {
+        "onsets": 40,
+        "detected_any": 10,
+        "detected_within_H10": 9,
+        "pct_detected": 0.225,
+        "delay_median_min": 0.0
+      },
+      "gate_A_lulus": false
+    },
+    {
+      "tp": 52,
+      "fp": 504,
+      "fn": 369,
+      "tn": 1557,
+      "n_neg": 2061,
+      "precision": 0.09352517985611511,
+      "recall": 0.12351543942992874,
+      "far_per_24h": 352.1397379912663,
+      "jam_neg": 34.35,
+      "fold": "LOWO_test_F-7",
+      "test_well": "F-7",
+      "seed": 43,
+      "alpha": 0.1,
+      "threshold": 0.18133,
+      "fallback": false,
+      "tp_inner": [
+        22,
+        43,
+        56,
+        217,
+        12,
+        185,
+        109,
+        1
+      ],
+      "n": 2482,
+      "n_pos": 421,
+      "prev": 0.169621,
+      "auprc": 0.1375,
+      "garwood_upper_95": 384.2683538087025,
+      "syarat_4x_fp": false,
+      "alarm_per_shift": 117.38,
+      "det": {
+        "onsets": 28,
+        "detected_any": 9,
+        "detected_within_H10": 9,
+        "pct_detected": 0.3214,
+        "delay_median_min": 1.0
+      },
+      "gate_A_lulus": false
+    },
+    {
+      "tp": 19,
+      "fp": 45,
+      "fn": 404,
+      "tn": 1148,
+      "n_neg": 1193,
+      "precision": 0.296875,
+      "recall": 0.04491725768321513,
+      "far_per_24h": 54.31684828164292,
+      "jam_neg": 19.883333333333333,
+      "fold": "LOWO_test_F-9",
+      "test_well": "F-9",
+      "seed": 43,
+      "alpha": 0.05,
+      "threshold": 0.254147,
+      "fallback": false,
+      "tp_inner": [
+        26,
+        59,
+        33,
+        24,
+        8,
+        60,
+        11,
+        1
+      ],
+      "n": 1616,
+      "n_pos": 423,
+      "prev": 0.261757,
+      "auprc": 0.4064,
+      "garwood_upper_95": 72.68021652608607,
+      "syarat_4x_fp": false,
+      "alarm_per_shift": 18.106,
+      "det": {
+        "onsets": 28,
+        "detected_any": 4,
+        "detected_within_H10": 1,
+        "pct_detected": 0.0357,
+        "delay_median_min": 17.0
+      },
+      "gate_A_lulus": false
+    },
+    {
+      "tp": 0,
+      "fp": 33,
+      "fn": 331,
+      "tn": 1842,
+      "n_neg": 1875,
+      "precision": 0.0,
+      "recall": 0.0,
+      "far_per_24h": 25.344,
+      "jam_neg": 31.25,
+      "fold": "LOWO_test_F-9_A",
+      "test_well": "F-9_A",
+      "seed": 43,
+      "alpha": 0.05,
+      "threshold": 0.28745,
+      "fallback": false,
+      "tp_inner": [
+        25,
+        43,
+        42,
+        32,
+        2,
+        98,
+        36,
+        11
+      ],
+      "n": 2206,
+      "n_pos": 331,
+      "prev": 0.150045,
+      "auprc": 0.2179,
+      "garwood_upper_95": 35.59239879872202,
+      "syarat_4x_fp": false,
+      "alarm_per_shift": 8.448,
+      "det": {
+        "onsets": 24,
+        "detected_any": 0,
+        "detected_within_H10": 0,
+        "pct_detected": 0.0,
+        "delay_median_min": null
+      },
+      "gate_A_lulus": false
+    },
+    {
+      "tp": 0,
+      "fp": 1,
+      "fn": 1394,
+      "tn": 6176,
+      "n_neg": 6177,
+      "precision": 0.0,
+      "recall": 0.0,
+      "far_per_24h": 0.23312287518212724,
+      "jam_neg": 102.95,
+      "fold": "LOWO_test_F-10",
+      "test_well": "F-10",
+      "seed": 44,
+      "alpha": 0.01,
+      "threshold": 0.520097,
+      "fallback": false,
+      "tp_inner": [
+        1,
+        32,
+        42,
+        3,
+        74,
+        11,
+        4,
+        4
+      ],
+      "n": 7571,
+      "n_pos": 1394,
+      "prev": 0.184124,
+      "auprc": 0.1717,
+      "garwood_upper_95": 1.2988775267851729,
+      "syarat_4x_fp": true,
+      "alarm_per_shift": 0.078,
+      "det": {
+        "onsets": 23,
+        "detected_any": 0,
+        "detected_within_H10": 0,
+        "pct_detected": 0.0,
+        "delay_median_min": null
+      },
+      "gate_A_lulus": true
+    },
+    {
+      "tp": 15,
+      "fp": 727,
+      "fn": 1411,
+      "tn": 5237,
+      "n_neg": 5964,
+      "precision": 0.02021563342318059,
+      "recall": 0.010518934081346423,
+      "far_per_24h": 175.53319919517102,
+      "jam_neg": 99.4,
+      "fold": "LOWO_test_F-12",
+      "test_well": "F-12",
+      "seed": 44,
+      "alpha": 0.1,
+      "threshold": 0.194528,
+      "fallback": false,
+      "tp_inner": [
+        113,
+        83,
+        217,
+        4,
+        172,
+        59,
+        124,
+        53
+      ],
+      "n": 7390,
+      "n_pos": 1426,
+      "prev": 0.192963,
+      "auprc": 0.162,
+      "garwood_upper_95": 188.77023918046424,
+      "syarat_4x_fp": false,
+      "alarm_per_shift": 58.511,
+      "det": {
+        "onsets": 92,
+        "detected_any": 6,
+        "detected_within_H10": 5,
+        "pct_detected": 0.0543,
+        "delay_median_min": 3.0
+      },
+      "gate_A_lulus": false
+    },
+    {
+      "tp": 42,
+      "fp": 189,
+      "fn": 823,
+      "tn": 9347,
+      "n_neg": 9536,
+      "precision": 0.18181818181818182,
+      "recall": 0.048554913294797684,
+      "far_per_24h": 28.54026845637584,
+      "jam_neg": 158.93333333333334,
+      "fold": "LOWO_test_F-14",
+      "test_well": "F-14",
+      "seed": 44,
+      "alpha": 0.05,
+      "threshold": 0.32488,
+      "fallback": false,
+      "tp_inner": [
+        87,
+        3,
+        160,
+        31,
+        95,
+        27,
+        17,
+        3
+      ],
+      "n": 10401,
+      "n_pos": 865,
+      "prev": 0.083165,
+      "auprc": 0.1153,
+      "garwood_upper_95": 32.91199893379013,
+      "syarat_4x_fp": false,
+      "alarm_per_shift": 9.513,
+      "det": {
+        "onsets": 58,
+        "detected_any": 4,
+        "detected_within_H10": 4,
+        "pct_detected": 0.069,
+        "delay_median_min": 0.5
+      },
+      "gate_A_lulus": false
+    },
+    {
+      "tp": 16,
+      "fp": 94,
+      "fn": 682,
+      "tn": 5364,
+      "n_neg": 5458,
+      "precision": 0.14545454545454545,
+      "recall": 0.022922636103151862,
+      "far_per_24h": 24.80029314767314,
+      "jam_neg": 90.96666666666667,
+      "fold": "LOWO_test_F-15A",
+      "test_well": "F-15A",
+      "seed": 44,
+      "alpha": 0.05,
+      "threshold": 0.318759,
+      "fallback": false,
+      "tp_inner": [
+        26,
+        43,
+        45,
+        10,
+        133,
+        32,
+        43,
+        16
+      ],
+      "n": 6156,
+      "n_pos": 698,
+      "prev": 0.113385,
+      "auprc": 0.1548,
+      "garwood_upper_95": 30.34927793505285,
+      "syarat_4x_fp": false,
+      "alarm_per_shift": 8.267,
+      "det": {
+        "onsets": 33,
+        "detected_any": 7,
+        "detected_within_H10": 6,
+        "pct_detected": 0.1818,
+        "delay_median_min": 10.0
+      },
+      "gate_A_lulus": false
+    },
+    {
+      "tp": 3,
+      "fp": 113,
+      "fn": 990,
+      "tn": 7249,
+      "n_neg": 7362,
+      "precision": 0.02586206896551724,
+      "recall": 0.0030211480362537764,
+      "far_per_24h": 22.102689486552567,
+      "jam_neg": 122.7,
+      "fold": "LOWO_test_F-15_S",
+      "test_well": "F-15_S",
+      "seed": 44,
+      "alpha": 0.1,
+      "threshold": 0.219463,
+      "fallback": false,
+      "tp_inner": [
+        71,
+        42,
+        114,
+        36,
+        88,
+        53,
+        128,
+        1
+      ],
+      "n": 8355,
+      "n_pos": 993,
+      "prev": 0.118851,
+      "auprc": 0.1333,
+      "garwood_upper_95": 26.573528651552152,
+      "syarat_4x_fp": false,
+      "alarm_per_shift": 7.368,
+      "det": {
+        "onsets": 64,
+        "detected_any": 2,
+        "detected_within_H10": 2,
+        "pct_detected": 0.0312,
+        "delay_median_min": 0.0
+      },
+      "gate_A_lulus": false
+    },
+    {
+      "tp": 159,
+      "fp": 525,
+      "fn": 462,
+      "tn": 5186,
+      "n_neg": 5711,
+      "precision": 0.2324561403508772,
+      "recall": 0.2560386473429952,
+      "far_per_24h": 132.37611626685344,
+      "jam_neg": 95.18333333333334,
+      "fold": "LOWO_test_F-5",
+      "test_well": "F-5",
+      "seed": 44,
+      "alpha": 0.1,
+      "threshold": 0.25536,
+      "fallback": false,
+      "tp_inner": [
+        47,
+        34,
+        362,
+        20,
+        5,
+        45,
+        25,
+        2
+      ],
+      "n": 6332,
+      "n_pos": 621,
+      "prev": 0.098073,
+      "auprc": 0.2094,
+      "garwood_upper_95": 144.19936965538693,
+      "syarat_4x_fp": false,
+      "alarm_per_shift": 44.125,
+      "det": {
+        "onsets": 40,
+        "detected_any": 6,
+        "detected_within_H10": 5,
+        "pct_detected": 0.125,
+        "delay_median_min": 0.0
+      },
+      "gate_A_lulus": false
+    },
+    {
+      "tp": 35,
+      "fp": 370,
+      "fn": 386,
+      "tn": 1691,
+      "n_neg": 2061,
+      "precision": 0.08641975308641975,
+      "recall": 0.0831353919239905,
+      "far_per_24h": 258.5152838427947,
+      "jam_neg": 34.35,
+      "fold": "LOWO_test_F-7",
+      "test_well": "F-7",
+      "seed": 44,
+      "alpha": 0.05,
+      "threshold": 0.257077,
+      "fallback": false,
+      "tp_inner": [
+        61,
+        8,
+        61,
+        199,
+        5,
+        116,
+        101,
+        10
+      ],
+      "n": 2482,
+      "n_pos": 421,
+      "prev": 0.169621,
+      "auprc": 0.1239,
+      "garwood_upper_95": 286.2460217761357,
+      "syarat_4x_fp": false,
+      "alarm_per_shift": 86.172,
+      "det": {
+        "onsets": 28,
+        "detected_any": 8,
+        "detected_within_H10": 7,
+        "pct_detected": 0.25,
+        "delay_median_min": 0.5
+      },
+      "gate_A_lulus": false
+    },
+    {
+      "tp": 13,
+      "fp": 58,
+      "fn": 410,
+      "tn": 1135,
+      "n_neg": 1193,
+      "precision": 0.18309859154929578,
+      "recall": 0.030732860520094562,
+      "far_per_24h": 70.00838222967309,
+      "jam_neg": 19.883333333333333,
+      "fold": "LOWO_test_F-9",
+      "test_well": "F-9",
+      "seed": 44,
+      "alpha": 0.05,
+      "threshold": 0.25639,
+      "fallback": false,
+      "tp_inner": [
+        14,
+        64,
+        34,
+        22,
+        1,
+        8,
+        12,
+        13
+      ],
+      "n": 1616,
+      "n_pos": 423,
+      "prev": 0.261757,
+      "auprc": 0.3601,
+      "garwood_upper_95": 90.5020684261192,
+      "syarat_4x_fp": false,
+      "alarm_per_shift": 23.336,
+      "det": {
+        "onsets": 28,
+        "detected_any": 3,
+        "detected_within_H10": 2,
+        "pct_detected": 0.0714,
+        "delay_median_min": 0.0
+      },
+      "gate_A_lulus": false
+    },
+    {
+      "tp": 25,
+      "fp": 78,
+      "fn": 306,
+      "tn": 1797,
+      "n_neg": 1875,
+      "precision": 0.24271844660194175,
+      "recall": 0.0755287009063444,
+      "far_per_24h": 59.903999999999996,
+      "jam_neg": 31.25,
+      "fold": "LOWO_test_F-9_A",
+      "test_well": "F-9_A",
+      "seed": 44,
+      "alpha": 0.05,
+      "threshold": 0.261296,
+      "fallback": false,
+      "tp_inner": [
+        21,
+        55,
+        51,
+        17,
+        3,
+        76,
+        36,
+        59
+      ],
+      "n": 2206,
+      "n_pos": 331,
+      "prev": 0.150045,
+      "auprc": 0.16,
+      "garwood_upper_95": 74.762903079068,
+      "syarat_4x_fp": false,
+      "alarm_per_shift": 19.968,
+      "det": {
+        "onsets": 24,
+        "detected_any": 9,
+        "detected_within_H10": 7,
+        "pct_detected": 0.2917,
+        "delay_median_min": 1.0
+      },
+      "gate_A_lulus": false
+    },
+    {
+      "tp": 21,
+      "fp": 39,
+      "fn": 1373,
+      "tn": 6138,
+      "n_neg": 6177,
+      "precision": 0.35,
+      "recall": 0.015064562410329985,
+      "far_per_24h": 9.091792132102963,
+      "jam_neg": 102.95,
+      "fold": "LOWO_test_F-10",
+      "test_well": "F-10",
+      "seed": 45,
+      "alpha": 0.05,
+      "threshold": 0.320998,
+      "fallback": false,
+      "tp_inner": [
+        22,
+        42,
+        1,
+        2,
+        78,
+        39,
+        69,
+        33
+      ],
+      "n": 7571,
+      "n_pos": 1394,
+      "prev": 0.184124,
+      "auprc": 0.1884,
+      "garwood_upper_95": 12.428779143079051,
+      "syarat_4x_fp": false,
+      "alarm_per_shift": 3.031,
+      "det": {
+        "onsets": 23,
+        "detected_any": 2,
+        "detected_within_H10": 0,
+        "pct_detected": 0.0,
+        "delay_median_min": 13.0
+      },
+      "gate_A_lulus": false
+    },
+    {
+      "tp": 89,
+      "fp": 1188,
+      "fn": 1337,
+      "tn": 4776,
+      "n_neg": 5964,
+      "precision": 0.0696945967110415,
+      "recall": 0.06241234221598878,
+      "far_per_24h": 286.84104627766595,
+      "jam_neg": 99.4,
+      "fold": "LOWO_test_F-12",
+      "test_well": "F-12",
+      "seed": 45,
+      "alpha": 0.05,
+      "threshold": 0.263297,
+      "fallback": false,
+      "tp_inner": [
+        27,
+        60,
+        118,
+        1,
+        154,
+        36,
+        82,
+        3
+      ],
+      "n": 7390,
+      "n_pos": 1426,
+      "prev": 0.192963,
+      "auprc": 0.1348,
+      "garwood_upper_95": 303.62785135126643,
+      "syarat_4x_fp": false,
+      "alarm_per_shift": 95.614,
+      "det": {
+        "onsets": 92,
+        "detected_any": 8,
+        "detected_within_H10": 6,
+        "pct_detected": 0.0652,
+        "delay_median_min": 1.0
+      },
+      "gate_A_lulus": false
+    },
+    {
+      "tp": 67,
+      "fp": 501,
+      "fn": 798,
+      "tn": 9035,
+      "n_neg": 9536,
+      "precision": 0.11795774647887323,
+      "recall": 0.07745664739884393,
+      "far_per_24h": 75.65436241610739,
+      "jam_neg": 158.93333333333334,
+      "fold": "LOWO_test_F-14",
+      "test_well": "F-14",
+      "seed": 45,
+      "alpha": 0.1,
+      "threshold": 0.245753,
+      "fallback": false,
+      "tp_inner": [
+        188,
+        15,
+        174,
+        43,
+        174,
+        35,
+        61,
+        20
+      ],
+      "n": 10401,
+      "n_pos": 865,
+      "prev": 0.083165,
+      "auprc": 0.1255,
+      "garwood_upper_95": 82.57847874521364,
+      "syarat_4x_fp": false,
+      "alarm_per_shift": 25.218,
+      "det": {
+        "onsets": 58,
+        "detected_any": 9,
+        "detected_within_H10": 9,
+        "pct_detected": 0.1552,
+        "delay_median_min": 1.0
+      },
+      "gate_A_lulus": false
+    },
+    {
+      "tp": 18,
+      "fp": 141,
+      "fn": 680,
+      "tn": 5317,
+      "n_neg": 5458,
+      "precision": 0.11320754716981132,
+      "recall": 0.025787965616045846,
+      "far_per_24h": 37.20043972150971,
+      "jam_neg": 90.96666666666667,
+      "fold": "LOWO_test_F-15A",
+      "test_well": "F-15A",
+      "seed": 45,
+      "alpha": 0.05,
+      "threshold": 0.348666,
+      "fallback": false,
+      "tp_inner": [
+        83,
+        38,
+        33,
+        4,
+        162,
+        31,
+        42,
+        4
+      ],
+      "n": 6156,
+      "n_pos": 698,
+      "prev": 0.113385,
+      "auprc": 0.1178,
+      "garwood_upper_95": 43.87222731225293,
+      "syarat_4x_fp": false,
+      "alarm_per_shift": 12.4,
+      "det": {
+        "onsets": 33,
+        "detected_any": 8,
+        "detected_within_H10": 7,
+        "pct_detected": 0.2121,
+        "delay_median_min": 10.0
+      },
+      "gate_A_lulus": false
+    },
+    {
+      "tp": 11,
+      "fp": 147,
+      "fn": 982,
+      "tn": 7215,
+      "n_neg": 7362,
+      "precision": 0.06962025316455696,
+      "recall": 0.011077542799597181,
+      "far_per_24h": 28.753056234718827,
+      "jam_neg": 122.7,
+      "fold": "LOWO_test_F-15_S",
+      "test_well": "F-15_S",
+      "seed": 45,
+      "alpha": 0.1,
+      "threshold": 0.200634,
+      "fallback": false,
+      "tp_inner": [
+        69,
+        17,
+        130,
+        8,
+        86,
+        57,
+        134,
+        28
+      ],
+      "n": 8355,
+      "n_pos": 993,
+      "prev": 0.118851,
+      "auprc": 0.1394,
+      "garwood_upper_95": 33.79492746655223,
+      "syarat_4x_fp": false,
+      "alarm_per_shift": 9.584,
+      "det": {
+        "onsets": 64,
+        "detected_any": 2,
+        "detected_within_H10": 1,
+        "pct_detected": 0.0156,
+        "delay_median_min": 7.5
+      },
+      "gate_A_lulus": false
+    },
+    {
+      "tp": 113,
+      "fp": 981,
+      "fn": 508,
+      "tn": 4730,
+      "n_neg": 5711,
+      "precision": 0.10329067641681901,
+      "recall": 0.1819645732689211,
+      "far_per_24h": 247.35422868149186,
+      "jam_neg": 95.18333333333334,
+      "fold": "LOWO_test_F-5",
+      "test_well": "F-5",
+      "seed": 45,
+      "alpha": 0.2,
+      "threshold": 0.197298,
+      "fallback": false,
+      "tp_inner": [
+        95,
+        99,
+        452,
+        44,
+        13,
+        61,
+        115,
+        7
+      ],
+      "n": 6332,
+      "n_pos": 621,
+      "prev": 0.098073,
+      "auprc": 0.1687,
+      "garwood_upper_95": 263.33032440171434,
+      "syarat_4x_fp": false,
+      "alarm_per_shift": 82.451,
+      "det": {
+        "onsets": 40,
+        "detected_any": 7,
+        "detected_within_H10": 6,
+        "pct_detected": 0.15,
+        "delay_median_min": 0.0
+      },
+      "gate_A_lulus": false
+    },
+    {
+      "tp": 47,
+      "fp": 381,
+      "fn": 374,
+      "tn": 1680,
+      "n_neg": 2061,
+      "precision": 0.10981308411214953,
+      "recall": 0.11163895486935867,
+      "far_per_24h": 266.2008733624454,
+      "jam_neg": 34.35,
+      "fold": "LOWO_test_F-7",
+      "test_well": "F-7",
+      "seed": 45,
+      "alpha": 0.1,
+      "threshold": 0.194638,
+      "fallback": false,
+      "tp_inner": [
+        155,
+        46,
+        87,
+        143,
+        6,
+        131,
+        160,
+        10
+      ],
+      "n": 2482,
+      "n_pos": 421,
+      "prev": 0.169621,
+      "auprc": 0.131,
+      "garwood_upper_95": 294.3198774710146,
+      "syarat_4x_fp": false,
+      "alarm_per_shift": 88.734,
+      "det": {
+        "onsets": 28,
+        "detected_any": 9,
+        "detected_within_H10": 9,
+        "pct_detected": 0.3214,
+        "delay_median_min": 1.0
+      },
+      "gate_A_lulus": false
+    },
+    {
+      "tp": 63,
+      "fp": 49,
+      "fn": 360,
+      "tn": 1144,
+      "n_neg": 1193,
+      "precision": 0.5625,
+      "recall": 0.14893617021276595,
+      "far_per_24h": 59.14501257334451,
+      "jam_neg": 19.883333333333333,
+      "fold": "LOWO_test_F-9",
+      "test_well": "F-9",
+      "seed": 45,
+      "alpha": 0.1,
+      "threshold": 0.202128,
+      "fallback": false,
+      "tp_inner": [
+        101,
+        340,
+        31,
+        168,
+        15,
+        89,
+        23,
+        5
+      ],
+      "n": 1616,
+      "n_pos": 423,
+      "prev": 0.261757,
+      "auprc": 0.4553,
+      "garwood_upper_95": 78.19284323034563,
+      "syarat_4x_fp": false,
+      "alarm_per_shift": 19.715,
+      "det": {
+        "onsets": 28,
+        "detected_any": 4,
+        "detected_within_H10": 4,
+        "pct_detected": 0.1429,
+        "delay_median_min": 0.0
+      },
+      "gate_A_lulus": false
+    },
+    {
+      "tp": 4,
+      "fp": 25,
+      "fn": 327,
+      "tn": 1850,
+      "n_neg": 1875,
+      "precision": 0.13793103448275862,
+      "recall": 0.012084592145015106,
+      "far_per_24h": 19.200000000000003,
+      "jam_neg": 31.25,
+      "fold": "LOWO_test_F-9_A",
+      "test_well": "F-9_A",
+      "seed": 45,
+      "alpha": 0.05,
+      "threshold": 0.308594,
+      "fallback": false,
+      "tp_inner": [
+        16,
+        17,
+        40,
+        119,
+        8,
+        76,
+        25,
+        31
+      ],
+      "n": 2206,
+      "n_pos": 331,
+      "prev": 0.150045,
+      "auprc": 0.172,
+      "garwood_upper_95": 28.342987543703323,
+      "syarat_4x_fp": false,
+      "alarm_per_shift": 6.4,
+      "det": {
+        "onsets": 24,
+        "detected_any": 3,
+        "detected_within_H10": 3,
+        "pct_detected": 0.125,
+        "delay_median_min": 1.0
+      },
+      "gate_A_lulus": false
+    },
+    {
+      "tp": 32,
+      "fp": 156,
+      "fn": 1362,
+      "tn": 6021,
+      "n_neg": 6177,
+      "precision": 0.1702127659574468,
+      "recall": 0.02295552367288379,
+      "far_per_24h": 36.36716852841185,
+      "jam_neg": 102.95,
+      "fold": "LOWO_test_F-10",
+      "test_well": "F-10",
+      "seed": 46,
+      "alpha": 0.1,
+      "threshold": 0.238072,
+      "fallback": false,
+      "tp_inner": [
+        103,
+        44,
+        332,
+        3,
+        92,
+        43,
+        93,
+        84
+      ],
+      "n": 7571,
+      "n_pos": 1394,
+      "prev": 0.184124,
+      "auprc": 0.1988,
+      "garwood_upper_95": 42.5428942291455,
+      "syarat_4x_fp": false,
+      "alarm_per_shift": 12.122,
+      "det": {
+        "onsets": 23,
+        "detected_any": 1,
+        "detected_within_H10": 1,
+        "pct_detected": 0.0435,
+        "delay_median_min": 10.0
+      },
+      "gate_A_lulus": false
+    },
+    {
+      "tp": 109,
+      "fp": 1206,
+      "fn": 1317,
+      "tn": 4758,
+      "n_neg": 5964,
+      "precision": 0.08288973384030418,
+      "recall": 0.07643758765778401,
+      "far_per_24h": 291.1871227364185,
+      "jam_neg": 99.4,
+      "fold": "LOWO_test_F-12",
+      "test_well": "F-12",
+      "seed": 46,
+      "alpha": 0.05,
+      "threshold": 0.251144,
+      "fallback": false,
+      "tp_inner": [
+        63,
+        55,
+        104,
+        1,
+        122,
+        47,
+        114,
+        16
+      ],
+      "n": 7390,
+      "n_pos": 1426,
+      "prev": 0.192963,
+      "auprc": 0.1426,
+      "garwood_upper_95": 308.09698943085186,
+      "syarat_4x_fp": false,
+      "alarm_per_shift": 97.062,
+      "det": {
+        "onsets": 92,
+        "detected_any": 15,
+        "detected_within_H10": 11,
+        "pct_detected": 0.1196,
+        "delay_median_min": 2.0
+      },
+      "gate_A_lulus": false
+    },
+    {
+      "tp": 39,
+      "fp": 231,
+      "fn": 826,
+      "tn": 9305,
+      "n_neg": 9536,
+      "precision": 0.14444444444444443,
+      "recall": 0.04508670520231214,
+      "far_per_24h": 34.88255033557047,
+      "jam_neg": 158.93333333333334,
+      "fold": "LOWO_test_F-14",
+      "test_well": "F-14",
+      "seed": 46,
+      "alpha": 0.05,
+      "threshold": 0.315219,
+      "fallback": false,
+      "tp_inner": [
+        130,
+        5,
+        88,
+        51,
+        130,
+        29,
+        52,
+        4
+      ],
+      "n": 10401,
+      "n_pos": 865,
+      "prev": 0.083165,
+      "auprc": 0.1076,
+      "garwood_upper_95": 39.68288167556966,
+      "syarat_4x_fp": false,
+      "alarm_per_shift": 11.628,
+      "det": {
+        "onsets": 58,
+        "detected_any": 4,
+        "detected_within_H10": 4,
+        "pct_detected": 0.069,
+        "delay_median_min": 1.5
+      },
+      "gate_A_lulus": false
+    },
+    {
+      "tp": 254,
+      "fp": 971,
+      "fn": 444,
+      "tn": 4487,
+      "n_neg": 5458,
+      "precision": 0.2073469387755102,
+      "recall": 0.3638968481375358,
+      "far_per_24h": 256.181751557347,
+      "jam_neg": 90.96666666666667,
+      "fold": "LOWO_test_F-15A",
+      "test_well": "F-15A",
+      "seed": 46,
+      "alpha": 0.2,
+      "threshold": 0.171686,
+      "fallback": false,
+      "tp_inner": [
+        381,
+        64,
+        129,
+        19,
+        236,
+        46,
+        112,
+        4
+      ],
+      "n": 6156,
+      "n_pos": 698,
+      "prev": 0.113385,
+      "auprc": 0.2047,
+      "garwood_upper_95": 272.8156769969895,
+      "syarat_4x_fp": false,
+      "alarm_per_shift": 85.394,
+      "det": {
+        "onsets": 33,
+        "detected_any": 21,
+        "detected_within_H10": 21,
+        "pct_detected": 0.6364,
+        "delay_median_min": 0.0
+      },
+      "gate_A_lulus": false
+    },
+    {
+      "tp": 1,
+      "fp": 53,
+      "fn": 992,
+      "tn": 7309,
+      "n_neg": 7362,
+      "precision": 0.018518518518518517,
+      "recall": 0.0010070493454179255,
+      "far_per_24h": 10.366748166259168,
+      "jam_neg": 122.7,
+      "fold": "LOWO_test_F-15_S",
+      "test_well": "F-15_S",
+      "seed": 46,
+      "alpha": 0.1,
+      "threshold": 0.205465,
+      "fallback": false,
+      "tp_inner": [
+        109,
+        41,
+        96,
+        8,
+        78,
+        56,
+        118,
+        16
+      ],
+      "n": 8355,
+      "n_pos": 993,
+      "prev": 0.118851,
+      "auprc": 0.1309,
+      "garwood_upper_95": 13.55996184434313,
+      "syarat_4x_fp": false,
+      "alarm_per_shift": 3.456,
+      "det": {
+        "onsets": 64,
+        "detected_any": 1,
+        "detected_within_H10": 0,
+        "pct_detected": 0.0,
+        "delay_median_min": 15.0
+      },
+      "gate_A_lulus": false
+    },
+    {
+      "tp": 106,
+      "fp": 251,
+      "fn": 515,
+      "tn": 5460,
+      "n_neg": 5711,
+      "precision": 0.2969187675070028,
+      "recall": 0.1706924315619968,
+      "far_per_24h": 63.28839082472421,
+      "jam_neg": 95.18333333333334,
+      "fold": "LOWO_test_F-5",
+      "test_well": "F-5",
+      "seed": 46,
+      "alpha": 0.1,
+      "threshold": 0.305193,
+      "fallback": false,
+      "tp_inner": [
+        22,
+        69,
+        303,
+        12,
+        1,
+        34,
+        15,
+        2
+      ],
+      "n": 6332,
+      "n_pos": 621,
+      "prev": 0.098073,
+      "auprc": 0.1925,
+      "garwood_upper_95": 71.62166201366318,
+      "syarat_4x_fp": false,
+      "alarm_per_shift": 21.096,
+      "det": {
+        "onsets": 40,
+        "detected_any": 5,
+        "detected_within_H10": 4,
+        "pct_detected": 0.1,
+        "delay_median_min": 2.0
+      },
+      "gate_A_lulus": false
+    },
+    {
+      "tp": 51,
+      "fp": 497,
+      "fn": 370,
+      "tn": 1564,
+      "n_neg": 2061,
+      "precision": 0.09306569343065693,
+      "recall": 0.12114014251781473,
+      "far_per_24h": 347.2489082969432,
+      "jam_neg": 34.35,
+      "fold": "LOWO_test_F-7",
+      "test_well": "F-7",
+      "seed": 46,
+      "alpha": 0.1,
+      "threshold": 0.184494,
+      "fallback": false,
+      "tp_inner": [
+        138,
+        46,
+        94,
+        153,
+        17,
+        95,
+        129,
+        1
+      ],
+      "n": 2482,
+      "n_pos": 421,
+      "prev": 0.169621,
+      "auprc": 0.1292,
+      "garwood_upper_95": 379.1634587592674,
+      "syarat_4x_fp": false,
+      "alarm_per_shift": 115.75,
+      "det": {
+        "onsets": 28,
+        "detected_any": 10,
+        "detected_within_H10": 10,
+        "pct_detected": 0.3571,
+        "delay_median_min": 0.5
+      },
+      "gate_A_lulus": false
+    },
+    {
+      "tp": 77,
+      "fp": 90,
+      "fn": 346,
+      "tn": 1103,
+      "n_neg": 1193,
+      "precision": 0.46107784431137727,
+      "recall": 0.18203309692671396,
+      "far_per_24h": 108.63369656328584,
+      "jam_neg": 19.883333333333333,
+      "fold": "LOWO_test_F-9",
+      "test_well": "F-9",
+      "seed": 46,
+      "alpha": 0.1,
+      "threshold": 0.178025,
+      "fallback": false,
+      "tp_inner": [
+        98,
+        287,
+        50,
+        30,
+        5,
+        11,
+        29,
+        15
+      ],
+      "n": 1616,
+      "n_pos": 423,
+      "prev": 0.261757,
+      "auprc": 0.4284,
+      "garwood_upper_95": 133.52925641028102,
+      "syarat_4x_fp": false,
+      "alarm_per_shift": 36.211,
+      "det": {
+        "onsets": 28,
+        "detected_any": 9,
+        "detected_within_H10": 6,
+        "pct_detected": 0.2143,
+        "delay_median_min": 6.0
+      },
+      "gate_A_lulus": false
+    },
+    {
+      "tp": 1,
+      "fp": 26,
+      "fn": 330,
+      "tn": 1849,
+      "n_neg": 1875,
+      "precision": 0.037037037037037035,
+      "recall": 0.0030211480362537764,
+      "far_per_24h": 19.968,
+      "jam_neg": 31.25,
+      "fold": "LOWO_test_F-9_A",
+      "test_well": "F-9_A",
+      "seed": 46,
+      "alpha": 0.05,
+      "threshold": 0.275641,
+      "fallback": false,
+      "tp_inner": [
+        2,
+        12,
+        50,
+        163,
+        7,
+        136,
+        24,
+        67
+      ],
+      "n": 2206,
+      "n_pos": 331,
+      "prev": 0.150045,
+      "auprc": 0.1742,
+      "garwood_upper_95": 29.257746495839996,
+      "syarat_4x_fp": false,
+      "alarm_per_shift": 6.656,
+      "det": {
+        "onsets": 24,
+        "detected_any": 1,
+        "detected_within_H10": 1,
+        "pct_detected": 0.0417,
+        "delay_median_min": 0.0
+      },
+      "gate_A_lulus": false
+    }
+  ],
+  "titik_operasi": [
+    {
+      "seed": 42,
+      "fold": "LOWO_test_F-10",
+      "alpha": 0.1,
+      "threshold": 0.26614108302540634,
+      "fallback": false,
+      "kandidat": [
+        {
+          "alpha": 0.0005,
+          "threshold": 0.8097819764076537,
+          "tp_inner": [
+            0,
+            21,
+            0,
+            0,
+            53,
+            0,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.001,
+          "threshold": 0.7464809155267927,
+          "tp_inner": [
+            0,
+            21,
+            0,
+            0,
+            64,
+            0,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.002,
+          "threshold": 0.6729446318498385,
+          "tp_inner": [
+            0,
+            21,
+            0,
+            0,
+            66,
+            9,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.005,
+          "threshold": 0.5742310883032026,
+          "tp_inner": [
+            0,
+            24,
+            0,
+            0,
+            73,
+            10,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.01,
+          "threshold": 0.5004995221323374,
+          "tp_inner": [
+            1,
+            29,
+            11,
+            0,
+            75,
+            13,
+            0,
+            1
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.02,
+          "threshold": 0.4370730896167247,
+          "tp_inner": [
+            5,
+            31,
+            16,
+            0,
+            77,
+            19,
+            0,
+            2
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.05,
+          "threshold": 0.3413477629343485,
+          "tp_inner": [
+            16,
+            35,
+            95,
+            0,
+            87,
+            29,
+            37,
+            11
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.1,
+          "threshold": 0.26614108302540634,
+          "tp_inner": [
+            63,
+            55,
+            223,
+            2,
+            105,
+            37,
+            102,
+            30
+          ],
+          "ok": true
+        }
+      ]
+    },
+    {
+      "seed": 42,
+      "fold": "LOWO_test_F-12",
+      "alpha": 0.1,
+      "threshold": 0.20009326361965366,
+      "fallback": false,
+      "kandidat": [
+        {
+          "alpha": 0.0005,
+          "threshold": 0.8801296626869087,
+          "tp_inner": [
+            0,
+            30,
+            0,
+            0,
+            31,
+            0,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.001,
+          "threshold": 0.8343020780581986,
+          "tp_inner": [
+            0,
+            31,
+            0,
+            0,
+            47,
+            0,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.002,
+          "threshold": 0.7789854800966548,
+          "tp_inner": [
+            0,
+            31,
+            0,
+            0,
+            62,
+            0,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.005,
+          "threshold": 0.5812819752032142,
+          "tp_inner": [
+            0,
+            32,
+            0,
+            0,
+            66,
+            9,
+            22,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.01,
+          "threshold": 0.45970296184875326,
+          "tp_inner": [
+            0,
+            34,
+            12,
+            0,
+            77,
+            23,
+            55,
+            1
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.02,
+          "threshold": 0.37621128383403885,
+          "tp_inner": [
+            1,
+            36,
+            99,
+            0,
+            94,
+            30,
+            74,
+            5
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.05,
+          "threshold": 0.27441671303207493,
+          "tp_inner": [
+            15,
+            54,
+            193,
+            0,
+            145,
+            42,
+            109,
+            13
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.1,
+          "threshold": 0.20009326361965366,
+          "tp_inner": [
+            118,
+            75,
+            222,
+            6,
+            199,
+            49,
+            153,
+            27
+          ],
+          "ok": true
+        }
+      ]
+    },
+    {
+      "seed": 42,
+      "fold": "LOWO_test_F-14",
+      "alpha": 0.1,
+      "threshold": 0.23867723385687076,
+      "fallback": false,
+      "kandidat": [
+        {
+          "alpha": 0.0005,
+          "threshold": 0.9156504070225799,
+          "tp_inner": [
+            0,
+            0,
+            0,
+            0,
+            35,
+            0,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.001,
+          "threshold": 0.8285136388235053,
+          "tp_inner": [
+            0,
+            0,
+            0,
+            0,
+            53,
+            0,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.002,
+          "threshold": 0.7570094204793153,
+          "tp_inner": [
+            0,
+            0,
+            0,
+            0,
+            66,
+            0,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.005,
+          "threshold": 0.6776574576614586,
+          "tp_inner": [
+            0,
+            0,
+            5,
+            8,
+            68,
+            0,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.01,
+          "threshold": 0.5886096616645036,
+          "tp_inner": [
+            0,
+            1,
+            31,
+            14,
+            68,
+            8,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.02,
+          "threshold": 0.5162004882091862,
+          "tp_inner": [
+            0,
+            1,
+            74,
+            18,
+            71,
+            11,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.05,
+          "threshold": 0.3552959470520448,
+          "tp_inner": [
+            22,
+            6,
+            206,
+            39,
+            93,
+            16,
+            19,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.1,
+          "threshold": 0.23867723385687076,
+          "tp_inner": [
+            134,
+            38,
+            227,
+            72,
+            142,
+            36,
+            75,
+            13
+          ],
+          "ok": true
+        }
+      ]
+    },
+    {
+      "seed": 42,
+      "fold": "LOWO_test_F-15A",
+      "alpha": 0.2,
+      "threshold": 0.16494379556398714,
+      "fallback": false,
+      "kandidat": [
+        {
+          "alpha": 0.0005,
+          "threshold": 0.8208846228132166,
+          "tp_inner": [
+            0,
+            0,
+            31,
+            0,
+            65,
+            0,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.001,
+          "threshold": 0.6769181615724427,
+          "tp_inner": [
+            0,
+            0,
+            31,
+            0,
+            66,
+            1,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.002,
+          "threshold": 0.5975008150763418,
+          "tp_inner": [
+            0,
+            0,
+            32,
+            0,
+            66,
+            5,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.005,
+          "threshold": 0.5246682396488787,
+          "tp_inner": [
+            15,
+            0,
+            36,
+            0,
+            70,
+            10,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.01,
+          "threshold": 0.4736794139630707,
+          "tp_inner": [
+            51,
+            0,
+            36,
+            0,
+            71,
+            21,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.02,
+          "threshold": 0.42383357124952686,
+          "tp_inner": [
+            129,
+            0,
+            40,
+            0,
+            76,
+            24,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.05,
+          "threshold": 0.32702480102884846,
+          "tp_inner": [
+            218,
+            1,
+            44,
+            2,
+            95,
+            30,
+            14,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.1,
+          "threshold": 0.24040630374718497,
+          "tp_inner": [
+            325,
+            6,
+            59,
+            8,
+            133,
+            44,
+            61,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.2,
+          "threshold": 0.16494379556398714,
+          "tp_inner": [
+            534,
+            71,
+            109,
+            35,
+            189,
+            61,
+            120,
+            5
+          ],
+          "ok": true
+        }
+      ]
+    },
+    {
+      "seed": 42,
+      "fold": "LOWO_test_F-15_S",
+      "alpha": 0.05,
+      "threshold": 0.28310723215310346,
+      "fallback": false,
+      "kandidat": [
+        {
+          "alpha": 0.0005,
+          "threshold": 0.7952515845252285,
+          "tp_inner": [
+            0,
+            0,
+            31,
+            0,
+            56,
+            0,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.001,
+          "threshold": 0.7490835608644152,
+          "tp_inner": [
+            0,
+            0,
+            31,
+            0,
+            66,
+            2,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.002,
+          "threshold": 0.6933063374861498,
+          "tp_inner": [
+            0,
+            0,
+            31,
+            0,
+            66,
+            5,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.005,
+          "threshold": 0.5831969620755599,
+          "tp_inner": [
+            0,
+            0,
+            33,
+            0,
+            66,
+            11,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.01,
+          "threshold": 0.5130762200670834,
+          "tp_inner": [
+            0,
+            0,
+            37,
+            0,
+            66,
+            20,
+            6,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.02,
+          "threshold": 0.4185012172453109,
+          "tp_inner": [
+            0,
+            0,
+            57,
+            0,
+            67,
+            29,
+            28,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.05,
+          "threshold": 0.28310723215310346,
+          "tp_inner": [
+            2,
+            2,
+            87,
+            10,
+            83,
+            38,
+            95,
+            7
+          ],
+          "ok": true
+        }
+      ]
+    },
+    {
+      "seed": 42,
+      "fold": "LOWO_test_F-5",
+      "alpha": 0.2,
+      "threshold": 0.18769659302940733,
+      "fallback": false,
+      "kandidat": [
+        {
+          "alpha": 0.0005,
+          "threshold": 0.828689265220063,
+          "tp_inner": [
+            0,
+            0,
+            33,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.001,
+          "threshold": 0.7781968733421007,
+          "tp_inner": [
+            0,
+            0,
+            35,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.002,
+          "threshold": 0.732587349023009,
+          "tp_inner": [
+            0,
+            0,
+            40,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.005,
+          "threshold": 0.6375488261400125,
+          "tp_inner": [
+            0,
+            0,
+            55,
+            6,
+            0,
+            0,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.01,
+          "threshold": 0.5293953484491981,
+          "tp_inner": [
+            5,
+            0,
+            97,
+            10,
+            0,
+            8,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.02,
+          "threshold": 0.442357537045374,
+          "tp_inner": [
+            10,
+            0,
+            152,
+            13,
+            0,
+            15,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.05,
+          "threshold": 0.34065309231990315,
+          "tp_inner": [
+            33,
+            12,
+            257,
+            14,
+            0,
+            26,
+            7,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.1,
+          "threshold": 0.26631478995427205,
+          "tp_inner": [
+            85,
+            19,
+            361,
+            19,
+            0,
+            35,
+            38,
+            1
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.2,
+          "threshold": 0.18769659302940733,
+          "tp_inner": [
+            214,
+            65,
+            480,
+            42,
+            7,
+            55,
+            66,
+            5
+          ],
+          "ok": true
+        }
+      ]
+    },
+    {
+      "seed": 42,
+      "fold": "LOWO_test_F-7",
+      "alpha": 0.05,
+      "threshold": 0.2517410221680225,
+      "fallback": false,
+      "kandidat": [
+        {
+          "alpha": 0.0005,
+          "threshold": 0.9036280198274876,
+          "tp_inner": [
+            0,
+            0,
+            31,
+            0,
+            0,
+            22,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.001,
+          "threshold": 0.6915401406921018,
+          "tp_inner": [
+            0,
+            0,
+            31,
+            0,
+            0,
+            66,
+            4,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.002,
+          "threshold": 0.5431932238940201,
+          "tp_inner": [
+            0,
+            0,
+            31,
+            0,
+            0,
+            67,
+            26,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.005,
+          "threshold": 0.45437353907197514,
+          "tp_inner": [
+            0,
+            0,
+            31,
+            0,
+            0,
+            67,
+            41,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.01,
+          "threshold": 0.40138995769054664,
+          "tp_inner": [
+            0,
+            2,
+            31,
+            0,
+            0,
+            67,
+            52,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.02,
+          "threshold": 0.3338822269511543,
+          "tp_inner": [
+            13,
+            5,
+            31,
+            7,
+            0,
+            71,
+            76,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.05,
+          "threshold": 0.2517410221680225,
+          "tp_inner": [
+            91,
+            24,
+            38,
+            38,
+            4,
+            91,
+            95,
+            1
+          ],
+          "ok": true
+        }
+      ]
+    },
+    {
+      "seed": 42,
+      "fold": "LOWO_test_F-9",
+      "alpha": 0.05,
+      "threshold": 0.27859833880093765,
+      "fallback": false,
+      "kandidat": [
+        {
+          "alpha": 0.0005,
+          "threshold": 0.7752526955388361,
+          "tp_inner": [
+            0,
+            0,
+            20,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.001,
+          "threshold": 0.7484394135720489,
+          "tp_inner": [
+            0,
+            0,
+            24,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.002,
+          "threshold": 0.7292731455777027,
+          "tp_inner": [
+            0,
+            0,
+            27,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.005,
+          "threshold": 0.6835454041533578,
+          "tp_inner": [
+            0,
+            0,
+            31,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.01,
+          "threshold": 0.6210893768560279,
+          "tp_inner": [
+            0,
+            0,
+            31,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.02,
+          "threshold": 0.4972948816108306,
+          "tp_inner": [
+            0,
+            0,
+            31,
+            2,
+            0,
+            1,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.05,
+          "threshold": 0.27859833880093765,
+          "tp_inner": [
+            40,
+            92,
+            32,
+            34,
+            2,
+            8,
+            8,
+            4
+          ],
+          "ok": true
+        }
+      ]
+    },
+    {
+      "seed": 42,
+      "fold": "LOWO_test_F-9_A",
+      "alpha": 0.1,
+      "threshold": 0.2274042505877944,
+      "fallback": false,
+      "kandidat": [
+        {
+          "alpha": 0.0005,
+          "threshold": 0.8765467097838725,
+          "tp_inner": [
+            0,
+            0,
+            31,
+            0,
+            0,
+            46,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.001,
+          "threshold": 0.7785891965963514,
+          "tp_inner": [
+            0,
+            0,
+            31,
+            0,
+            0,
+            65,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.002,
+          "threshold": 0.6453961085329619,
+          "tp_inner": [
+            0,
+            0,
+            31,
+            0,
+            0,
+            67,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.005,
+          "threshold": 0.6046109338205773,
+          "tp_inner": [
+            0,
+            0,
+            31,
+            0,
+            0,
+            67,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.01,
+          "threshold": 0.5559756362277783,
+          "tp_inner": [
+            0,
+            0,
+            31,
+            0,
+            0,
+            67,
+            5,
+            1
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.02,
+          "threshold": 0.47174102003774016,
+          "tp_inner": [
+            0,
+            2,
+            36,
+            1,
+            0,
+            75,
+            11,
+            11
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.05,
+          "threshold": 0.32904698627925827,
+          "tp_inner": [
+            5,
+            19,
+            45,
+            33,
+            0,
+            99,
+            28,
+            40
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.1,
+          "threshold": 0.2274042505877944,
+          "tp_inner": [
+            78,
+            114,
+            50,
+            116,
+            2,
+            124,
+            35,
+            71
+          ],
+          "ok": true
+        }
+      ]
+    },
+    {
+      "seed": 43,
+      "fold": "LOWO_test_F-10",
+      "alpha": 0.2,
+      "threshold": 0.15163213398261563,
+      "fallback": false,
+      "kandidat": [
+        {
+          "alpha": 0.0005,
+          "threshold": 0.8748270137560961,
+          "tp_inner": [
+            0,
+            21,
+            0,
+            0,
+            48,
+            0,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.001,
+          "threshold": 0.6887705808043175,
+          "tp_inner": [
+            0,
+            31,
+            0,
+            0,
+            66,
+            0,
+            0,
+            4
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.002,
+          "threshold": 0.6248798795916222,
+          "tp_inner": [
+            2,
+            31,
+            0,
+            0,
+            68,
+            1,
+            0,
+            4
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.005,
+          "threshold": 0.538529387741207,
+          "tp_inner": [
+            7,
+            31,
+            0,
+            0,
+            74,
+            13,
+            0,
+            9
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.01,
+          "threshold": 0.47230730530724185,
+          "tp_inner": [
+            19,
+            31,
+            0,
+            0,
+            75,
+            20,
+            0,
+            19
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.02,
+          "threshold": 0.4109769878257092,
+          "tp_inner": [
+            35,
+            31,
+            0,
+            0,
+            80,
+            28,
+            3,
+            44
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.05,
+          "threshold": 0.31522480860774643,
+          "tp_inner": [
+            60,
+            33,
+            1,
+            0,
+            92,
+            39,
+            52,
+            93
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.1,
+          "threshold": 0.2321474412492648,
+          "tp_inner": [
+            143,
+            51,
+            20,
+            0,
+            110,
+            44,
+            120,
+            160
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.2,
+          "threshold": 0.15163213398261563,
+          "tp_inner": [
+            362,
+            93,
+            125,
+            33,
+            167,
+            70,
+            163,
+            258
+          ],
+          "ok": true
+        }
+      ]
+    },
+    {
+      "seed": 43,
+      "fold": "LOWO_test_F-12",
+      "alpha": 0.05,
+      "threshold": 0.25367863582879585,
+      "fallback": false,
+      "kandidat": [
+        {
+          "alpha": 0.0005,
+          "threshold": 0.9078372452369234,
+          "tp_inner": [
+            0,
+            26,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.001,
+          "threshold": 0.8364797317639235,
+          "tp_inner": [
+            0,
+            31,
+            0,
+            0,
+            56,
+            0,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.002,
+          "threshold": 0.716259411059188,
+          "tp_inner": [
+            0,
+            31,
+            0,
+            0,
+            66,
+            4,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.005,
+          "threshold": 0.5816191862368971,
+          "tp_inner": [
+            0,
+            31,
+            0,
+            0,
+            83,
+            15,
+            14,
+            1
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.01,
+          "threshold": 0.48103237304888397,
+          "tp_inner": [
+            0,
+            33,
+            1,
+            0,
+            132,
+            25,
+            46,
+            1
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.02,
+          "threshold": 0.38491523929983124,
+          "tp_inner": [
+            0,
+            39,
+            5,
+            0,
+            178,
+            32,
+            57,
+            6
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.05,
+          "threshold": 0.25367863582879585,
+          "tp_inner": [
+            14,
+            65,
+            34,
+            1,
+            197,
+            47,
+            93,
+            17
+          ],
+          "ok": true
+        }
+      ]
+    },
+    {
+      "seed": 43,
+      "fold": "LOWO_test_F-14",
+      "alpha": 0.05,
+      "threshold": 0.33391839984436444,
+      "fallback": false,
+      "kandidat": [
+        {
+          "alpha": 0.0005,
+          "threshold": 0.9304217760451406,
+          "tp_inner": [
+            0,
+            0,
+            0,
+            0,
+            41,
+            0,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.001,
+          "threshold": 0.8288988909590671,
+          "tp_inner": [
+            0,
+            0,
+            0,
+            0,
+            65,
+            0,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.002,
+          "threshold": 0.6841211130273073,
+          "tp_inner": [
+            0,
+            0,
+            0,
+            0,
+            69,
+            0,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.005,
+          "threshold": 0.6100983520645,
+          "tp_inner": [
+            1,
+            0,
+            0,
+            3,
+            75,
+            1,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.01,
+          "threshold": 0.5489266329808561,
+          "tp_inner": [
+            7,
+            0,
+            7,
+            8,
+            76,
+            8,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.02,
+          "threshold": 0.4660982917635191,
+          "tp_inner": [
+            12,
+            0,
+            38,
+            17,
+            93,
+            16,
+            1,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.05,
+          "threshold": 0.33391839984436444,
+          "tp_inner": [
+            67,
+            6,
+            148,
+            36,
+            112,
+            35,
+            15,
+            2
+          ],
+          "ok": true
+        }
+      ]
+    },
+    {
+      "seed": 43,
+      "fold": "LOWO_test_F-15A",
+      "alpha": 0.1,
+      "threshold": 0.22315989137595696,
+      "fallback": false,
+      "kandidat": [
+        {
+          "alpha": 0.0005,
+          "threshold": 0.819344032677495,
+          "tp_inner": [
+            0,
+            0,
+            31,
+            0,
+            48,
+            0,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.001,
+          "threshold": 0.7046994955881236,
+          "tp_inner": [
+            0,
+            0,
+            31,
+            0,
+            66,
+            2,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.002,
+          "threshold": 0.5712659148735585,
+          "tp_inner": [
+            0,
+            0,
+            31,
+            0,
+            66,
+            10,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.005,
+          "threshold": 0.49263330372397496,
+          "tp_inner": [
+            0,
+            0,
+            33,
+            0,
+            70,
+            20,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.01,
+          "threshold": 0.4442421336289216,
+          "tp_inner": [
+            0,
+            0,
+            36,
+            0,
+            73,
+            23,
+            3,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.02,
+          "threshold": 0.3914194610751353,
+          "tp_inner": [
+            0,
+            0,
+            40,
+            0,
+            74,
+            29,
+            10,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.05,
+          "threshold": 0.29505386968627934,
+          "tp_inner": [
+            3,
+            2,
+            47,
+            1,
+            95,
+            37,
+            23,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.1,
+          "threshold": 0.22315989137595696,
+          "tp_inner": [
+            112,
+            44,
+            66,
+            3,
+            118,
+            44,
+            77,
+            6
+          ],
+          "ok": true
+        }
+      ]
+    },
+    {
+      "seed": 43,
+      "fold": "LOWO_test_F-15_S",
+      "alpha": 0.1,
+      "threshold": 0.20690347089779773,
+      "fallback": false,
+      "kandidat": [
+        {
+          "alpha": 0.0005,
+          "threshold": 0.7344747841260001,
+          "tp_inner": [
+            0,
+            0,
+            31,
+            0,
+            63,
+            0,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.001,
+          "threshold": 0.6741562402636274,
+          "tp_inner": [
+            0,
+            0,
+            31,
+            0,
+            66,
+            1,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.002,
+          "threshold": 0.6463526461662271,
+          "tp_inner": [
+            0,
+            0,
+            31,
+            0,
+            66,
+            4,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.005,
+          "threshold": 0.5993733861444999,
+          "tp_inner": [
+            0,
+            0,
+            31,
+            0,
+            66,
+            7,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.01,
+          "threshold": 0.5160490626332747,
+          "tp_inner": [
+            0,
+            0,
+            37,
+            0,
+            66,
+            18,
+            3,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.02,
+          "threshold": 0.42456784107519835,
+          "tp_inner": [
+            6,
+            0,
+            49,
+            0,
+            67,
+            24,
+            17,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.05,
+          "threshold": 0.29074287028598544,
+          "tp_inner": [
+            35,
+            0,
+            57,
+            0,
+            68,
+            34,
+            70,
+            3
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.1,
+          "threshold": 0.20690347089779773,
+          "tp_inner": [
+            94,
+            20,
+            118,
+            12,
+            88,
+            45,
+            118,
+            6
+          ],
+          "ok": true
+        }
+      ]
+    },
+    {
+      "seed": 43,
+      "fold": "LOWO_test_F-5",
+      "alpha": 0.2,
+      "threshold": 0.18783604576176027,
+      "fallback": false,
+      "kandidat": [
+        {
+          "alpha": 0.0005,
+          "threshold": 0.6875972204947031,
+          "tp_inner": [
+            0,
+            0,
+            33,
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.001,
+          "threshold": 0.6647937499674602,
+          "tp_inner": [
+            0,
+            0,
+            33,
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.002,
+          "threshold": 0.6168511006940721,
+          "tp_inner": [
+            0,
+            0,
+            38,
+            0,
+            0,
+            4,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.005,
+          "threshold": 0.5517634767668578,
+          "tp_inner": [
+            0,
+            3,
+            48,
+            0,
+            0,
+            5,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.01,
+          "threshold": 0.525642166805862,
+          "tp_inner": [
+            0,
+            5,
+            54,
+            0,
+            0,
+            7,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.02,
+          "threshold": 0.46711037952256773,
+          "tp_inner": [
+            0,
+            11,
+            97,
+            7,
+            0,
+            11,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.05,
+          "threshold": 0.36506044736194243,
+          "tp_inner": [
+            0,
+            30,
+            198,
+            21,
+            0,
+            20,
+            1,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.1,
+          "threshold": 0.2673656023496706,
+          "tp_inner": [
+            33,
+            76,
+            313,
+            29,
+            0,
+            39,
+            10,
+            8
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.2,
+          "threshold": 0.18783604576176027,
+          "tp_inner": [
+            171,
+            115,
+            427,
+            38,
+            23,
+            65,
+            55,
+            28
+          ],
+          "ok": true
+        }
+      ]
+    },
+    {
+      "seed": 43,
+      "fold": "LOWO_test_F-7",
+      "alpha": 0.1,
+      "threshold": 0.18132964585787986,
+      "fallback": false,
+      "kandidat": [
+        {
+          "alpha": 0.0005,
+          "threshold": 0.8985932716746474,
+          "tp_inner": [
+            0,
+            0,
+            31,
+            0,
+            0,
+            58,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.001,
+          "threshold": 0.7036476834550744,
+          "tp_inner": [
+            0,
+            0,
+            31,
+            0,
+            0,
+            66,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.002,
+          "threshold": 0.5983363019500653,
+          "tp_inner": [
+            0,
+            0,
+            31,
+            0,
+            0,
+            76,
+            1,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.005,
+          "threshold": 0.4828677572394646,
+          "tp_inner": [
+            0,
+            2,
+            31,
+            0,
+            0,
+            90,
+            10,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.01,
+          "threshold": 0.4339021561506443,
+          "tp_inner": [
+            0,
+            2,
+            31,
+            8,
+            0,
+            96,
+            15,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.02,
+          "threshold": 0.36196189263670975,
+          "tp_inner": [
+            0,
+            14,
+            31,
+            46,
+            0,
+            124,
+            26,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.05,
+          "threshold": 0.2574370108965043,
+          "tp_inner": [
+            0,
+            24,
+            36,
+            206,
+            6,
+            153,
+            55,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.1,
+          "threshold": 0.18132964585787986,
+          "tp_inner": [
+            22,
+            43,
+            56,
+            217,
+            12,
+            185,
+            109,
+            1
+          ],
+          "ok": true
+        }
+      ]
+    },
+    {
+      "seed": 43,
+      "fold": "LOWO_test_F-9",
+      "alpha": 0.05,
+      "threshold": 0.25414700584909566,
+      "fallback": false,
+      "kandidat": [
+        {
+          "alpha": 0.0005,
+          "threshold": 0.7916443683829045,
+          "tp_inner": [
+            0,
+            0,
+            9,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.001,
+          "threshold": 0.7715384828723106,
+          "tp_inner": [
+            0,
+            0,
+            9,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.002,
+          "threshold": 0.6796172930298225,
+          "tp_inner": [
+            0,
+            0,
+            22,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.005,
+          "threshold": 0.532949781570791,
+          "tp_inner": [
+            1,
+            0,
+            29,
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.01,
+          "threshold": 0.45407103089865714,
+          "tp_inner": [
+            1,
+            1,
+            31,
+            2,
+            0,
+            5,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.02,
+          "threshold": 0.3798155854238502,
+          "tp_inner": [
+            5,
+            13,
+            31,
+            10,
+            0,
+            27,
+            2,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.05,
+          "threshold": 0.25414700584909566,
+          "tp_inner": [
+            26,
+            59,
+            33,
+            24,
+            8,
+            60,
+            11,
+            1
+          ],
+          "ok": true
+        }
+      ]
+    },
+    {
+      "seed": 43,
+      "fold": "LOWO_test_F-9_A",
+      "alpha": 0.05,
+      "threshold": 0.28745010292411166,
+      "fallback": false,
+      "kandidat": [
+        {
+          "alpha": 0.0005,
+          "threshold": 0.8776388758192865,
+          "tp_inner": [
+            0,
+            0,
+            31,
+            0,
+            0,
+            37,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.001,
+          "threshold": 0.8370197595587181,
+          "tp_inner": [
+            0,
+            0,
+            31,
+            0,
+            0,
+            46,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.002,
+          "threshold": 0.75486161504079,
+          "tp_inner": [
+            0,
+            0,
+            31,
+            0,
+            0,
+            62,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.005,
+          "threshold": 0.5665849974455756,
+          "tp_inner": [
+            0,
+            3,
+            31,
+            0,
+            0,
+            66,
+            1,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.01,
+          "threshold": 0.5011333622829709,
+          "tp_inner": [
+            0,
+            8,
+            31,
+            0,
+            0,
+            67,
+            7,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.02,
+          "threshold": 0.43312355336328834,
+          "tp_inner": [
+            0,
+            11,
+            34,
+            0,
+            0,
+            76,
+            15,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.05,
+          "threshold": 0.28745010292411166,
+          "tp_inner": [
+            25,
+            43,
+            42,
+            32,
+            2,
+            98,
+            36,
+            11
+          ],
+          "ok": true
+        }
+      ]
+    },
+    {
+      "seed": 44,
+      "fold": "LOWO_test_F-10",
+      "alpha": 0.01,
+      "threshold": 0.5200970264151838,
+      "fallback": false,
+      "kandidat": [
+        {
+          "alpha": 0.0005,
+          "threshold": 0.8332958046987627,
+          "tp_inner": [
+            0,
+            21,
+            0,
+            0,
+            56,
+            0,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.001,
+          "threshold": 0.6800067536925749,
+          "tp_inner": [
+            0,
+            31,
+            0,
+            0,
+            66,
+            0,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.002,
+          "threshold": 0.6261395446411654,
+          "tp_inner": [
+            0,
+            31,
+            1,
+            0,
+            66,
+            1,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.005,
+          "threshold": 0.5675570675102941,
+          "tp_inner": [
+            0,
+            31,
+            22,
+            0,
+            67,
+            10,
+            2,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.01,
+          "threshold": 0.5200970264151838,
+          "tp_inner": [
+            1,
+            32,
+            42,
+            3,
+            74,
+            11,
+            4,
+            4
+          ],
+          "ok": true
+        }
+      ]
+    },
+    {
+      "seed": 44,
+      "fold": "LOWO_test_F-12",
+      "alpha": 0.1,
+      "threshold": 0.194527640382162,
+      "fallback": false,
+      "kandidat": [
+        {
+          "alpha": 0.0005,
+          "threshold": 0.9029768759537171,
+          "tp_inner": [
+            0,
+            27,
+            0,
+            0,
+            10,
+            0,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.001,
+          "threshold": 0.8559519362598775,
+          "tp_inner": [
+            0,
+            29,
+            0,
+            0,
+            51,
+            0,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.002,
+          "threshold": 0.6605495405439468,
+          "tp_inner": [
+            0,
+            31,
+            0,
+            0,
+            66,
+            8,
+            13,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.005,
+          "threshold": 0.5624415468481377,
+          "tp_inner": [
+            0,
+            31,
+            4,
+            0,
+            66,
+            18,
+            29,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.01,
+          "threshold": 0.4909938240797376,
+          "tp_inner": [
+            3,
+            31,
+            70,
+            0,
+            71,
+            22,
+            40,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.02,
+          "threshold": 0.3903567137547712,
+          "tp_inner": [
+            20,
+            31,
+            170,
+            0,
+            78,
+            31,
+            50,
+            1
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.05,
+          "threshold": 0.2709910136596051,
+          "tp_inner": [
+            60,
+            57,
+            206,
+            0,
+            117,
+            52,
+            73,
+            14
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.1,
+          "threshold": 0.194527640382162,
+          "tp_inner": [
+            113,
+            83,
+            217,
+            4,
+            172,
+            59,
+            124,
+            53
+          ],
+          "ok": true
+        }
+      ]
+    },
+    {
+      "seed": 44,
+      "fold": "LOWO_test_F-14",
+      "alpha": 0.05,
+      "threshold": 0.3248797566370046,
+      "fallback": false,
+      "kandidat": [
+        {
+          "alpha": 0.0005,
+          "threshold": 0.9321676144148938,
+          "tp_inner": [
+            0,
+            0,
+            0,
+            0,
+            35,
+            0,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.001,
+          "threshold": 0.8180374565865494,
+          "tp_inner": [
+            0,
+            0,
+            0,
+            0,
+            60,
+            0,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.002,
+          "threshold": 0.7519185630331721,
+          "tp_inner": [
+            0,
+            0,
+            0,
+            3,
+            64,
+            0,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.005,
+          "threshold": 0.69507010537602,
+          "tp_inner": [
+            0,
+            0,
+            0,
+            10,
+            70,
+            0,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.01,
+          "threshold": 0.611290214175221,
+          "tp_inner": [
+            0,
+            0,
+            2,
+            11,
+            70,
+            1,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.02,
+          "threshold": 0.4569626530959401,
+          "tp_inner": [
+            9,
+            0,
+            59,
+            27,
+            70,
+            17,
+            1,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.05,
+          "threshold": 0.3248797566370046,
+          "tp_inner": [
+            87,
+            3,
+            160,
+            31,
+            95,
+            27,
+            17,
+            3
+          ],
+          "ok": true
+        }
+      ]
+    },
+    {
+      "seed": 44,
+      "fold": "LOWO_test_F-15A",
+      "alpha": 0.05,
+      "threshold": 0.3187585467366842,
+      "fallback": false,
+      "kandidat": [
+        {
+          "alpha": 0.0005,
+          "threshold": 0.8401161788837571,
+          "tp_inner": [
+            0,
+            0,
+            31,
+            0,
+            50,
+            0,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.001,
+          "threshold": 0.7279831199657144,
+          "tp_inner": [
+            0,
+            0,
+            31,
+            0,
+            69,
+            1,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.002,
+          "threshold": 0.649562019526421,
+          "tp_inner": [
+            0,
+            0,
+            31,
+            0,
+            74,
+            2,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.005,
+          "threshold": 0.5788958021599775,
+          "tp_inner": [
+            0,
+            1,
+            31,
+            0,
+            76,
+            17,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.01,
+          "threshold": 0.5066425544950256,
+          "tp_inner": [
+            0,
+            2,
+            31,
+            0,
+            82,
+            23,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.02,
+          "threshold": 0.429419238539521,
+          "tp_inner": [
+            0,
+            2,
+            35,
+            1,
+            112,
+            25,
+            4,
+            7
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.05,
+          "threshold": 0.3187585467366842,
+          "tp_inner": [
+            26,
+            43,
+            45,
+            10,
+            133,
+            32,
+            43,
+            16
+          ],
+          "ok": true
+        }
+      ]
+    },
+    {
+      "seed": 44,
+      "fold": "LOWO_test_F-15_S",
+      "alpha": 0.1,
+      "threshold": 0.2194631489605889,
+      "fallback": false,
+      "kandidat": [
+        {
+          "alpha": 0.0005,
+          "threshold": 0.8096920552175558,
+          "tp_inner": [
+            0,
+            0,
+            31,
+            0,
+            52,
+            1,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.001,
+          "threshold": 0.702361619510932,
+          "tp_inner": [
+            0,
+            0,
+            31,
+            0,
+            62,
+            4,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.002,
+          "threshold": 0.6550413897564332,
+          "tp_inner": [
+            0,
+            0,
+            31,
+            0,
+            66,
+            10,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.005,
+          "threshold": 0.5833778022846556,
+          "tp_inner": [
+            0,
+            0,
+            37,
+            0,
+            66,
+            22,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.01,
+          "threshold": 0.5364678058866783,
+          "tp_inner": [
+            0,
+            1,
+            43,
+            0,
+            66,
+            26,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.02,
+          "threshold": 0.4558622671296955,
+          "tp_inner": [
+            0,
+            6,
+            51,
+            0,
+            66,
+            32,
+            7,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.05,
+          "threshold": 0.31288980449016784,
+          "tp_inner": [
+            21,
+            18,
+            75,
+            0,
+            71,
+            41,
+            92,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.1,
+          "threshold": 0.2194631489605889,
+          "tp_inner": [
+            71,
+            42,
+            114,
+            36,
+            88,
+            53,
+            128,
+            1
+          ],
+          "ok": true
+        }
+      ]
+    },
+    {
+      "seed": 44,
+      "fold": "LOWO_test_F-5",
+      "alpha": 0.1,
+      "threshold": 0.2553597845169706,
+      "fallback": false,
+      "kandidat": [
+        {
+          "alpha": 0.0005,
+          "threshold": 0.7883573050724999,
+          "tp_inner": [
+            0,
+            0,
+            31,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.001,
+          "threshold": 0.7405077907076288,
+          "tp_inner": [
+            0,
+            0,
+            34,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.002,
+          "threshold": 0.6802962245385311,
+          "tp_inner": [
+            0,
+            0,
+            37,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.005,
+          "threshold": 0.5781097660527541,
+          "tp_inner": [
+            0,
+            0,
+            46,
+            0,
+            0,
+            2,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.01,
+          "threshold": 0.5254304735773033,
+          "tp_inner": [
+            0,
+            2,
+            52,
+            2,
+            0,
+            7,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.02,
+          "threshold": 0.44404390150287876,
+          "tp_inner": [
+            0,
+            4,
+            72,
+            7,
+            0,
+            20,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.05,
+          "threshold": 0.33768226835392146,
+          "tp_inner": [
+            0,
+            8,
+            191,
+            9,
+            0,
+            30,
+            10,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.1,
+          "threshold": 0.2553597845169706,
+          "tp_inner": [
+            47,
+            34,
+            362,
+            20,
+            5,
+            45,
+            25,
+            2
+          ],
+          "ok": true
+        }
+      ]
+    },
+    {
+      "seed": 44,
+      "fold": "LOWO_test_F-7",
+      "alpha": 0.05,
+      "threshold": 0.2570773233008172,
+      "fallback": false,
+      "kandidat": [
+        {
+          "alpha": 0.0005,
+          "threshold": 0.8349586027545616,
+          "tp_inner": [
+            0,
+            0,
+            31,
+            0,
+            0,
+            48,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.001,
+          "threshold": 0.7349187683297455,
+          "tp_inner": [
+            0,
+            0,
+            31,
+            0,
+            0,
+            61,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.002,
+          "threshold": 0.5941884051330735,
+          "tp_inner": [
+            0,
+            0,
+            32,
+            11,
+            0,
+            68,
+            9,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.005,
+          "threshold": 0.493526568393499,
+          "tp_inner": [
+            0,
+            0,
+            34,
+            76,
+            0,
+            78,
+            25,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.01,
+          "threshold": 0.4100912525700126,
+          "tp_inner": [
+            1,
+            2,
+            34,
+            165,
+            0,
+            85,
+            50,
+            1
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.02,
+          "threshold": 0.3416205537335895,
+          "tp_inner": [
+            15,
+            3,
+            40,
+            189,
+            0,
+            95,
+            72,
+            3
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.05,
+          "threshold": 0.2570773233008172,
+          "tp_inner": [
+            61,
+            8,
+            61,
+            199,
+            5,
+            116,
+            101,
+            10
+          ],
+          "ok": true
+        }
+      ]
+    },
+    {
+      "seed": 44,
+      "fold": "LOWO_test_F-9",
+      "alpha": 0.05,
+      "threshold": 0.25638974240747125,
+      "fallback": false,
+      "kandidat": [
+        {
+          "alpha": 0.0005,
+          "threshold": 0.6761432993252386,
+          "tp_inner": [
+            0,
+            0,
+            12,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.001,
+          "threshold": 0.6409922826209409,
+          "tp_inner": [
+            0,
+            0,
+            12,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.002,
+          "threshold": 0.6004031173816314,
+          "tp_inner": [
+            0,
+            0,
+            15,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.005,
+          "threshold": 0.49559462654292463,
+          "tp_inner": [
+            0,
+            2,
+            19,
+            0,
+            0,
+            1,
+            0,
+            1
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.01,
+          "threshold": 0.4307076212928088,
+          "tp_inner": [
+            0,
+            3,
+            26,
+            0,
+            0,
+            1,
+            8,
+            1
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.02,
+          "threshold": 0.36374493382055406,
+          "tp_inner": [
+            1,
+            12,
+            29,
+            2,
+            0,
+            2,
+            8,
+            1
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.05,
+          "threshold": 0.25638974240747125,
+          "tp_inner": [
+            14,
+            64,
+            34,
+            22,
+            1,
+            8,
+            12,
+            13
+          ],
+          "ok": true
+        }
+      ]
+    },
+    {
+      "seed": 44,
+      "fold": "LOWO_test_F-9_A",
+      "alpha": 0.05,
+      "threshold": 0.2612963678863954,
+      "fallback": false,
+      "kandidat": [
+        {
+          "alpha": 0.0005,
+          "threshold": 0.869013530015662,
+          "tp_inner": [
+            0,
+            0,
+            31,
+            0,
+            0,
+            41,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.001,
+          "threshold": 0.7564308327643166,
+          "tp_inner": [
+            0,
+            0,
+            31,
+            0,
+            0,
+            65,
+            1,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.002,
+          "threshold": 0.6288872826991772,
+          "tp_inner": [
+            0,
+            2,
+            31,
+            0,
+            0,
+            67,
+            4,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.005,
+          "threshold": 0.5120427165534781,
+          "tp_inner": [
+            0,
+            4,
+            34,
+            0,
+            0,
+            67,
+            7,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.01,
+          "threshold": 0.42179441512936033,
+          "tp_inner": [
+            1,
+            7,
+            39,
+            1,
+            0,
+            69,
+            20,
+            1
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.02,
+          "threshold": 0.3538730426879192,
+          "tp_inner": [
+            2,
+            18,
+            41,
+            2,
+            0,
+            70,
+            33,
+            19
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.05,
+          "threshold": 0.2612963678863954,
+          "tp_inner": [
+            21,
+            55,
+            51,
+            17,
+            3,
+            76,
+            36,
+            59
+          ],
+          "ok": true
+        }
+      ]
+    },
+    {
+      "seed": 45,
+      "fold": "LOWO_test_F-10",
+      "alpha": 0.05,
+      "threshold": 0.32099801440412046,
+      "fallback": false,
+      "kandidat": [
+        {
+          "alpha": 0.0005,
+          "threshold": 0.8644506180138511,
+          "tp_inner": [
+            0,
+            21,
+            0,
+            0,
+            43,
+            0,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.001,
+          "threshold": 0.7480848960078601,
+          "tp_inner": [
+            0,
+            25,
+            0,
+            0,
+            65,
+            0,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.002,
+          "threshold": 0.6561369201640355,
+          "tp_inner": [
+            1,
+            31,
+            0,
+            0,
+            66,
+            7,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.005,
+          "threshold": 0.5770363434073752,
+          "tp_inner": [
+            2,
+            32,
+            0,
+            0,
+            66,
+            18,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.01,
+          "threshold": 0.5319597706887926,
+          "tp_inner": [
+            2,
+            32,
+            0,
+            0,
+            69,
+            23,
+            0,
+            2
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.02,
+          "threshold": 0.4600234828414675,
+          "tp_inner": [
+            2,
+            35,
+            0,
+            0,
+            71,
+            28,
+            7,
+            12
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.05,
+          "threshold": 0.32099801440412046,
+          "tp_inner": [
+            22,
+            42,
+            1,
+            2,
+            78,
+            39,
+            69,
+            33
+          ],
+          "ok": true
+        }
+      ]
+    },
+    {
+      "seed": 45,
+      "fold": "LOWO_test_F-12",
+      "alpha": 0.05,
+      "threshold": 0.263297217130487,
+      "fallback": false,
+      "kandidat": [
+        {
+          "alpha": 0.0005,
+          "threshold": 0.8644484237181375,
+          "tp_inner": [
+            0,
+            29,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.001,
+          "threshold": 0.7482991770747179,
+          "tp_inner": [
+            0,
+            29,
+            0,
+            0,
+            62,
+            0,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.002,
+          "threshold": 0.6046987503779998,
+          "tp_inner": [
+            0,
+            31,
+            0,
+            0,
+            66,
+            3,
+            5,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.005,
+          "threshold": 0.4911017865427778,
+          "tp_inner": [
+            0,
+            31,
+            0,
+            0,
+            70,
+            17,
+            39,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.01,
+          "threshold": 0.40652995853951357,
+          "tp_inner": [
+            0,
+            36,
+            1,
+            0,
+            79,
+            24,
+            51,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.02,
+          "threshold": 0.3456819231667462,
+          "tp_inner": [
+            0,
+            42,
+            8,
+            0,
+            98,
+            28,
+            57,
+            1
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.05,
+          "threshold": 0.263297217130487,
+          "tp_inner": [
+            27,
+            60,
+            118,
+            1,
+            154,
+            36,
+            82,
+            3
+          ],
+          "ok": true
+        }
+      ]
+    },
+    {
+      "seed": 45,
+      "fold": "LOWO_test_F-14",
+      "alpha": 0.1,
+      "threshold": 0.2457525270394353,
+      "fallback": false,
+      "kandidat": [
+        {
+          "alpha": 0.0005,
+          "threshold": 0.9026783435945264,
+          "tp_inner": [
+            0,
+            0,
+            0,
+            0,
+            32,
+            0,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.001,
+          "threshold": 0.8676591884190564,
+          "tp_inner": [
+            0,
+            0,
+            0,
+            0,
+            37,
+            0,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.002,
+          "threshold": 0.7531403827435618,
+          "tp_inner": [
+            0,
+            0,
+            0,
+            0,
+            66,
+            0,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.005,
+          "threshold": 0.6702238325735901,
+          "tp_inner": [
+            0,
+            0,
+            0,
+            3,
+            67,
+            1,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.01,
+          "threshold": 0.5933728763638685,
+          "tp_inner": [
+            1,
+            0,
+            0,
+            7,
+            69,
+            3,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.02,
+          "threshold": 0.47674523221553433,
+          "tp_inner": [
+            41,
+            0,
+            0,
+            14,
+            72,
+            20,
+            1,
+            1
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.05,
+          "threshold": 0.3250904091585745,
+          "tp_inner": [
+            117,
+            0,
+            80,
+            33,
+            112,
+            26,
+            21,
+            5
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.1,
+          "threshold": 0.2457525270394353,
+          "tp_inner": [
+            188,
+            15,
+            174,
+            43,
+            174,
+            35,
+            61,
+            20
+          ],
+          "ok": true
+        }
+      ]
+    },
+    {
+      "seed": 45,
+      "fold": "LOWO_test_F-15A",
+      "alpha": 0.05,
+      "threshold": 0.3486663240022442,
+      "fallback": false,
+      "kandidat": [
+        {
+          "alpha": 0.0005,
+          "threshold": 0.8693398464023739,
+          "tp_inner": [
+            0,
+            0,
+            31,
+            0,
+            47,
+            0,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.001,
+          "threshold": 0.7589299684947639,
+          "tp_inner": [
+            0,
+            0,
+            31,
+            0,
+            78,
+            0,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.002,
+          "threshold": 0.6868625180771813,
+          "tp_inner": [
+            0,
+            0,
+            31,
+            0,
+            81,
+            2,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.005,
+          "threshold": 0.6168333371488114,
+          "tp_inner": [
+            0,
+            8,
+            31,
+            0,
+            92,
+            6,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.01,
+          "threshold": 0.5628376709633741,
+          "tp_inner": [
+            0,
+            14,
+            31,
+            0,
+            102,
+            10,
+            1,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.02,
+          "threshold": 0.5020007048893078,
+          "tp_inner": [
+            5,
+            20,
+            31,
+            0,
+            113,
+            20,
+            8,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.05,
+          "threshold": 0.3486663240022442,
+          "tp_inner": [
+            83,
+            38,
+            33,
+            4,
+            162,
+            31,
+            42,
+            4
+          ],
+          "ok": true
+        }
+      ]
+    },
+    {
+      "seed": 45,
+      "fold": "LOWO_test_F-15_S",
+      "alpha": 0.1,
+      "threshold": 0.20063406378665152,
+      "fallback": false,
+      "kandidat": [
+        {
+          "alpha": 0.0005,
+          "threshold": 0.8518221657777337,
+          "tp_inner": [
+            0,
+            0,
+            31,
+            0,
+            47,
+            0,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.001,
+          "threshold": 0.7875617887280849,
+          "tp_inner": [
+            0,
+            0,
+            31,
+            0,
+            58,
+            0,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.002,
+          "threshold": 0.7386000903479784,
+          "tp_inner": [
+            0,
+            0,
+            31,
+            0,
+            62,
+            0,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.005,
+          "threshold": 0.6337229874630586,
+          "tp_inner": [
+            0,
+            0,
+            33,
+            0,
+            65,
+            5,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.01,
+          "threshold": 0.5812969140412255,
+          "tp_inner": [
+            0,
+            0,
+            43,
+            0,
+            65,
+            11,
+            2,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.02,
+          "threshold": 0.4834640309730097,
+          "tp_inner": [
+            0,
+            0,
+            46,
+            0,
+            66,
+            21,
+            17,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.05,
+          "threshold": 0.2930601890215416,
+          "tp_inner": [
+            11,
+            6,
+            56,
+            0,
+            68,
+            41,
+            99,
+            4
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.1,
+          "threshold": 0.20063406378665152,
+          "tp_inner": [
+            69,
+            17,
+            130,
+            8,
+            86,
+            57,
+            134,
+            28
+          ],
+          "ok": true
+        }
+      ]
+    },
+    {
+      "seed": 45,
+      "fold": "LOWO_test_F-5",
+      "alpha": 0.2,
+      "threshold": 0.1972983564913249,
+      "fallback": false,
+      "kandidat": [
+        {
+          "alpha": 0.0005,
+          "threshold": 0.75060281278225,
+          "tp_inner": [
+            0,
+            0,
+            32,
+            0,
+            0,
+            2,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.001,
+          "threshold": 0.7037465867909236,
+          "tp_inner": [
+            0,
+            0,
+            36,
+            0,
+            0,
+            3,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.002,
+          "threshold": 0.6627481823491567,
+          "tp_inner": [
+            0,
+            0,
+            44,
+            0,
+            0,
+            10,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.005,
+          "threshold": 0.6172576610122605,
+          "tp_inner": [
+            0,
+            0,
+            52,
+            0,
+            0,
+            13,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.01,
+          "threshold": 0.560580280820882,
+          "tp_inner": [
+            0,
+            0,
+            67,
+            6,
+            0,
+            18,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.02,
+          "threshold": 0.4883312240523777,
+          "tp_inner": [
+            0,
+            1,
+            109,
+            10,
+            0,
+            19,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.05,
+          "threshold": 0.3754034003174958,
+          "tp_inner": [
+            1,
+            8,
+            208,
+            12,
+            0,
+            35,
+            7,
+            2
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.1,
+          "threshold": 0.28284460299232284,
+          "tp_inner": [
+            41,
+            40,
+            288,
+            20,
+            0,
+            43,
+            44,
+            4
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.2,
+          "threshold": 0.1972983564913249,
+          "tp_inner": [
+            95,
+            99,
+            452,
+            44,
+            13,
+            61,
+            115,
+            7
+          ],
+          "ok": true
+        }
+      ]
+    },
+    {
+      "seed": 45,
+      "fold": "LOWO_test_F-7",
+      "alpha": 0.1,
+      "threshold": 0.1946376919081467,
+      "fallback": false,
+      "kandidat": [
+        {
+          "alpha": 0.0005,
+          "threshold": 0.8434199889335711,
+          "tp_inner": [
+            0,
+            0,
+            31,
+            0,
+            0,
+            47,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.001,
+          "threshold": 0.6935260137121216,
+          "tp_inner": [
+            0,
+            0,
+            31,
+            0,
+            0,
+            66,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.002,
+          "threshold": 0.5812354892979537,
+          "tp_inner": [
+            2,
+            0,
+            31,
+            0,
+            0,
+            67,
+            11,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.005,
+          "threshold": 0.4736189026150495,
+          "tp_inner": [
+            17,
+            0,
+            31,
+            0,
+            0,
+            76,
+            34,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.01,
+          "threshold": 0.40520099364753726,
+          "tp_inner": [
+            30,
+            0,
+            32,
+            6,
+            0,
+            78,
+            44,
+            1
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.02,
+          "threshold": 0.33671395656561115,
+          "tp_inner": [
+            59,
+            3,
+            33,
+            7,
+            0,
+            82,
+            59,
+            1
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.05,
+          "threshold": 0.2635247223409668,
+          "tp_inner": [
+            92,
+            21,
+            44,
+            39,
+            0,
+            103,
+            102,
+            3
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.1,
+          "threshold": 0.1946376919081467,
+          "tp_inner": [
+            155,
+            46,
+            87,
+            143,
+            6,
+            131,
+            160,
+            10
+          ],
+          "ok": true
+        }
+      ]
+    },
+    {
+      "seed": 45,
+      "fold": "LOWO_test_F-9",
+      "alpha": 0.1,
+      "threshold": 0.20212755705580893,
+      "fallback": false,
+      "kandidat": [
+        {
+          "alpha": 0.0005,
+          "threshold": 0.7245223739220293,
+          "tp_inner": [
+            0,
+            0,
+            29,
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.001,
+          "threshold": 0.7065492055441324,
+          "tp_inner": [
+            0,
+            0,
+            29,
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.002,
+          "threshold": 0.679247743083298,
+          "tp_inner": [
+            0,
+            0,
+            29,
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.005,
+          "threshold": 0.6247675134589089,
+          "tp_inner": [
+            0,
+            0,
+            29,
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.01,
+          "threshold": 0.5039182990502905,
+          "tp_inner": [
+            0,
+            0,
+            31,
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.02,
+          "threshold": 0.4056115909307971,
+          "tp_inner": [
+            5,
+            6,
+            31,
+            0,
+            0,
+            2,
+            6,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.05,
+          "threshold": 0.2688052438075343,
+          "tp_inner": [
+            57,
+            122,
+            31,
+            53,
+            0,
+            37,
+            13,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.1,
+          "threshold": 0.20212755705580893,
+          "tp_inner": [
+            101,
+            340,
+            31,
+            168,
+            15,
+            89,
+            23,
+            5
+          ],
+          "ok": true
+        }
+      ]
+    },
+    {
+      "seed": 45,
+      "fold": "LOWO_test_F-9_A",
+      "alpha": 0.05,
+      "threshold": 0.3085941925736939,
+      "fallback": false,
+      "kandidat": [
+        {
+          "alpha": 0.0005,
+          "threshold": 0.9255364002288452,
+          "tp_inner": [
+            0,
+            0,
+            31,
+            0,
+            0,
+            25,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.001,
+          "threshold": 0.8312217153469266,
+          "tp_inner": [
+            0,
+            0,
+            31,
+            0,
+            0,
+            57,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.002,
+          "threshold": 0.7629258972278398,
+          "tp_inner": [
+            0,
+            0,
+            31,
+            0,
+            0,
+            66,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.005,
+          "threshold": 0.6934806858285436,
+          "tp_inner": [
+            0,
+            0,
+            31,
+            0,
+            0,
+            67,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.01,
+          "threshold": 0.6015305941802511,
+          "tp_inner": [
+            1,
+            0,
+            31,
+            0,
+            0,
+            67,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.02,
+          "threshold": 0.44248420015677026,
+          "tp_inner": [
+            9,
+            0,
+            31,
+            11,
+            0,
+            67,
+            7,
+            2
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.05,
+          "threshold": 0.3085941925736939,
+          "tp_inner": [
+            16,
+            17,
+            40,
+            119,
+            8,
+            76,
+            25,
+            31
+          ],
+          "ok": true
+        }
+      ]
+    },
+    {
+      "seed": 46,
+      "fold": "LOWO_test_F-10",
+      "alpha": 0.1,
+      "threshold": 0.23807195178109883,
+      "fallback": false,
+      "kandidat": [
+        {
+          "alpha": 0.0005,
+          "threshold": 0.8594631825555856,
+          "tp_inner": [
+            0,
+            21,
+            0,
+            0,
+            46,
+            0,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.001,
+          "threshold": 0.6548765517738081,
+          "tp_inner": [
+            0,
+            31,
+            0,
+            0,
+            66,
+            0,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.002,
+          "threshold": 0.5475079195737151,
+          "tp_inner": [
+            6,
+            31,
+            0,
+            0,
+            66,
+            2,
+            2,
+            1
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.005,
+          "threshold": 0.48565494305641793,
+          "tp_inner": [
+            9,
+            31,
+            0,
+            0,
+            68,
+            8,
+            6,
+            1
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.01,
+          "threshold": 0.4455451247244833,
+          "tp_inner": [
+            12,
+            31,
+            1,
+            0,
+            72,
+            13,
+            18,
+            4
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.02,
+          "threshold": 0.4020685032288114,
+          "tp_inner": [
+            15,
+            34,
+            32,
+            0,
+            75,
+            26,
+            22,
+            11
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.05,
+          "threshold": 0.3184311175968709,
+          "tp_inner": [
+            35,
+            36,
+            176,
+            0,
+            79,
+            38,
+            49,
+            39
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.1,
+          "threshold": 0.23807195178109883,
+          "tp_inner": [
+            103,
+            44,
+            332,
+            3,
+            92,
+            43,
+            93,
+            84
+          ],
+          "ok": true
+        }
+      ]
+    },
+    {
+      "seed": 46,
+      "fold": "LOWO_test_F-12",
+      "alpha": 0.05,
+      "threshold": 0.25114446325020995,
+      "fallback": false,
+      "kandidat": [
+        {
+          "alpha": 0.0005,
+          "threshold": 0.906486029755398,
+          "tp_inner": [
+            0,
+            29,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.001,
+          "threshold": 0.8157152841215396,
+          "tp_inner": [
+            0,
+            31,
+            0,
+            0,
+            56,
+            0,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.002,
+          "threshold": 0.7191814929021906,
+          "tp_inner": [
+            0,
+            31,
+            0,
+            0,
+            63,
+            2,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.005,
+          "threshold": 0.5470443877545693,
+          "tp_inner": [
+            0,
+            32,
+            0,
+            0,
+            68,
+            10,
+            25,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.01,
+          "threshold": 0.4490799766560986,
+          "tp_inner": [
+            0,
+            39,
+            0,
+            0,
+            77,
+            23,
+            56,
+            1
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.02,
+          "threshold": 0.34553397700068095,
+          "tp_inner": [
+            14,
+            44,
+            3,
+            0,
+            82,
+            33,
+            69,
+            5
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.05,
+          "threshold": 0.25114446325020995,
+          "tp_inner": [
+            63,
+            55,
+            104,
+            1,
+            122,
+            47,
+            114,
+            16
+          ],
+          "ok": true
+        }
+      ]
+    },
+    {
+      "seed": 46,
+      "fold": "LOWO_test_F-14",
+      "alpha": 0.05,
+      "threshold": 0.31521891976641525,
+      "fallback": false,
+      "kandidat": [
+        {
+          "alpha": 0.0005,
+          "threshold": 0.9448679278121135,
+          "tp_inner": [
+            0,
+            0,
+            0,
+            0,
+            33,
+            0,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.001,
+          "threshold": 0.8806309684688479,
+          "tp_inner": [
+            0,
+            0,
+            0,
+            0,
+            41,
+            0,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.002,
+          "threshold": 0.7080681373048994,
+          "tp_inner": [
+            0,
+            0,
+            0,
+            0,
+            67,
+            5,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.005,
+          "threshold": 0.6024822689192542,
+          "tp_inner": [
+            2,
+            0,
+            0,
+            23,
+            67,
+            11,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.01,
+          "threshold": 0.5187469965042019,
+          "tp_inner": [
+            11,
+            0,
+            0,
+            29,
+            68,
+            13,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.02,
+          "threshold": 0.452302163212549,
+          "tp_inner": [
+            24,
+            0,
+            7,
+            32,
+            81,
+            20,
+            7,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.05,
+          "threshold": 0.31521891976641525,
+          "tp_inner": [
+            130,
+            5,
+            88,
+            51,
+            130,
+            29,
+            52,
+            4
+          ],
+          "ok": true
+        }
+      ]
+    },
+    {
+      "seed": 46,
+      "fold": "LOWO_test_F-15A",
+      "alpha": 0.2,
+      "threshold": 0.17168565279219888,
+      "fallback": false,
+      "kandidat": [
+        {
+          "alpha": 0.0005,
+          "threshold": 0.8481762080794144,
+          "tp_inner": [
+            0,
+            0,
+            31,
+            0,
+            39,
+            0,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.001,
+          "threshold": 0.6850554903809751,
+          "tp_inner": [
+            0,
+            0,
+            31,
+            0,
+            66,
+            2,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.002,
+          "threshold": 0.6166395349545752,
+          "tp_inner": [
+            1,
+            0,
+            31,
+            0,
+            70,
+            4,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.005,
+          "threshold": 0.5743831989962161,
+          "tp_inner": [
+            11,
+            0,
+            31,
+            0,
+            75,
+            10,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.01,
+          "threshold": 0.5187256777621916,
+          "tp_inner": [
+            19,
+            0,
+            31,
+            0,
+            87,
+            10,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.02,
+          "threshold": 0.4455195016315043,
+          "tp_inner": [
+            56,
+            1,
+            31,
+            0,
+            100,
+            23,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.05,
+          "threshold": 0.32587681864040424,
+          "tp_inner": [
+            113,
+            9,
+            37,
+            0,
+            133,
+            35,
+            39,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.1,
+          "threshold": 0.24928800508650686,
+          "tp_inner": [
+            128,
+            17,
+            58,
+            3,
+            179,
+            38,
+            70,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.2,
+          "threshold": 0.17168565279219888,
+          "tp_inner": [
+            381,
+            64,
+            129,
+            19,
+            236,
+            46,
+            112,
+            4
+          ],
+          "ok": true
+        }
+      ]
+    },
+    {
+      "seed": 46,
+      "fold": "LOWO_test_F-15_S",
+      "alpha": 0.1,
+      "threshold": 0.2054646163694775,
+      "fallback": false,
+      "kandidat": [
+        {
+          "alpha": 0.0005,
+          "threshold": 0.7594934703661628,
+          "tp_inner": [
+            0,
+            0,
+            31,
+            0,
+            55,
+            0,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.001,
+          "threshold": 0.7208013961180619,
+          "tp_inner": [
+            0,
+            0,
+            31,
+            0,
+            63,
+            3,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.002,
+          "threshold": 0.6639927775338835,
+          "tp_inner": [
+            0,
+            0,
+            31,
+            0,
+            64,
+            11,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.005,
+          "threshold": 0.5620990957537515,
+          "tp_inner": [
+            0,
+            0,
+            32,
+            0,
+            66,
+            24,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.01,
+          "threshold": 0.4731840809504871,
+          "tp_inner": [
+            0,
+            1,
+            38,
+            0,
+            66,
+            28,
+            16,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.02,
+          "threshold": 0.41621648527308375,
+          "tp_inner": [
+            2,
+            2,
+            46,
+            0,
+            68,
+            32,
+            31,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.05,
+          "threshold": 0.2953237918434854,
+          "tp_inner": [
+            8,
+            7,
+            59,
+            0,
+            69,
+            41,
+            86,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.1,
+          "threshold": 0.2054646163694775,
+          "tp_inner": [
+            109,
+            41,
+            96,
+            8,
+            78,
+            56,
+            118,
+            16
+          ],
+          "ok": true
+        }
+      ]
+    },
+    {
+      "seed": 46,
+      "fold": "LOWO_test_F-5",
+      "alpha": 0.1,
+      "threshold": 0.30519340777685267,
+      "fallback": false,
+      "kandidat": [
+        {
+          "alpha": 0.0005,
+          "threshold": 0.7750447082088661,
+          "tp_inner": [
+            0,
+            0,
+            31,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.001,
+          "threshold": 0.7081898239965192,
+          "tp_inner": [
+            0,
+            0,
+            33,
+            0,
+            0,
+            6,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.002,
+          "threshold": 0.634338675896811,
+          "tp_inner": [
+            0,
+            0,
+            37,
+            0,
+            0,
+            11,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.005,
+          "threshold": 0.56323161202281,
+          "tp_inner": [
+            0,
+            1,
+            45,
+            4,
+            0,
+            14,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.01,
+          "threshold": 0.5231956181187053,
+          "tp_inner": [
+            0,
+            1,
+            52,
+            6,
+            0,
+            15,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.02,
+          "threshold": 0.4721209970916743,
+          "tp_inner": [
+            0,
+            3,
+            108,
+            10,
+            0,
+            21,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.05,
+          "threshold": 0.3841951789021569,
+          "tp_inner": [
+            1,
+            15,
+            187,
+            10,
+            0,
+            30,
+            3,
+            1
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.1,
+          "threshold": 0.30519340777685267,
+          "tp_inner": [
+            22,
+            69,
+            303,
+            12,
+            1,
+            34,
+            15,
+            2
+          ],
+          "ok": true
+        }
+      ]
+    },
+    {
+      "seed": 46,
+      "fold": "LOWO_test_F-7",
+      "alpha": 0.1,
+      "threshold": 0.18449447900902635,
+      "fallback": false,
+      "kandidat": [
+        {
+          "alpha": 0.0005,
+          "threshold": 0.8646526743633596,
+          "tp_inner": [
+            0,
+            0,
+            31,
+            0,
+            0,
+            58,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.001,
+          "threshold": 0.7539244597324976,
+          "tp_inner": [
+            0,
+            0,
+            31,
+            0,
+            0,
+            66,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.002,
+          "threshold": 0.5245773323057104,
+          "tp_inner": [
+            1,
+            0,
+            31,
+            1,
+            0,
+            67,
+            28,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.005,
+          "threshold": 0.41632972128240225,
+          "tp_inner": [
+            15,
+            4,
+            32,
+            8,
+            0,
+            67,
+            40,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.01,
+          "threshold": 0.36929049109592704,
+          "tp_inner": [
+            25,
+            4,
+            35,
+            10,
+            0,
+            67,
+            57,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.02,
+          "threshold": 0.3149235804323249,
+          "tp_inner": [
+            33,
+            5,
+            42,
+            23,
+            1,
+            68,
+            73,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.05,
+          "threshold": 0.2410167602381303,
+          "tp_inner": [
+            52,
+            29,
+            48,
+            69,
+            5,
+            81,
+            100,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.1,
+          "threshold": 0.18449447900902635,
+          "tp_inner": [
+            138,
+            46,
+            94,
+            153,
+            17,
+            95,
+            129,
+            1
+          ],
+          "ok": true
+        }
+      ]
+    },
+    {
+      "seed": 46,
+      "fold": "LOWO_test_F-9",
+      "alpha": 0.1,
+      "threshold": 0.17802453571162954,
+      "fallback": false,
+      "kandidat": [
+        {
+          "alpha": 0.0005,
+          "threshold": 0.6696406675779347,
+          "tp_inner": [
+            0,
+            3,
+            29,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.001,
+          "threshold": 0.6341516503546158,
+          "tp_inner": [
+            0,
+            8,
+            30,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.002,
+          "threshold": 0.5865488113466234,
+          "tp_inner": [
+            0,
+            19,
+            31,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.005,
+          "threshold": 0.5038315988545637,
+          "tp_inner": [
+            0,
+            28,
+            31,
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.01,
+          "threshold": 0.43421781760119105,
+          "tp_inner": [
+            2,
+            35,
+            31,
+            0,
+            0,
+            0,
+            2,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.02,
+          "threshold": 0.3660923369395127,
+          "tp_inner": [
+            7,
+            44,
+            34,
+            0,
+            0,
+            1,
+            9,
+            2
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.05,
+          "threshold": 0.25513818308074315,
+          "tp_inner": [
+            29,
+            136,
+            38,
+            8,
+            0,
+            1,
+            20,
+            7
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.1,
+          "threshold": 0.17802453571162954,
+          "tp_inner": [
+            98,
+            287,
+            50,
+            30,
+            5,
+            11,
+            29,
+            15
+          ],
+          "ok": true
+        }
+      ]
+    },
+    {
+      "seed": 46,
+      "fold": "LOWO_test_F-9_A",
+      "alpha": 0.05,
+      "threshold": 0.27564105539025513,
+      "fallback": false,
+      "kandidat": [
+        {
+          "alpha": 0.0005,
+          "threshold": 0.865866777649204,
+          "tp_inner": [
+            0,
+            0,
+            31,
+            0,
+            0,
+            58,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.001,
+          "threshold": 0.7609937775358163,
+          "tp_inner": [
+            0,
+            0,
+            31,
+            0,
+            0,
+            67,
+            0,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.002,
+          "threshold": 0.6148535493836977,
+          "tp_inner": [
+            0,
+            0,
+            31,
+            0,
+            0,
+            67,
+            1,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.005,
+          "threshold": 0.5079688395041341,
+          "tp_inner": [
+            0,
+            2,
+            33,
+            0,
+            0,
+            72,
+            5,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.01,
+          "threshold": 0.4423022168547397,
+          "tp_inner": [
+            0,
+            2,
+            38,
+            29,
+            0,
+            77,
+            14,
+            0
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.02,
+          "threshold": 0.37836237093827807,
+          "tp_inner": [
+            0,
+            3,
+            42,
+            49,
+            1,
+            80,
+            18,
+            10
+          ],
+          "ok": false
+        },
+        {
+          "alpha": 0.05,
+          "threshold": 0.27564105539025513,
+          "tp_inner": [
+            2,
+            12,
+            50,
+            163,
+            7,
+            136,
+            24,
+            67
+          ],
+          "ok": true
+        }
+      ]
+    }
+  ],
+  "catatan": "Ambang = kuantil (1-alpha) skor negatif out-of-fold 8 well dalam; model uji dilatih pada 8 well dalam penuh. alpha dipilih paling kecil yang masih memberi minimal 1 TP di setiap fold dalam (E2 \u00a74.1)."
+}

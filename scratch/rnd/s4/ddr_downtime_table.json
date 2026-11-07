@@ -1,0 +1,247 @@
+{
+ "sumber": {
+  "dir": "/mnt/d/Capstone 1(v2)/data/volve/external/dbx_volume/Well_technical_data/Daily Drilling Report - HTML Version",
+  "n_file_html": 1759,
+  "n_file_dibaca": 1759,
+  "n_file_error": 0
+ },
+ "tabel": {
+  "id": "equipmentfailureInfoTable",
+  "kolom": [
+   "Start time",
+   "Depth mMD",
+   "Depth mTVD",
+   "Sub Equip - Syst Class",
+   "Operation Downtime (min)",
+   "Equipment Repaired",
+   "Remark"
+  ],
+  "n_file_memuat_tabel": 325,
+  "n_file_tanpa_tabel": 1434,
+  "persen_file_memuat_tabel": 18.48
+ },
+ "record": {
+  "n_record": 533,
+  "n_kolom_distribusi": {
+   "7": 533
+  },
+  "n_downtime_numerik": 533,
+  "n_downtime_kosong_atau_teks": 0,
+  "n_downtime_nol": 533,
+  "n_downtime_positif": 0,
+  "total_menit": 0.0,
+  "total_jam": 0.0,
+  "median_menit": 0.0,
+  "max_menit": 0.0,
+  "mean_menit_positif": null
+ },
+ "kelas_equipment_teratas": {
+  "pipe handling equ syst -- vertical pipe handling equ syst": 52,
+  "pipe handling equ syst -- other": 50,
+  "miscellaneous equ syst -- other": 50,
+  "hoisting equ -- top drive": 48,
+  "service equ -- other": 44,
+  "pipe handling equ syst -- elevator": 39,
+  "pipe handling equ syst -- drill floor tube handl syst": 35,
+  "service equ -- special service equ": 29,
+  "mud and bulk syst -- mud supply": 19,
+  "drill floor -- draw works": 18,
+  "miscellaneous equ syst -- wellhead subsea run test": 14,
+  "service equ -- cementing unit": 13,
+  "service equ -- wellhead tubular equ": 13,
+  "service equ -- electr logging equ": 12,
+  "well control equ syst -- other": 8,
+  "miscellaneous equ syst -- hydr pneum power packs": 7,
+  "service equ -- mud logging equ": 7,
+  "pipe handling equ syst -- manual tong": 7,
+  "mud and bulk syst -- other": 6,
+  "mud and bulk syst -- mud mixing storage": 6,
+  "drillstring downhole -- other": 6,
+  "drill floor -- drilling control": 5,
+  "well control equ syst -- bop stack": 5,
+  "material handling syst -- deck cranes": 5,
+  "miscellaneous equ syst -- subsea inspection syst": 5,
+  "well control equ syst -- riser syst": 4,
+  "mud and bulk syst -- mud solids control": 4,
+  "well control equ syst -- diverter": 3,
+  "well control equ syst -- bop control syst": 3,
+  "material handling syst -- bop transport syst": 2
+ },
+ "n_kelas_equipment_unik": 41,
+ "equipment_repaired_teratas": {},
+ "per_wellbore": {
+  "15/9-F-10": {
+   "n": 31,
+   "jam": 0.0
+  },
+  "15/9-F-11": {
+   "n": 9,
+   "jam": 0.0
+  },
+  "15/9-F-11 A": {
+   "n": 3,
+   "jam": 0.0
+  },
+  "15/9-F-11 B": {
+   "n": 33,
+   "jam": 0.0
+  },
+  "15/9-F-11 T2": {
+   "n": 20,
+   "jam": 0.0
+  },
+  "15/9-F-12": {
+   "n": 86,
+   "jam": 0.0
+  },
+  "15/9-F-14": {
+   "n": 41,
+   "jam": 0.0
+  },
+  "15/9-F-15": {
+   "n": 19,
+   "jam": 0.0
+  },
+  "15/9-F-15 A": {
+   "n": 26,
+   "jam": 0.0
+  },
+  "15/9-F-15 B": {
+   "n": 1,
+   "jam": 0.0
+  },
+  "15/9-F-15 C": {
+   "n": 24,
+   "jam": 0.0
+  },
+  "15/9-F-15 D": {
+   "n": 37,
+   "jam": 0.0
+  },
+  "15/9-F-1": {
+   "n": 16,
+   "jam": 0.0
+  },
+  "15/9-F-1 A": {
+   "n": 2,
+   "jam": 0.0
+  },
+  "15/9-F-1 B": {
+   "n": 22,
+   "jam": 0.0
+  },
+  "15/9-F-1 C": {
+   "n": 33,
+   "jam": 0.0
+  },
+  "15/9-F-4": {
+   "n": 56,
+   "jam": 0.0
+  },
+  "15/9-F-5": {
+   "n": 30,
+   "jam": 0.0
+  },
+  "15/9-F-7": {
+   "n": 23,
+   "jam": 0.0
+  },
+  "15/9-F-9": {
+   "n": 12,
+   "jam": 0.0
+  },
+  "15/9-F-9 A": {
+   "n": 9,
+   "jam": 0.0
+  }
+ },
+ "per_file_jam": {
+  "15_9_F_10_2009_04_12.html": 0.0,
+  "15_9_F_10_2009_04_13.html": 0.0,
+  "15_9_F_10_2009_04_20.html": 0.0,
+  "15_9_F_10_2009_04_22.html": 0.0,
+  "15_9_F_10_2009_04_23.html": 0.0,
+  "15_9_F_10_2009_04_27.html": 0.0,
+  "15_9_F_10_2009_04_30.html": 0.0,
+  "15_9_F_10_2009_05_03.html": 0.0,
+  "15_9_F_10_2009_05_06.html": 0.0,
+  "15_9_F_10_2009_05_09.html": 0.0,
+  "15_9_F_10_2009_05_12.html": 0.0,
+  "15_9_F_10_2009_05_15.html": 0.0,
+  "15_9_F_10_2009_05_17.html": 0.0,
+  "15_9_F_10_2009_05_21.html": 0.0,
+  "15_9_F_10_2009_05_24.html": 0.0,
+  "15_9_F_10_2009_05_26.html": 0.0,
+  "15_9_F_10_2009_05_27.html": 0.0,
+  "15_9_F_10_2009_05_28.html": 0.0,
+  "15_9_F_10_2009_05_29.html": 0.0,
+  "15_9_F_10_2009_06_01.html": 0.0
+ },
+ "contoh_5_record": [
+  {
+   "file": "15_9_F_10_2009_04_12.html",
+   "wellbore": "15/9-F-10",
+   "period": "2009-04-11 00:00 - 2009-04-12 00:00",
+   "n_kolom": 7,
+   "start_time": "00:00",
+   "depth_mmd": "36",
+   "depth_mtvd": "",
+   "sub_equip_syst_class": "pipe handling equ syst -- drill floor tube handl syst",
+   "downtime_min": "0",
+   "equipment_repaired": "00:00",
+   "remark": "Hydraulic leakage on AFT Iron roughneck."
+  },
+  {
+   "file": "15_9_F_10_2009_04_13.html",
+   "wellbore": "15/9-F-10",
+   "period": "2009-04-12 00:00 - 2009-04-13 00:00",
+   "n_kolom": 7,
+   "start_time": "00:00",
+   "depth_mmd": "231",
+   "depth_mtvd": "",
+   "sub_equip_syst_class": "pipe handling equ syst -- other",
+   "downtime_min": "0",
+   "equipment_repaired": "00:00",
+   "remark": "When drilling 26\" hole section it was observed that the PS-21 slips was damaged. One of the guides where partly loose and a bolt was damaged. The PS-21 was removed for repair and the operation continued using manual slips. Repaired PS-21 and re-inserted in"
+  },
+  {
+   "file": "15_9_F_10_2009_04_20.html",
+   "wellbore": "15/9-F-10",
+   "period": "2009-04-19 00:00 - 2009-04-20 00:00",
+   "n_kolom": 7,
+   "start_time": "00:00",
+   "depth_mmd": "497",
+   "depth_mtvd": "",
+   "sub_equip_syst_class": "pipe handling equ syst -- elevator",
+   "downtime_min": "0",
+   "equipment_repaired": "00:00",
+   "remark": "Loose link tilt clamps, needed tightening."
+  },
+  {
+   "file": "15_9_F_10_2009_04_22.html",
+   "wellbore": "15/9-F-10",
+   "period": "2009-04-21 00:00 - 2009-04-22 00:00",
+   "n_kolom": 7,
+   "start_time": "00:00",
+   "depth_mmd": "136",
+   "depth_mtvd": "",
+   "sub_equip_syst_class": "hoisting equ -- top drive",
+   "downtime_min": "0",
+   "equipment_repaired": "00:00",
+   "remark": "Worn centralizing liners on TDS. Scores on DP couplings."
+  },
+  {
+   "file": "15_9_F_10_2009_04_23.html",
+   "wellbore": "15/9-F-10",
+   "period": "2009-04-22 00:00 - 2009-04-23 00:00",
+   "n_kolom": 7,
+   "start_time": "00:00",
+   "depth_mmd": "115",
+   "depth_mtvd": "",
+   "sub_equip_syst_class": "pipe handling equ syst -- other",
+   "downtime_min": "0",
+   "equipment_repaired": "00:00",
+   "remark": "Broken bolt on PS-21 slips actuator."
+  }
+ ]
+}

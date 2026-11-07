@@ -1,0 +1,45 @@
+[2026-10-12 04:35:06] == F-10: bins=41446 cand=14583 feat_valid=7899 leak_in_builder=0
+[2026-10-12 04:35:06]      stuck: eligible=0 pos=0 prev=None
+[2026-10-12 04:35:06]      vib: eligible=0 pos=0 prev=None
+[2026-10-12 04:35:06]      shk: eligible=7899 pos=146 prev=0.01848335232307887
+[2026-10-12 04:35:06]      ssi: eligible=7133 pos=161 prev=0.022571148184494603
+[2026-10-12 04:35:12] == F-12: bins=180958 cand=35131 feat_valid=7928 leak_in_builder=0
+[2026-10-12 04:35:12]      stuck: eligible=0 pos=0 prev=None
+[2026-10-12 04:35:12]      vib: eligible=0 pos=0 prev=None
+[2026-10-12 04:35:12]      shk: eligible=5405 pos=217 prev=0.04014801110083256
+[2026-10-12 04:35:12]      ssi: eligible=4293 pos=83 prev=0.019333799208013043
+[2026-10-12 04:35:14] == F-14: bins=96698 cand=16831 feat_valid=11391 leak_in_builder=0
+[2026-10-12 04:35:14]      stuck: eligible=3201 pos=432 prev=0.13495782567947517
+[2026-10-12 04:35:14]      vib: eligible=1989 pos=1124 prev=0.5651080945198592
+[2026-10-12 04:35:14]      shk: eligible=11205 pos=760 prev=0.0678268630075859
+[2026-10-12 04:35:14]      ssi: eligible=5455 pos=75 prev=0.013748854262144821
+[2026-10-12 04:35:17] == F-15A: bins=44347 cand=17242 feat_valid=6488 leak_in_builder=0
+[2026-10-12 04:35:17]      stuck: eligible=0 pos=0 prev=None
+[2026-10-12 04:35:17]      vib: eligible=6482 pos=1543 prev=0.2380438136377661
+[2026-10-12 04:35:17]      shk: eligible=6484 pos=41 prev=0.006323257248611968
+[2026-10-12 04:35:17]      ssi: eligible=6020 pos=31 prev=0.0051495016611295685
+[2026-10-12 04:35:19] == F-15_S: bins=101630 cand=17629 feat_valid=11399 leak_in_builder=0
+[2026-10-12 04:35:19]      stuck: eligible=0 pos=0 prev=None
+[2026-10-12 04:35:19]      vib: eligible=10903 pos=1532 prev=0.1405117857470421
+[2026-10-12 04:35:19]      shk: eligible=11394 pos=259 prev=0.02273126206775496
+[2026-10-12 04:35:19]      ssi: eligible=5342 pos=85 prev=0.015911643579183826
+[2026-10-12 04:35:21] == F-5: bins=67934 cand=11779 feat_valid=7166 leak_in_builder=0
+[2026-10-12 04:35:21]      stuck: eligible=0 pos=0 prev=None
+[2026-10-12 04:35:21]      vib: eligible=4548 pos=1230 prev=0.2704485488126649
+[2026-10-12 04:35:21]      shk: eligible=7140 pos=240 prev=0.03361344537815126
+[2026-10-12 04:35:21]      ssi: eligible=4714 pos=102 prev=0.021637675010606705
+[2026-10-12 04:35:22] == F-7: bins=34533 cand=4402 feat_valid=2761 leak_in_builder=0
+[2026-10-12 04:35:22]      stuck: eligible=0 pos=0 prev=None
+[2026-10-12 04:35:22]      vib: eligible=0 pos=0 prev=None
+[2026-10-12 04:35:22]      shk: eligible=2761 pos=267 prev=0.09670409272002897
+[2026-10-12 04:35:22]      ssi: eligible=982 pos=3 prev=0.003054989816700611
+[2026-10-12 04:35:22] == F-9: bins=25460 cand=3889 feat_valid=1851 leak_in_builder=0
+[2026-10-12 04:35:22]      stuck: eligible=0 pos=0 prev=None
+[2026-10-12 04:35:22]      vib: eligible=0 pos=0 prev=None
+[2026-10-12 04:35:22]      shk: eligible=1851 pos=45 prev=0.024311183144246355
+[2026-10-12 04:35:22]      ssi: eligible=1126 pos=12 prev=0.010657193605683837
+[2026-10-12 04:35:23] == F-9_A: bins=27282 cand=2845 feat_valid=2356 leak_in_builder=0
+[2026-10-12 04:35:23]      stuck: eligible=2354 pos=1575 prev=0.6690739167374682
+[2026-10-12 04:35:23]      vib: eligible=0 pos=0 prev=None
+[2026-10-12 04:35:23]      shk: eligible=2356 pos=30 prev=0.012733446519524618
+[2026-10-12 04:35:23]      ssi: eligible=841 pos=55 prev=0.06539833531510107

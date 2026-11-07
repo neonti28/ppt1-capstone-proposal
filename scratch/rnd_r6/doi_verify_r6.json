@@ -1,0 +1,242 @@
+[
+ {
+  "doi": "10.2307/2531595",
+  "crossref": {
+   "ok": true,
+   "title": "Comparing the Areas under Two or More Correlated Receiver Operating Characteristic Curves: A Nonparametric Approach",
+   "author_first": "DeLong, Elizabeth R.",
+   "n_authors": 3,
+   "container": "Biometrics",
+   "year": 1988,
+   "volume": "44",
+   "issue": "3",
+   "page": "837",
+   "crossref_doi": "10.2307/2531595",
+   "type": "journal-article"
+  },
+  "landing": {
+   "http": 200,
+   "final_url": "https://www.jstor.org/stable/2531595?origin=crossref"
+  }
+ },
+ {
+  "doi": "10.1214/aos/1176344552",
+  "crossref": {
+   "ok": true,
+   "title": "Bootstrap Methods: Another Look at the Jackknife",
+   "author_first": "Efron, B.",
+   "n_authors": 1,
+   "container": "The Annals of Statistics",
+   "year": 1979,
+   "volume": "7",
+   "issue": "1",
+   "page": "1-26",
+   "crossref_doi": "10.1214/aos/1176344552",
+   "type": "journal-article"
+  },
+  "landing": {
+   "http": 200,
+   "final_url": "https://projecteuclid.org/journals/annals-of-statistics/volume-7/issue-1/Bootstrap-Methods-Another-Look-at-the-Jackknife/10.1214/aos/1176344552.full"
+  }
+ },
+ {
+  "doi": "10.1111/j.2517-6161.1995.tb02031.x",
+  "crossref": {
+   "ok": true,
+   "title": "Controlling the False Discovery Rate: A Practical and Powerful Approach to Multiple Testing",
+   "author_first": "Benjamini, Yoav",
+   "n_authors": 2,
+   "container": "Journal of the Royal Statistical Society Series B: Statistical Methodology",
+   "year": 1995,
+   "volume": "57",
+   "issue": "1",
+   "page": "289-300",
+   "crossref_doi": "10.1111/j.2517-6161.1995.tb02031.x",
+   "type": "journal-article"
+  },
+  "landing": {
+   "http": 403,
+   "final_url": "https://academic.oup.com/jrsssb/article/57/1/289/7035855"
+  }
+ },
+ {
+  "doi": "10.1080/01621459.1927.10502953",
+  "crossref": {
+   "ok": true,
+   "title": "Probable Inference, the Law of Succession, and Statistical Inference",
+   "author_first": "Wilson, Edwin B.",
+   "n_authors": 1,
+   "container": "Journal of the American Statistical Association",
+   "year": 1927,
+   "volume": "22",
+   "issue": "158",
+   "page": "209-212",
+   "crossref_doi": "10.1080/01621459.1927.10502953",
+   "type": "journal-article"
+  },
+  "landing": {
+   "http": 403,
+   "final_url": "https://www.tandfonline.com/doi/abs/10.1080/01621459.1927.10502953"
+  }
+ },
+ {
+  "doi": "10.1007/BF02295996",
+  "crossref": {
+   "ok": true,
+   "title": "Note on the Sampling Error of the Difference Between Correlated Proportions or Percentages",
+   "author_first": "McNemar, Quinn",
+   "n_authors": 1,
+   "container": "Psychometrika",
+   "year": 1947,
+   "volume": "12",
+   "issue": "2",
+   "page": "153-157",
+   "crossref_doi": "10.1007/bf02295996",
+   "type": "journal-article"
+  },
+  "landing": {
+   "http": 200,
+   "final_url": "https://www.cambridge.org/core/journals/psychometrika/article/abs/note-on-the-sampling-error-of-the-difference-between-correlated-proportions-or-percentages/698C2461BE63F5848763502D54E534FD"
+  }
+ },
+ {
+  "doi": "10.1007/978-3-642-40994-3_29",
+  "crossref": {
+   "ok": true,
+   "title": "Area under the Precision-Recall Curve: Point Estimates and Confidence Intervals",
+   "author_first": "Boyd, Kendrick",
+   "n_authors": 3,
+   "container": "Lecture Notes in Computer Science",
+   "year": 2013,
+   "volume": null,
+   "issue": null,
+   "page": "451-466",
+   "crossref_doi": "10.1007/978-3-642-40994-3_29",
+   "type": "book-chapter"
+  },
+  "landing": {
+   "http": 200,
+   "final_url": "https://link.springer.com/chapter/10.1007/978-3-642-40994-3_29?error=cookies_not_supported&code=7e59b598-5ca8-4493-845e-8e6f781d189f"
+  }
+ },
+ {
+  "doi": "10.1371/journal.pone.0118432",
+  "crossref": {
+   "ok": true,
+   "title": "The Precision-Recall Plot Is More Informative than the ROC Plot When Evaluating Binary Classifiers on Imbalanced Datasets",
+   "author_first": "Saito, Takaya",
+   "n_authors": 2,
+   "container": "PLOS ONE",
+   "year": 2015,
+   "volume": "10",
+   "issue": "3",
+   "page": "e0118432",
+   "crossref_doi": "10.1371/journal.pone.0118432",
+   "type": "journal-article"
+  },
+  "landing": {
+   "http": 200,
+   "final_url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0118432"
+  }
+ },
+ {
+  "doi": "10.1148/radiology.143.1.7063747",
+  "crossref": {
+   "ok": true,
+   "title": "The meaning and use of the area under a receiver operating characteristic (ROC) curve.",
+   "author_first": "Hanley, J A",
+   "n_authors": 2,
+   "container": "Radiology",
+   "year": 1982,
+   "volume": "143",
+   "issue": "1",
+   "page": "29-36",
+   "crossref_doi": "10.1148/radiology.143.1.7063747",
+   "type": "journal-article"
+  },
+  "landing": {
+   "http": 403,
+   "final_url": "https://pubs.rsna.org/doi/10.1148/radiology.143.1.7063747"
+  }
+ },
+ {
+  "doi": "10.1023/A:1024068626366",
+  "crossref": {
+   "ok": true,
+   "title": "Inference for the Generalization Error",
+   "author_first": "Nadeau, Claude",
+   "n_authors": 2,
+   "container": "Machine Learning",
+   "year": 2003,
+   "volume": "52",
+   "issue": "3",
+   "page": "239-281",
+   "crossref_doi": "10.1023/a:1024068626366",
+   "type": "journal-article"
+  },
+  "landing": {
+   "http": 200,
+   "final_url": "https://link.springer.com/article/10.1023/A:1024068626366?error=cookies_not_supported&code=a5e12095-d0c1-4458-abc8-552cb9410b06"
+  }
+ },
+ {
+  "doi": "10.1162/089976698300017197",
+  "crossref": {
+   "ok": true,
+   "title": "Approximate Statistical Tests for Comparing Supervised Classification Learning Algorithms",
+   "author_first": "Dietterich, Thomas G.",
+   "n_authors": 1,
+   "container": "Neural Computation",
+   "year": 1998,
+   "volume": "10",
+   "issue": "7",
+   "page": "1895-1923",
+   "crossref_doi": "10.1162/089976698300017197",
+   "type": "journal-article"
+  },
+  "landing": {
+   "http": 403,
+   "final_url": "https://direct.mit.edu/neco/article/10/7/1895-1923/6224"
+  }
+ },
+ {
+  "doi": "10.1525/collabra.33267",
+  "crossref": {
+   "ok": true,
+   "title": "Sample Size Justification",
+   "author_first": "Lakens, Daniël",
+   "n_authors": 1,
+   "container": "Collabra: Psychology",
+   "year": 2022,
+   "volume": "8",
+   "issue": "1",
+   "page": null,
+   "crossref_doi": "10.1525/collabra.33267",
+   "type": "journal-article"
+  },
+  "landing": {
+   "http": 403,
+   "final_url": "https://online.ucpress.edu/collabra/article/8/1/33267/120491/Sample-Size-Justification"
+  }
+ },
+ {
+  "doi": "10.2307/2340521",
+  "crossref": {
+   "ok": true,
+   "title": "On the Interpretation of χ 2 from Contingency Tables, and the Calculation of P",
+   "author_first": "Fisher, R. A.",
+   "n_authors": 1,
+   "container": "Journal of the Royal Statistical Society",
+   "year": 1922,
+   "volume": "85",
+   "issue": "1",
+   "page": "87",
+   "crossref_doi": "10.2307/2340521",
+   "type": "journal-article"
+  },
+  "landing": {
+   "http": 200,
+   "final_url": "https://www.jstor.org/stable/2340521?origin=crossref"
+  }
+ }
+]

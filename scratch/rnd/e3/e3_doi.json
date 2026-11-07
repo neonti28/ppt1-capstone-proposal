@@ -1,0 +1,152 @@
+{
+  "catatan": "Lapis1=HEAD doi.org tanpa redirect; Lapis2=api.crossref.org; Lapis3=akses penerbit (403/202 = blokir bot, bukan DOI palsu)",
+  "refs": [
+    {
+      "key": "angelopoulos2021",
+      "doi": "10.48550/arXiv.2107.07511",
+      "penulis": "Angelopoulos",
+      "tahun": 2021,
+      "judul": "A Gentle Introduction to Conformal Prediction and Distribution-Free Uncertainty Quantification",
+      "lapis1_registrasi": 302,
+      "location": "https://arxiv.org/abs/2107.07511",
+      "lapis2_metadata": 200,
+      "metadata": {
+        "judul": "A Gentle Introduction to Conformal Prediction and Distribution-Free Uncertainty Quantification",
+        "tahun": 2021,
+        "penulis_pertama": "Angelopoulos",
+        "kontainer": "arXiv",
+        "sumber": "datacite"
+      },
+      "lapis3_akses": 200,
+      "url_penerbit": "https://arxiv.org/abs/2107.07511",
+      "metadata_terverifikasi": true,
+      "penulis_tahun_cocok": true
+    },
+    {
+      "key": "vovk2005",
+      "doi": "10.1007/b106715",
+      "penulis": "Vovk",
+      "tahun": 2005,
+      "judul": "Algorithmic Learning in a Random World",
+      "lapis1_registrasi": 302,
+      "location": "http://link.springer.com/10.1007/b106715",
+      "lapis2_metadata": 200,
+      "metadata": {
+        "judul": "Algorithmic Learning in a Random World",
+        "tahun": 2005,
+        "penulis_pertama": null,
+        "kontainer": null,
+        "sumber": "crossref"
+      },
+      "lapis3_akses": 200,
+      "url_penerbit": "https://link.springer.com/book/10.1007/b106715?error=cookies_not_supported&code=7d1211b6-51ee-4fc7-96c2-9fb1cf289b0a",
+      "metadata_terverifikasi": true,
+      "penulis_tahun_cocok": false
+    },
+    {
+      "key": "lei2018",
+      "doi": "10.1080/01621459.2017.1307116",
+      "penulis": "Lei",
+      "tahun": 2018,
+      "judul": "Distribution-Free Predictive Inference for Regression",
+      "lapis1_registrasi": 302,
+      "location": "https://www.tandfonline.com/doi/full/10.1080/01621459.2017.1307116",
+      "lapis2_metadata": 200,
+      "metadata": {
+        "judul": "Distribution-Free Predictive Inference for Regression",
+        "tahun": 2018,
+        "penulis_pertama": "Lei",
+        "kontainer": "Journal of the American Statistical Association",
+        "sumber": "crossref"
+      },
+      "lapis3_akses": 403,
+      "url_penerbit": null,
+      "metadata_terverifikasi": true,
+      "penulis_tahun_cocok": true
+    },
+    {
+      "key": "page1954",
+      "doi": "10.1093/biomet/41.1-2.100",
+      "penulis": "Page",
+      "tahun": 1954,
+      "judul": "Continuous Inspection Schemes",
+      "lapis1_registrasi": 302,
+      "location": "https://academic.oup.com/biomet/article-lookup/doi/10.1093/biomet/41.1-2.100",
+      "lapis2_metadata": 200,
+      "metadata": {
+        "judul": "CONTINUOUS INSPECTION SCHEMES",
+        "tahun": 1954,
+        "penulis_pertama": "PAGE",
+        "kontainer": "Biometrika",
+        "sumber": "crossref"
+      },
+      "lapis3_akses": 403,
+      "url_penerbit": null,
+      "metadata_terverifikasi": true,
+      "penulis_tahun_cocok": true
+    },
+    {
+      "key": "garwood1936",
+      "doi": "10.1093/biomet/28.3-4.437",
+      "penulis": "Garwood",
+      "tahun": 1936,
+      "judul": "Fiducial Limits for the Poisson Distribution",
+      "lapis1_registrasi": 302,
+      "location": "https://academic.oup.com/biomet/article-lookup/doi/10.1093/biomet/28.3-4.437",
+      "lapis2_metadata": 200,
+      "metadata": {
+        "judul": "(i) Fiducial Limits for the Poisson Distribution",
+        "tahun": 1936,
+        "penulis_pertama": "GARWOOD",
+        "kontainer": "Biometrika",
+        "sumber": "crossref"
+      },
+      "lapis3_akses": 403,
+      "url_penerbit": null,
+      "metadata_terverifikasi": true,
+      "penulis_tahun_cocok": true
+    },
+    {
+      "key": "hawkins1998",
+      "doi": "10.1007/978-1-4612-1686-5",
+      "penulis": "Hawkins",
+      "tahun": 1998,
+      "judul": "Cumulative Sum Charts and Charting for Quality Improvement",
+      "lapis1_registrasi": 302,
+      "location": "http://link.springer.com/10.1007/978-1-4612-1686-5",
+      "lapis2_metadata": 200,
+      "metadata": {
+        "judul": "Cumulative Sum Charts and Charting for Quality Improvement",
+        "tahun": 1998,
+        "penulis_pertama": "Hawkins",
+        "kontainer": null,
+        "sumber": "crossref"
+      },
+      "lapis3_akses": 200,
+      "url_penerbit": "https://link.springer.com/book/10.1007/978-1-4612-1686-5?error=cookies_not_supported&code=729dc766-7468-4e7d-a2cc-79d9c6e7118c",
+      "metadata_terverifikasi": true,
+      "penulis_tahun_cocok": true
+    },
+    {
+      "key": "siffer2017",
+      "doi": "10.1145/3097983.3098144",
+      "penulis": "Siffer",
+      "tahun": 2017,
+      "judul": "Anomaly Detection in Streams with Extreme Value Theory",
+      "lapis1_registrasi": 302,
+      "location": "https://dl.acm.org/doi/10.1145/3097983.3098144",
+      "lapis2_metadata": 200,
+      "metadata": {
+        "judul": "Anomaly Detection in Streams with Extreme Value Theory",
+        "tahun": 2017,
+        "penulis_pertama": "Siffer",
+        "kontainer": "Proceedings of the 23rd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining",
+        "sumber": "crossref"
+      },
+      "lapis3_akses": 403,
+      "url_penerbit": null,
+      "metadata_terverifikasi": true,
+      "penulis_tahun_cocok": true
+    }
+  ]
+}

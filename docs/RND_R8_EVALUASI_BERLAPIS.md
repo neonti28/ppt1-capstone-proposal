@@ -14,13 +14,13 @@ Riset pendahuluan: scientific-critical-thinking, statistical-analysis, scikit-le
 - **statistical-power** dipakai untuk menolak pembacaan yang salah atas hasil nol. Jumlah fold kecil (4 sampai 9) berarti ketiadaan efek tidak dapat dibaca sebagai bukti tidak ada efek, sehingga laporan memakai batas bawah dan batas atas (Garwood) serta menyatakan recall yang tidak terukur, bukan menyimpulkan kegagalan.
 - **verification-mandatory** dipakai sebagai gerbang akhir: 39 nilai kunci di-assert silang terhadap berkas JSON mentah oleh `code/rnd_r8_ledger.py`, DOI diuji dua lapis (registrasi dan metadata), dan klaim yang tidak dapat dibuka dicatat sebagai BELUM TERVERIFIKASI.
 
-Riset pendahuluan: sequentialthinking, 6 pikiran (`mcp__sequentialthinking__sequentialthinking`, thoughtNumber 1 sampai 6, thoughtHistoryLength 6). Ringkas: (1) memetakan empat tugas dan data yang layak, (2) menetapkan aturan ambang hanya dari dalam fold, (3) menemukan trade-off hyd yang berlawanan arah antara lapisan A dan B, (4) menemukan jebakan objektif pada metaheuristik, (5) memisahkan "recall tidak terukur" dari "engine gagal", (6) menetapkan komposisi akhir per kelas.
+Riset pendahuluan: sequentialthinking, 6 pikiran (`mcp__sequentialthinking__sequentialthinking`, thoughtNumber 1 sampai 6, thoughtHistoryLength 6). Ringkas: (1) memetakan empat tugas dan data yang layak, (2) menetapkan aturan ambang hanya dari dalam fold, (3) menemukan trade-off hyd yang berlawanan arah antara lapisan A dan B, (4) menemukan jebakan objektif pada metaheuristik, (5) memisahkan "recall tidak terukur" dari "detektor gagal", (6) menetapkan komposisi akhir per kelas.
 
 ---
 
 ## 0. CARA MEMBACA DOKUMEN INI
 
-Dokumen ini tidak memakai kalimat "engine gagal" sebagai kesimpulan. Setiap pasangan kelas dan tugas
+Dokumen ini tidak memakai kalimat "detektor gagal" sebagai kesimpulan. Setiap pasangan kelas dan tugas
 dinilai pada tiga lapisan sesuai kebijakan:
 
 - **Lapisan A, apakah deteksi bekerja:** precision, recall, false alarm per 24 jam, waktu deteksi.
@@ -276,16 +276,16 @@ karena deteksinya hampir kosong. Rentang FAR antar well 0 sampai 4,6543.
 
 **Bukti H4: SEBAGIAN.** Lapisan A terukur, lapisan B terukur pada sampel onset kecil, lapisan C terukur
 untuk antar well dan paruh waktu. Kesimpulan yang sah adalah "belum layak alarm otomatis", bukan
-"engine gagal", karena penyebab utamanya adalah label onset yang jarang dan tidak dapat dipisahkan
+"detektor gagal", karena penyebab utamanya adalah label onset yang jarang dan tidak dapat dipisahkan
 oleh fitur yang tersedia.
 
 ---
 
 ## 8. TABEL KEPUTUSAN
 
-Kekuatan bukti per baris menyatakan seberapa jauh penilaian didukung angka, bukan seberapa bagus engine.
+Kekuatan bukti per baris menyatakan seberapa jauh penilaian didukung angka, bukan seberapa bagus detektor.
 
-| Kelas | Tugas | Engine dinilai | Baseline tugas itu | Lapisan A | Lapisan B | Lapisan C | Batas penggunaan | Kekuatan bukti |
+| Kelas | Tugas | Detektor dinilai | Baseline tugas itu | Lapisan A | Lapisan B | Lapisan C | Batas penggunaan | Kekuatan bukti |
 |---|---|---|---|---|---|---|---|---|
 | hyd | K-i status | H1 stat+rule | rule kanal | FP 935 lawan 2105, presisi 0,7789 lawan 0,6835, FAR median 3,5302 lawan 6,932 | lead 11,5 lawan 6,0 menit, 219 lawan 307 onset dari 390 | 9 dari 9 well stabil antar paruh, rentang FAR 22 kali antar well | jangan dipakai sebagai satu-satunya alarm pada F-10 dan F-9_A yang FAR-nya di atas 6 | TERUKUR |
 | hyd | K-i status | rule kanal | persistence status | presisi 0,6835, recall 0,7507, FAR median 6,932, 3 dari 9 fold | lead 6,0 menit, 307 dari 390 onset | stabil antar paruh 9 dari 9 | beban alarm tinggi pada well ber-FAR besar | TERUKUR |
@@ -300,7 +300,7 @@ Kekuatan bukti per baris menyatakan seberapa jauh penilaian didukung angka, buka
 
 ---
 
-## 9. KOMPOSISI ENGINE FINAL PER KELAS
+## 9. KOMPOSISI Detektor FINAL PER KELAS
 
 Keputusan diambil dari angka di bagian 4 sampai 7, bukan dari selera metodologis.
 

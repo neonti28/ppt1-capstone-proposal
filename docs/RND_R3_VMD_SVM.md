@@ -18,7 +18,7 @@ Baris wajib: **Riset pendahuluan: literature-review, paper-lookup, aeon, scikit-
 | `scientific-critical-thinking` | Memisahkan OBSERVED dari DERIVED, menolak menyimpulkan sebab dari korelasi, dan menandai keluaran yang rusak (mis. fraksi energi wavelet tidak ternormalisasi) sebagai alat ukur yang perlu diperbaiki, bukan sebagai temuan. |
 | `verification-mandatory` | Mewajibkan setiap angka punya baris ledger, menolak angka tanpa sumber, dan menutup laporan dengan daftar yang belum terverifikasi. |
 
-Baris wajib: **sequ-mcp dipakai 5 pikiran** (`mcp__sequentialthinking__sequentialthinking`, `thoughtNumber` 1 sampai 5, `thoughtHistoryLength` 5). Jumlah pikiran: **5**. Ringkas: (1) memisahkan "VMD tidak bisa dijalankan" dari "VMD tidak informatif" pada fs rendah, (2) menguji degenerasi pusat mode VMD dari angka `spacing_min_hz`, (3) memisahkan tiga kelompok biaya kernel (SVM murah, DTW mustahil, matrix profile layak), (4) memetakan tiga lapis overfitting hibrida, (5) menetapkan skor kesesuaian per engine dari ketersediaan kanal, sirkularitas label, dan keberadaan baseline lebih murah.
+Baris wajib: **sequ-mcp dipakai 5 pikiran** (`mcp__sequentialthinking__sequentialthinking`, `thoughtNumber` 1 sampai 5, `thoughtHistoryLength` 5). Jumlah pikiran: **5**. Ringkas: (1) memisahkan "VMD tidak bisa dijalankan" dari "VMD tidak informatif" pada fs rendah, (2) menguji degenerasi pusat mode VMD dari angka `spacing_min_hz`, (3) memisahkan tiga kelompok biaya kernel (SVM murah, DTW mustahil, matrix profile layak), (4) memetakan tiga lapis overfitting hibrida, (5) menetapkan skor kesesuaian per mode dari ketersediaan kanal, sirkularitas label, dan keberadaan baseline lebih murah.
 
 ## 1. Syarat sinyal untuk dekomposisi (VMD, EMD/EEMD, wavelet)
 
@@ -133,7 +133,7 @@ Biaya terukur (OBSERVED `m3_decomp.json` bagian `C_biaya.dtw`, satu pasangan jar
 | 512 | 220,3579 | 35.027,00 |
 | 1024 | 864,2339 | 137.374,35 |
 
-Angka ini mematikan kNN-DTW sebagai komponen produksi pada ukuran jendela yang dipakai engine. Bahkan pada panjang 32, satu kali klasifikasi seluruh dataset butuh 134 jam; pada 1024 dibutuhkan 137.374 jam. Batasan bukan pada akurasi (DTW memang kuat untuk bentuk), tetapi pada anggaran waktu.
+Angka ini mematikan kNN-DTW sebagai komponen produksi pada ukuran jendela yang dipakai detektor. Bahkan pada panjang 32, satu kali klasifikasi seluruh dataset butuh 134 jam; pada 1024 dibutuhkan 137.374 jam. Batasan bukan pada akurasi (DTW memang kuat untuk bentuk), tetapi pada anggaran waktu.
 
 Kalau DTW tetap ingin dipakai untuk validasi kecil, syaratnya: z-normalisasi per jendela (tanpa itu DTW membandingkan level, bukan bentuk), konstrain Sakoe-Chiba untuk memotong jalur (Sakoe & Chiba 1978, DOI `10.1109/TASSP.1978.1163055`), dan pengurangan jumlah prototipe (Xi et al. 2006, DOI `10.1145/1143844.1143974`, numerosity reduction). Ratanamahatana & Keogh 2004 (DOI `10.1137/1.9781611972740.2`) menunjukkan konstrain yang dipelajari bisa lebih akurat sekaligus lebih cepat, tetapi tetap tidak mengubah orde biaya.
 
@@ -220,11 +220,11 @@ Yang harus diakuisisi kalau dekomposisi getaran ingin benar-benar dipakai:
 
 Sampai kelima hal itu ada, VMD/EMD/wavelet tetap dicatat sebagai **TIDAK LAYAK** pada data sekarang, dan itu kesimpulan berbasis pengukuran, bukan penolakan terhadap metode.
 
-## 5. Skor kesesuaian per engine
+## 5. Skor kesesuaian per mode
 
 Skor 0 sampai 5, dihitung dari empat komponen: ketersediaan kanal, kecukupan laju sampel, risiko sirkularitas label, dan keberadaan baseline lebih murah. Skor bukan penilaian kualitas algoritma, tetapi penilaian apakah algoritma itu bisa dipakai pada data ini sekarang.
 
-| Engine | Kanal yang relevan | Laju | Sirkularitas | Baseline lebih murah | Skor dekomposisi | Skor SVM | Skor matrix profile | Peran usulan |
+| Mode | Kanal yang relevan | Laju | Sirkularitas | Baseline lebih murah | Skor dekomposisi | Skor SVM | Skor matrix profile | Peran usulan |
 |---|---|---|---|---|---|---|---|---|
 | `vib` | `VIBLAT_RT` ada di 6 dari 9 well | 0,0167 sampai 0,3333 Hz | tinggi: label = `VIBLAT_RT >= 32,17405` | RF ranking (AUPRC 0,441 sampai 0,912) dan rule (P 0,87 sampai 0,95) | **0** | 2 | 2 | Dekomposisi ditolak. SVM hanya sebagai pembanding murah pada fitur jendela (median AUC 0,8245 satu split), bukan pengganti rule. Matrix profile untuk menunjuk episode mirip, bukan alarm. |
 | `ssi` | `CRPM_RT` dan `SPPA` | 0,25 sampai 0,3333 Hz | sedang: label dari rasio RMS/peak, bukan bentuk gelombang | hybrid rule+persistence (FP turun 2.091 ke 927, 9/9 well) | **0** | 1 | 1 | Dekomposisi tidak relevan karena SSI sudah merupakan ringkasan jendela. Tidak ada usulan. |
@@ -232,7 +232,7 @@ Skor 0 sampai 5, dihitung dari empat komponen: ketersediaan kanal, kecukupan laj
 | `tool_wear` | 27 fitur tabular bengkel, 469 jendela, 4 alat | tidak berlaku (bukan deret waktu berkecepatan tinggi) | rendah: label dari run dan kondisi | canary AUPRC 0,516 sampai 0,612 | **0** | 3 | 0 | SVM pada 27 fitur adalah pembanding yang masuk akal dan murah untuk ranking lintas alat, dengan catatan label konstan dalam run. Dekomposisi tidak punya objek. |
 | `stuck`, `hyd`, `bit_wear` | tidak termasuk lingkup kartu ini | tidak berlaku | tidak berlaku | sudah ada rule/persistence | 0 | 0 | 0 | Tidak diusulkan. |
 
-Ringkas: **tidak ada engine yang layak mendapat dekomposisi VMD/EMD/wavelet pada data sekarang**. Dari tiga kernel, yang punya tempat adalah SVM sebagai pembanding murah pada fitur yang sudah ada, dan matrix profile sebagai pengganti DTW untuk pencarian motif. kNN-DTW ditolak karena biaya.
+Ringkas: **tidak ada detektor yang layak mendapat dekomposisi VMD/EMD/wavelet pada data sekarang**. Dari tiga kernel, yang punya tempat adalah SVM sebagai pembanding murah pada fitur yang sudah ada, dan matrix profile sebagai pengganti DTW untuk pencarian motif. kNN-DTW ditolak karena biaya.
 
 ## 6. Rujukan (semua sudah diperiksa; status akses dicatat terpisah)
 

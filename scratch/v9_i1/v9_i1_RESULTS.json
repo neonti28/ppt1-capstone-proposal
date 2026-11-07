@@ -1,0 +1,1759 @@
+{
+  "meta": {
+    "task": "t_34e9b879 V9-I1 prototipe alat PdM advisory",
+    "segmen_rig": "F-14",
+    "segmen_usrop": [
+      "USROP_A 2 N-SH_F-14d.csv"
+    ],
+    "segmen_tool_wear": "4 alat x 2 run (469 jendela)",
+    "ml": true,
+    "seed": 42,
+    "generated_at": "2026-10-29 11:21:21",
+    "elapsed_s": 27.81,
+    "sumber_tier": "docs/V9_EVAL_C_LAYERC.md §1 (I1 tidak mengubah tier)",
+    "n_engine": 7
+  },
+  "segmen_info": {
+    "vib": {
+      "n": 1989,
+      "ts_bin_min": 20189486,
+      "ts_bin_max": 20192503,
+      "rentang_menit": 3018,
+      "catatan_waktu": "ts_bin = indeks menit internal D1 (grid 60 dtk, +1 per menit); asal kalender TIDAK diverifikasi di sesi ini — jangan dibaca sebagai tanggal"
+    },
+    "ssi": {
+      "n": 5455,
+      "ts_bin_min": 19947192,
+      "ts_bin_max": 20223025,
+      "rentang_menit": 275834,
+      "catatan_waktu": "ts_bin = indeks menit internal D1 (grid 60 dtk, +1 per menit); asal kalender TIDAK diverifikasi di sesi ini — jangan dibaca sebagai tanggal"
+    },
+    "shk": {
+      "n": 11205,
+      "ts_bin_min": 19906551,
+      "ts_bin_max": 20224235,
+      "rentang_menit": 317685,
+      "catatan_waktu": "ts_bin = indeks menit internal D1 (grid 60 dtk, +1 per menit); asal kalender TIDAK diverifikasi di sesi ini — jangan dibaca sebagai tanggal"
+    },
+    "stuck_k1": {
+      "n": 3201,
+      "ts_bin_min": 20174233,
+      "ts_bin_max": 20179521,
+      "rentang_menit": 5289,
+      "catatan_waktu": "ts_bin = indeks menit internal D1 (grid 60 dtk, +1 per menit); asal kalender TIDAK diverifikasi di sesi ini — jangan dibaca sebagai tanggal"
+    },
+    "stuck_k2": {
+      "n": 95925,
+      "ts_bin_min": 19903021,
+      "ts_bin_max": 20262624,
+      "rentang_menit": 359604,
+      "catatan_waktu": "ts_bin = indeks menit internal D1 (grid 60 dtk, +1 per menit); asal kalender TIDAK diverifikasi di sesi ini — jangan dibaca sebagai tanggal"
+    },
+    "hyd_ki": {
+      "n": 10401,
+      "ts_bin_min": 19906551,
+      "ts_bin_max": 20224229,
+      "rentang_menit": 317679,
+      "catatan_waktu": "ts_bin = indeks menit internal D1 (grid 60 dtk, +1 per menit); asal kalender TIDAK diverifikasi di sesi ini — jangan dibaca sebagai tanggal"
+    }
+  },
+  "engines": [
+    {
+      "engine": "vib",
+      "klaim_tugas": "deteksi kondisi getaran lateral (status VIBLAT_RT >= 32,17405 ft/s2)",
+      "jenis_tugas": "deteksi kondisi (bukan prediksi onset — TLead tidak berlaku)",
+      "sumber_tier": "docs/V9_EVAL_C_LAYERC.md §1 baris vib + §2.1",
+      "heads": [
+        {
+          "head": "rule_display",
+          "klaim": null,
+          "tier": "PERINGATAN-BERPENGAWAS",
+          "layer": "L1",
+          "badge_far": "FAR 10,0-49,9/24jam di 4 well (E_RULE §2.1); P 0,87-0,95",
+          "keyakinan": "presisi rule stabil antar-well (1,1x); recall 0,28-0,60",
+          "batas_pemakaian": "jangan klaim lead-time menit; ambang wajib kalibrasi per-well (D-A4) sebelum dipakai sbg alarm",
+          "human_review_required": true,
+          "n_windows": 1989,
+          "n_aktif": 540,
+          "frac_aktif": 0.2715,
+          "contoh_idx_aktif": [
+            429,
+            444,
+            472,
+            478,
+            489
+          ],
+          "metrik_segmen": {
+            "n": 1989,
+            "pos": 1124,
+            "neg": 865,
+            "tp": 510,
+            "fp": 30,
+            "fn": 614,
+            "precision": 0.9444,
+            "recall": 0.4537,
+            "far_segmen": 49.942,
+            "far_unit": "FP/24jam-negatif (jendela 60 dtk)"
+          },
+          "n_nodata": 356,
+          "definisi": "aturan kanal pada menit t0-1 (strict-past)"
+        },
+        {
+          "head": "persistence",
+          "klaim": null,
+          "tier": "TREN",
+          "layer": "L0",
+          "badge_far": "persistence = baseline konfirmasi-status (AUPRC V8 0,517-0,796)",
+          "keyakinan": "ΔB RF vs persistence hanya 2/4 fold — persistence setara ML di 2 fold",
+          "batas_pemakaian": "konfirmasi-status saja; bukan prediksi kegagalan mendatang",
+          "human_review_required": false,
+          "n_windows": 1989,
+          "n_aktif": 1142,
+          "frac_aktif": 0.5742,
+          "contoh_idx_aktif": [
+            382,
+            383,
+            384,
+            385,
+            386
+          ],
+          "metrik_segmen": {
+            "n": 1989,
+            "pos": 1124,
+            "neg": 865,
+            "tp": 952,
+            "fp": 190,
+            "fn": 172,
+            "precision": 0.8336,
+            "recall": 0.847,
+            "far_segmen": 316.301,
+            "far_unit": "FP/24jam-negatif (jendela 60 dtk)"
+          },
+          "n_valid_prev": 1966,
+          "definisi": "y_prev (jendela [t0-10,t0))"
+        },
+        {
+          "head": "hybrid_rule_and_persistence",
+          "klaim": null,
+          "tier": "PERINGATAN-BERPENGAWAS",
+          "layer": "L1",
+          "badge_far": "hibrida ≡ rule utk kelas ini (E_RULE §2.1: FP = rule)",
+          "keyakinan": "rule t0-1 ⊆ persistence utk kelas definisi-kanal",
+          "batas_pemakaian": "sama dengan rule; keuntungan = konfirmasi dua langkah",
+          "human_review_required": true,
+          "n_windows": 1989,
+          "n_aktif": 540,
+          "frac_aktif": 0.2715,
+          "contoh_idx_aktif": [
+            429,
+            444,
+            472,
+            478,
+            489
+          ],
+          "metrik_segmen": {
+            "n": 1989,
+            "pos": 1124,
+            "neg": 865,
+            "tp": 510,
+            "fp": 30,
+            "fn": 614,
+            "precision": 0.9444,
+            "recall": 0.4537,
+            "far_segmen": 49.942,
+            "far_unit": "FP/24jam-negatif (jendela 60 dtk)"
+          },
+          "definisi": "rule(t0-1) AND persistence(t) [D-A3]"
+        },
+        {
+          "head": "rf_lowo",
+          "klaim": null,
+          "tier": "TREN",
+          "layer": "L2",
+          "badge_far": "FAR τ0,5 menyebar 4,1-496 (119x) — TIDAK PORTABEL (EVAL_C C3)",
+          "keyakinan": "CI95 memuat prevalensi 0/4; ΔB vs canary 4/4",
+          "batas_pemakaian": "ranking/tren sahaja; JANGAN sbg ambang alarm global",
+          "human_review_required": false,
+          "n_windows": 1989,
+          "n_aktif": 1271,
+          "frac_aktif": 0.639,
+          "contoh_idx_aktif": [
+            517,
+            518,
+            519,
+            520,
+            521
+          ],
+          "metrik_segmen": {
+            "n": 1989,
+            "pos": 1124,
+            "neg": 865,
+            "tp": 973,
+            "fp": 298,
+            "fn": 151,
+            "precision": 0.7655,
+            "recall": 0.8657,
+            "far_segmen": 496.092,
+            "far_unit": "FP/24jam-negatif (jendela 60 dtk)"
+          },
+          "auprc_segmen": 0.9117,
+          "skor_ringkas": {
+            "min": 0.1244,
+            "median": 0.5745,
+            "max": 0.9374
+          },
+          "latih_well": [
+            "F-15A",
+            "F-15_S",
+            "F-5"
+          ],
+          "n_fitur": 55,
+          "catatan": "skor = RANKING tren (L2); ambang 0,5 hanya utk cetak metrik segmen, BUKAN alarm",
+          "ambang_operasi": "TIDAK ditetapkan di prototipe (pra-reg S3) — pakai AUPRC/rank, bukan angka biner ambang 0,5"
+        }
+      ]
+    },
+    {
+      "engine": "ssi",
+      "klaim_tugas": "deteksi kondisi stick-slip torsional (SSI(CRPM_RT) >= 1)",
+      "jenis_tugas": "deteksi kondisi",
+      "sumber_tier": "docs/V9_EVAL_C_LAYERC.md §1 baris ssi + §2.2",
+      "heads": [
+        {
+          "head": "rule_display",
+          "klaim": null,
+          "tier": "PERINGATAN-BERPENGAWAS",
+          "layer": "L1",
+          "badge_far": "FP rule total 26 lintas fold (E_RULE §2.2)",
+          "keyakinan": "rule single-bin ≈ random antar-menit (jarang persisten)",
+          "batas_pemakaian": "nodata CRPM 62,3% baris — deteksi bergantung ketersediaan sensor",
+          "human_review_required": true,
+          "n_windows": 5455,
+          "n_aktif": 0,
+          "frac_aktif": 0.0,
+          "contoh_idx_aktif": [],
+          "metrik_segmen": {
+            "n": 5455,
+            "pos": 75,
+            "neg": 5380,
+            "tp": 0,
+            "fp": 0,
+            "fn": 75,
+            "precision": null,
+            "recall": 0.0,
+            "far_segmen": 0.0,
+            "far_unit": "FP/24jam-negatif (jendela 60 dtk)"
+          },
+          "n_nodata": 5268,
+          "definisi": "aturan kanal pada menit t0-1 (strict-past)"
+        },
+        {
+          "head": "persistence",
+          "klaim": null,
+          "tier": "TREN",
+          "layer": "L0",
+          "badge_far": "persistence kalah 0/5 vs RF (angka V8)",
+          "keyakinan": "baseline lemah — jangan dibaca sbg detektor mandiri",
+          "batas_pemakaian": "konfirmasi-status saja",
+          "human_review_required": false,
+          "n_windows": 5455,
+          "n_aktif": 31,
+          "frac_aktif": 0.0057,
+          "contoh_idx_aktif": [
+            118,
+            119,
+            120,
+            303,
+            304
+          ],
+          "metrik_segmen": {
+            "n": 5455,
+            "pos": 75,
+            "neg": 5380,
+            "tp": 1,
+            "fp": 30,
+            "fn": 74,
+            "precision": 0.0323,
+            "recall": 0.0133,
+            "far_segmen": 8.03,
+            "far_unit": "FP/24jam-negatif (jendela 60 dtk)"
+          },
+          "n_valid_prev": 4737,
+          "definisi": "y_prev (jendela [t0-10,t0))"
+        },
+        {
+          "head": "hybrid_rule_and_persistence",
+          "klaim": null,
+          "tier": "PERINGATAN-BERPENGAWAS",
+          "layer": "L1",
+          "badge_far": "FP 26 -> 7 (-73,1%) konsisten 7/7 well; FAR hybrid 0-3,7 (EVAL_C §2.2)",
+          "keyakinan": "pemangkasan FP konsisten lintas 7 well",
+          "batas_pemakaian": "hemat-pemeriksaan, bukan alarm; 2 fold UNDERPOWERED dilabeli",
+          "human_review_required": true,
+          "n_windows": 5455,
+          "n_aktif": 0,
+          "frac_aktif": 0.0,
+          "contoh_idx_aktif": [],
+          "metrik_segmen": {
+            "n": 5455,
+            "pos": 75,
+            "neg": 5380,
+            "tp": 0,
+            "fp": 0,
+            "fn": 75,
+            "precision": null,
+            "recall": 0.0,
+            "far_segmen": 0.0,
+            "far_unit": "FP/24jam-negatif (jendela 60 dtk)"
+          },
+          "definisi": "rule(t0-1) AND persistence(t) [D-A3]"
+        },
+        {
+          "head": "rf_lowo",
+          "klaim": null,
+          "tier": "TREN",
+          "layer": "L2",
+          "badge_far": "τ0,3 FAR 0-15,6; well FAR<=6 hanya 2/7 (EVAL_C C3)",
+          "keyakinan": "CI memuat prev 3/7 layak (5/9 all); AUPRC antar-well spread 30x",
+          "batas_pemakaian": "ranking sahaja; nodata 62,3% = keterbatasan sensor, bukan murni model",
+          "human_review_required": false,
+          "n_windows": 5455,
+          "n_aktif": 0,
+          "frac_aktif": 0.0,
+          "contoh_idx_aktif": [],
+          "metrik_segmen": {
+            "n": 5455,
+            "pos": 75,
+            "neg": 5380,
+            "tp": 0,
+            "fp": 0,
+            "fn": 75,
+            "precision": null,
+            "recall": 0.0,
+            "far_segmen": 0.0,
+            "far_unit": "FP/24jam-negatif (jendela 60 dtk)"
+          },
+          "auprc_segmen": 0.0286,
+          "latih_well": [
+            "F-10",
+            "F-12",
+            "F-15A",
+            "F-15_S",
+            "F-5",
+            "F-7",
+            "F-9",
+            "F-9_A"
+          ],
+          "n_fitur": 55,
+          "catatan": "ranking tren (L2); nodata CRPM 62,3% lintas fold",
+          "ambang_operasi": "TIDAK ditetapkan di prototipe (pra-reg S3) — metrik biner ambang 0,5 = ilustrasi; pakai AUPRC/rank"
+        }
+      ]
+    },
+    {
+      "engine": "shk",
+      "klaim_tugas": "deteksi anomali/dysfunction bit bounce (SHKRSK_RT >= 1)",
+      "jenis_tugas": "deteksi anomali sedang berlangsung",
+      "sumber_tier": "docs/V9_EVAL_C_LAYERC.md §1 baris shk + §2.3",
+      "heads": [
+        {
+          "head": "rule_display",
+          "klaim": null,
+          "tier": "PERINGATAN-BERPENGAWAS",
+          "layer": "L1",
+          "badge_far": "FAR 0,67-6,6/24jam; <=6 di 7/9 well (EVAL_C §2.3)",
+          "keyakinan": "satu-satunya kelas rig dgn mayoritas fold lolos FAR<=6 tanpa kalibrasi",
+          "batas_pemakaian": "badge FAR wajib tampil; B3 EVAL_B negatif → periksa dulu, jangan auto",
+          "human_review_required": true,
+          "n_windows": 11205,
+          "n_aktif": 103,
+          "frac_aktif": 0.0092,
+          "contoh_idx_aktif": [
+            20,
+            112,
+            115,
+            216,
+            2124
+          ],
+          "metrik_segmen": {
+            "n": 11205,
+            "pos": 760,
+            "neg": 10445,
+            "tp": 55,
+            "fp": 48,
+            "fn": 705,
+            "precision": 0.534,
+            "recall": 0.0724,
+            "far_segmen": 6.618,
+            "far_unit": "FP/24jam-negatif (jendela 60 dtk)"
+          },
+          "n_nodata": 1599,
+          "definisi": "aturan kanal pada menit t0-1 (strict-past)"
+        },
+        {
+          "head": "persistence",
+          "klaim": null,
+          "tier": "TREN",
+          "layer": "L0",
+          "badge_far": "persistence ≥ prevalence-random 7/9 (E_RULE §2.3)",
+          "keyakinan": "recall display-rule 0-0,38",
+          "batas_pemakaian": "konfirmasi-status saja",
+          "human_review_required": false,
+          "n_windows": 11205,
+          "n_aktif": 623,
+          "frac_aktif": 0.0556,
+          "contoh_idx_aktif": [
+            20,
+            21,
+            22,
+            23,
+            24
+          ],
+          "metrik_segmen": {
+            "n": 11205,
+            "pos": 760,
+            "neg": 10445,
+            "tp": 231,
+            "fp": 392,
+            "fn": 529,
+            "precision": 0.3708,
+            "recall": 0.3039,
+            "far_segmen": 54.043,
+            "far_unit": "FP/24jam-negatif (jendela 60 dtk)"
+          },
+          "n_valid_prev": 11013,
+          "definisi": "y_prev (jendela [t0-10,t0))"
+        },
+        {
+          "head": "hybrid_rule_and_persistence",
+          "klaim": null,
+          "tier": "PERINGATAN-BERPENGAWAS",
+          "layer": "L1",
+          "badge_far": "hibrida ≡ rule (E_RULE §2.3)",
+          "keyakinan": "rule ⊆ persistence utk kelas definisi-kanal",
+          "batas_pemakaian": "sama dengan rule",
+          "human_review_required": true,
+          "n_windows": 11205,
+          "n_aktif": 103,
+          "frac_aktif": 0.0092,
+          "contoh_idx_aktif": [
+            20,
+            112,
+            115,
+            216,
+            2124
+          ],
+          "metrik_segmen": {
+            "n": 11205,
+            "pos": 760,
+            "neg": 10445,
+            "tp": 55,
+            "fp": 48,
+            "fn": 705,
+            "precision": 0.534,
+            "recall": 0.0724,
+            "far_segmen": 6.618,
+            "far_unit": "FP/24jam-negatif (jendela 60 dtk)"
+          },
+          "definisi": "rule(t0-1) AND persistence(t) [D-A3]"
+        },
+        {
+          "head": "rf_lowo",
+          "klaim": null,
+          "tier": "TREN",
+          "layer": "L2",
+          "badge_far": "τ0,3 FAR 0-96,5; well <=6 hanya 1/9 (EVAL_C C3)",
+          "keyakinan": "CI95 memuat prevalensi 7/9 well = sinyal lokal-wellbore",
+          "batas_pemakaian": "screening berbiaya-cek-tinggi (tau 0,05-0,10); JANGAN sbg alarm",
+          "human_review_required": false,
+          "n_windows": 11205,
+          "n_aktif": 0,
+          "frac_aktif": 0.0,
+          "contoh_idx_aktif": [],
+          "metrik_segmen": {
+            "n": 11205,
+            "pos": 760,
+            "neg": 10445,
+            "tp": 0,
+            "fp": 0,
+            "fn": 760,
+            "precision": null,
+            "recall": 0.0,
+            "far_segmen": 0.0,
+            "far_unit": "FP/24jam-negatif (jendela 60 dtk)"
+          },
+          "auprc_segmen": 0.1036,
+          "latih_well": [
+            "F-10",
+            "F-12",
+            "F-15A",
+            "F-15_S",
+            "F-5",
+            "F-7",
+            "F-9",
+            "F-9_A"
+          ],
+          "n_fitur": 55,
+          "catatan": "screening tren (L2); badge FAR kampanye wajib tampil; B3 negatif",
+          "ambang_operasi": "TIDAK ditetapkan di prototipe (pra-reg S3) — metrik biner ambang 0,5 = ilustrasi; pakai AUPRC/rank"
+        }
+      ]
+    },
+    {
+      "engine": "stuck",
+      "klaim_tugas": "K-i: deteksi kondisi blok STUCK_RT; K-ii: prediksi onset 0→1 (H=10 mnt)",
+      "jenis_tugas": "deteksi kondisi (K-i) + prediksi kejadian mendatang (K-ii)",
+      "sumber_tier": "docs/V9_EVAL_C_LAYERC.md §1 baris stuck K-i/K-ii + §2.4",
+      "heads": [
+        {
+          "head": "rule_display",
+          "klaim": "K-i",
+          "tier": "PERINGATAN-BERPENGAWAS",
+          "layer": "L1",
+          "badge_far": "rule P 0,92-0,97; FAR 8,3-61,0 (hanya 2 well: F-14, F-9_A)",
+          "keyakinan": "cakupan 2/9 well → portabilitas BELUM TERUKUR",
+          "batas_pemakaian": "hanya layak di well yang diuji; replikasi F-9/F-10/F-15 diperlukan",
+          "human_review_required": true,
+          "n_windows": 3201,
+          "n_aktif": 210,
+          "frac_aktif": 0.0656,
+          "contoh_idx_aktif": [
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "metrik_segmen": {
+            "n": 3201,
+            "pos": 432,
+            "neg": 2769,
+            "tp": 194,
+            "fp": 16,
+            "fn": 238,
+            "precision": 0.9238,
+            "recall": 0.4491,
+            "far_segmen": 8.321,
+            "far_unit": "FP/24jam-negatif (jendela 60 dtk)"
+          },
+          "n_nodata": 51,
+          "definisi": "aturan kanal pada menit t0-1 (strict-past)"
+        },
+        {
+          "head": "persistence",
+          "klaim": "K-i",
+          "tier": "TREN",
+          "layer": "L0",
+          "badge_far": "persistence 0,787 (F-9_A, kutipan V6)",
+          "keyakinan": "konfirmasi-status, bukan prediksi onset",
+          "batas_pemakaian": "K-i saja; tidak memberi peringatan dini",
+          "human_review_required": false,
+          "n_windows": 3201,
+          "n_aktif": 451,
+          "frac_aktif": 0.1409,
+          "contoh_idx_aktif": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "metrik_segmen": {
+            "n": 3201,
+            "pos": 432,
+            "neg": 2769,
+            "tp": 306,
+            "fp": 145,
+            "fn": 126,
+            "precision": 0.6785,
+            "recall": 0.7083,
+            "far_segmen": 75.406,
+            "far_unit": "FP/24jam-negatif (jendela 60 dtk)"
+          },
+          "n_valid_prev": 3181,
+          "definisi": "y_prev (jendela [t0-10,t0))"
+        },
+        {
+          "head": "hybrid_rule_and_persistence",
+          "klaim": "K-i",
+          "tier": "PERINGATAN-BERPENGAWAS",
+          "layer": "L1",
+          "badge_far": "hibrida stuck_k1 = E_RULE §2.4 (2 fold)",
+          "keyakinan": "rule-display ≥ persistence di 2/2 fold",
+          "batas_pemakaian": "cakupan 2 well",
+          "human_review_required": true,
+          "n_windows": 3201,
+          "n_aktif": 210,
+          "frac_aktif": 0.0656,
+          "contoh_idx_aktif": [
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "metrik_segmen": {
+            "n": 3201,
+            "pos": 432,
+            "neg": 2769,
+            "tp": 194,
+            "fp": 16,
+            "fn": 238,
+            "precision": 0.9238,
+            "recall": 0.4491,
+            "far_segmen": 8.321,
+            "far_unit": "FP/24jam-negatif (jendela 60 dtk)"
+          },
+          "definisi": "rule(t0-1) AND persistence(t) [D-A3]"
+        },
+        {
+          "head": "e1_2of3",
+          "klaim": "K-ii",
+          "tier": "TREN",
+          "layer": "L2",
+          "badge_far": "E1 FAR 2,1-29,0 (13,9x); B1 0-0,066; FP 422 (EVAL_C §2.4)",
+          "keyakinan": "rule mekanis mentah ≈ prevalence pada onset (E_RULE §4)",
+          "batas_pemakaian": "TRIAGE/riset ranking — belum layak peringatan (B1 di bawah 0,5)",
+          "human_review_required": false,
+          "n_windows": 95925,
+          "n_aktif": 313,
+          "frac_aktif": 0.0033,
+          "contoh_idx_aktif": [
+            3560,
+            3561,
+            3562,
+            3563,
+            3564
+          ],
+          "metrik_segmen": {
+            "n": 95925,
+            "pos": 389,
+            "neg": 95536,
+            "tp": 6,
+            "fp": 307,
+            "fn": 383,
+            "precision": 0.0192,
+            "recall": 0.0154,
+            "far_segmen": 4.627,
+            "far_unit": "FP/24jam-negatif (jendela 60 dtk)"
+          },
+          "n_nodata": 7,
+          "definisi": "2-dari-3 z(TQA)>2, z(HKLD)>2, ROP-drop>=30% (MEDIAN+MAD 60 mnt strict-past)"
+        },
+        {
+          "head": "persistence_event",
+          "klaim": "K-ii",
+          "tier": "TREN",
+          "layer": "L2",
+          "badge_far": "FAR 0-2,9; FP alarm total 11 (EVAL_C §2.4)",
+          "keyakinan": "TLead median 7,0 mnt (anchor 2,67-7,37); B1 0-0,115",
+          "batas_pemakaian": "peringatan-dini berbeban-wajar utk tinjauan manusia; bukan alarm",
+          "human_review_required": false,
+          "n_windows": 95925,
+          "n_aktif": 4,
+          "frac_aktif": 0.0,
+          "contoh_idx_aktif": [
+            30122,
+            30126,
+            31473,
+            34343
+          ],
+          "metrik_segmen": {
+            "n": 95925,
+            "pos": 389,
+            "neg": 95536,
+            "tp": 2,
+            "fp": 2,
+            "fn": 387,
+            "precision": 0.5,
+            "recall": 0.0051,
+            "far_segmen": 0.03,
+            "far_unit": "FP/24jam-negatif (jendela 60 dtk)"
+          },
+          "definisi": "ŷ(t)=1[bila menit t-1 = menit peristiwa onset] (E0b)",
+          "persistence_horizon_ref": {
+            "n_aktif": 328,
+            "auprc_segmen": 0.8438,
+            "catatan": "E0a = HINDSIGHT (label horizon) — batas-atas teori, bukan pemakaian"
+          }
+        },
+        {
+          "head": "rf_lowo",
+          "klaim": "K-ii",
+          "tier": "TREN",
+          "layer": "L2",
+          "badge_far": "RF τ0,5 B1 0-0,045; signifikan CI hanya 1/4 (EVAL_C §2.4)",
+          "keyakinan": "canary depth ≥ RF (G2 gagal) — ranking lemah",
+          "batas_pemakaian": "ranking sahaja",
+          "human_review_required": false,
+          "n_windows": 95925,
+          "n_aktif": 42,
+          "frac_aktif": 0.0004,
+          "contoh_idx_aktif": [
+            17582,
+            17912,
+            18061,
+            30316,
+            30317
+          ],
+          "metrik_segmen": {
+            "n": 95925,
+            "pos": 389,
+            "neg": 95536,
+            "tp": 2,
+            "fp": 40,
+            "fn": 387,
+            "precision": 0.0476,
+            "recall": 0.0051,
+            "far_segmen": 0.603,
+            "far_unit": "FP/24jam-negatif (jendela 60 dtk)"
+          },
+          "auprc_segmen": 0.0704,
+          "latih_well": [
+            "F-10",
+            "F-9",
+            "F-9_A"
+          ],
+          "n_fitur": 55,
+          "n_estimators": 200,
+          "catatan": "skor ranking triage (L2); ambang q95 pra-reg tidak dioptimasi di sini",
+          "ambang_operasi": "TIDAK ditetapkan di prototipe (pra-reg S3) — metrik biner ambang 0,5 = ilustrasi; pakai AUPRC/rank"
+        }
+      ],
+      "catatan_klaim": "K-i dan K-ii = klaim TERPISAH; metrik segmen dicetak terpisah (n windows berbeda: K-i 3201, K-ii 95925)"
+    },
+    {
+      "engine": "hyd",
+      "klaim_tugas": "K-i: deteksi kondisi residu SPPA |z|>2; K-ii: prediksi kick/loss proxy",
+      "jenis_tugas": "deteksi kondisi (K-i) + prediksi kejadian mendatang (K-ii)",
+      "sumber_tier": "docs/V9_EVAL_C_LAYERC.md §1 baris hyd K-i/K-ii + §2.5",
+      "heads": [
+        {
+          "head": "rule_display",
+          "klaim": "K-i",
+          "tier": "PERINGATAN-BERPENGAWAS",
+          "layer": "L1",
+          "badge_far": "rule t0-1 FP total 2.091 lintas fold (E_RULE §2.5)",
+          "keyakinan": "label = residu SPPA (PROXY — anotasi wajib)",
+          "batas_pemakaian": "FAR skala jendela 38-132 = beban blok, bukan alarm",
+          "human_review_required": true,
+          "n_windows": 10401,
+          "n_aktif": 975,
+          "frac_aktif": 0.0937,
+          "contoh_idx_aktif": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "metrik_segmen": {
+            "n": 10401,
+            "pos": 865,
+            "neg": 9536,
+            "tp": 607,
+            "fp": 368,
+            "fn": 258,
+            "precision": 0.6226,
+            "recall": 0.7017,
+            "far_segmen": 55.57,
+            "far_unit": "FP/24jam-negatif (jendela 60 dtk)"
+          },
+          "n_nodata": 0,
+          "definisi": "aturan kanal pada menit t0-1 (strict-past)"
+        },
+        {
+          "head": "persistence",
+          "klaim": "K-i",
+          "tier": "PERINGATAN-BERPENGAWAS",
+          "layer": "L0",
+          "badge_far": "persistence P 0,615-0,793; FAR_t 32,2-109,7/24jam",
+          "keyakinan": "CI95 memuat prevalensi 0/9 (satu-satunya kelas rig bersih)",
+          "batas_pemakaian": "RF DILARANG di kelas ini (D-A5: ΔB negatif 7/7)",
+          "human_review_required": false,
+          "n_windows": 10401,
+          "n_aktif": 876,
+          "frac_aktif": 0.0842,
+          "contoh_idx_aktif": [
+            20,
+            21,
+            22,
+            23,
+            24
+          ],
+          "metrik_segmen": {
+            "n": 10401,
+            "pos": 865,
+            "neg": 9536,
+            "tp": 553,
+            "fp": 323,
+            "fn": 312,
+            "precision": 0.6313,
+            "recall": 0.6393,
+            "far_segmen": 48.775,
+            "far_unit": "FP/24jam-negatif (jendela 60 dtk)"
+          },
+          "n_valid_prev": 10221,
+          "definisi": "y_prev (jendela [t0-10,t0))"
+        },
+        {
+          "head": "hybrid_rule_and_persistence",
+          "klaim": "K-i",
+          "tier": "PERINGATAN-BERPENGAWAS",
+          "layer": "L1",
+          "badge_far": "S6 lintas fold+seed (docs/RND_S6_PM_WAVE2.md §4.1): FP 927, presisi 0,8243, recall 0,6519, FAR 4,10/24jam, lead 8,0 mnt; 7/9 fold lolos FAR<6 dan recall>=0,5",
+          "keyakinan": "menang atas H1 rule-dan-statistik (7/9 lawan 5/9 fold) pada penyebut 9 fold dan 390 onset",
+          "batas_pemakaian": "lapisan B belum terukur (0 kolom biaya, 0 jadwal inspeksi); cakupan di atas 50% hanya F-10 (0,673); bukan alarm otomatis",
+          "human_review_required": true,
+          "n_windows": 10401,
+          "lead_menit": 8.0,
+          "lead_sumber": "docs/RND_S6_PM_WAVE2.md §4.1 (H1p rule DAN persistence, 9 fold, 2 seed)",
+          "head_utama": true,
+          "n_aktif": 626,
+          "frac_aktif": 0.0602,
+          "contoh_idx_aktif": [
+            20,
+            21,
+            22,
+            23,
+            24
+          ],
+          "metrik_segmen": {
+            "n": 10401,
+            "pos": 865,
+            "neg": 9536,
+            "tp": 516,
+            "fp": 110,
+            "fn": 349,
+            "precision": 0.8243,
+            "recall": 0.5965,
+            "far_segmen": 16.611,
+            "far_unit": "FP/24jam-negatif (jendela 60 dtk)"
+          },
+          "definisi": "rule(t0-1) AND persistence(t) [D-A3]"
+        },
+        {
+          "head": "k2_tidak_tersedia",
+          "klaim": "K-ii",
+          "tier": "BELUM LAYAK PAKAI",
+          "layer": "L3",
+          "badge_far": "q95: P=R=0 (0 TP, FP 177); fisher CI memuat prev (EVAL_C §2.5)",
+          "keyakinan": "sign-flip 78,7% jendela; FlowOut absen = kendala sensor terukur",
+          "batas_pemakaian": "TIDAK DIJALANKAN di prototipe (data pit/GAINLOSSTOT belum diparse) — bukan kegagalan metode; RF V8 = referensi",
+          "human_review_required": true,
+          "n_windows": 0,
+          "status": "BELUM TERSEDIA DI PROTOTIPE",
+          "alasan": "data 12 kolom pit / GAINLOSSTOT F-1C/F-11 belum diparse; FlowOut absen",
+          "tindakan": "status eksplisit — BUKAN skor 0; jangan dibaca sbg 'engine gagal'"
+        }
+      ],
+      "catatan_klaim": "RF pada hyd-K-i DILARANG (D-A5, ΔB negatif 7/7) — tidak ada head RF di engine ini, by design"
+    },
+    {
+      "engine": "bit_wear",
+      "klaim_tugas": "K-1: deteksi status blok high_MSE; K-2: prediksi onset (pra-reg belum terbit)",
+      "jenis_tugas": "deteksi kondisi (K-1); K-2 onset = BELUM DIJALANKAN",
+      "sumber_tier": "docs/V9_EVAL_C_LAYERC.md §1 baris bit_wear + §2.6",
+      "heads": [
+        {
+          "head": "persistence",
+          "klaim": "K-1",
+          "tier": "TREN",
+          "layer": "L2",
+          "badge_far": "P/R/FAR = BELUM TERUKUR (field tidak ada di JSON EVAL_A §2.6)",
+          "keyakinan": "persistence AUPRC 0,119-0,984; ΔB vs canary 5/5 scorable",
+          "batas_pemakaian": "ranking/tren saja; hibrida degradasi ke persistence (label Teale = kanal terlarang); dataset USROP ≠ rig Volve",
+          "human_review_required": false,
+          "n_windows": 47645,
+          "n_aktif": 4917,
+          "frac_aktif": 0.1032,
+          "contoh_idx_aktif": [
+            29120,
+            29121,
+            29122,
+            29123,
+            29124
+          ],
+          "metrik_segmen": {
+            "n": 47645,
+            "pos": 4918,
+            "neg": 42727,
+            "tp": 4881,
+            "fp": 36,
+            "fn": 37,
+            "precision": 0.9927,
+            "recall": 0.9925,
+            "far_segmen": 1.213,
+            "far_unit": "FP/24jam-negatif (jendela 60 dtk)"
+          },
+          "definisi": "ŷ(t)=y(t-1) pada grid Kedalaman (USROP)",
+          "label_pos": 4918,
+          "label_komposisi": {
+            "normal": 34674,
+            "low_ROP_efficiency": 8053,
+            "high_MSE_bit_wear": 4918
+          }
+        },
+        {
+          "head": "k2_onset_belum",
+          "klaim": "K-2",
+          "tier": "BELUM LAYAK PAKAI",
+          "layer": "L3",
+          "badge_far": "nol angka (kampanye belum jalan)",
+          "keyakinan": "pra-reg K-2 belum terbit",
+          "batas_pemakaian": "K-2 BELUM boleh dipakai di tingkat apa pun sebelum kampanye berangka",
+          "human_review_required": true,
+          "n_windows": 0,
+          "status": "BELUM DIJALANKAN",
+          "alasan": "pra-reg K-2 belum terbit (kampanye onset belum berangka)",
+          "tindakan": "jangan pakai K-2 di tingkat apa pun"
+        }
+      ]
+    },
+    {
+      "engine": "tool_wear",
+      "klaim_tugas": "K-i: deteksi perubahan-regime dalam-run (bengkel); K-ii: ranking lintas-alat",
+      "jenis_tugas": "deteksi perubahan-regime (K-i); K-ii = ranking",
+      "sumber_tier": "docs/V9_EVAL_C_LAYERC.md §1 baris tool_wear + §2.7",
+      "heads": [
+        {
+          "head": "calib_5of27",
+          "klaim": "K-i",
+          "tier": "TREN",
+          "layer": "L2",
+          "badge_far": "engine 5/27 (E_STAT §B): FP_R01 27-41 jendela (71-98% jendela evaluasi) — terlalu sensitif utk peringatan; deteksi R02 4/4 alat, TLead 20-36 dtk",
+          "keyakinan": "deteksi konsisten 4/4 alat (tes artefak termal 0/8); namun FP tinggi pada alat BARU (R01)",
+          "batas_pemakaian": "dipakai sbg GATING inspeksi + skor perubahan-regime sahaja; JANGAN jadi peringatan (FP besar); titik operasi layak = op_far_calibrated",
+          "human_review_required": false,
+          "n_windows": 469,
+          "n_aktif": 305,
+          "frac_aktif": 0.6503,
+          "contoh_idx_aktif": [
+            19,
+            20,
+            21,
+            22,
+            23
+          ],
+          "metrik_segmen": {
+            "n": 469,
+            "pos": 240,
+            "neg": 229,
+            "tp": 173,
+            "fp": 132,
+            "fn": 67,
+            "precision": 0.5672,
+            "recall": 0.7208,
+            "far_segmen": 34.585,
+            "far_unit": "FP/menit-negatif (jendela 1 dtk)"
+          },
+          "definisi": "median+MAD 30% awal R01; alarm bila >=5/27 fitur |z|>3 (jendela evaluasi = R01 setelah kalibrasi + R02)",
+          "per_alat": [
+            {
+              "alat": "T01",
+              "n_R01": 60,
+              "n_kalibrasi": 18,
+              "n_eval_R01": 42,
+              "n_R02": 60,
+              "engine_5of27": {
+                "fp_R01": 41,
+                "pct_R01_alarmed": 97.6,
+                "det_R02": true,
+                "first_alarm_s": 0,
+                "TLead_s": 60.0
+              },
+              "op_far_calibrated": {
+                "target_fp_per_min": 1.0,
+                "thr_featcount": 12.316666666666663,
+                "fp_R01": 1,
+                "det_R02": true,
+                "first_alarm_s": 35,
+                "TLead_s": 25.0,
+                "pct_R02_alarmed": 3.3
+              }
+            },
+            {
+              "alat": "T02",
+              "n_R01": 50,
+              "n_kalibrasi": 15,
+              "n_eval_R01": 35,
+              "n_R02": 62,
+              "engine_5of27": {
+                "fp_R01": 27,
+                "pct_R01_alarmed": 77.1,
+                "det_R02": true,
+                "first_alarm_s": 14,
+                "TLead_s": 48.0
+              },
+              "op_far_calibrated": {
+                "target_fp_per_min": 1.0,
+                "thr_featcount": 10.0,
+                "fp_R01": 3,
+                "det_R02": true,
+                "first_alarm_s": 26,
+                "TLead_s": 36.0,
+                "pct_R02_alarmed": 6.5
+              }
+            },
+            {
+              "alat": "T03",
+              "n_R01": 61,
+              "n_kalibrasi": 19,
+              "n_eval_R01": 42,
+              "n_R02": 60,
+              "engine_5of27": {
+                "fp_R01": 30,
+                "pct_R01_alarmed": 71.4,
+                "det_R02": true,
+                "first_alarm_s": 0,
+                "TLead_s": 60.0
+              },
+              "op_far_calibrated": {
+                "target_fp_per_min": 1.0,
+                "thr_featcount": 8.633333333333326,
+                "fp_R01": 1,
+                "det_R02": true,
+                "first_alarm_s": 36,
+                "TLead_s": 24.0,
+                "pct_R02_alarmed": 5.0
+              }
+            },
+            {
+              "alat": "T04",
+              "n_R01": 58,
+              "n_kalibrasi": 18,
+              "n_eval_R01": 40,
+              "n_R02": 58,
+              "engine_5of27": {
+                "fp_R01": 34,
+                "pct_R01_alarmed": 85.0,
+                "det_R02": true,
+                "first_alarm_s": 0,
+                "TLead_s": 58.0
+              },
+              "op_far_calibrated": {
+                "target_fp_per_min": 1.0,
+                "thr_featcount": 10.0,
+                "fp_R01": 3,
+                "det_R02": true,
+                "first_alarm_s": 38,
+                "TLead_s": 20.0,
+                "pct_R02_alarmed": 6.9
+              }
+            }
+          ],
+          "n_alat": 4,
+          "n_jendela_kalibrasi_tidak_dinilai": 70
+        },
+        {
+          "head": "op_far_calibrated",
+          "klaim": "K-i",
+          "tier": "PERINGATAN-BERPENGAWAS",
+          "layer": "L1",
+          "badge_far": "FAR-terkalibrasi target <=1 alarm/menit: FP_R01 1-3/alat; deteksi R02 4/4; TLead 20-36 dtk (E_STAT §C, EVAL_C §2.7)",
+          "keyakinan": "TLead median 20-36 dtk (dispersi 1,8x — terkecil antar engine); kalibrasi dalam-run = sifat desain",
+          "batas_pemakaian": "detektor PERUBAHAN-REGIME; precision run 0,50 → JANGAN dibaca sbg 'keausan spesifik'; domain bengkel, transfer ke rig TIDAK diklaim (D-A7)",
+          "human_review_required": true,
+          "n_windows": 469,
+          "n_aktif": 21,
+          "frac_aktif": 0.0448,
+          "contoh_idx_aktif": [
+            42,
+            95,
+            99,
+            154,
+            158
+          ],
+          "metrik_segmen": {
+            "n": 469,
+            "pos": 240,
+            "neg": 229,
+            "tp": 13,
+            "fp": 8,
+            "fn": 227,
+            "precision": 0.619,
+            "recall": 0.0542,
+            "far_segmen": 2.096,
+            "far_unit": "FP/menit-negatif (jendela 1 dtk)"
+          },
+          "definisi": "kuantile skor R01 (target 1,0 alarm/menit) per alat — titik operasi FAR-terkalibrasi E_STAT §C",
+          "per_alat": [
+            {
+              "target_fp_per_min": 1.0,
+              "thr_featcount": 12.316666666666663,
+              "fp_R01": 1,
+              "det_R02": true,
+              "first_alarm_s": 35,
+              "TLead_s": 25.0,
+              "pct_R02_alarmed": 3.3,
+              "alat": "T01"
+            },
+            {
+              "target_fp_per_min": 1.0,
+              "thr_featcount": 10.0,
+              "fp_R01": 3,
+              "det_R02": true,
+              "first_alarm_s": 26,
+              "TLead_s": 36.0,
+              "pct_R02_alarmed": 6.5,
+              "alat": "T02"
+            },
+            {
+              "target_fp_per_min": 1.0,
+              "thr_featcount": 8.633333333333326,
+              "fp_R01": 1,
+              "det_R02": true,
+              "first_alarm_s": 36,
+              "TLead_s": 24.0,
+              "pct_R02_alarmed": 5.0,
+              "alat": "T03"
+            },
+            {
+              "target_fp_per_min": 1.0,
+              "thr_featcount": 10.0,
+              "fp_R01": 3,
+              "det_R02": true,
+              "first_alarm_s": 38,
+              "TLead_s": 20.0,
+              "pct_R02_alarmed": 6.9,
+              "alat": "T04"
+            }
+          ]
+        },
+        {
+          "head": "canary_3rms",
+          "klaim": "K-ii",
+          "tier": "TREN",
+          "layer": "L2",
+          "badge_far": "canary 3-RMS AUPRC 0,516-0,612 (1,19x); identity-majority = prev (plafon lift 2,0)",
+          "keyakinan": "RF K-ii V9 TIDAK dijalankan → angka V8 = referensi",
+          "batas_pemakaian": "ranking lintas-alat saja; precision biner V8 0,50-0,56 ≈ peluang → jangan sbg alarm",
+          "human_review_required": false,
+          "n_windows": 469,
+          "n_aktif": 282,
+          "frac_aktif": 0.6013,
+          "contoh_idx_aktif": [
+            23,
+            26,
+            27,
+            28,
+            29
+          ],
+          "definisi": "skor ranking |z| rata-rata 3-RMS (baseline canary) — L2",
+          "skor_ringkas": {
+            "median": 3.8113,
+            "max": 76.7215
+          }
+        }
+      ],
+      "domain": "BENGKEL — lead detik; TIDAK dijumlahkan dengan lead rig menit (D-A7)",
+      "catatan_klaim": "label = identitas run (desain dataset); K-i detektor PERUBAHAN-REGIME — bukan klaim 'keausan spesifik' (precision run 0,50); lead DETIK bengkel, tidak dijumlah dengan lead menit rig (D-A7)"
+    }
+  ],
+  "decision_layer": {
+    "layers": {
+      "L0": [
+        {
+          "engine": "vib",
+          "head": "persistence",
+          "klaim": null,
+          "tier": "TREN",
+          "status": null,
+          "n_aktif": 1142,
+          "human_review_required": false
+        },
+        {
+          "engine": "ssi",
+          "head": "persistence",
+          "klaim": null,
+          "tier": "TREN",
+          "status": null,
+          "n_aktif": 31,
+          "human_review_required": false
+        },
+        {
+          "engine": "shk",
+          "head": "persistence",
+          "klaim": null,
+          "tier": "TREN",
+          "status": null,
+          "n_aktif": 623,
+          "human_review_required": false
+        },
+        {
+          "engine": "stuck",
+          "head": "persistence",
+          "klaim": "K-i",
+          "tier": "TREN",
+          "status": null,
+          "n_aktif": 451,
+          "human_review_required": false
+        },
+        {
+          "engine": "hyd",
+          "head": "persistence",
+          "klaim": "K-i",
+          "tier": "PERINGATAN-BERPENGAWAS",
+          "status": null,
+          "n_aktif": 876,
+          "human_review_required": false
+        }
+      ],
+      "L1": [
+        {
+          "engine": "vib",
+          "head": "rule_display",
+          "klaim": null,
+          "tier": "PERINGATAN-BERPENGAWAS",
+          "status": null,
+          "n_aktif": 540,
+          "human_review_required": true
+        },
+        {
+          "engine": "vib",
+          "head": "hybrid_rule_and_persistence",
+          "klaim": null,
+          "tier": "PERINGATAN-BERPENGAWAS",
+          "status": null,
+          "n_aktif": 540,
+          "human_review_required": true
+        },
+        {
+          "engine": "ssi",
+          "head": "rule_display",
+          "klaim": null,
+          "tier": "PERINGATAN-BERPENGAWAS",
+          "status": null,
+          "n_aktif": 0,
+          "human_review_required": true
+        },
+        {
+          "engine": "ssi",
+          "head": "hybrid_rule_and_persistence",
+          "klaim": null,
+          "tier": "PERINGATAN-BERPENGAWAS",
+          "status": null,
+          "n_aktif": 0,
+          "human_review_required": true
+        },
+        {
+          "engine": "shk",
+          "head": "rule_display",
+          "klaim": null,
+          "tier": "PERINGATAN-BERPENGAWAS",
+          "status": null,
+          "n_aktif": 103,
+          "human_review_required": true
+        },
+        {
+          "engine": "shk",
+          "head": "hybrid_rule_and_persistence",
+          "klaim": null,
+          "tier": "PERINGATAN-BERPENGAWAS",
+          "status": null,
+          "n_aktif": 103,
+          "human_review_required": true
+        },
+        {
+          "engine": "stuck",
+          "head": "rule_display",
+          "klaim": "K-i",
+          "tier": "PERINGATAN-BERPENGAWAS",
+          "status": null,
+          "n_aktif": 210,
+          "human_review_required": true
+        },
+        {
+          "engine": "stuck",
+          "head": "hybrid_rule_and_persistence",
+          "klaim": "K-i",
+          "tier": "PERINGATAN-BERPENGAWAS",
+          "status": null,
+          "n_aktif": 210,
+          "human_review_required": true
+        },
+        {
+          "engine": "hyd",
+          "head": "rule_display",
+          "klaim": "K-i",
+          "tier": "PERINGATAN-BERPENGAWAS",
+          "status": null,
+          "n_aktif": 975,
+          "human_review_required": true
+        },
+        {
+          "engine": "hyd",
+          "head": "hybrid_rule_and_persistence",
+          "klaim": "K-i",
+          "tier": "PERINGATAN-BERPENGAWAS",
+          "status": null,
+          "n_aktif": 626,
+          "human_review_required": true
+        },
+        {
+          "engine": "tool_wear",
+          "head": "op_far_calibrated",
+          "klaim": "K-i",
+          "tier": "PERINGATAN-BERPENGAWAS",
+          "status": null,
+          "n_aktif": 21,
+          "human_review_required": true
+        }
+      ],
+      "L2": [
+        {
+          "engine": "vib",
+          "head": "rf_lowo",
+          "klaim": null,
+          "tier": "TREN",
+          "status": null,
+          "n_aktif": 1271,
+          "human_review_required": false
+        },
+        {
+          "engine": "ssi",
+          "head": "rf_lowo",
+          "klaim": null,
+          "tier": "TREN",
+          "status": null,
+          "n_aktif": 0,
+          "human_review_required": false
+        },
+        {
+          "engine": "shk",
+          "head": "rf_lowo",
+          "klaim": null,
+          "tier": "TREN",
+          "status": null,
+          "n_aktif": 0,
+          "human_review_required": false
+        },
+        {
+          "engine": "stuck",
+          "head": "e1_2of3",
+          "klaim": "K-ii",
+          "tier": "TREN",
+          "status": null,
+          "n_aktif": 313,
+          "human_review_required": false
+        },
+        {
+          "engine": "stuck",
+          "head": "persistence_event",
+          "klaim": "K-ii",
+          "tier": "TREN",
+          "status": null,
+          "n_aktif": 4,
+          "human_review_required": false
+        },
+        {
+          "engine": "stuck",
+          "head": "rf_lowo",
+          "klaim": "K-ii",
+          "tier": "TREN",
+          "status": null,
+          "n_aktif": 42,
+          "human_review_required": false
+        },
+        {
+          "engine": "bit_wear",
+          "head": "persistence",
+          "klaim": "K-1",
+          "tier": "TREN",
+          "status": null,
+          "n_aktif": 4917,
+          "human_review_required": false
+        },
+        {
+          "engine": "tool_wear",
+          "head": "calib_5of27",
+          "klaim": "K-i",
+          "tier": "TREN",
+          "status": null,
+          "n_aktif": 305,
+          "human_review_required": false
+        },
+        {
+          "engine": "tool_wear",
+          "head": "canary_3rms",
+          "klaim": "K-ii",
+          "tier": "TREN",
+          "status": null,
+          "n_aktif": 282,
+          "human_review_required": false
+        }
+      ],
+      "L3": [
+        {
+          "engine": "hyd",
+          "head": "k2_tidak_tersedia",
+          "klaim": "K-ii",
+          "tier": "BELUM LAYAK PAKAI",
+          "status": "BELUM TERSEDIA DI PROTOTIPE",
+          "n_aktif": null,
+          "human_review_required": true
+        },
+        {
+          "engine": "bit_wear",
+          "head": "k2_onset_belum",
+          "klaim": "K-2",
+          "tier": "BELUM LAYAK PAKAI",
+          "status": "BELUM DIJALANKAN",
+          "n_aktif": null,
+          "human_review_required": true
+        }
+      ]
+    },
+    "ringkasan": {
+      "L0": 5,
+      "L1": 11,
+      "L2": 9,
+      "L3": 2
+    },
+    "nperingatan_l1": 11,
+    "auto_critical_alarm_slots": 0,
+    "keputusan_akhir": "MANUSIA (insinyur pengeboran) — tidak ada output otomatis yang memicu tindakan tanpa konfirmasi"
+  },
+  "profil_kapabilitas": [
+    {
+      "engine": "vib",
+      "jenis_tugas": "deteksi kondisi (bukan prediksi onset — TLead tidak berlaku)",
+      "klaim_tugas": "deteksi kondisi getaran lateral (status VIBLAT_RT >= 32,17405 ft/s2)",
+      "lapisan_A_deteksi": {
+        "head_dengan_metrik": 4,
+        "presisi_maks": 0.9444,
+        "recall_maks": 0.8657,
+        "far_min": 49.942
+      },
+      "lapisan_B_nilai_maintenance": {
+        "status": "BELUM TERUKUR",
+        "head_dengan_lead": [],
+        "lead_menit": {},
+        "alasan": "tidak ada angka lead/jam henti yang menempel pada head"
+      },
+      "lapisan_C_ketepatan": {
+        "head_peringatan_L1": [
+          "rule_display",
+          "hybrid_rule_and_persistence"
+        ],
+        "keyakinan": [
+          "presisi rule stabil antar-well (1,1x); recall 0,28-0,60",
+          "ΔB RF vs persistence hanya 2/4 fold — persistence setara ML di 2 fold",
+          "rule t0-1 ⊆ persistence utk kelas definisi-kanal",
+          "CI95 memuat prevalensi 0/4; ΔB vs canary 4/4"
+        ]
+      },
+      "layak_untuk": [
+        "jangan klaim lead-time menit; ambang wajib kalibrasi per-well (D-A4) sebelum dipakai sbg alarm",
+        "sama dengan rule; keuntungan = konfirmasi dua langkah"
+      ],
+      "belum_untuk": [],
+      "kekuatan_bukti": "SEDANG"
+    },
+    {
+      "engine": "ssi",
+      "jenis_tugas": "deteksi kondisi",
+      "klaim_tugas": "deteksi kondisi stick-slip torsional (SSI(CRPM_RT) >= 1)",
+      "lapisan_A_deteksi": {
+        "head_dengan_metrik": 4,
+        "presisi_maks": 0.0323,
+        "recall_maks": 0.0133,
+        "far_min": 0.0
+      },
+      "lapisan_B_nilai_maintenance": {
+        "status": "BELUM TERUKUR",
+        "head_dengan_lead": [],
+        "lead_menit": {},
+        "alasan": "tidak ada angka lead/jam henti yang menempel pada head"
+      },
+      "lapisan_C_ketepatan": {
+        "head_peringatan_L1": [
+          "rule_display",
+          "hybrid_rule_and_persistence"
+        ],
+        "keyakinan": [
+          "rule single-bin ≈ random antar-menit (jarang persisten)",
+          "baseline lemah — jangan dibaca sbg detektor mandiri",
+          "pemangkasan FP konsisten lintas 7 well",
+          "CI memuat prev 3/7 layak (5/9 all); AUPRC antar-well spread 30x"
+        ]
+      },
+      "layak_untuk": [
+        "nodata CRPM 62,3% baris — deteksi bergantung ketersediaan sensor",
+        "hemat-pemeriksaan, bukan alarm; 2 fold UNDERPOWERED dilabeli"
+      ],
+      "belum_untuk": [],
+      "kekuatan_bukti": "SEDANG"
+    },
+    {
+      "engine": "shk",
+      "jenis_tugas": "deteksi anomali sedang berlangsung",
+      "klaim_tugas": "deteksi anomali/dysfunction bit bounce (SHKRSK_RT >= 1)",
+      "lapisan_A_deteksi": {
+        "head_dengan_metrik": 4,
+        "presisi_maks": 0.534,
+        "recall_maks": 0.3039,
+        "far_min": 0.0
+      },
+      "lapisan_B_nilai_maintenance": {
+        "status": "BELUM TERUKUR",
+        "head_dengan_lead": [],
+        "lead_menit": {},
+        "alasan": "tidak ada angka lead/jam henti yang menempel pada head"
+      },
+      "lapisan_C_ketepatan": {
+        "head_peringatan_L1": [
+          "rule_display",
+          "hybrid_rule_and_persistence"
+        ],
+        "keyakinan": [
+          "satu-satunya kelas rig dgn mayoritas fold lolos FAR<=6 tanpa kalibrasi",
+          "recall display-rule 0-0,38",
+          "rule ⊆ persistence utk kelas definisi-kanal",
+          "CI95 memuat prevalensi 7/9 well = sinyal lokal-wellbore"
+        ]
+      },
+      "layak_untuk": [
+        "badge FAR wajib tampil; B3 EVAL_B negatif → periksa dulu, jangan auto",
+        "sama dengan rule"
+      ],
+      "belum_untuk": [],
+      "kekuatan_bukti": "SEDANG"
+    },
+    {
+      "engine": "stuck",
+      "jenis_tugas": "deteksi kondisi (K-i) + prediksi kejadian mendatang (K-ii)",
+      "klaim_tugas": "K-i: deteksi kondisi blok STUCK_RT; K-ii: prediksi onset 0→1 (H=10 mnt)",
+      "lapisan_A_deteksi": {
+        "head_dengan_metrik": 6,
+        "presisi_maks": 0.9238,
+        "recall_maks": 0.7083,
+        "far_min": 0.03
+      },
+      "lapisan_B_nilai_maintenance": {
+        "status": "BELUM TERUKUR",
+        "head_dengan_lead": [],
+        "lead_menit": {},
+        "alasan": "tidak ada angka lead/jam henti yang menempel pada head"
+      },
+      "lapisan_C_ketepatan": {
+        "head_peringatan_L1": [
+          "rule_display",
+          "hybrid_rule_and_persistence"
+        ],
+        "keyakinan": [
+          "cakupan 2/9 well → portabilitas BELUM TERUKUR",
+          "konfirmasi-status, bukan prediksi onset",
+          "rule-display ≥ persistence di 2/2 fold",
+          "rule mekanis mentah ≈ prevalence pada onset (E_RULE §4)",
+          "TLead median 7,0 mnt (anchor 2,67-7,37); B1 0-0,115",
+          "canary depth ≥ RF (G2 gagal) — ranking lemah"
+        ]
+      },
+      "layak_untuk": [
+        "hanya layak di well yang diuji; replikasi F-9/F-10/F-15 diperlukan",
+        "cakupan 2 well"
+      ],
+      "belum_untuk": [],
+      "kekuatan_bukti": "SEDANG"
+    },
+    {
+      "engine": "hyd",
+      "jenis_tugas": "deteksi kondisi (K-i) + prediksi kejadian mendatang (K-ii)",
+      "klaim_tugas": "K-i: deteksi kondisi residu SPPA |z|>2; K-ii: prediksi kick/loss proxy",
+      "lapisan_A_deteksi": {
+        "head_dengan_metrik": 3,
+        "presisi_maks": 0.8243,
+        "recall_maks": 0.7017,
+        "far_min": 16.611
+      },
+      "lapisan_B_nilai_maintenance": {
+        "status": "TERUKUR",
+        "head_dengan_lead": [
+          "hybrid_rule_and_persistence"
+        ],
+        "lead_menit": {
+          "hybrid_rule_and_persistence": 8.0
+        },
+        "alasan": null
+      },
+      "lapisan_C_ketepatan": {
+        "head_peringatan_L1": [
+          "rule_display",
+          "hybrid_rule_and_persistence"
+        ],
+        "keyakinan": [
+          "label = residu SPPA (PROXY — anotasi wajib)",
+          "CI95 memuat prevalensi 0/9 (satu-satunya kelas rig bersih)",
+          "menang atas H1 rule-dan-statistik (7/9 lawan 5/9 fold) pada penyebut 9 fold dan 390 onset",
+          "sign-flip 78,7% jendela; FlowOut absen = kendala sensor terukur"
+        ]
+      },
+      "layak_untuk": [
+        "FAR skala jendela 38-132 = beban blok, bukan alarm",
+        "lapisan B belum terukur (0 kolom biaya, 0 jadwal inspeksi); cakupan di atas 50% hanya F-10 (0,673); bukan alarm otomatis"
+      ],
+      "belum_untuk": [
+        "BELUM TERSEDIA DI PROTOTIPE"
+      ],
+      "kekuatan_bukti": "SEDANG"
+    },
+    {
+      "engine": "bit_wear",
+      "jenis_tugas": "deteksi kondisi (K-1); K-2 onset = BELUM DIJALANKAN",
+      "klaim_tugas": "K-1: deteksi status blok high_MSE; K-2: prediksi onset (pra-reg belum terbit)",
+      "lapisan_A_deteksi": {
+        "head_dengan_metrik": 1,
+        "presisi_maks": 0.9927,
+        "recall_maks": 0.9925,
+        "far_min": 1.213
+      },
+      "lapisan_B_nilai_maintenance": {
+        "status": "BELUM TERUKUR",
+        "head_dengan_lead": [],
+        "lead_menit": {},
+        "alasan": "tidak ada angka lead/jam henti yang menempel pada head"
+      },
+      "lapisan_C_ketepatan": {
+        "head_peringatan_L1": [],
+        "keyakinan": [
+          "persistence AUPRC 0,119-0,984; ΔB vs canary 5/5 scorable",
+          "pra-reg K-2 belum terbit"
+        ]
+      },
+      "layak_untuk": [
+        "pemantauan tren"
+      ],
+      "belum_untuk": [
+        "BELUM DIJALANKAN"
+      ],
+      "kekuatan_bukti": "LEMAH"
+    },
+    {
+      "engine": "tool_wear",
+      "jenis_tugas": "deteksi perubahan-regime (K-i); K-ii = ranking",
+      "klaim_tugas": "K-i: deteksi perubahan-regime dalam-run (bengkel); K-ii: ranking lintas-alat",
+      "lapisan_A_deteksi": {
+        "head_dengan_metrik": 2,
+        "presisi_maks": 0.619,
+        "recall_maks": 0.7208,
+        "far_min": 2.096
+      },
+      "lapisan_B_nilai_maintenance": {
+        "status": "BELUM TERUKUR",
+        "head_dengan_lead": [],
+        "lead_menit": {},
+        "alasan": "tidak ada angka lead/jam henti yang menempel pada head"
+      },
+      "lapisan_C_ketepatan": {
+        "head_peringatan_L1": [
+          "op_far_calibrated"
+        ],
+        "keyakinan": [
+          "deteksi konsisten 4/4 alat (tes artefak termal 0/8); namun FP tinggi pada alat BARU (R01)",
+          "TLead median 20-36 dtk (dispersi 1,8x — terkecil antar engine); kalibrasi dalam-run = sifat desain",
+          "RF K-ii V9 TIDAK dijalankan → angka V8 = referensi"
+        ]
+      },
+      "layak_untuk": [
+        "detektor PERUBAHAN-REGIME; precision run 0,50 → JANGAN dibaca sbg 'keausan spesifik'; domain bengkel, transfer ke rig TIDAK diklaim (D-A7)"
+      ],
+      "belum_untuk": [],
+      "kekuatan_bukti": "SEDANG"
+    }
+  ],
+  "nilai_maintenance": {
+    "sumber": "/mnt/d/Capstone 1(v2)/data/volve/ddr.parquet",
+    "n_record_aktivitas": 23447,
+    "total_jam_tercatat": 39397.986,
+    "jam_per_kode": {
+      "drilling -- drill": 5394.483,
+      "drilling -- casing": 5027.25,
+      "interruption -- other": 2680.917,
+      "drilling -- trip": 2348.25,
+      "plug abandon -- other": 1978.5,
+      "interruption -- waiting on weather": 1925.5,
+      "drilling -- bop/wellhead equipment": 1867.75,
+      "workover -- wire line": 1461.417
+    },
+    "jam_henti_per_sebab": {
+      "success": 4688.087,
+      "equipment failure": 2739.667,
+      "operation failed": 479.75,
+      "stuck equipment": 212.0,
+      "circulation loss": 195.0,
+      "mud loss": 28.75
+    },
+    "beban_tinjauan_L1": [
+      {
+        "engine": "vib",
+        "head": "rule_display",
+        "far_per_24jam": 49.942,
+        "tinjauan_per_shift_8jam": 17
+      },
+      {
+        "engine": "vib",
+        "head": "hybrid_rule_and_persistence",
+        "far_per_24jam": 49.942,
+        "tinjauan_per_shift_8jam": 17
+      },
+      {
+        "engine": "ssi",
+        "head": "rule_display",
+        "far_per_24jam": 0.0,
+        "tinjauan_per_shift_8jam": 0
+      },
+      {
+        "engine": "ssi",
+        "head": "hybrid_rule_and_persistence",
+        "far_per_24jam": 0.0,
+        "tinjauan_per_shift_8jam": 0
+      },
+      {
+        "engine": "shk",
+        "head": "rule_display",
+        "far_per_24jam": 6.618,
+        "tinjauan_per_shift_8jam": 3
+      },
+      {
+        "engine": "shk",
+        "head": "hybrid_rule_and_persistence",
+        "far_per_24jam": 6.618,
+        "tinjauan_per_shift_8jam": 3
+      },
+      {
+        "engine": "stuck",
+        "head": "rule_display",
+        "far_per_24jam": 8.321,
+        "tinjauan_per_shift_8jam": 3
+      },
+      {
+        "engine": "stuck",
+        "head": "hybrid_rule_and_persistence",
+        "far_per_24jam": 8.321,
+        "tinjauan_per_shift_8jam": 3
+      },
+      {
+        "engine": "hyd",
+        "head": "rule_display",
+        "far_per_24jam": 55.57,
+        "tinjauan_per_shift_8jam": 19
+      },
+      {
+        "engine": "hyd",
+        "head": "hybrid_rule_and_persistence",
+        "far_per_24jam": 16.611,
+        "tinjauan_per_shift_8jam": 6
+      },
+      {
+        "engine": "tool_wear",
+        "head": "op_far_calibrated",
+        "far_per_24jam": 2.096,
+        "tinjauan_per_shift_8jam": 1
+      }
+    ],
+    "batas": "jam henti tidak dapat dipetakan ke satu alarm tertentu: tidak ada kunci bit atau work order yang menghubungkan alarm ke record DDR"
+  },
+  "human_review_required": true,
+  "keputusan_akhir": "MANUSIA — alat ini menyiapkan status, peringatan, tren, dan bahan rencana inspeksi"
+}

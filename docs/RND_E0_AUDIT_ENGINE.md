@@ -1,8 +1,8 @@
-# RND-E0: AUDIT IMPLEMENTASI ENGINE (KEBOCORAN, SIRKULARITAS, KONSISTENSI)
+# RND-E0: AUDIT IMPLEMENTASI Detektor (KEBOCORAN, SIRKULARITAS, KONSISTENSI)
 
 Kartu: `t_57e7d52b` · Board: `rnd-algo-2026` · Tanggal: 2026-10-27 (WIB)
-Workspace audit: `/mnt/d/Capstone 1(v2)` (baca saja, tidak ada file engine yang diubah)
-Objek audit: 7 engine, 11 klaim (K-i/K-ii), 27 head di `REGISTRY` (`code/v9_i1_pipeline.py:74`)
+Workspace audit: `/mnt/d/Capstone 1(v2)` (baca saja, tidak ada file detektor yang diubah)
+Objek audit: 7 mode, 11 klaim (K-i/K-ii), 27 head di `REGISTRY` (`code/v9_i1_pipeline.py:74`)
 Dokumen pendamping: `docs/RND_PROVENANCE_LEDGER.md` (baris `E0-001` sampai `E0-031`)
 
 Riset pendahuluan: **systematic-debugging**. Dipakai untuk memisahkan gejala dari penyebab: angka presisi yang dilaporkan (gejala) tidak langsung dianggap sebagai akibat bug, melainkan diuji dengan hipotesis bersaing (kebocoran stempel waktu, sirkularitas konstruksi, penyebut FAR, ambang dokumen) lalu tiap hipotesis diuji dengan satu pengukuran yang bisa gagal.
@@ -19,7 +19,7 @@ Riset pendahuluan: **sequentialthinking**, total 9 pikiran: 5 pikiran pada penul
 
 ## 0. METODE, ALAT, DAN BATAS
 
-Pengukuran dijalankan dengan `/home/neonti/.venvs/rnd_r3/bin/python` (Python 3.11.15, pandas 3.1.0, numpy 2.4.6, scikit-learn 1.9.1). Skrip audit mengimpor modul engine apa adanya lewat `importlib`, sehingga angka yang diukur berasal dari fungsi yang sama dengan yang diaudit, bukan reimplementasi.
+Pengukuran dijalankan dengan `/home/neonti/.venvs/rnd_r3/bin/python` (Python 3.11.15, pandas 3.1.0, numpy 2.4.6, scikit-learn 1.9.1). Skrip audit mengimpor modul detektor apa adanya lewat `importlib`, sehingga angka yang diukur berasal dari fungsi yang sama dengan yang diaudit, bukan reimplementasi.
 
 Lima skrip, semuanya dapat dijalankan ulang (`scratch/e0_audit/`):
 
@@ -105,7 +105,7 @@ Empat kelas pertama: label dapat direproduksi **persis** dari fungsi rule. Artin
 
 Uji: bagi populasi menjadi `y_prev = 1` (status sudah berlangsung) dan `y_prev = 0` (onset baru), lalu hitung laju alarm dan presisi rule di tiap subpopulasi.
 
-| Engine | P semua | P saat sudah berlangsung | P saat onset baru | laju alarm saat onset baru | FP persistence saja | P persistence saja |
+| Mode | P semua | P saat sudah berlangsung | P saat onset baru | laju alarm saat onset baru | FP persistence saja | P persistence saja |
 |---|---|---|---|---|---|---|
 | vib | 0,9193 | 0,9193 | tidak terdefinisi (0 alarm) | **0,0000** | 1.456 | 0,7352 |
 | shk | 0,6134 | 0,6134 | tidak terdefinisi (0 alarm) | **0,0000** | 1.056 | 0,3098 |
@@ -182,7 +182,7 @@ Usulan: laporkan dua angka di badge (`P_status` dan `P_onset`), dan pertimbangka
 | Butir | Dokumen | Kode | Status |
 |---|---|---|---|
 | jumlah head | 27 head, 11 klaim | `REGISTRY` menghasilkan 27 head, `decision_layer.ringkasan` L0=5 L1=11 L2=9 L3=2 | cocok |
-| tier terlarang | EVAL_C §3, 0 engine ALARM-OTOMATIS | `TIER_FORBIDDEN` + assert `:352`, `:714-718` | cocok |
+| tier terlarang | EVAL_C §3, 0 mode ALARM-OTOMATIS | `TIER_FORBIDDEN` + assert `:352`, `:714-718` | cocok |
 | jumlah fitur tool_wear | 27 | assert `:605` dan `v9_e_RULE_03_bitwear_toolwear.py:145` | cocok |
 | tier vib rule | PERINGATAN-BERPENGAWAS | `:112` | cocok |
 | tier shk rule | PERINGATAN-BERPENGAWAS | `:143` | cocok |
@@ -208,19 +208,19 @@ Head berlabel PERINGATAN-BERPENGAWAS/L1 dengan presisi 0,21 dan nol aktivasi di 
 
 Usulan: turunkan `rule_display` ssi ke TREN/L0 (sama seperti ssi persistence), atau hapus head itu dari registry karena hybrid sudah mencakupnya dengan tier yang benar.
 
-### 3.3 Temuan S-2 (Sedang): `hyd` persistence L1 bertabrakan dengan definisi L0 dan dengan perlakuan engine lain
+### 3.3 Temuan S-2 (Sedang): `hyd` persistence L1 bertabrakan dengan definisi L0 dan dengan perlakuan detektor lain
 
 `code/v9_i1_pipeline.py:223` memberi `hyd/persistence` tier SUPERV dengan layer L0. Definisi L0 ada di `:289-291`: "status otomatis (rule/persistence = sistem hari-ini, tanpa notifikasi)". Tier PERINGATAN-BERPENGAWAS pada lapisan yang secara definisi tidak memunculkan notifikasi adalah kontradiksi internal.
 
-Bandingkan perlakuan tiga engine dengan presisi persistence yang sebanding atau lebih tinggi:
+Bandingkan perlakuan tiga detektor dengan presisi persistence yang sebanding atau lebih tinggi:
 
-| Engine | presisi persistence | FP persistence | tier/layer di kode | presisi tercatat |
+| Mode | presisi persistence | FP persistence | tier/layer di kode | presisi tercatat |
 |---|---|---|---|---|
 | vib | 0,7352 | 1.456 | TREN / L0 (`:118`) | 0,7352 |
 | hyd | 0,7298 | 1.941 | **SUPERV / L0** (`:223`) | 0,7298 |
 | shk | 0,3098 | 1.056 | TREN / L0 (`:149`) | 0,3098 |
 
-Dua engine dengan presisi hampir identik mendapat tier berbeda tanpa alasan yang tertulis. `docs/V9_EVAL_C_LAYERC.md` bahkan menempatkan seluruh klaim K-i hyd di SUPERV, jadi kemungkinan sumbernya dokumen, bukan kode. Tetap saja dua sumber itu sekarang tidak sinkron secara internal.
+Dua detektor dengan presisi hampir identik mendapat tier berbeda tanpa alasan yang tertulis. `docs/V9_EVAL_C_LAYERC.md` bahkan menempatkan seluruh klaim K-i hyd di SUPERV, jadi kemungkinan sumbernya dokumen, bukan kode. Tetap saja dua sumber itu sekarang tidak sinkron secara internal.
 
 Usulan: pilih satu. Kalau dokumen yang menang, pindahkan hyd persistence ke L1 (dengan `human_review_required`), dan ubah definisi L0. Kalau kode yang menang, turunkan ke TREN.
 
@@ -290,7 +290,7 @@ Usulan: laporkan `n_fitur_efektif` per fold, atau buang kolom dengan `n_notnull 
 
 ### 5.1 Rumus yang dipakai
 
-`code/v9_i1_pipeline.py:307-332`: `neg_h = n_neg * win_s / 3600`, lalu `far = fp / neg_h * 24`. Untuk semua engine rig, `win_s = 60`. Jadi FAR = `fp × 24 × 60 / n_neg`, yaitu **FP per 24 jam dari menit negatif yang dapat dievaluasi**.
+`code/v9_i1_pipeline.py:307-332`: `neg_h = n_neg * win_s / 3600`, lalu `far = fp / neg_h * 24`. Untuk semua detektor rig, `win_s = 60`. Jadi FAR = `fp × 24 × 60 / n_neg`, yaitu **FP per 24 jam dari menit negatif yang dapat dievaluasi**.
 
 `code/v9_e_RULE_01_status.py:93` memakai bentuk yang sama dengan `jam_neg`. Cocok dengan `code/v9_i1_pipeline.py:36-38` yang menyebut "konvensi kampanye FP/(n_neg/60)*24 (per 24 jam, skala jendela 60 dtk)".
 
@@ -298,7 +298,7 @@ Usulan: laporkan `n_fitur_efektif` per fold, atau buang kolom dengan `n_notnull 
 
 Uji: bandingkan jumlah baris per well dengan rentang `ts_bin` per well (`max - min + 1`).
 
-| Engine | cakupan terendah | cakupan tertinggi | menit negatif dipakai penyebut | jam negatif |
+| Mode | cakupan terendah | cakupan tertinggi | menit negatif dipakai penyebut | jam negatif |
 |---|---|---|---|---|
 | vib | 0,1179 (F-15_S, 10.903 baris / 92.501 menit) | 0,659 (F-14, 1.989 / 3.018) | 18.493 | 308,2 |
 | ssi | **0,0146** (F-5, 4.714 / 322.772) | 0,717 (F-9_A, 841 / 1.173) | 35.299 | 588,3 |
@@ -484,11 +484,11 @@ Dua skrip baru, keduanya hanya membaca:
 | Skrip | Yang diukur | Keluaran |
 |---|---|---|
 | `e0v_recheck.py` | presisi persistence `bit_wear` pada tiga urutan baris, jumlah pasangan lintas well, presisi pada segmen F-14 | `e0v_recheck.json` |
-| `e0v_onset.py` | fraksi onset baru per engine memakai kolom `y_prev_*` resep D1 | `e0v_onset.json` |
+| `e0v_onset.py` | fraksi onset baru per mode memakai kolom `y_prev_*` resep D1 | `e0v_onset.json` |
 
 Hasilnya mengubah dua hal di dokumen ini:
 
-1. **Koreksi angka (bagian 2.2).** Kalimat lama menyebut 74,47% positif vib adalah onset baru. Angka 0,7447 sebenarnya `P(y_prev=1 | y=1)`, yaitu fraksi positif yang **sudah berlangsung**. Fraksi onset baru terukur 0,2553 (1.386 dari 5.429). Sudah dikoreksi, dan angka engine lain ditambahkan karena justru memperkuat K-1: shk 76,36% dan ssi 86,00% positifnya adalah onset baru, sementara rule shk menyala nol kali di sana.
+1. **Koreksi angka (bagian 2.2).** Kalimat lama menyebut 74,47% positif vib adalah onset baru. Angka 0,7447 sebenarnya `P(y_prev=1 | y=1)`, yaitu fraksi positif yang **sudah berlangsung**. Fraksi onset baru terukur 0,2553 (1.386 dari 5.429). Sudah dikoreksi, dan angka detektor lain ditambahkan karena justru memperkuat K-1: shk 76,36% dan ssi 86,00% positifnya adalah onset baru, sementara rule shk menyala nol kali di sana.
 2. **Temuan baru S-8 (bagian 5.6).** `run_bit_wear` mengurutkan hanya `Measured Depth m`; pada urutan itu 67,13% pasangan baris berurutan menyeberang well dan presisi persistence jatuh dari 0,9903 ke 0,5668.
 
 ### 10.3 Verifikasi DOI dua lapis (ulang 2026-10-27)
@@ -508,7 +508,7 @@ Koreksi penulisan: "doi.org HTTP 403" pada dua DOI ACM adalah lapis akses penerb
 
 | Objek | Temuan | Tindakan |
 |---|---|---|
-| baris ledger `E0-028` | menulis "stuck 5" sehingga total per engine menjadi 26, padahal `REGISTRY` menghasilkan stuck 6 dan total 27 | dikoreksi menjadi "stuck 6" |
+| baris ledger `E0-028` | menulis "stuck 5" sehingga total per mode menjadi 26, padahal `REGISTRY` menghasilkan stuck 6 dan total 27 | dikoreksi menjadi "stuck 6" |
 | label temuan `S-1` sampai `S-7` | penomoran di badan dokumen (urutan kronologis) tidak sama dengan tabel ringkasan (urutan bahaya) | disamakan dengan tabel |
 | baris ledger baru | angka verifikasi ulang belum punya baris | ditambah `E0-032` sampai `E0-036` |
 | reproduksi `e0_audit.py` | skrip menulis JSON ke folder workspace (`OUTDIR` di baris 23), bukan ke `scratch/e0_audit/`, sehingga langkah salin di §8 perlu dibaca dua arah | dicatat di sini, tidak diubah karena mengubah kode audit di luar lingkup |

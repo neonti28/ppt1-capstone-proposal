@@ -1,0 +1,283 @@
+{
+ "k2_head_table_rows": 27,
+ "k2_head_vs_registry_mismatch": [],
+ "k2_head_missing_vs_registry": [],
+ "registry_heads": 27,
+ "marker_counts_caseinsensitive": {
+  "kandidat_1": {
+   "kel_a_7": {
+    "n_lines": 13,
+    "first": [
+     46,
+     48,
+     101,
+     135,
+     230,
+     242,
+     260,
+     264
+    ]
+   },
+   "kel_b_cara_kerja": {
+    "n_lines": 2,
+    "first": [
+     23,
+     94
+    ]
+   },
+   "kel_c_alasan": {
+    "n_lines": 2,
+    "first": [
+     29,
+     198
+    ]
+   },
+   "kel_d_peran_data": {
+    "n_lines": 0,
+    "first": []
+   },
+   "kel_e_labeling": {
+    "n_lines": 8,
+    "first": [
+     46,
+     90,
+     101,
+     137,
+     159,
+     229,
+     246,
+     247
+    ]
+   },
+   "kel_f_71127": {
+    "n_lines": 0,
+    "first": []
+   },
+   "eval_a_abc": {
+    "n_lines": 11,
+    "first": [
+     26,
+     46,
+     76,
+     184,
+     188,
+     189,
+     190,
+     206
+    ]
+   },
+   "eval_b_baseline": {
+    "n_lines": 5,
+    "first": [
+     188,
+     204,
+     218,
+     256,
+     305
+    ]
+   },
+   "eval_c_jenis": {
+    "n_lines": 9,
+    "first": [
+     92,
+     147,
+     155,
+     244,
+     246,
+     247,
+     250,
+     256
+    ]
+   },
+   "eval_d_kbb": {
+    "n_lines": 12,
+    "first": [
+     46,
+     56,
+     77,
+     192,
+     231,
+     246,
+     247,
+     264
+    ]
+   },
+   "eval_e_tingkat": {
+    "n_lines": 0,
+    "first": []
+   }
+  },
+  "kandidat_2": {
+   "kel_a_7": {
+    "n_lines": 55,
+    "first": [
+     31,
+     55,
+     57,
+     59,
+     112,
+     132,
+     147,
+     172
+    ]
+   },
+   "kel_b_cara_kerja": {
+    "n_lines": 12,
+    "first": [
+     26,
+     105,
+     142,
+     323,
+     2356,
+     2913,
+     2931,
+     2937
+    ]
+   },
+   "kel_c_alasan": {
+    "n_lines": 8,
+    "first": [
+     32,
+     286,
+     411,
+     415,
+     848,
+     2357,
+     3133,
+     3262
+    ]
+   },
+   "kel_d_peran_data": {
+    "n_lines": 20,
+    "first": [
+     142,
+     294,
+     297,
+     337,
+     773,
+     860,
+     866,
+     871
+    ]
+   },
+   "kel_e_labeling": {
+    "n_lines": 107,
+    "first": [
+     34,
+     36,
+     55,
+     57,
+     101,
+     112,
+     143,
+     176
+    ]
+   },
+   "kel_f_71127": {
+    "n_lines": 64,
+    "first": [
+     31,
+     57,
+     132,
+     143,
+     174,
+     175,
+     177,
+     183
+    ]
+   },
+   "eval_a_abc": {
+    "n_lines": 28,
+    "first": [
+     37,
+     55,
+     87,
+     149,
+     319,
+     335,
+     354,
+     390
+    ]
+   },
+   "eval_b_baseline": {
+    "n_lines": 20,
+    "first": [
+     316,
+     364,
+     402,
+     1497,
+     1498,
+     1816,
+     2090,
+     2162
+    ]
+   },
+   "eval_c_jenis": {
+    "n_lines": 41,
+    "first": [
+     103,
+     188,
+     209,
+     211,
+     212,
+     213,
+     214,
+     215
+    ]
+   },
+   "eval_d_kbb": {
+    "n_lines": 47,
+    "first": [
+     55,
+     67,
+     88,
+     189,
+     267,
+     322,
+     354,
+     362
+    ]
+   },
+   "eval_e_tingkat": {
+    "n_lines": 3,
+    "first": [
+     192,
+     2905,
+     3190
+    ]
+   }
+  }
+ },
+ "num_kandidat_1": {
+  "sebaran_44446423": 0,
+  "rumus_3x1_4x2": 0,
+  "frasa_11_klaim": 0,
+  "frasa_27_head": 0,
+  "frasa_7_engine": 0,
+  "auto_critical": 0,
+  "rekap_tier_12_13_2": 0,
+  "rekap_layer_5_11_9_2": 0,
+  "engine_names_k2_style": [
+   "stuck"
+  ]
+ },
+ "num_kandidat_2": {
+  "sebaran_44446423": 5,
+  "rumus_3x1_4x2": 5,
+  "frasa_11_klaim": 25,
+  "frasa_27_head": 42,
+  "frasa_7_engine": 37,
+  "auto_critical": 1,
+  "rekap_tier_12_13_2": 2,
+  "rekap_layer_5_11_9_2": 3,
+  "engine_names_k2_style": [
+   "bit_wear",
+   "hyd",
+   "shk",
+   "ssi",
+   "stuck",
+   "tool_wear",
+   "vib"
+  ]
+ }
+}

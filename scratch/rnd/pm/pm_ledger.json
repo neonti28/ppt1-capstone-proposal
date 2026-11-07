@@ -1,0 +1,973 @@
+{
+ "n_baris": 121,
+ "baris": [
+  {
+   "angka": "2.105",
+   "satuan": "FP",
+   "kelas": "RUN-KITA",
+   "rujukan": "scratch/rnd/r8/r8_hyd.json ringkas.rule_kanal.fp_total; python3 code/rnd_r8_hybrid.py --task hyd (seed 42)",
+   "dipakai": "bagian 2, 3, 4",
+   "status": "TERUKUR"
+  },
+  {
+   "angka": "935",
+   "satuan": "FP",
+   "kelas": "RUN-KITA",
+   "rujukan": "scratch/rnd/r8/r8_hyd.json ringkas.H1_stat_dan_rule.fp_total",
+   "dipakai": "bagian 2, 3, 4",
+   "status": "TERUKUR"
+  },
+  {
+   "angka": "55,58",
+   "satuan": "persen",
+   "kelas": "DERIVASI",
+   "rujukan": "(2105-935)/2105x100 = 55,5819; r8_agg.json turunan.hyd.potong_FP_pct",
+   "dipakai": "bagian 2, 4",
+   "status": "TERUKUR"
+  },
+  {
+   "angka": "0,6835",
+   "satuan": "rasio",
+   "kelas": "RUN-KITA",
+   "rujukan": "scratch/rnd/r8/r8_hyd.json ringkas.rule_kanal.precision_median",
+   "dipakai": "bagian 2, 4",
+   "status": "TERUKUR"
+  },
+  {
+   "angka": "0,7789",
+   "satuan": "rasio",
+   "kelas": "RUN-KITA",
+   "rujukan": "scratch/rnd/r8/r8_hyd.json ringkas.H1_stat_dan_rule.precision_median",
+   "dipakai": "bagian 2, 4",
+   "status": "TERUKUR"
+  },
+  {
+   "angka": "0,7507",
+   "satuan": "rasio",
+   "kelas": "RUN-KITA",
+   "rujukan": "scratch/rnd/r8/r8_hyd.json ringkas.rule_kanal.recall_median",
+   "dipakai": "bagian 2, 4",
+   "status": "TERUKUR"
+  },
+  {
+   "angka": "0,5638",
+   "satuan": "rasio",
+   "kelas": "RUN-KITA",
+   "rujukan": "scratch/rnd/r8/r8_hyd.json ringkas.H1_stat_dan_rule.recall_median",
+   "dipakai": "bagian 2, 4",
+   "status": "TERUKUR"
+  },
+  {
+   "angka": "6",
+   "satuan": "menit",
+   "kelas": "RUN-KITA",
+   "rujukan": "scratch/rnd/r8/r8_hyd.json ringkas.rule_kanal.lead_median_median",
+   "dipakai": "bagian 2, 4",
+   "status": "TERUKUR"
+  },
+  {
+   "angka": "11,5",
+   "satuan": "menit",
+   "kelas": "RUN-KITA",
+   "rujukan": "scratch/rnd/r8/r8_hyd.json ringkas.H1_stat_dan_rule.lead_median_median",
+   "dipakai": "bagian 2, 4",
+   "status": "TERUKUR"
+  },
+  {
+   "angka": "3",
+   "satuan": "fold",
+   "kelas": "RUN-KITA",
+   "rujukan": "scratch/rnd/r8/r8_hyd.json ringkas.rule_kanal.fold_far_le6 dari n_fold 9",
+   "dipakai": "bagian 2, 4",
+   "status": "TERUKUR"
+  },
+  {
+   "angka": "7",
+   "satuan": "fold",
+   "kelas": "RUN-KITA",
+   "rujukan": "scratch/rnd/r8/r8_hyd.json ringkas.H1_stat_dan_rule.fold_far_le6 dari n_fold 9",
+   "dipakai": "bagian 2, 4",
+   "status": "TERUKUR"
+  },
+  {
+   "angka": "6,932",
+   "satuan": "alarm/24jam",
+   "kelas": "RUN-KITA",
+   "rujukan": "scratch/rnd/r8/r8_hyd.json ringkas.rule_kanal.far24_median",
+   "dipakai": "bagian 2, 4",
+   "status": "TERUKUR"
+  },
+  {
+   "angka": "3,5302",
+   "satuan": "alarm/24jam",
+   "kelas": "RUN-KITA",
+   "rujukan": "scratch/rnd/r8/r8_hyd.json ringkas.H1_stat_dan_rule.far24_median",
+   "dipakai": "bagian 2, 4",
+   "status": "TERUKUR"
+  },
+  {
+   "angka": "390",
+   "satuan": "onset",
+   "kelas": "RUN-KITA",
+   "rujukan": "scratch/rnd/r8/r8_hyd.json ringkas.H1_stat_dan_rule.n_onset",
+   "dipakai": "bagian 2",
+   "status": "TERUKUR"
+  },
+  {
+   "angka": "307",
+   "satuan": "onset",
+   "kelas": "RUN-KITA",
+   "rujukan": "scratch/rnd/r8/r8_hyd.json ringkas.rule_kanal.n_diperingatkan",
+   "dipakai": "bagian 2",
+   "status": "TERUKUR"
+  },
+  {
+   "angka": "219",
+   "satuan": "onset",
+   "kelas": "RUN-KITA",
+   "rujukan": "scratch/rnd/r8/r8_hyd.json ringkas.H1_stat_dan_rule.n_diperingatkan",
+   "dipakai": "bagian 2",
+   "status": "TERUKUR"
+  },
+  {
+   "angka": "5.579",
+   "satuan": "TP",
+   "kelas": "RUN-KITA",
+   "rujukan": "scratch/rnd/r8/r8_hyd.json ringkas.rule_kanal.tp_total",
+   "dipakai": "bagian 4",
+   "status": "TERUKUR"
+  },
+  {
+   "angka": "3.804",
+   "satuan": "TP",
+   "kelas": "RUN-KITA",
+   "rujukan": "scratch/rnd/r8/r8_hyd.json ringkas.H1_stat_dan_rule.tp_total",
+   "dipakai": "bagian 4",
+   "status": "TERUKUR"
+  },
+  {
+   "angka": "31,82",
+   "satuan": "persen",
+   "kelas": "DERIVASI",
+   "rujukan": "(5579-3804)/5579x100 = 31,8157 (r8_hyd ringkas; r8_agg turunan.hyd)",
+   "dipakai": "bagian 4",
+   "status": "TERUKUR"
+  },
+  {
+   "angka": "5.531",
+   "satuan": "FP",
+   "kelas": "RUN-KITA",
+   "rujukan": "scratch/rnd/r8/r8_hyd.json ringkas.H1b_stat_atau_rule.fp_total (stat ATAU rule)",
+   "dipakai": "bagian 2",
+   "status": "TERUKUR"
+  },
+  {
+   "angka": "11,0013",
+   "satuan": "alarm/24jam",
+   "kelas": "RUN-KITA",
+   "rujukan": "scratch/rnd/r8/r8_hyd.json ringkas.stat_cusum.far24_median (statistik saja)",
+   "dipakai": "bagian 2",
+   "status": "TERUKUR"
+  },
+  {
+   "angka": "0,5832",
+   "satuan": "rasio",
+   "kelas": "RUN-KITA",
+   "rujukan": "scratch/rnd/r8/r8_hyd.json ringkas.stat_cusum.recall_median",
+   "dipakai": "bagian 2",
+   "status": "TERUKUR"
+  },
+  {
+   "angka": "2.633",
+   "satuan": "FP",
+   "kelas": "RUN-KITA",
+   "rujukan": "scratch/rnd/r8/r8_shk.json ringkas.ML_saja.fp_total",
+   "dipakai": "bagian 2, 3",
+   "status": "TERUKUR"
+  },
+  {
+   "angka": "192",
+   "satuan": "TP",
+   "kelas": "RUN-KITA",
+   "rujukan": "scratch/rnd/r8/r8_shk.json ringkas.ML_saja.tp_total",
+   "dipakai": "bagian 2, 3",
+   "status": "TERUKUR"
+  },
+  {
+   "angka": "667",
+   "satuan": "FP",
+   "kelas": "RUN-KITA",
+   "rujukan": "scratch/rnd/r8/r8_shk.json ringkas.H2_ML_dan_stat.fp_total",
+   "dipakai": "bagian 2, 3",
+   "status": "TERUKUR"
+  },
+  {
+   "angka": "46",
+   "satuan": "TP",
+   "kelas": "RUN-KITA",
+   "rujukan": "scratch/rnd/r8/r8_shk.json ringkas.H2_ML_dan_stat.tp_total",
+   "dipakai": "bagian 2, 3",
+   "status": "TERUKUR"
+  },
+  {
+   "angka": "74,67",
+   "satuan": "persen",
+   "kelas": "DERIVASI",
+   "rujukan": "(2633-667)/2633x100 = 74,6677; r8_agg.json turunan.shk.potong_FP_pct",
+   "dipakai": "bagian 2",
+   "status": "TERUKUR"
+  },
+  {
+   "angka": "76,04",
+   "satuan": "persen",
+   "kelas": "DERIVASI",
+   "rujukan": "(192-46)/192x100 = 76,0417; r8_agg.json turunan.shk.drop_TP_pct",
+   "dipakai": "bagian 2",
+   "status": "TERUKUR"
+  },
+  {
+   "angka": "0,0499",
+   "satuan": "AUPRC",
+   "kelas": "DERIVASI",
+   "rujukan": "median AUPRC 9 fold dari r8_agg.json turunan.shk.auprc; median aritmetik 9 nilai",
+   "dipakai": "bagian 2",
+   "status": "TERUKUR"
+  },
+  {
+   "angka": "0,024311",
+   "satuan": "rasio",
+   "kelas": "DERIVASI",
+   "rujukan": "median prevalensi 9 fold dari r8_agg.json turunan.shk.prev",
+   "dipakai": "bagian 2",
+   "status": "TERUKUR"
+  },
+  {
+   "angka": "0,0037",
+   "satuan": "rasio",
+   "kelas": "RUN-KITA",
+   "rujukan": "scratch/rnd/r8/r8_shk.json ringkas.H2_ML_dan_stat.recall_median",
+   "dipakai": "bagian 2",
+   "status": "TERUKUR"
+  },
+  {
+   "angka": "181",
+   "satuan": "onset",
+   "kelas": "RUN-KITA",
+   "rujukan": "scratch/rnd/r8/r8_shk.json ringkas.H2_ML_dan_stat.n_onset",
+   "dipakai": "bagian 2",
+   "status": "TERUKUR"
+  },
+  {
+   "angka": "21",
+   "satuan": "onset",
+   "kelas": "RUN-KITA",
+   "rujukan": "scratch/rnd/r8/r8_shk.json ringkas.H2_ML_dan_stat.n_diperingatkan",
+   "dipakai": "bagian 2",
+   "status": "TERUKUR"
+  },
+  {
+   "angka": "64",
+   "satuan": "onset",
+   "kelas": "RUN-KITA",
+   "rujukan": "scratch/rnd/r8/r8_shk.json ringkas.ML_saja.n_diperingatkan",
+   "dipakai": "bagian 2",
+   "status": "TERUKUR"
+  },
+  {
+   "angka": "13",
+   "satuan": "menit",
+   "kelas": "RUN-KITA",
+   "rujukan": "scratch/rnd/r8/r8_shk.json ringkas.ML_saja.lead_median_median",
+   "dipakai": "bagian 2",
+   "status": "TERUKUR"
+  },
+  {
+   "angka": "22",
+   "satuan": "menit",
+   "kelas": "RUN-KITA",
+   "rujukan": "scratch/rnd/r8/r8_shk.json ringkas.H2_ML_dan_stat.lead_median_median",
+   "dipakai": "bagian 2",
+   "status": "TERUKUR"
+  },
+  {
+   "angka": "0,3385",
+   "satuan": "balanced accuracy",
+   "kelas": "RUN-KITA",
+   "rujukan": "scratch/rnd/r8/r8_toolwear.json ringkas.ML_default.bacc_median",
+   "dipakai": "bagian 2, 3",
+   "status": "TERUKUR"
+  },
+  {
+   "angka": "0,5",
+   "satuan": "balanced accuracy",
+   "kelas": "RUN-KITA",
+   "rujukan": "scratch/rnd/r8/r8_toolwear.json ringkas.H3a_GWO_objF1.bacc_median",
+   "dipakai": "bagian 2",
+   "status": "TERUKUR"
+  },
+  {
+   "angka": "0,3993",
+   "satuan": "balanced accuracy",
+   "kelas": "RUN-KITA",
+   "rujukan": "scratch/rnd/r8/r8_toolwear.json ringkas.H3b_GWO_objBacc.bacc_median",
+   "dipakai": "bagian 2",
+   "status": "TERUKUR"
+  },
+  {
+   "angka": "240",
+   "satuan": "TP",
+   "kelas": "RUN-KITA",
+   "rujukan": "scratch/rnd/r8/r8_toolwear.json ringkas.H3a_GWO_objF1.tp_total (objektif F1 semua-positif)",
+   "dipakai": "bagian 2",
+   "status": "TERUKUR"
+  },
+  {
+   "angka": "229",
+   "satuan": "FP",
+   "kelas": "RUN-KITA",
+   "rujukan": "scratch/rnd/r8/r8_toolwear.json ringkas.H3a_GWO_objF1.fp_total",
+   "dipakai": "bagian 2",
+   "status": "TERUKUR"
+  },
+  {
+   "angka": "47",
+   "satuan": "TP",
+   "kelas": "RUN-KITA",
+   "rujukan": "scratch/rnd/r8/r8_toolwear.json ringkas.H3b_GWO_objBacc.tp_total",
+   "dipakai": "bagian 2",
+   "status": "TERUKUR"
+  },
+  {
+   "angka": "95",
+   "satuan": "FP",
+   "kelas": "RUN-KITA",
+   "rujukan": "scratch/rnd/r8/r8_toolwear.json ringkas.H3b_GWO_objBacc.fp_total",
+   "dipakai": "bagian 2",
+   "status": "TERUKUR"
+  },
+  {
+   "angka": "63",
+   "satuan": "TP",
+   "kelas": "RUN-KITA",
+   "rujukan": "scratch/rnd/r8/r8_toolwear.json ringkas.ML_default.tp_total",
+   "dipakai": "bagian 2",
+   "status": "TERUKUR"
+  },
+  {
+   "angka": "148",
+   "satuan": "FP",
+   "kelas": "RUN-KITA",
+   "rujukan": "scratch/rnd/r8/r8_toolwear.json ringkas.ML_default.fp_total",
+   "dipakai": "bagian 2",
+   "status": "TERUKUR"
+  },
+  {
+   "angka": "4",
+   "satuan": "alat",
+   "kelas": "RUN-KITA",
+   "rujukan": "scratch/rnd/r8/r8_toolwear.json ringkas.ML_default.n_fold (LOTO 4 alat)",
+   "dipakai": "bagian 2, 6",
+   "status": "TERUKUR"
+  },
+  {
+   "angka": "41",
+   "satuan": "FP",
+   "kelas": "RUN-KITA",
+   "rujukan": "scratch/rnd/r8/r8_stuck.json ringkas.H4_tiga_komponen.fp_total",
+   "dipakai": "bagian 2, 3",
+   "status": "TERUKUR"
+  },
+  {
+   "angka": "17",
+   "satuan": "TP",
+   "kelas": "RUN-KITA",
+   "rujukan": "scratch/rnd/r8/r8_stuck.json ringkas.H4_tiga_komponen.tp_total",
+   "dipakai": "bagian 2, 3",
+   "status": "TERUKUR"
+  },
+  {
+   "angka": "0,6404",
+   "satuan": "rasio",
+   "kelas": "RUN-KITA",
+   "rujukan": "scratch/rnd/r8/r8_stuck.json ringkas.H4_tiga_komponen.precision_median",
+   "dipakai": "bagian 2",
+   "status": "TERUKUR"
+  },
+  {
+   "angka": "0,001",
+   "satuan": "rasio",
+   "kelas": "RUN-KITA",
+   "rujukan": "scratch/rnd/r8/r8_stuck.json ringkas.H4_tiga_komponen.recall_median",
+   "dipakai": "bagian 2",
+   "status": "TERUKUR"
+  },
+  {
+   "angka": "148",
+   "satuan": "onset",
+   "kelas": "RUN-KITA",
+   "rujukan": "scratch/rnd/r8/r8_stuck.json ringkas.H4_tiga_komponen.n_onset",
+   "dipakai": "bagian 2",
+   "status": "TERUKUR"
+  },
+  {
+   "angka": "13",
+   "satuan": "onset",
+   "kelas": "RUN-KITA",
+   "rujukan": "scratch/rnd/r8/r8_stuck.json ringkas.H4_tiga_komponen.n_diperingatkan",
+   "dipakai": "bagian 2",
+   "status": "TERUKUR"
+  },
+  {
+   "angka": "0,0322",
+   "satuan": "rasio",
+   "kelas": "RUN-KITA",
+   "rujukan": "scratch/rnd/r8/r8_stuck.json ringkas.ML_saja.recall_median",
+   "dipakai": "bagian 3",
+   "status": "TERUKUR"
+  },
+  {
+   "angka": "0,133",
+   "satuan": "rasio",
+   "kelas": "RUN-KITA",
+   "rujukan": "scratch/rnd/r8/r8_stuck.json ringkas.stat_cusum.recall_median",
+   "dipakai": "bagian 3",
+   "status": "TERUKUR"
+  },
+  {
+   "angka": "0,0808",
+   "satuan": "rasio",
+   "kelas": "RUN-KITA",
+   "rujukan": "scratch/rnd/r8/r8_stuck.json ringkas.rule_kanal.recall_median",
+   "dipakai": "bagian 3",
+   "status": "TERUKUR"
+  },
+  {
+   "angka": "4",
+   "satuan": "fold",
+   "kelas": "RUN-KITA",
+   "rujukan": "scratch/rnd/r8/r8_stuck.json ringkas.H4_tiga_komponen.fold_far_le6 dari n_fold 4",
+   "dipakai": "bagian 3",
+   "status": "TERUKUR"
+  },
+  {
+   "angka": "2.091",
+   "satuan": "FP",
+   "kelas": "RUN-KITA",
+   "rujukan": "scratch/rnd/e4/e4_summary.json assert_r7_1.fp_rule_terbit (baseline bins t-1)",
+   "dipakai": "bagian 2, 4",
+   "status": "TERUKUR"
+  },
+  {
+   "angka": "0,67",
+   "satuan": "persen",
+   "kelas": "DERIVASI",
+   "rujukan": "abs(2105-2091)/2091x100 = 0,6695; e4_summary.json assert_r7_1.selisih_rule_pct",
+   "dipakai": "bagian 2, 4",
+   "status": "TERUKUR"
+  },
+  {
+   "angka": "927",
+   "satuan": "FP",
+   "kelas": "RUN-KITA",
+   "rujukan": "scratch/rnd/e4/e4_summary.json assert_r7_1.fp_hybrid_terbit",
+   "dipakai": "bagian 2, 4",
+   "status": "TERUKUR"
+  },
+  {
+   "angka": "0",
+   "satuan": "persen",
+   "kelas": "DERIVASI",
+   "rujukan": "e4_summary.json assert_r7_1.selisih_hybrid_pct (0,00 persen, identik)",
+   "dipakai": "bagian 2, 4",
+   "status": "TERUKUR"
+  },
+  {
+   "angka": "40",
+   "satuan": "fitur",
+   "kelas": "RUN-KITA",
+   "rujukan": "scratch/rnd/e4/e4_summary.json n_fitur (ts_bin dibuang, 40 fitur)",
+   "dipakai": "bagian 4",
+   "status": "TERUKUR"
+  },
+  {
+   "angka": "1",
+   "satuan": "fold",
+   "kelas": "RUN-KITA",
+   "rujukan": "scratch/rnd/e4/e4_gate_decomp.json hybrid_proxy_E3.ketiga_kejadian dari n 9",
+   "dipakai": "bagian 2, 3, 4",
+   "status": "TERUKUR"
+  },
+  {
+   "angka": "9",
+   "satuan": "fold",
+   "kelas": "RUN-KITA",
+   "rujukan": "scratch/rnd/e4/e4_gate_decomp.json hybrid_proxy_E3.far_dan_recall_kejadian",
+   "dipakai": "bagian 2, 4",
+   "status": "TERUKUR"
+  },
+  {
+   "angka": "1",
+   "satuan": "fold",
+   "kelas": "RUN-KITA",
+   "rujukan": "scratch/rnd/e4/e4_gate_decomp.json rule_t0m1.cakupan_ok dari n 9",
+   "dipakai": "bagian 2, 3",
+   "status": "TERUKUR"
+  },
+  {
+   "angka": "12",
+   "satuan": "fold",
+   "kelas": "RUN-KITA",
+   "rujukan": "scratch/rnd/e4/e4_gate_decomp.json A1_alpha_anggaran.fold_tanpa_alarm dari n 18",
+   "dipakai": "bagian 2, 5",
+   "status": "TERUKUR"
+  },
+  {
+   "angka": "1",
+   "satuan": "fold",
+   "kelas": "RUN-KITA",
+   "rujukan": "scratch/rnd/e4/e4_summary.json ringkas.hybrid_proxy_E3.fold_gate_A_baru",
+   "dipakai": "bagian 2, 5",
+   "status": "TERUKUR"
+  },
+  {
+   "angka": "0,673",
+   "satuan": "fraksi cakupan",
+   "kelas": "RUN-KITA",
+   "rujukan": "scratch/rnd/e3/e3_cakupan.json per_fold F-10 fraksi = 7571/11249",
+   "dipakai": "bagian 2, 3",
+   "status": "TERUKUR"
+  },
+  {
+   "angka": "0,0171",
+   "satuan": "fraksi cakupan",
+   "kelas": "RUN-KITA",
+   "rujukan": "scratch/rnd/e3/e3_cakupan.json per_fold F-5 fraksi = 6332/369549",
+   "dipakai": "bagian 2, 3",
+   "status": "TERUKUR"
+  },
+  {
+   "angka": "1",
+   "satuan": "well",
+   "kelas": "DERIVASI",
+   "rujukan": "hitung fraksi >= 0,50 pada e3_cakupan.json per_fold (9 well)",
+   "dipakai": "bagian 2, 3",
+   "status": "TERUKUR"
+  },
+  {
+   "angka": "3",
+   "satuan": "fold-run",
+   "kelas": "RUN-KITA",
+   "rujukan": "scratch/rnd/e3/e3_verify.json v3_gate_A.A1.n_gate_A_lulus dari n_fold 45",
+   "dipakai": "bagian 2, 5",
+   "status": "TERUKUR"
+  },
+  {
+   "angka": "45",
+   "satuan": "fold-run",
+   "kelas": "RUN-KITA",
+   "rujukan": "scratch/rnd/e3/e3_verify.json v3_gate_A.A1.n_fold (5 seed x 9 fold)",
+   "dipakai": "bagian 2, 5",
+   "status": "TERUKUR"
+  },
+  {
+   "angka": "0",
+   "satuan": "fold",
+   "kelas": "RUN-KITA",
+   "rujukan": "scratch/rnd/e3/e3_verify.json v3_gate_A.A2_reset.n_gate_A_lulus dari 9",
+   "dipakai": "bagian 2",
+   "status": "TERUKUR"
+  },
+  {
+   "angka": "63,288391",
+   "satuan": "alarm/24jam",
+   "kelas": "RUN-KITA",
+   "rujukan": "scratch/rnd/e3/e3_verify.json v4_rentang.A1_semua_seed_far.median",
+   "dipakai": "bagian 2",
+   "status": "TERUKUR"
+  },
+  {
+   "angka": "543,495786",
+   "satuan": "alarm/24jam",
+   "kelas": "RUN-KITA",
+   "rujukan": "scratch/rnd/e3/e3_verify.json v4_rentang.A1_semua_seed_far.max",
+   "dipakai": "bagian 2",
+   "status": "TERUKUR"
+  },
+  {
+   "angka": "1440",
+   "satuan": "alarm/24jam",
+   "kelas": "RUN-KITA",
+   "rujukan": "scratch/rnd/e3/e3_verify.json v4_rentang.A2_tanpa_reset_far.max (1440 = alarm tiap menit)",
+   "dipakai": "bagian 2",
+   "status": "TERUKUR"
+  },
+  {
+   "angka": "27",
+   "satuan": "head",
+   "kelas": "RUN-KITA",
+   "rujukan": "scratch/v9_i1/v9_i1_RESULTS.json jumlah heads pada 7 engines",
+   "dipakai": "bagian 0, 3",
+   "status": "TERUKUR"
+  },
+  {
+   "angka": "7",
+   "satuan": "engine",
+   "kelas": "RUN-KITA",
+   "rujukan": "scratch/v9_i1/v9_i1_RESULTS.json len(engines)",
+   "dipakai": "bagian 3",
+   "status": "TERUKUR"
+  },
+  {
+   "angka": "0",
+   "satuan": "slot",
+   "kelas": "KONVENSI",
+   "rujukan": "scratch/v9_i1/v9_i1_RESULTS.json auto_critical_alarm_slots; docs/V9_EVAL_C_LAYERC.md tier",
+   "dipakai": "bagian 3, 4, 6",
+   "status": "TERUKUR"
+  },
+  {
+   "angka": "302",
+   "satuan": "status HTTP",
+   "kelas": "JURNAL",
+   "rujukan": "scratch/rnd/pm/pm_doi.json page1954 lapis1_status; HEAD doi.org tanpa redirect; 10.1093/biomet/41.1-2.100",
+   "dipakai": "bagian 8",
+   "status": "TERVERIFIKASI"
+  },
+  {
+   "angka": "200",
+   "satuan": "status HTTP",
+   "kelas": "JURNAL",
+   "rujukan": "scratch/rnd/pm/pm_doi.json page1954 lapis2_status (crossref); 10.1093/biomet/41.1-2.100",
+   "dipakai": "bagian 8",
+   "status": "TERVERIFIKASI"
+  },
+  {
+   "angka": "302",
+   "satuan": "status HTTP",
+   "kelas": "JURNAL",
+   "rujukan": "scratch/rnd/pm/pm_doi.json vovk2005 lapis1_status; HEAD doi.org tanpa redirect; 10.1007/b106715",
+   "dipakai": "bagian 8",
+   "status": "TERVERIFIKASI"
+  },
+  {
+   "angka": "200",
+   "satuan": "status HTTP",
+   "kelas": "JURNAL",
+   "rujukan": "scratch/rnd/pm/pm_doi.json vovk2005 lapis2_status (crossref); 10.1007/b106715",
+   "dipakai": "bagian 8",
+   "status": "TERVERIFIKASI"
+  },
+  {
+   "angka": "302",
+   "satuan": "status HTTP",
+   "kelas": "JURNAL",
+   "rujukan": "scratch/rnd/pm/pm_doi.json mirjalili2014 lapis1_status; HEAD doi.org tanpa redirect; 10.1016/j.advengsoft.2013.12.007",
+   "dipakai": "bagian 8",
+   "status": "TERVERIFIKASI"
+  },
+  {
+   "angka": "200",
+   "satuan": "status HTTP",
+   "kelas": "JURNAL",
+   "rujukan": "scratch/rnd/pm/pm_doi.json mirjalili2014 lapis2_status (crossref); 10.1016/j.advengsoft.2013.12.007",
+   "dipakai": "bagian 8",
+   "status": "TERVERIFIKASI"
+  },
+  {
+   "angka": "302",
+   "satuan": "status HTTP",
+   "kelas": "JURNAL",
+   "rujukan": "scratch/rnd/pm/pm_doi.json dragomiretskiy2014 lapis1_status; HEAD doi.org tanpa redirect; 10.1109/TSP.2013.2288675",
+   "dipakai": "bagian 8",
+   "status": "TERVERIFIKASI"
+  },
+  {
+   "angka": "200",
+   "satuan": "status HTTP",
+   "kelas": "JURNAL",
+   "rujukan": "scratch/rnd/pm/pm_doi.json dragomiretskiy2014 lapis2_status (crossref); 10.1109/TSP.2013.2288675",
+   "dipakai": "bagian 8",
+   "status": "TERVERIFIKASI"
+  },
+  {
+   "angka": "302",
+   "satuan": "status HTTP",
+   "kelas": "JURNAL",
+   "rujukan": "scratch/rnd/pm/pm_doi.json liu2008 lapis1_status; HEAD doi.org tanpa redirect; 10.1109/ICDM.2008.17",
+   "dipakai": "bagian 8",
+   "status": "TERVERIFIKASI"
+  },
+  {
+   "angka": "200",
+   "satuan": "status HTTP",
+   "kelas": "JURNAL",
+   "rujukan": "scratch/rnd/pm/pm_doi.json liu2008 lapis2_status (crossref); 10.1109/ICDM.2008.17",
+   "dipakai": "bagian 8",
+   "status": "TERVERIFIKASI"
+  },
+  {
+   "angka": "302",
+   "satuan": "status HTTP",
+   "kelas": "JURNAL",
+   "rujukan": "scratch/rnd/pm/pm_doi.json tatbul2018 lapis1_status; HEAD doi.org tanpa redirect; 10.48550/arXiv.1803.03639",
+   "dipakai": "bagian 8",
+   "status": "TERVERIFIKASI"
+  },
+  {
+   "angka": "200",
+   "satuan": "status HTTP",
+   "kelas": "JURNAL",
+   "rujukan": "scratch/rnd/pm/pm_doi.json tatbul2018 lapis2_status (datacite); 10.48550/arXiv.1803.03639",
+   "dipakai": "bagian 8",
+   "status": "TERVERIFIKASI"
+  },
+  {
+   "angka": "302",
+   "satuan": "status HTTP",
+   "kelas": "JURNAL",
+   "rujukan": "scratch/rnd/pm/pm_doi.json rabiner1989 lapis1_status; HEAD doi.org tanpa redirect; 10.1109/5.18626",
+   "dipakai": "bagian 8",
+   "status": "TERVERIFIKASI"
+  },
+  {
+   "angka": "200",
+   "satuan": "status HTTP",
+   "kelas": "JURNAL",
+   "rujukan": "scratch/rnd/pm/pm_doi.json rabiner1989 lapis2_status (crossref); 10.1109/5.18626",
+   "dipakai": "bagian 8",
+   "status": "TERVERIFIKASI"
+  },
+  {
+   "angka": "302",
+   "satuan": "status HTTP",
+   "kelas": "JURNAL",
+   "rujukan": "scratch/rnd/pm/pm_doi.json cox1972 lapis1_status; HEAD doi.org tanpa redirect; 10.1111/j.2517-6161.1972.tb00899.x",
+   "dipakai": "bagian 8",
+   "status": "TERVERIFIKASI"
+  },
+  {
+   "angka": "200",
+   "satuan": "status HTTP",
+   "kelas": "JURNAL",
+   "rujukan": "scratch/rnd/pm/pm_doi.json cox1972 lapis2_status (crossref); 10.1111/j.2517-6161.1972.tb00899.x",
+   "dipakai": "bagian 8",
+   "status": "TERVERIFIKASI"
+  },
+  {
+   "angka": "302",
+   "satuan": "status HTTP",
+   "kelas": "JURNAL",
+   "rujukan": "scratch/rnd/pm/pm_doi.json ishwaran2008 lapis1_status; HEAD doi.org tanpa redirect; 10.1214/08-AOAS169",
+   "dipakai": "bagian 8",
+   "status": "TERVERIFIKASI"
+  },
+  {
+   "angka": "200",
+   "satuan": "status HTTP",
+   "kelas": "JURNAL",
+   "rujukan": "scratch/rnd/pm/pm_doi.json ishwaran2008 lapis2_status (crossref); 10.1214/08-AOAS169",
+   "dipakai": "bagian 8",
+   "status": "TERVERIFIKASI"
+  },
+  {
+   "angka": "302",
+   "satuan": "status HTTP",
+   "kelas": "JURNAL",
+   "rujukan": "scratch/rnd/pm/pm_doi.json chandola2009 lapis1_status; HEAD doi.org tanpa redirect; 10.1145/1541880.1541882",
+   "dipakai": "bagian 8",
+   "status": "TERVERIFIKASI"
+  },
+  {
+   "angka": "200",
+   "satuan": "status HTTP",
+   "kelas": "JURNAL",
+   "rujukan": "scratch/rnd/pm/pm_doi.json chandola2009 lapis2_status (crossref); 10.1145/1541880.1541882",
+   "dipakai": "bagian 8",
+   "status": "TERVERIFIKASI"
+  },
+  {
+   "angka": "4,1 sampai 496 (119 kali)",
+   "satuan": "alarm/24jam; rasio",
+   "kelas": "RUN-KITA",
+   "rujukan": "baris R1-029 (di-assert di Bagian R1) dan R5-072; sumber primer docs/V9_EVAL_C_LAYERC.md 2.1 baris C3; tidak dihitung ulang di kartu PM",
+   "dipakai": "bagian 2, 3",
+   "status": "TERUKUR (kutipan)"
+  },
+  {
+   "angka": "62,3",
+   "satuan": "persen baris",
+   "kelas": "RUN-KITA",
+   "rujukan": "baris R4-26 (di-assert di Bagian R4); n_nodata 22.385/35.906 pada docs/V9_EVAL_C_LAYERC.md 2.2; tidak dihitung ulang di kartu PM",
+   "dipakai": "bagian 3",
+   "status": "TERUKUR (kutipan)"
+  },
+  {
+   "angka": "0,5678",
+   "satuan": "rasio",
+   "kelas": "RUN-KITA",
+   "rujukan": "baris E0-021 (di-assert di Bagian E0); peluang minimal satu alarm kebetulan 4/4 alat; tidak dihitung ulang di kartu PM",
+   "dipakai": "bagian 3, 4",
+   "status": "TERUKUR (kutipan)"
+  },
+  {
+   "angka": "0,0542",
+   "satuan": "rasio",
+   "kelas": "RUN-KITA",
+   "rujukan": "baris E0-022 (di-assert di Bagian E0); recall segmen tool_wear head op_far_calibrated; tidak dihitung ulang di kartu PM",
+   "dipakai": "bagian 3, 4",
+   "status": "TERUKUR (kutipan)"
+  },
+  {
+   "angka": "0,3333",
+   "satuan": "Hz",
+   "kelas": "RUN-KITA",
+   "rujukan": "baris R3-02 (di-assert di Bagian R3); laju sampel tertinggi kanal; tidak dihitung ulang di kartu PM",
+   "dipakai": "bagian 2, 6",
+   "status": "TERUKUR (kutipan)"
+  },
+  {
+   "angka": "0,1667",
+   "satuan": "Hz",
+   "kelas": "RUN-KITA",
+   "rujukan": "baris R3-02 (di-assert di Bagian R3); Nyquist = fs/2; tidak dihitung ulang di kartu PM",
+   "dipakai": "bagian 2, 6",
+   "status": "TERUKUR (kutipan)"
+  },
+  {
+   "angka": "105",
+   "satuan": "percobaan VMD",
+   "kelas": "RUN-KITA",
+   "rujukan": "baris R3-29 (di-assert di Bagian R3); m3_decomp.json; tidak dihitung ulang di kartu PM",
+   "dipakai": "bagian 2, 6",
+   "status": "TERUKUR (kutipan)"
+  },
+  {
+   "angka": "75",
+   "satuan": "percobaan gagal",
+   "kelas": "RUN-KITA",
+   "rujukan": "baris R3-30 (di-assert di Bagian R3); m3_decomp.json; tidak dihitung ulang di kartu PM",
+   "dipakai": "bagian 2, 6",
+   "status": "TERUKUR (kutipan)"
+  },
+  {
+   "angka": "134,01 sampai 137.374,35",
+   "satuan": "jam",
+   "kelas": "RUN-KITA",
+   "rujukan": "baris R3-40 (di-assert di Bagian R3); estimasi 1-NN kNN-DTW; tidak dihitung ulang di kartu PM",
+   "dipakai": "bagian 2, 6",
+   "status": "TERUKUR (kutipan)"
+  },
+  {
+   "angka": "52,293 sampai 60,000",
+   "satuan": "menit alarm per jam",
+   "kelas": "RUN-KITA",
+   "rujukan": "baris R5-032 (di-assert di Bagian R5); CUSUM tanpa reset di luar baseline; tidak dihitung ulang di kartu PM",
+   "dipakai": "bagian 2, 3",
+   "status": "TERUKUR (kutipan)"
+  },
+  {
+   "angka": "0,0109",
+   "satuan": "laju alarm baseline",
+   "kelas": "RUN-KITA",
+   "rujukan": "baris R5-045 (di-assert di Bagian R5); Isolation Forest median; tidak dihitung ulang di kartu PM",
+   "dipakai": "bagian 2",
+   "status": "TERUKUR (kutipan)"
+  },
+  {
+   "angka": "6.377 dari 8.107 (78,7 persen)",
+   "satuan": "jendela",
+   "kelas": "RUN-KITA",
+   "rujukan": "baris R5-067 (kutipan terverifikasi); sign-flip hyd K-ii; tidak dihitung ulang di kartu PM",
+   "dipakai": "bagian 3",
+   "status": "TERUKUR (kutipan)"
+  },
+  {
+   "angka": "tidak terukur",
+   "satuan": "n/a",
+   "kelas": "BELUM-TERUKUR",
+   "rujukan": "tidak ada data biaya dan tidak ada catatan jam henti per kejadian",
+   "dipakai": "bagian 3, 6, 7",
+   "status": "BELUM TERUKUR"
+  },
+  {
+   "angka": "tidak terukur",
+   "satuan": "n/a",
+   "kelas": "BELUM-TERUKUR",
+   "rujukan": "tidak ada data jadwal inspeksi dan beban pemeriksaan aktual",
+   "dipakai": "bagian 3, 6, 7",
+   "status": "BELUM TERUKUR"
+  },
+  {
+   "angka": "tidak terukur",
+   "satuan": "n/a",
+   "kelas": "BELUM-TERUKUR",
+   "rujukan": "label hanya urutan jendela tanpa stempel waktu",
+   "dipakai": "bagian 3, 7",
+   "status": "BELUM TERUKUR"
+  },
+  {
+   "angka": "tidak terukur",
+   "satuan": "n/a",
+   "kelas": "BELUM-TERUKUR",
+   "rujukan": "R8 memakai seed 42 tunggal; E4 memakai dua seed untuk satu assert baseline",
+   "dipakai": "bagian 6, 7",
+   "status": "BELUM TERUKUR"
+  },
+  {
+   "angka": "tidak terukur",
+   "satuan": "n/a",
+   "kelas": "BELUM-TERUKUR",
+   "rujukan": "tanggal kampanye tidak tersedia per baris",
+   "dipakai": "bagian 6, 7",
+   "status": "BELUM TERUKUR"
+  },
+  {
+   "angka": "tidak terukur",
+   "satuan": "n/a",
+   "kelas": "BELUM-TERUKUR",
+   "rujukan": "R8 hanya menguji hyd, shk, tool_wear, stuck",
+   "dipakai": "bagian 3, 6, 7",
+   "status": "BELUM TERUKUR"
+  },
+  {
+   "angka": "tidak terukur",
+   "satuan": "n/a",
+   "kelas": "BELUM-TERUKUR",
+   "rujukan": "belum ada satu run; R1 hanya menilai kelayakan dari literatur",
+   "dipakai": "bagian 2, 5, 6",
+   "status": "BELUM TERUKUR"
+  },
+  {
+   "angka": "tidak terukur",
+   "satuan": "n/a",
+   "kelas": "BELUM-TERUKUR",
+   "rujukan": "run pembanding R4 tidak selesai dalam anggaran waktu; E1-018",
+   "dipakai": "bagian 2, 5, 7",
+   "status": "BELUM TERUKUR"
+  },
+  {
+   "angka": "tidak terukur",
+   "satuan": "n/a",
+   "kelas": "BELUM-TERUKUR",
+   "rujukan": "belum pernah dijalankan; hanya usul D-A4 di EVAL_C",
+   "dipakai": "bagian 4, 6, 7",
+   "status": "BELUM TERUKUR"
+  },
+  {
+   "angka": "tidak terukur",
+   "satuan": "n/a",
+   "kelas": "BELUM-TERUKUR",
+   "rujukan": "baris pada grid kedalaman 0,015 m, bukan deret waktu; E0 S-6",
+   "dipakai": "bagian 3, 7",
+   "status": "BELUM TERUKUR"
+  },
+  {
+   "angka": "tidak terukur",
+   "satuan": "n/a",
+   "kelas": "BELUM-TERUKUR",
+   "rujukan": "pra-registrasi label belum terbit; REGISTRY menandai BELUM LAYAK PAKAI",
+   "dipakai": "bagian 3, 6, 7",
+   "status": "BELUM TERUKUR"
+  }
+ ]
+}

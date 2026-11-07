@@ -1,0 +1,45 @@
+{
+ "engine": "stuck_k2",
+ "n_rows": 118567,
+ "wells": [
+  "F-10",
+  "F-14",
+  "F-9",
+  "F-9_A"
+ ],
+ "n_folds": 4,
+ "folds": [
+  {
+   "test_well": "F-10",
+   "train_wells": [
+    "F-14",
+    "F-9",
+    "F-9_A"
+   ]
+  },
+  {
+   "test_well": "F-14",
+   "train_wells": [
+    "F-10",
+    "F-9",
+    "F-9_A"
+   ]
+  },
+  {
+   "test_well": "F-9",
+   "train_wells": [
+    "F-10",
+    "F-14",
+    "F-9_A"
+   ]
+  },
+  {
+   "test_well": "F-9_A",
+   "train_wells": [
+    "F-10",
+    "F-14",
+    "F-9"
+   ]
+  }
+ ]
+}

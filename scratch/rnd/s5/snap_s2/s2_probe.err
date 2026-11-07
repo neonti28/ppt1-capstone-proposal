@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/mnt/d/Capstone 1(v2)/code/rnd_s2_probe.py", line 5, in <module>
+    import pandas as pd
+ModuleNotFoundError: No module named 'pandas'

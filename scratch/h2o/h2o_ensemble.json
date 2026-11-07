@@ -1,0 +1,93 @@
+{
+  "setelan": {
+    "batas_detik": 600,
+    "max_models": 100,
+    "sort_metric": "AUCPR",
+    "balance_classes": true,
+    "fold_column": "wellbore",
+    "seed": 42,
+    "kombinasi": [
+      "leader",
+      "mean_top3",
+      "mean_top5",
+      "mean_top10",
+      "rankmean_top5",
+      "stacked_ensemble"
+    ]
+  },
+  "hasil": {
+    "F-14": {
+      "n_kandidat": 14,
+      "n_uji": 1369,
+      "n_positif": 59,
+      "leader": "XGBoost_3_AutoML_1_20261106_223949",
+      "leader_auprc_uji": 0.0848,
+      "leader_aucpr_internal": 0.08905186123803417,
+      "leaderboard_top": [
+        {
+          "model": "XGBoost_3_AutoML_1_20261106_223949",
+          "aucpr_internal": 0.08905186123803417
+        },
+        {
+          "model": "GBM_3_AutoML_1_20261106_223949",
+          "aucpr_internal": 0.08805811882691422
+        },
+        {
+          "model": "XRT_1_AutoML_1_20261106_223949",
+          "aucpr_internal": 0.08467750267912175
+        },
+        {
+          "model": "XGBoost_2_AutoML_1_20261106_223949",
+          "aucpr_internal": 0.08362951396849029
+        },
+        {
+          "model": "XGBoost_grid_1_AutoML_1_20261106_223949_model_2",
+          "aucpr_internal": 0.08264554965781949
+        },
+        {
+          "model": "GBM_2_AutoML_1_20261106_223949",
+          "aucpr_internal": 0.08168241331997533
+        },
+        {
+          "model": "DRF_1_AutoML_1_20261106_223949",
+          "aucpr_internal": 0.08052091231462635
+        },
+        {
+          "model": "GBM_1_AutoML_1_20261106_223949",
+          "aucpr_internal": 0.07959966564724079
+        },
+        {
+          "model": "XGBoost_1_AutoML_1_20261106_223949",
+          "aucpr_internal": 0.0793842933240034
+        },
+        {
+          "model": "GBM_4_AutoML_1_20261106_223949",
+          "aucpr_internal": 0.07884003132784809
+        },
+        {
+          "model": "GBM_5_AutoML_1_20261106_223949",
+          "aucpr_internal": 0.07688539679461413
+        },
+        {
+          "model": "XGBoost_grid_1_AutoML_1_20261106_223949_model_1",
+          "aucpr_internal": 0.06765499673528048
+        },
+        {
+          "model": "XGBoost_grid_1_AutoML_1_20261106_223949_model_3",
+          "aucpr_internal": 0.06125817212303869
+        },
+        {
+          "model": "GLM_1_AutoML_1_20261106_223949",
+          "aucpr_internal": 0.04298854993254184
+        }
+      ],
+      "mean_top3": 0.0972,
+      "mean_top5": 0.0877,
+      "mean_top10": 0.0869,
+      "rankmean_top5": 0.0864,
+      "rf_auprc": 0.1008,
+      "reglog_auprc": 0.092,
+      "mayoritas_auprc": 0.0431
+    }
+  }
+}

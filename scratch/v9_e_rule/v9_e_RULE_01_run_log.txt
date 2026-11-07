@@ -1,0 +1,38 @@
+[2026-10-15 10:13:55] == vib: rows=23922 folds=4 feats=55 depth_feats=10
+[2026-10-15 10:13:59]    F-14: n=1989 pos=1124 prev=0.5651 pers.auprc=0.7925 rule.FP=30 rule.P=0.9444 hybrid.FP=30 canary=0.6124
+[2026-10-15 10:14:01]    F-15A: n=6482 pos=1543 prev=0.238 pers.auprc=0.5473 rule.FP=65 rule.P=0.8676 hybrid.FP=65 canary=0.4578
+[2026-10-15 10:14:03]    F-15_S: n=10903 pos=1532 prev=0.1405 pers.auprc=0.5137 rule.FP=65 rule.P=0.8984 hybrid.FP=65 canary=0.277
+[2026-10-15 10:14:06]    F-5: n=4548 pos=1230 prev=0.2704 pers.auprc=0.666 rule.FP=37 rule.P=0.9519 hybrid.FP=37 canary=0.3093
+[2026-10-15 10:14:06] == ssi: rows=35906 folds=9 feats=55 depth_feats=10
+[2026-10-15 10:14:10]    F-10: n=7133 pos=161 prev=0.0226 pers.auprc=0.1884 rule.FP=3 rule.P=0.4 hybrid.FP=1 canary=0.0302
+[2026-10-15 10:14:13]    F-12: n=4293 pos=83 prev=0.0193 pers.auprc=0.021 rule.FP=6 rule.P=0.0 hybrid.FP=1 canary=0.0709
+[2026-10-15 10:14:16]    F-14: n=5455 pos=75 prev=0.0137 pers.auprc=0.014 rule.FP=0 rule.P=None hybrid.FP=0 canary=0.0305
+[2026-10-15 10:14:19]    F-15A: n=6020 pos=31 prev=0.0051 pers.auprc=0.0086 rule.FP=3 rule.P=0.25 hybrid.FP=2 canary=0.0139
+[2026-10-15 10:14:21]    F-15_S: n=5342 pos=85 prev=0.0159 pers.auprc=0.0166 rule.FP=8 rule.P=0.1111 hybrid.FP=1 canary=0.0243
+[2026-10-15 10:14:24]    F-5: n=4714 pos=102 prev=0.0216 pers.auprc=0.0334 rule.FP=2 rule.P=0.5 hybrid.FP=0 canary=0.0751
+[2026-10-15 10:14:27]    F-7: n=982 pos=3 prev=0.0031 pers.auprc=0.0031 rule.FP=0 rule.P=None hybrid.FP=0 canary=0.0201
+[2026-10-15 10:14:30]    F-9: n=1126 pos=12 prev=0.0107 pers.auprc=0.0107 rule.FP=0 rule.P=None hybrid.FP=0 canary=0.0097
+[2026-10-15 10:14:33]    F-9_A: n=841 pos=55 prev=0.0654 pers.auprc=0.0732 rule.FP=4 rule.P=0.2 hybrid.FP=2 canary=0.086
+[2026-10-15 10:14:34] == shk: rows=56495 folds=9 feats=55 depth_feats=10
+[2026-10-15 10:14:39]    F-10: n=7899 pos=146 prev=0.0185 pers.auprc=0.0236 rule.FP=15 rule.P=0.2857 hybrid.FP=15 canary=0.0212
+[2026-10-15 10:14:43]    F-12: n=5405 pos=217 prev=0.0401 pers.auprc=0.0531 rule.FP=8 rule.P=0.5789 hybrid.FP=8 canary=0.0652
+[2026-10-15 10:14:46]    F-14: n=11205 pos=760 prev=0.0678 pers.auprc=0.1599 rule.FP=48 rule.P=0.534 hybrid.FP=48 canary=0.063
+[2026-10-15 10:14:51]    F-15A: n=6484 pos=41 prev=0.0063 pers.auprc=0.0063 rule.FP=3 rule.P=0.0 hybrid.FP=3 canary=0.0121
+[2026-10-15 10:14:55]    F-15_S: n=11394 pos=259 prev=0.0227 pers.auprc=0.039 rule.FP=22 rule.P=0.4054 hybrid.FP=22 canary=0.0251
+[2026-10-15 10:15:00]    F-5: n=7140 pos=240 prev=0.0336 pers.auprc=0.0451 rule.FP=14 rule.P=0.125 hybrid.FP=14 canary=0.0487
+[2026-10-15 10:15:05]    F-7: n=2761 pos=267 prev=0.0967 pers.auprc=0.4428 rule.FP=7 rule.P=0.9352 hybrid.FP=7 canary=0.0789
+[2026-10-15 10:15:10]    F-9: n=1851 pos=45 prev=0.0243 pers.auprc=0.038 rule.FP=2 rule.P=0.3333 hybrid.FP=2 canary=0.0611
+[2026-10-15 10:15:16]    F-9_A: n=2356 pos=30 prev=0.0127 pers.auprc=0.014 rule.FP=2 rule.P=0.3333 hybrid.FP=2 canary=0.0388
+[2026-10-15 10:15:16] == stuck_k1: rows=5555 folds=2 feats=55 depth_feats=10
+[2026-10-15 10:15:20]    F-14: n=3201 pos=432 prev=0.135 pers.auprc=0.52 rule.FP=16 rule.P=0.9238 hybrid.FP=16 canary=0.4099
+[2026-10-15 10:15:21]    F-9_A: n=2354 pos=1575 prev=0.6691 pers.auprc=0.7832 rule.FP=33 rule.P=0.9662 hybrid.FP=33 canary=0.7688
+[2026-10-15 10:15:23] == hyd_ki: rows=52509 folds=9 feats=40 depth_feats=10
+[2026-10-15 10:15:28]    F-10: n=7571 pos=1394 prev=0.1841 pers.auprc=0.811 rule.FP=166 rule.P=0.8862 hybrid.FP=66 canary=0.2388
+[2026-10-15 10:15:32]    F-12: n=7390 pos=1426 prev=0.193 pers.auprc=0.6328 rule.FP=368 rule.P=0.7598 hybrid.FP=242 canary=0.1616
+[2026-10-15 10:15:36]    F-14: n=10401 pos=865 prev=0.0832 pers.auprc=0.4336 rule.FP=368 rule.P=0.6226 hybrid.FP=110 canary=0.0805
+[2026-10-15 10:15:41]    F-15A: n=6156 pos=698 prev=0.1134 pers.auprc=0.4897 rule.FP=253 rule.P=0.6744 hybrid.FP=103 canary=0.1273
+[2026-10-15 10:15:45]    F-15_S: n=8355 pos=993 prev=0.1189 pers.auprc=0.4188 rule.FP=359 rule.P=0.6531 hybrid.FP=199 canary=0.1285
+[2026-10-15 10:15:49]    F-5: n=6332 pos=621 prev=0.0981 pers.auprc=0.589 rule.FP=194 rule.P=0.7172 hybrid.FP=58 canary=0.1559
+[2026-10-15 10:15:53]    F-7: n=2482 pos=421 prev=0.1696 pers.auprc=0.498 rule.FP=189 rule.P=0.6316 hybrid.FP=76 canary=0.222
+[2026-10-15 10:15:58]    F-9: n=1616 pos=423 prev=0.2618 pers.auprc=0.617 rule.FP=108 rule.P=0.7238 hybrid.FP=36 canary=0.5117
+[2026-10-15 10:16:03]    F-9_A: n=2206 pos=331 prev=0.15 pers.auprc=0.5096 rule.FP=86 rule.P=0.7162 hybrid.FP=37 canary=0.1556

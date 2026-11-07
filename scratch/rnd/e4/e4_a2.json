@@ -1,0 +1,367 @@
+{
+  "finalis": "A2 CUSUM dua sisi pada z SPPA",
+  "h": 30.0,
+  "reset": true,
+  "folds": [
+    {
+      "rows": {
+        "tp": 827,
+        "fp": 630,
+        "fn": 567,
+        "tn": 5547,
+        "n_neg": 6177,
+        "precision": 0.5676046671242279,
+        "recall": 0.5932568149210904,
+        "far_per_24h": 146.86741136474015,
+        "jam_neg": 102.95
+      },
+      "events": {
+        "tp_kejadian": 71,
+        "fp_kejadian": 55,
+        "n_kejadian": 126,
+        "far24_kejadian": 12.821758135017,
+        "menit_alarm": 1457
+      },
+      "cakupan": {
+        "n": 7571,
+        "menit_kalender": 11249.0,
+        "fraksi": 0.673
+      },
+      "far24_kalender": 92.05479452054794,
+      "far24_kalender_kejadian": 8.036529680365296,
+      "gate_A_lama": false,
+      "gate_A_lama_penuh": false,
+      "gate_A_baru": false,
+      "gate_A_baru_kejadian": false,
+      "satuan_dipakai_gate": "baris (far24_kalender); kejadian dilaporkan berdampingan",
+      "test_well": "F-10",
+      "h": 30.0,
+      "reset": true,
+      "alarm_menit": 456,
+      "tp_kejadian": 127,
+      "fp_kejadian": 329,
+      "far24_kejadian_episode": 76.6974,
+      "catatan": "SIRKULAR: z pembentuk label, bukan bukti independen"
+    },
+    {
+      "rows": {
+        "tp": 552,
+        "fp": 781,
+        "fn": 874,
+        "tn": 5183,
+        "n_neg": 5964,
+        "precision": 0.41410352588147037,
+        "recall": 0.3870967741935484,
+        "far_per_24h": 188.57142857142856,
+        "jam_neg": 99.4
+      },
+      "events": {
+        "tp_kejadian": 38,
+        "fp_kejadian": 38,
+        "n_kejadian": 76,
+        "far24_kejadian": 9.175050301810863,
+        "menit_alarm": 1333
+      },
+      "cakupan": {
+        "n": 7390,
+        "menit_kalender": 86454.0,
+        "fraksi": 0.0855
+      },
+      "far24_kalender": 13.226701792350754,
+      "far24_kalender_kejadian": 0.643552712047796,
+      "gate_A_lama": false,
+      "gate_A_lama_penuh": false,
+      "gate_A_baru": false,
+      "gate_A_baru_kejadian": false,
+      "satuan_dipakai_gate": "baris (far24_kalender); kejadian dilaporkan berdampingan",
+      "test_well": "F-12",
+      "h": 30.0,
+      "reset": true,
+      "alarm_menit": 727,
+      "tp_kejadian": 174,
+      "fp_kejadian": 553,
+      "far24_kejadian_episode": 133.5211,
+      "catatan": "SIRKULAR: z pembentuk label, bukan bukti independen"
+    },
+    {
+      "rows": {
+        "tp": 471,
+        "fp": 1001,
+        "fn": 394,
+        "tn": 8535,
+        "n_neg": 9536,
+        "precision": 0.31997282608695654,
+        "recall": 0.5445086705202312,
+        "far_per_24h": 151.15771812080536,
+        "jam_neg": 158.93333333333334
+      },
+      "events": {
+        "tp_kejadian": 52,
+        "fp_kejadian": 79,
+        "n_kejadian": 131,
+        "far24_kejadian": 11.929530201342281,
+        "menit_alarm": 1472
+      },
+      "cakupan": {
+        "n": 10401,
+        "menit_kalender": 317679.0,
+        "fraksi": 0.0327
+      },
+      "far24_kalender": 4.549798935653096,
+      "far24_kalender_kejadian": 0.3590750408757189,
+      "gate_A_lama": false,
+      "gate_A_lama_penuh": false,
+      "gate_A_baru": false,
+      "gate_A_baru_kejadian": false,
+      "satuan_dipakai_gate": "baris (far24_kalender); kejadian dilaporkan berdampingan",
+      "test_well": "F-14",
+      "h": 30.0,
+      "reset": true,
+      "alarm_menit": 322,
+      "tp_kejadian": 115,
+      "fp_kejadian": 207,
+      "far24_kejadian_episode": 31.2584,
+      "catatan": "SIRKULAR: z pembentuk label, bukan bukti independen"
+    },
+    {
+      "rows": {
+        "tp": 313,
+        "fp": 545,
+        "fn": 385,
+        "tn": 4913,
+        "n_neg": 5458,
+        "precision": 0.36480186480186483,
+        "recall": 0.4484240687679083,
+        "far_per_24h": 143.78893367533894,
+        "jam_neg": 90.96666666666667
+      },
+      "events": {
+        "tp_kejadian": 34,
+        "fp_kejadian": 48,
+        "n_kejadian": 82,
+        "far24_kejadian": 12.663979479662878,
+        "menit_alarm": 858
+      },
+      "cakupan": {
+        "n": 6156,
+        "menit_kalender": 32141.0,
+        "fraksi": 0.1915
+      },
+      "far24_kalender": 24.95945043411888,
+      "far24_kalender_kejadian": 2.1982635244728557,
+      "gate_A_lama": false,
+      "gate_A_lama_penuh": false,
+      "gate_A_baru": false,
+      "gate_A_baru_kejadian": false,
+      "satuan_dipakai_gate": "baris (far24_kalender); kejadian dilaporkan berdampingan",
+      "test_well": "F-15A",
+      "h": 30.0,
+      "reset": true,
+      "alarm_menit": 246,
+      "tp_kejadian": 50,
+      "fp_kejadian": 196,
+      "far24_kejadian_episode": 51.7112,
+      "catatan": "SIRKULAR: z pembentuk label, bukan bukti independen"
+    },
+    {
+      "rows": {
+        "tp": 455,
+        "fp": 680,
+        "fn": 538,
+        "tn": 6682,
+        "n_neg": 7362,
+        "precision": 0.4008810572687225,
+        "recall": 0.45820745216515607,
+        "far_per_24h": 133.00733496332518,
+        "jam_neg": 122.7
+      },
+      "events": {
+        "tp_kejadian": 40,
+        "fp_kejadian": 56,
+        "n_kejadian": 96,
+        "far24_kejadian": 10.95354523227384,
+        "menit_alarm": 1135
+      },
+      "cakupan": {
+        "n": 8355,
+        "menit_kalender": 92488.0,
+        "fraksi": 0.0903
+      },
+      "far24_kalender": 10.702224165254933,
+      "far24_kalender_kejadian": 0.8813596371386415,
+      "gate_A_lama": false,
+      "gate_A_lama_penuh": false,
+      "gate_A_baru": false,
+      "gate_A_baru_kejadian": false,
+      "satuan_dipakai_gate": "baris (far24_kalender); kejadian dilaporkan berdampingan",
+      "test_well": "F-15_S",
+      "h": 30.0,
+      "reset": true,
+      "alarm_menit": 225,
+      "tp_kejadian": 67,
+      "fp_kejadian": 158,
+      "far24_kejadian_episode": 30.9046,
+      "catatan": "SIRKULAR: z pembentuk label, bukan bukti independen"
+    },
+    {
+      "rows": {
+        "tp": 480,
+        "fp": 790,
+        "fn": 141,
+        "tn": 4921,
+        "n_neg": 5711,
+        "precision": 0.3779527559055118,
+        "recall": 0.7729468599033816,
+        "far_per_24h": 199.1945368586937,
+        "jam_neg": 95.18333333333334
+      },
+      "events": {
+        "tp_kejadian": 32,
+        "fp_kejadian": 72,
+        "n_kejadian": 104,
+        "far24_kejadian": 18.15443880231133,
+        "menit_alarm": 1270
+      },
+      "cakupan": {
+        "n": 6332,
+        "menit_kalender": 369549.0,
+        "fraksi": 0.0171
+      },
+      "far24_kalender": 3.0835284933645593,
+      "far24_kalender_kejadian": 0.28103044496487123,
+      "gate_A_lama": false,
+      "gate_A_lama_penuh": false,
+      "gate_A_baru": false,
+      "gate_A_baru_kejadian": false,
+      "satuan_dipakai_gate": "baris (far24_kalender); kejadian dilaporkan berdampingan",
+      "test_well": "F-5",
+      "h": 30.0,
+      "reset": true,
+      "alarm_menit": 362,
+      "tp_kejadian": 86,
+      "fp_kejadian": 276,
+      "far24_kejadian_episode": 69.592,
+      "catatan": "SIRKULAR: z pembentuk label, bukan bukti independen"
+    },
+    {
+      "rows": {
+        "tp": 270,
+        "fp": 333,
+        "fn": 151,
+        "tn": 1728,
+        "n_neg": 2061,
+        "precision": 0.44776119402985076,
+        "recall": 0.6413301662707839,
+        "far_per_24h": 232.66375545851528,
+        "jam_neg": 34.35
+      },
+      "events": {
+        "tp_kejadian": 21,
+        "fp_kejadian": 19,
+        "n_kejadian": 40,
+        "far24_kejadian": 13.275109170305678,
+        "menit_alarm": 603
+      },
+      "cakupan": {
+        "n": 2482,
+        "menit_kalender": 23011.0,
+        "fraksi": 0.1079
+      },
+      "far24_kalender": 21.227091633466134,
+      "far24_kalender_kejadian": 1.2111553784860558,
+      "gate_A_lama": false,
+      "gate_A_lama_penuh": false,
+      "gate_A_baru": false,
+      "gate_A_baru_kejadian": false,
+      "satuan_dipakai_gate": "baris (far24_kalender); kejadian dilaporkan berdampingan",
+      "test_well": "F-7",
+      "h": 30.0,
+      "reset": true,
+      "alarm_menit": 198,
+      "tp_kejadian": 99,
+      "fp_kejadian": 99,
+      "far24_kejadian_episode": 69.1703,
+      "catatan": "SIRKULAR: z pembentuk label, bukan bukti independen"
+    },
+    {
+      "rows": {
+        "tp": 340,
+        "fp": 161,
+        "fn": 83,
+        "tn": 1032,
+        "n_neg": 1193,
+        "precision": 0.6786427145708582,
+        "recall": 0.8037825059101655,
+        "far_per_24h": 194.3336127409891,
+        "jam_neg": 19.883333333333333
+      },
+      "events": {
+        "tp_kejadian": 11,
+        "fp_kejadian": 11,
+        "n_kejadian": 22,
+        "far24_kejadian": 13.27745180217938,
+        "menit_alarm": 501
+      },
+      "cakupan": {
+        "n": 1616,
+        "menit_kalender": 22858.0,
+        "fraksi": 0.0707
+      },
+      "far24_kalender": 10.333853354134165,
+      "far24_kalender_kejadian": 0.7060396701582349,
+      "gate_A_lama": false,
+      "gate_A_lama_penuh": false,
+      "gate_A_baru": false,
+      "gate_A_baru_kejadian": false,
+      "satuan_dipakai_gate": "baris (far24_kalender); kejadian dilaporkan berdampingan",
+      "test_well": "F-9",
+      "h": 30.0,
+      "reset": true,
+      "alarm_menit": 261,
+      "tp_kejadian": 184,
+      "fp_kejadian": 77,
+      "far24_kejadian_episode": 92.9422,
+      "catatan": "SIRKULAR: z pembentuk label, bukan bukti independen"
+    },
+    {
+      "rows": {
+        "tp": 146,
+        "fp": 166,
+        "fn": 185,
+        "tn": 1709,
+        "n_neg": 1875,
+        "precision": 0.46794871794871795,
+        "recall": 0.44108761329305135,
+        "far_per_24h": 127.488,
+        "jam_neg": 31.25
+      },
+      "events": {
+        "tp_kejadian": 17,
+        "fp_kejadian": 13,
+        "n_kejadian": 30,
+        "far24_kejadian": 9.984,
+        "menit_alarm": 312
+      },
+      "cakupan": {
+        "n": 2206,
+        "menit_kalender": 7344.0,
+        "fraksi": 0.3004
+      },
+      "far24_kalender": 34.085270212462575,
+      "far24_kalender_kejadian": 2.6693283901326113,
+      "gate_A_lama": false,
+      "gate_A_lama_penuh": false,
+      "gate_A_baru": false,
+      "gate_A_baru_kejadian": false,
+      "satuan_dipakai_gate": "baris (far24_kalender); kejadian dilaporkan berdampingan",
+      "test_well": "F-9_A",
+      "h": 30.0,
+      "reset": true,
+      "alarm_menit": 46,
+      "tp_kejadian": 22,
+      "fp_kejadian": 24,
+      "far24_kejadian_episode": 18.432,
+      "catatan": "SIRKULAR: z pembentuk label, bukan bukti independen"
+    }
+  ]
+}

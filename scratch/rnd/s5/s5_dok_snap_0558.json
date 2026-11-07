@@ -1,0 +1,795 @@
+{
+ "kartu": "t_b5b16adc",
+ "langkah": "S5-C angka dokumen vs artefak",
+ "waktu": "2026-10-28 06:08:21",
+ "mode": "NORMAL",
+ "per_kartu": {
+  "S2": {
+   "dokumen": "docs/RND_S2_HYBRID_VIB_SSI.md",
+   "baris_dokumen": 94,
+   "artefak": {
+    "scratch/rnd/s2/bak_gagal/s2_vib.json": {
+     "status": "ok",
+     "bytes": 3150,
+     "n_nilai": 138
+    },
+    "scratch/rnd/s2/bak_gagal/s2_ssi.json": {
+     "status": "ok",
+     "bytes": 5773,
+     "n_nilai": 273
+    },
+    "scratch/rnd/s2/s2_records_vib.json": {
+     "status": "ok",
+     "bytes": 123287,
+     "n_nilai": 3553
+    },
+    "scratch/rnd/s2/s2_records_ssi.json": {
+     "status": "ok",
+     "bytes": 268842,
+     "n_nilai": 7810
+    },
+    "scratch/rnd/s2/s2_ringkas.json": {
+     "status": "ok",
+     "bytes": 65188,
+     "n_nilai": 2126
+    },
+    "scratch/rnd/s2/bak_gagal/s2_probe.json": {
+     "status": "KOSONG",
+     "bytes": 0,
+     "n_nilai": 0
+    }
+   },
+   "klaim": [
+    {
+     "tampil": "23.922",
+     "nilai": 23922,
+     "ada_di_dokumen": true,
+     "n_lokasi": 3,
+     "lokasi": [
+      "s2_vib.json:rows",
+      "s2_records_vib.json:n_baris",
+      "s2_ringkas.json:vib.n_baris"
+     ],
+     "status": "TERLETAK"
+    },
+    {
+     "tampil": "35.906",
+     "nilai": 35906,
+     "ada_di_dokumen": true,
+     "n_lokasi": 3,
+     "lokasi": [
+      "s2_ssi.json:rows",
+      "s2_records_ssi.json:n_baris",
+      "s2_ringkas.json:ssi.n_baris"
+     ],
+     "status": "TERLETAK"
+    },
+    {
+     "tampil": "0,2542",
+     "nilai": 0.2542,
+     "ada_di_dokumen": true,
+     "n_lokasi": 1,
+     "lokasi": [
+      "s2_vib.json:prev_median"
+     ],
+     "status": "TERLETAK"
+    },
+    {
+     "tampil": "0,0159",
+     "nilai": 0.0159,
+     "ada_di_dokumen": true,
+     "n_lokasi": 2142,
+     "lokasi": [
+      "s2_vib.json:folds[0].hybrid.tp",
+      "s2_vib.json:folds[0].hybrid.fp",
+      "s2_vib.json:folds[0].hybrid.precision",
+      "s2_vib.json:folds[0].hybrid.recall"
+     ],
+     "status": "TERLETAK"
+    },
+    {
+     "tampil": "0,6204",
+     "nilai": 0.6204,
+     "ada_di_dokumen": true,
+     "n_lokasi": 2,
+     "lokasi": [
+      "s2_vib.json:auprc_median",
+      "s2_records_vib.json:folds[1].models.H3_ML_kalender_dan_rule.wilson_recall.lo"
+     ],
+     "status": "TERLETAK"
+    },
+    {
+     "tampil": "0,0440",
+     "nilai": 0.044,
+     "ada_di_dokumen": true,
+     "n_lokasi": 2121,
+     "lokasi": [
+      "s2_vib.json:folds[0].hybrid.tp",
+      "s2_vib.json:folds[0].hybrid.fp",
+      "s2_vib.json:folds[0].hybrid.precision",
+      "s2_vib.json:folds[0].hybrid.recall"
+     ],
+     "status": "TERLETAK"
+    },
+    {
+     "tampil": "0,4527",
+     "nilai": 0.4527,
+     "ada_di_dokumen": true,
+     "n_lokasi": 2,
+     "lokasi": [
+      "s2_vib.json:agg.ml.precision.median",
+      "s2_records_ssi.json:folds[1].ml[0].sensitivitas_anggaran[2].ambang_ml"
+     ],
+     "status": "TERLETAK"
+    },
+    {
+     "tampil": "0,6292",
+     "nilai": 0.6292,
+     "ada_di_dokumen": true,
+     "n_lokasi": 2,
+     "lokasi": [
+      "s2_vib.json:agg.ml.recall.median",
+      "s2_records_vib.json:folds[1].models.H3_ML_kalender_dan_rule.wilson_recall.lo"
+     ],
+     "status": "TERLETAK"
+    },
+    {
+     "tampil": "456",
+     "nilai": 456,
+     "ada_di_dokumen": true,
+     "n_lokasi": 1,
+     "lokasi": [
+      "s2_vib.json:agg.ml.fp.median"
+     ],
+     "status": "TERLETAK"
+    },
+    {
+     "tampil": "0,2713",
+     "nilai": 0.2713,
+     "ada_di_dokumen": true,
+     "n_lokasi": 1,
+     "lokasi": [
+      "s2_vib.json:agg.hybrid.precision.median"
+     ],
+     "status": "TERLETAK"
+    },
+    {
+     "tampil": "0,0037",
+     "nilai": 0.0037,
+     "ada_di_dokumen": true,
+     "n_lokasi": 2122,
+     "lokasi": [
+      "s2_vib.json:folds[0].hybrid.tp",
+      "s2_vib.json:folds[0].hybrid.fp",
+      "s2_vib.json:folds[0].hybrid.precision",
+      "s2_vib.json:folds[0].hybrid.recall"
+     ],
+     "status": "TERLETAK"
+    },
+    {
+     "tampil": "2,5",
+     "nilai": 2.5,
+     "ada_di_dokumen": true,
+     "n_lokasi": 3260,
+     "lokasi": [
+      "s2_vib.json:folds[0].stat.precision",
+      "s2_vib.json:folds[0].stat.recall",
+      "s2_vib.json:folds[0].hybrid.tp",
+      "s2_vib.json:folds[0].hybrid.fp"
+     ],
+     "status": "TERLETAK"
+    },
+    {
+     "tampil": "0,0715",
+     "nilai": 0.0715,
+     "ada_di_dokumen": true,
+     "n_lokasi": 1,
+     "lokasi": [
+      "s2_vib.json:agg.stat.precision.median"
+     ],
+     "status": "TERLETAK"
+    },
+    {
+     "tampil": "0,0109",
+     "nilai": 0.0109,
+     "ada_di_dokumen": true,
+     "n_lokasi": 2121,
+     "lokasi": [
+      "s2_vib.json:folds[0].hybrid.tp",
+      "s2_vib.json:folds[0].hybrid.fp",
+      "s2_vib.json:folds[0].hybrid.precision",
+      "s2_vib.json:folds[0].hybrid.recall"
+     ],
+     "status": "TERLETAK"
+    },
+    {
+     "tampil": "210",
+     "nilai": 210,
+     "ada_di_dokumen": true,
+     "n_lokasi": 4,
+     "lokasi": [
+      "s2_vib.json:agg.stat.fp.median",
+      "s2_records_ssi.json:folds[0].ml[0].sensitivitas_anggaran[1].n_alarm_ml",
+      "s2_records_ssi.json:folds[0].models.ML_kalender_b24.rows.menit_alarm",
+      "s2_records_ssi.json:folds[0].models.ML_kalender_b24.wilson_precision.n"
+     ],
+     "status": "TERLETAK"
+    },
+    {
+     "tampil": "0,0237",
+     "nilai": 0.0237,
+     "ada_di_dokumen": true,
+     "n_lokasi": 2120,
+     "lokasi": [
+      "s2_vib.json:folds[0].hybrid.tp",
+      "s2_vib.json:folds[0].hybrid.fp",
+      "s2_vib.json:folds[0].hybrid.precision",
+      "s2_vib.json:folds[0].hybrid.recall"
+     ],
+     "status": "TERLETAK"
+    },
+    {
+     "tampil": "0,1290",
+     "nilai": 0.129,
+     "ada_di_dokumen": true,
+     "n_lokasi": 3,
+     "lokasi": [
+      "s2_ssi.json:folds[3].ml.recall",
+      "s2_ssi.json:agg.ml.recall.median",
+      "s2_records_ssi.json:folds[0].ml[0].sensitivitas_anggaran[2].ambang_ml"
+     ],
+     "status": "TERLETAK"
+    },
+    {
+     "tampil": "220",
+     "nilai": 220,
+     "ada_di_dokumen": true,
+     "n_lokasi": 11,
+     "lokasi": [
+      "s2_ssi.json:folds[3].ml.fp",
+      "s2_ssi.json:agg.ml.fp.median",
+      "s2_records_vib.json:folds[0].models.H1_stat_dan_rule.rows.menit_alarm",
+      "s2_records_vib.json:folds[0].models.H1_stat_dan_rule.wilson_precision.n"
+     ],
+     "status": "TERLETAK"
+    },
+    {
+     "tampil": "3,0",
+     "nilai": 3.0,
+     "ada_di_dokumen": true,
+     "n_lokasi": 3467,
+     "lokasi": [
+      "s2_vib.json:folds[0].stat.precision",
+      "s2_vib.json:folds[0].stat.recall",
+      "s2_vib.json:folds[0].hybrid.tp",
+      "s2_vib.json:folds[0].hybrid.fp"
+     ],
+     "status": "TERLETAK"
+    },
+    {
+     "tampil": "4,0",
+     "nilai": 4.0,
+     "ada_di_dokumen": true,
+     "n_lokasi": 3420,
+     "lokasi": [
+      "s2_vib.json:folds[0].stat.precision",
+      "s2_vib.json:folds[0].stat.recall",
+      "s2_vib.json:folds[0].hybrid.tp",
+      "s2_vib.json:folds[0].hybrid.fp"
+     ],
+     "status": "TERLETAK"
+    }
+   ],
+   "turunan": [
+    {
+     "label": "42,19 alarm = 1/0,0237",
+     "hitung": 42.19409282700422,
+     "tertulis": 42.0,
+     "selisih": 0.19409282700421926,
+     "desimal": 0,
+     "status": "COCOK"
+    }
+   ],
+   "rekap": {
+    "n_klaim": 20,
+    "terletak": 20,
+    "tidak_terletak": [],
+    "dok_tidak_memuat": [],
+    "turunan_beda": []
+   }
+  },
+  "S3": {
+   "dokumen": "docs/RND_S3_HYBRID_BITWEAR.md",
+   "baris_dokumen": 218,
+   "artefak": {
+    "scratch/rnd/s3/s3a_feasibility.json": {
+     "status": "ok",
+     "bytes": 8072,
+     "n_nilai": 192
+    },
+    "scratch/rnd/s3/s3b_hybrid.json": {
+     "status": "ok",
+     "bytes": 72822,
+     "n_nilai": 2228
+    },
+    "scratch/rnd/s3/s3c_ringkas.json": {
+     "status": "ok",
+     "bytes": 34985,
+     "n_nilai": 1081
+    }
+   },
+   "klaim": [
+    {
+     "tampil": "198.928",
+     "nilai": 198928,
+     "ada_di_dokumen": true,
+     "n_lokasi": 8,
+     "lokasi": [
+      "s3a_feasibility.json:inventaris.baris",
+      "s3a_feasibility.json:sirkularitas.baris",
+      "s3a_feasibility.json:sirkularitas.cocok",
+      "s3a_feasibility.json:waktu_kalender.baris"
+     ],
+     "status": "TERLETAK"
+    },
+    {
+     "tampil": "49.732",
+     "nilai": 49732,
+     "ada_di_dokumen": true,
+     "n_lokasi": 7,
+     "lokasi": [
+      "s3a_feasibility.json:label.total.high_MSE_bit_wear",
+      "s3a_feasibility.json:label.n_pos",
+      "s3b_hybrid.json:ringkas.rule_label.tp_total",
+      "s3b_hybrid.json:ringkas.ml_dengan_MSE.tp_total"
+     ],
+     "status": "TERLETAK"
+    },
+    {
+     "tampil": "0,250",
+     "nilai": 0.25,
+     "ada_di_dokumen": true,
+     "n_lokasi": 578,
+     "lokasi": [
+      "s3a_feasibility.json:label.per_well[5].high_MSE",
+      "s3a_feasibility.json:label.per_well[5].low_ROP",
+      "s3a_feasibility.json:label.per_well[5].prevalensi_high_MSE",
+      "s3a_feasibility.json:label.per_well[6].high_MSE"
+     ],
+     "status": "TERLETAK"
+    },
+    {
+     "tampil": "0,1155",
+     "nilai": 0.1155,
+     "ada_di_dokumen": true,
+     "n_lokasi": 4,
+     "lokasi": [
+      "s3b_hybrid.json:records[24].rows.precision",
+      "s3b_hybrid.json:ringkas.H5_stat_dan_rule.precision_median",
+      "s3c_ringkas.json:tabel[24].precision",
+      "s3c_ringkas.json:agregat.H5_stat_dan_rule.precision_median"
+     ],
+     "status": "TERLETAK"
+    },
+    {
+     "tampil": "0,0377",
+     "nilai": 0.0377,
+     "ada_di_dokumen": true,
+     "n_lokasi": 564,
+     "lokasi": [
+      "s3a_feasibility.json:label.per_well[5].high_MSE",
+      "s3a_feasibility.json:label.per_well[5].low_ROP",
+      "s3a_feasibility.json:label.per_well[5].prevalensi_high_MSE",
+      "s3a_feasibility.json:label.per_well[6].high_MSE"
+     ],
+     "status": "TERLETAK"
+    },
+    {
+     "tampil": "65,617",
+     "nilai": 65.617,
+     "ada_di_dokumen": true,
+     "n_lokasi": 5,
+     "lokasi": [
+      "s3b_hybrid.json:records[3].far.far24_kalender",
+      "s3b_hybrid.json:records[3].far24_kalender",
+      "s3b_hybrid.json:ringkas.H5_stat_dan_rule.far24_kalender_median",
+      "s3c_ringkas.json:tabel[3].far24"
+     ],
+     "status": "TERLETAK"
+    },
+    {
+     "tampil": "0,6496",
+     "nilai": 0.6496,
+     "ada_di_dokumen": true,
+     "n_lokasi": 4,
+     "lokasi": [
+      "s3b_hybrid.json:records[25].rows.precision",
+      "s3b_hybrid.json:ringkas.ml_fisik.precision_median",
+      "s3c_ringkas.json:tabel[25].precision",
+      "s3c_ringkas.json:agregat.ml_fisik.precision_median"
+     ],
+     "status": "TERLETAK"
+    },
+    {
+     "tampil": "0,9968",
+     "nilai": 0.9968,
+     "ada_di_dokumen": true,
+     "n_lokasi": 21,
+     "lokasi": [
+      "s3b_hybrid.json:folds[3].ambang_conformal",
+      "s3b_hybrid.json:folds[4].recall_ml",
+      "s3b_hybrid.json:records[21].ambang_conformal",
+      "s3b_hybrid.json:records[22].ambang_conformal"
+     ],
+     "status": "TERLETAK"
+    },
+    {
+     "tampil": "110,432",
+     "nilai": 110.432,
+     "ada_di_dokumen": true,
+     "n_lokasi": 5,
+     "lokasi": [
+      "s3b_hybrid.json:records[18].far.far24_kalender",
+      "s3b_hybrid.json:records[18].far24_kalender",
+      "s3b_hybrid.json:ringkas.ml_fisik.far24_kalender_median",
+      "s3c_ringkas.json:tabel[18].far24"
+     ],
+     "status": "TERLETAK"
+    },
+    {
+     "tampil": "18,41",
+     "nilai": 18.41,
+     "ada_di_dokumen": true,
+     "n_lokasi": 4,
+     "lokasi": [
+      "s3b_hybrid.json:records[22].separuh.awal.precision",
+      "s3b_hybrid.json:records[24].rows.recall",
+      "s3b_hybrid.json:records[24].separuh.akhir.recall",
+      "s3c_ringkas.json:tabel[24].recall"
+     ],
+     "status": "TERLETAK"
+    },
+    {
+     "tampil": "145.887",
+     "nilai": 145887,
+     "ada_di_dokumen": true,
+     "n_lokasi": 2,
+     "lokasi": [
+      "s3a_feasibility.json:identitas.indeks_duplikat",
+      "s3c_ringkas.json:kelayakan.indeks_duplikat"
+     ],
+     "status": "TERLETAK"
+    },
+    {
+     "tampil": "53.041",
+     "nilai": 53041,
+     "ada_di_dokumen": true,
+     "n_lokasi": 25,
+     "lokasi": [
+      "s3a_feasibility.json:label.per_well[0].baris",
+      "s3a_feasibility.json:identitas.indeks_unik",
+      "s3a_feasibility.json:sirkularitas.per_well_ambang_sendiri[3].baris",
+      "s3a_feasibility.json:waktu_kalender.per_well[0].baris"
+     ],
+     "status": "TERLETAK"
+    },
+    {
+     "tampil": "0,0663",
+     "nilai": 0.0663,
+     "ada_di_dokumen": true,
+     "n_lokasi": 22,
+     "lokasi": [
+      "s3a_feasibility.json:sirkularitas.per_well_ambang_sendiri[0].roc_p25",
+      "s3a_feasibility.json:sirkularitas.per_well_ambang_sendiri[1].roc_p25",
+      "s3a_feasibility.json:sirkularitas.per_well_ambang_sendiri[3].roc_p25",
+      "s3a_feasibility.json:sirkularitas.per_well_ambang_sendiri[6].roc_p25"
+     ],
+     "status": "TERLETAK"
+    },
+    {
+     "tampil": "0,5303",
+     "nilai": 0.5303,
+     "ada_di_dokumen": true,
+     "n_lokasi": 30,
+     "lokasi": [
+      "s3b_hybrid.json:folds[0].ambang_conformal",
+      "s3b_hybrid.json:records[0].far.cakupan_menit",
+      "s3b_hybrid.json:records[0].ambang_conformal",
+      "s3b_hybrid.json:records[0].cakupan"
+     ],
+     "status": "TERLETAK"
+    }
+   ],
+   "turunan": [
+    {
+     "label": "18,41 = 110,432/6",
+     "hitung": 18.405333333333335,
+     "tertulis": 18.41,
+     "selisih": 0.0046666666666652645,
+     "desimal": 2,
+     "status": "COCOK"
+    },
+    {
+     "label": "0,2500 = 49.732/198.928",
+     "hitung": 0.25,
+     "tertulis": 0.25,
+     "selisih": 0.0,
+     "desimal": 4,
+     "status": "COCOK"
+    },
+    {
+     "label": "0,9998 sampai 1,0001? rasio cocok",
+     "hitung": 1.0,
+     "tertulis": 1.0,
+     "selisih": 0.0,
+     "desimal": 4,
+     "status": "COCOK"
+    }
+   ],
+   "rekap": {
+    "n_klaim": 14,
+    "terletak": 14,
+    "tidak_terletak": [],
+    "dok_tidak_memuat": [],
+    "turunan_beda": []
+   }
+  },
+  "S4": {
+   "dokumen": "docs/RND_S4_LAYER_B_DATA.md",
+   "baris_dokumen": 207,
+   "artefak": {
+    "scratch/rnd/s4/inventory.json": {
+     "status": "ok",
+     "bytes": 15704,
+     "n_nilai": 213
+    },
+    "scratch/rnd/s4/inventory_raw.json": {
+     "status": "ok",
+     "bytes": 24974,
+     "n_nilai": 187
+    },
+    "scratch/rnd/s4/token_scan.json": {
+     "status": "ok",
+     "bytes": 3503,
+     "n_nilai": 92
+    },
+    "scratch/rnd/s4/ddr_activity_stats.json": {
+     "status": "ok",
+     "bytes": 19860,
+     "n_nilai": 690
+    },
+    "scratch/rnd/s4/labels_duration.json": {
+     "status": "ok",
+     "bytes": 15280,
+     "n_nilai": 570
+    },
+    "scratch/rnd/s4/ddr_downtime_table.json": {
+     "status": "ok",
+     "bytes": 6300,
+     "n_nilai": 114
+    },
+    "scratch/rnd/s4/crosscheck.json": {
+     "status": "ok",
+     "bytes": 7049,
+     "n_nilai": 176
+    }
+   },
+   "klaim": [
+    {
+     "tampil": "23.447",
+     "nilai": 23447,
+     "ada_di_dokumen": true,
+     "n_lokasi": 6,
+     "lokasi": [
+      "inventory.json:kelompok.tersedia_dan_layak[0].n_record_anak",
+      "ddr_activity_stats.json:activity.n_record",
+      "ddr_activity_stats.json:activity.n_record_durasi_valid",
+      "ddr_activity_stats.json:activity.durasi_semua.n"
+     ],
+     "status": "TERLETAK"
+    },
+    {
+     "tampil": "1.759",
+     "nilai": 1759,
+     "ada_di_dokumen": true,
+     "n_lokasi": 24,
+     "lokasi": [
+      "inventory.json:sumber_mentah.ddr_activity_stats.json.baris",
+      "inventory.json:sumber_mentah.inventory_raw.json.ddr_dokumen_per_format.html.n_files",
+      "inventory.json:sumber_mentah.inventory_raw.json.ddr_dokumen_per_format.xml.n_files",
+      "inventory.json:sumber_mentah.inventory_raw.json.ddr_dokumen_per_format.pdf.n_files"
+     ],
+     "status": "TERLETAK"
+    },
+    {
+     "tampil": "884",
+     "nilai": 884,
+     "ada_di_dokumen": true,
+     "n_lokasi": 10,
+     "lokasi": [
+      "inventory.json:sumber_mentah.labels_duration.json.baris",
+      "inventory.json:sumber_mentah.crosscheck.json.silang_total.labels_n",
+      "inventory.json:kelompok.tersedia_dan_layak[1].n_baris",
+      "inventory.json:metrik_lapisan_b.B5_rasio_kejadian_per_laporan_harian.n_kejadian"
+     ],
+     "status": "TERLETAK"
+    },
+    {
+     "tampil": "1.225,0",
+     "nilai": 1225.0,
+     "ada_di_dokumen": true,
+     "n_lokasi": 36,
+     "lokasi": [
+      "inventory.json:sumber_mentah.crosscheck.json.silang_total.labels_jam",
+      "inventory.json:metrik_lapisan_b.B6_cakupan_jam_henti_berlabel.jam_berlabel",
+      "inventory.json:uji_silang.total.labels_jam",
+      "ddr_activity_stats.json:activity.durasi_per_kode.completion -- completion string.median_jam"
+     ],
+     "status": "TERLETAK"
+    },
+    {
+     "tampil": "1.116",
+     "nilai": 1116,
+     "ada_di_dokumen": true,
+     "n_lokasi": 2,
+     "lokasi": [
+      "inventory.json:metrik_lapisan_b.B3_henti_maintenance_gabungan.n_kejadian",
+      "ddr_activity_stats.json:activity.maintenance_terkait.total_record"
+     ],
+     "status": "TERLETAK"
+    },
+    {
+     "tampil": "1.777,75",
+     "nilai": 1777.75,
+     "ada_di_dokumen": true,
+     "n_lokasi": 2,
+     "lokasi": [
+      "inventory.json:metrik_lapisan_b.B3_henti_maintenance_gabungan.total_jam",
+      "ddr_activity_stats.json:activity.maintenance_terkait.total_jam"
+     ],
+     "status": "TERLETAK"
+    },
+    {
+     "tampil": "325",
+     "nilai": 325,
+     "ada_di_dokumen": true,
+     "n_lokasi": 2,
+     "lokasi": [
+      "inventory.json:kelompok.ada_tetapi_tidak_memadai[0].n_file_memuat",
+      "ddr_downtime_table.json:tabel.n_file_memuat_tabel"
+     ],
+     "status": "TERLETAK"
+    },
+    {
+     "tampil": "533",
+     "nilai": 533,
+     "ada_di_dokumen": true,
+     "n_lokasi": 5,
+     "lokasi": [
+      "inventory.json:kelompok.ada_tetapi_tidak_memadai[0].n_record",
+      "ddr_downtime_table.json:record.n_record",
+      "ddr_downtime_table.json:record.n_kolom_distribusi.7",
+      "ddr_downtime_table.json:record.n_downtime_numerik"
+     ],
+     "status": "TERLETAK"
+    },
+    {
+     "tampil": "4.035",
+     "nilai": 4035,
+     "ada_di_dokumen": true,
+     "n_lokasi": 3,
+     "lokasi": [
+      "inventory.json:sumber_mentah.inventory_raw.json.katalog_volve_baris",
+      "inventory.json:kelompok.ada_tetapi_tidak_memadai[4].n_baris",
+      "inventory_raw.json:katalog_volve.n_baris"
+     ],
+     "status": "TERLETAK"
+    },
+    {
+     "tampil": "2.180.278",
+     "nilai": 2180278,
+     "ada_di_dokumen": true,
+     "n_lokasi": 3,
+     "lokasi": [
+      "inventory.json:sumber_mentah.ddr_activity_stats.json.bytes",
+      "inventory.json:kelompok.tersedia_dan_layak[0].bytes",
+      "ddr_activity_stats.json:sumber.bytes"
+     ],
+     "status": "TERLETAK"
+    },
+    {
+     "tampil": "56.815.359",
+     "nilai": 56815359,
+     "ada_di_dokumen": true,
+     "n_lokasi": 1,
+     "lokasi": [
+      "inventory_raw.json:csv_di_data.berkas[22].bytes"
+     ],
+     "status": "TERLETAK"
+    },
+    {
+     "tampil": "0,1468",
+     "nilai": 0.1468,
+     "ada_di_dokumen": true,
+     "n_lokasi": 4,
+     "lokasi": [
+      "inventory.json:sumber_mentah.crosscheck.json.silang_total.rasio_jam",
+      "inventory.json:metrik_lapisan_b.B6_cakupan_jam_henti_berlabel.rasio",
+      "inventory.json:uji_silang.total.rasio_jam",
+      "crosscheck.json:silang_total.rasio_jam"
+     ],
+     "status": "TERLETAK"
+    },
+    {
+     "tampil": "8.343,253",
+     "nilai": 8343.253,
+     "ada_di_dokumen": true,
+     "n_lokasi": 5,
+     "lokasi": [
+      "inventory.json:sumber_mentah.crosscheck.json.silang_total.ddr_interruption_jam",
+      "inventory.json:metrik_lapisan_b.B6_cakupan_jam_henti_berlabel.jam_interruption_ddr",
+      "inventory.json:uji_silang.total.ddr_interruption_jam",
+      "ddr_activity_stats.json:activity.interruption.total_jam"
+     ],
+     "status": "TERLETAK"
+    },
+    {
+     "tampil": "1.212",
+     "nilai": 1212,
+     "ada_di_dokumen": true,
+     "n_lokasi": 2,
+     "lokasi": [
+      "inventory.json:kelompok.ada_tetapi_tidak_memadai[2].n_laporan",
+      "crosscheck.json:pres_test_type.n_laporan_dengan_uji"
+     ],
+     "status": "TERLETAK"
+    },
+    {
+     "tampil": "1.072",
+     "nilai": 1072,
+     "ada_di_dokumen": true,
+     "n_lokasi": 3,
+     "lokasi": [
+      "inventory.json:sumber_mentah.crosscheck.json.pres_test_type.formation integrity test",
+      "inventory.json:kelompok.ada_tetapi_tidak_memadai[2].distribusi.formation integrity test",
+      "crosscheck.json:pres_test_type.distribusi.formation integrity test"
+     ],
+     "status": "TERLETAK"
+    }
+   ],
+   "turunan": [
+    {
+     "label": "3.518 = 1.759 XML + 1.759 HTML",
+     "hitung": 3518,
+     "tertulis": 3518,
+     "selisih": 0,
+     "desimal": 0,
+     "status": "COCOK"
+    },
+    {
+     "label": "0,1468 = 1.225,0/8.343,253",
+     "hitung": 0.14682522512502016,
+     "tertulis": 0.1468,
+     "selisih": 2.522512502015073e-05,
+     "desimal": 4,
+     "status": "COCOK"
+    },
+    {
+     "label": "18,48% = 325/1.759",
+     "hitung": 0.1847640704945992,
+     "tertulis": 0.1848,
+     "selisih": 3.592950540079465e-05,
+     "desimal": 4,
+     "status": "COCOK"
+    }
+   ],
+   "rekap": {
+    "n_klaim": 15,
+    "terletak": 15,
+    "tidak_terletak": [],
+    "dok_tidak_memuat": [],
+    "turunan_beda": []
+   }
+  }
+ }
+}

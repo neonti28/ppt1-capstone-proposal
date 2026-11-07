@@ -1,0 +1,46 @@
+{
+ "qc_pit_like": {
+  "F-12.qc.json": {
+   "n_channels": 187,
+   "pit_like": []
+  },
+  "F-14.qc.json": {
+   "n_channels": 238,
+   "pit_like": []
+  },
+  "F-15A.qc.json": {
+   "n_channels": 281,
+   "pit_like": []
+  },
+  "F-15_S.qc.json": {
+   "n_channels": 244,
+   "pit_like": [
+    "GAIN_CLNK"
+   ]
+  },
+  "F-5.qc.json": {
+   "n_channels": 181,
+   "pit_like": []
+  },
+  "F-7.qc.json": {
+   "n_channels": 118,
+   "pit_like": []
+  },
+  "F-9.qc.json": {
+   "n_channels": 197,
+   "pit_like": []
+  },
+  "F-9_A.qc.json": {
+   "n_channels": 232,
+   "pit_like": []
+  },
+  "VAR_F-5_alt.qc.json": {
+   "n_channels": 60,
+   "pit_like": []
+  }
+ },
+ "f9a_time": {
+  "file": "/home/neonti/.hermes/cache/scratch/f9a_time.csv",
+  "exists": false
+ }
+}

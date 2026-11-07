@@ -1,0 +1,930 @@
+{
+ "sumber": {
+  "path": "/mnt/d/Capstone 1(v2)/data/volve/ddr.parquet",
+  "bytes": 2180278,
+  "baris": 1759,
+  "kolom": [
+   "docName",
+   "nameWell",
+   "nameWellbore",
+   "name",
+   "dTimStart",
+   "dTimEnd",
+   "versionKind",
+   "createDate",
+   "wellAlias",
+   "wellboreAlias",
+   "wellboreInfo",
+   "statusInfo",
+   "fluid",
+   "porePressure",
+   "surveyStation",
+   "activity",
+   "lithShowInfo"
+  ]
+ },
+ "laporan": {
+  "n_baris": 1759,
+  "n_kolom": 17,
+  "n_wellbore_unik": 26,
+  "wellbore_daftar": [
+   "NO 15/9-19 A",
+   "NO 15/9-19 B",
+   "NO 15/9-19 BT2",
+   "NO 15/9-19 S",
+   "NO 15/9-19 ST2",
+   "NO 15/9-F-1",
+   "NO 15/9-F-1 A",
+   "NO 15/9-F-1 B",
+   "NO 15/9-F-1 C",
+   "NO 15/9-F-10",
+   "NO 15/9-F-11",
+   "NO 15/9-F-11 A",
+   "NO 15/9-F-11 B",
+   "NO 15/9-F-11 T2",
+   "NO 15/9-F-12",
+   "NO 15/9-F-14",
+   "NO 15/9-F-15",
+   "NO 15/9-F-15 A",
+   "NO 15/9-F-15 B",
+   "NO 15/9-F-15 C",
+   "NO 15/9-F-15 D",
+   "NO 15/9-F-4",
+   "NO 15/9-F-5",
+   "NO 15/9-F-7",
+   "NO 15/9-F-9",
+   "NO 15/9-F-9 A"
+  ],
+  "laporan_per_wellbore": {
+   "NO 15/9-F-12": 165,
+   "NO 15/9-F-14": 134,
+   "NO 15/9-F-4": 130,
+   "NO 15/9-19 ST2": 127,
+   "NO 15/9-19 A": 110,
+   "NO 15/9-F-5": 103,
+   "NO 15/9-F-15 D": 99,
+   "NO 15/9-F-1 C": 98,
+   "NO 15/9-F-11 B": 90,
+   "NO 15/9-F-15 C": 84,
+   "NO 15/9-F-1 B": 73,
+   "NO 15/9-F-10": 71,
+   "NO 15/9-F-15": 69,
+   "NO 15/9-19 BT2": 62,
+   "NO 15/9-F-11 T2": 53,
+   "NO 15/9-19 S": 49,
+   "NO 15/9-F-7": 39,
+   "NO 15/9-F-1": 38,
+   "NO 15/9-F-15 A": 34,
+   "NO 15/9-F-9": 32,
+   "NO 15/9-F-9 A": 28,
+   "NO 15/9-19 B": 27,
+   "NO 15/9-F-11": 17,
+   "NO 15/9-F-11 A": 14,
+   "NO 15/9-F-1 A": 7,
+   "NO 15/9-F-15 B": 6
+  },
+  "dTimStart_min": "1979-12-31T00:00:00+01:00",
+  "dTimStart_max": "2018-01-24T00:00:00+01:00"
+ },
+ "activity": {
+  "n_record": 23447,
+  "n_laporan_punya_activity": 1750,
+  "n_laporan_tanpa_activity": 9,
+  "n_record_tanpa_waktu": 0,
+  "n_record_durasi_negatif": 0,
+  "n_record_durasi_nol": 0,
+  "n_record_durasi_valid": 23447,
+  "total_jam_semua_activity": 39397.986,
+  "durasi_semua": {
+   "n": 23447,
+   "sum_jam": 39397.986,
+   "mean_jam": 1.6803,
+   "median_jam": 1.0,
+   "p90_jam": 4.0,
+   "max_jam": 24.0,
+   "min_jam": 0.0167
+  },
+  "n_comments_terisi": 23447,
+  "rata_panjang_comment_char": 114.4,
+  "kata_kunci_comment": {
+   "repair": 273,
+   "replace": 109,
+   "replac": 117,
+   "change": 1019,
+   "inspect": 552,
+   "function_test": 0,
+   "pressure_test": 0,
+   "service": 272,
+   "failed": 32,
+   "leak": 612,
+   "trip_for": 0
+  },
+  "kode_prefix": {
+   "drilling": 9137,
+   "plug abandon": 4595,
+   "interruption": 3577,
+   "completion": 2944,
+   "workover": 2221,
+   "formation evaluation": 732,
+   "moving": 241
+  },
+  "kode_teratas": {
+   "drilling -- casing": 3204,
+   "plug abandon -- other": 2332,
+   "drilling -- drill": 1822,
+   "drilling -- trip": 1430,
+   "drilling -- bop/wellhead equipment": 1252,
+   "interruption -- other": 1202,
+   "completion -- bop/wellhead equipment": 930,
+   "workover -- wire line": 868,
+   "interruption -- repair": 806,
+   "completion -- circulating conditioning": 647,
+   "drilling -- other": 572,
+   "plug abandon -- cement plug": 558,
+   "completion -- perforate": 469,
+   "interruption -- waiting on weather": 445,
+   "workover -- rig up/down": 429,
+   "plug abandon -- cut": 421,
+   "plug abandon -- trip": 407,
+   "completion -- completion string": 406,
+   "drilling -- circulating conditioning": 357,
+   "workover -- perforate": 347,
+   "workover -- other": 326,
+   "interruption -- maintain": 310,
+   "completion -- other": 298,
+   "plug abandon -- equipment recovery": 248,
+   "interruption -- fish": 246,
+   "plug abandon -- mill": 238,
+   "interruption -- wait": 229,
+   "drilling -- bop activities": 226,
+   "formation evaluation -- log": 206,
+   "interruption -- sidetrack": 202,
+   "moving -- skid": 166,
+   "plug abandon -- mechanical plug": 156,
+   "formation evaluation -- rig up/down": 143,
+   "drilling -- survey": 115,
+   "plug abandon -- perforate": 113,
+   "formation evaluation -- trip": 109,
+   "workover -- bop/wellhead equipment": 104,
+   "drilling -- ream": 97,
+   "plug abandon -- circulating conditioning": 97,
+   "workover -- completion string": 94
+  },
+  "n_kode_unik": 64,
+  "state": {
+   "ok": 22967,
+   "fail": 480
+  },
+  "state_detail": {
+   "success": 20802,
+   "equipment failure": 1975,
+   "operation failed": 456,
+   "stuck equipment": 109,
+   "circulation loss": 92,
+   "mud loss": 12,
+   "injury": 1
+  },
+  "durasi_per_kode": {
+   "drilling -- drill": {
+    "n": 1822,
+    "sum_jam": 5394.483,
+    "mean_jam": 2.9607,
+    "median_jam": 1.75,
+    "p90_jam": 6.75,
+    "max_jam": 21.75,
+    "min_jam": 0.25
+   },
+   "drilling -- casing": {
+    "n": 3204,
+    "sum_jam": 5027.25,
+    "mean_jam": 1.5691,
+    "median_jam": 1.0,
+    "p90_jam": 3.5,
+    "max_jam": 18.0,
+    "min_jam": 0.0167
+   },
+   "interruption -- other": {
+    "n": 1202,
+    "sum_jam": 2680.917,
+    "mean_jam": 2.2304,
+    "median_jam": 1.0,
+    "p90_jam": 5.5,
+    "max_jam": 24.0,
+    "min_jam": 0.1667
+   },
+   "drilling -- trip": {
+    "n": 1430,
+    "sum_jam": 2348.25,
+    "mean_jam": 1.6421,
+    "median_jam": 1.0,
+    "p90_jam": 4.0,
+    "max_jam": 14.0,
+    "min_jam": 0.25
+   },
+   "plug abandon -- other": {
+    "n": 2332,
+    "sum_jam": 1978.5,
+    "mean_jam": 0.8484,
+    "median_jam": 0.5,
+    "p90_jam": 1.75,
+    "max_jam": 12.5,
+    "min_jam": 0.1667
+   },
+   "interruption -- waiting on weather": {
+    "n": 445,
+    "sum_jam": 1925.5,
+    "mean_jam": 4.327,
+    "median_jam": 2.5,
+    "p90_jam": 10.9,
+    "max_jam": 24.0,
+    "min_jam": 0.25
+   },
+   "drilling -- bop/wellhead equipment": {
+    "n": 1252,
+    "sum_jam": 1867.75,
+    "mean_jam": 1.4918,
+    "median_jam": 1.0,
+    "p90_jam": 3.25,
+    "max_jam": 10.75,
+    "min_jam": 0.25
+   },
+   "workover -- wire line": {
+    "n": 868,
+    "sum_jam": 1461.417,
+    "mean_jam": 1.6837,
+    "median_jam": 1.0,
+    "p90_jam": 3.5,
+    "max_jam": 18.0,
+    "min_jam": 0.0833
+   },
+   "completion -- bop/wellhead equipment": {
+    "n": 930,
+    "sum_jam": 1331.25,
+    "mean_jam": 1.4315,
+    "median_jam": 0.75,
+    "p90_jam": 3.0,
+    "max_jam": 18.0,
+    "min_jam": 0.25
+   },
+   "interruption -- repair": {
+    "n": 806,
+    "sum_jam": 1215.0,
+    "mean_jam": 1.5074,
+    "median_jam": 1.0,
+    "p90_jam": 3.5,
+    "max_jam": 12.5,
+    "min_jam": 0.25
+   },
+   "completion -- completion string": {
+    "n": 406,
+    "sum_jam": 882.25,
+    "mean_jam": 2.173,
+    "median_jam": 1.25,
+    "p90_jam": 4.75,
+    "max_jam": 15.25,
+    "min_jam": 0.25
+   },
+   "workover -- rig up/down": {
+    "n": 429,
+    "sum_jam": 726.0,
+    "mean_jam": 1.6923,
+    "median_jam": 1.25,
+    "p90_jam": 3.5,
+    "max_jam": 9.75,
+    "min_jam": 0.25
+   },
+   "drilling -- other": {
+    "n": 572,
+    "sum_jam": 713.25,
+    "mean_jam": 1.2469,
+    "median_jam": 0.75,
+    "p90_jam": 2.75,
+    "max_jam": 18.5,
+    "min_jam": 0.25
+   },
+   "completion -- perforate": {
+    "n": 469,
+    "sum_jam": 676.25,
+    "mean_jam": 1.4419,
+    "median_jam": 1.0,
+    "p90_jam": 3.0,
+    "max_jam": 12.0,
+    "min_jam": 0.25
+   },
+   "completion -- circulating conditioning": {
+    "n": 647,
+    "sum_jam": 667.75,
+    "mean_jam": 1.0321,
+    "median_jam": 0.75,
+    "p90_jam": 2.25,
+    "max_jam": 8.25,
+    "min_jam": 0.25
+   },
+   "plug abandon -- trip": {
+    "n": 407,
+    "sum_jam": 636.167,
+    "mean_jam": 1.5631,
+    "median_jam": 1.0,
+    "p90_jam": 3.5,
+    "max_jam": 11.0,
+    "min_jam": 0.1667
+   },
+   "interruption -- sidetrack": {
+    "n": 202,
+    "sum_jam": 590.0,
+    "mean_jam": 2.9208,
+    "median_jam": 1.5,
+    "p90_jam": 6.0,
+    "max_jam": 18.0,
+    "min_jam": 0.5
+   },
+   "drilling -- circulating conditioning": {
+    "n": 357,
+    "sum_jam": 578.25,
+    "mean_jam": 1.6197,
+    "median_jam": 1.25,
+    "p90_jam": 3.5,
+    "max_jam": 7.5,
+    "min_jam": 0.25
+   },
+   "interruption -- fish": {
+    "n": 246,
+    "sum_jam": 568.333,
+    "mean_jam": 2.3103,
+    "median_jam": 1.5,
+    "p90_jam": 5.0,
+    "max_jam": 16.0,
+    "min_jam": 0.0833
+   },
+   "interruption -- maintain": {
+    "n": 310,
+    "sum_jam": 562.75,
+    "mean_jam": 1.8153,
+    "median_jam": 1.0,
+    "p90_jam": 4.5,
+    "max_jam": 15.0,
+    "min_jam": 0.25
+   },
+   "formation evaluation -- log": {
+    "n": 206,
+    "sum_jam": 552.25,
+    "mean_jam": 2.6808,
+    "median_jam": 1.5,
+    "p90_jam": 7.25,
+    "max_jam": 18.0,
+    "min_jam": 0.25
+   },
+   "interruption -- wait": {
+    "n": 229,
+    "sum_jam": 522.003,
+    "mean_jam": 2.2795,
+    "median_jam": 1.3333,
+    "p90_jam": 5.75,
+    "max_jam": 20.0,
+    "min_jam": 0.02
+   },
+   "formation evaluation -- rig up/down": {
+    "n": 143,
+    "sum_jam": 462.0,
+    "mean_jam": 3.2308,
+    "median_jam": 2.0,
+    "p90_jam": 6.0,
+    "max_jam": 18.0,
+    "min_jam": 0.5
+   },
+   "plug abandon -- cement plug": {
+    "n": 558,
+    "sum_jam": 448.25,
+    "mean_jam": 0.8033,
+    "median_jam": 0.5,
+    "p90_jam": 1.75,
+    "max_jam": 5.0,
+    "min_jam": 0.0833
+   },
+   "drilling -- bop activities": {
+    "n": 226,
+    "sum_jam": 439.75,
+    "mean_jam": 1.9458,
+    "median_jam": 1.125,
+    "p90_jam": 4.625,
+    "max_jam": 10.0,
+    "min_jam": 0.25
+   },
+   "workover -- perforate": {
+    "n": 347,
+    "sum_jam": 398.75,
+    "mean_jam": 1.1491,
+    "median_jam": 0.75,
+    "p90_jam": 2.5,
+    "max_jam": 6.0,
+    "min_jam": 0.0833
+   },
+   "workover -- other": {
+    "n": 326,
+    "sum_jam": 349.833,
+    "mean_jam": 1.0731,
+    "median_jam": 0.75,
+    "p90_jam": 2.375,
+    "max_jam": 9.0,
+    "min_jam": 0.1667
+   },
+   "plug abandon -- cut": {
+    "n": 421,
+    "sum_jam": 342.75,
+    "mean_jam": 0.8141,
+    "median_jam": 0.5,
+    "p90_jam": 1.75,
+    "max_jam": 11.0,
+    "min_jam": 0.25
+   },
+   "completion -- other": {
+    "n": 298,
+    "sum_jam": 334.25,
+    "mean_jam": 1.1216,
+    "median_jam": 0.75,
+    "p90_jam": 2.5,
+    "max_jam": 16.5,
+    "min_jam": 0.25
+   },
+   "formation evaluation -- drill stem test": {
+    "n": 86,
+    "sum_jam": 329.0,
+    "mean_jam": 3.8256,
+    "median_jam": 2.0,
+    "p90_jam": 9.0,
+    "max_jam": 18.0,
+    "min_jam": 0.0167
+   },
+   "formation evaluation -- trip": {
+    "n": 109,
+    "sum_jam": 308.5,
+    "mean_jam": 2.8303,
+    "median_jam": 2.0,
+    "p90_jam": 6.0,
+    "max_jam": 10.5,
+    "min_jam": 0.5
+   },
+   "plug abandon -- mill": {
+    "n": 238,
+    "sum_jam": 269.5,
+    "mean_jam": 1.1324,
+    "median_jam": 0.75,
+    "p90_jam": 2.75,
+    "max_jam": 8.0,
+    "min_jam": 0.25
+   },
+   "plug abandon -- equipment recovery": {
+    "n": 248,
+    "sum_jam": 253.0,
+    "mean_jam": 1.0202,
+    "median_jam": 0.5,
+    "p90_jam": 2.325,
+    "max_jam": 9.75,
+    "min_jam": 0.25
+   },
+   "drilling -- ream": {
+    "n": 97,
+    "sum_jam": 211.5,
+    "mean_jam": 2.1804,
+    "median_jam": 1.5,
+    "p90_jam": 5.0,
+    "max_jam": 8.5,
+    "min_jam": 0.25
+   },
+   "moving -- skid": {
+    "n": 166,
+    "sum_jam": 177.0,
+    "mean_jam": 1.0663,
+    "median_jam": 0.625,
+    "p90_jam": 2.25,
+    "max_jam": 12.5,
+    "min_jam": 0.25
+   },
+   "moving -- transit": {
+    "n": 27,
+    "sum_jam": 170.0,
+    "mean_jam": 6.2963,
+    "median_jam": 6.0,
+    "p90_jam": 13.2,
+    "max_jam": 18.0,
+    "min_jam": 0.5
+   },
+   "interruption -- lost circulation": {
+    "n": 75,
+    "sum_jam": 160.75,
+    "mean_jam": 2.1433,
+    "median_jam": 2.0,
+    "p90_jam": 4.3,
+    "max_jam": 7.0,
+    "min_jam": 0.25
+   },
+   "formation evaluation -- circulating conditioning": {
+    "n": 73,
+    "sum_jam": 158.0,
+    "mean_jam": 2.1644,
+    "median_jam": 1.5,
+    "p90_jam": 4.5,
+    "max_jam": 16.0,
+    "min_jam": 0.5
+   },
+   "workover -- completion string": {
+    "n": 94,
+    "sum_jam": 137.5,
+    "mean_jam": 1.4628,
+    "median_jam": 1.0,
+    "p90_jam": 3.175,
+    "max_jam": 10.0,
+    "min_jam": 0.25
+   },
+   "plug abandon -- mechanical plug": {
+    "n": 156,
+    "sum_jam": 130.25,
+    "mean_jam": 0.8349,
+    "median_jam": 0.75,
+    "p90_jam": 1.75,
+    "max_jam": 3.25,
+    "min_jam": 0.25
+   },
+   "workover -- wait": {
+    "n": 25,
+    "sum_jam": 122.0,
+    "mean_jam": 4.88,
+    "median_jam": 5.0,
+    "p90_jam": 10.4,
+    "max_jam": 18.0,
+    "min_jam": 0.5
+   },
+   "drilling -- survey": {
+    "n": 115,
+    "sum_jam": 119.5,
+    "mean_jam": 1.0391,
+    "median_jam": 0.75,
+    "p90_jam": 1.75,
+    "max_jam": 6.0,
+    "min_jam": 0.25
+   },
+   "plug abandon -- circulating conditioning": {
+    "n": 97,
+    "sum_jam": 112.0,
+    "mean_jam": 1.1546,
+    "median_jam": 0.75,
+    "p90_jam": 2.5,
+    "max_jam": 4.25,
+    "min_jam": 0.1667
+   },
+   "drilling -- wait": {
+    "n": 32,
+    "sum_jam": 105.5,
+    "mean_jam": 3.2969,
+    "median_jam": 1.25,
+    "p90_jam": 11.45,
+    "max_jam": 14.0,
+    "min_jam": 0.25
+   },
+   "moving -- anchor": {
+    "n": 32,
+    "sum_jam": 103.5,
+    "mean_jam": 3.2344,
+    "median_jam": 2.5,
+    "p90_jam": 6.45,
+    "max_jam": 12.0,
+    "min_jam": 0.5
+   },
+   "completion -- wire line": {
+    "n": 65,
+    "sum_jam": 102.75,
+    "mean_jam": 1.5808,
+    "median_jam": 0.75,
+    "p90_jam": 3.4,
+    "max_jam": 6.75,
+    "min_jam": 0.25
+   },
+   "workover -- bop/wellhead equipment": {
+    "n": 104,
+    "sum_jam": 97.75,
+    "mean_jam": 0.9399,
+    "median_jam": 0.75,
+    "p90_jam": 2.0,
+    "max_jam": 5.0,
+    "min_jam": 0.25
+   },
+   "completion -- test scsssv": {
+    "n": 71,
+    "sum_jam": 71.5,
+    "mean_jam": 1.007,
+    "median_jam": 1.0,
+    "p90_jam": 1.75,
+    "max_jam": 3.75,
+    "min_jam": 0.25
+   },
+   "completion -- sand control": {
+    "n": 57,
+    "sum_jam": 70.0,
+    "mean_jam": 1.2281,
+    "median_jam": 1.0,
+    "p90_jam": 2.6,
+    "max_jam": 5.0,
+    "min_jam": 0.25
+   },
+   "formation evaluation -- rft/fit": {
+    "n": 69,
+    "sum_jam": 65.75,
+    "mean_jam": 0.9529,
+    "median_jam": 0.75,
+    "p90_jam": 1.5,
+    "max_jam": 4.5,
+    "min_jam": 0.25
+   },
+   "plug abandon -- perforate": {
+    "n": 113,
+    "sum_jam": 62.5,
+    "mean_jam": 0.5531,
+    "median_jam": 0.5,
+    "p90_jam": 1.0,
+    "max_jam": 2.5,
+    "min_jam": 0.25
+   },
+   "interruption -- rig up/down": {
+    "n": 33,
+    "sum_jam": 62.25,
+    "mean_jam": 1.8864,
+    "median_jam": 1.25,
+    "p90_jam": 4.3,
+    "max_jam": 6.0,
+    "min_jam": 0.5
+   },
+   "interruption -- well control": {
+    "n": 29,
+    "sum_jam": 55.75,
+    "mean_jam": 1.9224,
+    "median_jam": 1.75,
+    "p90_jam": 3.05,
+    "max_jam": 5.75,
+    "min_jam": 0.5
+   },
+   "formation evaluation -- core": {
+    "n": 20,
+    "sum_jam": 43.0,
+    "mean_jam": 2.15,
+    "median_jam": 2.0,
+    "p90_jam": 3.6,
+    "max_jam": 5.0,
+    "min_jam": 0.5
+   },
+   "workover -- test scsssv": {
+    "n": 28,
+    "sum_jam": 42.333,
+    "mean_jam": 1.5119,
+    "median_jam": 1.2917,
+    "p90_jam": 2.9533,
+    "max_jam": 5.5,
+    "min_jam": 0.5
+   },
+   "formation evaluation -- wait": {
+    "n": 5,
+    "sum_jam": 32.5,
+    "mean_jam": 6.5,
+    "median_jam": 6.0,
+    "p90_jam": 12.0,
+    "max_jam": 16.0,
+    "min_jam": 0.5
+   },
+   "drilling -- hole open": {
+    "n": 6,
+    "sum_jam": 32.5,
+    "mean_jam": 5.4167,
+    "median_jam": 4.25,
+    "p90_jam": 10.5,
+    "max_jam": 15.0,
+    "min_jam": 1.5
+   },
+   "plug abandon -- wait": {
+    "n": 17,
+    "sum_jam": 32.25,
+    "mean_jam": 1.8971,
+    "median_jam": 1.5,
+    "p90_jam": 4.45,
+    "max_jam": 5.5,
+    "min_jam": 0.25
+   },
+   "formation evaluation -- other": {
+    "n": 10,
+    "sum_jam": 21.5,
+    "mean_jam": 2.15,
+    "median_jam": 2.0,
+    "p90_jam": 3.6,
+    "max_jam": 4.5,
+    "min_jam": 0.5
+   },
+   "moving -- position": {
+    "n": 16,
+    "sum_jam": 20.0,
+    "mean_jam": 1.25,
+    "median_jam": 1.0,
+    "p90_jam": 1.75,
+    "max_jam": 3.5,
+    "min_jam": 0.5
+   },
+   "formation evaluation -- circulation samples": {
+    "n": 11,
+    "sum_jam": 16.0,
+    "mean_jam": 1.4545,
+    "median_jam": 1.5,
+    "p90_jam": 2.0,
+    "max_jam": 2.0,
+    "min_jam": 0.5
+   },
+   "plug abandon -- squeeze": {
+    "n": 8,
+    "sum_jam": 11.5,
+    "mean_jam": 1.4375,
+    "median_jam": 0.875,
+    "p90_jam": 2.9,
+    "max_jam": 5.0,
+    "min_jam": 0.25
+   },
+   "drilling -- pressure detection": {
+    "n": 24,
+    "sum_jam": 9.25,
+    "mean_jam": 0.3854,
+    "median_jam": 0.25,
+    "p90_jam": 0.5,
+    "max_jam": 1.25,
+    "min_jam": 0.25
+   },
+   "completion -- stimulate": {
+    "n": 1,
+    "sum_jam": 0.25,
+    "mean_jam": 0.25,
+    "median_jam": 0.25,
+    "p90_jam": 0.25,
+    "max_jam": 0.25,
+    "min_jam": 0.25
+   }
+  },
+  "interruption": {
+   "n_kode": 10,
+   "total_record": 3577,
+   "total_jam": 8343.253,
+   "per_kode": {
+    "interruption -- other": {
+     "n": 1202,
+     "sum_jam": 2680.917,
+     "mean_jam": 2.2304,
+     "median_jam": 1.0,
+     "p90_jam": 5.5,
+     "max_jam": 24.0,
+     "min_jam": 0.1667
+    },
+    "interruption -- waiting on weather": {
+     "n": 445,
+     "sum_jam": 1925.5,
+     "mean_jam": 4.327,
+     "median_jam": 2.5,
+     "p90_jam": 10.9,
+     "max_jam": 24.0,
+     "min_jam": 0.25
+    },
+    "interruption -- repair": {
+     "n": 806,
+     "sum_jam": 1215.0,
+     "mean_jam": 1.5074,
+     "median_jam": 1.0,
+     "p90_jam": 3.5,
+     "max_jam": 12.5,
+     "min_jam": 0.25
+    },
+    "interruption -- sidetrack": {
+     "n": 202,
+     "sum_jam": 590.0,
+     "mean_jam": 2.9208,
+     "median_jam": 1.5,
+     "p90_jam": 6.0,
+     "max_jam": 18.0,
+     "min_jam": 0.5
+    },
+    "interruption -- fish": {
+     "n": 246,
+     "sum_jam": 568.333,
+     "mean_jam": 2.3103,
+     "median_jam": 1.5,
+     "p90_jam": 5.0,
+     "max_jam": 16.0,
+     "min_jam": 0.0833
+    },
+    "interruption -- maintain": {
+     "n": 310,
+     "sum_jam": 562.75,
+     "mean_jam": 1.8153,
+     "median_jam": 1.0,
+     "p90_jam": 4.5,
+     "max_jam": 15.0,
+     "min_jam": 0.25
+    },
+    "interruption -- wait": {
+     "n": 229,
+     "sum_jam": 522.003,
+     "mean_jam": 2.2795,
+     "median_jam": 1.3333,
+     "p90_jam": 5.75,
+     "max_jam": 20.0,
+     "min_jam": 0.02
+    },
+    "interruption -- lost circulation": {
+     "n": 75,
+     "sum_jam": 160.75,
+     "mean_jam": 2.1433,
+     "median_jam": 2.0,
+     "p90_jam": 4.3,
+     "max_jam": 7.0,
+     "min_jam": 0.25
+    },
+    "interruption -- rig up/down": {
+     "n": 33,
+     "sum_jam": 62.25,
+     "mean_jam": 1.8864,
+     "median_jam": 1.25,
+     "p90_jam": 4.3,
+     "max_jam": 6.0,
+     "min_jam": 0.5
+    },
+    "interruption -- well control": {
+     "n": 29,
+     "sum_jam": 55.75,
+     "mean_jam": 1.9224,
+     "median_jam": 1.75,
+     "p90_jam": 3.05,
+     "max_jam": 5.75,
+     "min_jam": 0.5
+    }
+   }
+  },
+  "maintenance_terkait": {
+   "n_kode": 2,
+   "total_record": 1116,
+   "total_jam": 1777.75,
+   "per_kode": {
+    "interruption -- maintain": {
+     "n": 310,
+     "sum_jam": 562.75,
+     "mean_jam": 1.8153,
+     "median_jam": 1.0,
+     "p90_jam": 4.5,
+     "max_jam": 15.0,
+     "min_jam": 0.25
+    },
+    "interruption -- repair": {
+     "n": 806,
+     "sum_jam": 1215.0,
+     "mean_jam": 1.5074,
+     "median_jam": 1.0,
+     "p90_jam": 3.5,
+     "max_jam": 12.5,
+     "min_jam": 0.25
+    }
+   }
+  },
+  "state_fail_durasi": {
+   "n": 480,
+   "sum_jam": 1265.5,
+   "mean_jam": 2.6365,
+   "median_jam": 2.0,
+   "p90_jam": 5.55,
+   "max_jam": 18.0,
+   "min_jam": 0.5
+  },
+  "record_per_wellbore": {
+   "NO 15/9-F-14": 2118,
+   "NO 15/9-F-12": 2115,
+   "NO 15/9-F-1 C": 1971,
+   "NO 15/9-F-15 D": 1897,
+   "NO 15/9-F-4": 1706,
+   "NO 15/9-F-5": 1640,
+   "NO 15/9-F-1 B": 1295,
+   "NO 15/9-F-11 B": 1224,
+   "NO 15/9-F-15 C": 1184,
+   "NO 15/9-F-10": 1075,
+   "NO 15/9-19 ST2": 1017,
+   "NO 15/9-F-15": 888,
+   "NO 15/9-19 A": 674,
+   "NO 15/9-F-9 A": 568,
+   "NO 15/9-19 BT2": 547,
+   "NO 15/9-F-7": 543,
+   "NO 15/9-F-11 T2": 493,
+   "NO 15/9-F-1": 491,
+   "NO 15/9-F-9": 456,
+   "NO 15/9-F-15 A": 409,
+   "NO 15/9-19 S": 403,
+   "NO 15/9-F-11": 220,
+   "NO 15/9-19 B": 202,
+   "NO 15/9-F-1 A": 132,
+   "NO 15/9-F-11 A": 91,
+   "NO 15/9-F-15 B": 88
+  },
+  "activity_per_laporan": {
+   "mean": 13.33,
+   "median": 12.0,
+   "max": 49
+  }
+ }
+}

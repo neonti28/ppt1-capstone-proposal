@@ -1,0 +1,509 @@
+{
+ "search": {
+  "markov_pdm": [
+   {
+    "doi": "10.5281/zenodo.22197897",
+    "title": "Digital Twin Simulation with Continuous-Time Markov Chain Dynamics for Predictive Maintenance",
+    "year": 2026,
+    "first_author": "Jincheng Zhang",
+    "venue": "Zenodo (CERN European Organization for Nuclear Research)"
+   },
+   {
+    "doi": "10.3390/jmse13040798",
+    "title": "Integrated Approach to Marine Engine Maintenance Optimization: Weibull Analysis, Markov Chains, and DEA Model",
+    "year": 2025,
+    "first_author": "Damir Budimir",
+    "venue": "Journal of Marine Science and Engineering"
+   },
+   {
+    "doi": "10.1016/j.ress.2019.106621",
+    "title": "A Markov chains prognostics framework for complex degradation processes",
+    "year": 2019,
+    "first_author": "Juan Chiach\u00edo",
+    "venue": "Reliability Engineering & System Safety"
+   },
+   {
+    "doi": "10.1155/2015/278120",
+    "title": "Hidden Semi-Markov Models for Predictive Maintenance",
+    "year": 2015,
+    "first_author": "Francesco Cartella",
+    "venue": "Mathematical Problems in Engineering"
+   }
+  ],
+  "markov_drill": [
+   {
+    "doi": "10.20517/ces.2024.02",
+    "title": "Layered random fault injection method for the air braking system based on multiple Markov chains",
+    "year": 2024,
+    "first_author": "Zhiwen Chen",
+    "venue": "Complex Engineering Systems"
+   },
+   {
+    "doi": "10.1109/tase.2009.2038170",
+    "title": "Health-State Estimation and Prognostics in Machining Processes",
+    "year": 2010,
+    "first_author": "Fatih Camci",
+    "venue": "IEEE Transactions on Automation Science and Engineering"
+   },
+   {
+    "doi": "",
+    "title": "Dynamic Pressure Optimization in Drilling Operations",
+    "year": 2024,
+    "first_author": "Ochuko Erivwo",
+    "venue": "TSpace (University of Toronto)"
+   },
+   {
+    "doi": "10.1016/j.ymssp.2021.108448",
+    "title": "Drilling head knives degradation modelling based on stochastic diffusion processes backed up by state space models",
+    "year": 2021,
+    "first_author": "David Vali\u0161",
+    "venue": "Mechanical Systems and Signal Processing"
+   }
+  ],
+  "hmm_wear": [
+   {
+    "doi": "10.1016/s0890-6955(00)00112-7",
+    "title": "Tool wear condition monitoring in drilling operations using hidden Markov models (HMMs)",
+    "year": 2001,
+    "first_author": "H. Metin Ertun\u00e7",
+    "venue": "International Journal of Machine Tools and Manufacture"
+   },
+   {
+    "doi": "10.1016/j.ymssp.2023.110644",
+    "title": "On-line tool wear monitoring under variable milling conditions based on a condition-adaptive hidden semi-Markov model (CAHSMM)",
+    "year": 2023,
+    "first_author": "Shichao Yan",
+    "venue": "Mechanical Systems and Signal Processing"
+   },
+   {
+    "doi": "10.1016/j.ymssp.2008.04.010",
+    "title": "Multi-category micro-milling tool wear monitoring with continuous hidden Markov models",
+    "year": 2008,
+    "first_author": "Kunpeng Zhu",
+    "venue": "Mechanical Systems and Signal Processing"
+   },
+   {
+    "doi": "10.1007/s00170-016-9711-0",
+    "title": "A weighted hidden Markov model approach for continuous-state tool wear monitoring and tool life prediction",
+    "year": 2016,
+    "first_author": "Jinsong Yu",
+    "venue": "The International Journal of Advanced Manufacturing Technology"
+   }
+  ],
+  "hmm_drill": [
+   {
+    "doi": "10.1109/icassp.2000.860252",
+    "title": "Hidden Markov models for monitoring machining tool-wear",
+    "year": 2002,
+    "first_author": "Les Atlas",
+    "venue": "IEEE International Conference on Acoustics Speech and Signal Processing"
+   },
+   {
+    "doi": "10.1080/0740817x.2014.905734",
+    "title": "Degradation modeling and monitoring of machines using operation-specific hidden Markov models",
+    "year": 2014,
+    "first_author": "Michael E. Cholette",
+    "venue": "IIE Transactions"
+   },
+   {
+    "doi": "10.18130/v3p57w",
+    "title": "Simultaneous Feature Selection and Parameter Estimation for Hidden Markov Models",
+    "year": 2015,
+    "first_author": "Stephen Adams",
+    "venue": "?"
+   },
+   {
+    "doi": "10.5050/ksnve.2012.22.5.413",
+    "title": "Condition Monitoring of Rotating Machine with a Change in Speed Using Hidden Markov Model",
+    "year": 2012,
+    "first_author": "M. Jang",
+    "venue": "Transactions of the Korean Society for Noise and Vibration Engineering"
+   }
+  ],
+  "mc_uncertainty": [
+   {
+    "doi": "10.1061/9780784486931.060",
+    "title": "An Uncertainty-Aware Leakage Detection Framework Based on Monte Carlo Dropout Neural Network",
+    "year": 2026,
+    "first_author": "Oluwabunmi M. Iwakin",
+    "venue": "World Environmental and Water Resources Congress (EWRI)"
+   },
+   {
+    "doi": "10.1175/jtech-d-22-0050.1",
+    "title": "Monte Carlo Simulations for Evaluating the Accuracy of Geostationary Lightning Mapper Detection Efficiency and False Alarm Rate Retrievals",
+    "year": 2022,
+    "first_author": "Katrina S. Virts",
+    "venue": "Journal of Atmospheric and Oceanic Technology"
+   },
+   {
+    "doi": "10.1002/2014wr015386",
+    "title": "Approximate Bayesian Computation using Markov Chain Monte Carlo simulation: DREAM(ABC)",
+    "year": 2014,
+    "first_author": "Mojtaba Sadegh",
+    "venue": "Water Resources Research"
+   },
+   {
+    "doi": "10.24382/210s-zy57",
+    "title": "A critical analysis of the Kyoto Protocol using Monte Carlo simulation and MAGICC",
+    "year": 2024,
+    "first_author": "Lambert, Penny",
+    "venue": "PEARL (University of Plymouth)"
+   }
+  ],
+  "mc_pdm": [
+   {
+    "doi": "10.1016/j.nexres.2026.102266",
+    "title": "One-sided predictive thresholds for aerospace electromechanical actuators: Monte Carlo and probability-plot methods",
+    "year": 2026,
+    "first_author": "Fawaz Yahya Annaz",
+    "venue": "Next research."
+   },
+   {
+    "doi": "10.1016/j.ress.2022.108341",
+    "title": "Alarm-based predictive maintenance scheduling for aircraft engines with imperfect Remaining Useful Life prognostics",
+    "year": 2022,
+    "first_author": "Ingeborg de Pater",
+    "venue": "Reliability Engineering & System Safety"
+   },
+   {
+    "doi": "10.17531/ein/218121",
+    "title": "Deep Bayesian Networks for Failure Probability Estimation in Biomedical Sensors",
+    "year": 2026,
+    "first_author": "Mehmet Erhan Sahin",
+    "venue": "Eksploatacja i Niezawodnosc - Maintenance and Reliability"
+   },
+   {
+    "doi": "10.1016/j.procir.2018.08.318",
+    "title": "Challenges and Opportunities of Condition-based Predictive Maintenance: A Review",
+    "year": 2018,
+    "first_author": "Nazmus Sakib",
+    "venue": "Procedia CIRP"
+   }
+  ],
+  "mcmc_rul": [
+   {
+    "doi": "10.1016/j.ress.2020.107341",
+    "title": "A Bayesian Inference for Remaining Useful Life Estimation by Fusing Accelerated Degradation Data and Condition Monitoring Data",
+    "year": 2020,
+    "first_author": "Zhenan Pang",
+    "venue": "Reliability Engineering & System Safety"
+   },
+   {
+    "doi": "10.1109/qr2mse46217.2019.9021252",
+    "title": "A Prediction Method Using Bayesian Theory for Remaining Useful Life",
+    "year": 2019,
+    "first_author": "Yang Ge",
+    "venue": "International Conference on Quality, Reliability, Risk, Maintenance, and Safety Engineering"
+   },
+   {
+    "doi": "10.33889/ijmems.2021.6.1.008",
+    "title": "Remaining Useful Life Estimation Considering Prior Accelerated Degradation Data and Bayesian Inference for Multi-Stress Operating Conditions",
+    "year": 2020,
+    "first_author": "Shah Limon",
+    "venue": "International Journal of Mathematical Engineering and Management Sciences"
+   },
+   {
+    "doi": "10.1016/j.jmsy.2020.11.005",
+    "title": "Utilizing uncertainty information in remaining useful life estimation via Bayesian neural networks and Hamiltonian Monte Carlo",
+    "year": 2020,
+    "first_author": "Maximilian Benker",
+    "venue": "Journal of Manufacturing Systems"
+   }
+  ],
+  "bayesnet_diag": [
+   {
+    "doi": "10.1016/j.apenergy.2024.123773",
+    "title": "A hybrid deep learning model towards fault diagnosis of drilling pump",
+    "year": 2024,
+    "first_author": "Junyu Guo",
+    "venue": "Applied Energy"
+   },
+   {
+    "doi": "10.1109/tr.2024.3416064",
+    "title": "Graph Embedding-Based Bayesian Network for Fault Isolation in Complex Equipment",
+    "year": 2024,
+    "first_author": "Liqiao Xia",
+    "venue": "IEEE Transactions on Reliability"
+   },
+   {
+    "doi": "10.1111/exsy.13360",
+    "title": "Data\u2010driven fault diagnosis approaches for industrial equipment: A review",
+    "year": 2023,
+    "first_author": "Atma Ram Sahu",
+    "venue": "Expert Systems"
+   },
+   {
+    "doi": "10.3390/en14227758",
+    "title": "An Integrated Fuzzy Fault Tree Model with Bayesian Network-Based Maintenance Optimization of Complex Equipment in Automotive Manufacturing",
+    "year": 2021,
+    "first_author": "Hamzeh Soltanali",
+    "venue": "Energies"
+   }
+  ],
+  "cox_drill": [
+   {
+    "doi": "10.1111/insr.12095_7",
+    "title": "Statistical Methods for Survival Data Analysis",
+    "year": 2015,
+    "first_author": "Brenda W. Gillespie",
+    "venue": "International Statistical Review"
+   },
+   {
+    "doi": "10.1007/978-3-030-25147-5_15",
+    "title": "Statistical Analysis of the Lifetime of Diamond-Impregnated Tools for Core Drilling of Concrete",
+    "year": 2019,
+    "first_author": "Nadja Malevich",
+    "venue": "Studies in classification, data analysis, and knowledge organization"
+   },
+   {
+    "doi": "",
+    "title": "On Survival Categorical Methods Based on an Extended Actuarial Estimator",
+    "year": 2015,
+    "first_author": "Sergey V. Malov",
+    "venue": "NSUWorks (Nova Southeastern University)"
+   },
+   {
+    "doi": "10.62762/rs.2025.790790",
+    "title": "A Comparative Study on Drag Reduction Methods for Continental Shale Drilling in the Fuxing Block, Southeastern Sichuan Basin",
+    "year": 2026,
+    "first_author": "Yang Hu",
+    "venue": "Reservoir Science"
+   }
+  ],
+  "cox_pdm": [
+   {
+    "doi": "10.1016/j.aei.2020.101054",
+    "title": "Predictive maintenance using cox proportional hazard deep learning",
+    "year": 2020,
+    "first_author": "Chong Chen",
+    "venue": "Advanced Engineering Informatics"
+   },
+   {
+    "doi": "10.1016/j.ress.2019.106707",
+    "title": "Predictive maintenance of systems subject to hard failure based on proportional hazards model",
+    "year": 2019,
+    "first_author": "Jiawen Hu",
+    "venue": "Reliability Engineering & System Safety"
+   },
+   {
+    "doi": "10.1007/978-3-032-36365-7_8",
+    "title": "Proportional Cox Model and Its Potential Application to Predictive Maintenance in Industry 5.0",
+    "year": 2026,
+    "first_author": "Jorge Miguel Peralta Siopa",
+    "venue": "Lecture notes in mechanical engineering"
+   },
+   {
+    "doi": "10.1109/tpwrd.2013.2287025",
+    "title": "Analysis of Significant Factors on Cable Failure Using the Cox Proportional Hazard Model",
+    "year": 2013,
+    "first_author": "Zeyang Tang",
+    "venue": "IEEE Transactions on Power Delivery"
+   }
+  ],
+  "rsf_pdm": [
+   {
+    "doi": "10.1214/08-aoas169",
+    "title": "Random survival forests",
+    "year": 2008,
+    "first_author": "Hemant Ishwaran",
+    "venue": "The Annals of Applied Statistics"
+   },
+   {
+    "doi": "10.1002/sim.10344",
+    "title": "Random Survival Forest for Censored Functional Data",
+    "year": 2025,
+    "first_author": "Giuseppe Loffredo",
+    "venue": "Statistics in Medicine"
+   },
+   {
+    "doi": "10.1186/s40064-016-3113-5",
+    "title": "Random rotation survival forest for high dimensional censored data",
+    "year": 2016,
+    "first_author": "Lifeng Zhou",
+    "venue": "SpringerPlus"
+   },
+   {
+    "doi": "10.1161/circoutcomes.110.939371",
+    "title": "Identifying Important Risk Factors for Survival in Patient With Systolic Heart Failure Using Random Survival Forests",
+    "year": 2010,
+    "first_author": "Eileen Hsich",
+    "venue": "Circulation Cardiovascular Quality and Outcomes"
+   }
+  ],
+  "deephit_phm": [
+   {
+    "doi": "10.48550/arxiv.2601.19479",
+    "title": "Time-to-Injury Forecasting in Elite Female Football: A DeepHit Survival Approach",
+    "year": 2026,
+    "first_author": "Victoria Catterall",
+    "venue": "arXiv (Cornell University)"
+   },
+   {
+    "doi": "10.1093/braincomms/fcaa057",
+    "title": "Prediction of conversion to Alzheimer\u2019s disease using deep survival analysis of MRI images",
+    "year": 2020,
+    "first_author": "Tomonori Nakagawa",
+    "venue": "Brain Communications"
+   },
+   {
+    "doi": "10.1609/aaai.v33i01.33014798",
+    "title": "Deep Recurrent Survival Analysis",
+    "year": 2019,
+    "first_author": "Kan Ren",
+    "venue": "Proceedings of the AAAI Conference on Artificial Intelligence"
+   },
+   {
+    "doi": "10.1186/s12911-024-02525-z",
+    "title": "Improved nonparametric survival prediction using CoxPH, Random Survival Forest & DeepHit Neural Network",
+    "year": 2024,
+    "first_author": "Naseem Asghar",
+    "venue": "BMC Medical Informatics and Decision Making"
+   }
+  ]
+ },
+ "canon": [
+  {
+   "status": "OK",
+   "http": 200,
+   "doi": "10.1109/5.18626",
+   "title": "A tutorial on hidden Markov models and selected applications in speech recognition",
+   "year": 1989,
+   "first_author": "Rabiner",
+   "container": "Proceedings of the IEEE",
+   "type": "journal-article",
+   "tag": "hmm_rabiner"
+  },
+  {
+   "status": "OK",
+   "http": 200,
+   "doi": "10.1111/j.2517-6161.1972.tb00899.x",
+   "title": "Regression Models and Life-Tables",
+   "year": 1972,
+   "first_author": "Cox",
+   "container": "Journal of the Royal Statistical Society Series B: Statistical Methodology",
+   "type": "journal-article",
+   "tag": "cox_1972"
+  },
+  {
+   "status": "OK",
+   "http": 200,
+   "doi": "10.1214/08-aoas169",
+   "title": "Random survival forests",
+   "year": 2008,
+   "first_author": "Ishwaran",
+   "container": "The Annals of Applied Statistics",
+   "type": "journal-article",
+   "tag": "rsf_ishwaran"
+  },
+  {
+   "status": "OK",
+   "http": 200,
+   "doi": "10.1609/aaai.v32i1.11842",
+   "title": "DeepHit: A Deep Learning Approach to Survival Analysis With Competing Risks",
+   "year": 2018,
+   "first_author": "Lee",
+   "container": "Proceedings of the AAAI Conference on Artificial Intelligence",
+   "type": "journal-article",
+   "tag": "deephit_lee"
+  },
+  {
+   "status": "OK",
+   "http": 200,
+   "doi": "10.1186/s12874-018-0482-1",
+   "title": "DeepSurv: personalized treatment recommender system using a Cox proportional hazards deep neural network",
+   "year": 2018,
+   "first_author": "Katzman",
+   "container": "BMC Medical Research Methodology",
+   "type": "journal-article",
+   "tag": "deepsurv_katzman"
+  },
+  {
+   "status": "OK",
+   "http": 200,
+   "doi": "10.1080/01621459.1949.10483310",
+   "title": "The Monte Carlo Method",
+   "year": 1949,
+   "first_author": "Metropolis",
+   "container": "Journal of the American Statistical Association",
+   "type": "journal-article",
+   "tag": "mc_metropolis_ulam"
+  },
+  {
+   "status": "OK",
+   "http": 200,
+   "doi": "10.1093/biomet/57.1.97",
+   "title": "Monte Carlo sampling methods using Markov chains and their applications",
+   "year": 1970,
+   "first_author": "Hastings",
+   "container": "Biometrika",
+   "type": "journal-article",
+   "tag": "mcmc_hastings"
+  },
+  {
+   "status": "OK",
+   "http": 200,
+   "doi": "10.1063/1.1699114",
+   "title": "Equation of State Calculations by Fast Computing Machines",
+   "year": 1953,
+   "first_author": "Metropolis",
+   "container": "The Journal of Chemical Physics",
+   "type": "journal-article",
+   "tag": "mcmc_metropolis"
+  },
+  {
+   "status": "OK",
+   "http": 200,
+   "doi": "10.1017/cbo9780511810633",
+   "title": "Markov Chains",
+   "year": 1997,
+   "first_author": "Norris",
+   "container": "?",
+   "type": "monograph",
+   "tag": "markov_norris"
+  },
+  {
+   "status": "OK",
+   "http": 200,
+   "doi": "10.2118/127413-ms",
+   "title": "MWD Failure Rates Due to Drilling Dynamics",
+   "year": 2010,
+   "first_author": "Reckmann",
+   "container": "IADC/SPE Drilling Conference and Exhibition",
+   "type": "proceedings-article",
+   "tag": "drill_vib_reckmann"
+  },
+  {
+   "status": "OK",
+   "http": 200,
+   "doi": "10.2118/16659-pa",
+   "title": "A Study of Slip/Stick Motion of the Bit",
+   "year": 1988,
+   "first_author": "Kyllingstad",
+   "container": "SPE Drilling Engineering",
+   "type": "journal-article",
+   "tag": "stick_slip_kyllingstad"
+  },
+  {
+   "status": "OK",
+   "http": 200,
+   "doi": "10.2298/tsci2502521l",
+   "title": "Intelligent identification method for stick-slip vibration based on downhole data",
+   "year": 2025,
+   "first_author": "Liu",
+   "container": "Thermal Science",
+   "type": "journal-article",
+   "tag": "ssi_liu2025"
+  },
+  {
+   "status": "OK",
+   "http": 200,
+   "doi": "10.1016/0148-9062(65)90022-7",
+   "title": "The concept of specific energy in rock drilling",
+   "year": 1965,
+   "first_author": "Teale",
+   "container": "International Journal of Rock Mechanics and Mining Sciences &amp; Geomechanics Abstracts",
+   "type": "journal-article",
+   "tag": "teale_1965"
+  }
+ ]
+}

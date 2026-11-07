@@ -1,0 +1,14 @@
+[PASS] V1a: engine di JSON = ['bit_wear', 'hyd', 'shk', 'ssi', 'stuck', 'tool_wear', 'vib'] (diharapkan ['bit_wear', 'hyd', 'shk', 'ssi', 'stuck', 'tool_wear', 'vib'])
+[PASS] V1b: head tanpa tier/layer/badge/keyakinan/batas = []
+[PASS] V2: tier cocok dokumen: 27 head; tidak cocok: []
+[PASS] V3a: head bertier ALARM-OTOMATIS = []
+[PASS] V3b: slot alarm otomatis kritis = 0 (meta + decision_layer)
+[PASS] V4a: pelanggaran aturan lapisan = []
+[PASS] V4b: semua 11 entri L1 human_review_required=true
+[PASS] V5: 6/6 angka cocok (recompute independen); selisih=[]
+[PASS] V6: klaim non-aktif eksplisit: hyd K-ii status='BELUM TERSEDIA DI PROTOTIPE', bit_wear K-2 status='BELUM DIJALANKAN', tanpa metrik_segmen
+[PASS] V7: dua run ulang identik setelah meta waktu dibuang
+[PASS] V8: AUPRC shk RF recompute=0.1036 vs JSON=0.1036
+[PASS] V9: tool_wear op_far_calibrated == E_STAT §C utk 4 alat (fp/det/first/TLead/thr); selisih=[]
+[PASS] V10: replay F-14 identik dgn fold kampanye E_RULE utk 5 kelas x 2 head (tp/fp/precision/FAR); selisih=[]
+TOTAL: SEMUA PASS

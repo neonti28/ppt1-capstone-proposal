@@ -1,0 +1,180 @@
+{
+ "usrop_labeled": {
+  "file": "data/USROP_labeled.csv",
+  "n_rows": 198928,
+  "n_cols": 18,
+  "columns": [
+   "Unnamed: 0",
+   "Measured Depth m",
+   "Weight on Bit kkgf",
+   "Average Standpipe Pressure kPa",
+   "Average Surface Torque kN.m",
+   "Rate of Penetration m/h",
+   "Average Rotary Speed rpm",
+   "Mud Flow In L/min",
+   "Mud Density In g/cm3",
+   "Diameter mm",
+   "Average Hookload kkgf",
+   "Hole Depth (TVD) m",
+   "USROP Gamma gAPI",
+   "well",
+   "label",
+   "MSE",
+   "D_exp",
+   "ROC_coef"
+  ],
+  "n_wells": 7,
+  "label_value_counts": {
+   "normal": 134013,
+   "high_MSE_bit_wear": 49732,
+   "low_ROP_efficiency": 15183
+  },
+  "high_MSE_rows": 49732,
+  "high_MSE_frac": 0.25,
+  "MSE_notnull": 198928,
+  "per_well": {
+   "USROP_A 0 N-NA_F-9_Ad.csv": {
+    "n": 13746,
+    "high_MSE": 182
+   },
+   "USROP_A 1 N-S_F-7d.csv": {
+    "n": 6389,
+    "high_MSE": 0
+   },
+   "USROP_A 2 N-SH_F-14d.csv": {
+    "n": 47645,
+    "high_MSE": 4918
+   },
+   "USROP_A 3 N-SH-F-15d.csv": {
+    "n": 53041,
+    "high_MSE": 7622
+   },
+   "USROP_A 4 N-SH_F-15Sd.csv": {
+    "n": 51708,
+    "high_MSE": 28051
+   },
+   "USROP_A 5 N-SH-F-5d.csv": {
+    "n": 18548,
+    "high_MSE": 8959
+   },
+   "USROP_A 6 N-SH_F-9d.csv": {
+    "n": 7851,
+    "high_MSE": 0
+   }
+  }
+ },
+ "toolwear": {
+  "file": "scratch/v6_e1/toolwear_windows.csv",
+  "n_rows": 469,
+  "n_cols": 32,
+  "n_features": 27,
+  "feature_names": [
+   "X_mean",
+   "X_std",
+   "X_rms",
+   "X_kurt",
+   "X_skew",
+   "X_p2p",
+   "X_crest",
+   "X_zcr",
+   "X_fdom",
+   "Y_mean",
+   "Y_std",
+   "Y_rms",
+   "Y_kurt",
+   "Y_skew",
+   "Y_p2p",
+   "Y_crest",
+   "Y_zcr",
+   "Y_fdom",
+   "Z_mean",
+   "Z_std",
+   "Z_rms",
+   "Z_kurt",
+   "Z_skew",
+   "Z_p2p",
+   "Z_crest",
+   "Z_zcr",
+   "Z_fdom"
+  ],
+  "n_tools": 4,
+  "tools": [
+   "T01",
+   "T02",
+   "T03",
+   "T04"
+  ],
+  "n_runs": 2,
+  "y_value_counts": {
+   "1": 240,
+   "0": 229
+  },
+  "per_tool": {
+   "T01": 120,
+   "T02": 112,
+   "T03": 121,
+   "T04": 116
+  }
+ },
+ "volve_pit_channels": {
+  "F-10.csv": [],
+  "F-12.csv": [],
+  "F-14.csv": [],
+  "F-15A.csv": [],
+  "F-15_S.csv": [
+   "GAIN_CLNK"
+  ],
+  "F-5.csv": [],
+  "F-7.csv": [],
+  "F-9.csv": [],
+  "F-9_A.csv": [],
+  "VAR_F-5_alt.csv": []
+ },
+ "volve_external_files": {
+  "data/volve/external/dbx_volume/WITSML Realtime drilling data/Volve - Real Time drilling data 13.05.2018.zip": 2877250975,
+  "data/volve/external/dbx_volume/Well_technical_data/EDM.XML/Volve F.edm.xml": 211263929,
+  "data/volve/external/dbx_volume/Well_technical_data/EDM.XML/Volve F.edm.zip": 77698104,
+  "data/volve/external/kaggle/kaggle_volve_witsml_F9A.zip": 40413012,
+  "data/volve/external/spwla_volve_logs/15_9-F15D__WLC_PETRO_COMPUTED_INPUT_1.LAS": 15255718,
+  "data/volve/external/spwla_volve_logs/15_9-F15D__WLC_PETROPHYSICAL_COMPOSITE_2.DLIS": 10961480,
+  "data/volve/external/spwla_volve_logs/15_9-F15__WLC_PETROPHYSICAL_COMPOSITE_2.DLIS": 6487888,
+  "data/volve/external/kaggle/Norway-NA-15_47_9-F-9 A depth.csv": 5596360,
+  "data/volve/external/spwla_volve_logs/15_9-F-5__WLC_PETROPHYSICAL_COMPOSITE_1.DLIS": 4803134,
+  "data/volve/external/spwla_volve_logs/15_9-F14__WLC_PETROPHYSICAL_COMPOSITE_1.LIS": 3677190,
+  "data/volve/external/spwla_volve_logs/15_9-F15A__WLC_PETROPHYSICAL_COMPOSITE_2.DLIS": 3506640,
+  "data/volve/external/spwla_volve_logs/15_9-F15__WLC_PETRO_COMPUTED_INPUT_1.DLIS": 1903424,
+  "data/volve/external/spwla_volve_logs/15_9-F15D__WLC_PETRO_COMPUTED_OUTPUT_1.LAS": 1759612,
+  "data/volve/external/spwla_volve_logs/15_9-F15A__WLC_PETRO_COMPUTED_INPUT_1.DLIS": 1697846,
+  "data/volve/external/dbx_volume/Well_technical_data/Wellcat/F-13 WCD Completion .wcd": 1507328,
+  "data/volve/external/dbx_volume/Well_technical_data/Wellcat/F-14 A NW target - SIGULU - rev0, v0.wcd": 1376256,
+  "data/volve/external/spwla_volve_logs/15_9-F14__WLC_PETRO_COMPUTED_INPUT_1.DLIS": 1285000,
+  "data/volve/external/spwla_volve_logs/15_9-F15B__WLC_PETROPHYSICAL_COMPOSITE_1.DLIS": 1243316,
+  "data/volve/external/dbx_volume/WITSML Realtime drilling data/Norway-StatoilHydro-15_$47$_9-F-10/1/trajectory/1.xml": 1175176,
+  "data/volve/external/spwla_volve_logs/15_9-F-5__WLC_PETRO_COMPUTED_OUTPUT_1.DLIS": 1120800,
+  "data/volve/external/spwla_volve_logs/15_9-F-5__WLC_PETRO_COMPUTED_INPUT_1.DLIS": 1120684,
+  "data/volve/external/spwla_volve_logs/15_9-F15C__WLC_PETROPHYSICAL_COMPOSITE_1.DLIS": 1109726,
+  "data/volve/external/dbx_volume/WITSML Realtime drilling data/Norway-Statoil-NO 15_$47$_9-F-11/1/mudLog/1.xml": 1100238,
+  "data/volve/external/spwla_volve_logs/15_9-F14__WLC_PETRO_COMPUTED_OUTPUT_1.DLIS": 908852,
+  "data/volve/external/volve_catalog_target_paths.csv": 645763,
+  "data/volve/external/dbx_volume/WITSML Realtime drilling data/Norway-Statoil-NO 15_$47$_9-F-11/2/mudLog/1.xml": 565842,
+  "data/volve/external/spwla_volve_logs/15_9-F-7__WLC_PETROPHYSICAL_COMPOSITE_1.LIS": 524753,
+  "data/volve/external/dbx_volume/WITSML Realtime drilling data/Norway-Statoil-15_$47$_9-F-12/1/trajectory/7.xml": 491688,
+  "data/volve/external/dbx_volume/WITSML Realtime drilling data/Norway-Statoil-15_$47$_9-F-12/1/trajectory/2.xml": 490670,
+  "data/volve/external/spwla_volve_logs/15_9-F15__WLC_PETRO_COMPUTED_OUTPUT_1.DLIS": 455460,
+  "data/volve/external/spwla_volve_logs/15_9-F15A__WLC_PETRO_COMPUTED_OUTPUT_1.DLIS": 451090,
+  "data/volve/external/dbx_volume/WITSML Realtime drilling data/Norway-Statoil-NO 15_$47$_9-F-1 C/4/mudLog/1.xml": 447689,
+  "data/volve/external/dbx_volume/WITSML Realtime drilling data/Norway-Statoil-NO 15_$47$_9-F-11/4/mudLog/1.xml": 440715,
+  "data/volve/external/spwla_volve_logs/15_9-F-9A__WLC_PETROPHYSICAL_COMPOSITE_1.DLIS": 429384,
+  "data/volve/external/dbx_volume/WITSML Realtime drilling data/Norway-Statoil-NO 15_$47$_9-F-11/2/trajectory/2.xml": 427830,
+  "data/volve/external/dbx_volume/WITSML Realtime drilling data/Norway-Statoil-NO 15_$47$_9-F-1 C/3/mudLog/1.xml": 407853,
+  "data/volve/external/dbx_volume/WITSML Realtime drilling data/Norway-Statoil-NO 15_$47$_9-F-11/4/trajectory/1.xml": 393201,
+  "data/volve/external/dbx_volume/WITSML Realtime drilling data/Norway-Statoil-NO 15_$47$_9-F-15/2/mudLog/1.xml": 367466,
+  "data/volve/external/dbx_volume/WITSML Realtime drilling data/Norway-Statoil-NO 15_$47$_9-F-11/2/trajectory/1.xml": 359176,
+  "data/volve/external/dbx_volume/WITSML Realtime drilling data/Norway-Statoil-NO 15_$47$_9-F-11/2/trajectory/3.xml": 330550
+ },
+ "ddr_parquet": {
+  "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+ },
+ "volve_share_top": [],
+ "volve_share_n_files": 0
+}

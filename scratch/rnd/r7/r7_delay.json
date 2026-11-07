@@ -1,0 +1,74 @@
+[
+  {
+    "well": "F-10",
+    "delay_median": 10.0,
+    "onsets": 23,
+    "det_any": 12,
+    "det_H10": 11,
+    "pct_H10": 0.4783
+  },
+  {
+    "well": "F-12",
+    "delay_median": 1.0,
+    "onsets": 92,
+    "det_any": 47,
+    "det_H10": 47,
+    "pct_H10": 0.5109
+  },
+  {
+    "well": "F-14",
+    "delay_median": 3.5,
+    "onsets": 58,
+    "det_any": 22,
+    "det_H10": 21,
+    "pct_H10": 0.3621
+  },
+  {
+    "well": "F-15A",
+    "delay_median": 10.0,
+    "onsets": 33,
+    "det_any": 17,
+    "det_H10": 17,
+    "pct_H10": 0.5152
+  },
+  {
+    "well": "F-15_S",
+    "delay_median": 10.0,
+    "onsets": 64,
+    "det_any": 28,
+    "det_H10": 28,
+    "pct_H10": 0.4375
+  },
+  {
+    "well": "F-5",
+    "delay_median": 10.0,
+    "onsets": 40,
+    "det_any": 9,
+    "det_H10": 8,
+    "pct_H10": 0.2
+  },
+  {
+    "well": "F-7",
+    "delay_median": 6.0,
+    "onsets": 28,
+    "det_any": 16,
+    "det_H10": 16,
+    "pct_H10": 0.5714
+  },
+  {
+    "well": "F-9",
+    "delay_median": 9.0,
+    "onsets": 28,
+    "det_any": 12,
+    "det_H10": 12,
+    "pct_H10": 0.4286
+  },
+  {
+    "well": "F-9_A",
+    "delay_median": 10.0,
+    "onsets": 24,
+    "det_any": 9,
+    "det_H10": 8,
+    "pct_H10": 0.3333
+  }
+]

@@ -1,0 +1,30 @@
+=== artefak literal \n ada di md kandidat_2? ===
+  jumlah '\\n' literal di md kandidat_2: 0
+  posisi v8_e_shk_02b -> seksi: ### 2. ALASAN PER ENGINE: FISIKA KEGAGALAN → SENSOR RELEVAN → METODE
+  sel ipynb #45 tipe=markdown literal_backslash_n=yes
+  seksi kira-kira: (teks sel, bukan heading)
+
+=== keyword gap lintas kandidat (ML chapter) ===
+  'deep learning': K1-babML=1 K1-dok=1 | K2-babML=0 K2-dok=0
+  'Deep learning': K1-babML=1 K1-dok=1 | K2-babML=0 K2-dok=0
+  'murni': K1-babML=1 K1-dok=3 | K2-babML=0 K2-dok=3
+  'temporal': K1-babML=0 K1-dok=2 | K2-babML=0 K2-dok=10
+  'Brier': K1-babML=1 K1-dok=1 | K2-babML=0 K2-dok=0
+  'pemisahan peran': K1-babML=2 K1-dok=2 | K2-babML=0 K2-dok=0
+  'lintas lapangan': K1-babML=1 K1-dok=2 | K2-babML=0 K2-dok=1
+  'proxy': K1-babML=1 K1-dok=3 | K2-babML=0 K2-dok=21
+  'kekuatan bukti': K1-babML=0 K1-dok=3 | K2-babML=4 K2-dok=9
+  'tingkat pemakaian': K1-babML=0 K1-dok=9 | K2-babML=0 K2-dok=7
+  'Lapisan B': K1-babML=1 K1-dok=2 | K2-babML=0 K2-dok=3
+  'Lapisan C': K1-babML=1 K1-dok=1 | K2-babML=0 K2-dok=1
+  'kejujuran': K1-babML=1 K1-dok=2 | K2-babML=1 K2-dok=16
+  'stakeholder': K1-babML=0 K1-dok=0 | K2-babML=0 K2-dok=0
+  '1,5': K1-babML=0 K1-dok=1 | K2-babML=3 K2-dok=10
+
+=== apakah K1 punya baris 'Riset pendahuluan' / daftar sumber angka? ===
+  K1 'Riset pendahuluan': 1
+  K1 'traceability'/sumber angka: 0
+  K2 bab4 'SUMBER ANGKA': 1
+  K1 'Bab' structure? (## count): 20
+  K1 ada tabel fold/AUPRC? False | ada '0,44'/'0.44'? False
+  K1 sebut angka fold per kelas? ['tujuh nilai lipatan']

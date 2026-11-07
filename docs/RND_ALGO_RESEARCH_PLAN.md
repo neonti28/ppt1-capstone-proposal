@@ -1,17 +1,17 @@
-# RND-ALGO — RENCANA RISET ALGORITMA UNTUK 7 ENGINE
+# RND-ALGO — RENCANA RISET ALGORITMA UNTUK 7 mode
 
 Status: rencana kerja (belum vonis) · Board: `rnd-algo-2026` · 2026-10-25
 Pemilik arah: operator (Zey) · Pelaksana: R&D, Data, Engineer, PM
 
 ## 1. Tujuan
 
-Menjawab satu pertanyaan: **algoritma apa yang layak dipakai untuk menaikkan tier 7 engine
+Menjawab satu pertanyaan: **algoritma apa yang layak dipakai untuk menaikkan tier 7 mode
 (vib, ssi, shk, stuck, hyd, bit_wear, tool_wear) dari bukti ilmiah, bukan dari selera?**
 
 Keluaran yang diminta:
-1. Peta algoritma → engine → klaim (K-i/K-ii) → potensi tier, dengan justifikasi literatur.
+1. Peta algoritma → detektor → klaim (K-i/K-ii) → potensi tier, dengan justifikasi literatur.
 2. Jawaban kelayakan data per algoritma (punya datanya atau tidak).
-3. Protokol uji yang bisa direproduksi + hasil pilot nyata pada minimal satu engine.
+3. Protokol uji yang bisa direproduksi + hasil pilot nyata pada minimal satu mode.
 4. Ledger provenance: setiap angka punya asal (standar, jurnal, atau run kita).
 
 ## 2. Aturan angka (WAJIB, tanpa pengecualian)
@@ -62,7 +62,7 @@ Algoritma di luar daftar ini boleh diusulkan R&D asal ada justifikasi literatur 
 ```
 P0 Protokol provenance ─┐
 D0 Kelayakan data ──────┤
-E0 Audit implementasi engine (leakage, sirkularitas, konsistensi)
+E0 Audit implementasi detektor (leakage, sirkularitas, konsistensi)
                         ├─> R1 Metaheuristik kontinu
                         ├─> R2 Stokastik + survival
                         ├─> R3 VMD/EMD + SVM/kernel
@@ -70,7 +70,7 @@ E0 Audit implementasi engine (leakage, sirkularitas, konsistensi)
                         ├─> R5 Drift + anomali tanpa label
                         └─> R6 Metrik & uji statistik
                                     │
-                    E1 Matriks kelayakan (algo x engine)
+                    E1 Matriks kelayakan (algo x detektor)
                                     │
                     E2 Protokol pilot (3 kandidat)
                                     │
@@ -118,7 +118,7 @@ Riset ini selesai kalau:
 
 ## 9. Yang TIDAK dilakukan di gelombang ini
 
-- Tidak mengubah ambang engine yang sudah ada tanpa bukti pilot.
+- Tidak mengubah ambang detektor yang sudah ada tanpa bukti pilot.
 - Tidak mengklaim transfer domain (bengkel → rig) yang belum diuji.
 - Tidak memakai dataset baru tanpa izin/lisensi yang jelas.
 - Tidak menyentuh folder arsip `D:\Capstone 1`.

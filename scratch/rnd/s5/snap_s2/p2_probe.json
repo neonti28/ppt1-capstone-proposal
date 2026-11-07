@@ -1,0 +1,608 @@
+{
+ "vib": {
+  "path": "/mnt/d/Capstone 1(v2)/scratch/v9_d1/datasets/vib.csv.gz",
+  "shape": [
+   23922,
+   63
+  ],
+  "kolom": [
+   "well",
+   "ts_bin",
+   "feat_ts_max",
+   "lab_ts",
+   "lab_kind",
+   "TQA_mean",
+   "TQA_std",
+   "TQA_slope",
+   "TQA_last",
+   "TQA_frac",
+   "SPPA_mean",
+   "SPPA_std",
+   "SPPA_slope",
+   "SPPA_last",
+   "SPPA_frac",
+   "TFLO_mean",
+   "TFLO_std",
+   "TFLO_slope",
+   "TFLO_last",
+   "TFLO_frac",
+   "RPM_mean",
+   "RPM_std",
+   "RPM_slope",
+   "RPM_last",
+   "RPM_frac",
+   "SWOB_mean",
+   "SWOB_std",
+   "SWOB_slope",
+   "SWOB_last",
+   "SWOB_frac",
+   "HKLD_mean",
+   "HKLD_std",
+   "HKLD_slope",
+   "HKLD_last",
+   "HKLD_frac",
+   "ROP_mean",
+   "ROP_std",
+   "ROP_slope",
+   "ROP_last",
+   "ROP_frac",
+   "BPOS_mean",
+   "BPOS_std",
+   "BPOS_slope",
+   "BPOS_last",
+   "BPOS_frac",
+   "SPM_mean",
+   "SPM_std",
+   "SPM_slope",
+   "SPM_last",
+   "SPM_frac",
+   "depth_mean",
+   "depth_std",
+   "depth_slope",
+   "depth_last",
+   "depth_frac",
+   "dbtm_mean",
+   "dbtm_std",
+   "dbtm_slope",
+   "dbtm_last",
+   "dbtm_frac",
+   "y_vib",
+   "y_prev_vib",
+   "valid_prev_vib"
+  ],
+  "label_cols": [
+   "lab_ts",
+   "lab_kind",
+   "y_vib",
+   "y_prev_vib",
+   "valid_prev_vib"
+  ],
+  "y_cols": [
+   "y_vib",
+   "y_prev_vib"
+  ],
+  "meta_cols": [
+   "well",
+   "ts_bin",
+   "feat_ts_max",
+   "lab_ts",
+   "lab_kind"
+  ],
+  "fitur_kandidat": [
+   "TQA_mean",
+   "TQA_std",
+   "TQA_slope",
+   "TQA_last",
+   "TQA_frac",
+   "SPPA_mean",
+   "SPPA_std",
+   "SPPA_slope",
+   "SPPA_last",
+   "SPPA_frac",
+   "TFLO_mean",
+   "TFLO_std",
+   "TFLO_slope",
+   "TFLO_last",
+   "TFLO_frac",
+   "RPM_mean",
+   "RPM_std",
+   "RPM_slope",
+   "RPM_last",
+   "RPM_frac",
+   "SWOB_mean",
+   "SWOB_std",
+   "SWOB_slope",
+   "SWOB_last",
+   "SWOB_frac",
+   "HKLD_mean",
+   "HKLD_std",
+   "HKLD_slope",
+   "HKLD_last",
+   "HKLD_frac",
+   "ROP_mean",
+   "ROP_std",
+   "ROP_slope",
+   "ROP_last",
+   "ROP_frac",
+   "BPOS_mean",
+   "BPOS_std",
+   "BPOS_slope",
+   "BPOS_last",
+   "BPOS_frac",
+   "SPM_mean",
+   "SPM_std",
+   "SPM_slope",
+   "SPM_last",
+   "SPM_frac",
+   "depth_mean",
+   "depth_std",
+   "depth_slope",
+   "depth_last",
+   "depth_frac",
+   "dbtm_mean",
+   "dbtm_std",
+   "dbtm_slope",
+   "dbtm_last",
+   "dbtm_frac"
+  ],
+  "n_fitur": 55,
+  "dtype_ts_bin": "int64",
+  "wells": [
+   "F-14",
+   "F-15A",
+   "F-15_S",
+   "F-5"
+  ],
+  "n_well": 4,
+  "per_well": {
+   "F-14": {
+    "n": 1989,
+    "ts_min": 20189486,
+    "ts_max": 20192503,
+    "menit_kalender": 3018,
+    "cakupan": 0.659,
+    "delta_ts_modus": 1,
+    "y_vib": 1124,
+    "y_prev_vib": 1142
+   },
+   "F-15A": {
+    "n": 6482,
+    "ts_min": 20482801,
+    "ts_max": 20514941,
+    "menit_kalender": 32141,
+    "cakupan": 0.2017,
+    "delta_ts_modus": 1,
+    "y_vib": 1543,
+    "y_prev_vib": 1569
+   },
+   "F-15_S": {
+    "n": 10903,
+    "ts_min": 20371637,
+    "ts_max": 20464137,
+    "menit_kalender": 92501,
+    "cakupan": 0.1179,
+    "delta_ts_modus": 1,
+    "y_vib": 1532,
+    "y_prev_vib": 1538
+   },
+   "F-5": {
+    "n": 4548,
+    "ts_min": 20268413,
+    "ts_max": 20289373,
+    "menit_kalender": 20961,
+    "cakupan": 0.217,
+    "delta_ts_modus": 1,
+    "y_vib": 1230,
+    "y_prev_vib": 1250
+   }
+  },
+  "fold_n": 4,
+  "folds": [
+   {
+    "test_well": "F-14",
+    "train_wells": [
+     "F-15A",
+     "F-15_S",
+     "F-5"
+    ]
+   },
+   {
+    "test_well": "F-15A",
+    "train_wells": [
+     "F-14",
+     "F-15_S",
+     "F-5"
+    ]
+   },
+   {
+    "test_well": "F-15_S",
+    "train_wells": [
+     "F-14",
+     "F-15A",
+     "F-5"
+    ]
+   },
+   {
+    "test_well": "F-5",
+    "train_wells": [
+     "F-14",
+     "F-15A",
+     "F-15_S"
+    ]
+   }
+  ]
+ },
+ "ssi": {
+  "path": "/mnt/d/Capstone 1(v2)/scratch/v9_d1/datasets/ssi.csv.gz",
+  "shape": [
+   35906,
+   63
+  ],
+  "kolom": [
+   "well",
+   "ts_bin",
+   "feat_ts_max",
+   "lab_ts",
+   "lab_kind",
+   "TQA_mean",
+   "TQA_std",
+   "TQA_slope",
+   "TQA_last",
+   "TQA_frac",
+   "SPPA_mean",
+   "SPPA_std",
+   "SPPA_slope",
+   "SPPA_last",
+   "SPPA_frac",
+   "TFLO_mean",
+   "TFLO_std",
+   "TFLO_slope",
+   "TFLO_last",
+   "TFLO_frac",
+   "RPM_mean",
+   "RPM_std",
+   "RPM_slope",
+   "RPM_last",
+   "RPM_frac",
+   "SWOB_mean",
+   "SWOB_std",
+   "SWOB_slope",
+   "SWOB_last",
+   "SWOB_frac",
+   "HKLD_mean",
+   "HKLD_std",
+   "HKLD_slope",
+   "HKLD_last",
+   "HKLD_frac",
+   "ROP_mean",
+   "ROP_std",
+   "ROP_slope",
+   "ROP_last",
+   "ROP_frac",
+   "BPOS_mean",
+   "BPOS_std",
+   "BPOS_slope",
+   "BPOS_last",
+   "BPOS_frac",
+   "SPM_mean",
+   "SPM_std",
+   "SPM_slope",
+   "SPM_last",
+   "SPM_frac",
+   "depth_mean",
+   "depth_std",
+   "depth_slope",
+   "depth_last",
+   "depth_frac",
+   "dbtm_mean",
+   "dbtm_std",
+   "dbtm_slope",
+   "dbtm_last",
+   "dbtm_frac",
+   "y_ssi",
+   "y_prev_ssi",
+   "valid_prev_ssi"
+  ],
+  "label_cols": [
+   "lab_ts",
+   "lab_kind",
+   "y_ssi",
+   "y_prev_ssi",
+   "valid_prev_ssi"
+  ],
+  "y_cols": [
+   "y_ssi",
+   "y_prev_ssi"
+  ],
+  "meta_cols": [
+   "well",
+   "ts_bin",
+   "feat_ts_max",
+   "lab_ts",
+   "lab_kind"
+  ],
+  "fitur_kandidat": [
+   "TQA_mean",
+   "TQA_std",
+   "TQA_slope",
+   "TQA_last",
+   "TQA_frac",
+   "SPPA_mean",
+   "SPPA_std",
+   "SPPA_slope",
+   "SPPA_last",
+   "SPPA_frac",
+   "TFLO_mean",
+   "TFLO_std",
+   "TFLO_slope",
+   "TFLO_last",
+   "TFLO_frac",
+   "RPM_mean",
+   "RPM_std",
+   "RPM_slope",
+   "RPM_last",
+   "RPM_frac",
+   "SWOB_mean",
+   "SWOB_std",
+   "SWOB_slope",
+   "SWOB_last",
+   "SWOB_frac",
+   "HKLD_mean",
+   "HKLD_std",
+   "HKLD_slope",
+   "HKLD_last",
+   "HKLD_frac",
+   "ROP_mean",
+   "ROP_std",
+   "ROP_slope",
+   "ROP_last",
+   "ROP_frac",
+   "BPOS_mean",
+   "BPOS_std",
+   "BPOS_slope",
+   "BPOS_last",
+   "BPOS_frac",
+   "SPM_mean",
+   "SPM_std",
+   "SPM_slope",
+   "SPM_last",
+   "SPM_frac",
+   "depth_mean",
+   "depth_std",
+   "depth_slope",
+   "depth_last",
+   "depth_frac",
+   "dbtm_mean",
+   "dbtm_std",
+   "dbtm_slope",
+   "dbtm_last",
+   "dbtm_frac"
+  ],
+  "n_fitur": 55,
+  "dtype_ts_bin": "int64",
+  "wells": [
+   "F-10",
+   "F-12",
+   "F-14",
+   "F-15A",
+   "F-15_S",
+   "F-5",
+   "F-7",
+   "F-9",
+   "F-9_A"
+  ],
+  "n_well": 9,
+  "per_well": {
+   "F-10": {
+    "n": 7133,
+    "ts_min": 20672177,
+    "ts_max": 20683423,
+    "menit_kalender": 11247,
+    "cakupan": 0.6342,
+    "delta_ts_modus": 1,
+    "y_ssi": 161,
+    "y_prev_ssi": 150
+   },
+   "F-12": {
+    "n": 4293,
+    "ts_min": 19712445,
+    "ts_max": 19798087,
+    "menit_kalender": 85643,
+    "cakupan": 0.0501,
+    "delta_ts_modus": 1,
+    "y_ssi": 83,
+    "y_prev_ssi": 46
+   },
+   "F-14": {
+    "n": 5455,
+    "ts_min": 19947192,
+    "ts_max": 20223025,
+    "menit_kalender": 275834,
+    "cakupan": 0.0198,
+    "delta_ts_modus": 1,
+    "y_ssi": 75,
+    "y_prev_ssi": 31
+   },
+   "F-15A": {
+    "n": 6020,
+    "ts_min": 20482801,
+    "ts_max": 20514933,
+    "menit_kalender": 32133,
+    "cakupan": 0.1873,
+    "delta_ts_modus": 1,
+    "y_ssi": 31,
+    "y_prev_ssi": 9
+   },
+   "F-15_S": {
+    "n": 5342,
+    "ts_min": 20371637,
+    "ts_max": 20453400,
+    "menit_kalender": 81764,
+    "cakupan": 0.0653,
+    "delta_ts_modus": 1,
+    "y_ssi": 85,
+    "y_prev_ssi": 13
+   },
+   "F-5": {
+    "n": 4714,
+    "ts_min": 19965671,
+    "ts_max": 20288442,
+    "menit_kalender": 322772,
+    "cakupan": 0.0146,
+    "delta_ts_modus": 1,
+    "y_ssi": 102,
+    "y_prev_ssi": 58
+   },
+   "F-7": {
+    "n": 982,
+    "ts_min": 19833867,
+    "ts_max": 19846703,
+    "menit_kalender": 12837,
+    "cakupan": 0.0765,
+    "delta_ts_modus": 1,
+    "y_ssi": 3,
+    "y_prev_ssi": 0
+   },
+   "F-9": {
+    "n": 1126,
+    "ts_min": 19958232,
+    "ts_max": 19960518,
+    "menit_kalender": 2287,
+    "cakupan": 0.4923,
+    "delta_ts_modus": 1,
+    "y_ssi": 12,
+    "y_prev_ssi": 12
+   },
+   "F-9_A": {
+    "n": 841,
+    "ts_min": 20782795,
+    "ts_max": 20783967,
+    "menit_kalender": 1173,
+    "cakupan": 0.717,
+    "delta_ts_modus": 1,
+    "y_ssi": 55,
+    "y_prev_ssi": 33
+   }
+  },
+  "fold_n": 9,
+  "folds": [
+   {
+    "test_well": "F-10",
+    "train_wells": [
+     "F-12",
+     "F-14",
+     "F-15A",
+     "F-15_S",
+     "F-5",
+     "F-7",
+     "F-9",
+     "F-9_A"
+    ]
+   },
+   {
+    "test_well": "F-12",
+    "train_wells": [
+     "F-10",
+     "F-14",
+     "F-15A",
+     "F-15_S",
+     "F-5",
+     "F-7",
+     "F-9",
+     "F-9_A"
+    ]
+   },
+   {
+    "test_well": "F-14",
+    "train_wells": [
+     "F-10",
+     "F-12",
+     "F-15A",
+     "F-15_S",
+     "F-5",
+     "F-7",
+     "F-9",
+     "F-9_A"
+    ]
+   },
+   {
+    "test_well": "F-15A",
+    "train_wells": [
+     "F-10",
+     "F-12",
+     "F-14",
+     "F-15_S",
+     "F-5",
+     "F-7",
+     "F-9",
+     "F-9_A"
+    ]
+   },
+   {
+    "test_well": "F-15_S",
+    "train_wells": [
+     "F-10",
+     "F-12",
+     "F-14",
+     "F-15A",
+     "F-5",
+     "F-7",
+     "F-9",
+     "F-9_A"
+    ]
+   },
+   {
+    "test_well": "F-5",
+    "train_wells": [
+     "F-10",
+     "F-12",
+     "F-14",
+     "F-15A",
+     "F-15_S",
+     "F-7",
+     "F-9",
+     "F-9_A"
+    ]
+   },
+   {
+    "test_well": "F-7",
+    "train_wells": [
+     "F-10",
+     "F-12",
+     "F-14",
+     "F-15A",
+     "F-15_S",
+     "F-5",
+     "F-9",
+     "F-9_A"
+    ]
+   },
+   {
+    "test_well": "F-9",
+    "train_wells": [
+     "F-10",
+     "F-12",
+     "F-14",
+     "F-15A",
+     "F-15_S",
+     "F-5",
+     "F-7",
+     "F-9_A"
+    ]
+   },
+   {
+    "test_well": "F-9_A",
+    "train_wells": [
+     "F-10",
+     "F-12",
+     "F-14",
+     "F-15A",
+     "F-15_S",
+     "F-5",
+     "F-7",
+     "F-9"
+    ]
+   }
+  ]
+ }
+}

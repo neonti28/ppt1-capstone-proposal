@@ -1,0 +1,1100 @@
+{
+ "task": "stuck",
+ "seed": 42,
+ "alpha_budget": 0.004166666666666667,
+ "elapsed_s": 18.8,
+ "rows": [
+  {
+   "rows": {
+    "tp": 49,
+    "fp": 140,
+    "fn": 723,
+    "tn": 3304,
+    "precision": 0.25925925925925924,
+    "recall": 0.06347150259067358,
+    "menit_alarm": 189,
+    "n_pos": 772,
+    "n_neg": 3444
+   },
+   "events": {
+    "tp_kejadian": 14,
+    "fp_kejadian": 42,
+    "n_kejadian": 56
+   },
+   "cakupan": 0.3133,
+   "menit_kalender": 13457.0,
+   "far24_kalender": 15.8928,
+   "far24_kalender_kejadian": 4.7678,
+   "garwood_atas_fp": 18.7541,
+   "fold": "F-10",
+   "model": "ML_saja",
+   "thr_kalibrasi": 0.232067,
+   "h_terpilih": 10,
+   "lead": {
+    "n_onset": 67,
+    "n_diperingatkan": 27,
+    "lead_median_min": 7.0,
+    "lead_min_min": 1,
+    "lead_maks_min": 43
+   },
+   "separuh": {
+    "awal": {
+     "precision": null,
+     "recall": 0.0,
+     "fp": 0,
+     "n_pos": 316
+    },
+    "akhir": {
+     "precision": 0.25925925925925924,
+     "recall": 0.1074561403508772,
+     "fp": 140,
+     "n_pos": 456
+    }
+   },
+   "auprc": 0.2464,
+   "prev": 0.183112
+  },
+  {
+   "rows": {
+    "tp": 186,
+    "fp": 665,
+    "fn": 586,
+    "tn": 2779,
+    "precision": 0.21856639247943596,
+    "recall": 0.24093264248704663,
+    "menit_alarm": 851,
+    "n_pos": 772,
+    "n_neg": 3444
+   },
+   "events": {
+    "tp_kejadian": 18,
+    "fp_kejadian": 31,
+    "n_kejadian": 49
+   },
+   "cakupan": 0.3133,
+   "menit_kalender": 13457.0,
+   "far24_kalender": 75.4907,
+   "far24_kalender_kejadian": 3.5191,
+   "garwood_atas_fp": 81.4529,
+   "fold": "F-10",
+   "model": "stat_cusum",
+   "thr_kalibrasi": 0.232067,
+   "h_terpilih": 10,
+   "lead": {
+    "n_onset": 67,
+    "n_diperingatkan": 32,
+    "lead_median_min": 1.0,
+    "lead_min_min": 1,
+    "lead_maks_min": 50
+   },
+   "separuh": {
+    "awal": {
+     "precision": 0.15071283095723015,
+     "recall": 0.23417721518987342,
+     "fp": 417,
+     "n_pos": 316
+    },
+    "akhir": {
+     "precision": 0.3111111111111111,
+     "recall": 0.24561403508771928,
+     "fp": 248,
+     "n_pos": 456
+    }
+   },
+   "auprc": 0.2464,
+   "prev": 0.183112
+  },
+  {
+   "rows": {
+    "tp": 99,
+    "fp": 292,
+    "fn": 673,
+    "tn": 3152,
+    "precision": 0.2531969309462916,
+    "recall": 0.12823834196891193,
+    "menit_alarm": 391,
+    "n_pos": 772,
+    "n_neg": 3444
+   },
+   "events": {
+    "tp_kejadian": 13,
+    "fp_kejadian": 36,
+    "n_kejadian": 49
+   },
+   "cakupan": 0.3133,
+   "menit_kalender": 13457.0,
+   "far24_kalender": 33.1478,
+   "far24_kalender_kejadian": 4.0867,
+   "garwood_atas_fp": 37.1762,
+   "fold": "F-10",
+   "model": "rule_kanal",
+   "thr_kalibrasi": 0.232067,
+   "h_terpilih": 10,
+   "lead": {
+    "n_onset": 67,
+    "n_diperingatkan": 22,
+    "lead_median_min": 4.5,
+    "lead_min_min": 1,
+    "lead_maks_min": 60
+   },
+   "separuh": {
+    "awal": {
+     "precision": 0.2233502538071066,
+     "recall": 0.13924050632911392,
+     "fp": 153,
+     "n_pos": 316
+    },
+    "akhir": {
+     "precision": 0.28350515463917525,
+     "recall": 0.1206140350877193,
+     "fp": 139,
+     "n_pos": 456
+    }
+   },
+   "auprc": 0.2464,
+   "prev": 0.183112
+  },
+  {
+   "rows": {
+    "tp": 16,
+    "fp": 41,
+    "fn": 756,
+    "tn": 3403,
+    "precision": 0.2807017543859649,
+    "recall": 0.02072538860103627,
+    "menit_alarm": 57,
+    "n_pos": 772,
+    "n_neg": 3444
+   },
+   "events": {
+    "tp_kejadian": 6,
+    "fp_kejadian": 19,
+    "n_kejadian": 25
+   },
+   "cakupan": 0.3133,
+   "menit_kalender": 13457.0,
+   "far24_kalender": 4.6543,
+   "far24_kalender_kejadian": 2.1569,
+   "garwood_atas_fp": 6.3141,
+   "fold": "F-10",
+   "model": "H4_tiga_komponen",
+   "thr_kalibrasi": 0.232067,
+   "h_terpilih": 10,
+   "lead": {
+    "n_onset": 67,
+    "n_diperingatkan": 13,
+    "lead_median_min": 8.0,
+    "lead_min_min": 1,
+    "lead_maks_min": 49
+   },
+   "separuh": {
+    "awal": {
+     "precision": null,
+     "recall": 0.0,
+     "fp": 0,
+     "n_pos": 316
+    },
+    "akhir": {
+     "precision": 0.2807017543859649,
+     "recall": 0.03508771929824561,
+     "fp": 41,
+     "n_pos": 456
+    }
+   },
+   "auprc": 0.2464,
+   "prev": 0.183112
+  },
+  {
+   "rows": {
+    "tp": 11,
+    "fp": 25,
+    "fn": 761,
+    "tn": 3419,
+    "precision": 0.3055555555555556,
+    "recall": 0.014248704663212436,
+    "menit_alarm": 36,
+    "n_pos": 772,
+    "n_neg": 3444
+   },
+   "events": {
+    "tp_kejadian": 3,
+    "fp_kejadian": 11,
+    "n_kejadian": 14
+   },
+   "cakupan": 0.3133,
+   "menit_kalender": 13457.0,
+   "far24_kalender": 2.838,
+   "far24_kalender_kejadian": 1.2487,
+   "garwood_atas_fp": 4.1894,
+   "fold": "F-10",
+   "model": "H4b_strict_ML_dan_stat_dan_rule",
+   "thr_kalibrasi": 0.232067,
+   "h_terpilih": 10,
+   "lead": {
+    "n_onset": 67,
+    "n_diperingatkan": 7,
+    "lead_median_min": 8.0,
+    "lead_min_min": 1,
+    "lead_maks_min": 50
+   },
+   "separuh": {
+    "awal": {
+     "precision": null,
+     "recall": 0.0,
+     "fp": 0,
+     "n_pos": 316
+    },
+    "akhir": {
+     "precision": 0.3055555555555556,
+     "recall": 0.02412280701754386,
+     "fp": 25,
+     "n_pos": 456
+    }
+   },
+   "auprc": 0.2464,
+   "prev": 0.183112
+  },
+  {
+   "rows": {
+    "tp": 8,
+    "fp": 31,
+    "fn": 381,
+    "tn": 95505,
+    "precision": 0.20512820512820512,
+    "recall": 0.02056555269922879,
+    "menit_alarm": 39,
+    "n_pos": 389,
+    "n_neg": 95536
+   },
+   "events": {
+    "tp_kejadian": 4,
+    "fp_kejadian": 18,
+    "n_kejadian": 22
+   },
+   "cakupan": 0.2668,
+   "menit_kalender": 359604.0,
+   "far24_kalender": 0.1243,
+   "far24_kalender_kejadian": 0.0722,
+   "garwood_atas_fp": 0.1764,
+   "fold": "F-14",
+   "model": "ML_saja",
+   "thr_kalibrasi": 0.721841,
+   "h_terpilih": 30,
+   "lead": {
+    "n_onset": 28,
+    "n_diperingatkan": 2,
+    "lead_median_min": 17.0,
+    "lead_min_min": 16,
+    "lead_maks_min": 18
+   },
+   "separuh": {
+    "awal": {
+     "precision": 0.38095238095238093,
+     "recall": 0.02056555269922879,
+     "fp": 13,
+     "n_pos": 389
+    },
+    "akhir": {
+     "precision": 0.0,
+     "recall": null,
+     "fp": 18,
+     "n_pos": 0
+    }
+   },
+   "auprc": 0.0508,
+   "prev": 0.004055
+  },
+  {
+   "rows": {
+    "tp": 30,
+    "fp": 792,
+    "fn": 359,
+    "tn": 94744,
+    "precision": 0.0364963503649635,
+    "recall": 0.07712082262210797,
+    "menit_alarm": 822,
+    "n_pos": 389,
+    "n_neg": 95536
+   },
+   "events": {
+    "tp_kejadian": 6,
+    "fp_kejadian": 71,
+    "n_kejadian": 77
+   },
+   "cakupan": 0.2668,
+   "menit_kalender": 359604.0,
+   "far24_kalender": 3.1749,
+   "far24_kalender_kejadian": 0.2846,
+   "garwood_atas_fp": 3.404,
+   "fold": "F-14",
+   "model": "stat_cusum",
+   "thr_kalibrasi": 0.721841,
+   "h_terpilih": 30,
+   "lead": {
+    "n_onset": 28,
+    "n_diperingatkan": 11,
+    "lead_median_min": 12.0,
+    "lead_min_min": 1,
+    "lead_maks_min": 59
+   },
+   "separuh": {
+    "awal": {
+     "precision": 0.042134831460674156,
+     "recall": 0.07712082262210797,
+     "fp": 682,
+     "n_pos": 389
+    },
+    "akhir": {
+     "precision": 0.0,
+     "recall": null,
+     "fp": 110,
+     "n_pos": 0
+    }
+   },
+   "auprc": 0.0508,
+   "prev": 0.004055
+  },
+  {
+   "rows": {
+    "tp": 13,
+    "fp": 695,
+    "fn": 376,
+    "tn": 94841,
+    "precision": 0.018361581920903956,
+    "recall": 0.033419023136246784,
+    "menit_alarm": 708,
+    "n_pos": 389,
+    "n_neg": 95536
+   },
+   "events": {
+    "tp_kejadian": 6,
+    "fp_kejadian": 221,
+    "n_kejadian": 227
+   },
+   "cakupan": 0.2668,
+   "menit_kalender": 359604.0,
+   "far24_kalender": 2.7861,
+   "far24_kalender_kejadian": 0.8859,
+   "garwood_atas_fp": 3.0011,
+   "fold": "F-14",
+   "model": "rule_kanal",
+   "thr_kalibrasi": 0.721841,
+   "h_terpilih": 30,
+   "lead": {
+    "n_onset": 28,
+    "n_diperingatkan": 7,
+    "lead_median_min": 11.0,
+    "lead_min_min": 1,
+    "lead_maks_min": 56
+   },
+   "separuh": {
+    "awal": {
+     "precision": 0.022608695652173914,
+     "recall": 0.033419023136246784,
+     "fp": 562,
+     "n_pos": 389
+    },
+    "akhir": {
+     "precision": 0.0,
+     "recall": null,
+     "fp": 133,
+     "n_pos": 0
+    }
+   },
+   "auprc": 0.0508,
+   "prev": 0.004055
+  },
+  {
+   "rows": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 389,
+    "tn": 95536,
+    "precision": null,
+    "recall": 0.0,
+    "menit_alarm": 0,
+    "n_pos": 389,
+    "n_neg": 95536
+   },
+   "events": {
+    "tp_kejadian": 0,
+    "fp_kejadian": 0,
+    "n_kejadian": 0
+   },
+   "cakupan": 0.2668,
+   "menit_kalender": 359604.0,
+   "far24_kalender": 0.0,
+   "far24_kalender_kejadian": 0.0,
+   "garwood_atas_fp": 0.0148,
+   "fold": "F-14",
+   "model": "H4_tiga_komponen",
+   "thr_kalibrasi": 0.721841,
+   "h_terpilih": 30,
+   "lead": {
+    "n_onset": 28,
+    "n_diperingatkan": 0,
+    "lead_median_min": null,
+    "lead_min_min": null,
+    "lead_maks_min": null
+   },
+   "separuh": {
+    "awal": {
+     "precision": null,
+     "recall": 0.0,
+     "fp": 0,
+     "n_pos": 389
+    },
+    "akhir": {
+     "precision": null,
+     "recall": null,
+     "fp": 0,
+     "n_pos": 0
+    }
+   },
+   "auprc": 0.0508,
+   "prev": 0.004055
+  },
+  {
+   "rows": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 389,
+    "tn": 95536,
+    "precision": null,
+    "recall": 0.0,
+    "menit_alarm": 0,
+    "n_pos": 389,
+    "n_neg": 95536
+   },
+   "events": {
+    "tp_kejadian": 0,
+    "fp_kejadian": 0,
+    "n_kejadian": 0
+   },
+   "cakupan": 0.2668,
+   "menit_kalender": 359604.0,
+   "far24_kalender": 0.0,
+   "far24_kalender_kejadian": 0.0,
+   "garwood_atas_fp": 0.0148,
+   "fold": "F-14",
+   "model": "H4b_strict_ML_dan_stat_dan_rule",
+   "thr_kalibrasi": 0.721841,
+   "h_terpilih": 30,
+   "lead": {
+    "n_onset": 28,
+    "n_diperingatkan": 0,
+    "lead_median_min": null,
+    "lead_min_min": null,
+    "lead_maks_min": null
+   },
+   "separuh": {
+    "awal": {
+     "precision": null,
+     "recall": 0.0,
+     "fp": 0,
+     "n_pos": 389
+    },
+    "akhir": {
+     "precision": null,
+     "recall": null,
+     "fp": 0,
+     "n_pos": 0
+    }
+   },
+   "auprc": 0.0508,
+   "prev": 0.004055
+  },
+  {
+   "rows": {
+    "tp": 0,
+    "fp": 21,
+    "fn": 311,
+    "tn": 15852,
+    "precision": 0.0,
+    "recall": 0.0,
+    "menit_alarm": 21,
+    "n_pos": 311,
+    "n_neg": 15873
+   },
+   "events": {
+    "tp_kejadian": 0,
+    "fp_kejadian": 7,
+    "n_kejadian": 7
+   },
+   "cakupan": 0.0405,
+   "menit_kalender": 399847.0,
+   "far24_kalender": 0.0757,
+   "far24_kalender_kejadian": 0.0252,
+   "garwood_atas_fp": 0.1157,
+   "fold": "F-9",
+   "model": "ML_saja",
+   "thr_kalibrasi": 0.967099,
+   "h_terpilih": 30,
+   "lead": {
+    "n_onset": 16,
+    "n_diperingatkan": 0,
+    "lead_median_min": null,
+    "lead_min_min": null,
+    "lead_maks_min": null
+   },
+   "separuh": {
+    "awal": {
+     "precision": null,
+     "recall": null,
+     "fp": 0,
+     "n_pos": 0
+    },
+    "akhir": {
+     "precision": 0.0,
+     "recall": 0.0,
+     "fp": 21,
+     "n_pos": 311
+    }
+   },
+   "auprc": 0.0504,
+   "prev": 0.019217
+  },
+  {
+   "rows": {
+    "tp": 0,
+    "fp": 98,
+    "fn": 311,
+    "tn": 15775,
+    "precision": 0.0,
+    "recall": 0.0,
+    "menit_alarm": 98,
+    "n_pos": 311,
+    "n_neg": 15873
+   },
+   "events": {
+    "tp_kejadian": 0,
+    "fp_kejadian": 8,
+    "n_kejadian": 8
+   },
+   "cakupan": 0.0405,
+   "menit_kalender": 399847.0,
+   "far24_kalender": 0.3532,
+   "far24_kalender_kejadian": 0.0288,
+   "garwood_atas_fp": 0.4304,
+   "fold": "F-9",
+   "model": "stat_cusum",
+   "thr_kalibrasi": 0.967099,
+   "h_terpilih": 30,
+   "lead": {
+    "n_onset": 16,
+    "n_diperingatkan": 0,
+    "lead_median_min": null,
+    "lead_min_min": null,
+    "lead_maks_min": null
+   },
+   "separuh": {
+    "awal": {
+     "precision": 0.0,
+     "recall": null,
+     "fp": 88,
+     "n_pos": 0
+    },
+    "akhir": {
+     "precision": 0.0,
+     "recall": 0.0,
+     "fp": 10,
+     "n_pos": 311
+    }
+   },
+   "auprc": 0.0504,
+   "prev": 0.019217
+  },
+  {
+   "rows": {
+    "tp": 0,
+    "fp": 172,
+    "fn": 311,
+    "tn": 15701,
+    "precision": 0.0,
+    "recall": 0.0,
+    "menit_alarm": 172,
+    "n_pos": 311,
+    "n_neg": 15873
+   },
+   "events": {
+    "tp_kejadian": 0,
+    "fp_kejadian": 70,
+    "n_kejadian": 70
+   },
+   "cakupan": 0.0405,
+   "menit_kalender": 399847.0,
+   "far24_kalender": 0.6199,
+   "far24_kalender_kejadian": 0.2523,
+   "garwood_atas_fp": 0.7198,
+   "fold": "F-9",
+   "model": "rule_kanal",
+   "thr_kalibrasi": 0.967099,
+   "h_terpilih": 30,
+   "lead": {
+    "n_onset": 16,
+    "n_diperingatkan": 0,
+    "lead_median_min": null,
+    "lead_min_min": null,
+    "lead_maks_min": null
+   },
+   "separuh": {
+    "awal": {
+     "precision": 0.0,
+     "recall": null,
+     "fp": 106,
+     "n_pos": 0
+    },
+    "akhir": {
+     "precision": 0.0,
+     "recall": 0.0,
+     "fp": 66,
+     "n_pos": 311
+    }
+   },
+   "auprc": 0.0504,
+   "prev": 0.019217
+  },
+  {
+   "rows": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 311,
+    "tn": 15873,
+    "precision": null,
+    "recall": 0.0,
+    "menit_alarm": 0,
+    "n_pos": 311,
+    "n_neg": 15873
+   },
+   "events": {
+    "tp_kejadian": 0,
+    "fp_kejadian": 0,
+    "n_kejadian": 0
+   },
+   "cakupan": 0.0405,
+   "menit_kalender": 399847.0,
+   "far24_kalender": 0.0,
+   "far24_kalender_kejadian": 0.0,
+   "garwood_atas_fp": 0.0133,
+   "fold": "F-9",
+   "model": "H4_tiga_komponen",
+   "thr_kalibrasi": 0.967099,
+   "h_terpilih": 30,
+   "lead": {
+    "n_onset": 16,
+    "n_diperingatkan": 0,
+    "lead_median_min": null,
+    "lead_min_min": null,
+    "lead_maks_min": null
+   },
+   "separuh": {
+    "awal": {
+     "precision": null,
+     "recall": null,
+     "fp": 0,
+     "n_pos": 0
+    },
+    "akhir": {
+     "precision": null,
+     "recall": 0.0,
+     "fp": 0,
+     "n_pos": 311
+    }
+   },
+   "auprc": 0.0504,
+   "prev": 0.019217
+  },
+  {
+   "rows": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 311,
+    "tn": 15873,
+    "precision": null,
+    "recall": 0.0,
+    "menit_alarm": 0,
+    "n_pos": 311,
+    "n_neg": 15873
+   },
+   "events": {
+    "tp_kejadian": 0,
+    "fp_kejadian": 0,
+    "n_kejadian": 0
+   },
+   "cakupan": 0.0405,
+   "menit_kalender": 399847.0,
+   "far24_kalender": 0.0,
+   "far24_kalender_kejadian": 0.0,
+   "garwood_atas_fp": 0.0133,
+   "fold": "F-9",
+   "model": "H4b_strict_ML_dan_stat_dan_rule",
+   "thr_kalibrasi": 0.967099,
+   "h_terpilih": 30,
+   "lead": {
+    "n_onset": 16,
+    "n_diperingatkan": 0,
+    "lead_median_min": null,
+    "lead_min_min": null,
+    "lead_maks_min": null
+   },
+   "separuh": {
+    "awal": {
+     "precision": null,
+     "recall": null,
+     "fp": 0,
+     "n_pos": 0
+    },
+    "akhir": {
+     "precision": null,
+     "recall": 0.0,
+     "fp": 0,
+     "n_pos": 311
+    }
+   },
+   "auprc": 0.0504,
+   "prev": 0.019217
+  },
+  {
+   "rows": {
+    "tp": 22,
+    "fp": 13,
+    "fn": 481,
+    "tn": 1726,
+    "precision": 0.6285714285714286,
+    "recall": 0.0437375745526839,
+    "menit_alarm": 35,
+    "n_pos": 503,
+    "n_neg": 1739
+   },
+   "events": {
+    "tp_kejadian": 4,
+    "fp_kejadian": 1,
+    "n_kejadian": 5
+   },
+   "cakupan": 0.2595,
+   "menit_kalender": 8640.0,
+   "far24_kalender": 2.3006,
+   "far24_kalender_kejadian": 0.177,
+   "garwood_atas_fp": 3.9341,
+   "fold": "F-9_A",
+   "model": "ML_saja",
+   "thr_kalibrasi": 0.085796,
+   "h_terpilih": 30,
+   "lead": {
+    "n_onset": 37,
+    "n_diperingatkan": 7,
+    "lead_median_min": 9.0,
+    "lead_min_min": 1,
+    "lead_maks_min": 50
+   },
+   "separuh": {
+    "awal": {
+     "precision": null,
+     "recall": 0.0,
+     "fp": 0,
+     "n_pos": 247
+    },
+    "akhir": {
+     "precision": 0.6285714285714286,
+     "recall": 0.0859375,
+     "fp": 13,
+     "n_pos": 256
+    }
+   },
+   "auprc": 0.3763,
+   "prev": 0.224353
+  },
+  {
+   "rows": {
+    "tp": 95,
+    "fp": 88,
+    "fn": 408,
+    "tn": 1651,
+    "precision": 0.5191256830601093,
+    "recall": 0.18886679920477137,
+    "menit_alarm": 183,
+    "n_pos": 503,
+    "n_neg": 1739
+   },
+   "events": {
+    "tp_kejadian": 14,
+    "fp_kejadian": 4,
+    "n_kejadian": 18
+   },
+   "cakupan": 0.2595,
+   "menit_kalender": 8640.0,
+   "far24_kalender": 15.5733,
+   "far24_kalender_kejadian": 0.7079,
+   "garwood_atas_fp": 19.1867,
+   "fold": "F-9_A",
+   "model": "stat_cusum",
+   "thr_kalibrasi": 0.085796,
+   "h_terpilih": 30,
+   "lead": {
+    "n_onset": 37,
+    "n_diperingatkan": 18,
+    "lead_median_min": 6.0,
+    "lead_min_min": 1,
+    "lead_maks_min": 47
+   },
+   "separuh": {
+    "awal": {
+     "precision": 0.6181818181818182,
+     "recall": 0.27530364372469635,
+     "fp": 42,
+     "n_pos": 247
+    },
+    "akhir": {
+     "precision": 0.3698630136986301,
+     "recall": 0.10546875,
+     "fp": 46,
+     "n_pos": 256
+    }
+   },
+   "auprc": 0.3763,
+   "prev": 0.224353
+  },
+  {
+   "rows": {
+    "tp": 116,
+    "fp": 118,
+    "fn": 387,
+    "tn": 1621,
+    "precision": 0.49572649572649574,
+    "recall": 0.23061630218687873,
+    "menit_alarm": 234,
+    "n_pos": 503,
+    "n_neg": 1739
+   },
+   "events": {
+    "tp_kejadian": 26,
+    "fp_kejadian": 26,
+    "n_kejadian": 52
+   },
+   "cakupan": 0.2595,
+   "menit_kalender": 8640.0,
+   "far24_kalender": 20.8824,
+   "far24_kalender_kejadian": 4.6012,
+   "garwood_atas_fp": 25.0078,
+   "fold": "F-9_A",
+   "model": "rule_kanal",
+   "thr_kalibrasi": 0.085796,
+   "h_terpilih": 30,
+   "lead": {
+    "n_onset": 37,
+    "n_diperingatkan": 20,
+    "lead_median_min": 2.0,
+    "lead_min_min": 1,
+    "lead_maks_min": 47
+   },
+   "separuh": {
+    "awal": {
+     "precision": 0.5084745762711864,
+     "recall": 0.3643724696356275,
+     "fp": 87,
+     "n_pos": 247
+    },
+    "akhir": {
+     "precision": 0.45614035087719296,
+     "recall": 0.1015625,
+     "fp": 31,
+     "n_pos": 256
+    }
+   },
+   "auprc": 0.3763,
+   "prev": 0.224353
+  },
+  {
+   "rows": {
+    "tp": 1,
+    "fp": 0,
+    "fn": 502,
+    "tn": 1739,
+    "precision": 1.0,
+    "recall": 0.0019880715705765406,
+    "menit_alarm": 1,
+    "n_pos": 503,
+    "n_neg": 1739
+   },
+   "events": {
+    "tp_kejadian": 1,
+    "fp_kejadian": 0,
+    "n_kejadian": 1
+   },
+   "cakupan": 0.2595,
+   "menit_kalender": 8640.0,
+   "far24_kalender": 0.0,
+   "far24_kalender_kejadian": 0.0,
+   "garwood_atas_fp": 0.6528,
+   "fold": "F-9_A",
+   "model": "H4_tiga_komponen",
+   "thr_kalibrasi": 0.085796,
+   "h_terpilih": 30,
+   "lead": {
+    "n_onset": 37,
+    "n_diperingatkan": 0,
+    "lead_median_min": null,
+    "lead_min_min": null,
+    "lead_maks_min": null
+   },
+   "separuh": {
+    "awal": {
+     "precision": null,
+     "recall": 0.0,
+     "fp": 0,
+     "n_pos": 247
+    },
+    "akhir": {
+     "precision": 1.0,
+     "recall": 0.00390625,
+     "fp": 0,
+     "n_pos": 256
+    }
+   },
+   "auprc": 0.3763,
+   "prev": 0.224353
+  },
+  {
+   "rows": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 503,
+    "tn": 1739,
+    "precision": null,
+    "recall": 0.0,
+    "menit_alarm": 0,
+    "n_pos": 503,
+    "n_neg": 1739
+   },
+   "events": {
+    "tp_kejadian": 0,
+    "fp_kejadian": 0,
+    "n_kejadian": 0
+   },
+   "cakupan": 0.2595,
+   "menit_kalender": 8640.0,
+   "far24_kalender": 0.0,
+   "far24_kalender_kejadian": 0.0,
+   "garwood_atas_fp": 0.6528,
+   "fold": "F-9_A",
+   "model": "H4b_strict_ML_dan_stat_dan_rule",
+   "thr_kalibrasi": 0.085796,
+   "h_terpilih": 30,
+   "lead": {
+    "n_onset": 37,
+    "n_diperingatkan": 0,
+    "lead_median_min": null,
+    "lead_min_min": null,
+    "lead_maks_min": null
+   },
+   "separuh": {
+    "awal": {
+     "precision": null,
+     "recall": 0.0,
+     "fp": 0,
+     "n_pos": 247
+    },
+    "akhir": {
+     "precision": null,
+     "recall": 0.0,
+     "fp": 0,
+     "n_pos": 256
+    }
+   },
+   "auprc": 0.3763,
+   "prev": 0.224353
+  }
+ ],
+ "ringkas": {
+  "H4_tiga_komponen": {
+   "n_fold": 4,
+   "fp_total": 41,
+   "tp_total": 17,
+   "recall_median": 0.001,
+   "recall_min": 0.0,
+   "recall_maks": 0.0207,
+   "precision_median": 0.6404,
+   "far24_median": 0.0,
+   "far24_min": 0.0,
+   "far24_maks": 4.6543,
+   "fold_far_le6": 4,
+   "fold_recall_gt0": 2,
+   "fp_kejadian_total": 19,
+   "lead_median_median": 8.0,
+   "n_onset": 148,
+   "n_diperingatkan": 13
+  },
+  "H4b_strict_ML_dan_stat_dan_rule": {
+   "n_fold": 4,
+   "fp_total": 25,
+   "tp_total": 11,
+   "recall_median": 0.0,
+   "recall_min": 0.0,
+   "recall_maks": 0.0142,
+   "precision_median": 0.3056,
+   "far24_median": 0.0,
+   "far24_min": 0.0,
+   "far24_maks": 2.838,
+   "fold_far_le6": 4,
+   "fold_recall_gt0": 1,
+   "fp_kejadian_total": 11,
+   "lead_median_median": 8.0,
+   "n_onset": 148,
+   "n_diperingatkan": 7
+  },
+  "ML_saja": {
+   "n_fold": 4,
+   "fp_total": 205,
+   "tp_total": 79,
+   "recall_median": 0.0322,
+   "recall_min": 0.0,
+   "recall_maks": 0.0635,
+   "precision_median": 0.2322,
+   "far24_median": 1.2125,
+   "far24_min": 0.0757,
+   "far24_maks": 15.8928,
+   "fold_far_le6": 3,
+   "fold_recall_gt0": 3,
+   "fp_kejadian_total": 68,
+   "lead_median_median": 9.0,
+   "n_onset": 148,
+   "n_diperingatkan": 36
+  },
+  "rule_kanal": {
+   "n_fold": 4,
+   "fp_total": 1277,
+   "tp_total": 228,
+   "recall_median": 0.0808,
+   "recall_min": 0.0,
+   "recall_maks": 0.2306,
+   "precision_median": 0.1358,
+   "far24_median": 11.8343,
+   "far24_min": 0.6199,
+   "far24_maks": 33.1478,
+   "fold_far_le6": 2,
+   "fold_recall_gt0": 3,
+   "fp_kejadian_total": 353,
+   "lead_median_median": 4.5,
+   "n_onset": 148,
+   "n_diperingatkan": 49
+  },
+  "stat_cusum": {
+   "n_fold": 4,
+   "fp_total": 1643,
+   "tp_total": 311,
+   "recall_median": 0.133,
+   "recall_min": 0.0,
+   "recall_maks": 0.2409,
+   "precision_median": 0.1275,
+   "far24_median": 9.3741,
+   "far24_min": 0.3532,
+   "far24_maks": 75.4907,
+   "fold_far_le6": 2,
+   "fold_recall_gt0": 3,
+   "fp_kejadian_total": 114,
+   "lead_median_median": 6.0,
+   "n_onset": 148,
+   "n_diperingatkan": 61
+  }
+ }
+}

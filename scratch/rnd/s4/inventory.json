@@ -1,0 +1,530 @@
+{
+ "kartu": "RND-S4",
+ "tujuan": "pendataan lapisan B (inspeksi, work order, jam henti, biaya)",
+ "dibuat_wib": "2026-10-28",
+ "workspace": "/mnt/d/Capstone 1(v2)",
+ "sumber_mentah": {
+  "ddr_activity_stats.json": {
+   "path": "/mnt/d/Capstone 1(v2)/data/volve/ddr.parquet",
+   "bytes": 2180278,
+   "baris": 1759,
+   "kolom": [
+    "docName",
+    "nameWell",
+    "nameWellbore",
+    "name",
+    "dTimStart",
+    "dTimEnd",
+    "versionKind",
+    "createDate",
+    "wellAlias",
+    "wellboreAlias",
+    "wellboreInfo",
+    "statusInfo",
+    "fluid",
+    "porePressure",
+    "surveyStation",
+    "activity",
+    "lithShowInfo"
+   ]
+  },
+  "labels_duration.json": {
+   "path": "/mnt/d/Capstone 1(v2)/data/volve/labels_curated_v2.csv",
+   "bytes": 519171,
+   "baris": 884,
+   "kolom": [
+    "event_id",
+    "wellbore",
+    "event_date",
+    "act_start",
+    "act_end",
+    "ddr_date_start",
+    "md",
+    "md_valid",
+    "source_code",
+    "state_detail",
+    "category",
+    "bha_relevant",
+    "evidence",
+    "match_rules",
+    "comments_full",
+    "comments_trunc300",
+    "outcome",
+    "outcome_reason",
+    "component",
+    "component_reason"
+   ]
+  },
+  "inventory_raw.json": {
+   "folder_well_technical_data": {
+    "n_files": 5473,
+    "bytes": 409920771
+   },
+   "ddr_dokumen_per_format": {
+    "html": {
+     "n_files": 1759,
+     "bytes": 30971159
+    },
+    "xml": {
+     "n_files": 1759,
+     "bytes": 21315879
+    },
+    "pdf": {
+     "n_files": 1759,
+     "bytes": 56814977
+    }
+   },
+   "katalog_volve_baris": 4035,
+   "csv_dipindai": 53
+  },
+  "ddr_downtime_table.json": {
+   "dir": "/mnt/d/Capstone 1(v2)/data/volve/external/dbx_volume/Well_technical_data/Daily Drilling Report - HTML Version",
+   "n_file_html": 1759,
+   "n_file_dibaca": 1759,
+   "n_file_error": 0
+  },
+  "crosscheck.json": {
+   "silang_total": {
+    "ddr_interruption_jam": 8343.253,
+    "ddr_interruption_n": 3577,
+    "labels_jam": 1225.0,
+    "labels_n": 884,
+    "rasio_jam": 0.1468
+   },
+   "pres_test_type": {
+    "formation integrity test": 1072,
+    "leak off test": 140
+   }
+  }
+ },
+ "kelompok": {
+  "tersedia_dan_layak": [
+   {
+    "id": "S4-C1",
+    "nama": "Record activity DDR (durasi kerja dan henti)",
+    "path": "data/volve/ddr.parquet",
+    "bytes": 2180278,
+    "n_baris": 1759,
+    "n_record_anak": 23447,
+    "kolom_kunci": [
+     "activity.dTimStart",
+     "activity.dTimEnd",
+     "activity.proprietaryCode",
+     "activity.state",
+     "activity.stateDetailActivity",
+     "activity.comments"
+    ],
+    "kolom_relevan": "durasi, kode kerja (interruption -- repair/maintain/fish/sidetrack), status ok/fail, komentar tindakan",
+    "bukti": "23.447 record, 64 kode, 8.343,253 jam interruption, 1.777,75 jam repair+maintain"
+   },
+   {
+    "id": "S4-C2",
+    "nama": "Label kejadian terkurasi dengan waktu mulai dan selesai",
+    "path": "data/volve/labels_curated_v2.csv",
+    "bytes": 519171,
+    "n_baris": 884,
+    "kolom_kunci": [
+     "act_start",
+     "act_end",
+     "category",
+     "state_detail",
+     "source_code",
+     "outcome",
+     "component"
+    ],
+    "kolom_relevan": "durasi henti, kategori kegagalan, hasil tindakan (repaired/removed/installed/monitored)",
+    "bukti": "884 kejadian, 100 persen durasi valid, total 1.225,0 jam, median 0,75 jam"
+   },
+   {
+    "id": "S4-C3",
+    "nama": "Taksonomi kode kerja DDR sebagai pengganti kode work order",
+    "path": "data/volve/ddr.parquet (kolom activity.proprietaryCode)",
+    "n_kode_unik": 64,
+    "bukti": "10 kode interruption; repair 806 record/1.215,0 jam; maintain 310 record/562,75 jam; inspect 0 record"
+   }
+  ],
+  "ada_tetapi_tidak_memadai": [
+   {
+    "id": "S4-P1",
+    "nama": "Tabel equipment failure per laporan DDR (HTML)",
+    "path": "data/volve/external/dbx_volume/Well_technical_data/Daily Drilling Report - HTML Version/*.html (table id equipmentfailureInfoTable)",
+    "n_file_memuat": 325,
+    "n_file_total": 1759,
+    "n_record": 533,
+    "kolom": [
+     "Start time",
+     "Depth mMD",
+     "Depth mTVD",
+     "Sub Equip - Syst Class",
+     "Operation Downtime (min)",
+     "Equipment Repaired",
+     "Remark"
+    ],
+    "cacat_terukur": "kolom Operation Downtime (min) bernilai 0 pada 533 dari 533 record; Equipment Repaired bernilai '00:00' pada 533 dari 533 record; hanya 23 dari 533 remark memuat durasi dalam teks",
+    "sisa_nilai": "41 kelas sistem peralatan, kedalaman, tanggal, dan remark tekstual tetap dapat dipakai sebagai register kegagalan independen"
+   },
+   {
+    "id": "S4-P2",
+    "nama": "Ringkasan 24 jam dan prakiraan 24 jam per laporan",
+    "path": "data/volve/ddr.parquet (statusInfo.sum24Hr, statusInfo.forecast24Hr)",
+    "cacat_terukur": "teks bebas, tidak terstruktur; tidak ada kuantifikasi jam henti atau biaya"
+   },
+   {
+    "id": "S4-P3",
+    "nama": "Uji integritas sumur sebagai catatan uji berjadwal",
+    "path": "data/volve/ddr.parquet (statusInfo.presTestType)",
+    "n_laporan": 1212,
+    "distribusi": {
+     "formation integrity test": 1072,
+     "leak off test": 140
+    },
+    "cacat_terukur": "hanya jenis uji (FIT/LOT), tanpa tanggal uji terpisah, tanpa hasil lolos/gagal, dan bukan inspeksi peralatan"
+   },
+   {
+    "id": "S4-P4",
+    "nama": "Dokumen DDR versi PDF dan HTML",
+    "path": "Daily Drilling Report - HTML Version (1759 file), PDF Version (1759 file), XML Version (1759 file)",
+    "cacat_terukur": "isi sama dengan parquet untuk kolom terstruktur; PDF tidak dipindai teks pada kartu ini; tidak menambah kolom biaya"
+   },
+   {
+    "id": "S4-P5",
+    "nama": "Katalog target unduhan Volve",
+    "path": "data/volve/external/volve_catalog_target_paths.csv",
+    "n_baris": 4035,
+    "kategori": {
+     "other_target": 3123,
+     "dlis_target": 468,
+     "las_target": 253,
+     "bhaRun": 175,
+     "mudLog": 16
+    },
+    "cacat_terukur": "tidak memuat kategori laporan inspeksi, work order, atau biaya"
+   }
+  ],
+  "tidak_ada": [
+   {
+    "id": "S4-N1",
+    "nama": "Biaya (cost) per kejadian atau per hari",
+    "bukti_ketiadaan": "token 'cost' 0 kemunculan pada 1759 XML DDR dan 0 kemunculan pada 1759 HTML DDR; tidak ada kolom biaya di 17 kolom parquet",
+    "dibutuhkan": "nilai biaya per operasi atau per hari dari sistem akuntansi rig (daily cost report), atau tarif rig harian plus durasi henti"
+   },
+   {
+    "id": "S4-N2",
+    "nama": "Work order bernomor",
+    "bukti_ketiadaan": "token 'work order' dan 'workorder' 0 kemunculan pada 1759 XML DDR",
+    "dibutuhkan": "nomor WO, tanggal buka/tutup, vendor, komponen, jam kerja teknisi dari CMMS"
+   },
+   {
+    "id": "S4-N3",
+    "nama": "Jadwal inspeksi fisik dan jam orang inspeksi",
+    "bukti_ketiadaan": "tidak ada kode activity 'inspect' (0 record dari 23.447); kata 'inspection' hanya muncul di teks bebas 154 kali pada 1759 laporan"
+   },
+   {
+    "id": "S4-N4",
+    "nama": "Produksi tertunda (barrel) dan nilai rupiah",
+    "bukti_ketiadaan": "tidak ada berkas produksi di workspace (pencarian nama berkas production/onstream/barrel: 0 hasil)"
+   },
+   {
+    "id": "S4-N5",
+    "nama": "Durasi henti terstruktur per kegagalan peralatan",
+    "bukti_ketiadaan": "kolom Operation Downtime (min) nol pada 533 dari 533 record tabel equipment failure"
+   }
+  ]
+ },
+ "metrik_lapisan_b": {
+  "B1_henti_perbaikan_per_kejadian": {
+   "definisi": "durasi record activity DDR berkode 'interruption -- repair' (dTimEnd - dTimStart)",
+   "n_kejadian": 806,
+   "total_jam": 1215.0,
+   "median_jam": 1.0,
+   "p90_jam": 3.5,
+   "max_jam": 12.5,
+   "sumber": "scratch/rnd/s4/ddr_activity_stats.json -> activity.durasi_per_kode['interruption -- repair']"
+  },
+  "B2_henti_maintenance_per_kejadian": {
+   "definisi": "durasi record activity DDR berkode 'interruption -- maintain'",
+   "n_kejadian": 310,
+   "total_jam": 562.75,
+   "median_jam": 1.0,
+   "p90_jam": 4.5,
+   "max_jam": 15.0,
+   "sumber": "scratch/rnd/s4/ddr_activity_stats.json -> activity.durasi_per_kode['interruption -- maintain']"
+  },
+  "B3_henti_maintenance_gabungan": {
+   "definisi": "repair + maintain (dua kode kerja maintenance di taksonomi DDR)",
+   "n_kejadian": 1116,
+   "total_jam": 1777.75,
+   "per_laporan_harian": 0.6345,
+   "jam_per_laporan_harian": 1.0107,
+   "sumber": "scratch/rnd/s4/ddr_activity_stats.json -> activity.maintenance_terkait"
+  },
+  "B4_henti_kegagalan_peralatan_berlabel": {
+   "definisi": "durasi kejadian labels_curated_v2 dengan state_detail == 'equipment failure'",
+   "n_kejadian": 770,
+   "total_jam": 1071.5,
+   "median_jam": 0.75,
+   "p90_jam": 3.0,
+   "sumber": "scratch/rnd/s4/labels_duration.json -> equipment_failure_state_detail"
+  },
+  "B5_rasio_kejadian_per_laporan_harian": {
+   "definisi": "jumlah kejadian berlabel dibagi jumlah laporan harian DDR (1759)",
+   "n_kejadian": 884,
+   "n_laporan": 1759,
+   "rasio": 0.5026,
+   "sumber": "labels_duration.json + ddr_activity_stats.json"
+  },
+  "B6_cakupan_jam_henti_berlabel": {
+   "definisi": "jam kejadian berlabel dibagi jam interruption DDR (seberapa banyak henti yang sudah diberi label)",
+   "jam_berlabel": 1225.0,
+   "jam_interruption_ddr": 8343.253,
+   "rasio": 0.1468,
+   "sumber": "scratch/rnd/s4/crosscheck.json -> silang_total.rasio_jam"
+  },
+  "B7_peringatan_terhadap_durasi_henti": {
+   "definisi": "lead median engine (dari R8/S1, menit) dibanding durasi henti repair median (jam)",
+   "lead_menit_h1_hyd": 11.5,
+   "lead_menit_rule_hyd": 6.0,
+   "henti_repair_median_jam": 1.0,
+   "henti_repair_p90_jam": 3.5,
+   "cakupan_lead_h1_persen_dari_median": 19.17,
+   "cakupan_lead_h1_persen_dari_p90": 5.48,
+   "catatan": "lead 11,5 menit berasal dari docs/RND_R8_EVALUASI_BERLAPIS.md dan docs/RND_S1_SEED_ROBUSTNESS.md (RUN-KITA), bukan dihitung ulang di kartu ini",
+   "sumber": "docs/RND_R8_EVALUASI_BERLAPIS.md (lead H1 11,5 menit; rule 6,0 menit) + ddr_activity_stats.json"
+  },
+  "B8_beban_alarm_per_kejadian": {
+   "definisi": "FP total engine dibagi jumlah kejadian yang dijadikan target (rasio alarm palsu per kejadian)",
+   "contoh_h1_hyd": {
+    "fp": 935,
+    "onset": 390,
+    "fp_per_onset": 2.3974
+   },
+   "contoh_rule_hyd": {
+    "fp": 2105,
+    "onset": 390,
+    "fp_per_onset": 5.3974
+   },
+   "catatan": "angka FP/onset dari R8, dipakai apa adanya; rasio alarm per INSPEKSI tidak dapat dihitung karena jadwal inspeksi tidak ada",
+   "sumber": "docs/RND_R8_EVALUASI_BERLAPIS.md"
+  }
+ },
+ "uji_silang": {
+  "per_wellbore": [
+   {
+    "wellbore": "NO 15/9-19 A",
+    "ddr_interruption_n": 142,
+    "ddr_interruption_jam": 962.5,
+    "labels_n": 0,
+    "labels_jam": 0.0,
+    "rasio_labels_terhadap_ddr": 0.0
+   },
+   {
+    "wellbore": "NO 15/9-19 B",
+    "ddr_interruption_n": 160,
+    "ddr_interruption_jam": 483.0,
+    "labels_n": 0,
+    "labels_jam": 0.0,
+    "rasio_labels_terhadap_ddr": 0.0
+   },
+   {
+    "wellbore": "NO 15/9-19 BT2",
+    "ddr_interruption_n": 104,
+    "ddr_interruption_jam": 269.0,
+    "labels_n": 0,
+    "labels_jam": 0.0,
+    "rasio_labels_terhadap_ddr": 0.0
+   },
+   {
+    "wellbore": "NO 15/9-19 S",
+    "ddr_interruption_n": 104,
+    "ddr_interruption_jam": 229.0,
+    "labels_n": 0,
+    "labels_jam": 0.0,
+    "rasio_labels_terhadap_ddr": 0.0
+   },
+   {
+    "wellbore": "NO 15/9-19 ST2",
+    "ddr_interruption_n": 321,
+    "ddr_interruption_jam": 1006.0,
+    "labels_n": 0,
+    "labels_jam": 0.0,
+    "rasio_labels_terhadap_ddr": 0.0
+   },
+   {
+    "wellbore": "NO 15/9-F-1",
+    "ddr_interruption_n": 50,
+    "ddr_interruption_jam": 90.25,
+    "labels_n": 0,
+    "labels_jam": 0.0,
+    "rasio_labels_terhadap_ddr": 0.0
+   },
+   {
+    "wellbore": "NO 15/9-F-1 A",
+    "ddr_interruption_n": 2,
+    "ddr_interruption_jam": 1.0,
+    "labels_n": 0,
+    "labels_jam": 0.0,
+    "rasio_labels_terhadap_ddr": 0.0
+   },
+   {
+    "wellbore": "NO 15/9-F-1 B",
+    "ddr_interruption_n": 142,
+    "ddr_interruption_jam": 363.0,
+    "labels_n": 0,
+    "labels_jam": 0.0,
+    "rasio_labels_terhadap_ddr": 0.0
+   },
+   {
+    "wellbore": "NO 15/9-F-1 C",
+    "ddr_interruption_n": 280,
+    "ddr_interruption_jam": 410.25,
+    "labels_n": 0,
+    "labels_jam": 0.0,
+    "rasio_labels_terhadap_ddr": 0.0
+   },
+   {
+    "wellbore": "NO 15/9-F-10",
+    "ddr_interruption_n": 86,
+    "ddr_interruption_jam": 132.0,
+    "labels_n": 0,
+    "labels_jam": 0.0,
+    "rasio_labels_terhadap_ddr": 0.0
+   },
+   {
+    "wellbore": "NO 15/9-F-11",
+    "ddr_interruption_n": 136,
+    "ddr_interruption_jam": 272.25,
+    "labels_n": 0,
+    "labels_jam": 0.0,
+    "rasio_labels_terhadap_ddr": 0.0
+   },
+   {
+    "wellbore": "NO 15/9-F-11 A",
+    "ddr_interruption_n": 27,
+    "ddr_interruption_jam": 95.0,
+    "labels_n": 0,
+    "labels_jam": 0.0,
+    "rasio_labels_terhadap_ddr": 0.0
+   },
+   {
+    "wellbore": "NO 15/9-F-11 B",
+    "ddr_interruption_n": 135,
+    "ddr_interruption_jam": 290.667,
+    "labels_n": 0,
+    "labels_jam": 0.0,
+    "rasio_labels_terhadap_ddr": 0.0
+   },
+   {
+    "wellbore": "NO 15/9-F-11 T2",
+    "ddr_interruption_n": 111,
+    "ddr_interruption_jam": 297.25,
+    "labels_n": 0,
+    "labels_jam": 0.0,
+    "rasio_labels_terhadap_ddr": 0.0
+   },
+   {
+    "wellbore": "NO 15/9-F-12",
+    "ddr_interruption_n": 260,
+    "ddr_interruption_jam": 628.417,
+    "labels_n": 0,
+    "labels_jam": 0.0,
+    "rasio_labels_terhadap_ddr": 0.0
+   },
+   {
+    "wellbore": "NO 15/9-F-14",
+    "ddr_interruption_n": 271,
+    "ddr_interruption_jam": 448.917,
+    "labels_n": 182,
+    "labels_jam": 269.0,
+    "rasio_labels_terhadap_ddr": 0.5992
+   },
+   {
+    "wellbore": "NO 15/9-F-15",
+    "ddr_interruption_n": 110,
+    "ddr_interruption_jam": 211.5,
+    "labels_n": 112,
+    "labels_jam": 216.5,
+    "rasio_labels_terhadap_ddr": 1.0236
+   },
+   {
+    "wellbore": "NO 15/9-F-15 A",
+    "ddr_interruption_n": 42,
+    "ddr_interruption_jam": 63.5,
+    "labels_n": 32,
+    "labels_jam": 41.0,
+    "rasio_labels_terhadap_ddr": 0.6457
+   },
+   {
+    "wellbore": "NO 15/9-F-15 B",
+    "ddr_interruption_n": 5,
+    "ddr_interruption_jam": 8.5,
+    "labels_n": 2,
+    "labels_jam": 3.5,
+    "rasio_labels_terhadap_ddr": 0.4118
+   },
+   {
+    "wellbore": "NO 15/9-F-15 C",
+    "ddr_interruption_n": 154,
+    "ddr_interruption_jam": 496.0,
+    "labels_n": 89,
+    "labels_jam": 126.0,
+    "rasio_labels_terhadap_ddr": 0.254
+   },
+   {
+    "wellbore": "NO 15/9-F-15 D",
+    "ddr_interruption_n": 319,
+    "ddr_interruption_jam": 452.25,
+    "labels_n": 122,
+    "labels_jam": 168.5,
+    "rasio_labels_terhadap_ddr": 0.3726
+   },
+   {
+    "wellbore": "NO 15/9-F-4",
+    "ddr_interruption_n": 281,
+    "ddr_interruption_jam": 670.0,
+    "labels_n": 0,
+    "labels_jam": 0.0,
+    "rasio_labels_terhadap_ddr": 0.0
+   },
+   {
+    "wellbore": "NO 15/9-F-5",
+    "ddr_interruption_n": 120,
+    "ddr_interruption_jam": 208.503,
+    "labels_n": 136,
+    "labels_jam": 146.0,
+    "rasio_labels_terhadap_ddr": 0.7002
+   },
+   {
+    "wellbore": "NO 15/9-F-7",
+    "ddr_interruption_n": 54,
+    "ddr_interruption_jam": 71.75,
+    "labels_n": 59,
+    "labels_jam": 81.5,
+    "rasio_labels_terhadap_ddr": 1.1359
+   },
+   {
+    "wellbore": "NO 15/9-F-9",
+    "ddr_interruption_n": 39,
+    "ddr_interruption_jam": 60.75,
+    "labels_n": 56,
+    "labels_jam": 85.25,
+    "rasio_labels_terhadap_ddr": 1.4033
+   },
+   {
+    "wellbore": "NO 15/9-F-9 A",
+    "ddr_interruption_n": 122,
+    "ddr_interruption_jam": 122.0,
+    "labels_n": 94,
+    "labels_jam": 87.75,
+    "rasio_labels_terhadap_ddr": 0.7193
+   }
+  ],
+  "total": {
+   "ddr_interruption_jam": 8343.253,
+   "ddr_interruption_n": 3577,
+   "labels_jam": 1225.0,
+   "labels_n": 884,
+   "rasio_jam": 0.1468
+  },
+  "catatan": "rasio jam berlabel terhadap jam interruption DDR 0,1468 secara total, tetapi 1,4033 pada F-9 karena sebagian label berasal dari kode non-interruption (drilling -- casing 135 kejadian, drilling -- trip 63, drilling -- drill 26)"
+ }
+}

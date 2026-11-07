@@ -1,0 +1,2289 @@
+{
+ "waktu_run": "2026-10-28T06:45:55.844776+07:00",
+ "dataset": {
+  "path": "/mnt/d/Capstone 1(v2)/scratch/v9_d1/datasets/hyd_ki.csv.gz",
+  "bytes": 12079029,
+  "sha256_16": "4a701ed63291e455",
+  "rows": 52509,
+  "cols": 50,
+  "n_well": 9,
+  "n_fold": 9
+ },
+ "per_well": [
+  {
+   "well": "F-10",
+   "baris_doc": 7571,
+   "baris_ukur": 7571,
+   "pos_doc": 1394,
+   "pos_ukur": 1394,
+   "menit_doc": 11249,
+   "menit_ukur": 11249,
+   "cakupan_doc": 0.673,
+   "cakupan_ukur": 0.673,
+   "delta_baris": 0,
+   "delta_pos": 0,
+   "delta_menit": 0,
+   "delta_cakupan": 0.0
+  },
+  {
+   "well": "F-12",
+   "baris_doc": 7390,
+   "baris_ukur": 7390,
+   "pos_doc": 1426,
+   "pos_ukur": 1426,
+   "menit_doc": 86454,
+   "menit_ukur": 86454,
+   "cakupan_doc": 0.0855,
+   "cakupan_ukur": 0.0855,
+   "delta_baris": 0,
+   "delta_pos": 0,
+   "delta_menit": 0,
+   "delta_cakupan": 0.0
+  },
+  {
+   "well": "F-14",
+   "baris_doc": 10401,
+   "baris_ukur": 10401,
+   "pos_doc": 865,
+   "pos_ukur": 865,
+   "menit_doc": 317679,
+   "menit_ukur": 317679,
+   "cakupan_doc": 0.0327,
+   "cakupan_ukur": 0.0327,
+   "delta_baris": 0,
+   "delta_pos": 0,
+   "delta_menit": 0,
+   "delta_cakupan": 0.0
+  },
+  {
+   "well": "F-15A",
+   "baris_doc": 6156,
+   "baris_ukur": 6156,
+   "pos_doc": 698,
+   "pos_ukur": 698,
+   "menit_doc": 32141,
+   "menit_ukur": 32141,
+   "cakupan_doc": 0.1915,
+   "cakupan_ukur": 0.1915,
+   "delta_baris": 0,
+   "delta_pos": 0,
+   "delta_menit": 0,
+   "delta_cakupan": 0.0
+  },
+  {
+   "well": "F-15_S",
+   "baris_doc": 8355,
+   "baris_ukur": 8355,
+   "pos_doc": 993,
+   "pos_ukur": 993,
+   "menit_doc": 92488,
+   "menit_ukur": 92488,
+   "cakupan_doc": 0.0903,
+   "cakupan_ukur": 0.0903,
+   "delta_baris": 0,
+   "delta_pos": 0,
+   "delta_menit": 0,
+   "delta_cakupan": 0.0
+  },
+  {
+   "well": "F-5",
+   "baris_doc": 6332,
+   "baris_ukur": 6332,
+   "pos_doc": 621,
+   "pos_ukur": 621,
+   "menit_doc": 369549,
+   "menit_ukur": 369549,
+   "cakupan_doc": 0.0171,
+   "cakupan_ukur": 0.0171,
+   "delta_baris": 0,
+   "delta_pos": 0,
+   "delta_menit": 0,
+   "delta_cakupan": 0.0
+  },
+  {
+   "well": "F-7",
+   "baris_doc": 2482,
+   "baris_ukur": 2482,
+   "pos_doc": 421,
+   "pos_ukur": 421,
+   "menit_doc": 23011,
+   "menit_ukur": 23011,
+   "cakupan_doc": 0.1079,
+   "cakupan_ukur": 0.1079,
+   "delta_baris": 0,
+   "delta_pos": 0,
+   "delta_menit": 0,
+   "delta_cakupan": 0.0
+  },
+  {
+   "well": "F-9",
+   "baris_doc": 1616,
+   "baris_ukur": 1616,
+   "pos_doc": 423,
+   "pos_ukur": 423,
+   "menit_doc": 22858,
+   "menit_ukur": 22858,
+   "cakupan_doc": 0.0707,
+   "cakupan_ukur": 0.0707,
+   "delta_baris": 0,
+   "delta_pos": 0,
+   "delta_menit": 0,
+   "delta_cakupan": 0.0
+  },
+  {
+   "well": "F-9_A",
+   "baris_doc": 2206,
+   "baris_ukur": 2206,
+   "pos_doc": 331,
+   "pos_ukur": 331,
+   "menit_doc": 7344,
+   "menit_ukur": 7344,
+   "cakupan_doc": 0.3004,
+   "cakupan_ukur": 0.3004,
+   "delta_baris": 0,
+   "delta_pos": 0,
+   "delta_menit": 0,
+   "delta_cakupan": 0.0
+  }
+ ],
+ "rerun": {
+  "42": {
+   "ringkas": {
+    "n_fold": 9,
+    "fp_total": 935,
+    "tp_total": 3804,
+    "fp_kejadian_total": 263,
+    "precision_median": 0.7789,
+    "precision_min": 0.6733,
+    "precision_maks": 0.9287,
+    "recall_median": 0.5638,
+    "recall_min": 0.3927,
+    "recall_maks": 0.6602,
+    "far24_kalender_median": 3.5302,
+    "far24_kalender_min": 0.4059,
+    "far24_kalender_maks": 8.9132,
+    "far24_kalender_rentang": 8.5073,
+    "far24_baris_median": 32.256,
+    "far24_baris_min": 14.2205,
+    "far24_baris_maks": 66.3873,
+    "cakupan_median": 0.0903,
+    "lead_median_median": 11.5,
+    "lead_median_min": 2.0,
+    "lead_median_maks": 38.0,
+    "n_onset": 390,
+    "n_diperingatkan": 219,
+    "fold_far_le6": 7,
+    "fold_gate_A_baru": 0,
+    "fold_recall_gt0": 9
+   },
+   "folds": [
+    {
+     "cakupan": 0.673,
+     "menit_kalender": 11249.0,
+     "menit_neg_kalender": 9855.0,
+     "far24_kalender": 8.9132,
+     "far24_baris": 14.2205,
+     "gate_A_baru": false,
+     "fold": "F-10",
+     "model": "H1_stat_dan_rule",
+     "h_terpilih": 30.0,
+     "cal_well": "F-12",
+     "n": 7571,
+     "n_pos": 1394,
+     "tp": 794,
+     "fp": 61,
+     "precision": 0.928654970760234,
+     "recall": 0.569583931133429,
+     "lead_median": 18.5,
+     "n_onset": 23,
+     "n_diperingatkan": 10
+    },
+    {
+     "cakupan": 0.0855,
+     "menit_kalender": 86454.0,
+     "menit_neg_kalender": 85028.0,
+     "far24_kalender": 2.5234,
+     "far24_baris": 35.9759,
+     "gate_A_baru": false,
+     "fold": "F-12",
+     "model": "H1_stat_dan_rule",
+     "h_terpilih": 30.0,
+     "cal_well": "F-10",
+     "n": 7390,
+     "n_pos": 1426,
+     "tp": 804,
+     "fp": 149,
+     "precision": 0.8436516264428122,
+     "recall": 0.5638148667601683,
+     "lead_median": 11.5,
+     "n_onset": 92,
+     "n_diperingatkan": 56
+    },
+    {
+     "cakupan": 0.0327,
+     "menit_kalender": 317679.0,
+     "menit_neg_kalender": 316814.0,
+     "far24_kalender": 0.9772,
+     "far24_baris": 32.4664,
+     "gate_A_baru": false,
+     "fold": "F-14",
+     "model": "H1_stat_dan_rule",
+     "h_terpilih": 30.0,
+     "cal_well": "F-10",
+     "n": 10401,
+     "n_pos": 865,
+     "tp": 443,
+     "fp": 215,
+     "precision": 0.6732522796352584,
+     "recall": 0.5121387283236994,
+     "lead_median": 11.0,
+     "n_onset": 58,
+     "n_diperingatkan": 37
+    },
+    {
+     "cakupan": 0.1915,
+     "menit_kalender": 32141.0,
+     "menit_neg_kalender": 31443.0,
+     "far24_kalender": 4.6255,
+     "far24_baris": 26.6471,
+     "gate_A_baru": false,
+     "fold": "F-15A",
+     "model": "H1_stat_dan_rule",
+     "h_terpilih": 30.0,
+     "cal_well": "F-10",
+     "n": 6156,
+     "n_pos": 698,
+     "tp": 288,
+     "fp": 101,
+     "precision": 0.7403598971722365,
+     "recall": 0.41260744985673353,
+     "lead_median": 8.0,
+     "n_onset": 33,
+     "n_diperingatkan": 22
+    },
+    {
+     "cakupan": 0.0903,
+     "menit_kalender": 92488.0,
+     "menit_neg_kalender": 91495.0,
+     "far24_kalender": 1.9358,
+     "far24_baris": 24.0587,
+     "gate_A_baru": false,
+     "fold": "F-15_S",
+     "model": "H1_stat_dan_rule",
+     "h_terpilih": 30.0,
+     "cal_well": "F-10",
+     "n": 8355,
+     "n_pos": 993,
+     "tp": 390,
+     "fp": 123,
+     "precision": 0.7602339181286549,
+     "recall": 0.39274924471299094,
+     "lead_median": 12.0,
+     "n_onset": 64,
+     "n_diperingatkan": 27
+    },
+    {
+     "cakupan": 0.0171,
+     "menit_kalender": 369549.0,
+     "menit_neg_kalender": 368928.0,
+     "far24_kalender": 0.4059,
+     "far24_baris": 26.2231,
+     "gate_A_baru": false,
+     "fold": "F-5",
+     "model": "H1_stat_dan_rule",
+     "h_terpilih": 30.0,
+     "cal_well": "F-10",
+     "n": 6332,
+     "n_pos": 621,
+     "tp": 410,
+     "fp": 104,
+     "precision": 0.7976653696498055,
+     "recall": 0.6602254428341385,
+     "lead_median": 5.0,
+     "n_onset": 40,
+     "n_diperingatkan": 25
+    },
+    {
+     "cakupan": 0.1079,
+     "menit_kalender": 23011.0,
+     "menit_neg_kalender": 22590.0,
+     "far24_kalender": 5.4183,
+     "far24_baris": 59.3886,
+     "gate_A_baru": false,
+     "fold": "F-7",
+     "model": "H1_stat_dan_rule",
+     "h_terpilih": 30.0,
+     "cal_well": "F-10",
+     "n": 2482,
+     "n_pos": 421,
+     "tp": 271,
+     "fp": 85,
+     "precision": 0.7612359550561798,
+     "recall": 0.6437054631828979,
+     "lead_median": 16.0,
+     "n_onset": 28,
+     "n_diperingatkan": 15
+    },
+    {
+     "cakupan": 0.0707,
+     "menit_kalender": 22858.0,
+     "menit_neg_kalender": 22435.0,
+     "far24_kalender": 3.5302,
+     "far24_baris": 66.3873,
+     "gate_A_baru": false,
+     "fold": "F-9",
+     "model": "H1_stat_dan_rule",
+     "h_terpilih": 30.0,
+     "cal_well": "F-10",
+     "n": 1616,
+     "n_pos": 423,
+     "tp": 256,
+     "fp": 55,
+     "precision": 0.8231511254019293,
+     "recall": 0.6052009456264775,
+     "lead_median": 2.0,
+     "n_onset": 28,
+     "n_diperingatkan": 18
+    },
+    {
+     "cakupan": 0.3004,
+     "menit_kalender": 7344.0,
+     "menit_neg_kalender": 7013.0,
+     "far24_kalender": 8.624,
+     "far24_baris": 32.256,
+     "gate_A_baru": false,
+     "fold": "F-9_A",
+     "model": "H1_stat_dan_rule",
+     "h_terpilih": 30.0,
+     "cal_well": "F-10",
+     "n": 2206,
+     "n_pos": 331,
+     "tp": 148,
+     "fp": 42,
+     "precision": 0.7789473684210526,
+     "recall": 0.4471299093655589,
+     "lead_median": 38.0,
+     "n_onset": 24,
+     "n_diperingatkan": 9
+    }
+   ]
+  },
+  "13": {
+   "ringkas": {
+    "n_fold": 9,
+    "fp_total": 935,
+    "tp_total": 3804,
+    "fp_kejadian_total": 263,
+    "precision_median": 0.7789,
+    "precision_min": 0.6733,
+    "precision_maks": 0.9287,
+    "recall_median": 0.5638,
+    "recall_min": 0.3927,
+    "recall_maks": 0.6602,
+    "far24_kalender_median": 3.5302,
+    "far24_kalender_min": 0.4059,
+    "far24_kalender_maks": 8.9132,
+    "far24_kalender_rentang": 8.5073,
+    "far24_baris_median": 32.256,
+    "far24_baris_min": 14.2205,
+    "far24_baris_maks": 66.3873,
+    "cakupan_median": 0.0903,
+    "lead_median_median": 11.5,
+    "lead_median_min": 2.0,
+    "lead_median_maks": 38.0,
+    "n_onset": 390,
+    "n_diperingatkan": 219,
+    "fold_far_le6": 7,
+    "fold_gate_A_baru": 0,
+    "fold_recall_gt0": 9
+   },
+   "folds": [
+    {
+     "cakupan": 0.673,
+     "menit_kalender": 11249.0,
+     "menit_neg_kalender": 9855.0,
+     "far24_kalender": 8.9132,
+     "far24_baris": 14.2205,
+     "gate_A_baru": false,
+     "fold": "F-10",
+     "model": "H1_stat_dan_rule",
+     "h_terpilih": 30.0,
+     "cal_well": "F-12",
+     "n": 7571,
+     "n_pos": 1394,
+     "tp": 794,
+     "fp": 61,
+     "precision": 0.928654970760234,
+     "recall": 0.569583931133429,
+     "lead_median": 18.5,
+     "n_onset": 23,
+     "n_diperingatkan": 10
+    },
+    {
+     "cakupan": 0.0855,
+     "menit_kalender": 86454.0,
+     "menit_neg_kalender": 85028.0,
+     "far24_kalender": 2.5234,
+     "far24_baris": 35.9759,
+     "gate_A_baru": false,
+     "fold": "F-12",
+     "model": "H1_stat_dan_rule",
+     "h_terpilih": 30.0,
+     "cal_well": "F-10",
+     "n": 7390,
+     "n_pos": 1426,
+     "tp": 804,
+     "fp": 149,
+     "precision": 0.8436516264428122,
+     "recall": 0.5638148667601683,
+     "lead_median": 11.5,
+     "n_onset": 92,
+     "n_diperingatkan": 56
+    },
+    {
+     "cakupan": 0.0327,
+     "menit_kalender": 317679.0,
+     "menit_neg_kalender": 316814.0,
+     "far24_kalender": 0.9772,
+     "far24_baris": 32.4664,
+     "gate_A_baru": false,
+     "fold": "F-14",
+     "model": "H1_stat_dan_rule",
+     "h_terpilih": 30.0,
+     "cal_well": "F-10",
+     "n": 10401,
+     "n_pos": 865,
+     "tp": 443,
+     "fp": 215,
+     "precision": 0.6732522796352584,
+     "recall": 0.5121387283236994,
+     "lead_median": 11.0,
+     "n_onset": 58,
+     "n_diperingatkan": 37
+    },
+    {
+     "cakupan": 0.1915,
+     "menit_kalender": 32141.0,
+     "menit_neg_kalender": 31443.0,
+     "far24_kalender": 4.6255,
+     "far24_baris": 26.6471,
+     "gate_A_baru": false,
+     "fold": "F-15A",
+     "model": "H1_stat_dan_rule",
+     "h_terpilih": 30.0,
+     "cal_well": "F-10",
+     "n": 6156,
+     "n_pos": 698,
+     "tp": 288,
+     "fp": 101,
+     "precision": 0.7403598971722365,
+     "recall": 0.41260744985673353,
+     "lead_median": 8.0,
+     "n_onset": 33,
+     "n_diperingatkan": 22
+    },
+    {
+     "cakupan": 0.0903,
+     "menit_kalender": 92488.0,
+     "menit_neg_kalender": 91495.0,
+     "far24_kalender": 1.9358,
+     "far24_baris": 24.0587,
+     "gate_A_baru": false,
+     "fold": "F-15_S",
+     "model": "H1_stat_dan_rule",
+     "h_terpilih": 30.0,
+     "cal_well": "F-10",
+     "n": 8355,
+     "n_pos": 993,
+     "tp": 390,
+     "fp": 123,
+     "precision": 0.7602339181286549,
+     "recall": 0.39274924471299094,
+     "lead_median": 12.0,
+     "n_onset": 64,
+     "n_diperingatkan": 27
+    },
+    {
+     "cakupan": 0.0171,
+     "menit_kalender": 369549.0,
+     "menit_neg_kalender": 368928.0,
+     "far24_kalender": 0.4059,
+     "far24_baris": 26.2231,
+     "gate_A_baru": false,
+     "fold": "F-5",
+     "model": "H1_stat_dan_rule",
+     "h_terpilih": 30.0,
+     "cal_well": "F-10",
+     "n": 6332,
+     "n_pos": 621,
+     "tp": 410,
+     "fp": 104,
+     "precision": 0.7976653696498055,
+     "recall": 0.6602254428341385,
+     "lead_median": 5.0,
+     "n_onset": 40,
+     "n_diperingatkan": 25
+    },
+    {
+     "cakupan": 0.1079,
+     "menit_kalender": 23011.0,
+     "menit_neg_kalender": 22590.0,
+     "far24_kalender": 5.4183,
+     "far24_baris": 59.3886,
+     "gate_A_baru": false,
+     "fold": "F-7",
+     "model": "H1_stat_dan_rule",
+     "h_terpilih": 30.0,
+     "cal_well": "F-10",
+     "n": 2482,
+     "n_pos": 421,
+     "tp": 271,
+     "fp": 85,
+     "precision": 0.7612359550561798,
+     "recall": 0.6437054631828979,
+     "lead_median": 16.0,
+     "n_onset": 28,
+     "n_diperingatkan": 15
+    },
+    {
+     "cakupan": 0.0707,
+     "menit_kalender": 22858.0,
+     "menit_neg_kalender": 22435.0,
+     "far24_kalender": 3.5302,
+     "far24_baris": 66.3873,
+     "gate_A_baru": false,
+     "fold": "F-9",
+     "model": "H1_stat_dan_rule",
+     "h_terpilih": 30.0,
+     "cal_well": "F-10",
+     "n": 1616,
+     "n_pos": 423,
+     "tp": 256,
+     "fp": 55,
+     "precision": 0.8231511254019293,
+     "recall": 0.6052009456264775,
+     "lead_median": 2.0,
+     "n_onset": 28,
+     "n_diperingatkan": 18
+    },
+    {
+     "cakupan": 0.3004,
+     "menit_kalender": 7344.0,
+     "menit_neg_kalender": 7013.0,
+     "far24_kalender": 8.624,
+     "far24_baris": 32.256,
+     "gate_A_baru": false,
+     "fold": "F-9_A",
+     "model": "H1_stat_dan_rule",
+     "h_terpilih": 30.0,
+     "cal_well": "F-10",
+     "n": 2206,
+     "n_pos": 331,
+     "tp": 148,
+     "fp": 42,
+     "precision": 0.7789473684210526,
+     "recall": 0.4471299093655589,
+     "lead_median": 38.0,
+     "n_onset": 24,
+     "n_diperingatkan": 9
+    }
+   ]
+  }
+ },
+ "banding_dok_51": [
+  {
+   "metrik": "fp_total",
+   "seed": 42,
+   "dokumen": 935.0,
+   "ukur_ulang": 935,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "metrik": "fp_total",
+   "seed": 13,
+   "dokumen": 935.0,
+   "ukur_ulang": 935,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "metrik": "tp_total",
+   "seed": 42,
+   "dokumen": 3804.0,
+   "ukur_ulang": 3804,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "metrik": "tp_total",
+   "seed": 13,
+   "dokumen": 3804.0,
+   "ukur_ulang": 3804,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "metrik": "precision_median",
+   "seed": 42,
+   "dokumen": 0.7789,
+   "ukur_ulang": 0.7789,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "metrik": "precision_median",
+   "seed": 13,
+   "dokumen": 0.7789,
+   "ukur_ulang": 0.7789,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "metrik": "recall_median",
+   "seed": 42,
+   "dokumen": 0.5638,
+   "ukur_ulang": 0.5638,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "metrik": "recall_median",
+   "seed": 13,
+   "dokumen": 0.5638,
+   "ukur_ulang": 0.5638,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "metrik": "far24_kalender_median",
+   "seed": 42,
+   "dokumen": 3.5302,
+   "ukur_ulang": 3.5302,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "metrik": "far24_kalender_median",
+   "seed": 13,
+   "dokumen": 3.5302,
+   "ukur_ulang": 3.5302,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "metrik": "far24_kalender_min",
+   "seed": 42,
+   "dokumen": 0.4059,
+   "ukur_ulang": 0.4059,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "metrik": "far24_kalender_min",
+   "seed": 13,
+   "dokumen": 0.4059,
+   "ukur_ulang": 0.4059,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "metrik": "far24_kalender_maks",
+   "seed": 42,
+   "dokumen": 8.9132,
+   "ukur_ulang": 8.9132,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "metrik": "far24_kalender_maks",
+   "seed": 13,
+   "dokumen": 8.9132,
+   "ukur_ulang": 8.9132,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "metrik": "far24_baris_median",
+   "seed": 42,
+   "dokumen": 32.256,
+   "ukur_ulang": 32.256,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "metrik": "far24_baris_median",
+   "seed": 13,
+   "dokumen": 32.256,
+   "ukur_ulang": 32.256,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "metrik": "lead_median_median",
+   "seed": 42,
+   "dokumen": 11.5,
+   "ukur_ulang": 11.5,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "metrik": "lead_median_median",
+   "seed": 13,
+   "dokumen": 11.5,
+   "ukur_ulang": 11.5,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "metrik": "n_diperingatkan",
+   "seed": 42,
+   "dokumen": 219.0,
+   "ukur_ulang": 219,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "metrik": "n_diperingatkan",
+   "seed": 13,
+   "dokumen": 219.0,
+   "ukur_ulang": 219,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "metrik": "fold_far_le6",
+   "seed": 42,
+   "dokumen": 7.0,
+   "ukur_ulang": 7,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "metrik": "fold_far_le6",
+   "seed": 13,
+   "dokumen": 7.0,
+   "ukur_ulang": 7,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "metrik": "fold_gate_A_baru",
+   "seed": 42,
+   "dokumen": 0.0,
+   "ukur_ulang": 0,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "metrik": "fold_gate_A_baru",
+   "seed": 13,
+   "dokumen": 0.0,
+   "ukur_ulang": 0,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "metrik": "cakupan_median",
+   "seed": 42,
+   "dokumen": 0.0903,
+   "ukur_ulang": 0.0903,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "metrik": "cakupan_median",
+   "seed": 13,
+   "dokumen": 0.0903,
+   "ukur_ulang": 0.0903,
+   "selisih": 0.0,
+   "lulus": true
+  }
+ ],
+ "banding_dok_4_perfold": [
+  {
+   "fold": "F-10",
+   "metrik": "FP",
+   "dokumen": 61.0,
+   "ukur_ulang": 61,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "fold": "F-10",
+   "metrik": "TP",
+   "dokumen": 794.0,
+   "ukur_ulang": 794,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "fold": "F-10",
+   "metrik": "h",
+   "dokumen": 30.0,
+   "ukur_ulang": 30.0,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "fold": "F-12",
+   "metrik": "FP",
+   "dokumen": 149.0,
+   "ukur_ulang": 149,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "fold": "F-12",
+   "metrik": "TP",
+   "dokumen": 804.0,
+   "ukur_ulang": 804,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "fold": "F-12",
+   "metrik": "h",
+   "dokumen": 30.0,
+   "ukur_ulang": 30.0,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "fold": "F-14",
+   "metrik": "FP",
+   "dokumen": 215.0,
+   "ukur_ulang": 215,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "fold": "F-14",
+   "metrik": "TP",
+   "dokumen": 443.0,
+   "ukur_ulang": 443,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "fold": "F-14",
+   "metrik": "h",
+   "dokumen": 30.0,
+   "ukur_ulang": 30.0,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "fold": "F-15A",
+   "metrik": "FP",
+   "dokumen": 101.0,
+   "ukur_ulang": 101,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "fold": "F-15A",
+   "metrik": "TP",
+   "dokumen": 288.0,
+   "ukur_ulang": 288,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "fold": "F-15A",
+   "metrik": "h",
+   "dokumen": 30.0,
+   "ukur_ulang": 30.0,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "fold": "F-15_S",
+   "metrik": "FP",
+   "dokumen": 123.0,
+   "ukur_ulang": 123,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "fold": "F-15_S",
+   "metrik": "TP",
+   "dokumen": 390.0,
+   "ukur_ulang": 390,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "fold": "F-15_S",
+   "metrik": "h",
+   "dokumen": 30.0,
+   "ukur_ulang": 30.0,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "fold": "F-5",
+   "metrik": "FP",
+   "dokumen": 104.0,
+   "ukur_ulang": 104,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "fold": "F-5",
+   "metrik": "TP",
+   "dokumen": 410.0,
+   "ukur_ulang": 410,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "fold": "F-5",
+   "metrik": "h",
+   "dokumen": 30.0,
+   "ukur_ulang": 30.0,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "fold": "F-7",
+   "metrik": "FP",
+   "dokumen": 85.0,
+   "ukur_ulang": 85,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "fold": "F-7",
+   "metrik": "TP",
+   "dokumen": 271.0,
+   "ukur_ulang": 271,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "fold": "F-7",
+   "metrik": "h",
+   "dokumen": 30.0,
+   "ukur_ulang": 30.0,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "fold": "F-9",
+   "metrik": "FP",
+   "dokumen": 55.0,
+   "ukur_ulang": 55,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "fold": "F-9",
+   "metrik": "TP",
+   "dokumen": 256.0,
+   "ukur_ulang": 256,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "fold": "F-9",
+   "metrik": "h",
+   "dokumen": 30.0,
+   "ukur_ulang": 30.0,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "fold": "F-9_A",
+   "metrik": "FP",
+   "dokumen": 42.0,
+   "ukur_ulang": 42,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "fold": "F-9_A",
+   "metrik": "TP",
+   "dokumen": 148.0,
+   "ukur_ulang": 148,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "fold": "F-9_A",
+   "metrik": "h",
+   "dokumen": 30.0,
+   "ukur_ulang": 30.0,
+   "selisih": 0.0,
+   "lulus": true
+  }
+ ],
+ "banding_dok_61": [
+  {
+   "fold": "F-10",
+   "metrik": "TP",
+   "dokumen": 794.0,
+   "ukur_ulang": 794,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "fold": "F-10",
+   "metrik": "FP",
+   "dokumen": 61.0,
+   "ukur_ulang": 61,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "fold": "F-10",
+   "metrik": "Presisi",
+   "dokumen": 0.9287,
+   "ukur_ulang": 0.928654970760234,
+   "selisih": -4.5e-05,
+   "lulus": true
+  },
+  {
+   "fold": "F-10",
+   "metrik": "Recall",
+   "dokumen": 0.5696,
+   "ukur_ulang": 0.569583931133429,
+   "selisih": -1.6e-05,
+   "lulus": true
+  },
+  {
+   "fold": "F-10",
+   "metrik": "Lead median",
+   "dokumen": 18.5,
+   "ukur_ulang": 18.5,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "fold": "F-10",
+   "metrik": "Diperingatkan",
+   "dokumen": 10.0,
+   "ukur_ulang": 10,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "fold": "F-10",
+   "metrik": "FAR24 kalender",
+   "dokumen": 8.9132,
+   "ukur_ulang": 8.9132,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "fold": "F-10",
+   "metrik": "FAR24 baris",
+   "dokumen": 14.2205,
+   "ukur_ulang": 14.2205,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "fold": "F-10",
+   "metrik": "Cakupan",
+   "dokumen": 0.673,
+   "ukur_ulang": 0.673,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "fold": "F-10",
+   "metrik": "h",
+   "dokumen": 30.0,
+   "ukur_ulang": 30.0,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "fold": "F-12",
+   "metrik": "TP",
+   "dokumen": 804.0,
+   "ukur_ulang": 804,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "fold": "F-12",
+   "metrik": "FP",
+   "dokumen": 149.0,
+   "ukur_ulang": 149,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "fold": "F-12",
+   "metrik": "Presisi",
+   "dokumen": 0.8437,
+   "ukur_ulang": 0.8436516264428122,
+   "selisih": -4.8e-05,
+   "lulus": true
+  },
+  {
+   "fold": "F-12",
+   "metrik": "Recall",
+   "dokumen": 0.5638,
+   "ukur_ulang": 0.5638148667601683,
+   "selisih": 1.5e-05,
+   "lulus": true
+  },
+  {
+   "fold": "F-12",
+   "metrik": "Lead median",
+   "dokumen": 11.5,
+   "ukur_ulang": 11.5,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "fold": "F-12",
+   "metrik": "Diperingatkan",
+   "dokumen": 56.0,
+   "ukur_ulang": 56,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "fold": "F-12",
+   "metrik": "FAR24 kalender",
+   "dokumen": 2.5234,
+   "ukur_ulang": 2.5234,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "fold": "F-12",
+   "metrik": "FAR24 baris",
+   "dokumen": 35.9759,
+   "ukur_ulang": 35.9759,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "fold": "F-12",
+   "metrik": "Cakupan",
+   "dokumen": 0.0855,
+   "ukur_ulang": 0.0855,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "fold": "F-12",
+   "metrik": "h",
+   "dokumen": 30.0,
+   "ukur_ulang": 30.0,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "fold": "F-14",
+   "metrik": "TP",
+   "dokumen": 443.0,
+   "ukur_ulang": 443,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "fold": "F-14",
+   "metrik": "FP",
+   "dokumen": 215.0,
+   "ukur_ulang": 215,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "fold": "F-14",
+   "metrik": "Presisi",
+   "dokumen": 0.6733,
+   "ukur_ulang": 0.6732522796352584,
+   "selisih": -4.8e-05,
+   "lulus": true
+  },
+  {
+   "fold": "F-14",
+   "metrik": "Recall",
+   "dokumen": 0.5121,
+   "ukur_ulang": 0.5121387283236994,
+   "selisih": 3.9e-05,
+   "lulus": true
+  },
+  {
+   "fold": "F-14",
+   "metrik": "Lead median",
+   "dokumen": 11.0,
+   "ukur_ulang": 11.0,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "fold": "F-14",
+   "metrik": "Diperingatkan",
+   "dokumen": 37.0,
+   "ukur_ulang": 37,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "fold": "F-14",
+   "metrik": "FAR24 kalender",
+   "dokumen": 0.9772,
+   "ukur_ulang": 0.9772,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "fold": "F-14",
+   "metrik": "FAR24 baris",
+   "dokumen": 32.4664,
+   "ukur_ulang": 32.4664,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "fold": "F-14",
+   "metrik": "Cakupan",
+   "dokumen": 0.0327,
+   "ukur_ulang": 0.0327,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "fold": "F-14",
+   "metrik": "h",
+   "dokumen": 30.0,
+   "ukur_ulang": 30.0,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "fold": "F-15A",
+   "metrik": "TP",
+   "dokumen": 288.0,
+   "ukur_ulang": 288,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "fold": "F-15A",
+   "metrik": "FP",
+   "dokumen": 101.0,
+   "ukur_ulang": 101,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "fold": "F-15A",
+   "metrik": "Presisi",
+   "dokumen": 0.7404,
+   "ukur_ulang": 0.7403598971722365,
+   "selisih": -4e-05,
+   "lulus": true
+  },
+  {
+   "fold": "F-15A",
+   "metrik": "Recall",
+   "dokumen": 0.4126,
+   "ukur_ulang": 0.41260744985673353,
+   "selisih": 7e-06,
+   "lulus": true
+  },
+  {
+   "fold": "F-15A",
+   "metrik": "Lead median",
+   "dokumen": 8.0,
+   "ukur_ulang": 8.0,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "fold": "F-15A",
+   "metrik": "Diperingatkan",
+   "dokumen": 22.0,
+   "ukur_ulang": 22,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "fold": "F-15A",
+   "metrik": "FAR24 kalender",
+   "dokumen": 4.6255,
+   "ukur_ulang": 4.6255,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "fold": "F-15A",
+   "metrik": "FAR24 baris",
+   "dokumen": 26.6471,
+   "ukur_ulang": 26.6471,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "fold": "F-15A",
+   "metrik": "Cakupan",
+   "dokumen": 0.1915,
+   "ukur_ulang": 0.1915,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "fold": "F-15A",
+   "metrik": "h",
+   "dokumen": 30.0,
+   "ukur_ulang": 30.0,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "fold": "F-15_S",
+   "metrik": "TP",
+   "dokumen": 390.0,
+   "ukur_ulang": 390,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "fold": "F-15_S",
+   "metrik": "FP",
+   "dokumen": 123.0,
+   "ukur_ulang": 123,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "fold": "F-15_S",
+   "metrik": "Presisi",
+   "dokumen": 0.7602,
+   "ukur_ulang": 0.7602339181286549,
+   "selisih": 3.4e-05,
+   "lulus": true
+  },
+  {
+   "fold": "F-15_S",
+   "metrik": "Recall",
+   "dokumen": 0.3927,
+   "ukur_ulang": 0.39274924471299094,
+   "selisih": 4.9e-05,
+   "lulus": true
+  },
+  {
+   "fold": "F-15_S",
+   "metrik": "Lead median",
+   "dokumen": 12.0,
+   "ukur_ulang": 12.0,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "fold": "F-15_S",
+   "metrik": "Diperingatkan",
+   "dokumen": 27.0,
+   "ukur_ulang": 27,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "fold": "F-15_S",
+   "metrik": "FAR24 kalender",
+   "dokumen": 1.9358,
+   "ukur_ulang": 1.9358,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "fold": "F-15_S",
+   "metrik": "FAR24 baris",
+   "dokumen": 24.0587,
+   "ukur_ulang": 24.0587,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "fold": "F-15_S",
+   "metrik": "Cakupan",
+   "dokumen": 0.0903,
+   "ukur_ulang": 0.0903,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "fold": "F-15_S",
+   "metrik": "h",
+   "dokumen": 30.0,
+   "ukur_ulang": 30.0,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "fold": "F-5",
+   "metrik": "TP",
+   "dokumen": 410.0,
+   "ukur_ulang": 410,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "fold": "F-5",
+   "metrik": "FP",
+   "dokumen": 104.0,
+   "ukur_ulang": 104,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "fold": "F-5",
+   "metrik": "Presisi",
+   "dokumen": 0.7977,
+   "ukur_ulang": 0.7976653696498055,
+   "selisih": -3.5e-05,
+   "lulus": true
+  },
+  {
+   "fold": "F-5",
+   "metrik": "Recall",
+   "dokumen": 0.6602,
+   "ukur_ulang": 0.6602254428341385,
+   "selisih": 2.5e-05,
+   "lulus": true
+  },
+  {
+   "fold": "F-5",
+   "metrik": "Lead median",
+   "dokumen": 5.0,
+   "ukur_ulang": 5.0,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "fold": "F-5",
+   "metrik": "Diperingatkan",
+   "dokumen": 25.0,
+   "ukur_ulang": 25,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "fold": "F-5",
+   "metrik": "FAR24 kalender",
+   "dokumen": 0.4059,
+   "ukur_ulang": 0.4059,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "fold": "F-5",
+   "metrik": "FAR24 baris",
+   "dokumen": 26.2231,
+   "ukur_ulang": 26.2231,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "fold": "F-5",
+   "metrik": "Cakupan",
+   "dokumen": 0.0171,
+   "ukur_ulang": 0.0171,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "fold": "F-5",
+   "metrik": "h",
+   "dokumen": 30.0,
+   "ukur_ulang": 30.0,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "fold": "F-7",
+   "metrik": "TP",
+   "dokumen": 271.0,
+   "ukur_ulang": 271,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "fold": "F-7",
+   "metrik": "FP",
+   "dokumen": 85.0,
+   "ukur_ulang": 85,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "fold": "F-7",
+   "metrik": "Presisi",
+   "dokumen": 0.7612,
+   "ukur_ulang": 0.7612359550561798,
+   "selisih": 3.6e-05,
+   "lulus": true
+  },
+  {
+   "fold": "F-7",
+   "metrik": "Recall",
+   "dokumen": 0.6437,
+   "ukur_ulang": 0.6437054631828979,
+   "selisih": 5e-06,
+   "lulus": true
+  },
+  {
+   "fold": "F-7",
+   "metrik": "Lead median",
+   "dokumen": 16.0,
+   "ukur_ulang": 16.0,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "fold": "F-7",
+   "metrik": "Diperingatkan",
+   "dokumen": 15.0,
+   "ukur_ulang": 15,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "fold": "F-7",
+   "metrik": "FAR24 kalender",
+   "dokumen": 5.4183,
+   "ukur_ulang": 5.4183,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "fold": "F-7",
+   "metrik": "FAR24 baris",
+   "dokumen": 59.3886,
+   "ukur_ulang": 59.3886,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "fold": "F-7",
+   "metrik": "Cakupan",
+   "dokumen": 0.1079,
+   "ukur_ulang": 0.1079,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "fold": "F-7",
+   "metrik": "h",
+   "dokumen": 30.0,
+   "ukur_ulang": 30.0,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "fold": "F-9",
+   "metrik": "TP",
+   "dokumen": 256.0,
+   "ukur_ulang": 256,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "fold": "F-9",
+   "metrik": "FP",
+   "dokumen": 55.0,
+   "ukur_ulang": 55,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "fold": "F-9",
+   "metrik": "Presisi",
+   "dokumen": 0.8232,
+   "ukur_ulang": 0.8231511254019293,
+   "selisih": -4.9e-05,
+   "lulus": true
+  },
+  {
+   "fold": "F-9",
+   "metrik": "Recall",
+   "dokumen": 0.6052,
+   "ukur_ulang": 0.6052009456264775,
+   "selisih": 1e-06,
+   "lulus": true
+  },
+  {
+   "fold": "F-9",
+   "metrik": "Lead median",
+   "dokumen": 2.0,
+   "ukur_ulang": 2.0,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "fold": "F-9",
+   "metrik": "Diperingatkan",
+   "dokumen": 18.0,
+   "ukur_ulang": 18,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "fold": "F-9",
+   "metrik": "FAR24 kalender",
+   "dokumen": 3.5302,
+   "ukur_ulang": 3.5302,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "fold": "F-9",
+   "metrik": "FAR24 baris",
+   "dokumen": 66.3873,
+   "ukur_ulang": 66.3873,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "fold": "F-9",
+   "metrik": "Cakupan",
+   "dokumen": 0.0707,
+   "ukur_ulang": 0.0707,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "fold": "F-9",
+   "metrik": "h",
+   "dokumen": 30.0,
+   "ukur_ulang": 30.0,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "fold": "F-9_A",
+   "metrik": "TP",
+   "dokumen": 148.0,
+   "ukur_ulang": 148,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "fold": "F-9_A",
+   "metrik": "FP",
+   "dokumen": 42.0,
+   "ukur_ulang": 42,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "fold": "F-9_A",
+   "metrik": "Presisi",
+   "dokumen": 0.7789,
+   "ukur_ulang": 0.7789473684210526,
+   "selisih": 4.7e-05,
+   "lulus": true
+  },
+  {
+   "fold": "F-9_A",
+   "metrik": "Recall",
+   "dokumen": 0.4471,
+   "ukur_ulang": 0.4471299093655589,
+   "selisih": 3e-05,
+   "lulus": true
+  },
+  {
+   "fold": "F-9_A",
+   "metrik": "Lead median",
+   "dokumen": 38.0,
+   "ukur_ulang": 38.0,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "fold": "F-9_A",
+   "metrik": "Diperingatkan",
+   "dokumen": 9.0,
+   "ukur_ulang": 9,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "fold": "F-9_A",
+   "metrik": "FAR24 kalender",
+   "dokumen": 8.624,
+   "ukur_ulang": 8.624,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "fold": "F-9_A",
+   "metrik": "FAR24 baris",
+   "dokumen": 32.256,
+   "ukur_ulang": 32.256,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "fold": "F-9_A",
+   "metrik": "Cakupan",
+   "dokumen": 0.3004,
+   "ukur_ulang": 0.3004,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "fold": "F-9_A",
+   "metrik": "h",
+   "dokumen": 30.0,
+   "ukur_ulang": 30.0,
+   "selisih": 0.0,
+   "lulus": true
+  }
+ ],
+ "aritmetika_far": [
+  {
+   "seed": 42,
+   "fold": "F-10",
+   "far_dilaporkan": 8.9132,
+   "far_hitung_ulang": 8.9132,
+   "selisih": 0.0
+  },
+  {
+   "seed": 42,
+   "fold": "F-12",
+   "far_dilaporkan": 2.5234,
+   "far_hitung_ulang": 2.5234,
+   "selisih": 0.0
+  },
+  {
+   "seed": 42,
+   "fold": "F-14",
+   "far_dilaporkan": 0.9772,
+   "far_hitung_ulang": 0.9772,
+   "selisih": 0.0
+  },
+  {
+   "seed": 42,
+   "fold": "F-15A",
+   "far_dilaporkan": 4.6255,
+   "far_hitung_ulang": 4.6255,
+   "selisih": 0.0
+  },
+  {
+   "seed": 42,
+   "fold": "F-15_S",
+   "far_dilaporkan": 1.9358,
+   "far_hitung_ulang": 1.9358,
+   "selisih": 0.0
+  },
+  {
+   "seed": 42,
+   "fold": "F-5",
+   "far_dilaporkan": 0.4059,
+   "far_hitung_ulang": 0.4059,
+   "selisih": 0.0
+  },
+  {
+   "seed": 42,
+   "fold": "F-7",
+   "far_dilaporkan": 5.4183,
+   "far_hitung_ulang": 5.4183,
+   "selisih": 0.0
+  },
+  {
+   "seed": 42,
+   "fold": "F-9",
+   "far_dilaporkan": 3.5302,
+   "far_hitung_ulang": 3.5302,
+   "selisih": 0.0
+  },
+  {
+   "seed": 42,
+   "fold": "F-9_A",
+   "far_dilaporkan": 8.624,
+   "far_hitung_ulang": 8.624,
+   "selisih": 0.0
+  },
+  {
+   "seed": 13,
+   "fold": "F-10",
+   "far_dilaporkan": 8.9132,
+   "far_hitung_ulang": 8.9132,
+   "selisih": 0.0
+  },
+  {
+   "seed": 13,
+   "fold": "F-12",
+   "far_dilaporkan": 2.5234,
+   "far_hitung_ulang": 2.5234,
+   "selisih": 0.0
+  },
+  {
+   "seed": 13,
+   "fold": "F-14",
+   "far_dilaporkan": 0.9772,
+   "far_hitung_ulang": 0.9772,
+   "selisih": 0.0
+  },
+  {
+   "seed": 13,
+   "fold": "F-15A",
+   "far_dilaporkan": 4.6255,
+   "far_hitung_ulang": 4.6255,
+   "selisih": 0.0
+  },
+  {
+   "seed": 13,
+   "fold": "F-15_S",
+   "far_dilaporkan": 1.9358,
+   "far_hitung_ulang": 1.9358,
+   "selisih": 0.0
+  },
+  {
+   "seed": 13,
+   "fold": "F-5",
+   "far_dilaporkan": 0.4059,
+   "far_hitung_ulang": 0.4059,
+   "selisih": 0.0
+  },
+  {
+   "seed": 13,
+   "fold": "F-7",
+   "far_dilaporkan": 5.4183,
+   "far_hitung_ulang": 5.4183,
+   "selisih": 0.0
+  },
+  {
+   "seed": 13,
+   "fold": "F-9",
+   "far_dilaporkan": 3.5302,
+   "far_hitung_ulang": 3.5302,
+   "selisih": 0.0
+  },
+  {
+   "seed": 13,
+   "fold": "F-9_A",
+   "far_dilaporkan": 8.624,
+   "far_hitung_ulang": 8.624,
+   "selisih": 0.0
+  }
+ ],
+ "banding_artefak_s1": [
+  {
+   "seed": 42,
+   "metrik": "n_fold",
+   "artefak": 9,
+   "ukur_ulang": 9,
+   "selisih": 0,
+   "lulus": true
+  },
+  {
+   "seed": 42,
+   "metrik": "fp_total",
+   "artefak": 935,
+   "ukur_ulang": 935,
+   "selisih": 0,
+   "lulus": true
+  },
+  {
+   "seed": 42,
+   "metrik": "tp_total",
+   "artefak": 3804,
+   "ukur_ulang": 3804,
+   "selisih": 0,
+   "lulus": true
+  },
+  {
+   "seed": 42,
+   "metrik": "fp_kejadian_total",
+   "artefak": 263,
+   "ukur_ulang": 263,
+   "selisih": 0,
+   "lulus": true
+  },
+  {
+   "seed": 42,
+   "metrik": "precision_median",
+   "artefak": 0.7789,
+   "ukur_ulang": 0.7789,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "seed": 42,
+   "metrik": "precision_min",
+   "artefak": 0.6733,
+   "ukur_ulang": 0.6733,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "seed": 42,
+   "metrik": "precision_maks",
+   "artefak": 0.9287,
+   "ukur_ulang": 0.9287,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "seed": 42,
+   "metrik": "recall_median",
+   "artefak": 0.5638,
+   "ukur_ulang": 0.5638,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "seed": 42,
+   "metrik": "recall_min",
+   "artefak": 0.3927,
+   "ukur_ulang": 0.3927,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "seed": 42,
+   "metrik": "recall_maks",
+   "artefak": 0.6602,
+   "ukur_ulang": 0.6602,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "seed": 42,
+   "metrik": "far24_kalender_median",
+   "artefak": 3.5302,
+   "ukur_ulang": 3.5302,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "seed": 42,
+   "metrik": "far24_kalender_min",
+   "artefak": 0.4059,
+   "ukur_ulang": 0.4059,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "seed": 42,
+   "metrik": "far24_kalender_maks",
+   "artefak": 8.9132,
+   "ukur_ulang": 8.9132,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "seed": 42,
+   "metrik": "far24_kalender_rentang",
+   "artefak": 8.5073,
+   "ukur_ulang": 8.5073,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "seed": 42,
+   "metrik": "far24_baris_median",
+   "artefak": 32.256,
+   "ukur_ulang": 32.256,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "seed": 42,
+   "metrik": "far24_baris_min",
+   "artefak": 14.2205,
+   "ukur_ulang": 14.2205,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "seed": 42,
+   "metrik": "far24_baris_maks",
+   "artefak": 66.3873,
+   "ukur_ulang": 66.3873,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "seed": 42,
+   "metrik": "cakupan_median",
+   "artefak": 0.0903,
+   "ukur_ulang": 0.0903,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "seed": 42,
+   "metrik": "lead_median_median",
+   "artefak": 11.5,
+   "ukur_ulang": 11.5,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "seed": 42,
+   "metrik": "lead_median_min",
+   "artefak": 2.0,
+   "ukur_ulang": 2.0,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "seed": 42,
+   "metrik": "lead_median_maks",
+   "artefak": 38.0,
+   "ukur_ulang": 38.0,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "seed": 42,
+   "metrik": "n_onset",
+   "artefak": 390,
+   "ukur_ulang": 390,
+   "selisih": 0,
+   "lulus": true
+  },
+  {
+   "seed": 42,
+   "metrik": "n_diperingatkan",
+   "artefak": 219,
+   "ukur_ulang": 219,
+   "selisih": 0,
+   "lulus": true
+  },
+  {
+   "seed": 42,
+   "metrik": "fold_far_le6",
+   "artefak": 7,
+   "ukur_ulang": 7,
+   "selisih": 0,
+   "lulus": true
+  },
+  {
+   "seed": 42,
+   "metrik": "fold_gate_A_baru",
+   "artefak": 0,
+   "ukur_ulang": 0,
+   "selisih": 0,
+   "lulus": true
+  },
+  {
+   "seed": 42,
+   "metrik": "fold_recall_gt0",
+   "artefak": 9,
+   "ukur_ulang": 9,
+   "selisih": 0,
+   "lulus": true
+  },
+  {
+   "seed": 13,
+   "metrik": "n_fold",
+   "artefak": 9,
+   "ukur_ulang": 9,
+   "selisih": 0,
+   "lulus": true
+  },
+  {
+   "seed": 13,
+   "metrik": "fp_total",
+   "artefak": 935,
+   "ukur_ulang": 935,
+   "selisih": 0,
+   "lulus": true
+  },
+  {
+   "seed": 13,
+   "metrik": "tp_total",
+   "artefak": 3804,
+   "ukur_ulang": 3804,
+   "selisih": 0,
+   "lulus": true
+  },
+  {
+   "seed": 13,
+   "metrik": "fp_kejadian_total",
+   "artefak": 263,
+   "ukur_ulang": 263,
+   "selisih": 0,
+   "lulus": true
+  },
+  {
+   "seed": 13,
+   "metrik": "precision_median",
+   "artefak": 0.7789,
+   "ukur_ulang": 0.7789,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "seed": 13,
+   "metrik": "precision_min",
+   "artefak": 0.6733,
+   "ukur_ulang": 0.6733,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "seed": 13,
+   "metrik": "precision_maks",
+   "artefak": 0.9287,
+   "ukur_ulang": 0.9287,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "seed": 13,
+   "metrik": "recall_median",
+   "artefak": 0.5638,
+   "ukur_ulang": 0.5638,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "seed": 13,
+   "metrik": "recall_min",
+   "artefak": 0.3927,
+   "ukur_ulang": 0.3927,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "seed": 13,
+   "metrik": "recall_maks",
+   "artefak": 0.6602,
+   "ukur_ulang": 0.6602,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "seed": 13,
+   "metrik": "far24_kalender_median",
+   "artefak": 3.5302,
+   "ukur_ulang": 3.5302,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "seed": 13,
+   "metrik": "far24_kalender_min",
+   "artefak": 0.4059,
+   "ukur_ulang": 0.4059,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "seed": 13,
+   "metrik": "far24_kalender_maks",
+   "artefak": 8.9132,
+   "ukur_ulang": 8.9132,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "seed": 13,
+   "metrik": "far24_kalender_rentang",
+   "artefak": 8.5073,
+   "ukur_ulang": 8.5073,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "seed": 13,
+   "metrik": "far24_baris_median",
+   "artefak": 32.256,
+   "ukur_ulang": 32.256,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "seed": 13,
+   "metrik": "far24_baris_min",
+   "artefak": 14.2205,
+   "ukur_ulang": 14.2205,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "seed": 13,
+   "metrik": "far24_baris_maks",
+   "artefak": 66.3873,
+   "ukur_ulang": 66.3873,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "seed": 13,
+   "metrik": "cakupan_median",
+   "artefak": 0.0903,
+   "ukur_ulang": 0.0903,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "seed": 13,
+   "metrik": "lead_median_median",
+   "artefak": 11.5,
+   "ukur_ulang": 11.5,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "seed": 13,
+   "metrik": "lead_median_min",
+   "artefak": 2.0,
+   "ukur_ulang": 2.0,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "seed": 13,
+   "metrik": "lead_median_maks",
+   "artefak": 38.0,
+   "ukur_ulang": 38.0,
+   "selisih": 0.0,
+   "lulus": true
+  },
+  {
+   "seed": 13,
+   "metrik": "n_onset",
+   "artefak": 390,
+   "ukur_ulang": 390,
+   "selisih": 0,
+   "lulus": true
+  },
+  {
+   "seed": 13,
+   "metrik": "n_diperingatkan",
+   "artefak": 219,
+   "ukur_ulang": 219,
+   "selisih": 0,
+   "lulus": true
+  },
+  {
+   "seed": 13,
+   "metrik": "fold_far_le6",
+   "artefak": 7,
+   "ukur_ulang": 7,
+   "selisih": 0,
+   "lulus": true
+  },
+  {
+   "seed": 13,
+   "metrik": "fold_gate_A_baru",
+   "artefak": 0,
+   "ukur_ulang": 0,
+   "selisih": 0,
+   "lulus": true
+  },
+  {
+   "seed": 13,
+   "metrik": "fold_recall_gt0",
+   "artefak": 9,
+   "ukur_ulang": 9,
+   "selisih": 0,
+   "lulus": true
+  }
+ ]
+}

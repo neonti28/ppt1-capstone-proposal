@@ -1,0 +1,143 @@
+{
+  "sumber": {
+    "xml": "/mnt/d/Capstone 1(v2)/data/volve/external/dbx_volume/Well_technical_data/Daily Drilling Report - XML Version",
+    "html": "/mnt/d/Capstone 1(v2)/data/volve/external/dbx_volume/Well_technical_data/Daily Drilling Report - HTML Version"
+  },
+  "catatan": "pemindaian penuh, bukan sampel; teks di-lowercase, hitungan substring literal dan regex kata berakar",
+  "xml": {
+    "n_file_dibaca": 1759,
+    "n_file_gagal": 0,
+    "kemunculan_literal": {
+      "cost": 0,
+      "work order": 0,
+      "workorder": 0,
+      "work-order": 0,
+      "daycost": 0,
+      "day cost": 0,
+      "invoice": 0,
+      "budget": 0,
+      "price": 1,
+      "tariff": 0,
+      "usd": 0,
+      "nok": 0,
+      "inspection": 154,
+      "inspect": 630,
+      "maintenance": 303,
+      "service order": 0,
+      "purchase order": 0
+    },
+    "file_mengandung_literal": {
+      "cost": 0,
+      "work order": 0,
+      "workorder": 0,
+      "work-order": 0,
+      "daycost": 0,
+      "day cost": 0,
+      "invoice": 0,
+      "budget": 0,
+      "price": 1,
+      "tariff": 0,
+      "usd": 0,
+      "nok": 0,
+      "inspection": 119,
+      "inspect": 377,
+      "maintenance": 176,
+      "service order": 0,
+      "purchase order": 0
+    },
+    "kemunculan_regex": {
+      "kata_berakar_cost": 0,
+      "kata_berakar_invoice": 0,
+      "kata_berakar_budget": 0,
+      "kata_berakar_price": 1,
+      "nomor_wo": 0
+    },
+    "file_mengandung_regex": {
+      "kata_berakar_cost": 0,
+      "kata_berakar_invoice": 0,
+      "kata_berakar_budget": 0,
+      "kata_berakar_price": 1,
+      "nomor_wo": 0
+    },
+    "contoh_berkas": {
+      "inspection": "15_9_19_BT2_1998_01_12.xml",
+      "inspect": "15_9_19_BT2_1998_01_12.xml",
+      "maintenance": "15_9_F_10_2009_04_21.xml",
+      "price": "15_9_F_15_D_2013_11_12.xml",
+      "kata_berakar_price": [
+        "15_9_F_15_D_2013_11_12.xml",
+        [
+          "price"
+        ]
+      ]
+    }
+  },
+  "html": {
+    "n_file_dibaca": 1759,
+    "n_file_gagal": 0,
+    "kemunculan_literal": {
+      "cost": 0,
+      "work order": 0,
+      "workorder": 0,
+      "work-order": 0,
+      "daycost": 0,
+      "day cost": 0,
+      "invoice": 0,
+      "budget": 0,
+      "price": 1,
+      "tariff": 0,
+      "usd": 0,
+      "nok": 0,
+      "inspection": 154,
+      "inspect": 630,
+      "maintenance": 303,
+      "service order": 0,
+      "purchase order": 0
+    },
+    "file_mengandung_literal": {
+      "cost": 0,
+      "work order": 0,
+      "workorder": 0,
+      "work-order": 0,
+      "daycost": 0,
+      "day cost": 0,
+      "invoice": 0,
+      "budget": 0,
+      "price": 1,
+      "tariff": 0,
+      "usd": 0,
+      "nok": 0,
+      "inspection": 119,
+      "inspect": 377,
+      "maintenance": 176,
+      "service order": 0,
+      "purchase order": 0
+    },
+    "kemunculan_regex": {
+      "kata_berakar_cost": 0,
+      "kata_berakar_invoice": 0,
+      "kata_berakar_budget": 0,
+      "kata_berakar_price": 1,
+      "nomor_wo": 0
+    },
+    "file_mengandung_regex": {
+      "kata_berakar_cost": 0,
+      "kata_berakar_invoice": 0,
+      "kata_berakar_budget": 0,
+      "kata_berakar_price": 1,
+      "nomor_wo": 0
+    },
+    "contoh_berkas": {
+      "inspection": "15_9_19_BT2_1998_01_12.html",
+      "inspect": "15_9_19_BT2_1998_01_12.html",
+      "maintenance": "15_9_F_10_2009_04_21.html",
+      "price": "15_9_F_15_D_2013_11_12.html",
+      "kata_berakar_price": [
+        "15_9_F_15_D_2013_11_12.html",
+        [
+          "price"
+        ]
+      ]
+    }
+  }
+}

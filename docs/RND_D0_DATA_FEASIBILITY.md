@@ -21,11 +21,11 @@ Riset pendahuluan: verification-mandatory. Setiap angka di bawah dibaca langsung
 Perintah: `/home/neonti/.venv_audit/bin/python3 meas1.py` dan seterusnya (venv ini punya pandas dan numpy; `python3` default Hermes tidak).
 Riset pendahuluan: sequentialthinking. Lima pikiran dipakai di kartu ini, yaitu (1) inventaris sumber yang bisa dibaca ulang, (2) uji pemisah kelayakan VMD/EMD lewat laju sampel nyata, (3) ketersediaan state diskret dan kejadian onset, (4) kanal tanpa label dan panjang baseline bersih, (5) verifikasi silang angka eksternal dan penandaan yang belum terukur. Jumlah pikiran: **5**.
 
-## 1. Per engine: jendela, well, prevalensi, missing kanal kunci
+## 1. Per detektor: jendela, well, prevalensi, missing kanal kunci
 
 Sumber: `scratch/v9_d1/datasets/*.csv.gz` (grid 1 menit, fitur jendela 10 menit, label jendela berikutnya). Missing kanal diukur pada dataset jendela (kolom `<KANAL>_mean`).
 
-| Engine | Berkas | Jendela | Well | Positif | Prevalensi | Rentang (hari) |
+| Mode | Berkas | Jendela | Well | Positif | Prevalensi | Rentang (hari) |
 |---|---|---|---|---|---|---|
 | `vib` | `scratch/v9_d1/datasets/vib.csv.gz` | 23.922 | 4 | 5.429 | 22,7% | 3,8 |
 | `ssi` | `scratch/v9_d1/datasets/ssi.csv.gz` | 35.906 | 9 | 607 | 1,7% | 12,4 |
@@ -34,11 +34,11 @@ Sumber: `scratch/v9_d1/datasets/*.csv.gz` (grid 1 menit, fitur jendela 10 menit,
 | `stuck_k2` | `scratch/v9_d1/datasets/stuck_k2.csv.gz` | 118.567 | 4 | 1.975 | 1,7% | 10,2 |
 | `hyd_ki` | `scratch/v9_d1/datasets/hyd_ki.csv.gz` | 52.509 | 9 | 7.172 | 13,7% | 12,4 |
 
-Catatan waktu: kolom `ts_bin` pada dataset jendela adalah detik relatif dengan titik nol di luar epoch Unix, karena itu tanggal absolut tidak dicantumkan (konversi langsung menghasilkan artefak 1970). Contoh terverifikasi: WITSML F-14 dimulai 2007-11-04T13:00:13.968Z menurut kolom `timestamp` pada `data/volve/witsml_parsed/F-14.csv`. Panjang rentang per engine di atas dihitung dari selisih `ts_bin`.
+Catatan waktu: kolom `ts_bin` pada dataset jendela adalah detik relatif dengan titik nol di luar epoch Unix, karena itu tanggal absolut tidak dicantumkan (konversi langsung menghasilkan artefak 1970). Contoh terverifikasi: WITSML F-14 dimulai 2007-11-04T13:00:13.968Z menurut kolom `timestamp` pada `data/volve/witsml_parsed/F-14.csv`. Panjang rentang per mode di atas dihitung dari selisih `ts_bin`.
 
 Prevalensi per well (jumlah jendela, positif, prevalensi):
 
-| Engine | Well | Jendela | Positif | Prevalensi |
+| Mode | Well | Jendela | Positif | Prevalensi |
 |---|---|---|---|---|
 | `vib` | F-14 | 1.989 | 1.124 | 56,5% |
 | `vib` | F-15A | 6.482 | 1.543 | 23,8% |
@@ -80,7 +80,7 @@ Prevalensi per well (jumlah jendela, positif, prevalensi):
 
 Missing kanal kunci pada dataset jendela (fraksi baris NaN dari kolom `<KANAL>_mean`):
 
-| Engine | TQA | SPPA | TFLO | RPM | SWOB | HKLD | ROP | BPOS | SPM | depth | dbtm |
+| Mode | TQA | SPPA | TFLO | RPM | SWOB | HKLD | ROP | BPOS | SPM | depth | dbtm |
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | `vib` | 0,0% | 0,0% | 6,1% | 0,0% | 0,0% | 0,0% | 0,0% | 0,0% | 100,0% | 0,0% | 0,0% |
 | `ssi` | 0,0% | 0,0% | 3,0% | 0,0% | 0,0% | 0,0% | 3,4% | 0,0% | 100,0% | 0,2% | 0,3% |
@@ -243,9 +243,9 @@ Kanal yang bisa dipakai tanpa label (tersedia di bins, bukan turunan label): TQA
 | F-9 | 8,6% | 8,6% | 8,6% | 8,6% | 8,6% | 8,6% | 8,6% | 8,6% | NA | 55,1% | 55,1% |
 | F-9_A | 9,3% | 9,3% | 9,3% | 9,3% | 9,3% | 9,3% | 8,4% | 9,3% | NA | 9,3% | 9,3% |
 
-Panjang baseline bersih per well dan per engine (menit terpanjang tanpa label positif berurutan, dihitung pada grid 1 menit dengan pemutus gap):
+Panjang baseline bersih per well dan per mode (menit terpanjang tanpa label positif berurutan, dihitung pada grid 1 menit dengan pemutus gap):
 
-| Engine | Well | Baris | Positif | Baseline bersih terpanjang (mnt) | Segmen positif |
+| Mode | Well | Baris | Positif | Baseline bersih terpanjang (mnt) | Segmen positif |
 |---|---|---|---|---|---|
 | `vib` | F-14 | 1.989 | 1.124 | 372 | 34 |
 | `vib` | F-15A | 6.482 | 1.543 | 886 | 71 |
@@ -385,7 +385,7 @@ Rujukan di atas dipakai hanya untuk menyatakan bahwa algoritma yang diminta mema
 
 ## 9. Ringkasan 5 baris
 
-1. Data jendela 1 menit terbukti ada untuk 6 dataset engine dengan 2 sampai 9 well dan prevalensi 1,67% sampai 36,13%; dataset dengan cakupan well paling lemah adalah stuck_k1 (2 well, 5.555 jendela) dan vib (4 well, 23.922 jendela).
+1. Data jendela 1 menit terbukti ada untuk 6 dataset detektor dengan 2 sampai 9 well dan prevalensi 1,67% sampai 36,13%; dataset dengan cakupan well paling lemah adalah stuck_k1 (2 well, 5.555 jendela) dan vib (4 well, 23.922 jendela).
 2. VMD, EMD, dan wavelet TIDAK LAYAK pada data rig ini karena laju sampel tertinggi 0,3333 Hz (Nyquist 0,1667 Hz) dan VIBLAT_RT di F-14 hanya 0,0167 Hz; dekomposisi frekuensi pada pita itu tidak mewakili getaran lateral maupun stick-slip.
 3. Markov dan HMM layak secara data tetapi terkunci pada state yang tersedia: STUCK 4 well, SHKRSK 9 well, VIBLAT 7 well, dan label regime hanya ada di data bengkel (469 jendela, 4 alat).
 4. Survival hanya punya horizon 10 menit dengan event 55 sampai 93 per well untuk stuck dan 124 episode hyd K-ii di satu wellbore; model survival multi-kovariat akan rawan underpowered, bukan mustahil.

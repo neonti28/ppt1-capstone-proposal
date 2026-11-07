@@ -1,0 +1,94 @@
+{
+ "tool_wear": [
+  {
+   "alat": "T01",
+   "n_kalibrasi": 18,
+   "n_eval_R01": 42,
+   "n_R02": 60,
+   "fp_engine_5of27": null,
+   "fp_op_calibrated": 1,
+   "laju_op_per_detik": 0.02381,
+   "harapan_alarm_kebetulan_R02": 1.429,
+   "P_min1_alarm_kebetulan": 0.7603,
+   "det_op": true,
+   "TLead_s_op": 25.0,
+   "pct_R02_alarmed": 3.3,
+   "thr": 12.316666666666663
+  },
+  {
+   "alat": "T02",
+   "n_kalibrasi": 15,
+   "n_eval_R01": 35,
+   "n_R02": 62,
+   "fp_engine_5of27": null,
+   "fp_op_calibrated": 3,
+   "laju_op_per_detik": 0.08571,
+   "harapan_alarm_kebetulan_R02": 5.314,
+   "P_min1_alarm_kebetulan": 0.9951,
+   "det_op": true,
+   "TLead_s_op": 36.0,
+   "pct_R02_alarmed": 6.5,
+   "thr": 10.0
+  },
+  {
+   "alat": "T03",
+   "n_kalibrasi": 19,
+   "n_eval_R01": 42,
+   "n_R02": 60,
+   "fp_engine_5of27": null,
+   "fp_op_calibrated": 1,
+   "laju_op_per_detik": 0.02381,
+   "harapan_alarm_kebetulan_R02": 1.429,
+   "P_min1_alarm_kebetulan": 0.7603,
+   "det_op": true,
+   "TLead_s_op": 24.0,
+   "pct_R02_alarmed": 5.0,
+   "thr": 8.633333333333326
+  },
+  {
+   "alat": "T04",
+   "n_kalibrasi": 18,
+   "n_eval_R01": 40,
+   "n_R02": 58,
+   "fp_engine_5of27": null,
+   "fp_op_calibrated": 3,
+   "laju_op_per_detik": 0.075,
+   "harapan_alarm_kebetulan_R02": 4.35,
+   "P_min1_alarm_kebetulan": 0.9871,
+   "det_op": true,
+   "TLead_s_op": 20.0,
+   "pct_R02_alarmed": 6.9,
+   "thr": 10.0
+  }
+ ],
+ "P_4dari4_kebetulan": 0.5678,
+ "ringkas": {
+  "n_alat": 4,
+  "det_4dari4": 4,
+  "target_fp_per_min": 1.0,
+  "metrik_segmen_op": {
+   "n": 469,
+   "pos": 240,
+   "neg": 229,
+   "tp": 13,
+   "fp": 8,
+   "fn": 227,
+   "precision": 0.619,
+   "recall": 0.0542,
+   "far_segmen": 2.096,
+   "far_unit": "FP/menit-negatif (jendela 1 dtk)"
+  },
+  "metrik_segmen_engine": {
+   "n": 469,
+   "pos": 240,
+   "neg": 229,
+   "tp": 173,
+   "fp": 132,
+   "fn": 67,
+   "precision": 0.5672,
+   "recall": 0.7208,
+   "far_segmen": 34.585,
+   "far_unit": "FP/menit-negatif (jendela 1 dtk)"
+  }
+ }
+}

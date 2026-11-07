@@ -1,0 +1,227 @@
+{
+ "registry": {
+  "engines_n": 7,
+  "engines": [
+   "vib",
+   "ssi",
+   "shk",
+   "stuck",
+   "hyd",
+   "bit_wear",
+   "tool_wear"
+  ],
+  "klaim_total": 10,
+  "klaim_per_engine": {
+   "vib": 1,
+   "ssi": 1,
+   "shk": 1,
+   "stuck": 2,
+   "hyd": 2,
+   "bit_wear": 1,
+   "tool_wear": 2
+  },
+  "heads_total": 27,
+  "heads_per_engine": {
+   "vib": 4,
+   "ssi": 4,
+   "shk": 4,
+   "stuck": 6,
+   "hyd": 4,
+   "bit_wear": 2,
+   "tool_wear": 3
+  },
+  "tier_counts": {
+   "PERINGATAN-BERPENGAWAS": 12,
+   "TREN": 13,
+   "BELUM LAYAK PAKAI": 2
+  },
+  "layer_counts": {
+   "L1": 11,
+   "L0": 5,
+   "L2": 9,
+   "L3": 2
+  },
+  "auto_critical_slots_text": 0,
+  "SEED": 42
+ },
+ "endash": {
+  "kandidat_1": {
+   "count": 2,
+   "contexts_first40": [
+    {
+     "line": 234,
+     "context": "| Penerapan | Belum dibangun | Rencana Tahap 1a–3a (§17) |"
+    },
+    {
+     "line": 297,
+     "context": "elum ditetapkan | Penyusunan naskah akhir PPT I (Bab II–IV), poster, sesi tinjauan dosen | Belum dimulai |"
+    }
+   ]
+  },
+  "kandidat_2": {
+   "count": 225,
+   "contexts_first40": [
+    {
+     "line": 146,
+     "context": "`code/v9_i1_pipeline.py` (REGISTRY §1, baris 74–287, yakni **dibaca & DIJALANKAN**, bukan ditranskrip)"
+    },
+    {
+     "line": 147,
+     "context": "V9_PM1_ARCHITECTURE.md` (§2 spesifikasi 7 engine, §3 S1–S9) ·"
+    },
+    {
+     "line": 164,
+     "context": "ka → pemisahan tegas 7/11/27 → outline yang menutup (a)–(f) → delegasi per tim →"
+    },
+    {
+     "line": 189,
+     "context": "tas pemakaian di REGISTRY (`v9_i1_pipeline.py` baris 74–287). Sebaran per engine: `4+4+4+6+4+2+3 = 27`."
+    },
+    {
+     "line": 193,
+     "context": "ul di sebuah bab, ia harus merujuk daftar eksak di §1.1–§1.3 ini."
+    },
+    {
+     "line": 274,
+     "context": "UTLINE PROPOSAL BARU (seksi + isi + penutupan keluhan a–f)"
+    },
+    {
+     "line": 320,
+     "context": "trik A (P/R/FAR/AUPRC/lift/CI vs baseline), B (TLead/B1–B4), C (C1–C4), dan **tier pemakaian** + batas."
+    },
+    {
+     "line": 320,
+     "context": "/FAR/AUPRC/lift/CI vs baseline), B (TLead/B1–B4), C (C1–C4), dan **tier pemakaian** + batas."
+    },
+    {
+     "line": 339,
+     "context": "| (f) arti tegas 7 / 11 / 27 | Bab 1 (§1.0–§1.4) | daftar nama eksak + rekap tier |"
+    },
+    {
+     "line": 361,
+     "context": ", \"11 klaim\", \"27 head\" harus merujuk daftar eksak §1.1–§1.3; nama engine/head persis seperti kunci REGISTRY k"
+    },
+    {
+     "line": 375,
+     "context": "| AC-2 | Outline menutup keluhan (a)–(f) | matriks §2.9 | **LULUS** (tiap butir punya bab) "
+    },
+    {
+     "line": 394,
+     "context": "`code/v9_i1_pipeline.py` (REGISTRY §1, baris 74–287; **dijalankan**: IMPORT OK, 7 engine/27 head) ·"
+    },
+    {
+     "line": 395,
+     "context": "`docs/V9_PM1_ARCHITECTURE.md` (§2, §3 S1–S9) · `docs/V9_PM2_VERDICT.md` §e (11 baris tier) ·"
+    },
+    {
+     "line": 418,
+     "context": "dipoles ke nada proposal, dan keluhan operator (a)–(f) dipastikan tertutup."
+    },
+    {
+     "line": 419,
+     "context": "RCHITECTURE.md` (§2 spesifikasi 7 engine, §3 kontrak S1–S9) ·"
+    },
+    {
+     "line": 438,
+     "context": "> beda: ssi 15–196, bit_wear 1,84, tool_wear 2,0); FAR dilaporkan pad"
+    },
+    {
+     "line": 454,
+     "context": "ons`** yaitu setiap rumus ditautkan ke nomor ledger [1]–[27]"
+    },
+    {
+     "line": 457,
+     "context": "> (§3.1–3.7) + kampanye V9; 0 angka baru."
+    },
+    {
+     "line": 473,
+     "context": " ada baseline universal** (Evaluasi User.txt, prinsip 1–6)."
+    },
+    {
+     "line": 496,
+     "context": " → metode yang menang → bukti V9\" (detail per engine §2–§3):"
+    },
+    {
+     "line": 533,
+     "context": "- **Bukti empiris V9.** RF AUPRC 0,4405–0,9117 (spread 0,4712, 4 fold LOWO); **ΔB>0 vs"
+    },
+    {
+     "line": 536,
+     "context": "  ber-blok-panjang; rule-display P 0,87–0,95 stabil 1,1× antar-well; SHAP top = TFLO/HKLD/"
+    },
+    {
+     "line": 557,
+     "context": "- **Bukti empiris V9.** RF AUPRC 0,0151–0,4589; **RF≥canary 5/7 fold layak**; **vs persistence"
+    },
+    {
+     "line": 582,
+     "context": "- **Bukti empiris V9.** persistence AUPRC **0,679–0,984** (4/4 fold menang vs RF); RF menang"
+    },
+    {
+     "line": 596,
+     "context": "ata surface Volve dengan Crossformer (peringatan **2,67–7,37 menit**) [19],"
+    },
+    {
+     "line": 603,
+     "context": "(temuan penting).** Persistence-**horizon** AUPRC 0,827–0,902 (B1 93–97%)"
+    },
+    {
+     "line": 603,
+     "context": "ng).** Persistence-**horizon** AUPRC 0,827–0,902 (B1 93–97%)"
+    },
+    {
+     "line": 609,
+     "context": "- **Batas.** FAR 9,9–1.440/24jam; B1 maks 31,8% (<80%); kontrol-positif kej"
+    },
+    {
+     "line": 628,
+     "context": "- **Bukti empiris V9.** K-i persistence P 0,615–0,793, delay median 0–3,5 mnt, FAR_t"
+    },
+    {
+     "line": 628,
+     "context": "ris V9.** K-i persistence P 0,615–0,793, delay median 0–3,5 mnt, FAR_t"
+    },
+    {
+     "line": 629,
+     "context": "  32–111/24jam (beban blok, bukan alarm); **hibrida rule AN"
+    },
+    {
+     "line": 633,
+     "context": "- **Batas.** K-i label = PROXY (residu SPPA); FAR 14,6–58,4 >6 di 9/9 → belum alarm; K-ii"
+    },
+    {
+     "line": 635,
+     "context": "  4 kanal flow saling berkorelasi r=0,995–1,000 = semuanya aliran masuk); varian proxy 0 TP"
+    },
+    {
+     "line": 642,
+     "context": "SK_RT` relevan.** Kanal MWD `SHKRSK_RT` (skala risiko 0–3) adalah"
+    },
+    {
+     "line": 644,
+     "context": "  **tidak cukup** untuk shock (AUC surface 0,80–0,82, `V6_R1` §3.3, dikonfirmasi peringatan"
+    },
+    {
+     "line": 651,
+     "context": "- **Bukti empiris V9.** RF AUPRC 0,0069–0,1929; ΔB vs canary 5/9; rule-display FAR 0,67–6,6"
+    },
+    {
+     "line": 651,
+     "context": " 0,0069–0,1929; ΔB vs canary 5/9; rule-display FAR 0,67–6,6"
+    },
+    {
+     "line": 656,
+     "context": "  ≥2 vs F-14 40%); non-null SHKRSK_RT hanya 0,7–8% baris."
+    },
+    {
+     "line": 673,
+     "context": "ibrasi (≤1 alarm/menit) justru **deteksi 4/4 alat, FP 1–3, TLead 20–36 dtk**"
+    },
+    {
+     "line": 673,
+     "context": "larm/menit) justru **deteksi 4/4 alat, FP 1–3, TLead 20–36 dtk**"
+    }
+   ]
+  }
+ }
+}

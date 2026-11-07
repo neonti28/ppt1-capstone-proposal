@@ -1,0 +1,4 @@
+[2026-10-12 09:35:04] == F-9: grid=4113479 ops=25349 inb=9163 onsets ffill/strict=55/61 scorable=55 eligible=16184 pos=311 v8_match=None
+[2026-10-12 09:35:29] == F-9_A: grid=3280052 ops=4331 inb=13725 onsets ffill/strict=72/72 scorable=72 eligible=2242 pos=503 v8_match=True
+[2026-10-12 09:35:45] == F-10: grid=42442 ops=21728 inb=37199 onsets ffill/strict=93/111 scorable=93 eligible=4216 pos=772 v8_match=True
+[2026-10-12 09:37:06] == F-14: grid=4145722 ops=96501 inb=556 onsets ffill/strict=61/81 scorable=61 eligible=95925 pos=389 v8_match=True

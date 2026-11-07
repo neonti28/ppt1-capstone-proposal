@@ -1,0 +1,11 @@
+[DITOLAK] rujukan baris di luar berkas
+       - docs/V9_PM2_VERDICT.md:9999 di luar rentang berkas (258 baris)
+[DITOLAK] em-dash disisipkan
+       - em-dash dan en-dash: 1 (harus 0)
+[DITOLAK] alternatif A8 hilang dari klaster
+       - klaster tidak menutup 9 alternatif tepat sekali: ['A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A9']
+[DITOLAK] user story tanpa kriteria penerimaan
+       - user story tanpa kriteria penerimaan: ['U2']
+[LOLOS] dokumen asli
+
+RINGKASAN UJI NEGATIF: 5 dari 5 sesuai harapan

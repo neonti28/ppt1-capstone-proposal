@@ -1,0 +1,3358 @@
+{
+ "meta": {
+  "dokumen": "docs/PPT1_BAB3_4_MCDM.md",
+  "json": "scratch/ppt1/mcdm.json",
+  "skrip": "scratch/ppt1/build_mcdm.py",
+  "data": "scratch/ppt1/mcdm_data.py",
+  "skrip_dokumen": "scratch/ppt1/build_doc_mcdm.py",
+  "skrip_pemeriksa": "scratch/ppt1/check_mcdm.py",
+  "perintah": "python3 scratch/ppt1/build_mcdm.py",
+  "perintah_lengkap": [
+   "python3 scratch/ppt1/build_mcdm.py",
+   "python3 scratch/ppt1/build_doc_mcdm.py",
+   "python3 scratch/ppt1/check_mcdm.py",
+   "python3 scratch/ppt1/check_mcdm.py --negatif"
+  ],
+  "metode_utama": "TOPSIS",
+  "metode_pembanding": "SAW",
+  "metode_bobot": "Rank-Order Centroid (ROC) atas peringkat kriteria",
+  "jumlah_alternatif": 9,
+  "jumlah_kriteria": 8,
+  "jumlah_sel": 72
+ },
+ "kriteria": [
+  {
+   "id": "C1",
+   "nama": "Efektivitas deteksi pada gate yang sudah dikunci",
+   "arah": "benefit",
+   "satuan": "lift dalam kali dan AUPRC",
+   "peringkat": 1,
+   "alasan_peringkat": "Gate G1 dan G2 adalah definisi operasional lulus, sehingga kriteria ini mengukur apakah alternatif bekerja sama sekali. Rubrik 4.1 menuntut pemilihan memakai performance metrics yang ditetapkan lebih dahulu, dan U1 sebagai pemilik masalah utama bergantung pada C1.",
+   "jejak_peringkat": "docs/V7_R1_SOLUTIONS.md:233; docs/PPT1_BAB3_2.md:466",
+   "fungsi_nilai": "rubrik 4 tingkat: 100 gate lolos, 75 dieksekusi dan delta terukur positif, 40 dieksekusi tanpa delta positif, 20 belum dieksekusi",
+   "status": "TERUKUR untuk alternatif yang sudah dieksekusi, RUBRIK untuk sisanya"
+  },
+  {
+   "id": "C4",
+   "nama": "Kepatuhan mode advisory tanpa alarm otomatis",
+   "arah": "benefit",
+   "satuan": "jumlah slot alarm otomatis, target nol, dan jumlah head dengan review manusia",
+   "peringkat": 2,
+   "alasan_peringkat": "Batasan B2 bersifat keras karena pelanggarannya membuat alat tidak boleh dipakai, bukan sekadar menurunkan skor. Tiga user story bergantung pada kriteria ini, yaitu U2, U4, dan U6, jumlah terbanyak di antara delapan kriteria.",
+   "jejak_peringkat": "scratch/ppt1/affinity.json kunci batasan id B2 dan kunci matriks_us_kriteria",
+   "fungsi_nilai": "100 bila slot alarm otomatis nol, 0 bila ada satu saja",
+   "status": "TERUKUR"
+  },
+  {
+   "id": "C2",
+   "nama": "Kecukupan bukti per fold",
+   "arah": "benefit",
+   "satuan": "jumlah fold teruji dan jumlah positif per fold",
+   "peringkat": 3,
+   "alasan_peringkat": "Batasan B4 menetapkan label dibereskan lebih dahulu, dan aturan kampanye menyatakan fold dengan kurang dari 30 positif berstatus underpowered sehingga tidak boleh dihitung sebagai mayoritas. Dua user story bergantung pada C2, yaitu U1 dan U5.",
+   "jejak_peringkat": "docs/V7_R1_SOLUTIONS.md:97, 233; scratch/ppt1/affinity.json kunci batasan id B4",
+   "fungsi_nilai": "100 x jumlah fold layak dibagi 18, dibatasi 100",
+   "status": "TERUKUR"
+  },
+  {
+   "id": "C7",
+   "nama": "Ketertelusuran dan reproduksibilitas angka",
+   "arah": "benefit",
+   "satuan": "jumlah klaim tanpa jejak, target nol",
+   "peringkat": 4,
+   "alasan_peringkat": "Tiga user story bergantung pada C7, yaitu U4, U5, dan U6. Batasan B1 menuntut seluruh angka dapat diaudit pihak lain, dan rubrik 3.2 menuntut batasan standar yang dijelaskan dengan justifikasi kuat.",
+   "jejak_peringkat": "scratch/ppt1/affinity.json kunci matriks_us_kriteria; docs/PPT1_BAB3_2.md:472",
+   "fungsi_nilai": "100 x jumlah klaim berjejak dibagi jumlah klaim",
+   "status": "TERUKUR"
+  },
+  {
+   "id": "C3",
+   "nama": "Portabilitas antar sumur",
+   "arah": "benefit",
+   "satuan": "rasio false alarm rate maksimum dibagi minimum per 24 jam",
+   "peringkat": 5,
+   "alasan_peringkat": "Sebaran false alarm rate terukur 4,15 sampai 496,09 per 24 jam pada titik operasi yang sama, yaitu rasio 119,6 kali, sehingga satu ambang global tidak portabel. Dua user story bergantung pada C3, yaitu U1 dan U2.",
+   "jejak_peringkat": "docs/V9_PM2_VERDICT.md:114",
+   "fungsi_nilai": "rubrik 3 tingkat: 100 kalibrasi per sumur sudah diuji pada dua sumur atau lebih, 60 menambah sumur uji atau memuat rancangan kalibrasi yang belum diuji, 30 tidak menyentuh portabilitas",
+   "status": "TERUKUR untuk gejala, RUBRIK untuk tindakan alternatif"
+  },
+  {
+   "id": "C6",
+   "nama": "Waktu penyelesaian dalam satu semester",
+   "arah": "cost",
+   "satuan": "minggu kerja",
+   "peringkat": 6,
+   "alasan_peringkat": "Batasan B3 bersifat keras karena jadwal Tabel 3.1 mengikat seluruh tim, namun kriteria ini berlaku hampir sama untuk semua alternatif sehingga daya bedanya rendah. Tidak ada user story yang bergantung padanya, sehingga peringkatnya tidak boleh lebih tinggi daripada kriteria yang punya pemangku kepentingan.",
+   "jejak_peringkat": "scratch/ppt1/affinity.json kunci batasan id B3; Buku Pedoman PPT Tahap I Tabel 3.1 halaman 32",
+   "fungsi_nilai": "100 x (9 dikurangi minggu kerja) dibagi 9, dibatasi 0 sampai 100",
+   "status": "ASUMSI untuk minggu kerja per alternatif, BAKU untuk tenggat"
+  },
+  {
+   "id": "C5",
+   "nama": "Kebutuhan akuisisi data baru",
+   "arah": "cost",
+   "satuan": "jumlah wellbore atau berkas yang harus diproses",
+   "peringkat": 7,
+   "alasan_peringkat": "Biaya data bersifat instrumental karena hanya bermakna lewat kriteria lain. Satu user story bergantung padanya, yaitu U3, dan sebagian besar kebutuhan parse sudah dikerjakan pada kampanye V9 sehingga daya bedanya menyusut.",
+   "jejak_peringkat": "docs/V7_R1_SOLUTIONS.md:76, 106, 145; docs/V9_PM1_ARCHITECTURE.md:186",
+   "fungsi_nilai": "100 dibagi (1 + jumlah wellbore tersisa)",
+   "status": "TERUKUR"
+  },
+  {
+   "id": "C8",
+   "nama": "Beban kognitif keluaran",
+   "arah": "benefit",
+   "satuan": "rubrik tiga tingkat",
+   "peringkat": 8,
+   "alasan_peringkat": "Hanya satu user story yang bergantung padanya, yaitu U2, dan rubriknya belum divalidasi mitra sehingga statusnya masih asumsi. Peringkat terakhir bukan berarti kriteria ini tidak penting, melainkan menandakan bukti pendukungnya paling lemah di antara delapan kriteria.",
+   "jejak_peringkat": "scratch/ppt1/affinity.json kunci kriteria id C8; docs/PPT1_BAB3_2.md:473",
+   "fungsi_nilai": "tingkat 3 menjadi 100, tingkat 2 menjadi 50, tingkat 1 menjadi 0",
+   "status": "ASUMSI"
+  }
+ ],
+ "bobot": {
+  "metode": "Rank-Order Centroid (ROC) atas peringkat kriteria",
+  "peringkat": {
+   "C1": 1,
+   "C4": 2,
+   "C2": 3,
+   "C7": 4,
+   "C3": 5,
+   "C6": 6,
+   "C5": 7,
+   "C8": 8
+  },
+  "nilai": {
+   "C1": 0.339732,
+   "C4": 0.214732,
+   "C2": 0.152232,
+   "C7": 0.110565,
+   "C3": 0.079315,
+   "C6": 0.054315,
+   "C5": 0.033482,
+   "C8": 0.015625
+  },
+  "jumlah": 1.0,
+  "rumus": "w_i = (1/n) x jumlah 1/k untuk k = peringkat sampai n"
+ },
+ "sel": [
+  {
+   "alt": "A1",
+   "c": "C1",
+   "unit": "L75",
+   "status": "TERUKUR",
+   "dasar": "Mekanisme sudah dieksekusi untuk stuck dan hyd. Stuck memberi B1 0,51 sampai 1,00 dengan TLead 10 sampai 11,5 menit. Hyd memberi B1 nol dari tiga onset, jadi hasil negatifnya terukur.",
+   "jejak": "docs/V9_EVAL_B_LAYERB.md:101, 103",
+   "nilai": 75
+  },
+  {
+   "alt": "A1",
+   "c": "C4",
+   "unit": 0,
+   "status": "TERUKUR",
+   "dasar": "Keluaran berupa peringatan berpengawas manusia. Registry mencatat nol slot alarm otomatis.",
+   "jejak": "scratch/v9_i1/v9_i1_RESULTS.json kunci auto_critical_alarm_slots",
+   "nilai": 100.0
+  },
+  {
+   "alt": "A1",
+   "c": "C2",
+   "unit": 13,
+   "status": "TERUKUR",
+   "dasar": "Tiga kelas sasaran dengan fold layak terukur: stuck 2 fold, hyd 7 fold, bit_wear 4 fold.",
+   "jejak": "docs/V7_R1_SOLUTIONS.md:69, 127, 203",
+   "nilai": 72.222222
+  },
+  {
+   "alt": "A1",
+   "c": "C7",
+   "unit": [
+    3,
+    3
+   ],
+   "status": "TERUKUR",
+   "dasar": "Tiga dari tiga butir bukti pada 3.1.4.1 membawa jejak berkas dan baris.",
+   "jejak": "scratch/ppt1/alternatif.json alternatif id A1 kunci bukti",
+   "nilai": 100.0
+  },
+  {
+   "alt": "A1",
+   "c": "C3",
+   "unit": "L30",
+   "status": "RUBRIK",
+   "dasar": "Relabel mengubah definisi target, bukan ambang. Kalibrasi per sumur tidak termasuk lingkup, sehingga gejala 119,6 kali tetap tidak tersentuh.",
+   "jejak": "docs/V9_PM2_VERDICT.md:114",
+   "nilai": 30
+  },
+  {
+   "alt": "A1",
+   "c": "C6",
+   "unit": 2,
+   "status": "ASUMSI",
+   "dasar": "Beban dinilai rendah pada V7 bagian 7 karena relabel dan run ulang tanpa parse. Dua minggu adalah asumsi perkiraan desain.",
+   "jejak": "docs/V7_R1_SOLUTIONS.md:215",
+   "nilai": 77.777778
+  },
+  {
+   "alt": "A1",
+   "c": "C5",
+   "unit": 0,
+   "status": "TERUKUR",
+   "dasar": "Relabel tidak memerlukan parse baru karena deret sumber sudah berbentuk CSV.",
+   "jejak": "docs/V7_R1_SOLUTIONS.md:76",
+   "nilai": 100.0
+  },
+  {
+   "alt": "A1",
+   "c": "C8",
+   "unit": 3,
+   "status": "RUBRIK",
+   "dasar": "Keluaran satu peringatan per onset dengan waktu, keyakinan, dan tindakan yang disarankan. Tingkat 3 pada rubrik 3.3.",
+   "jejak": "scratch/ppt1/affinity.json kunci kriteria id C8",
+   "nilai": 100
+  },
+  {
+   "alt": "A2",
+   "c": "C1",
+   "unit": "L20",
+   "status": "TERUKUR",
+   "dasar": "Parse empat wellbore selesai dan terukur, namun evaluasi ulang fold belum dijalankan sehingga dampak ke gate belum dapat diklaim.",
+   "jejak": "docs/V9_PM1_ARCHITECTURE.md:186; docs/PPT1_BAB3_1.md:103",
+   "nilai": 20
+  },
+  {
+   "alt": "A2",
+   "c": "C4",
+   "unit": 0,
+   "status": "TERUKUR",
+   "dasar": "Tidak menambah slot alarm otomatis karena hanya menambah data, bukan keluaran baru.",
+   "jejak": "scratch/v9_i1/v9_i1_RESULTS.json kunci auto_critical_alarm_slots",
+   "nilai": 100.0
+  },
+  {
+   "alt": "A2",
+   "c": "C2",
+   "unit": 18,
+   "status": "TERUKUR",
+   "dasar": "Empat kelas sasaran dengan fold layak terukur: shk 7, ssi 5, vib 4, stuck 2.",
+   "jejak": "docs/V7_R1_SOLUTIONS.md:97, 197, 55, 69",
+   "nilai": 100.0
+  },
+  {
+   "alt": "A2",
+   "c": "C7",
+   "unit": [
+    3,
+    3
+   ],
+   "status": "TERUKUR",
+   "dasar": "Tiga dari tiga butir bukti pada 3.1.4.2 membawa jejak berkas dan baris.",
+   "jejak": "scratch/ppt1/alternatif.json alternatif id A2 kunci bukti",
+   "nilai": 100.0
+  },
+  {
+   "alt": "A2",
+   "c": "C3",
+   "unit": "L60",
+   "status": "RUBRIK",
+   "dasar": "Menambah empat sumur uji sehingga portabilitas diuji pada jumlah sumur lebih banyak, tanpa memuat kalibrasi ambang per sumur.",
+   "jejak": "docs/V7_R1_SOLUTIONS.md:43-48",
+   "nilai": 60
+  },
+  {
+   "alt": "A2",
+   "c": "C6",
+   "unit": 2,
+   "status": "ASUMSI",
+   "dasar": "Sisa pekerjaan hanya evaluasi ulang fold karena parse selesai. Dua minggu adalah asumsi perkiraan desain.",
+   "jejak": "docs/PPT1_BAB3_1.md:103",
+   "nilai": 77.777778
+  },
+  {
+   "alt": "A2",
+   "c": "C5",
+   "unit": 3,
+   "status": "TERUKUR",
+   "dasar": "Jalur CRPM sudah diparse pada empat wellbore dengan baris terukur, namun jalur VIBLAT untuk F-4, F-10, dan F-15 masih berstatus belum diparse, sehingga tiga wellbore tersisa untuk kelas vib.",
+   "jejak": "docs/V9_PM1_ARCHITECTURE.md:186, 169",
+   "nilai": 25.0
+  },
+  {
+   "alt": "A2",
+   "c": "C8",
+   "unit": 2,
+   "status": "RUBRIK",
+   "dasar": "Tidak menghasilkan bentuk keluaran sendiri. Beban kognitif mengikuti alternatif yang memakai datanya, sehingga dinilai netral pada tingkat 2.",
+   "jejak": "scratch/ppt1/affinity.json kunci kriteria id C8",
+   "nilai": 50
+  },
+  {
+   "alt": "A3",
+   "c": "C1",
+   "unit": "L20",
+   "status": "TERUKUR",
+   "dasar": "Belum dieksekusi. Cacat label yang diserang sudah terukur, yaitu kontrol-positif stuck nol dari sepuluh.",
+   "jejak": "docs/V8_PM_VERDICT.md:202; docs/PPT1_BAB3_1.md:51",
+   "nilai": 20
+  },
+  {
+   "alt": "A3",
+   "c": "C4",
+   "unit": 0,
+   "status": "TERUKUR",
+   "dasar": "Bekerja pada mutu label, tidak menerbitkan alarm.",
+   "jejak": "scratch/v9_i1/v9_i1_RESULTS.json kunci auto_critical_alarm_slots",
+   "nilai": 100.0
+  },
+  {
+   "alt": "A3",
+   "c": "C2",
+   "unit": 9,
+   "status": "TERUKUR",
+   "dasar": "Dua kelas sasaran dengan fold layak terukur: stuck 2 fold dan hyd 7 fold.",
+   "jejak": "docs/V7_R1_SOLUTIONS.md:69, 127",
+   "nilai": 50.0
+  },
+  {
+   "alt": "A3",
+   "c": "C7",
+   "unit": [
+    3,
+    3
+   ],
+   "status": "TERUKUR",
+   "dasar": "Tiga dari tiga butir bukti pada 3.1.4.3 membawa jejak berkas dan baris.",
+   "jejak": "scratch/ppt1/alternatif.json alternatif id A3 kunci bukti",
+   "nilai": 100.0
+  },
+  {
+   "alt": "A3",
+   "c": "C3",
+   "unit": "L30",
+   "status": "RUBRIK",
+   "dasar": "Audit semantik label lintas sumur menyentuh konsistensi antar sumur, namun tidak menetapkan kalibrasi ambang per sumur.",
+   "jejak": "docs/V9_PM2_VERDICT.md:114",
+   "nilai": 30
+  },
+  {
+   "alt": "A3",
+   "c": "C6",
+   "unit": 4,
+   "status": "ASUMSI",
+   "dasar": "Dua tahap berurutan, audit label lalu label probabilistik. Empat minggu adalah asumsi perkiraan desain.",
+   "jejak": "docs/V7_R1_SOLUTIONS.md:89",
+   "nilai": 55.555556
+  },
+  {
+   "alt": "A3",
+   "c": "C5",
+   "unit": 0,
+   "status": "TERUKUR",
+   "dasar": "Memakai label kurasi dan CSV yang sudah ada, tanpa parse baru.",
+   "jejak": "docs/V7_R1_SOLUTIONS.md:88",
+   "nilai": 100.0
+  },
+  {
+   "alt": "A3",
+   "c": "C8",
+   "unit": 2,
+   "status": "RUBRIK",
+   "dasar": "Keluaran berupa label, bukan peringatan operator. Beban kognitif operator tidak berubah, sehingga dinilai netral pada tingkat 2.",
+   "jejak": "scratch/ppt1/affinity.json kunci kriteria id C8",
+   "nilai": 50
+  },
+  {
+   "alt": "A4",
+   "c": "C1",
+   "unit": "L20",
+   "status": "TERUKUR",
+   "dasar": "Belum dieksekusi. Akar yang diserang terukur, yaitu dua fold underpowered pada ssi dengan 3 dan 12 positif.",
+   "jejak": "docs/V7_R1_SOLUTIONS.md:197; docs/PPT1_BAB3_1.md:52",
+   "nilai": 20
+  },
+  {
+   "alt": "A4",
+   "c": "C4",
+   "unit": 0,
+   "status": "TERUKUR",
+   "dasar": "Tidak menerbitkan alarm otomatis.",
+   "jejak": "scratch/v9_i1/v9_i1_RESULTS.json kunci auto_critical_alarm_slots",
+   "nilai": 100.0
+  },
+  {
+   "alt": "A4",
+   "c": "C2",
+   "unit": 12,
+   "status": "TERUKUR",
+   "dasar": "Dua kelas sasaran dengan fold layak terukur: shk 7 fold dan ssi 5 fold.",
+   "jejak": "docs/V7_R1_SOLUTIONS.md:97, 197",
+   "nilai": 66.666667
+  },
+  {
+   "alt": "A4",
+   "c": "C7",
+   "unit": [
+    3,
+    3
+   ],
+   "status": "TERUKUR",
+   "dasar": "Tiga dari tiga butir bukti pada 3.1.4.4 membawa jejak berkas dan baris.",
+   "jejak": "scratch/ppt1/alternatif.json alternatif id A4 kunci bukti",
+   "nilai": 100.0
+  },
+  {
+   "alt": "A4",
+   "c": "C3",
+   "unit": "L30",
+   "status": "RUBRIK",
+   "dasar": "Perubahan unit analisis tidak menetapkan kalibrasi ambang per sumur.",
+   "jejak": "docs/V9_PM2_VERDICT.md:114",
+   "nilai": 30
+  },
+  {
+   "alt": "A4",
+   "c": "C6",
+   "unit": 3,
+   "status": "ASUMSI",
+   "dasar": "Beban rendah sampai sedang pada V7 bagian 7. Tiga minggu adalah asumsi perkiraan desain.",
+   "jejak": "docs/V7_R1_SOLUTIONS.md:222",
+   "nilai": 66.666667
+  },
+  {
+   "alt": "A4",
+   "c": "C5",
+   "unit": 0,
+   "status": "TERUKUR",
+   "dasar": "Memakai CSV terparse dan batas stand yang diturunkan dari kolom yang sudah ada.",
+   "jejak": "docs/V7_R1_SOLUTIONS.md:112",
+   "nilai": 100.0
+  },
+  {
+   "alt": "A4",
+   "c": "C8",
+   "unit": 2,
+   "status": "RUBRIK",
+   "dasar": "Unit stand memperlebar horizon prediksi menjadi stand berikutnya, sehingga keluaran menjadi daftar kandidat tanpa urutan. Tingkat 2 pada rubrik 3.3.",
+   "jejak": "docs/V7_R1_SOLUTIONS.md:113",
+   "nilai": 50
+  },
+  {
+   "alt": "A5",
+   "c": "C1",
+   "unit": "L20",
+   "status": "TERUKUR",
+   "dasar": "Belum dieksekusi. Akar yang diserang terukur, yaitu varians AUPRC pada fold dengan 30 sampai 41 positif.",
+   "jejak": "docs/V7_R1_SOLUTIONS.md:99; docs/PPT1_BAB3_1.md:53",
+   "nilai": 20
+  },
+  {
+   "alt": "A5",
+   "c": "C4",
+   "unit": 0,
+   "status": "TERUKUR",
+   "dasar": "Tidak menerbitkan alarm otomatis.",
+   "jejak": "scratch/v9_i1/v9_i1_RESULTS.json kunci auto_critical_alarm_slots",
+   "nilai": 100.0
+  },
+  {
+   "alt": "A5",
+   "c": "C2",
+   "unit": 9,
+   "status": "TERUKUR",
+   "dasar": "Dua kelas sasaran dengan fold layak terukur: ssi 5 fold dan bit_wear 4 fold.",
+   "jejak": "docs/V7_R1_SOLUTIONS.md:197, 203",
+   "nilai": 50.0
+  },
+  {
+   "alt": "A5",
+   "c": "C7",
+   "unit": [
+    3,
+    3
+   ],
+   "status": "TERUKUR",
+   "dasar": "Tiga dari tiga butir bukti pada 3.1.4.5 membawa jejak berkas dan baris.",
+   "jejak": "scratch/ppt1/alternatif.json alternatif id A5 kunci bukti",
+   "nilai": 100.0
+  },
+  {
+   "alt": "A5",
+   "c": "C3",
+   "unit": "L30",
+   "status": "RUBRIK",
+   "dasar": "Formulasi ordinal tidak menetapkan kalibrasi ambang per sumur.",
+   "jejak": "docs/V9_PM2_VERDICT.md:114",
+   "nilai": 30
+  },
+  {
+   "alt": "A5",
+   "c": "C6",
+   "unit": 2,
+   "status": "ASUMSI",
+   "dasar": "Beban rendah pada V7 bagian 7. Dua minggu adalah asumsi perkiraan desain.",
+   "jejak": "docs/V7_R1_SOLUTIONS.md:222",
+   "nilai": 77.777778
+  },
+  {
+   "alt": "A5",
+   "c": "C5",
+   "unit": 0,
+   "status": "TERUKUR",
+   "dasar": "Kanal sudah tersedia di CSV sehingga tidak ada parse baru.",
+   "jejak": "docs/V7_R1_SOLUTIONS.md:118",
+   "nilai": 100.0
+  },
+  {
+   "alt": "A5",
+   "c": "C8",
+   "unit": 2,
+   "status": "RUBRIK",
+   "dasar": "Keluaran berupa tingkat severitas tanpa urutan prioritas tindakan. Tingkat 2 pada rubrik 3.3.",
+   "jejak": "docs/V7_R1_SOLUTIONS.md:117",
+   "nilai": 50
+  },
+  {
+   "alt": "A6",
+   "c": "C1",
+   "unit": "L20",
+   "status": "TERUKUR",
+   "dasar": "Belum dieksekusi. Hasil negatif pada hyd sudah terukur, yaitu B1 nol dari tiga onset, sehingga formulasi survival tidak punya sinyal pendukung pada kelas itu.",
+   "jejak": "docs/V9_EVAL_B_LAYERB.md:103; docs/PPT1_BAB3_1.md:54",
+   "nilai": 20
+  },
+  {
+   "alt": "A6",
+   "c": "C4",
+   "unit": 0,
+   "status": "TERUKUR",
+   "dasar": "Skor risiko per horizon tetap advisory, tanpa alarm otomatis.",
+   "jejak": "scratch/v9_i1/v9_i1_RESULTS.json kunci auto_critical_alarm_slots",
+   "nilai": 100.0
+  },
+  {
+   "alt": "A6",
+   "c": "C2",
+   "unit": 11,
+   "status": "TERUKUR",
+   "dasar": "Dua kelas sasaran dengan fold layak terukur: hyd 7 fold dan bit_wear 4 fold.",
+   "jejak": "docs/V7_R1_SOLUTIONS.md:127, 203",
+   "nilai": 61.111111
+  },
+  {
+   "alt": "A6",
+   "c": "C7",
+   "unit": [
+    3,
+    3
+   ],
+   "status": "TERUKUR",
+   "dasar": "Tiga dari tiga butir bukti pada 3.1.4.6 membawa jejak berkas dan baris.",
+   "jejak": "scratch/ppt1/alternatif.json alternatif id A6 kunci bukti",
+   "nilai": 100.0
+  },
+  {
+   "alt": "A6",
+   "c": "C3",
+   "unit": "L30",
+   "status": "RUBRIK",
+   "dasar": "Survival mengubah formulasi, bukan ambang, sehingga gejala 119,6 kali tidak tersentuh.",
+   "jejak": "docs/V9_PM2_VERDICT.md:114",
+   "nilai": 30
+  },
+  {
+   "alt": "A6",
+   "c": "C6",
+   "unit": 4,
+   "status": "ASUMSI",
+   "dasar": "Beban sedang pada V7 bagian 7. Empat minggu adalah asumsi perkiraan desain.",
+   "jejak": "docs/V7_R1_SOLUTIONS.md:222",
+   "nilai": 55.555556
+  },
+  {
+   "alt": "A6",
+   "c": "C5",
+   "unit": 0,
+   "status": "TERUKUR",
+   "dasar": "Diturunkan dari label yang sudah ada, tanpa parse baru.",
+   "jejak": "docs/V7_R1_SOLUTIONS.md:151",
+   "nilai": 100.0
+  },
+  {
+   "alt": "A6",
+   "c": "C8",
+   "unit": 2,
+   "status": "RUBRIK",
+   "dasar": "Keluaran berupa hazard atau sisa umur yang masih perlu ditafsirkan pengguna. Tingkat 2 pada rubrik 3.3.",
+   "jejak": "docs/V7_R1_SOLUTIONS.md:150",
+   "nilai": 50
+  },
+  {
+   "alt": "A7",
+   "c": "C1",
+   "unit": "L75",
+   "status": "TERUKUR",
+   "dasar": "Mekanisme progresi sudah dijalankan pada empat dari empat alat dengan TLead 20 sampai 36 detik dan false alarm terkalibrasi 1 sampai 3 per alat, sehingga delta terukur positif, namun gate G1 tetap nol dari empat dan presisi run hanya 0,50 sehingga makna delta terbatas.",
+   "jejak": "docs/V9_EVAL_C_LAYERC.md:98; docs/V7_R1_SOLUTIONS.md:160",
+   "nilai": 75
+  },
+  {
+   "alt": "A7",
+   "c": "C4",
+   "unit": 0,
+   "status": "TERUKUR",
+   "dasar": "Keluaran berupa status dan tren alat, tanpa alarm otomatis.",
+   "jejak": "scratch/v9_i1/v9_i1_RESULTS.json kunci auto_critical_alarm_slots",
+   "nilai": 100.0
+  },
+  {
+   "alt": "A7",
+   "c": "C2",
+   "unit": 4,
+   "status": "TERUKUR",
+   "dasar": "Satu domain sasaran dengan empat fold alat terukur.",
+   "jejak": "docs/V7_R1_SOLUTIONS.md:160",
+   "nilai": 22.222222
+  },
+  {
+   "alt": "A7",
+   "c": "C7",
+   "unit": [
+    4,
+    4
+   ],
+   "status": "TERUKUR",
+   "dasar": "Empat dari empat butir bukti pada 3.1.4.7 membawa jejak berkas dan baris.",
+   "jejak": "scratch/ppt1/alternatif.json alternatif id A7 kunci bukti",
+   "nilai": 100.0
+  },
+  {
+   "alt": "A7",
+   "c": "C3",
+   "unit": "L30",
+   "status": "RUBRIK",
+   "dasar": "Domain bengkel memakai empat alat dan bukan sumur, sehingga kalibrasi per sumur tidak berlaku dan tidak dirancang.",
+   "jejak": "scratch/ppt1/affinity.json kunci batasan id B5",
+   "nilai": 30
+  },
+  {
+   "alt": "A7",
+   "c": "C6",
+   "unit": 5,
+   "status": "ASUMSI",
+   "dasar": "Pengembangan baru berskala sedang sampai besar karena dekomposisi mode dan ranking ditambahkan. Lima minggu adalah asumsi perkiraan desain.",
+   "jejak": "docs/V7_R1_SOLUTIONS.md:219; scratch/ppt1/affinity.json kunci batasan id B3",
+   "nilai": 44.444444
+  },
+  {
+   "alt": "A7",
+   "c": "C5",
+   "unit": 0,
+   "status": "TERUKUR",
+   "dasar": "Delapan berkas akselerometer sudah tersedia dan terverifikasi SHA-256, tanpa parse baru.",
+   "jejak": "docs/V7_R1_SOLUTIONS.md:170",
+   "nilai": 100.0
+  },
+  {
+   "alt": "A7",
+   "c": "C8",
+   "unit": 2,
+   "status": "RUBRIK",
+   "dasar": "Keluaran berupa peringkat alat yang masih perlu dibaca sebagai daftar. Tingkat 2 pada rubrik 3.3.",
+   "jejak": "docs/V7_R1_SOLUTIONS.md:185",
+   "nilai": 50
+  },
+  {
+   "alt": "A8",
+   "c": "C1",
+   "unit": "L20",
+   "status": "TERUKUR",
+   "dasar": "Belum dieksekusi. Akar yang diserang terukur, yaitu label hyd masih proksi residual SPPA dan label keausan fisik tidak tersedia.",
+   "jejak": "docs/V8_PM_VERDICT.md:202; docs/V4_MAINTENANCE_ML_OPTIONS.md:62",
+   "nilai": 20
+  },
+  {
+   "alt": "A8",
+   "c": "C4",
+   "unit": 0,
+   "status": "TERUKUR",
+   "dasar": "Label fisika dipakai sebagai label pelatihan, bukan alarm otomatis, sehingga batasan B2 tetap terpenuhi.",
+   "jejak": "scratch/ppt1/affinity.json kunci batasan id B2",
+   "nilai": 100.0
+  },
+  {
+   "alt": "A8",
+   "c": "C2",
+   "unit": 11,
+   "status": "TERUKUR",
+   "dasar": "Dua kelas sasaran dengan fold layak terukur: hyd 7 fold dan bit_wear 4 fold.",
+   "jejak": "docs/V7_R1_SOLUTIONS.md:127, 203",
+   "nilai": 61.111111
+  },
+  {
+   "alt": "A8",
+   "c": "C7",
+   "unit": [
+    3,
+    3
+   ],
+   "status": "TERUKUR",
+   "dasar": "Tiga dari tiga butir bukti pada 3.1.4.8 membawa jejak berkas dan baris.",
+   "jejak": "scratch/ppt1/alternatif.json alternatif id A8 kunci bukti",
+   "nilai": 100.0
+  },
+  {
+   "alt": "A8",
+   "c": "C3",
+   "unit": "L60",
+   "status": "RUBRIK",
+   "dasar": "Parse kanal pit dan flow pada F-9 serta F-1 C dan F-11 menambah sumur uji, tanpa rancangan kalibrasi ambang per sumur.",
+   "jejak": "docs/V7_R1_SOLUTIONS.md:145",
+   "nilai": 60
+  },
+  {
+   "alt": "A8",
+   "c": "C6",
+   "unit": 5,
+   "status": "ASUMSI",
+   "dasar": "Beban rendah untuk label MSE dan DS ditambah beban sedang sampai besar untuk parse pit dan flow. Lima minggu adalah asumsi perkiraan desain.",
+   "jejak": "docs/V7_R1_SOLUTIONS.md:146, 183",
+   "nilai": 44.444444
+  },
+  {
+   "alt": "A8",
+   "c": "C5",
+   "unit": 2,
+   "status": "TERUKUR",
+   "dasar": "Dua sumur memerlukan parse tambahan, yaitu kanal pit mentah F-9 dan F-1 C atau F-11.",
+   "jejak": "docs/V7_R1_SOLUTIONS.md:145",
+   "nilai": 33.333333
+  },
+  {
+   "alt": "A8",
+   "c": "C8",
+   "unit": 2,
+   "status": "RUBRIK",
+   "dasar": "Mengubah sumber label tanpa mengubah bentuk keluaran, sehingga beban kognitif operator dinilai netral pada tingkat 2.",
+   "jejak": "scratch/ppt1/affinity.json kunci kriteria id C8",
+   "nilai": 50
+  },
+  {
+   "alt": "A9",
+   "c": "C1",
+   "unit": "L20",
+   "status": "TERUKUR",
+   "dasar": "Belum dieksekusi. Gejala yang diserang terukur, yaitu sebaran false alarm 4,15 sampai 496,09 per 24 jam.",
+   "jejak": "docs/V9_PM2_VERDICT.md:114; docs/PPT1_BAB3_1.md:57",
+   "nilai": 20
+  },
+  {
+   "alt": "A9",
+   "c": "C4",
+   "unit": 0,
+   "status": "TERUKUR",
+   "dasar": "Purwarupa peringatan dini tetap advisory dengan review manusia, sesuai batasan B2.",
+   "jejak": "scratch/v9_i1/v9_i1_RESULTS.json kunci auto_critical_alarm_slots",
+   "nilai": 100.0
+  },
+  {
+   "alt": "A9",
+   "c": "C2",
+   "unit": 6,
+   "status": "TERUKUR",
+   "dasar": "Dua kelas sasaran dengan fold layak terukur: vib 4 fold dan stuck 2 fold.",
+   "jejak": "docs/V7_R1_SOLUTIONS.md:55, 69",
+   "nilai": 33.333333
+  },
+  {
+   "alt": "A9",
+   "c": "C7",
+   "unit": [
+    4,
+    4
+   ],
+   "status": "TERUKUR",
+   "dasar": "Empat dari empat butir bukti pada 3.1.4.9 membawa jejak berkas dan baris, termasuk kunci JSON registry.",
+   "jejak": "scratch/ppt1/alternatif.json alternatif id A9 kunci bukti",
+   "nilai": 100.0
+  },
+  {
+   "alt": "A9",
+   "c": "C3",
+   "unit": "L60",
+   "status": "RUBRIK",
+   "dasar": "Memuat rancangan kalibrasi ambang per sumur sebagai inti pekerjaan, namun belum diuji pada dua sumur atau lebih.",
+   "jejak": "docs/V9_PM2_VERDICT.md:114; docs/PPT1_BAB3_1.md:57",
+   "nilai": 60
+  },
+  {
+   "alt": "A9",
+   "c": "C6",
+   "unit": 4,
+   "status": "ASUMSI",
+   "dasar": "Kalibrasi ambang ditambah purwarupa peringatan. Empat minggu adalah asumsi perkiraan desain.",
+   "jejak": "scratch/ppt1/affinity.json kunci batasan id B3",
+   "nilai": 55.555556
+  },
+  {
+   "alt": "A9",
+   "c": "C5",
+   "unit": 0,
+   "status": "TERUKUR",
+   "dasar": "Memakai registry head dan CSV yang sudah ada, tanpa parse baru.",
+   "jejak": "docs/V4_MAINTENANCE_ML_OPTIONS.md:58",
+   "nilai": 100.0
+  },
+  {
+   "alt": "A9",
+   "c": "C8",
+   "unit": 3,
+   "status": "RUBRIK",
+   "dasar": "Rancangan keluaran berupa satu baris peringatan dengan waktu, keyakinan, dan tindakan, serta frekuensi pemeriksaan satu kali per empat jam. Tingkat 3 pada rubrik 3.3.",
+   "jejak": "docs/V8_R1_ABC_SPEC.md:240; docs/PPT1_BAB3_2.md:471",
+   "nilai": 100
+  }
+ ],
+ "matriks_nilai": {
+  "A1": {
+   "C1": 75,
+   "C4": 100.0,
+   "C2": 72.222222,
+   "C7": 100.0,
+   "C3": 30,
+   "C6": 77.777778,
+   "C5": 100.0,
+   "C8": 100
+  },
+  "A2": {
+   "C1": 20,
+   "C4": 100.0,
+   "C2": 100.0,
+   "C7": 100.0,
+   "C3": 60,
+   "C6": 77.777778,
+   "C5": 25.0,
+   "C8": 50
+  },
+  "A3": {
+   "C1": 20,
+   "C4": 100.0,
+   "C2": 50.0,
+   "C7": 100.0,
+   "C3": 30,
+   "C6": 55.555556,
+   "C5": 100.0,
+   "C8": 50
+  },
+  "A4": {
+   "C1": 20,
+   "C4": 100.0,
+   "C2": 66.666667,
+   "C7": 100.0,
+   "C3": 30,
+   "C6": 66.666667,
+   "C5": 100.0,
+   "C8": 50
+  },
+  "A5": {
+   "C1": 20,
+   "C4": 100.0,
+   "C2": 50.0,
+   "C7": 100.0,
+   "C3": 30,
+   "C6": 77.777778,
+   "C5": 100.0,
+   "C8": 50
+  },
+  "A6": {
+   "C1": 20,
+   "C4": 100.0,
+   "C2": 61.111111,
+   "C7": 100.0,
+   "C3": 30,
+   "C6": 55.555556,
+   "C5": 100.0,
+   "C8": 50
+  },
+  "A7": {
+   "C1": 75,
+   "C4": 100.0,
+   "C2": 22.222222,
+   "C7": 100.0,
+   "C3": 30,
+   "C6": 44.444444,
+   "C5": 100.0,
+   "C8": 50
+  },
+  "A8": {
+   "C1": 20,
+   "C4": 100.0,
+   "C2": 61.111111,
+   "C7": 100.0,
+   "C3": 60,
+   "C6": 44.444444,
+   "C5": 33.333333,
+   "C8": 50
+  },
+  "A9": {
+   "C1": 20,
+   "C4": 100.0,
+   "C2": 33.333333,
+   "C7": 100.0,
+   "C3": 60,
+   "C6": 55.555556,
+   "C5": 100.0,
+   "C8": 100
+  }
+ },
+ "topsis": {
+  "sel": {
+   "A1": {
+    "D_plus": 0.029657,
+    "D_minus": 0.163594,
+    "C": 0.846534,
+    "V": {
+     "C1": 0.214961,
+     "C4": 0.071577,
+     "C2": 0.05986,
+     "C7": 0.036855,
+     "C3": 0.018695,
+     "C6": 0.022327,
+     "C5": 0.012501,
+     "C8": 0.008069
+    },
+    "peringkat": 1
+   },
+   "A2": {
+    "D_plus": 0.157968,
+    "D_minus": 0.0678,
+    "C": 0.300307,
+    "V": {
+     "C1": 0.057323,
+     "C4": 0.071577,
+     "C2": 0.082884,
+     "C7": 0.036855,
+     "C3": 0.03739,
+     "C6": 0.022327,
+     "C5": 0.003125,
+     "C8": 0.004034
+    },
+    "peringkat": 3
+   },
+   "A3": {
+    "D_plus": 0.164237,
+    "D_minus": 0.025063,
+    "C": 0.132398,
+    "V": {
+     "C1": 0.057323,
+     "C4": 0.071577,
+     "C2": 0.041442,
+     "C7": 0.036855,
+     "C3": 0.018695,
+     "C6": 0.015948,
+     "C5": 0.012501,
+     "C8": 0.004034
+    },
+    "peringkat": 8
+   },
+   "A4": {
+    "D_plus": 0.161211,
+    "D_minus": 0.038543,
+    "C": 0.192953,
+    "V": {
+     "C1": 0.057323,
+     "C4": 0.071577,
+     "C2": 0.055256,
+     "C7": 0.036855,
+     "C3": 0.018695,
+     "C6": 0.019137,
+     "C5": 0.012501,
+     "C8": 0.004034
+    },
+    "peringkat": 4
+   },
+   "A5": {
+    "D_plus": 0.164113,
+    "D_minus": 0.026637,
+    "C": 0.139644,
+    "V": {
+     "C1": 0.057323,
+     "C4": 0.071577,
+     "C2": 0.041442,
+     "C7": 0.036855,
+     "C3": 0.018695,
+     "C6": 0.022327,
+     "C5": 0.012501,
+     "C8": 0.004034
+    },
+    "peringkat": 7
+   },
+   "A6": {
+    "D_plus": 0.162158,
+    "D_minus": 0.03372,
+    "C": 0.172147,
+    "V": {
+     "C1": 0.057323,
+     "C4": 0.071577,
+     "C2": 0.050651,
+     "C7": 0.036855,
+     "C3": 0.018695,
+     "C6": 0.015948,
+     "C5": 0.012501,
+     "C8": 0.004034
+    },
+    "peringkat": 6
+   },
+   "A7": {
+    "D_plus": 0.06792,
+    "D_minus": 0.157917,
+    "C": 0.699253,
+    "V": {
+     "C1": 0.214961,
+     "C4": 0.071577,
+     "C2": 0.018419,
+     "C7": 0.036855,
+     "C3": 0.018695,
+     "C6": 0.012758,
+     "C5": 0.012501,
+     "C8": 0.004034
+    },
+    "peringkat": 2
+   },
+   "A8": {
+    "D_plus": 0.16145,
+    "D_minus": 0.037276,
+    "C": 0.187576,
+    "V": {
+     "C1": 0.057323,
+     "C4": 0.071577,
+     "C2": 0.050651,
+     "C7": 0.036855,
+     "C3": 0.03739,
+     "C6": 0.012758,
+     "C5": 0.004167,
+     "C8": 0.004034
+    },
+    "peringkat": 5
+   },
+   "A9": {
+    "D_plus": 0.167164,
+    "D_minus": 0.023424,
+    "C": 0.122902,
+    "V": {
+     "C1": 0.057323,
+     "C4": 0.071577,
+     "C2": 0.027628,
+     "C7": 0.036855,
+     "C3": 0.03739,
+     "C6": 0.015948,
+     "C5": 0.012501,
+     "C8": 0.008069
+    },
+    "peringkat": 9
+   }
+  },
+  "peringkat": [
+   "A1",
+   "A7",
+   "A2",
+   "A4",
+   "A8",
+   "A6",
+   "A5",
+   "A3",
+   "A9"
+  ],
+  "ideal_plus": {
+   "C1": 0.214961,
+   "C4": 0.071577,
+   "C2": 0.082884,
+   "C7": 0.036855,
+   "C3": 0.03739,
+   "C6": 0.022327,
+   "C5": 0.012501,
+   "C8": 0.008069
+  },
+  "ideal_min": {
+   "C1": 0.057323,
+   "C4": 0.071577,
+   "C2": 0.018419,
+   "C7": 0.036855,
+   "C3": 0.018695,
+   "C6": 0.012758,
+   "C5": 0.003125,
+   "C8": 0.004034
+  },
+  "bagi": {
+   "C1": 118.532696,
+   "C4": 300.0,
+   "C2": 183.669725,
+   "C7": 300.0,
+   "C3": 127.279221,
+   "C6": 189.215405,
+   "C5": 267.835978,
+   "C8": 193.649167
+  }
+ },
+ "saw": {
+  "skor": {
+   "A1": 0.444845,
+   "A2": 0.315515,
+   "A3": 0.258375,
+   "A4": 0.275379,
+   "A5": 0.264754,
+   "A6": 0.267584,
+   "A7": 0.3898,
+   "A8": 0.274756,
+   "A9": 0.26729
+  },
+  "peringkat": [
+   "A1",
+   "A7",
+   "A2",
+   "A4",
+   "A8",
+   "A6",
+   "A9",
+   "A5",
+   "A3"
+  ]
+ },
+ "kendall_topsis_saw": 0.888889,
+ "metode_kandidat": [
+  {
+   "nama": "AHP",
+   "kebutuhan": "perbandingan berpasangan antar kriteria oleh pakar pada skala 1 sampai 9, ditambah uji rasio konsistensi",
+   "kesesuaian": "tidak tersedia. Belum ada wawancara mitra maupun penilaian pakar, sehingga matriks perbandingan hanya bisa diisi angka karangan",
+   "keputusan": "ditolak",
+   "alasan": "Angka perbandingan tanpa pakar adalah angka tanpa jejak, dan rasio konsistensi tidak bermakna bila masukannya karangan. Menolak AHP di sini menjaga aturan bukti, bukan menilai AHP sebagai metode lemah."
+  },
+  {
+   "nama": "TOPSIS",
+   "kebutuhan": "matriks keputusan kardinal, arah tiap kriteria, dan vektor bobot",
+   "kesesuaian": "tersedia. Empat kolom berisi angka terukur (C2, C4, C5, C7), dua kolom memakai rubrik berjangkar (C1 dan C3), dan dua kolom berstatus asumsi yang ditandai terbuka (C6 minggu kerja, C8 beban kognitif). Seluruh 72 sel terisi",
+   "keputusan": "dipakai sebagai metode utama",
+   "alasan": "Menerima campuran kriteria benefit dan cost, menghasilkan jarak ke solusi ideal dan anti-ideal sehingga selisih antar alternatif terbaca sebagai angka, dan formulanya publik sehingga dapat direproduksi pihak lain."
+  },
+  {
+   "nama": "SAW",
+   "kebutuhan": "matriks keputusan kardinal dan vektor bobot, keduanya sama dengan TOPSIS",
+   "kesesuaian": "tersedia, memakai masukan identik",
+   "keputusan": "dipakai sebagai pembanding bebas",
+   "alasan": "Bila dua metode dengan cara mengukur jarak berbeda memberi juara sama, hasil tidak bergantung pada pilihan metode. SAW tidak dipakai sendirian karena penjumlahan berbobot dapat menutupi alternatif yang sangat lemah pada satu kriteria."
+  }
+ ],
+ "sitasi": [
+  {
+   "kunci": "Hwang dan Yoon 1981",
+   "teks": "Hwang, C. L., dan Yoon, K. (1981). Multiple Attribute Decision Making: Methods and Applications, A State-of-the-Art Survey. Springer-Verlag, New York.",
+   "doi": "10.1007/978-3-642-48318-9",
+   "dipakai_untuk": "rumus TOPSIS, yaitu normalisasi vektor, solusi ideal positif dan negatif, serta koefisien kedekatan",
+   "verifikasi": "pencarian web 25 Oktober 2026 menemukan entri Springer tahun 1981 dengan DOI tersebut, dan artikel Wikipedia TOPSIS mengutip sumber yang sama"
+  },
+  {
+   "kunci": "Barron dan Barrett 1996",
+   "teks": "Barron, F. H., dan Barrett, B. E. (1996). Decision Quality Using Ranked Attribute Weights. Management Science, 42(11), 1515 sampai 1523.",
+   "doi": "10.1287/mnsc.42.11.1515",
+   "dipakai_untuk": "penurunan bobot kardinal dari urutan prioritas kriteria memakai Rank-Order Centroid",
+   "verifikasi": "pencarian web 25 Oktober 2026 menemukan DOI tersebut pada INFORMS, dengan abstrak yang menyatakan ROC lebih akurat daripada formula berbasis urutan lain"
+  },
+  {
+   "kunci": "Kunsch dan Ishizaka 2019",
+   "teks": "Kunsch, P. L., dan Ishizaka, A. (2019). A note on using centroid weights in additive multi-criteria decision analysis. European Journal of Operational Research.",
+   "doi": "10.1016/j.ejor.2019.02.021",
+   "dipakai_untuk": "batas pemakaian ROC. Artikel ini menunjukkan keunggulan ROC bergantung pada cara elisitasi bobot, sehingga ROC pada kartu ini wajib disertai uji sensitivitas",
+   "verifikasi": "pencarian web 25 Oktober 2026 menemukan DOI tersebut beserta ringkasan yang menyatakan peringkat kinerja metode bobot pengganti bergantung pada definisi simpleks bobot"
+  }
+ ],
+ "aturan_urut": {
+  "C1": "R1",
+  "C4": "R2",
+  "C2": "R3",
+  "C7": "R4",
+  "C3": "R5",
+  "C6": "R6",
+  "C5": "R7",
+  "C8": "R8"
+ },
+ "aturan_def": [
+  {
+   "kode": "R1",
+   "aturan": "kriteria yang menjadi definisi lulus gate",
+   "kriteria": "C1",
+   "dasar": "Gate G1 dan G2 adalah definisi operasional lulus pada docs/V7_R1_SOLUTIONS.md:97, 127, 197, 203, 160, sehingga kriteria yang mengukur gate mendahului semua kriteria lain."
+  },
+  {
+   "kode": "R2",
+   "aturan": "batasan keras yang menggugurkan, dengan jumlah user story terbanyak",
+   "kriteria": "C4",
+   "dasar": "Batasan B2 pada scratch/ppt1/affinity.json menggugurkan alternatif yang mengklaim alarm otomatis, dan tiga user story bergantung pada C4 yaitu U2, U4, dan U6, terbanyak di antara delapan kriteria."
+  },
+  {
+   "kode": "R3",
+   "aturan": "batasan keras yang menggugurkan, jumlah user story lebih sedikit",
+   "kriteria": "C2",
+   "dasar": "Batasan B4 menetapkan urutan kerja label lebih dahulu, dan dua user story bergantung pada C2 yaitu U1 dan U5."
+  },
+  {
+   "kode": "R4",
+   "aturan": "batasan keras yang menuntut jejak, tanpa menggugurkan",
+   "kriteria": "C7",
+   "dasar": "Batasan B1 menuntut seluruh angka dapat diaudit, sifatnya administratif sehingga tidak menggugurkan alternatif, dan tiga user story bergantung pada C7 yaitu U4, U5, dan U6."
+  },
+  {
+   "kode": "R5",
+   "aturan": "gejala terukur yang belum menjadi batasan",
+   "kriteria": "C3",
+   "dasar": "Sebaran false alarm rate 4,15 sampai 496,09 per 24 jam sudah terukur pada docs/V9_PM2_VERDICT.md:114, tetapi belum ada alternatif yang menguji kalibrasi per sumur, sehingga kriteria ini penting namun belum menggugurkan."
+  },
+  {
+   "kode": "R6",
+   "aturan": "batasan jadwal dengan daya beda rendah",
+   "kriteria": "C6",
+   "dasar": "Tenggat sembilan minggu mengikat seluruh tim menurut Buku Pedoman PPT Tahap I Tabel 3.1 halaman 32, namun seluruh alternatif berada pada rentang dua sampai lima minggu sehingga daya bedanya kecil dan tidak ada user story yang bergantung padanya."
+  },
+  {
+   "kode": "R7",
+   "aturan": "biaya data yang bersifat instrumental",
+   "kriteria": "C5",
+   "dasar": "Sebagian besar parse sudah selesai pada kampanye V9 menurut docs/V9_PM1_ARCHITECTURE.md:186, sehingga kebutuhan data baru hanya membedakan beberapa alternatif."
+  },
+  {
+   "kode": "R8",
+   "aturan": "kriteria dengan bukti terlemah",
+   "kriteria": "C8",
+   "dasar": "Rubrik C8 disusun pada subbab 3.3 dan belum divalidasi mitra, bahkan docs/PPT1_BAB3_2.md:665 menyatakan antarmuka peringatan belum dirancang. Peringkat terakhir menandai kekuatan bukti, bukan ketidakpentingan."
+  }
+ ],
+ "peta_draft": [
+  {
+   "draft": "K1 Recall (bobot 0,25)",
+   "kita": "C1",
+   "status": "terpetakan",
+   "catatan": "Keduanya mengukur efektivitas deteksi. Bedanya, K1 memakai skor 1 sampai 5 tanpa rubrik, sedangkan C1 memakai lift dan AUPRC terukur yang sudah ada pada docs/V7_R1_SOLUTIONS.md:97, 127, 197, 203, 160."
+  },
+  {
+   "draft": "K2 Lead time (bobot 0,20)",
+   "kita": "tidak punya kriteria sendiri",
+   "status": "terpetakan sebagian",
+   "catatan": "Angka lead time memang terukur, yaitu 10 sampai 11,5 menit pada stuck dan 20 sampai 36 detik pada alat bengkel, tetapi hanya untuk dua kelas. Karena tidak tersedia untuk tujuh kelas lain, lead time tidak dapat dipakai sebagai kriteria pemilihan lintas alternatif."
+  },
+  {
+   "draft": "K3 Explainability (bobot 0,15)",
+   "kita": "C8",
+   "status": "terpetakan sebagian",
+   "catatan": "C8 mengukur beban kognitif keluaran, bukan kualitas penjelasan model. Keduanya bersinggungan pada keterbacaan hasil, dan keduanya berstatus asumsi karena belum divalidasi mitra."
+  },
+  {
+   "draft": "K4 Biaya implementasi (bobot 0,10)",
+   "kita": "C5 dan C6",
+   "status": "terpetakan",
+   "catatan": "Biaya dipecah menjadi kebutuhan data dan waktu kerja. Rupiah tidak dipakai pada kedua sisi karena tarif rig tidak tersedia pada seluruh 13 dataset, sesuai docs/PPT1_BAB3_2.md:659."
+  },
+  {
+   "draft": "K5 Kemudahan integrasi (bobot 0,15)",
+   "kita": "tidak terpetakan",
+   "status": "tidak dapat dipertahankan",
+   "catatan": "Tidak ada berkas proyek yang mengukur biaya integrasi ke sistem mitra, dan telemetri mitra tidak dipakai menurut batasan B1. Skor integrasi pada draft karena itu tidak punya jejak."
+  },
+  {
+   "draft": "K6 ROI (bobot 0,15)",
+   "kita": "tidak terpetakan",
+   "status": "tidak dapat dipertahankan",
+   "catatan": "Tarif rig per jam tidak ada pada seluruh dataset, sehingga ROI dalam rupiah tidak dapat dihitung. Menuliskan angka ROI berarti menulis asumsi sebagai hasil ukur."
+  }
+ ],
+ "diskriminasi": {
+  "kolom": {
+   "C1": {
+    "min": 20,
+    "max": 75,
+    "rentang": 55,
+    "membedakan": true,
+    "bobot": 0.339732
+   },
+   "C4": {
+    "min": 100.0,
+    "max": 100.0,
+    "rentang": 0.0,
+    "membedakan": false,
+    "bobot": 0.214732
+   },
+   "C2": {
+    "min": 22.222222,
+    "max": 100.0,
+    "rentang": 77.777778,
+    "membedakan": true,
+    "bobot": 0.152232
+   },
+   "C7": {
+    "min": 100.0,
+    "max": 100.0,
+    "rentang": 0.0,
+    "membedakan": false,
+    "bobot": 0.110565
+   },
+   "C3": {
+    "min": 30,
+    "max": 60,
+    "rentang": 30,
+    "membedakan": true,
+    "bobot": 0.079315
+   },
+   "C6": {
+    "min": 44.444444,
+    "max": 77.777778,
+    "rentang": 33.333334,
+    "membedakan": true,
+    "bobot": 0.054315
+   },
+   "C5": {
+    "min": 25.0,
+    "max": 100.0,
+    "rentang": 75.0,
+    "membedakan": true,
+    "bobot": 0.033482
+   },
+   "C8": {
+    "min": 50,
+    "max": 100,
+    "rentang": 50,
+    "membedakan": true,
+    "bobot": 0.015625
+   }
+  },
+  "tanpa_variasi": [
+   "C4",
+   "C7"
+  ],
+  "massa_bobot_efektif": 0.674702,
+  "massa_bobot_tanpa_variasi": 0.325298
+ },
+ "sensitivitas": {
+  "skenario": [
+   {
+    "id": "P0",
+    "nama": "Dasar, ROC atas peringkat",
+    "jenis": "bobot",
+    "catatan": "Peringkat 1 sampai 8 diturunkan dari aturan R1 sampai R8 pada 3.4.4, lalu diubah menjadi bobot dengan Rank-Order Centroid.",
+    "bobot": {
+     "C1": 0.339732,
+     "C4": 0.214732,
+     "C2": 0.152232,
+     "C7": 0.110565,
+     "C3": 0.079315,
+     "C6": 0.054315,
+     "C5": 0.033482,
+     "C8": 0.015625
+    },
+    "peringkat": [
+     "A1",
+     "A7",
+     "A2",
+     "A4",
+     "A8",
+     "A6",
+     "A5",
+     "A3",
+     "A9"
+    ],
+    "juara": "A1",
+    "tiga_besar": [
+     "A1",
+     "A7",
+     "A2"
+    ],
+    "C": {
+     "A1": 0.846534,
+     "A2": 0.300307,
+     "A3": 0.132398,
+     "A4": 0.192953,
+     "A5": 0.139644,
+     "A6": 0.172147,
+     "A7": 0.699253,
+     "A8": 0.187576,
+     "A9": 0.122902
+    },
+    "tau_vs_dasar": 1.0
+   },
+   {
+    "id": "P1",
+    "nama": "Bobot sama",
+    "jenis": "bobot",
+    "catatan": "Delapan kriteria berbobot 0,125. Menguji apakah hasil bergantung pada penurunan ROC.",
+    "bobot": {
+     "C1": 0.125,
+     "C4": 0.125,
+     "C2": 0.125,
+     "C7": 0.125,
+     "C3": 0.125,
+     "C6": 0.125,
+     "C5": 0.125,
+     "C8": 0.125
+    },
+    "peringkat": [
+     "A1",
+     "A7",
+     "A2",
+     "A9",
+     "A4",
+     "A5",
+     "A6",
+     "A3",
+     "A8"
+    ],
+    "juara": "A1",
+    "tiga_besar": [
+     "A1",
+     "A7",
+     "A2"
+    ],
+    "C": {
+     "A1": 0.708991,
+     "A2": 0.462074,
+     "A3": 0.331627,
+     "A4": 0.388371,
+     "A5": 0.361824,
+     "A6": 0.361233,
+     "A7": 0.484471,
+     "A8": 0.329474,
+     "A9": 0.431417
+    },
+    "tau_vs_dasar": 0.5
+   },
+   {
+    "id": "P2",
+    "nama": "Gate dominan",
+    "jenis": "bobot",
+    "catatan": "C1 ditetapkan 0,55 dan sisanya dibagi proporsional dari bobot dasar. Menguji pembacaan paling ketat terhadap gate G1 dan G2.",
+    "bobot": {
+     "C1": 0.55,
+     "C4": 0.146349,
+     "C2": 0.103753,
+     "C7": 0.075355,
+     "C3": 0.054057,
+     "C6": 0.037018,
+     "C5": 0.022819,
+     "C8": 0.010649
+    },
+    "peringkat": [
+     "A1",
+     "A7",
+     "A2",
+     "A4",
+     "A8",
+     "A6",
+     "A5",
+     "A3",
+     "A9"
+    ],
+    "juara": "A1",
+    "tiga_besar": [
+     "A1",
+     "A7",
+     "A2"
+    ],
+    "C": {
+     "A1": 0.92707,
+     "A2": 0.153258,
+     "A3": 0.062293,
+     "A4": 0.092984,
+     "A5": 0.065956,
+     "A6": 0.082224,
+     "A7": 0.846505,
+     "A8": 0.090181,
+     "A9": 0.05827
+    },
+    "tau_vs_dasar": 1.0
+   },
+   {
+    "id": "P3",
+    "nama": "Label dahulu",
+    "jenis": "bobot",
+    "catatan": "C2 ditetapkan 0,35 dan C7 0,25, sisanya proporsional. Menguji pembacaan V8_PM_VERDICT:202 yang menaruh mutu label sebagai prasyarat.",
+    "bobot": {
+     "C1": 0.184336,
+     "C4": 0.116512,
+     "C2": 0.35,
+     "C7": 0.25,
+     "C3": 0.043036,
+     "C6": 0.029471,
+     "C5": 0.018167,
+     "C8": 0.008478
+    },
+    "peringkat": [
+     "A1",
+     "A2",
+     "A4",
+     "A8",
+     "A6",
+     "A7",
+     "A5",
+     "A3",
+     "A9"
+    ],
+    "juara": "A1",
+    "tiga_besar": [
+     "A1",
+     "A2",
+     "A4"
+    ],
+    "C": {
+     "A1": 0.704128,
+     "A2": 0.634275,
+     "A3": 0.292801,
+     "A4": 0.442332,
+     "A5": 0.29375,
+     "A6": 0.395219,
+     "A7": 0.365624,
+     "A8": 0.397445,
+     "A9": 0.136345
+    },
+    "tau_vs_dasar": 0.777778
+   },
+   {
+    "id": "P4",
+    "nama": "Kelayakan dahulu",
+    "jenis": "bobot",
+    "catatan": "C5 ditetapkan 0,30 dan C6 0,30, sisanya proporsional. Menguji pembacaan yang mengutamakan selesai dalam satu semester.",
+    "bobot": {
+     "C1": 0.148972,
+     "C4": 0.09416,
+     "C2": 0.066754,
+     "C7": 0.048483,
+     "C3": 0.03478,
+     "C6": 0.3,
+     "C5": 0.3,
+     "C8": 0.006852
+    },
+    "peringkat": [
+     "A1",
+     "A7",
+     "A5",
+     "A4",
+     "A6",
+     "A3",
+     "A9",
+     "A2",
+     "A8"
+    ],
+    "juara": "A1",
+    "tiga_besar": [
+     "A1",
+     "A7",
+     "A5"
+    ],
+    "C": {
+     "A1": 0.903898,
+     "A2": 0.357317,
+     "A3": 0.518913,
+     "A4": 0.5595,
+     "A5": 0.580936,
+     "A6": 0.523099,
+     "A7": 0.642554,
+     "A8": 0.140052,
+     "A9": 0.515082
+    },
+    "tau_vs_dasar": 0.388889
+   },
+   {
+    "id": "P5",
+    "nama": "Konvensi skor netral",
+    "jenis": "skor",
+    "catatan": "Bobot kembali ke ROC, tetapi alternatif yang belum dieksekusi diberi nilai C1 50 dan A7 60, sehingga penalti bukti dihapus.",
+    "bobot": {
+     "C1": 0.339732,
+     "C4": 0.214732,
+     "C2": 0.152232,
+     "C7": 0.110565,
+     "C3": 0.079315,
+     "C6": 0.054315,
+     "C5": 0.033482,
+     "C8": 0.015625
+    },
+    "peringkat": [
+     "A1",
+     "A2",
+     "A4",
+     "A8",
+     "A6",
+     "A5",
+     "A3",
+     "A9",
+     "A7"
+    ],
+    "juara": "A1",
+    "tiga_besar": [
+     "A1",
+     "A2",
+     "A4"
+    ],
+    "C": {
+     "A1": 0.696045,
+     "A2": 0.561504,
+     "A3": 0.265184,
+     "A4": 0.38352,
+     "A5": 0.278072,
+     "A6": 0.343733,
+     "A7": 0.23376,
+     "A8": 0.373324,
+     "A9": 0.235327
+    },
+    "tau_vs_dasar": 0.611111
+   },
+   {
+    "id": "P6",
+    "nama": "Tanpa kriteria penyaring",
+    "jenis": "bobot",
+    "catatan": "C4 dan C7 diberi bobot nol karena kolomnya tidak membedakan, lalu enam kriteria yang tersisa dinormalkan ulang. Menguji apakah keputusan berubah bila kriteria penyaring dipakai sebagai saringan lulus atau gagal, bukan sebagai bobot.",
+    "bobot": {
+     "C1": 0.503529,
+     "C4": 0.0,
+     "C2": 0.225629,
+     "C7": 0.0,
+     "C3": 0.117556,
+     "C6": 0.080503,
+     "C5": 0.049625,
+     "C8": 0.023158
+    },
+    "peringkat": [
+     "A1",
+     "A7",
+     "A2",
+     "A4",
+     "A8",
+     "A6",
+     "A5",
+     "A3",
+     "A9"
+    ],
+    "juara": "A1",
+    "tiga_besar": [
+     "A1",
+     "A7",
+     "A2"
+    ],
+    "C": {
+     "A1": 0.846534,
+     "A2": 0.300307,
+     "A3": 0.132398,
+     "A4": 0.192953,
+     "A5": 0.139644,
+     "A6": 0.172147,
+     "A7": 0.699253,
+     "A8": 0.187576,
+     "A9": 0.122902
+    },
+    "tau_vs_dasar": 1.0
+   },
+   {
+    "id": "P7",
+    "nama": "Beban kognitif dinolkan",
+    "jenis": "bobot",
+    "catatan": "C8 diberi bobot nol. Alasannya terbuka: subbab 3.3.6 butir 8 menyatakan antarmuka peringatan belum dirancang, sehingga C8 pada kartu ini berstatus niat desain, bukan hasil uji. Skenario ini membuktikan keputusan tidak bergantung pada kriteria yang belum divalidasi.",
+    "bobot": {
+     "C1": 0.345125,
+     "C4": 0.218141,
+     "C2": 0.154649,
+     "C7": 0.11232,
+     "C3": 0.080574,
+     "C6": 0.055178,
+     "C5": 0.034014,
+     "C8": 0.0
+    },
+    "peringkat": [
+     "A1",
+     "A7",
+     "A2",
+     "A4",
+     "A8",
+     "A6",
+     "A5",
+     "A3",
+     "A9"
+    ],
+    "juara": "A1",
+    "tiga_besar": [
+     "A1",
+     "A7",
+     "A2"
+    ],
+    "C": {
+     "A1": 0.846495,
+     "A2": 0.300376,
+     "A3": 0.132433,
+     "A4": 0.193002,
+     "A5": 0.13968,
+     "A6": 0.172191,
+     "A7": 0.699624,
+     "A8": 0.187624,
+     "A9": 0.121288
+    },
+    "tau_vs_dasar": 1.0
+   },
+   {
+    "id": "P8",
+    "nama": "Portabilitas dominan",
+    "jenis": "bobot",
+    "catatan": "C3 ditetapkan 0,30 dan sisanya dibagi proporsional. Menguji pembacaan yang menempatkan ketidakportabelan ambang, yaitu sebaran 4,15 sampai 496,09 per 24 jam, sebagai masalah utama sebagaimana dinyatakan pada V9_PM2_VERDICT.md:114.",
+    "bobot": {
+     "C1": 0.2583,
+     "C4": 0.163262,
+     "C2": 0.115743,
+     "C7": 0.084063,
+     "C3": 0.3,
+     "C6": 0.041296,
+     "C5": 0.025457,
+     "C8": 0.01188
+    },
+    "peringkat": [
+     "A1",
+     "A7",
+     "A2",
+     "A8",
+     "A9",
+     "A4",
+     "A6",
+     "A5",
+     "A3"
+    ],
+    "juara": "A1",
+    "tiga_besar": [
+     "A1",
+     "A7",
+     "A2"
+    ],
+    "C": {
+     "A1": 0.630652,
+     "A2": 0.418235,
+     "A3": 0.117735,
+     "A4": 0.172286,
+     "A5": 0.124274,
+     "A6": 0.153468,
+     "A7": 0.581532,
+     "A8": 0.378766,
+     "A9": 0.360094
+    },
+    "tau_vs_dasar": 0.722222
+   }
+  ],
+  "oat": [
+   {
+    "kriteria": "C1",
+    "arah": "naik 50 persen",
+    "aturan": "bobot dasar dikali 1,5 atau 0,5 lalu dinormalkan",
+    "bobot_baru": 0.435604,
+    "juara": "A1",
+    "berubah": false,
+    "peringkat": [
+     "A1",
+     "A7",
+     "A2",
+     "A4",
+     "A8",
+     "A6",
+     "A5",
+     "A3",
+     "A9"
+    ]
+   },
+   {
+    "kriteria": "C1",
+    "arah": "turun 50 persen",
+    "aturan": "bobot dasar dikali 1,5 atau 0,5 lalu dinormalkan",
+    "bobot_baru": 0.204625,
+    "juara": "A1",
+    "berubah": false,
+    "peringkat": [
+     "A1",
+     "A7",
+     "A2",
+     "A4",
+     "A8",
+     "A6",
+     "A5",
+     "A3",
+     "A9"
+    ]
+   },
+   {
+    "kriteria": "C4",
+    "arah": "naik 50 persen",
+    "aturan": "bobot dasar dikali 1,5 atau 0,5 lalu dinormalkan",
+    "bobot_baru": 0.290869,
+    "juara": "A1",
+    "berubah": false,
+    "peringkat": [
+     "A1",
+     "A7",
+     "A2",
+     "A4",
+     "A8",
+     "A6",
+     "A5",
+     "A3",
+     "A9"
+    ]
+   },
+   {
+    "kriteria": "C4",
+    "arah": "turun 50 persen",
+    "aturan": "bobot dasar dikali 1,5 atau 0,5 lalu dinormalkan",
+    "bobot_baru": 0.12028,
+    "juara": "A1",
+    "berubah": false,
+    "peringkat": [
+     "A1",
+     "A7",
+     "A2",
+     "A4",
+     "A8",
+     "A6",
+     "A5",
+     "A3",
+     "A9"
+    ]
+   },
+   {
+    "kriteria": "C2",
+    "arah": "naik 50 persen",
+    "aturan": "bobot dasar dikali 1,5 atau 0,5 lalu dinormalkan",
+    "bobot_baru": 0.212197,
+    "juara": "A1",
+    "berubah": false,
+    "peringkat": [
+     "A1",
+     "A7",
+     "A2",
+     "A4",
+     "A8",
+     "A6",
+     "A5",
+     "A3",
+     "A9"
+    ]
+   },
+   {
+    "kriteria": "C2",
+    "arah": "turun 50 persen",
+    "aturan": "bobot dasar dikali 1,5 atau 0,5 lalu dinormalkan",
+    "bobot_baru": 0.082387,
+    "juara": "A1",
+    "berubah": false,
+    "peringkat": [
+     "A1",
+     "A7",
+     "A2",
+     "A8",
+     "A9",
+     "A4",
+     "A6",
+     "A5",
+     "A3"
+    ]
+   },
+   {
+    "kriteria": "C7",
+    "arah": "naik 50 persen",
+    "aturan": "bobot dasar dikali 1,5 atau 0,5 lalu dinormalkan",
+    "bobot_baru": 0.15716,
+    "juara": "A1",
+    "berubah": false,
+    "peringkat": [
+     "A1",
+     "A7",
+     "A2",
+     "A4",
+     "A8",
+     "A6",
+     "A5",
+     "A3",
+     "A9"
+    ]
+   },
+   {
+    "kriteria": "C7",
+    "arah": "turun 50 persen",
+    "aturan": "bobot dasar dikali 1,5 atau 0,5 lalu dinormalkan",
+    "bobot_baru": 0.058518,
+    "juara": "A1",
+    "berubah": false,
+    "peringkat": [
+     "A1",
+     "A7",
+     "A2",
+     "A4",
+     "A8",
+     "A6",
+     "A5",
+     "A3",
+     "A9"
+    ]
+   },
+   {
+    "kriteria": "C3",
+    "arah": "naik 50 persen",
+    "aturan": "bobot dasar dikali 1,5 atau 0,5 lalu dinormalkan",
+    "bobot_baru": 0.114435,
+    "juara": "A1",
+    "berubah": false,
+    "peringkat": [
+     "A1",
+     "A7",
+     "A2",
+     "A8",
+     "A4",
+     "A6",
+     "A9",
+     "A5",
+     "A3"
+    ]
+   },
+   {
+    "kriteria": "C3",
+    "arah": "turun 50 persen",
+    "aturan": "bobot dasar dikali 1,5 atau 0,5 lalu dinormalkan",
+    "bobot_baru": 0.041295,
+    "juara": "A1",
+    "berubah": false,
+    "peringkat": [
+     "A1",
+     "A7",
+     "A2",
+     "A4",
+     "A6",
+     "A8",
+     "A5",
+     "A3",
+     "A9"
+    ]
+   },
+   {
+    "kriteria": "C6",
+    "arah": "naik 50 persen",
+    "aturan": "bobot dasar dikali 1,5 atau 0,5 lalu dinormalkan",
+    "bobot_baru": 0.079319,
+    "juara": "A1",
+    "berubah": false,
+    "peringkat": [
+     "A1",
+     "A7",
+     "A2",
+     "A4",
+     "A8",
+     "A6",
+     "A5",
+     "A3",
+     "A9"
+    ]
+   },
+   {
+    "kriteria": "C6",
+    "arah": "turun 50 persen",
+    "aturan": "bobot dasar dikali 1,5 atau 0,5 lalu dinormalkan",
+    "bobot_baru": 0.027916,
+    "juara": "A1",
+    "berubah": false,
+    "peringkat": [
+     "A1",
+     "A7",
+     "A2",
+     "A4",
+     "A8",
+     "A6",
+     "A5",
+     "A3",
+     "A9"
+    ]
+   },
+   {
+    "kriteria": "C5",
+    "arah": "naik 50 persen",
+    "aturan": "bobot dasar dikali 1,5 atau 0,5 lalu dinormalkan",
+    "bobot_baru": 0.049396,
+    "juara": "A1",
+    "berubah": false,
+    "peringkat": [
+     "A1",
+     "A7",
+     "A2",
+     "A4",
+     "A8",
+     "A6",
+     "A5",
+     "A3",
+     "A9"
+    ]
+   },
+   {
+    "kriteria": "C5",
+    "arah": "turun 50 persen",
+    "aturan": "bobot dasar dikali 1,5 atau 0,5 lalu dinormalkan",
+    "bobot_baru": 0.017026,
+    "juara": "A1",
+    "berubah": false,
+    "peringkat": [
+     "A1",
+     "A7",
+     "A2",
+     "A4",
+     "A8",
+     "A6",
+     "A5",
+     "A3",
+     "A9"
+    ]
+   },
+   {
+    "kriteria": "C8",
+    "arah": "naik 50 persen",
+    "aturan": "bobot dasar dikali 1,5 atau 0,5 lalu dinormalkan",
+    "bobot_baru": 0.023256,
+    "juara": "A1",
+    "berubah": false,
+    "peringkat": [
+     "A1",
+     "A7",
+     "A2",
+     "A4",
+     "A8",
+     "A6",
+     "A5",
+     "A3",
+     "A9"
+    ]
+   },
+   {
+    "kriteria": "C8",
+    "arah": "turun 50 persen",
+    "aturan": "bobot dasar dikali 1,5 atau 0,5 lalu dinormalkan",
+    "bobot_baru": 0.007874,
+    "juara": "A1",
+    "berubah": false,
+    "peringkat": [
+     "A1",
+     "A7",
+     "A2",
+     "A4",
+     "A8",
+     "A6",
+     "A5",
+     "A3",
+     "A9"
+    ]
+   }
+  ],
+  "sapuan_C1": [
+   {
+    "bobot_C1_diminta": 0.0,
+    "bobot_C1": 0.0,
+    "juara": "A2"
+   },
+   {
+    "bobot_C1_diminta": 0.005,
+    "bobot_C1": 0.005,
+    "juara": "A2"
+   },
+   {
+    "bobot_C1_diminta": 0.01,
+    "bobot_C1": 0.01,
+    "juara": "A2"
+   },
+   {
+    "bobot_C1_diminta": 0.015,
+    "bobot_C1": 0.015,
+    "juara": "A2"
+   },
+   {
+    "bobot_C1_diminta": 0.02,
+    "bobot_C1": 0.02,
+    "juara": "A2"
+   },
+   {
+    "bobot_C1_diminta": 0.025,
+    "bobot_C1": 0.025,
+    "juara": "A2"
+   },
+   {
+    "bobot_C1_diminta": 0.03,
+    "bobot_C1": 0.03,
+    "juara": "A2"
+   },
+   {
+    "bobot_C1_diminta": 0.035,
+    "bobot_C1": 0.035,
+    "juara": "A2"
+   },
+   {
+    "bobot_C1_diminta": 0.04,
+    "bobot_C1": 0.04,
+    "juara": "A2"
+   },
+   {
+    "bobot_C1_diminta": 0.045,
+    "bobot_C1": 0.045,
+    "juara": "A2"
+   },
+   {
+    "bobot_C1_diminta": 0.05,
+    "bobot_C1": 0.05,
+    "juara": "A2"
+   },
+   {
+    "bobot_C1_diminta": 0.055,
+    "bobot_C1": 0.055,
+    "juara": "A2"
+   },
+   {
+    "bobot_C1_diminta": 0.06,
+    "bobot_C1": 0.06,
+    "juara": "A2"
+   },
+   {
+    "bobot_C1_diminta": 0.065,
+    "bobot_C1": 0.065,
+    "juara": "A2"
+   },
+   {
+    "bobot_C1_diminta": 0.07,
+    "bobot_C1": 0.07,
+    "juara": "A2"
+   },
+   {
+    "bobot_C1_diminta": 0.075,
+    "bobot_C1": 0.075,
+    "juara": "A2"
+   },
+   {
+    "bobot_C1_diminta": 0.08,
+    "bobot_C1": 0.08,
+    "juara": "A2"
+   },
+   {
+    "bobot_C1_diminta": 0.085,
+    "bobot_C1": 0.085,
+    "juara": "A2"
+   },
+   {
+    "bobot_C1_diminta": 0.09,
+    "bobot_C1": 0.09,
+    "juara": "A2"
+   },
+   {
+    "bobot_C1_diminta": 0.095,
+    "bobot_C1": 0.095,
+    "juara": "A2"
+   },
+   {
+    "bobot_C1_diminta": 0.1,
+    "bobot_C1": 0.1,
+    "juara": "A2"
+   },
+   {
+    "bobot_C1_diminta": 0.105,
+    "bobot_C1": 0.105,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.11,
+    "bobot_C1": 0.11,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.115,
+    "bobot_C1": 0.115,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.12,
+    "bobot_C1": 0.12,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.125,
+    "bobot_C1": 0.125,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.13,
+    "bobot_C1": 0.13,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.135,
+    "bobot_C1": 0.135,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.14,
+    "bobot_C1": 0.14,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.145,
+    "bobot_C1": 0.145,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.15,
+    "bobot_C1": 0.15,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.155,
+    "bobot_C1": 0.155,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.16,
+    "bobot_C1": 0.16,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.165,
+    "bobot_C1": 0.165,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.17,
+    "bobot_C1": 0.17,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.175,
+    "bobot_C1": 0.175,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.18,
+    "bobot_C1": 0.18,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.185,
+    "bobot_C1": 0.185,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.19,
+    "bobot_C1": 0.19,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.195,
+    "bobot_C1": 0.195,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.2,
+    "bobot_C1": 0.2,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.205,
+    "bobot_C1": 0.205,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.21,
+    "bobot_C1": 0.21,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.215,
+    "bobot_C1": 0.215,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.22,
+    "bobot_C1": 0.22,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.225,
+    "bobot_C1": 0.225,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.23,
+    "bobot_C1": 0.23,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.235,
+    "bobot_C1": 0.235,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.24,
+    "bobot_C1": 0.24,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.245,
+    "bobot_C1": 0.245,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.25,
+    "bobot_C1": 0.25,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.255,
+    "bobot_C1": 0.255,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.26,
+    "bobot_C1": 0.26,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.265,
+    "bobot_C1": 0.265,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.27,
+    "bobot_C1": 0.27,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.275,
+    "bobot_C1": 0.275,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.28,
+    "bobot_C1": 0.28,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.285,
+    "bobot_C1": 0.285,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.29,
+    "bobot_C1": 0.29,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.295,
+    "bobot_C1": 0.295,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.3,
+    "bobot_C1": 0.3,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.305,
+    "bobot_C1": 0.305,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.31,
+    "bobot_C1": 0.31,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.315,
+    "bobot_C1": 0.315,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.32,
+    "bobot_C1": 0.32,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.325,
+    "bobot_C1": 0.325,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.33,
+    "bobot_C1": 0.33,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.335,
+    "bobot_C1": 0.335,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.34,
+    "bobot_C1": 0.34,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.345,
+    "bobot_C1": 0.345,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.35,
+    "bobot_C1": 0.35,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.355,
+    "bobot_C1": 0.355,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.36,
+    "bobot_C1": 0.36,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.365,
+    "bobot_C1": 0.365,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.37,
+    "bobot_C1": 0.37,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.375,
+    "bobot_C1": 0.375,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.38,
+    "bobot_C1": 0.38,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.385,
+    "bobot_C1": 0.385,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.39,
+    "bobot_C1": 0.39,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.395,
+    "bobot_C1": 0.395,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.4,
+    "bobot_C1": 0.4,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.405,
+    "bobot_C1": 0.405,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.41,
+    "bobot_C1": 0.41,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.415,
+    "bobot_C1": 0.415,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.42,
+    "bobot_C1": 0.42,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.425,
+    "bobot_C1": 0.425,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.43,
+    "bobot_C1": 0.43,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.435,
+    "bobot_C1": 0.435,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.44,
+    "bobot_C1": 0.44,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.445,
+    "bobot_C1": 0.445,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.45,
+    "bobot_C1": 0.45,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.455,
+    "bobot_C1": 0.455,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.46,
+    "bobot_C1": 0.46,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.465,
+    "bobot_C1": 0.465,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.47,
+    "bobot_C1": 0.47,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.475,
+    "bobot_C1": 0.475,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.48,
+    "bobot_C1": 0.48,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.485,
+    "bobot_C1": 0.485,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.49,
+    "bobot_C1": 0.49,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.495,
+    "bobot_C1": 0.495,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.5,
+    "bobot_C1": 0.5,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.505,
+    "bobot_C1": 0.505,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.51,
+    "bobot_C1": 0.51,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.515,
+    "bobot_C1": 0.515,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.52,
+    "bobot_C1": 0.52,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.525,
+    "bobot_C1": 0.525,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.53,
+    "bobot_C1": 0.53,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.535,
+    "bobot_C1": 0.535,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.54,
+    "bobot_C1": 0.54,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.545,
+    "bobot_C1": 0.545,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.55,
+    "bobot_C1": 0.55,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.555,
+    "bobot_C1": 0.555,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.56,
+    "bobot_C1": 0.56,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.565,
+    "bobot_C1": 0.565,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.57,
+    "bobot_C1": 0.57,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.575,
+    "bobot_C1": 0.575,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.58,
+    "bobot_C1": 0.58,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.585,
+    "bobot_C1": 0.585,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.59,
+    "bobot_C1": 0.59,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.595,
+    "bobot_C1": 0.595,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.6,
+    "bobot_C1": 0.6,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.605,
+    "bobot_C1": 0.605,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.61,
+    "bobot_C1": 0.61,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.615,
+    "bobot_C1": 0.615,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.62,
+    "bobot_C1": 0.62,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.625,
+    "bobot_C1": 0.625,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.63,
+    "bobot_C1": 0.63,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.635,
+    "bobot_C1": 0.635,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.64,
+    "bobot_C1": 0.64,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.645,
+    "bobot_C1": 0.645,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.65,
+    "bobot_C1": 0.65,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.655,
+    "bobot_C1": 0.655,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.66,
+    "bobot_C1": 0.66,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.665,
+    "bobot_C1": 0.665,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.67,
+    "bobot_C1": 0.67,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.675,
+    "bobot_C1": 0.675,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.68,
+    "bobot_C1": 0.68,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.685,
+    "bobot_C1": 0.685,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.69,
+    "bobot_C1": 0.69,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.695,
+    "bobot_C1": 0.695,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.7,
+    "bobot_C1": 0.7,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.705,
+    "bobot_C1": 0.705,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.71,
+    "bobot_C1": 0.71,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.715,
+    "bobot_C1": 0.715,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.72,
+    "bobot_C1": 0.72,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.725,
+    "bobot_C1": 0.725,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.73,
+    "bobot_C1": 0.73,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.735,
+    "bobot_C1": 0.735,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.74,
+    "bobot_C1": 0.74,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.745,
+    "bobot_C1": 0.745,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.75,
+    "bobot_C1": 0.75,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.755,
+    "bobot_C1": 0.755,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.76,
+    "bobot_C1": 0.76,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.765,
+    "bobot_C1": 0.765,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.77,
+    "bobot_C1": 0.77,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.775,
+    "bobot_C1": 0.775,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.78,
+    "bobot_C1": 0.78,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.785,
+    "bobot_C1": 0.785,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.79,
+    "bobot_C1": 0.79,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.795,
+    "bobot_C1": 0.795,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.8,
+    "bobot_C1": 0.8,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.805,
+    "bobot_C1": 0.805,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.81,
+    "bobot_C1": 0.81,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.815,
+    "bobot_C1": 0.815,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.82,
+    "bobot_C1": 0.82,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.825,
+    "bobot_C1": 0.825,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.83,
+    "bobot_C1": 0.83,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.835,
+    "bobot_C1": 0.835,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.84,
+    "bobot_C1": 0.84,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.845,
+    "bobot_C1": 0.845,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.85,
+    "bobot_C1": 0.85,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.855,
+    "bobot_C1": 0.855,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.86,
+    "bobot_C1": 0.86,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.865,
+    "bobot_C1": 0.865,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.87,
+    "bobot_C1": 0.87,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.875,
+    "bobot_C1": 0.875,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.88,
+    "bobot_C1": 0.88,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.885,
+    "bobot_C1": 0.885,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.89,
+    "bobot_C1": 0.89,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.895,
+    "bobot_C1": 0.895,
+    "juara": "A1"
+   },
+   {
+    "bobot_C1_diminta": 0.9,
+    "bobot_C1": 0.9,
+    "juara": "A1"
+   }
+  ],
+  "titik_balik_C1": {
+   "segmen": [
+    {
+     "juara": "A2",
+     "bobot_C1_dari": 0.0,
+     "bobot_C1_sampai": 0.1
+    },
+    {
+     "juara": "A1",
+     "bobot_C1_dari": 0.105,
+     "bobot_C1_sampai": 0.9
+    }
+   ],
+   "juara_unik": [
+    "A1",
+    "A2"
+   ]
+  },
+  "juara_unik_sapuan": [
+   "A1",
+   "A2"
+  ],
+  "stabilitas": {
+   "A1": {
+    "juara": 25,
+    "tiga_besar": 25,
+    "peringkat_terburuk": 1,
+    "jumlah_kasus": 25
+   },
+   "A2": {
+    "juara": 0,
+    "tiga_besar": 24,
+    "peringkat_terburuk": 8,
+    "jumlah_kasus": 25
+   },
+   "A3": {
+    "juara": 0,
+    "tiga_besar": 0,
+    "peringkat_terburuk": 9,
+    "jumlah_kasus": 25
+   },
+   "A4": {
+    "juara": 0,
+    "tiga_besar": 2,
+    "peringkat_terburuk": 6,
+    "jumlah_kasus": 25
+   },
+   "A5": {
+    "juara": 0,
+    "tiga_besar": 1,
+    "peringkat_terburuk": 8,
+    "jumlah_kasus": 25
+   },
+   "A6": {
+    "juara": 0,
+    "tiga_besar": 0,
+    "peringkat_terburuk": 7,
+    "jumlah_kasus": 25
+   },
+   "A7": {
+    "juara": 0,
+    "tiga_besar": 23,
+    "peringkat_terburuk": 9,
+    "jumlah_kasus": 25
+   },
+   "A8": {
+    "juara": 0,
+    "tiga_besar": 0,
+    "peringkat_terburuk": 9,
+    "jumlah_kasus": 25
+   },
+   "A9": {
+    "juara": 0,
+    "tiga_besar": 0,
+    "peringkat_terburuk": 9,
+    "jumlah_kasus": 25
+   }
+  }
+ },
+ "bukti_kelas": [
+  {
+   "kelas": "stuck",
+   "alternatif": [
+    "A1",
+    "A2",
+    "A9"
+   ],
+   "lift": "3,12 pada F-14 dan 0,97 pada F-9_A",
+   "gate": "G1 1 dari 2 fold, G2 1 dari 2 fold",
+   "catatan": "Pada F-9_A persistence 0,787 mengalahkan Random Forest 0,651 dan canary 0,769",
+   "jejak": "docs/V7_R1_SOLUTIONS.md:66"
+  },
+  {
+   "kelas": "shk",
+   "alternatif": [
+    "A2",
+    "A4"
+   ],
+   "lift": "1,35 / 1,24 / 1,26 / 3,36 / 0,94 / 9,79 / 2,31",
+   "gate": "G1 3 dari 7 fold, G2 6 dari 7 fold",
+   "catatan": "Tujuh fold dengan 30 sampai 760 positif per fold",
+   "jejak": "docs/V7_R1_SOLUTIONS.md:97"
+  },
+  {
+   "kelas": "hyd",
+   "alternatif": [
+    "A1",
+    "A3",
+    "A6",
+    "A8"
+   ],
+   "lift": "1,40 / 1,00 / 1,02 / 2,03 / 0,80 / 2,35 / 1,07",
+   "gate": "G1 2 dari 7 fold, G2 4 dari 7 fold",
+   "catatan": "Persistence 0,42 sampai 0,63 mengalahkan Random Forest 0,11 sampai 0,61 pada 7 dari 7 fold",
+   "jejak": "docs/V7_R1_SOLUTIONS.md:127"
+  },
+  {
+   "kelas": "tool_wear",
+   "alternatif": [
+    "A7"
+   ],
+   "lift": "1,09 / 1,39 / 1,42 / 1,30",
+   "gate": "G1 0 dari 4 alat, G2 4 dari 4 alat",
+   "catatan": "AUPRC 0,54 sampai 0,77 dengan prevalensi sekitar 0,5 sehingga plafon lift 2,0",
+   "jejak": "docs/V7_R1_SOLUTIONS.md:160"
+  },
+  {
+   "kelas": "ssi",
+   "alternatif": [
+    "A2",
+    "A4",
+    "A5"
+   ],
+   "lift": "2,61 / 3,59 / 6,64 / 3,74 / 1,47",
+   "gate": "G1 4 dari 5 fold, G2 5 dari 5 fold",
+   "catatan": "Persistence kalah 0 dari 5 fold, dua fold underpowered dengan 3 dan 12 positif",
+   "jejak": "docs/V9_PM1_ARCHITECTURE.md:186; docs/V7_R1_SOLUTIONS.md:197"
+  },
+  {
+   "kelas": "bit_wear",
+   "alternatif": [
+    "A1",
+    "A5",
+    "A6",
+    "A8"
+   ],
+   "lift": "1,495 pada F-15S gagal tipis",
+   "gate": "G1 3 dari 4 fold, G2 4 dari 4 fold",
+   "catatan": "Persistence lebih tinggi daripada Random Forest pada 4 dari 4 fold sehingga verdict turun menjadi layak bersyarat",
+   "jejak": "docs/V7_R1_SOLUTIONS.md:203"
+  },
+  {
+   "kelas": "vib",
+   "alternatif": [
+    "A2",
+    "A9"
+   ],
+   "lift": "1,61 / 2,36 / 3,50 / 1,63",
+   "gate": "LULUS penuh pada baseline, direproduksi pada V9",
+   "catatan": "False alarm rate menyebar 4,15 sampai 496,09 per 24 jam, yaitu rasio 119,6 kali antar sumur",
+   "jejak": "docs/V8_PM_VERDICT.md:155; docs/V6_PM_VERDICT.md:131; docs/V9_PM2_VERDICT.md:126, 114"
+  }
+ ],
+ "draft_lama": {
+  "bobot": [
+   0.25,
+   0.2,
+   0.15,
+   0.1,
+   0.15,
+   0.15
+  ],
+  "jumlah_kriteria": 6,
+  "baris": [
+   {
+    "nama": "A1 ML Classifier",
+    "skor": [
+     5,
+     5,
+     4,
+     3,
+     4,
+     4
+    ],
+    "total_tertulis": 4.35,
+    "jumlah_berbobot_hitung": 4.35,
+    "selisih": 0.0,
+    "reproduksi": true
+   },
+   {
+    "nama": "A2 IsoForest",
+    "skor": [
+     4,
+     3,
+     3,
+     4,
+     3,
+     3
+    ],
+    "total_tertulis": 3.4,
+    "jumlah_berbobot_hitung": 3.35,
+    "selisih": -0.05,
+    "reproduksi": false
+   },
+   {
+    "nama": "A3 SHAP Dash",
+    "skor": [
+     3,
+     2,
+     5,
+     4,
+     5,
+     3
+    ],
+    "total_tertulis": 3.55,
+    "jumlah_berbobot_hitung": 3.5,
+    "selisih": -0.05,
+    "reproduksi": false
+   },
+   {
+    "nama": "A4 Rule-based",
+    "skor": [
+     3,
+     2,
+     2,
+     5,
+     5,
+     2
+    ],
+    "total_tertulis": 2.95,
+    "jumlah_berbobot_hitung": 3.0,
+    "selisih": 0.05,
+    "reproduksi": false
+   },
+   {
+    "nama": "A6 LOGIX Intg",
+    "skor": [
+     2,
+     1,
+     3,
+     2,
+     5,
+     2
+    ],
+    "total_tertulis": 2.45,
+    "jumlah_berbobot_hitung": 2.4,
+    "selisih": -0.05,
+    "reproduksi": false
+   }
+  ],
+  "baris_tidak_reproduksi": [
+   "A2 IsoForest",
+   "A3 SHAP Dash",
+   "A4 Rule-based",
+   "A6 LOGIX Intg"
+  ],
+  "jumlah_tidak_reproduksi": 4,
+  "topsis_sejati": [
+   {
+    "nama": "A1 ML Classifier",
+    "D_plus": 0.033964,
+    "D_minus": 0.166588,
+    "C": 0.830646,
+    "peringkat": 1
+   },
+   {
+    "nama": "A2 IsoForest",
+    "D_plus": 0.087864,
+    "D_minus": 0.095674,
+    "C": 0.521275,
+    "peringkat": 2
+   },
+   {
+    "nama": "A3 SHAP Dash",
+    "D_plus": 0.1141,
+    "D_minus": 0.084521,
+    "C": 0.425537,
+    "peringkat": 3
+   },
+   {
+    "nama": "A4 Rule-based",
+    "D_plus": 0.133032,
+    "D_minus": 0.064094,
+    "C": 0.325142,
+    "peringkat": 4
+   },
+   {
+    "nama": "A6 LOGIX Intg",
+    "D_plus": 0.169321,
+    "D_minus": 0.035456,
+    "C": 0.173146,
+    "peringkat": 5
+   }
+  ],
+  "catatan_skala": "1 sampai 5 tanpa rubrik"
+ },
+ "triangulasi_v7": [
+  [
+   "1",
+   "S-A1 stuck onset",
+   "A1"
+  ],
+  [
+   "2",
+   "S-F1 dan S-F2 bit_wear onset",
+   "A1 dan A8"
+  ],
+  [
+   "3",
+   "S-B1 parse F-10, F-4, F-12, F-15",
+   "A2"
+  ],
+  [
+   "4",
+   "S-C1 hyd onset",
+   "A1"
+  ],
+  [
+   "5",
+   "S-D1 dan S-D2 tool_wear progresi",
+   "A7"
+  ],
+  [
+   "6",
+   "S-A2 stuck F-10 dan F-12",
+   "A2"
+  ],
+  [
+   "7",
+   "S-C2 hyd label pit dan flow",
+   "A8"
+  ],
+  [
+   "8",
+   "S-A3, S-C3, S-D4, S-B2, S-B3",
+   "A3, A6, A7, A4, A5"
+  ]
+ ],
+ "pemeriksaan": [
+  {
+   "butir": "jumlah sel 9 x 8",
+   "lolos": true,
+   "bukti": "72 sel"
+  },
+  {
+   "butir": "jumlah bobot = 1",
+   "lolos": true,
+   "bukti": "1.000000000000"
+  },
+  {
+   "butir": "jumlah skenario bobot >= 8",
+   "lolos": true,
+   "bukti": "9 skenario"
+  },
+  {
+   "butir": "jumlah uji OAT = 16",
+   "lolos": true,
+   "bukti": "16 uji"
+  },
+  {
+   "butir": "semua C dalam (0,1)",
+   "lolos": true,
+   "bukti": "ya"
+  },
+  {
+   "butir": "TOPSIS dan SAW memberi juara sama",
+   "lolos": true,
+   "bukti": "TOPSIS A1, SAW A1"
+  },
+  {
+   "butir": "tau metode TOPSIS dan SAW",
+   "lolos": true,
+   "bukti": "0.888889"
+  },
+  {
+   "butir": "seluruh tau skenario dalam rentang",
+   "lolos": true,
+   "bukti": "9 nilai"
+  },
+  {
+   "butir": "aturan urut menutup delapan kriteria",
+   "lolos": true,
+   "bukti": "8 aturan, 8 kriteria"
+  },
+  {
+   "butir": "aturan urut konsisten dengan peringkat",
+   "lolos": true,
+   "bukti": "kode aturan sama dengan peringkat"
+  },
+  {
+   "butir": "C2 naik saat fold bertambah",
+   "lolos": true,
+   "bukti": "ya"
+  },
+  {
+   "butir": "C5 turun saat wellbore bertambah",
+   "lolos": true,
+   "bukti": "ya"
+  },
+  {
+   "butir": "C6 turun saat minggu bertambah",
+   "lolos": true,
+   "bukti": "ya"
+  }
+ ],
+ "pemeriksaan_gagal": []
+}

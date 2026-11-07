@@ -1,0 +1,144 @@
+=== V9-EVAL_B SUMMARY ===
+
+-- B3 kelas status (vs FP rule status-quo) --
+vib (FP_rule=197):
+   persistence: FP=1456 B3=-6.3909
+   rule_display_t0minus1: FP=197 B3=0.0
+   hybrid_rule_and_persistence: FP=197 B3=0.0
+   rf_tau0.05: FP=15321 B3=-76.7716
+   rf_tau0.1: FP=13075 B3=-65.3706
+   rf_tau0.2: FP=8664 B3=-42.9797
+   rf_tau0.3: FP=4854 B3=-23.6396
+   rf_tau0.5: FP=2050 B3=-9.4061
+   gb_tau0.05: FP=9842 B3=-48.9594
+   gb_tau0.1: FP=7182 B3=-35.4569
+   gb_tau0.2: FP=5196 B3=-25.3756
+   gb_tau0.3: FP=3935 B3=-18.9746
+   gb_tau0.5: FP=2249 B3=-10.4162
+   lr_tau0.05: FP=16679 B3=-83.665
+   lr_tau0.1: FP=15178 B3=-76.0457
+   lr_tau0.2: FP=11850 B3=-59.1523
+   lr_tau0.3: FP=9313 B3=-46.2741
+   lr_tau0.5: FP=6520 B3=-32.0964
+ssi (FP_rule=26):
+   persistence: FP=267 B3=-9.2692
+   rule_display_t0minus1: FP=26 B3=0.0
+   hybrid_rule_and_persistence: FP=7 B3=0.7308
+   rf_tau0.05: FP=12708 B3=-487.7692
+   rf_tau0.1: FP=4527 B3=-173.1154
+   rf_tau0.2: FP=658 B3=-24.3077
+   rf_tau0.3: FP=100 B3=-2.8462
+   rf_tau0.5: FP=4 B3=0.8462
+   gb_tau0.05: FP=3733 B3=-142.5769
+   gb_tau0.1: FP=2673 B3=-101.8077
+   gb_tau0.2: FP=1842 B3=-69.8462
+   gb_tau0.3: FP=1374 B3=-51.8462
+   gb_tau0.5: FP=941 B3=-35.1923
+   lr_tau0.05: FP=33689 B3=-1294.7308
+   lr_tau0.1: FP=30129 B3=-1157.8077
+   lr_tau0.2: FP=22124 B3=-849.9231
+   lr_tau0.3: FP=15480 B3=-594.3846
+   lr_tau0.5: FP=9236 B3=-354.2308
+shk (FP_rule=121):
+   persistence: FP=1056 B3=-7.7273
+   rule_display_t0minus1: FP=121 B3=0.0
+   hybrid_rule_and_persistence: FP=121 B3=0.0
+   rf_tau0.05: FP=25837 B3=-212.5289
+   rf_tau0.1: FP=8455 B3=-68.876
+   rf_tau0.2: FP=1107 B3=-8.1488
+   rf_tau0.3: FP=342 B3=-1.8264
+   rf_tau0.5: FP=39 B3=0.6777
+   gb_tau0.05: FP=5521 B3=-44.6281
+   gb_tau0.1: FP=2881 B3=-22.8099
+   gb_tau0.2: FP=1509 B3=-11.4711
+   gb_tau0.3: FP=943 B3=-6.7934
+   gb_tau0.5: FP=537 B3=-3.438
+   lr_tau0.05: FP=50786 B3=-418.719
+   lr_tau0.1: FP=48302 B3=-398.1901
+   lr_tau0.2: FP=41015 B3=-337.9669
+   lr_tau0.3: FP=32440 B3=-267.0992
+   lr_tau0.5: FP=15150 B3=-124.2066
+stuck_k1 (FP_rule=49):
+   persistence: FP=436 B3=-7.898
+   rule_display_t0minus1: FP=49 B3=0.0
+   hybrid_rule_and_persistence: FP=49 B3=0.0
+   rule_E1_2of3: FP=160 B3=-2.2653
+   hybrid_E1_and_persistence: FP=41 B3=0.1633
+hyd_ki (FP_rule=2091):
+   persistence: FP=1941 B3=0.0717
+   rule_display_t0minus1: FP=2091 B3=0.0
+   hybrid_rule_and_persistence: FP=927 B3=0.5567
+
+-- B3 stuck_k2 onset (vs E1 FP=422) --
+   persistence_horizon: FP=0 B3=1.0
+   persistence_event: FP=11 B3=0.9739
+   rule_E1_2of3: FP=422 B3=0.0
+   E2_stats_q95: FP=812 B3=-0.9242
+   rf_tau0.05: FP=32938 B3=-77.0521
+   rf_tau0.1: FP=23372 B3=-54.3839
+   rf_tau0.2: FP=12406 B3=-28.3981
+   rf_tau0.3: FP=2510 B3=-4.9479
+   rf_tau0.5: FP=167 B3=0.6043
+   rf_tauq95_train: FP=5810 B3=-12.7678
+   gb_tau0.05: FP=22199 B3=-51.6043
+   gb_tau0.1: FP=16769 B3=-38.737
+   gb_tau0.2: FP=11765 B3=-26.8791
+   gb_tau0.3: FP=8770 B3=-19.782
+   gb_tau0.5: FP=4903 B3=-10.6185
+   gb_tauq95_train: FP=8183 B3=-18.391
+   lr_tau0.05: FP=52272 B3=-122.8673
+   lr_tau0.1: FP=44955 B3=-105.5284
+   lr_tau0.2: FP=36275 B3=-84.9597
+   lr_tau0.3: FP=31962 B3=-74.7393
+   lr_tau0.5: FP=28461 B3=-66.4431
+   lr_tauq95_train: FP=16231 B3=-37.4621
+
+-- joint B3 x B4 (L10) --
+vib: blocks={'n_runs_total': 240, 'n_sustained_ge5mnt': 216, 'n_short': 24, 'runlen_mnt_median': 11.0, 'runlen_mnt_max': 347}
+   persistence: FP=1456 B3=-6.3909 B4med=5.0 cov=0.125 konf=10.0 nblk=216
+   rule_display_t0minus1: FP=197 B3=0.0 B4med=5.0 cov=0.2639 konf=10.0 nblk=216
+   hybrid_rule_and_persistence: FP=197 B3=0.0 B4med=5.0 cov=0.2639 konf=10.0 nblk=216
+   rf_tau0.05: FP=15321 B3=-76.7716 B4med=None cov=0.0 konf=None nblk=216
+   rf_tau0.1: FP=13075 B3=-65.3706 B4med=7.0 cov=0.0417 konf=None nblk=216
+   rf_tau0.2: FP=8664 B3=-42.9797 B4med=2.5 cov=0.0648 konf=None nblk=216
+   rf_tau0.3: FP=4854 B3=-23.6396 B4med=5.0 cov=0.088 konf=None nblk=216
+   rf_tau0.5: FP=2050 B3=-9.4061 B4med=5.0 cov=0.0648 konf=None nblk=216
+ssi: blocks={'n_runs_total': 137, 'n_sustained_ge5mnt': 40, 'n_short': 97, 'runlen_mnt_median': 2.0, 'runlen_mnt_max': 40}
+   persistence: FP=267 B3=-9.2692 B4med=4.0 cov=0.075 konf=10.0 nblk=40
+   rule_display_t0minus1: FP=26 B3=0.0 B4med=5.5 cov=0.05 konf=7.0 nblk=40
+   hybrid_rule_and_persistence: FP=7 B3=0.7308 B4med=None cov=0.0 konf=10.0 nblk=40
+   rf_tau0.05: FP=12708 B3=-487.7692 B4med=5.0 cov=0.275 konf=None nblk=40
+   rf_tau0.1: FP=4527 B3=-173.1154 B4med=4.0 cov=0.125 konf=None nblk=40
+   rf_tau0.2: FP=658 B3=-24.3077 B4med=5.5 cov=0.1 konf=None nblk=40
+   rf_tau0.3: FP=100 B3=-2.8462 B4med=1.0 cov=0.025 konf=None nblk=40
+   rf_tau0.5: FP=4 B3=0.8462 B4med=None cov=0.0 konf=None nblk=40
+shk: blocks={'n_runs_total': 199, 'n_sustained_ge5mnt': 164, 'n_short': 35, 'runlen_mnt_median': 9.0, 'runlen_mnt_max': 114}
+   persistence: FP=1056 B3=-7.7273 B4med=5.0 cov=0.1098 konf=10.0 nblk=164
+   rule_display_t0minus1: FP=121 B3=0.0 B4med=4.5 cov=0.1341 konf=10.0 nblk=164
+   hybrid_rule_and_persistence: FP=121 B3=0.0 B4med=4.5 cov=0.1341 konf=10.0 nblk=164
+   rf_tau0.05: FP=25837 B3=-212.5289 B4med=4.0 cov=0.25 konf=None nblk=164
+   rf_tau0.1: FP=8455 B3=-68.876 B4med=4.5 cov=0.1341 konf=None nblk=164
+   rf_tau0.2: FP=1107 B3=-8.1488 B4med=9.0 cov=0.0305 konf=None nblk=164
+   rf_tau0.3: FP=342 B3=-1.8264 B4med=7.0 cov=0.0122 konf=None nblk=164
+   rf_tau0.5: FP=39 B3=0.6777 B4med=4.0 cov=0.0061 konf=None nblk=164
+stuck_k1: blocks={'n_runs_total': 89, 'n_sustained_ge5mnt': 76, 'n_short': 13, 'runlen_mnt_median': 11.0, 'runlen_mnt_max': 126}
+   persistence: FP=436 B3=-7.898 B4med=5.5 cov=0.0789 konf=10.0 nblk=76
+   rule_display_t0minus1: FP=49 B3=0.0 B4med=5.0 cov=0.1184 konf=10.0 nblk=76
+   hybrid_rule_and_persistence: FP=49 B3=0.0 B4med=5.0 cov=0.1184 konf=10.0 nblk=76
+   rule_E1_2of3: FP=160 B3=-2.2653 B4med=5.0 cov=0.0263 konf=58.5 nblk=76
+hyd_ki: blocks={'n_runs_total': 465, 'n_sustained_ge5mnt': 277, 'n_short': 188, 'runlen_mnt_median': 6.0, 'runlen_mnt_max': 346}
+   persistence: FP=1941 B3=0.0717 B4med=7.0 cov=0.1047 konf=10.0 nblk=277
+   rule_display_t0minus1: FP=2091 B3=0.0 B4med=3.0 cov=0.2058 konf=4.0 nblk=277
+   hybrid_rule_and_persistence: FP=927 B3=0.5567 B4med=4.5 cov=0.13 konf=10.0 nblk=277
+
+-- verify --
+V1 FP E_RULE re-sum == tersimpan: 17/17
+V1b FP E1 onset re-sum (422) == tersimpan (422): True
+V2 B1 stuck RF tau0.05 re-extract == tersimpan: True ([0.5074626865671642, 1.0, 1.0, 1.0] vs [0.5074626865671642, 1.0, 1.0, 1.0])
+V3 B4(vib persistence) recompute alternatif (index-based, spesifikasi sama) == skrip02: True (n_alt=27 n_ref=27; blocks_alt=216)
+V4 vib: AUPRC 4/4, TP/FP 20/20
+V4 ssi: AUPRC 9/9, TP/FP 45/45
+V4 shk: AUPRC 9/9, TP/FP 45/45
+V4 identitas RF keseluruhan: SEMUA MATCH
+V5 FP(prediksi ulang) == FP fold E_RULE: 16/16
+V6 formula B3 self-consistency: 62/62

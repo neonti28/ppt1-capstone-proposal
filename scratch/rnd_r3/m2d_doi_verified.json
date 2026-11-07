@@ -1,0 +1,82 @@
+{
+  "generated_at": "2026-10-27T04:52:26",
+  "verified": [
+    {
+      "label": "Wang & Markert 2016 filter bank VMD",
+      "doi": "10.1016/j.sigpro.2015.09.041",
+      "crossref_http": 200,
+      "title": "Filter bank property of variational mode decomposition and its applications",
+      "first_author": "Wang Yanxue",
+      "year": 2016,
+      "container": "Signal Processing",
+      "volume": "120",
+      "page": "509-521",
+      "type": "journal-article",
+      "status": "CROSSREF_OK",
+      "resolve_http": 200,
+      "final_url": "https://linkinghub.elsevier.com/retrieve/pii/S0165168415003473"
+    },
+    {
+      "label": "Yan, Gao & Chen 2014 wavelets rotary",
+      "doi": "10.1016/j.sigpro.2013.04.015",
+      "crossref_http": 200,
+      "title": "Wavelets for fault diagnosis of rotary machines: A review with applications",
+      "first_author": "Yan Ruqiang",
+      "year": 2014,
+      "container": "Signal Processing",
+      "volume": "96",
+      "page": "1-15",
+      "type": "journal-article",
+      "status": "CROSSREF_OK",
+      "resolve_http": 200,
+      "final_url": "https://linkinghub.elsevier.com/retrieve/pii/S0165168413001588"
+    },
+    {
+      "label": "Xi et al. 2006 numerosity reduction",
+      "doi": "10.1145/1143844.1143974",
+      "crossref_http": 200,
+      "title": "Fast time series classification using numerosity reduction",
+      "first_author": "Xi Xiaopeng",
+      "year": 2006,
+      "container": "Proceedings of the 23rd international conference on Machine learning  - ICML '06",
+      "volume": null,
+      "page": "1033-1040",
+      "type": "proceedings-article",
+      "status": "CROSSREF_OK",
+      "resolve_http": 403,
+      "final_url": "https://portal.acm.org/citation.cfm?doid=1143844.1143974",
+      "note": "HTTPError (penerbit menolak bot)"
+    },
+    {
+      "label": "Niculescu-Mizil & Caruana 2005 calibration",
+      "doi": "10.1145/1102351.1102430",
+      "crossref_http": 200,
+      "title": "Predicting good probabilities with supervised learning",
+      "first_author": "Niculescu-Mizil Alexandru",
+      "year": 2005,
+      "container": "Proceedings of the 22nd international conference on Machine learning  - ICML '05",
+      "volume": null,
+      "page": "625-632",
+      "type": "proceedings-article",
+      "status": "CROSSREF_OK",
+      "resolve_http": 403,
+      "final_url": "https://portal.acm.org/citation.cfm?doid=1102351.1102430",
+      "note": "HTTPError (penerbit menolak bot)"
+    },
+    {
+      "label": "Smith & Randall 2015 CWRU benchmark",
+      "doi": "10.1016/j.ymssp.2015.04.021",
+      "crossref_http": 200,
+      "title": "Rolling element bearing diagnostics using the Case Western Reserve University data: A benchmark study",
+      "first_author": "Smith Wade A.",
+      "year": 2015,
+      "container": "Mechanical Systems and Signal Processing",
+      "volume": "64-65",
+      "page": "100-131",
+      "type": "journal-article",
+      "status": "CROSSREF_OK",
+      "resolve_http": 200,
+      "final_url": "https://linkinghub.elsevier.com/retrieve/pii/S0888327015002034"
+    }
+  ]
+}

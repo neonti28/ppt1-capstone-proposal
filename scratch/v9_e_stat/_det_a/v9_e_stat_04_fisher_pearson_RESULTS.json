@@ -1,0 +1,80 @@
+{
+ "engine": "hyd_Kii_fisher_pearson_literal",
+ "claim_task": "baseline prediksi kegagalan hidrolik (kick/loss proxy, H=10 mnt)",
+ "jenis_engine": "statistical (korelasi Pearson + Fisher z-transform)",
+ "seed": 42,
+ "flowout_status": {
+  "verdict": "FlowOut TIDAK TERSEDIA di F-9A \u2014 literal (FlowIn-FlowOut) TIDAK DIJALANKAN",
+  "evidence": "probe_03_flow.py: korelasi 4 kolom flow satu sama lain r=0.995-1.000 (semua aliran masuk); kolom out-flow tidak ada",
+  "variant_run": "imbalance_proxy = dV_active/dt (neraca tank aktif), dijalankan & dilaporkan terpisah",
+  "circularity_risk": "tank aktif bisa diturunkan dari pit sama -> r bisa mekanis tinggi; angka variant BUKAN bukti keunggulan metode literal penuh"
+ },
+ "label_Kii": {
+  "recipe": "V8-E_hyd claim2 pre-declarations (median 1-menit, 13 pit cols, sentinel[-5,150], r10, z=0.6745-scaled, |z|>2 sustain>=5, merge<30, FlowPumps>=500)",
+  "n_pit_cols": 13,
+  "n_episodes": 124,
+  "n_kick": 39,
+  "n_loss": 85,
+  "n_onsets_total": 124,
+  "pos_windows": 1240,
+  "evaluable_windows": 23602,
+  "n_grid": 27322
+ },
+ "split": {
+  "type": "temporal 70/30 index (single wellbore F-9A, resep V8)",
+  "split_time": "2009-07-10 23:35:00+00:00",
+  "thr_q95_train": 3.65751,
+  "train_n": 15185,
+  "test_n": 8107
+ },
+ "engine_fisher_pearson_variant": {
+  "r_definition": "Pearson(dV_active/dt, dV_pit) jendela 30 mnt; skor = |z'_t - med_base|/(1.4826*MAD_base), z'=atanh(r), baseline 60 mnt shift(1)",
+  "n_test": 8107,
+  "n_pos": 30,
+  "prev": 0.003701,
+  "underpowered": false,
+  "auprc": 0.022,
+  "ci95_auprc": [
+   0.0025,
+   0.0684
+  ],
+  "lift": 5.945,
+  "lift_ceiling_1_over_prev": 270.233,
+  "dB_vs_prevalence_random": 0.0183,
+  "op_q95": {
+   "tp": 0,
+   "fp": 177,
+   "fn": 30,
+   "precision": 0.0,
+   "recall": 0.0,
+   "far_per_neg_hour": 1.3148446205274236,
+   "far_per_24h_neg": 31.556270892658166
+  },
+  "onset_level": {
+   "onsets_test": 3,
+   "detected_at_H": 0,
+   "B1_recall_at_H": 0.0,
+   "TLead_median_min": null,
+   "TLead_IQR_min": null
+  },
+  "sign_flip_windows": 6377
+ },
+ "baseline_prevalence_random": {
+  "auprc_equals_prev": 0.003701,
+  "lift_by_definition": 1.0,
+  "type": "analitik"
+ },
+ "baseline_rule_zpit": {
+  "definition": "alarm pada menit pertama episode z-pit (sistem hari-ini)",
+  "onsets_test": 3,
+  "detected_at_H": 0,
+  "note": "TLead=0 by construction: alarm DI t_e, di luar horizon [t_e-10, t_e) -> B1 harapan 0 untuk klaim prediksi-dini"
+ },
+ "meta": {
+  "elapsed_s": 12.5,
+  "H_min": 10,
+  "q95": 0.95,
+  "win_corr_min": 30,
+  "win_base_min": 60
+ }
+}

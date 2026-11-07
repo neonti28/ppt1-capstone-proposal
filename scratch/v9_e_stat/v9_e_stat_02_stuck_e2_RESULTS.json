@@ -1,0 +1,303 @@
+{
+ "engine": "stuck_E2",
+ "claim_task": "prediksi onset stuck (H=10 mnt)",
+ "jenis_engine": "statistical (z-score + q95-train)",
+ "seed": 42,
+ "split": "LOWO",
+ "folds": [
+  {
+   "fold": "LOWO_test_F-10",
+   "test_well": "F-10",
+   "train_wells": [
+    "F-14",
+    "F-9",
+    "F-9_A"
+   ],
+   "task": "prediksi onset (H=10 menit)",
+   "engine": "E2_stats (z TQA + z HKLD + ROP-drop), ambang q95-TRAIN",
+   "thr_q95_train": 2.464889,
+   "n_test": 4216,
+   "n_pos": 772,
+   "prev": 0.183112,
+   "underpowered": false,
+   "n_onsets_from_runs": 93,
+   "engine_E2_stats": {
+    "auprc": 0.2313,
+    "ci95_auprc": [
+     0.1674,
+     0.3058
+    ],
+    "lift": 1.263,
+    "lift_ceiling_1_over_prev": 5.461,
+    "dB_vs_prevalence_random": 0.0481,
+    "op_q95": {
+     "tp": 80,
+     "fp": 176,
+     "fn": 692,
+     "tn": 3268,
+     "precision": 0.3125,
+     "recall": 0.10362694300518134,
+     "far_per_neg_hour": 3.0662020905923346,
+     "far_per_24h_neg": 73.58885017421603
+    },
+    "onset_level": {
+     "onsets": 93,
+     "detected_at_H": 15,
+     "recall_at_H": 0.16129032258064516,
+     "TLead_median_min": 7.0,
+     "TLead_IQR_min": [
+      3.0,
+      10.0
+     ]
+    }
+   },
+   "baseline_prevalence_random": {
+    "auprc_equals_prev": 0.183112,
+    "lift_by_definition": 1.0,
+    "type": "analitik"
+   },
+   "baseline_E0_persistence_literal": {
+    "definition": "y_hat(t) = y(t-1) literal (kolom y_prev_stuck_onset)",
+    "auprc": 0.9016,
+    "lift": 4.924,
+    "onset_level": {
+     "onsets": 93,
+     "detected_at_H": 87,
+     "recall_at_H": 0.9354838709677419,
+     "TLead_median_min": 9.0,
+     "catatan": "persistence menyala di menit horizon ke-2..H (label persisten) \u2014 angka ini LITERAL, bukan konstruksi V8"
+    }
+   },
+   "baseline_E0_persistence_v8_construction": {
+    "definition": "alarm HANYA tepat di t_e (resep V8 eval_stuck E0)",
+    "recall_at_H": 0.0,
+    "note": "by construction alarm jatuh DI LUAR horizon [t_e-H, t_e) -> recall 0; dilaporkan untuk kontinuitas angka V8"
+   },
+   "score_join_missing_fill0": 0
+  },
+  {
+   "fold": "LOWO_test_F-14",
+   "test_well": "F-14",
+   "train_wells": [
+    "F-10",
+    "F-9",
+    "F-9_A"
+   ],
+   "task": "prediksi onset (H=10 menit)",
+   "engine": "E2_stats (z TQA + z HKLD + ROP-drop), ambang q95-TRAIN",
+   "thr_q95_train": 2.821882,
+   "n_test": 95925,
+   "n_pos": 389,
+   "prev": 0.004055,
+   "underpowered": false,
+   "n_onsets_from_runs": 61,
+   "engine_E2_stats": {
+    "auprc": 0.0073,
+    "ci95_auprc": [
+     0.0036,
+     0.0149
+    ],
+    "lift": 1.797,
+    "lift_ceiling_1_over_prev": 246.594,
+    "dB_vs_prevalence_random": 0.0032,
+    "op_q95": {
+     "tp": 12,
+     "fp": 530,
+     "fn": 377,
+     "tn": 95006,
+     "precision": 0.02214022140221402,
+     "recall": 0.030848329048843187,
+     "far_per_neg_hour": 0.33285881761848934,
+     "far_per_24h_neg": 7.988611622843744
+    },
+    "onset_level": {
+     "onsets": 61,
+     "detected_at_H": 8,
+     "recall_at_H": 0.13114754098360656,
+     "TLead_median_min": 2.5,
+     "TLead_IQR_min": [
+      1.75,
+      5.5
+     ]
+    }
+   },
+   "baseline_prevalence_random": {
+    "auprc_equals_prev": 0.004055,
+    "lift_by_definition": 1.0,
+    "type": "analitik"
+   },
+   "baseline_E0_persistence_literal": {
+    "definition": "y_hat(t) = y(t-1) literal (kolom y_prev_stuck_onset)",
+    "auprc": 0.8438,
+    "lift": 208.082,
+    "onset_level": {
+     "onsets": 61,
+     "detected_at_H": 52,
+     "recall_at_H": 0.8524590163934426,
+     "TLead_median_min": 9.0,
+     "catatan": "persistence menyala di menit horizon ke-2..H (label persisten) \u2014 angka ini LITERAL, bukan konstruksi V8"
+    }
+   },
+   "baseline_E0_persistence_v8_construction": {
+    "definition": "alarm HANYA tepat di t_e (resep V8 eval_stuck E0)",
+    "recall_at_H": 0.0,
+    "note": "by construction alarm jatuh DI LUAR horizon [t_e-H, t_e) -> recall 0; dilaporkan untuk kontinuitas angka V8"
+   },
+   "score_join_missing_fill0": 0
+  },
+  {
+   "fold": "LOWO_test_F-9",
+   "test_well": "F-9",
+   "train_wells": [
+    "F-10",
+    "F-14",
+    "F-9_A"
+   ],
+   "task": "prediksi onset (H=10 menit)",
+   "engine": "E2_stats (z TQA + z HKLD + ROP-drop), ambang q95-TRAIN",
+   "thr_q95_train": 2.762111,
+   "n_test": 16184,
+   "n_pos": 311,
+   "prev": 0.019217,
+   "underpowered": false,
+   "n_onsets_from_runs": 55,
+   "engine_E2_stats": {
+    "auprc": 0.0203,
+    "ci95_auprc": [
+     0.0085,
+     0.0352
+    ],
+    "lift": 1.057,
+    "lift_ceiling_1_over_prev": 52.039,
+    "dB_vs_prevalence_random": 0.0011,
+    "op_q95": {
+     "tp": 0,
+     "fp": 26,
+     "fn": 311,
+     "tn": 15847,
+     "precision": 0.0,
+     "recall": 0.0,
+     "far_per_neg_hour": 0.09828009828009827,
+     "far_per_24h_neg": 2.3587223587223587
+    },
+    "onset_level": {
+     "onsets": 55,
+     "detected_at_H": 0,
+     "recall_at_H": 0.0,
+     "TLead_median_min": null,
+     "TLead_IQR_min": null
+    }
+   },
+   "baseline_prevalence_random": {
+    "auprc_equals_prev": 0.019217,
+    "lift_by_definition": 1.0,
+    "type": "analitik"
+   },
+   "baseline_E0_persistence_literal": {
+    "definition": "y_hat(t) = y(t-1) literal (kolom y_prev_stuck_onset)",
+    "auprc": 0.8265,
+    "lift": 43.012,
+    "onset_level": {
+     "onsets": 55,
+     "detected_at_H": 43,
+     "recall_at_H": 0.7818181818181819,
+     "TLead_median_min": 7.0,
+     "catatan": "persistence menyala di menit horizon ke-2..H (label persisten) \u2014 angka ini LITERAL, bukan konstruksi V8"
+    }
+   },
+   "baseline_E0_persistence_v8_construction": {
+    "definition": "alarm HANYA tepat di t_e (resep V8 eval_stuck E0)",
+    "recall_at_H": 0.0,
+    "note": "by construction alarm jatuh DI LUAR horizon [t_e-H, t_e) -> recall 0; dilaporkan untuk kontinuitas angka V8"
+   },
+   "score_join_missing_fill0": 0
+  },
+  {
+   "fold": "LOWO_test_F-9_A",
+   "test_well": "F-9_A",
+   "train_wells": [
+    "F-10",
+    "F-14",
+    "F-9"
+   ],
+   "task": "prediksi onset (H=10 menit)",
+   "engine": "E2_stats (z TQA + z HKLD + ROP-drop), ambang q95-TRAIN",
+   "thr_q95_train": 2.51442,
+   "n_test": 2242,
+   "n_pos": 503,
+   "prev": 0.224353,
+   "underpowered": false,
+   "n_onsets_from_runs": 72,
+   "engine_E2_stats": {
+    "auprc": 0.3244,
+    "ci95_auprc": [
+     0.1919,
+     0.4962
+    ],
+    "lift": 1.446,
+    "lift_ceiling_1_over_prev": 4.457,
+    "dB_vs_prevalence_random": 0.1001,
+    "op_q95": {
+     "tp": 76,
+     "fp": 80,
+     "fn": 427,
+     "tn": 1659,
+     "precision": 0.48717948717948717,
+     "recall": 0.15109343936381708,
+     "far_per_neg_hour": 2.760207015526164,
+     "far_per_24h_neg": 66.24496837262794
+    },
+    "onset_level": {
+     "onsets": 72,
+     "detected_at_H": 13,
+     "recall_at_H": 0.18055555555555555,
+     "TLead_median_min": 8.0,
+     "TLead_IQR_min": [
+      2.0,
+      10.0
+     ]
+    }
+   },
+   "baseline_prevalence_random": {
+    "auprc_equals_prev": 0.224353,
+    "lift_by_definition": 1.0,
+    "type": "analitik"
+   },
+   "baseline_E0_persistence_literal": {
+    "definition": "y_hat(t) = y(t-1) literal (kolom y_prev_stuck_onset)",
+    "auprc": 0.889,
+    "lift": 3.962,
+    "onset_level": {
+     "onsets": 72,
+     "detected_at_H": 63,
+     "recall_at_H": 0.875,
+     "TLead_median_min": 9.0,
+     "catatan": "persistence menyala di menit horizon ke-2..H (label persisten) \u2014 angka ini LITERAL, bukan konstruksi V8"
+    }
+   },
+   "baseline_E0_persistence_v8_construction": {
+    "definition": "alarm HANYA tepat di t_e (resep V8 eval_stuck E0)",
+    "recall_at_H": 0.0,
+    "note": "by construction alarm jatuh DI LUAR horizon [t_e-H, t_e) -> recall 0; dilaporkan untuk kontinuitas angka V8"
+   },
+   "score_join_missing_fill0": 0
+  }
+ ],
+ "summary": {
+  "n_folds": 4,
+  "n_layak": 4,
+  "n_underpowered": 0,
+  "auprc_range_layak": [
+   0.0073,
+   0.3244
+  ],
+  "lift_range_layak": [
+   1.057,
+   1.797
+  ],
+  "lift_gt1_folds": 4,
+  "ci95_contains_prev_folds": 4,
+  "onset_runs_total": 281,
+  "elapsed_s": 31.9
+ }
+}

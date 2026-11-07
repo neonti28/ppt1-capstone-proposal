@@ -1,0 +1,53 @@
+{
+  "task": "t_0fe5b8fa",
+  "role": "V11-PM_FINAL",
+  "date": "2026-10-15 (WIB)",
+  "anonymisasi_dibuka": {
+    "kandidat_1": "docs/ML_PROJECT_PROPOSAL_TECHNICAL_DESIGN.v3_arsip.md/.ipynb = PROPOSAL VERSI ARSIP (12 Okt 2026)",
+    "kandidat_2": "docs/ML_PROJECT_PROPOSAL_TECHNICAL_DESIGN.md/.ipynb = PROPOSAL BARU / V10 (15 Okt 2026)"
+  },
+  "verifikasi_skor_eval_cmp": {
+    "aritmetika_sub_ke_total": {"kandidat_1": "5+11.2+22+8 = 46.2 OK", "kandidat_2": "27+29+25+15 = 96 OK"},
+    "bobot_kriteria": "30+30+25+15 = 100 OK",
+    "anomali_kalah_akurasi_tapi_total_menang": "TIDAK ADA; kandidat 2 memimpin 4/4 kriteria termasuk akurasi (29 vs 11.2)",
+    "syarat_menang_protokol_3": "kandidat 2: mayoritas kriteria 4/4 + tidak kalah akurasi -> MENANG",
+    "koreksi_disarankan": [
+      {"item": "2b kandidat 2", "masalah": "KOREKSI V11_ML K2-16 (klaim kolom ts_bin/lab_ts kosong stuck_k2, gagal direproduksi) tidak masuk skor 2b EVAL", "koreksi": "2b = 4 atau 5 (band rubrik 4-5 sama); pengaruh total 95 atau 96", "pengaruh_vonis": "tidak membalik"},
+      {"item": "2c kandidat 1", "masalah": "8.474.172 dinilai '-2' sebagai angka tanpa sumber; AUD-CLAIM menyebut 0 angka karangan (keliru kutip)", "koreksi": "rubrik harfiah 'nol angka tanpa sumber' -> 4/6 defensibel; jika 6/6 pun total K1 = 48.2", "pengaruh_vonis": "tidak membalik"}
+    ],
+    "skor_final_setelah_koreksi_sensitivitas": {"kandidat_1_rentang": [46.2, 48.2], "kandidat_2_rentang": [95, 96], "pemenang_tetap": "kandidat 2"}
+  },
+  "verifikasi_mandiri_eksekusi_sesi_ini": [
+    {"angka": "USROP 198.928 baris x 18 kolom (12 sensor)", "sumber": "csv reader data/USROP_labeled.csv", "hasil": "198928 / 18 / 12 COCOK"},
+    {"angka": "6 dataset latih 292.954 baris", "sumber": "gzip+csv scratch/v9_d1/datasets/*.csv.gz", "hasil": "23922+35906+56495+5555+52509+118567 = 292954 COCOK"},
+    {"angka": "TSPP 52.905 baris", "sumber": "csv data/bo_tspp/TSPP{1..4}.csv", "hasil": "21120+8499+12533+10753 = 52905 COCOK"},
+    {"angka": "884 label = 571/263/50", "sumber": "json labels_curated_v2_log.json", "hasil": "uncertain 571, no 263, yes 50; jumlah 884 COCOK"},
+    {"angka": "37 fold LOWO", "sumber": "json scratch/v9_d1/lowo_*.json", "hasil": "4+9+9+2+4+9 = 37 COCOK"},
+    {"angka": "n_features 55, SEED 42, 26 fold kampanye, rerun_identical=False", "sumber": "json scratch/v9_e_ml/v9_e_ML_*_RESULTS.json", "hasil": "55 di 4/4 JSON; seed 42 di 4/4; fold 4+9+9+4 = 26; vib rerun_identical=False COCOK"},
+    {"angka": "WITSML 10 CSV = 9.935.698; 8 CSV parser V3 = 7.080.457", "sumber": "wc -l data/volve/witsml_parsed/*.csv", "hasil": "9935708 baris termasuk 10 header -> 9935698... (data 9.935.698); 8 CSV = 9.935.698-773.674-2.081.567 = 7.080.457 COCOK; 8.474.172 nihil"},
+    {"angka": "REGISTRY 7 engine / 27 head / tier 12-13-2 / lapisan 5-11-9-2 / AUTO_CRITICAL_SLOTS 0 / SEED 42", "sumber": "importlib exec code/v9_i1_pipeline.py", "hasil": "7 engine; 27 head; tier PERINGATAN-BERPENGAWAS 12, TREN 13, BELUM LAYAK 2; L0 5, L1 11, L2 9, L3 2; slots 0; seed 42 COCOK"},
+    {"angka": "hyd persistence P 0,615-0,899 (bukan 0,615-0,793)", "sumber": "json scratch/v9_eval_a/v9_eval_a_RESULTS.json path hyd_ki/persistence/per_fold", "hasil": "n=9, min 0.6145, max 0.8986 -> klaim K2 baris 628 SALAH, baris 2088 BENAR"},
+    {"angka": "em-dash U+2014", "sumber": "grep -o pada kedua .md", "hasil": "K1 = 14, K2 = 0"},
+    {"angka": "klaim inventaris", "sumber": "grep kedua .md", "hasil": "K1: 8.474.172 = 1x dan 7.080.457 = 0x; K2: 8.474.172 = 0x dan 7.080.457 = 7x"},
+    {"angka": "penanda 11 klaim / 27 head", "sumber": "grep -ci kedua .md", "hasil": "K1 = 0/0; K2 = 24/40"},
+    {"angka": "5 klaim salah K1", "sumber": "sed baris 127/158/174/182 K1", "hasil": "8.474.172; Histogram-based Gradient Boosting; rerun wajib identik; tujuh sumur; tujuh nilai lipatan semua terbaca di dokumen dan bertentangan primer"},
+    {"angka": "parity md=ipynb", "sumber": "skrip parity_check.py sendiri", "hasil": "K1: 0/191 baris substansial hilang, token angka hilang 0; K2: 2/2538 hilang = 1 baris tergabung dengan literal backslash-n (konten ada, token angka hilang 0); negative control K2md vs K1ipynb = 2450 hilang (tes bisa gagal)"},
+    {"angka": "kehadiran checklist utama", "sumber": "grep kedua .md", "hasil": "292.954 (0 vs 8), 52.905 (0 vs 7), 32,17405 (0 vs 12), 37 fold (0 vs 7), 198.928 (1 vs 9)"}
+  ],
+  "vonis": {
+    "pemenang": "Kandidat 2 = PROPOSAL BARU (V10)",
+    "menang_dengan_selisih_tipis": false,
+    "selisih_total_poin": 49.8,
+    "kriteria_penentu": "unggul 4/4 kriteria, terbesar pada akurasi primer (+17.8) dan kedalaman teknis (+22); syarat protokol §3 terpenuhi ganda",
+    "memenuhi_evaluasi_user_txt": {"a": "YA", "b": "YA", "c": "YA", "d": "YA", "e": "YA"}
+  },
+  "skills": ["scientific-critical-thinking", "verification-mandatory", "statistical-analysis", "what-if-oracle", "consciousness-council", "sequentialthinking"],
+  "sequ_mcp": {"pikiran": 6, "sukses": "6/6"},
+  "belum_diverifikasi": [
+    "output execution cell .ipynb kedua kandidat tidak dibaca",
+    "pelatihan ulang ML tidak dijalankan (determinisme dari JSON determinism_check)",
+    "angka 481/329 kandidat 2 tak punya primer data di luar kutipan dokumen",
+    "dataset stuck_k2 semasa run (hash a8307db3) sudah tidak ada di disk, klaim historis 'kolom kosong' tak bisa dipastikan",
+    "sitasi DOI eksternal tidak dibuka ulang di sesi ini"
+  ]
+}

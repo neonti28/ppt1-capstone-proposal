@@ -1,0 +1,909 @@
+{
+ "S1": {
+  "n_baris": 84,
+  "kelas": {
+   "MATCH": 45,
+   "tidak_resolve": 33,
+   "MATCH_sebagian": 1,
+   "ambigu_titik_ribuan": 1,
+   "angka_bukan_numerik": 5
+  },
+  "mismatch": [],
+  "tidak_resolve": [
+   [
+    "S1-013",
+    "5",
+    "path tidak ditemukan"
+   ],
+   [
+    "S1-014",
+    "9",
+    "path tidak ditemukan"
+   ],
+   [
+    "S1-015",
+    "52509",
+    "path tidak ditemukan"
+   ],
+   [
+    "S1-016",
+    "9",
+    "path tidak ditemukan"
+   ],
+   [
+    "S1-017",
+    "4a701ed63291e455",
+    "path tidak ditemukan"
+   ],
+   [
+    "S1-023",
+    "0",
+    "path tidak ditemukan"
+   ],
+   [
+    "S1-043",
+    "9.1372",
+    "path tidak ditemukan"
+   ],
+   [
+    "S1-044",
+    "0.00416667",
+    "path tidak ditemukan"
+   ],
+   [
+    "S1-045",
+    "30.0",
+    "path tidak ditemukan"
+   ],
+   [
+    "S1-046",
+    "9",
+    "path tidak ditemukan"
+   ],
+   [
+    "S1-047",
+    "30.0",
+    "path tidak ditemukan"
+   ],
+   [
+    "S1-048",
+    "0.0441137",
+    "path tidak ditemukan"
+   ],
+   [
+    "S1-049",
+    "0.017567",
+    "path tidak ditemukan"
+   ],
+   [
+    "S1-050",
+    "300.0",
+    "path tidak ditemukan"
+   ],
+   [
+    "S1-051",
+    "2",
+    "path tidak ditemukan"
+   ],
+   [
+    "S1-052",
+    "10401",
+    "path tidak ditemukan"
+   ],
+   [
+    "S1-053",
+    "865",
+    "path tidak ditemukan"
+   ],
+   [
+    "S1-055",
+    "607",
+    "path tidak ditemukan"
+   ],
+   [
+    "S1-057",
+    "368",
+    "path tidak ditemukan"
+   ],
+   [
+    "S1-058",
+    "0.622564",
+    "path tidak ditemukan"
+   ],
+   [
+    "S1-059",
+    "55.57",
+    "path tidak ditemukan"
+   ],
+   [
+    "S1-060",
+    "32.4664",
+    "path tidak ditemukan"
+   ],
+   [
+    "S1-061",
+    "516",
+    "path tidak ditemukan"
+   ],
+   [
+    "S1-062",
+    "110",
+    "path tidak ditemukan"
+   ],
+   [
+    "S1-063",
+    "0.8243",
+    "path tidak ditemukan"
+   ],
+   [
+    "S1-064",
+    "0.5965",
+    "path tidak ditemukan"
+   ],
+   [
+    "S1-065",
+    "16.611",
+    "path tidak ditemukan"
+   ],
+   [
+    "S1-066",
+    "443",
+    "path tidak ditemukan"
+   ],
+   [
+    "S1-067",
+    "215",
+    "path tidak ditemukan"
+   ],
+   [
+    "S1-068",
+    "0.673252",
+    "path tidak ditemukan"
+   ],
+   [
+    "S1-069",
+    "0.512139",
+    "path tidak ditemukan"
+   ],
+   [
+    "S1-077",
+    "0.673",
+    "path tidak ditemukan"
+   ],
+   [
+    "S1-078",
+    "0.0171",
+    "path tidak ditemukan"
+   ],
+   [
+    "S1-079",
+    "tidak terukur",
+    "angka bukan numerik"
+   ],
+   [
+    "S1-080",
+    "tidak terukur",
+    "angka bukan numerik"
+   ],
+   [
+    "S1-081",
+    "tidak terukur",
+    "angka bukan numerik"
+   ],
+   [
+    "S1-082",
+    "tidak terukur",
+    "angka bukan numerik"
+   ],
+   [
+    "S1-083",
+    "tidak terukur",
+    "angka bukan numerik"
+   ]
+  ]
+ },
+ "S2": {
+  "n_baris": 455,
+  "kelas": {
+   "tidak_resolve": 11,
+   "MATCH_sebagian": 42,
+   "ambigu_titik_ribuan": 42,
+   "MATCH": 400,
+   "MISMATCH": 2
+  },
+  "mismatch": [
+   {
+    "kode": "S2-448",
+    "sel": "12,1",
+    "berkas": "s2_ringkas.json",
+    "jalur": "ssi.sensitivitas.ML_kalender_b24.precision_median",
+    "cocok": "0/1",
+    "daun": [
+     0.07619,
+     0.07619
+    ],
+    "rujukan": "`(1-p)/p` dengan p = `ssi.sensitivitas.ML_kalender_b24.precision_median`"
+   },
+   {
+    "kode": "S2-449",
+    "sel": "3,67",
+    "berkas": "s2_ringkas.json",
+    "jalur": "vib.agregat.persistence.far24_kalender_median",
+    "cocok": "0/1",
+    "daun": [
+     22.0218,
+     22.0218
+    ],
+    "rujukan": "`vib.agregat.persistence.far24_kalender_median / meta.far_maks`"
+   }
+  ],
+  "tidak_resolve": [
+   [
+    "S2-001",
+    "152,2",
+    "path tidak ditemukan"
+   ],
+   [
+    "S2-002",
+    "277",
+    "path tidak ditemukan"
+   ],
+   [
+    "S2-003",
+    "30",
+    "path tidak ditemukan"
+   ],
+   [
+    "S2-004",
+    "6,0",
+    "path tidak ditemukan"
+   ],
+   [
+    "S2-005",
+    "0,004167",
+    "path tidak ditemukan"
+   ],
+   [
+    "S2-444",
+    "32,17405",
+    "path tidak ditemukan"
+   ],
+   [
+    "S2-445",
+    "0,50",
+    "path tidak ditemukan"
+   ],
+   [
+    "S2-446",
+    "0,50",
+    "path tidak ditemukan"
+   ],
+   [
+    "S2-447",
+    "0,995833",
+    "path tidak ditemukan"
+   ],
+   [
+    "S2-454",
+    "10",
+    "path tidak ditemukan"
+   ],
+   [
+    "S2-455",
+    "60",
+    "path tidak ditemukan"
+   ]
+  ]
+ },
+ "S3": {
+  "n_baris": 92,
+  "kelas": {
+   "MATCH_sebagian": 28,
+   "ambigu_titik_ribuan": 17,
+   "MATCH": 29,
+   "angka_bukan_numerik": 4,
+   "tidak_resolve": 30,
+   "MISMATCH": 1
+  },
+  "mismatch": [
+   {
+    "kode": "S3-085",
+    "sel": "18,41",
+    "berkas": "s3c_ringkas.json",
+    "jalur": "agregat.ml_fisik.far24_median_valid",
+    "cocok": "0/1",
+    "daun": [
+     110.432,
+     110.432
+    ],
+    "rujukan": "turunan: agregat.ml_fisik.far24_median_valid dibagi FAR_MAKS 6"
+   }
+  ],
+  "tidak_resolve": [
+   [
+    "S3-007",
+    "tidak ada",
+    "angka bukan numerik"
+   ],
+   [
+    "S3-008",
+    "tidak ada",
+    "angka bukan numerik"
+   ],
+   [
+    "S3-015",
+    "0,679834 sampai 0,845146",
+    "path tidak ditemukan"
+   ],
+   [
+    "S3-016",
+    "1,32% sampai 54,25%",
+    "path tidak ditemukan"
+   ],
+   [
+    "S3-017",
+    "0,042",
+    "path tidak ditemukan"
+   ],
+   [
+    "S3-018",
+    "0,051",
+    "path tidak ditemukan"
+   ],
+   [
+    "S3-019",
+    "0,037",
+    "path tidak ditemukan"
+   ],
+   [
+    "S3-020",
+    "0,027",
+    "path tidak ditemukan"
+   ],
+   [
+    "S3-021",
+    "0,031",
+    "path tidak ditemukan"
+   ],
+   [
+    "S3-022",
+    "0,031",
+    "path tidak ditemukan"
+   ],
+   [
+    "S3-023",
+    "0,045",
+    "path tidak ditemukan"
+   ],
+   [
+    "S3-024",
+    "166,497",
+    "path tidak ditemukan"
+   ],
+   [
+    "S3-027",
+    "113,778 sampai 4.534,969",
+    "path tidak ditemukan"
+   ],
+   [
+    "S3-029",
+    "0,004167",
+    "path tidak ditemukan"
+   ],
+   [
+    "S3-030",
+    "0,029168",
+    "path tidak ditemukan"
+   ],
+   [
+    "S3-031",
+    "0,077320",
+    "path tidak ditemukan"
+   ],
+   [
+    "S3-032",
+    "7",
+    "path tidak ditemukan"
+   ],
+   [
+    "S3-033",
+    "30,0",
+    "path tidak ditemukan"
+   ],
+   [
+    "S3-034",
+    "0",
+    "path tidak ditemukan"
+   ],
+   [
+    "S3-035",
+    "0,0663 sampai 0,5303",
+    "path tidak ditemukan"
+   ],
+   [
+    "S3-036",
+    "1",
+    "path tidak ditemukan"
+   ],
+   [
+    "S3-037",
+    "6,0",
+    "path tidak ditemukan"
+   ],
+   [
+    "S3-038",
+    "0,50",
+    "path tidak ditemukan"
+   ],
+   [
+    "S3-039",
+    "0,50",
+    "path tidak ditemukan"
+   ],
+   [
+    "S3-040",
+    "1000000",
+    "path tidak ditemukan"
+   ],
+   [
+    "S3-041",
+    "0,11 lawan 113,78",
+    "path tidak ditemukan"
+   ],
+   [
+    "S3-042",
+    "31,33 sampai 356,00",
+    "path tidak ditemukan"
+   ],
+   [
+    "S3-086",
+    "0,5672",
+    "path tidak ditemukan"
+   ],
+   [
+    "S3-087",
+    "0,7208",
+    "path tidak ditemukan"
+   ],
+   [
+    "S3-088",
+    "1, 3, 1, 3",
+    "path tidak ditemukan"
+   ],
+   [
+    "S3-089",
+    "25, 36, 24, 20",
+    "path tidak ditemukan"
+   ],
+   [
+    "S3-090",
+    "469",
+    "path tidak ditemukan"
+   ],
+   [
+    "S3-091",
+    "kosong",
+    "angka bukan numerik"
+   ],
+   [
+    "S3-092",
+    "BELUM TERUKUR",
+    "angka bukan numerik"
+   ]
+  ]
+ },
+ "S4": {
+  "n_baris": 95,
+  "kelas": {
+   "MATCH": 12,
+   "MATCH_fs": 2,
+   "tidak_resolve": 73,
+   "MISMATCH": 1,
+   "MATCH_sebagian": 2,
+   "angka_bukan_numerik": 5
+  },
+  "mismatch": [
+   {
+    "kode": "S4-013",
+    "sel": "884 record / 884 kolom",
+    "berkas": "labels_duration.json",
+    "jalur": "sumber.kolom",
+    "cocok": "0/2",
+    "daun": [],
+    "rujukan": "labels_duration.json n_baris dan sumber.kolom (20)"
+   }
+  ],
+  "tidak_resolve": [
+   [
+    "S4-003",
+    "17",
+    "path tidak ditemukan"
+   ],
+   [
+    "S4-009",
+    "806 / 1215.0 / 1.0 / 3.5 / 12.",
+    "path tidak ditemukan"
+   ],
+   [
+    "S4-010",
+    "310 / 562.75 / 1.0 / 4.5 / 15.",
+    "path tidak ditemukan"
+   ],
+   [
+    "S4-014",
+    "1225.0 / 0.75 / 3.0 / 13.0",
+    "path tidak ditemukan"
+   ],
+   [
+    "S4-015",
+    "884 valid / 0 nol / 0 negatif",
+    "path tidak ditemukan"
+   ],
+   [
+    "S4-016",
+    "671 / 927.0",
+    "path tidak ditemukan"
+   ],
+   [
+    "S4-017",
+    "770 / 1071.5",
+    "path tidak ditemukan"
+   ],
+   [
+    "S4-018",
+    "388 / 623.917",
+    "path tidak ditemukan"
+   ],
+   [
+    "S4-021",
+    "533 record / 533 bernilai nol ",
+    "path tidak ditemukan"
+   ],
+   [
+    "S4-022",
+    "26 dengan pola min/menit, 20 d",
+    "path tidak ditemukan"
+   ],
+   [
+    "S4-023",
+    "cost 0 (lama) / cost 0 XML dan",
+    "path tidak ditemukan"
+   ],
+   [
+    "S4-024",
+    "work order 0 XML / 0 HTML / wo",
+    "path tidak ditemukan"
+   ],
+   [
+    "S4-025",
+    "1212 laporan / FIT 1072 / LOT ",
+    "path tidak ditemukan"
+   ],
+   [
+    "S4-027",
+    "630 inspect / 154 inspection",
+    "path tidak ditemukan"
+   ],
+   [
+    "S4-028",
+    "5473 berkas / 409920771 byte",
+    "path tidak ditemukan"
+   ],
+   [
+    "S4-029",
+    "4035 baris / other_target 3123",
+    "path tidak ditemukan"
+   ],
+   [
+    "S4-031",
+    "0.6345",
+    "path tidak ditemukan"
+   ],
+   [
+    "S4-032",
+    "1.0107",
+    "path tidak ditemukan"
+   ],
+   [
+    "S4-033",
+    "0.5026",
+    "path tidak ditemukan"
+   ],
+   [
+    "S4-034",
+    "19.17",
+    "path tidak ditemukan"
+   ],
+   [
+    "S4-035",
+    "5.48",
+    "path tidak ditemukan"
+   ],
+   [
+    "S4-036",
+    "2.3974",
+    "path tidak ditemukan"
+   ],
+   [
+    "S4-037",
+    "5.3974",
+    "path tidak ditemukan"
+   ],
+   [
+    "S4-038",
+    "1.4033",
+    "path tidak ditemukan"
+   ],
+   [
+    "S4-040",
+    "41",
+    "path tidak ditemukan"
+   ],
+   [
+    "S4-041",
+    "HTML 1759 berkas / 30971159 by",
+    "path tidak ditemukan"
+   ],
+   [
+    "S4-042",
+    "1202 / 2680.917 / 1.0 / 5.5 / ",
+    "path tidak ditemukan"
+   ],
+   [
+    "S4-043",
+    "445 / 1925.5 / 2.5 / 10.9 / 24",
+    "path tidak ditemukan"
+   ],
+   [
+    "S4-044",
+    "806 / 1215.0 / 1.0 / 3.5 / 12.",
+    "path tidak ditemukan"
+   ],
+   [
+    "S4-045",
+    "202 / 590.0 / 1.5 / 6.0 / 18.0",
+    "path tidak ditemukan"
+   ],
+   [
+    "S4-046",
+    "246 / 568.333 / 1.5 / 5.0 / 16",
+    "path tidak ditemukan"
+   ],
+   [
+    "S4-047",
+    "310 / 562.75 / 1.0 / 4.5 / 15.",
+    "path tidak ditemukan"
+   ],
+   [
+    "S4-048",
+    "229 / 522.003 / 1.3333 / 5.75 ",
+    "path tidak ditemukan"
+   ],
+   [
+    "S4-049",
+    "75 / 160.75 / 2.0 / 4.3 / 7.0",
+    "path tidak ditemukan"
+   ],
+   [
+    "S4-050",
+    "33 / 62.25 / 1.25 / 4.3 / 6.0",
+    "path tidak ditemukan"
+   ],
+   [
+    "S4-051",
+    "29 / 55.75 / 1.75 / 3.05 / 5.7",
+    "path tidak ditemukan"
+   ],
+   [
+    "S4-100",
+    "142 / 962.5 / 0 / 0.0 / 0.0",
+    "path tidak ditemukan"
+   ],
+   [
+    "S4-101",
+    "160 / 483.0 / 0 / 0.0 / 0.0",
+    "path tidak ditemukan"
+   ],
+   [
+    "S4-102",
+    "104 / 269.0 / 0 / 0.0 / 0.0",
+    "path tidak ditemukan"
+   ],
+   [
+    "S4-103",
+    "104 / 229.0 / 0 / 0.0 / 0.0",
+    "path tidak ditemukan"
+   ],
+   [
+    "S4-104",
+    "321 / 1006.0 / 0 / 0.0 / 0.0",
+    "path tidak ditemukan"
+   ],
+   [
+    "S4-105",
+    "50 / 90.25 / 0 / 0.0 / 0.0",
+    "path tidak ditemukan"
+   ],
+   [
+    "S4-106",
+    "2 / 1.0 / 0 / 0.0 / 0.0",
+    "path tidak ditemukan"
+   ],
+   [
+    "S4-107",
+    "142 / 363.0 / 0 / 0.0 / 0.0",
+    "path tidak ditemukan"
+   ],
+   [
+    "S4-108",
+    "280 / 410.25 / 0 / 0.0 / 0.0",
+    "path tidak ditemukan"
+   ],
+   [
+    "S4-109",
+    "86 / 132.0 / 0 / 0.0 / 0.0",
+    "path tidak ditemukan"
+   ],
+   [
+    "S4-110",
+    "136 / 272.25 / 0 / 0.0 / 0.0",
+    "path tidak ditemukan"
+   ],
+   [
+    "S4-111",
+    "27 / 95.0 / 0 / 0.0 / 0.0",
+    "path tidak ditemukan"
+   ],
+   [
+    "S4-112",
+    "135 / 290.667 / 0 / 0.0 / 0.0",
+    "path tidak ditemukan"
+   ],
+   [
+    "S4-113",
+    "111 / 297.25 / 0 / 0.0 / 0.0",
+    "path tidak ditemukan"
+   ],
+   [
+    "S4-114",
+    "260 / 628.417 / 0 / 0.0 / 0.0",
+    "path tidak ditemukan"
+   ],
+   [
+    "S4-115",
+    "271 / 448.917 / 182 / 269.0 / ",
+    "path tidak ditemukan"
+   ],
+   [
+    "S4-116",
+    "110 / 211.5 / 112 / 216.5 / 1.",
+    "path tidak ditemukan"
+   ],
+   [
+    "S4-117",
+    "42 / 63.5 / 32 / 41.0 / 0.6457",
+    "path tidak ditemukan"
+   ],
+   [
+    "S4-118",
+    "5 / 8.5 / 2 / 3.5 / 0.4118",
+    "path tidak ditemukan"
+   ],
+   [
+    "S4-119",
+    "154 / 496.0 / 89 / 126.0 / 0.2",
+    "path tidak ditemukan"
+   ],
+   [
+    "S4-120",
+    "319 / 452.25 / 122 / 168.5 / 0",
+    "path tidak ditemukan"
+   ],
+   [
+    "S4-121",
+    "281 / 670.0 / 0 / 0.0 / 0.0",
+    "path tidak ditemukan"
+   ],
+   [
+    "S4-122",
+    "120 / 208.503 / 136 / 146.0 / ",
+    "path tidak ditemukan"
+   ],
+   [
+    "S4-123",
+    "54 / 71.75 / 59 / 81.5 / 1.135",
+    "path tidak ditemukan"
+   ],
+   [
+    "S4-124",
+    "39 / 60.75 / 56 / 85.25 / 1.40",
+    "path tidak ditemukan"
+   ],
+   [
+    "S4-125",
+    "122 / 122.0 / 94 / 87.75 / 0.7",
+    "path tidak ditemukan"
+   ],
+   [
+    "S4-060",
+    "85613 byte / 661 record / 17 k",
+    "path tidak ditemukan"
+   ],
+   [
+    "S4-061",
+    "56815359 byte / 198928 record ",
+    "path tidak ditemukan"
+   ],
+   [
+    "S4-062",
+    "218119 byte / 884 record / 8 k",
+    "path tidak ditemukan"
+   ],
+   [
+    "S4-063",
+    "10 berkas / 4606027369 byte",
+    "path tidak ditemukan"
+   ],
+   [
+    "S4-064",
+    "645763",
+    "path tidak ditemukan"
+   ],
+   [
+    "S4-066",
+    "26.0.0",
+    "angka bukan numerik"
+   ],
+   [
+    "S4-067",
+    "0",
+    "path tidak ditemukan"
+   ],
+   [
+    "S4-069",
+    "12 kutipan diperiksa / 0 menul",
+    "path tidak ditemukan"
+   ],
+   [
+    "S4-070",
+    "1759 XML / 1759 HTML / 0 gagal",
+    "path tidak ditemukan"
+   ],
+   [
+    "S4-071",
+    "1",
+    "path tidak ditemukan"
+   ],
+   [
+    "S4-072",
+    "service order 0 / purchase ord",
+    "path tidak ditemukan"
+   ],
+   [
+    "S4-073",
+    "maintenance 303",
+    "path tidak ditemukan"
+   ],
+   [
+    "S4-090",
+    "tidak terukur",
+    "angka bukan numerik"
+   ],
+   [
+    "S4-091",
+    "tidak terukur",
+    "angka bukan numerik"
+   ],
+   [
+    "S4-092",
+    "tidak terukur",
+    "angka bukan numerik"
+   ],
+   [
+    "S4-093",
+    "tidak terukur",
+    "angka bukan numerik"
+   ]
+  ]
+ }
+}

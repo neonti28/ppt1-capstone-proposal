@@ -1,0 +1,250 @@
+{
+  "doi": {
+    "10.1186/1471-2105-7-91": {
+      "label": "Varma & Simon 2006",
+      "expected_title": "Bias in error estimation when using cross-validation for model selection",
+      "registrasi_status": 302,
+      "registrasi_location": "https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-7-91",
+      "crossref_status": 200,
+      "crossref_meta": {
+        "title": "Bias in error estimation when using cross-validation for model selection",
+        "first_author": "Varma",
+        "year": 2006,
+        "container": "BMC Bioinformatics"
+      }
+    },
+    "10.1111/ecog.02881": {
+      "label": "Roberts et al. 2017",
+      "expected_title": "Cross-validation strategies for data with temporal, spatial, hierarchical, or phylogenetic structure",
+      "registrasi_status": 302,
+      "registrasi_location": "https://nsojournals.onlinelibrary.wiley.com/doi/10.1111/ecog.02881",
+      "crossref_status": 200,
+      "crossref_meta": {
+        "title": "Cross‐validation strategies for data with temporal, spatial, hierarchical, or phylogenetic structure",
+        "first_author": "Roberts",
+        "year": 2017,
+        "container": "Ecography"
+      }
+    },
+    "10.1016/j.ins.2011.12.028": {
+      "label": "Bergmeir & Benitez 2012",
+      "expected_title": "On the use of cross-validation for time series predictor evaluation",
+      "registrasi_status": 302,
+      "registrasi_location": "https://linkinghub.elsevier.com/retrieve/pii/S0020025511006773",
+      "crossref_status": 200,
+      "crossref_meta": {
+        "title": "On the use of cross-validation for time series predictor evaluation",
+        "first_author": "Bergmeir",
+        "year": 2012,
+        "container": "Information Sciences"
+      }
+    },
+    "10.1007/s10994-020-05910-7": {
+      "label": "Cerqueira et al. 2020",
+      "expected_title": "Evaluating time series forecasting models: an empirical study on performance estimation methods",
+      "registrasi_status": 302,
+      "registrasi_location": "https://link.springer.com/10.1007/s10994-020-05910-7",
+      "crossref_status": 200,
+      "crossref_meta": {
+        "title": "Evaluating time series forecasting models: an empirical study on performance estimation methods",
+        "first_author": "Cerqueira",
+        "year": 2020,
+        "container": "Machine Learning"
+      }
+    },
+    "10.1016/j.neuroimage.2017.06.061": {
+      "label": "Varoquaux 2018",
+      "expected_title": "Cross-validation failure: small sample sizes lead to large error bars",
+      "registrasi_status": 302,
+      "registrasi_location": "https://linkinghub.elsevier.com/retrieve/pii/S1053811917305311",
+      "crossref_status": 200,
+      "crossref_meta": {
+        "title": "Cross-validation failure: Small sample sizes lead to large error bars",
+        "first_author": "Varoquaux",
+        "year": 2018,
+        "container": "NeuroImage"
+      }
+    },
+    "10.1007/b106715": {
+      "label": "Vovk et al. 2005",
+      "expected_title": "Algorithmic Learning in a Random World",
+      "registrasi_status": 302,
+      "registrasi_location": "http://link.springer.com/10.1007/b106715",
+      "crossref_status": 200,
+      "crossref_meta": {
+        "title": "Algorithmic Learning in a Random World",
+        "first_author": "",
+        "year": 2005,
+        "container": ""
+      }
+    },
+    "10.1080/01621459.2017.1307116": {
+      "label": "Lei et al. 2018",
+      "expected_title": "Distribution-Free Predictive Inference for Regression",
+      "registrasi_status": 302,
+      "registrasi_location": "https://www.tandfonline.com/doi/full/10.1080/01621459.2017.1307116",
+      "crossref_status": 200,
+      "crossref_meta": {
+        "title": "Distribution-Free Predictive Inference for Regression",
+        "first_author": "Lei",
+        "year": 2018,
+        "container": "Journal of the American Statistical Association"
+      }
+    },
+    "10.1214/23-AOS2276": {
+      "label": "Barber et al. 2023",
+      "expected_title": "Conformal prediction beyond exchangeability",
+      "registrasi_status": 302,
+      "registrasi_location": "https://projecteuclid.org/journals/annals-of-statistics/volume-51/issue-2/Conformal-prediction-beyond-exchangeability/10",
+      "crossref_status": 200,
+      "crossref_meta": {
+        "title": "Conformal prediction beyond exchangeability",
+        "first_author": "Barber",
+        "year": 2023,
+        "container": "The Annals of Statistics"
+      }
+    },
+    "10.1093/biomet/41.1-2.100": {
+      "label": "Page 1954",
+      "expected_title": "Continuous Inspection Schemes",
+      "registrasi_status": 302,
+      "registrasi_location": "https://academic.oup.com/biomet/article-lookup/doi/10.1093/biomet/41.1-2.100",
+      "crossref_status": 200,
+      "crossref_meta": {
+        "title": "CONTINUOUS INSPECTION SCHEMES",
+        "first_author": "PAGE",
+        "year": 1954,
+        "container": "Biometrika"
+      }
+    },
+    "10.2307/2531595": {
+      "label": "DeLong et al. 1988",
+      "expected_title": "Comparing the Areas under Two or More Correlated ROC Curves",
+      "registrasi_status": 302,
+      "registrasi_location": "https://www.jstor.org/stable/2531595?origin=crossref",
+      "crossref_status": 200,
+      "crossref_meta": {
+        "title": "Comparing the Areas under Two or More Correlated Receiver Operating Characteristic Curves: A Nonparametric Approach",
+        "first_author": "DeLong",
+        "year": 1988,
+        "container": "Biometrics"
+      }
+    },
+    "10.1214/aos/1176344552": {
+      "label": "Efron 1979",
+      "expected_title": "Bootstrap Methods: Another Look at the Jackknife",
+      "registrasi_status": 302,
+      "registrasi_location": "https://projecteuclid.org/journals/annals-of-statistics/volume-7/issue-1/Bootstrap-Methods-Another-Look-at-the-Jackknife",
+      "crossref_status": 200,
+      "crossref_meta": {
+        "title": "Bootstrap Methods: Another Look at the Jackknife",
+        "first_author": "Efron",
+        "year": 1979,
+        "container": "The Annals of Statistics"
+      }
+    },
+    "10.1111/j.2517-6161.1995.tb02031.x": {
+      "label": "Benjamini & Hochberg 1995",
+      "expected_title": "Controlling the False Discovery Rate",
+      "registrasi_status": 302,
+      "registrasi_location": "https://academic.oup.com/jrsssb/article/57/1/289/7035855",
+      "crossref_status": 200,
+      "crossref_meta": {
+        "title": "Controlling the False Discovery Rate: A Practical and Powerful Approach to Multiple Testing",
+        "first_author": "Benjamini",
+        "year": 1995,
+        "container": "Journal of the Royal Statistical Society Series B: Statistical Methodology"
+      }
+    },
+    "10.1080/01621459.1927.10502953": {
+      "label": "Wilson 1927",
+      "expected_title": "Probable Inference, the Law of Succession, and Statistical Inference",
+      "registrasi_status": 302,
+      "registrasi_location": "http://www.tandfonline.com/doi/abs/10.1080/01621459.1927.10502953",
+      "crossref_status": 200,
+      "crossref_meta": {
+        "title": "Probable Inference, the Law of Succession, and Statistical Inference",
+        "first_author": "Wilson",
+        "year": 1927,
+        "container": "Journal of the American Statistical Association"
+      }
+    },
+    "10.1007/978-3-642-40994-3_29": {
+      "label": "Boyd et al. 2013",
+      "expected_title": "Area under the Precision-Recall Curve: Point Estimates and Confidence Intervals",
+      "registrasi_status": 302,
+      "registrasi_location": "http://link.springer.com/10.1007/978-3-642-40994-3_29",
+      "crossref_status": 200,
+      "crossref_meta": {
+        "title": "Area under the Precision-Recall Curve: Point Estimates and Confidence Intervals",
+        "first_author": "Boyd",
+        "year": 2013,
+        "container": "Lecture Notes in Computer Science"
+      }
+    },
+    "10.1371/journal.pone.0118432": {
+      "label": "Saito & Rehmsmeier 2015",
+      "expected_title": "The Precision-Recall Plot Is More Informative than the ROC Plot",
+      "registrasi_status": 302,
+      "registrasi_location": "https://dx.plos.org/10.1371/journal.pone.0118432",
+      "crossref_status": 200,
+      "crossref_meta": {
+        "title": "The Precision-Recall Plot Is More Informative than the ROC Plot When Evaluating Binary Classifiers on Imbalanced Datasets",
+        "first_author": "Saito",
+        "year": 2015,
+        "container": "PLOS ONE"
+      }
+    },
+    "10.1525/collabra.33267": {
+      "label": "Lakens 2022",
+      "expected_title": "Sample Size Justification",
+      "registrasi_status": 302,
+      "registrasi_location": "https://online.ucpress.edu/collabra/article/8/1/33267/120491/Sample-Size-Justification",
+      "crossref_status": 200,
+      "crossref_meta": {
+        "title": "Sample Size Justification",
+        "first_author": "Lakens",
+        "year": 2022,
+        "container": "Collabra: Psychology"
+      }
+    },
+    "10.2307/4615733": {
+      "label": "Holm 1979",
+      "expected_title": "A Simple Sequentially Rejective Multiple Test Procedure",
+      "registrasi_status": 404,
+      "registrasi_location": "",
+      "crossref_status": 404,
+      "crossref_meta": null
+    }
+  },
+  "url": {
+    "https://www.jmlr.org/papers/v11/cawley10a.html": {
+      "label": "Cawley & Talbot 2010",
+      "expected_title": "On Over-fitting in Model Selection and Subsequent Selection Bias in Performance Evaluation",
+      "status": 200,
+      "judul_cocok": true,
+      "bytes": 6655
+    },
+    "https://www.jmlr.org/papers/v22/20-303.html": {
+      "label": "Pineau et al. 2021",
+      "expected_title": "Improving Reproducibility in Machine Learning Research",
+      "status": 200,
+      "judul_cocok": true,
+      "bytes": 6617
+    },
+    "https://arxiv.org/abs/2107.07511": {
+      "label": "Angelopoulos & Bates 2021",
+      "expected_title": "A Gentle Introduction to Conformal Prediction",
+      "status": 200,
+      "judul_cocok": true,
+      "bytes": 46477
+    },
+    "https://arxiv.org/abs/1905.03222": {
+      "label": "Romano et al. 2019",
+      "expected_title": "Conformalized Quantile Regression",
+      "status": 200,
+      "judul_cocok": true,
+      "bytes": 40327
+    }
+  }
+}

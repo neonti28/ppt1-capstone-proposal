@@ -1,0 +1,50 @@
+{
+  "meta": {
+    "task": "t_34e9b879 V9-I1 prototipe alat PdM advisory",
+    "segmen_rig": "F-14",
+    "segmen_usrop": [
+      "USROP_A 2 N-SH_F-14d.csv"
+    ],
+    "segmen_tool_wear": "4 alat x 2 run (469 jendela)",
+    "ml": true,
+    "seed": 42,
+    "generated_at": "2026-10-12 12:32:19",
+    "elapsed_s": 21.55,
+    "sumber_tier": "docs/V9_EVAL_C_LAYERC.md §1 (I1 tidak mengubah tier)",
+    "n_engine": 7
+  },
+  "n_engines": 7,
+  "n_heads": 27,
+  "daftar_engine": [
+    "vib",
+    "ssi",
+    "shk",
+    "stuck",
+    "hyd",
+    "bit_wear",
+    "tool_wear"
+  ],
+  "heads_per_engine": {
+    "vib": 4,
+    "ssi": 4,
+    "shk": 4,
+    "stuck": 6,
+    "hyd": 4,
+    "bit_wear": 2,
+    "tool_wear": 3
+  },
+  "tier_count": {
+    "PERINGATAN-BERPENGAWAS": 12,
+    "TREN": 13,
+    "BELUM LAYAK PAKAI": 2
+  },
+  "layer_count": {
+    "L1": 11,
+    "L0": 5,
+    "L2": 9,
+    "L3": 2
+  },
+  "auto_critical_alarm_slots": 0,
+  "keputusan_akhir": "MANUSIA — alat ini hanya menyiapkan status/peringatan/tren",
+  "tool_wear_files": []
+}

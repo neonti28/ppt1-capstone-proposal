@@ -1,0 +1,98 @@
+{
+  "persistence": {
+    "n": 9,
+    "far_ok_baris": 4,
+    "far_ok_kejadian": 9,
+    "recall_ok": 9,
+    "cakupan_ok": 1,
+    "far_dan_recall_baris": 4,
+    "far_dan_recall_kejadian": 9,
+    "ketiga_baris": 0,
+    "ketiga_kejadian": 1,
+    "fold_tanpa_alarm": 0
+  },
+  "rule_t0m1": {
+    "n": 9,
+    "far_ok_baris": 3,
+    "far_ok_kejadian": 7,
+    "recall_ok": 9,
+    "cakupan_ok": 1,
+    "far_dan_recall_baris": 3,
+    "far_dan_recall_kejadian": 7,
+    "ketiga_baris": 0,
+    "ketiga_kejadian": 0,
+    "fold_tanpa_alarm": 0
+  },
+  "hybrid_rule_persistence": {
+    "n": 9,
+    "far_ok_baris": 7,
+    "far_ok_kejadian": 9,
+    "recall_ok": 9,
+    "cakupan_ok": 1,
+    "far_dan_recall_baris": 7,
+    "far_dan_recall_kejadian": 9,
+    "ketiga_baris": 0,
+    "ketiga_kejadian": 1,
+    "fold_tanpa_alarm": 0
+  },
+  "hybrid_proxy_E3": {
+    "n": 9,
+    "far_ok_baris": 9,
+    "far_ok_kejadian": 9,
+    "recall_ok": 9,
+    "cakupan_ok": 1,
+    "far_dan_recall_baris": 9,
+    "far_dan_recall_kejadian": 9,
+    "ketiga_baris": 1,
+    "ketiga_kejadian": 1,
+    "fold_tanpa_alarm": 0
+  },
+  "H_and_hybrid_ML": {
+    "n": 18,
+    "far_ok_baris": 18,
+    "far_ok_kejadian": 18,
+    "recall_ok": 0,
+    "cakupan_ok": 2,
+    "far_dan_recall_baris": 0,
+    "far_dan_recall_kejadian": 0,
+    "ketiga_baris": 0,
+    "ketiga_kejadian": 0,
+    "fold_tanpa_alarm": 13
+  },
+  "H_or_hybrid_ML": {
+    "n": 18,
+    "far_ok_baris": 14,
+    "far_ok_kejadian": 18,
+    "recall_ok": 18,
+    "cakupan_ok": 2,
+    "far_dan_recall_baris": 14,
+    "far_dan_recall_kejadian": 18,
+    "ketiga_baris": 0,
+    "ketiga_kejadian": 2,
+    "fold_tanpa_alarm": 0
+  },
+  "A1_alpha_E2_lama": {
+    "n": 18,
+    "far_ok_baris": 6,
+    "far_ok_kejadian": 14,
+    "recall_ok": 0,
+    "cakupan_ok": 2,
+    "far_dan_recall_baris": 0,
+    "far_dan_recall_kejadian": 0,
+    "ketiga_baris": 0,
+    "ketiga_kejadian": 0,
+    "fold_tanpa_alarm": 0
+  },
+  "A1_alpha_anggaran": {
+    "n": 18,
+    "far_ok_baris": 18,
+    "far_ok_kejadian": 18,
+    "recall_ok": 0,
+    "cakupan_ok": 2,
+    "far_dan_recall_baris": 0,
+    "far_dan_recall_kejadian": 0,
+    "ketiga_baris": 0,
+    "ketiga_kejadian": 0,
+    "fold_tanpa_alarm": 12
+  }
+}

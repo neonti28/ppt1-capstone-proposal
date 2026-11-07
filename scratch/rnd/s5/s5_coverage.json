@@ -1,0 +1,48 @@
+{
+ "S1": {
+  "sel_tabel": 508,
+  "ada_di_ledger": 344,
+  "fraksi": 0.6772,
+  "contoh_tanpa_padanan": [
+   "7571",
+   "1394",
+   "11249",
+   "7390",
+   "1426",
+   "86454",
+   "317679",
+   "0,0327"
+  ],
+  "angka_unik_ledger": 149
+ },
+ "S2": {
+  "sel_tabel": 430,
+  "ada_di_ledger": 430,
+  "fraksi": 1.0,
+  "contoh_tanpa_padanan": [],
+  "angka_unik_ledger": 949
+ },
+ "S3": {
+  "sel_tabel": 339,
+  "ada_di_ledger": 139,
+  "fraksi": 0.41,
+  "contoh_tanpa_padanan": [
+   "53.041",
+   "7.622",
+   "5.278",
+   "40.141",
+   "51.708",
+   "28.051",
+   "1.026",
+   "22.631"
+  ],
+  "angka_unik_ledger": 217
+ },
+ "S4": {
+  "sel_tabel": 95,
+  "ada_di_ledger": 95,
+  "fraksi": 1.0,
+  "contoh_tanpa_padanan": [],
+  "angka_unik_ledger": 272
+ }
+}

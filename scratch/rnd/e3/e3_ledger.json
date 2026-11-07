@@ -1,0 +1,362 @@
+[
+  {
+    "no": "E3-001",
+    "angka": 52509,
+    "satuan": "baris",
+    "kelas": "RUN-KITA",
+    "rujukan": "`scratch/rnd/e3/e3_verify.json` ``v6_total.n_baris``",
+    "tanggal": "2026-10-27",
+    "dipakai": "bagian 2",
+    "status": "TERUKUR"
+  },
+  {
+    "no": "E3-002",
+    "angka": 9,
+    "satuan": "well/fold",
+    "kelas": "RUN-KITA",
+    "rujukan": "`scratch/rnd/e3/e3_run_summary.json` ``n_folds``",
+    "tanggal": "2026-10-27",
+    "dipakai": "bagian 2, 4",
+    "status": "TERUKUR"
+  },
+  {
+    "no": "E3-003",
+    "angka": 41,
+    "satuan": "fitur A1",
+    "kelas": "RUN-KITA",
+    "rujukan": "`scratch/rnd/e3/e3_verify.json` ``v5_audit_fitur.n_fitur_A1``",
+    "tanggal": "2026-10-27",
+    "dipakai": "bagian 3.1",
+    "status": "TERUKUR"
+  },
+  {
+    "no": "E3-004",
+    "angka": 43,
+    "satuan": "fitur A1b",
+    "kelas": "RUN-KITA",
+    "rujukan": "`scratch/rnd/e3/e3_verify.json` ``v5_audit_fitur.n_fitur_A1b``",
+    "tanggal": "2026-10-27",
+    "dipakai": "bagian 3.2",
+    "status": "TERUKUR"
+  },
+  {
+    "no": "E3-005",
+    "angka": 233.7,
+    "satuan": "detik",
+    "kelas": "RUN-KITA",
+    "rujukan": "`scratch/rnd/e3/e3_run_summary.json` ``elapsed_s``",
+    "tanggal": "2026-10-27",
+    "dipakai": "bagian 2, 6",
+    "status": "TERUKUR"
+  },
+  {
+    "no": "E3-006",
+    "angka": 1941,
+    "satuan": "FP",
+    "kelas": "RUN-KITA",
+    "rujukan": "`scratch/rnd/e3/e3_baseline_results.json` ``total_fp.persistence``",
+    "tanggal": "2026-10-27",
+    "dipakai": "bagian 4.1",
+    "status": "TERUKUR"
+  },
+  {
+    "no": "E3-007",
+    "angka": 195,
+    "satuan": "FP",
+    "kelas": "RUN-KITA",
+    "rujukan": "`scratch/rnd/e3/e3_baseline_results.json` ``total_fp.hybrid_rule_lag1_and_persistence``",
+    "tanggal": "2026-10-27",
+    "dipakai": "bagian 4.1",
+    "status": "TERUKUR"
+  },
+  {
+    "no": "E3-008",
+    "angka": "32,17 sampai 109,69",
+    "satuan": "FP per 24 jam",
+    "kelas": "DERIVASI",
+    "rujukan": "`scratch/rnd/e3/e3_baseline_results.json` ``folds[].far_per_24h` model persistence` ; FAR = FP/(n_neg/60)*24",
+    "tanggal": "2026-10-27",
+    "dipakai": "bagian 4.1",
+    "status": "TERVERIFIKASI (assert V1, deviasi 0,0)"
+  },
+  {
+    "no": "E3-009",
+    "angka": "2,77 sampai 19,31",
+    "satuan": "FP per 24 jam",
+    "kelas": "DERIVASI",
+    "rujukan": "`scratch/rnd/e3/e3_baseline_results.json` ``folds[].far_per_24h` model hybrid proxy` ; FAR = FP/(n_neg/60)*24",
+    "tanggal": "2026-10-27",
+    "dipakai": "bagian 4.1",
+    "status": "TERVERIFIKASI (assert V1)"
+  },
+  {
+    "no": "E3-010",
+    "angka": "0 dari 9",
+    "satuan": "fold lulus gate A",
+    "kelas": "DERIVASI",
+    "rujukan": "`scratch/rnd/e3/e3_verify.json` ``v3b_gate_A_baseline_hitung_manual.persistence``",
+    "tanggal": "2026-10-27",
+    "dipakai": "bagian 4.1, 5",
+    "status": "TERVERIFIKASI"
+  },
+  {
+    "no": "E3-011",
+    "angka": "4 dari 9",
+    "satuan": "fold lulus gate A",
+    "kelas": "DERIVASI",
+    "rujukan": "`scratch/rnd/e3/e3_verify.json` ``v3b_gate_A_baseline_hitung_manual.hybrid_proxy`` = F-10, F-14, F-15A, F-5",
+    "tanggal": "2026-10-27",
+    "dipakai": "bagian 4.1, 5",
+    "status": "TERVERIFIKASI"
+  },
+  {
+    "no": "E3-012",
+    "angka": "0,00 sampai 543,50",
+    "satuan": "FP per 24 jam",
+    "kelas": "DERIVASI",
+    "rujukan": "`scratch/rnd/e3/e3_a_conformal_results.json` ``folds[]` seed 42 `far_per_24h`` ; median 86,72",
+    "tanggal": "2026-10-27",
+    "dipakai": "bagian 4.2, 5",
+    "status": "TERVERIFIKASI (assert V1)"
+  },
+  {
+    "no": "E3-013",
+    "angka": "63,29",
+    "satuan": "FP per 24 jam median 45 fold-run",
+    "kelas": "DERIVASI",
+    "rujukan": "`scratch/rnd/e3/e3_verify.json` ``v4_rentang.A1_semua_seed_far.median``",
+    "tanggal": "2026-10-27",
+    "dipakai": "bagian 4.2",
+    "status": "TERVERIFIKASI"
+  },
+  {
+    "no": "E3-014",
+    "angka": "0,0010 sampai 0,5057",
+    "satuan": "recall",
+    "kelas": "DERIVASI",
+    "rujukan": "`scratch/rnd/e3/e3_verify.json` ``v4_rentang.A1_seed42_recall`` ; median 0,0740",
+    "tanggal": "2026-10-27",
+    "dipakai": "bagian 4.2",
+    "status": "TERVERIFIKASI"
+  },
+  {
+    "no": "E3-015",
+    "angka": "2 dari 9",
+    "satuan": "fold lulus gate A seed 42",
+    "kelas": "DERIVASI",
+    "rujukan": "`scratch/rnd/e3/e3_run_summary.json` ``fold_gate_A_A1_seed42``",
+    "tanggal": "2026-10-27",
+    "dipakai": "bagian 4.2, 5",
+    "status": "TERVERIFIKASI"
+  },
+  {
+    "no": "E3-016",
+    "angka": "3 dari 45",
+    "satuan": "fold-run lulus gate A semua seed",
+    "kelas": "DERIVASI",
+    "rujukan": "`scratch/rnd/e3/e3_verify.json` ``v3_gate_A.A1.n_gate_A_lulus` = 3 dari `n_fold` = 45`",
+    "tanggal": "2026-10-27",
+    "dipakai": "bagian 4.2, 5",
+    "status": "TERVERIFIKASI"
+  },
+  {
+    "no": "E3-017",
+    "angka": "0,05 sampai 0,20",
+    "satuan": "alpha conformal terpilih",
+    "kelas": "DERIVASI",
+    "rujukan": "`scratch/rnd/e3/e3_budget.json` ``A1_alpha_vs_anggaran_seed42[].alpha_dipilih``",
+    "tanggal": "2026-10-27",
+    "dipakai": "bagian 4.2, 6.2",
+    "status": "TERVERIFIKASI"
+  },
+  {
+    "no": "E3-018",
+    "angka": "127,49 sampai 232,66",
+    "satuan": "FP per 24 jam A2 reset",
+    "kelas": "DERIVASI",
+    "rujukan": "`scratch/rnd/e3/e3_b_cusum_results.json` ``varian.reset.folds[].far_per_24h``",
+    "tanggal": "2026-10-27",
+    "dipakai": "bagian 4.3, 5",
+    "status": "TERVERIFIKASI (assert V1)"
+  },
+  {
+    "no": "E3-019",
+    "angka": "0,3871 sampai 0,8038",
+    "satuan": "recall A2 reset",
+    "kelas": "DERIVASI",
+    "rujukan": "`scratch/rnd/e3/e3_verify.json` ``v4_rentang.A2_reset_recall``",
+    "tanggal": "2026-10-27",
+    "dipakai": "bagian 4.3",
+    "status": "TERVERIFIKASI"
+  },
+  {
+    "no": "E3-020",
+    "angka": "1330,94 sampai 1440,00",
+    "satuan": "FP per 24 jam A2 tanpa reset",
+    "kelas": "DERIVASI",
+    "rujukan": "`scratch/rnd/e3/e3_b_cusum_results.json` ``varian.tanpa_reset.folds[].far_per_24h``",
+    "tanggal": "2026-10-27",
+    "dipakai": "bagian 4.3, 5",
+    "status": "TERVERIFIKASI (assert V1)"
+  },
+  {
+    "no": "E3-021",
+    "angka": "0,8882 sampai 1,0000",
+    "satuan": "recall A2 tanpa reset",
+    "kelas": "DERIVASI",
+    "rujukan": "`scratch/rnd/e3/e3_verify.json` ``v4_rentang.A2_tanpa_reset_recall``",
+    "tanggal": "2026-10-27",
+    "dipakai": "bagian 4.3",
+    "status": "TERVERIFIKASI"
+  },
+  {
+    "no": "E3-022",
+    "angka": "0 dari 9",
+    "satuan": "fold lulus gate A A2 (kedua varian)",
+    "kelas": "DERIVASI",
+    "rujukan": "`scratch/rnd/e3/e3_verify.json` ``v3_gate_A.A2_reset` dan `A2_tanpa_reset``",
+    "tanggal": "2026-10-27",
+    "dipakai": "bagian 4.3, 5",
+    "status": "TERVERIFIKASI"
+  },
+  {
+    "no": "E3-023",
+    "angka": "0,00 sampai 24,14",
+    "satuan": "FP per 24 jam A1b",
+    "kelas": "DERIVASI",
+    "rujukan": "`scratch/rnd/e3/e3_a1b_lag_results.json` ``folds[].far_per_24h``",
+    "tanggal": "2026-10-27",
+    "dipakai": "bagian 4.4",
+    "status": "TERVERIFIKASI"
+  },
+  {
+    "no": "E3-024",
+    "angka": "0,4737 sampai 0,9645",
+    "satuan": "presisi A1b (8 fold berpresisi terdefinisi)",
+    "kelas": "DERIVASI",
+    "rujukan": "`scratch/rnd/e3/e3_verify.json` ``v4_rentang.A1b_precision`` ; F-9_A presisi tidak terdefinisi (0 alarm)",
+    "tanggal": "2026-10-27",
+    "dipakai": "bagian 4.4",
+    "status": "TERVERIFIKASI"
+  },
+  {
+    "no": "E3-025",
+    "angka": 2,
+    "satuan": "kolom turunan label dipakai A1b",
+    "kelas": "RUN-KITA",
+    "rujukan": "`scratch/rnd/e3/e3_verify.json` ``v5_audit_fitur.kolom_turunan_label_dipakai_A1b`` = y_prev_hyd, valid_prev_hyd ; melanggar E2 §2.3 L3",
+    "tanggal": "2026-10-27",
+    "dipakai": "bagian 4.4, 5",
+    "status": "TERVERIFIKASI"
+  },
+  {
+    "no": "E3-026",
+    "angka": "0,00416667",
+    "satuan": "fraksi menit negatif yang boleh menyala",
+    "kelas": "KONVENSI",
+    "rujukan": "6 alarm / 1440 menit ; ambang gate A dari docs/RND_ALGO_RESEARCH_PLAN.md §6 dan docs/RND_E2_PROTOKOL.md §5.2 ; dihitung ulang di `code/rnd_e3_budget.py`",
+    "tanggal": "2026-10-27",
+    "dipakai": "bagian 6.1",
+    "status": "TERVERIFIKASI"
+  },
+  {
+    "no": "E3-027",
+    "angka": "12 sampai 48",
+    "satuan": "kali lipat di atas anggaran (alpha A1)",
+    "kelas": "DERIVASI",
+    "rujukan": "`scratch/rnd/e3/e3_budget.json` ``A1_alpha_vs_anggaran_seed42[].kelebihan_kali`` = 12, 12, 12, 48, 12, 48, 12, 12, 24",
+    "tanggal": "2026-10-27",
+    "dipakai": "bagian 6.1",
+    "status": "TERVERIFIKASI"
+  },
+  {
+    "no": "E3-028",
+    "angka": "0,377428",
+    "satuan": "fraksi menit negatif menyala tertinggi A1",
+    "kelas": "DERIVASI",
+    "rujukan": "`scratch/rnd/e3/e3_budget.json` ``A1_seed42[].fraksi_menit_menyala` maks` ; 90,6 kali anggaran",
+    "tanggal": "2026-10-27",
+    "dipakai": "bagian 6.1",
+    "status": "TERVERIFIKASI"
+  },
+  {
+    "no": "E3-029",
+    "angka": "0,0885 sampai 0,1616",
+    "satuan": "fraksi menit negatif menyala A2 reset",
+    "kelas": "DERIVASI",
+    "rujukan": "`scratch/rnd/e3/e3_budget.json` ``A2_reset[].fraksi_menit_menyala`` ; 21,2 sampai 38,8 kali anggaran",
+    "tanggal": "2026-10-27",
+    "dipakai": "bagian 6.1",
+    "status": "TERVERIFIKASI"
+  },
+  {
+    "no": "E3-030",
+    "angka": "0,9243 sampai 1,0000",
+    "satuan": "fraksi menit negatif menyala A2 tanpa reset",
+    "kelas": "DERIVASI",
+    "rujukan": "`scratch/rnd/e3/e3_budget.json` ``A2_tanpa_reset[].fraksi_menit_menyala`` ; 221,8 sampai 240,0 kali anggaran",
+    "tanggal": "2026-10-27",
+    "dipakai": "bagian 6.1",
+    "status": "TERVERIFIKASI"
+  },
+  {
+    "no": "E3-031",
+    "angka": "0,0171 sampai 0,6730",
+    "satuan": "cakupan waktu teramati per fold",
+    "kelas": "DERIVASI",
+    "rujukan": "`scratch/rnd/e3/e3_cakupan.json` ``per_fold[].fraksi``",
+    "tanggal": "2026-10-27",
+    "dipakai": "bagian 3, 5.1",
+    "status": "TERUKUR"
+  },
+  {
+    "no": "E3-032",
+    "angka": "1 dari 9",
+    "satuan": "fold dengan cakupan >= 50 persen",
+    "kelas": "DERIVASI",
+    "rujukan": "`scratch/rnd/e3/e3_cakupan.json` ``per_fold[].fraksi` ; hanya F-10 = 0,6730` ; E2 §4.1 butir (d) melarang sertifikasi fold dengan cakupan < 50 persen",
+    "tanggal": "2026-10-27",
+    "dipakai": "bagian 5.1",
+    "status": "TERVERIFIKASI"
+  },
+  {
+    "no": "E3-033",
+    "angka": 113,
+    "satuan": "pemeriksaan verifikasi",
+    "kelas": "RUN-KITA",
+    "rujukan": "`scratch/rnd/e3/e3_verify.json` ``checks` panjang ; 0 gagal` ; `code/rnd_e3_verify.py`",
+    "tanggal": "2026-10-27",
+    "dipakai": "bagian 3, 7",
+    "status": "TERUKUR"
+  },
+  {
+    "no": "E3-034",
+    "angka": "7 dari 7",
+    "satuan": "rujukan dengan metadata terverifikasi",
+    "kelas": "RUN-KITA",
+    "rujukan": "`scratch/rnd/e3/e3_doi.json` ``refs[].metadata_terverifikasi`` ; `code/rnd_e3_doi.py`",
+    "tanggal": "2026-10-27",
+    "dipakai": "bagian 8",
+    "status": "TERUKUR"
+  },
+  {
+    "no": "E3-035",
+    "angka": 4,
+    "satuan": "penerbit membalas 403 (blokir bot)",
+    "kelas": "RUN-KITA",
+    "rujukan": "`scratch/rnd/e3/e3_doi.json` ``refs[].lapis3_akses` = 403` ; Lei, Page, Garwood, Siffer",
+    "tanggal": "2026-10-27",
+    "dipakai": "bagian 8",
+    "status": "TERUKUR"
+  },
+  {
+    "no": "E3-036",
+    "angka": "BELUM TERUKUR",
+    "satuan": "jam orang gate B",
+    "kelas": "BELUM-TERUKUR",
+    "rujukan": "tidak ada data durasi pemeriksaan manusia per alarm pada repo; gate B tidak dapat dihitung",
+    "tanggal": "2026-10-27",
+    "dipakai": "bagian 5.3",
+    "status": "BELUM TERUKUR"
+  }
+]

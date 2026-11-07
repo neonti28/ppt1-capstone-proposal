@@ -1,0 +1,66 @@
+{
+ "T01|R01": {
+  "n": 60,
+  "dmin": 1000,
+  "dmed": 1000.0,
+  "dmax": 1000,
+  "span_s": 59000,
+  "y_mean": null
+ },
+ "T01|R02": {
+  "n": 60,
+  "dmin": 1000,
+  "dmed": 1000.0,
+  "dmax": 1000,
+  "span_s": 59000,
+  "y_mean": null
+ },
+ "T02|R01": {
+  "n": 50,
+  "dmin": 1000,
+  "dmed": 1000.0,
+  "dmax": 1000,
+  "span_s": 49000,
+  "y_mean": null
+ },
+ "T02|R02": {
+  "n": 62,
+  "dmin": 1000,
+  "dmed": 1000.0,
+  "dmax": 1000,
+  "span_s": 61000,
+  "y_mean": null
+ },
+ "T03|R01": {
+  "n": 61,
+  "dmin": 1000,
+  "dmed": 1000.0,
+  "dmax": 1000,
+  "span_s": 60000,
+  "y_mean": null
+ },
+ "T03|R02": {
+  "n": 60,
+  "dmin": 1000,
+  "dmed": 1000.0,
+  "dmax": 1000,
+  "span_s": 59000,
+  "y_mean": null
+ },
+ "T04|R01": {
+  "n": 58,
+  "dmin": 1000,
+  "dmed": 1000.0,
+  "dmax": 1000,
+  "span_s": 57000,
+  "y_mean": null
+ },
+ "T04|R02": {
+  "n": 58,
+  "dmin": 1000,
+  "dmed": 1000.0,
+  "dmax": 1000,
+  "span_s": 57000,
+  "y_mean": null
+ }
+}

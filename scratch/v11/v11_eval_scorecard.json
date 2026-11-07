@@ -1,0 +1,78 @@
+{
+  "task": "t_b15f4c50",
+  "role": "V11-EVAL (evaluator blind, rubrik PM-0 terkunci docs/V11_PROTOCOL.md §2)",
+  "tanggal": "2026-10-15",
+  "anonymisasi": "Penilaian isi saja; path diperlakukan sbg kode kandidat; larangan 'versi baru/lama/V10/arsip' sbg dasar dipatuhi. Menang final = PM-FINAL (protokol §3).",
+  "rubrik": {"k1": 30, "k2": 30, "k3": 25, "k4": 15, "total": 100},
+  "kandidat_1": {
+    "path_md": "/mnt/d/Capstone 1(v2)/docs/ML_PROJECT_PROPOSAL_TECHNICAL_DESIGN.v3_arsip.md",
+    "path_ipynb": "/mnt/d/Capstone 1(v2)/docs/ML_PROJECT_PROPOSAL_TECHNICAL_DESIGN.v3_arsip.ipynb",
+    "sub_skor": {
+      "1a_rumus": 0, "1b_labeling": 1, "1c_workflow_hibrida": 1, "1d_bukti_klaim": 3, "k1_total": 5,
+      "2a_checklist_30": 4.2, "2b_angka_luar_checklist": 3, "2c_nihil_karangan": 4, "k2_total": 11.2,
+      "3a_lapisan_abc": 5, "3b_baseline_per_tugas": 4, "3c_jenis_tugas": 4, "3d_kemampuan_batas_bukti": 6, "3e_tingkat_alat": 3, "k3_total": 22,
+      "4a_outline": 4, "4b_7_11_27": 0, "4c_md_eq_ipynb": 4, "4d_emdash": 0, "k4_total": 8
+    },
+    "total": 46.2,
+    "bukti_kunci": {
+      "2a": "AUD-CLAIM §B: 7 COCOK (butir 1,6,10,11,12,15,29) + 2 PARSIAL + 1 SALAH (19) + 20 TIDAK-HADIR; 18x7/30 = 4.2. Verifikasi mandiri grep: kehadiran 198.928=1, 8.474.172=1, 7.080.457=0, 292.954=0, 52.905=0.",
+      "2b": "AUD-CLAIM §C.1: 15 klaim ekstra, 5 SALAH (X1 8.474.172, X8 tujuh sumur vs 9 wellbore, X9 tujuh lipatan vs 37 fold, X10 Histogram-GB vs GradientBoostingClassifier, X12 rerun identik vs rerun_identical=False), 1 TIDAK-TERVERIFIKASI (Brier&ECE) = banyak gagal.",
+      "2c": "8.474.172 nihil di seluruh primer (D1: enumerasi 45 subset 8-dari-10 tidak ada yang berjumlah itu; AUDIT §7) = angka tanpa sumber -> -2 (rubrik 2c).",
+      "1a": "AUDIT baca penuh 352 baris: 0 rumus; E_STAT 'rumus per engine 0/4'; E_HYB rule per kelas 0/5.",
+      "4b": "Grep mandiri: '11 klaim'=0, '27 head'=0, '4+4+4+6+4+2+3'=0.",
+      "4d": "Grep mandiri U+2014 = 14; AUDIT §4: >=6 pelanggaran penghubung klausa -> skor 0 (rubrik 4+ pelanggaran = 0).",
+      "4c": "AUDIT §5 + RND §5 + AUD-CLAIM §F: 0 baris substansial hilang; 8 baris ekstra = blok arsip VIS berlabel non-narasi."
+    }
+  },
+  "kandidat_2": {
+    "path_md": "/mnt/d/Capstone 1(v2)/docs/ML_PROJECT_PROPOSAL_TECHNICAL_DESIGN.md",
+    "path_ipynb": "/mnt/d/Capstone 1(v2)/docs/ML_PROJECT_PROPOSAL_TECHNICAL_DESIGN.ipynb",
+    "sub_skor": {
+      "1a_rumus": 9, "1b_labeling": 6, "1c_workflow_hibrida": 7, "1d_bukti_klaim": 5, "k1_total": 27,
+      "2a_checklist_30": 18.0, "2b_angka_luar_checklist": 5, "2c_nihil_karangan": 6, "k2_total": 29,
+      "3a_lapisan_abc": 6, "3b_baseline_per_tugas": 5, "3c_jenis_tugas": 5, "3d_kemampuan_batas_bukti": 6, "3e_tingkat_alat": 3, "k3_total": 25,
+      "4a_outline": 4, "4b_7_11_27": 4, "4c_md_eq_ipynb": 4, "4d_emdash": 3, "k4_total": 15
+    },
+    "total": 96,
+    "bukti_kunci": {
+      "2a": "AUD-CLAIM §B: 30/30 COCOK, 0 SALAH, 0 TIDAK-HADIR; 18x30/30 = 18.0. Verifikasi mandiri grep: 7.080.457=7, 292.954=8, 52.905=7, 32,17405=12, 8.474.172=0, '37 lipatan|37 fold'=7.",
+      "2b": "AUD-CLAIM §C.2: 15 klaim ekstra, 1 SALAH (K2-X12 P hyd persistence 0,615-0,793; primer 0,615-0,899; 0,793=fold F-9), 1 TIDAK-TERVERIFIKASI (481/329), 2 DIDUKUNG + isu minor STAT (atribusi 32-111) + path katalog D1 = satu-dua gagal -> 5.",
+      "2c": "AUD-CLAIM §D: 0 angka karangan; seluruh angka punya sumber (481/329 = kutipan V10_R1_ALASAN).",
+      "1a": "E_HYB §4: 5 rumus rule + persistence + hibrida cocok literal ke kode; E_STAT: 4/4 engine rumus + sitasi baris kode; E_ML: kontrak RF/GB/LR. Celah: sebagian rumus hanya dijelaskan kata (E_STAT: kuantil FAR).",
+      "1b": "E_D2: skema per kelas cocok kode (7 kelas) + asersi runtime; celah minor MIN_OBS=5 tidak disebut eksplisit.",
+      "1c": "E_HYB §4.3: workflow 4 langkah + mekanisme dua pemotong + pemangkasan FP 2091->927/26->7 berangka + degenerasi.",
+      "4b": "Grep mandiri: '11 klaim'=18, '27 head'=34, '4+4+4+6+4+2+3'=5; AUDIT §6: tabel 27 head cocok 27/27 vs REGISTRY eksekusi.",
+      "4d": "Grep mandiri U+2014 = 0 -> 0 pelanggaran = 3.",
+      "4c": "AUDIT §5 + AUD-CLAIM §F: 0 baris substansial hilang; 1 artefak kosmetik literal backslash-n (bukan selisih angka/klaim/struktur)."
+    }
+  },
+  "perbandingan_per_kriteria": {
+    "k1_kedalaman_teknis": {"k1": 5, "k2": 27, "selisih": 22, "unggul": "kandidat 2"},
+    "k2_akurasi": {"k1": 11.2, "k2": 29, "selisih": 17.8, "unggul": "kandidat 2"},
+    "k3_kepatuhan_user_txt": {"k1": 22, "k2": 25, "selisih": 3, "unggul": "kandidat 2"},
+    "k4_struktur": {"k1": 8, "k2": 15, "selisih": 7, "unggul": "kandidat 2"}
+  },
+  "total_selisih": 49.8,
+  "selisih_tipis": false,
+  "catatan_menang": "Pemimpin per kriteria dicatat apa adanya; penetapan MENANG/SERI mengikuti protokol §3 = kewenangan PM-FINAL.",
+  "ipynb": {
+    "kandidat_1": "parity lolos (0 baris substantif hilang; checklist presence identik 7/30 md=ipynb); 4c ipynb = 4",
+    "kandidat_2": "parity lolos (0 baris substantif hilang; checklist presence identik 30/30 md=ipynb); 4c ipynb = 4 dengan catatan 1 artefak kosmetik"
+  },
+  "belum_diverifikasi": [
+    "output execution cell .ipynb kedua kandidat tidak dibaca",
+    "pelatihan ulang ML (kampanye tidak dijalankan ulang)",
+    "angka 481/329 (kandidat 2) tak punya primer data di luar kutipan dokumen",
+    "kelengkapan literal 100% rumus Bab 5/6 vs kode (diuji STAT/HYB per slice, tidak saya uji ulang seluruhnya)",
+    "sitasi DOI (cakupan R1; sebagian dibuka)"
+  ],
+  "pikiran_sequ_mcp": 4,
+  "skills": ["scientific-critical-thinking", "verification-mandatory", "statistical-analysis", "sequentialthinking"],
+  "verifikasi_mandiri": [
+    "grep U+2014: K1=14, K2=0",
+    "grep penanda: K1 11klaim/27head=0/0; K2 11klaim/27head=18/34",
+    "grep checklist: K1 8.474.172=1 & 7.080.457=0; K2 7.080.457=7 & 8.474.172=0",
+    "grep K1 klaim keliru: 'tujuh nilai lipatan' baris 182, 'Histogram-based Gradient Boosting' baris 158",
+    "grep K2: baris 628 P 0,615-0,793 (SALAH) vs baris 2088 P 0,615-0,899 (benar) = inkonsistensi internal"
+  ]
+}

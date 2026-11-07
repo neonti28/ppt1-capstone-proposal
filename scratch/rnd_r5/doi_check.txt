@@ -1,0 +1,10 @@
+10.1093/biomet/41.1-2.100	403	PAGE|E. S.|1954|CONTINUOUS INSPECTION SCHEMES|Biometrika|41|100-115
+10.1093/biomet/58.3.509	403	HINKLEY|D. V.|1971|Inference about the change-point from cumulative sum tests|Biometrika|58|509-523
+10.1109/ICDM.2008.17	202	Liu|Fei Tony|2008|Isolation Forest|2008 Eighth IEEE International Conference on Data Mining|?|413-422
+10.1145/342009.335388	403	Breunig|Markus M.|2000|LOF|Proceedings of the 2000 ACM SIGMOD international conference on Management of data|?|93-104
+10.1109/ICDM.2016.0085	202	Zhu|Yan|2016|Matrix Profile II: Exploiting a Novel Algorithm and GPUs to Break the One Hundred Million Barrier for Time Series Motifs and Joins|2016 IEEE 16th International Conference on Data Mining (ICDM)|?|739-748
+10.1162/089976601750264965	403	Schölkopf|Bernhard|2001|Estimating the Support of a High-Dimensional Distribution|Neural Computation|13|1443-1471
+10.1137/1.9781611972771.42	403	Bifet|Albert|2007|Learning from Time-Changing Data with Adaptive Windowing|Proceedings of the 2007 SIAM International Conference on Data Mining|?|443-448
+10.1145/2689746.2689747	403	Sakurada|Mayu|2014|Anomaly Detection Using Autoencoders with Nonlinear Dimensionality Reduction|Proceedings of the MLSDA 2014 2nd Workshop on Machine Learning for Sensory Data Analysis|?|4-11
+10.1214/09-AOAS282	200	Shirley|Kenneth E.|2010|Hidden Markov models for alcoholism treatment trial data|The Annals of Applied Statistics|4|366-395
+10.1080/01621459.1951.10500769	403	Massey|Frank J.|1951|The Kolmogorov-Smirnov Test for Goodness of Fit|Journal of the American Statistical Association|46|68-78

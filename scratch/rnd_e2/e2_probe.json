@@ -1,0 +1,340 @@
+{
+  "v9_i1_top_keys": [
+    "auto_critical_alarm_slots",
+    "decision_layer",
+    "engines",
+    "human_review_required",
+    "keputusan_akhir",
+    "meta",
+    "segmen_info"
+  ],
+  "elapsed_s_found": {
+    "/meta/elapsed_s": 21.55
+  },
+  "elapsed_s_count": 1,
+  "elapsed_s_sum": 21.55,
+  "meta_in_json": {
+    "/meta/seed": 42,
+    "/meta/generated_at": "2026-10-12 12:32:19"
+  },
+  "dataset_dir_exists": true,
+  "per_engine": {
+    "hyd_ki": {
+      "rows": 52509,
+      "wells": [
+        "F-10",
+        "F-12",
+        "F-14",
+        "F-15A",
+        "F-15_S",
+        "F-5",
+        "F-7",
+        "F-9",
+        "F-9_A"
+      ],
+      "n_wells": 9,
+      "rows_per_well": {
+        "F-10": 7571,
+        "F-12": 7390,
+        "F-14": 10401,
+        "F-15A": 6156,
+        "F-15_S": 8355,
+        "F-5": 6332,
+        "F-7": 2482,
+        "F-9": 1616,
+        "F-9_A": 2206
+      },
+      "y_cols": [
+        "y_hyd",
+        "y_prev_hyd"
+      ],
+      "pos_per_well_per_label": {
+        "F-10": {
+          "y_hyd": 1394,
+          "y_prev_hyd": 1361
+        },
+        "F-12": {
+          "y_hyd": 1426,
+          "y_prev_hyd": 1541
+        },
+        "F-14": {
+          "y_hyd": 865,
+          "y_prev_hyd": 876
+        },
+        "F-15A": {
+          "y_hyd": 698,
+          "y_prev_hyd": 710
+        },
+        "F-15_S": {
+          "y_hyd": 993,
+          "y_prev_hyd": 978
+        },
+        "F-5": {
+          "y_hyd": 621,
+          "y_prev_hyd": 617
+        },
+        "F-7": {
+          "y_hyd": 421,
+          "y_prev_hyd": 446
+        },
+        "F-9": {
+          "y_hyd": 423,
+          "y_prev_hyd": 357
+        },
+        "F-9_A": {
+          "y_hyd": 331,
+          "y_prev_hyd": 298
+        }
+      }
+    },
+    "shk": {
+      "rows": 56495,
+      "wells": [
+        "F-10",
+        "F-12",
+        "F-14",
+        "F-15A",
+        "F-15_S",
+        "F-5",
+        "F-7",
+        "F-9",
+        "F-9_A"
+      ],
+      "n_wells": 9,
+      "rows_per_well": {
+        "F-10": 7899,
+        "F-12": 5405,
+        "F-14": 11205,
+        "F-15A": 6484,
+        "F-15_S": 11394,
+        "F-5": 7140,
+        "F-7": 2761,
+        "F-9": 1851,
+        "F-9_A": 2356
+      },
+      "y_cols": [
+        "y_shk",
+        "y_prev_shk"
+      ],
+      "pos_per_well_per_label": {
+        "F-10": {
+          "y_shk": 146,
+          "y_prev_shk": 171
+        },
+        "F-12": {
+          "y_shk": 217,
+          "y_prev_shk": 101
+        },
+        "F-14": {
+          "y_shk": 760,
+          "y_prev_shk": 623
+        },
+        "F-15A": {
+          "y_shk": 41,
+          "y_prev_shk": 38
+        },
+        "F-15_S": {
+          "y_shk": 259,
+          "y_prev_shk": 244
+        },
+        "F-5": {
+          "y_shk": 240,
+          "y_prev_shk": 106
+        },
+        "F-7": {
+          "y_shk": 267,
+          "y_prev_shk": 221
+        },
+        "F-9": {
+          "y_shk": 45,
+          "y_prev_shk": 6
+        },
+        "F-9_A": {
+          "y_shk": 30,
+          "y_prev_shk": 20
+        }
+      }
+    },
+    "ssi": {
+      "rows": 35906,
+      "wells": [
+        "F-10",
+        "F-12",
+        "F-14",
+        "F-15A",
+        "F-15_S",
+        "F-5",
+        "F-7",
+        "F-9",
+        "F-9_A"
+      ],
+      "n_wells": 9,
+      "rows_per_well": {
+        "F-10": 7133,
+        "F-12": 4293,
+        "F-14": 5455,
+        "F-15A": 6020,
+        "F-15_S": 5342,
+        "F-5": 4714,
+        "F-7": 982,
+        "F-9": 1126,
+        "F-9_A": 841
+      },
+      "y_cols": [
+        "y_ssi",
+        "y_prev_ssi"
+      ],
+      "pos_per_well_per_label": {
+        "F-10": {
+          "y_ssi": 161,
+          "y_prev_ssi": 150
+        },
+        "F-12": {
+          "y_ssi": 83,
+          "y_prev_ssi": 46
+        },
+        "F-14": {
+          "y_ssi": 75,
+          "y_prev_ssi": 31
+        },
+        "F-15A": {
+          "y_ssi": 31,
+          "y_prev_ssi": 9
+        },
+        "F-15_S": {
+          "y_ssi": 85,
+          "y_prev_ssi": 13
+        },
+        "F-5": {
+          "y_ssi": 102,
+          "y_prev_ssi": 58
+        },
+        "F-7": {
+          "y_ssi": 3
+        },
+        "F-9": {
+          "y_prev_ssi": 12,
+          "y_ssi": 12
+        },
+        "F-9_A": {
+          "y_ssi": 55,
+          "y_prev_ssi": 33
+        }
+      }
+    },
+    "stuck_k1": {
+      "rows": 5555,
+      "wells": [
+        "F-14",
+        "F-9_A"
+      ],
+      "n_wells": 2,
+      "rows_per_well": {
+        "F-14": 3201,
+        "F-9_A": 2354
+      },
+      "y_cols": [
+        "y_stuck",
+        "y_prev_stuck"
+      ],
+      "pos_per_well_per_label": {
+        "F-14": {
+          "y_stuck": 432,
+          "y_prev_stuck": 451
+        },
+        "F-9_A": {
+          "y_stuck": 1575,
+          "y_prev_stuck": 1548
+        }
+      }
+    },
+    "stuck_k2": {
+      "rows": 118567,
+      "wells": [
+        "F-10",
+        "F-14",
+        "F-9",
+        "F-9_A"
+      ],
+      "n_wells": 4,
+      "rows_per_well": {
+        "F-10": 4216,
+        "F-14": 95925,
+        "F-9": 16184,
+        "F-9_A": 2242
+      },
+      "y_cols": [
+        "y_stuck_onset",
+        "y_prev_stuck_onset"
+      ],
+      "pos_per_well_per_label": {
+        "F-10": {
+          "y_stuck_onset": 772,
+          "y_prev_stuck_onset": 679
+        },
+        "F-14": {
+          "y_stuck_onset": 389,
+          "y_prev_stuck_onset": 328
+        },
+        "F-9": {
+          "y_stuck_onset": 311,
+          "y_prev_stuck_onset": 256
+        },
+        "F-9_A": {
+          "y_stuck_onset": 503,
+          "y_prev_stuck_onset": 431
+        }
+      }
+    },
+    "vib": {
+      "rows": 23922,
+      "wells": [
+        "F-14",
+        "F-15A",
+        "F-15_S",
+        "F-5"
+      ],
+      "n_wells": 4,
+      "rows_per_well": {
+        "F-14": 1989,
+        "F-15A": 6482,
+        "F-15_S": 10903,
+        "F-5": 4548
+      },
+      "y_cols": [
+        "y_vib",
+        "y_prev_vib"
+      ],
+      "pos_per_well_per_label": {
+        "F-14": {
+          "y_vib": 1124,
+          "y_prev_vib": 1142
+        },
+        "F-15A": {
+          "y_vib": 1543,
+          "y_prev_vib": 1569
+        },
+        "F-15_S": {
+          "y_vib": 1532,
+          "y_prev_vib": 1538
+        },
+        "F-5": {
+          "y_vib": 1230,
+          "y_prev_vib": 1250
+        }
+      }
+    }
+  },
+  "lib_versions": {
+    "numpy": "TIDAK TERPASANG (ModuleNotFoundError)",
+    "pandas": "TIDAK TERPASANG (ModuleNotFoundError)",
+    "sklearn": "TIDAK TERPASANG (ModuleNotFoundError)",
+    "scipy": "TIDAK TERPASANG (ModuleNotFoundError)",
+    "statsmodels": "TIDAK TERPASANG (ModuleNotFoundError)",
+    "lightgbm": "TIDAK TERPASANG (ModuleNotFoundError)",
+    "xgboost": "TIDAK TERPASANG (ModuleNotFoundError)",
+    "catboost": "TIDAK TERPASANG (ModuleNotFoundError)",
+    "pyarrow": "TIDAK TERPASANG (ModuleNotFoundError)",
+    "python": "3.14.9"
+  }
+}

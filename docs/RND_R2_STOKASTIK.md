@@ -1,4 +1,4 @@
-# RND-R2: STOKASTIK + SURVIVAL UNTUK 7 ENGINE
+# RND-R2: STOKASTIK + SURVIVAL UNTUK 7 mode
 ## Markov chain, HMM, Monte Carlo, MCMC, Bayesian network, Cox, Random Survival Forest, DeepHit
 
 Kartu: `t_c24b3640` · Board: `rnd-algo-2026` · Tanggal: 2026-10-27 (WIB)

@@ -1,0 +1,282 @@
+[
+ {
+  "kartu": "S1",
+  "klaim": "FP total H1 seed 42 = 935",
+  "berkas": "s1_hyd_seeds.json",
+  "jalur": "per_seed|42|ringkas|fp_total",
+  "nilai_json": 935
+ },
+ {
+  "kartu": "S1",
+  "klaim": "TP total = 3804",
+  "berkas": "s1_hyd_seeds.json",
+  "jalur": "per_seed|42|ringkas|tp_total",
+  "nilai_json": 3804
+ },
+ {
+  "kartu": "S1",
+  "klaim": "presisi median = 0,7789",
+  "berkas": "s1_hyd_seeds.json",
+  "jalur": "per_seed|42|ringkas|precision_median",
+  "nilai_json": 0.7789
+ },
+ {
+  "kartu": "S1",
+  "klaim": "recall median = 0,5638",
+  "berkas": "s1_hyd_seeds.json",
+  "jalur": "per_seed|42|ringkas|recall_median",
+  "nilai_json": 0.5638
+ },
+ {
+  "kartu": "S1",
+  "klaim": "FAR24 kalender median = 3,5302",
+  "berkas": "s1_hyd_seeds.json",
+  "jalur": "per_seed|42|ringkas|far24_kalender_median",
+  "nilai_json": 3.5302
+ },
+ {
+  "kartu": "S1",
+  "klaim": "lead median = 11,5 menit",
+  "berkas": "s1_hyd_seeds.json",
+  "jalur": "per_seed|42|ringkas|lead_median_median",
+  "nilai_json": "ERROR ValueError"
+ },
+ {
+  "kartu": "S1",
+  "klaim": "onset total = 390",
+  "berkas": "s1_hyd_seeds.json",
+  "jalur": "per_seed|42|ringkas|n_onset",
+  "nilai_json": 390
+ },
+ {
+  "kartu": "S1",
+  "klaim": "diperingatkan = 219",
+  "berkas": "s1_hyd_seeds.json",
+  "jalur": "per_seed|42|ringkas|n_diperingatkan",
+  "nilai_json": 219
+ },
+ {
+  "kartu": "S1",
+  "klaim": "fold FAR<=6 kalender = 7 dari 9",
+  "berkas": "s1_hyd_seeds.json",
+  "jalur": "per_seed|42|ringkas|fold_far_le6",
+  "nilai_json": "ERROR ValueError"
+ },
+ {
+  "kartu": "S1",
+  "klaim": "fold gate A baru = 0 dari 9",
+  "berkas": "s1_hyd_seeds.json",
+  "jalur": "per_seed|42|ringkas|fold_gate_A_baru",
+  "nilai_json": "ERROR ValueError"
+ },
+ {
+  "kartu": "S1",
+  "klaim": "cakupan median = 0,0903",
+  "berkas": "s1_hyd_seeds.json",
+  "jalur": "per_seed|42|ringkas|cakupan_median",
+  "nilai_json": 0.0903
+ },
+ {
+  "kartu": "S1",
+  "klaim": "grid luas: FP total = 237",
+  "berkas": "s1_hluas.json",
+  "jalur": "ringkas|fp_total",
+  "nilai_json": 237
+ },
+ {
+  "kartu": "S1",
+  "klaim": "grid luas: recall median = 0,1457",
+  "berkas": "s1_hluas.json",
+  "jalur": "ringkas|recall_median",
+  "nilai_json": 0.1457
+ },
+ {
+  "kartu": "S1",
+  "klaim": "grid luas: fold lolos anggaran = 9",
+  "berkas": "s1_hluas.json",
+  "jalur": "n_lolos_anggaran",
+  "nilai_json": 9
+ },
+ {
+  "kartu": "S1",
+  "klaim": "saturasi h maks = 30 pada 9 fold",
+  "berkas": "s1_h_saturasi.json",
+  "jalur": "n_saturasi",
+  "nilai_json": "ERROR ValueError"
+ },
+ {
+  "kartu": "S1",
+  "klaim": "kontrol ML FP rentang 345 (1421-1076)",
+  "berkas": "s1_hyd_seeds.json",
+  "jalur": "kontrol_stokastik|sebaran|fp_total|rentang",
+  "nilai_json": "ERROR KeyError"
+ },
+ {
+  "kartu": "S2",
+  "klaim": "vib n baris = 23922",
+  "berkas": "s2_ringkas.json",
+  "jalur": "vib|n_baris",
+  "nilai_json": 23922
+ },
+ {
+  "kartu": "S2",
+  "klaim": "vib positif dapat diuji = 5429",
+  "berkas": "s2_ringkas.json",
+  "jalur": "vib|n_pos_total_dapat_diuji",
+  "nilai_json": 5429
+ },
+ {
+  "kartu": "S2",
+  "klaim": "ssi n baris",
+  "berkas": "s2_ringkas.json",
+  "jalur": "ssi|n_baris",
+  "nilai_json": 35906
+ },
+ {
+  "kartu": "S2",
+  "klaim": "ssi positif dapat diuji = 592",
+  "berkas": "s2_ringkas.json",
+  "jalur": "ssi|n_pos_total_dapat_diuji",
+  "nilai_json": 592
+ },
+ {
+  "kartu": "S2",
+  "klaim": "ssi fold tidak dapat diuji = 2",
+  "berkas": "s2_ringkas.json",
+  "jalur": "ssi|n_fold_tidak_dapat_diuji",
+  "nilai_json": 2
+ },
+ {
+  "kartu": "S2",
+  "klaim": "persistence FAR24 kalender median = 22,0218",
+  "berkas": "s2_ringkas.json",
+  "jalur": "vib|agregat|persistence|far24_kalender_median",
+  "nilai_json": 22.0218
+ },
+ {
+  "kartu": "S2",
+  "klaim": "persistence recall median = 0,7405",
+  "berkas": "s2_ringkas.json",
+  "jalur": "vib|agregat|persistence|recall_median",
+  "nilai_json": 0.740465
+ },
+ {
+  "kartu": "S3",
+  "klaim": "USROP baris = 198928",
+  "berkas": "s3a_feasibility.json",
+  "jalur": "inventaris|baris",
+  "nilai_json": 198928
+ },
+ {
+  "kartu": "S3",
+  "klaim": "positif = 49732",
+  "berkas": "s3a_feasibility.json",
+  "jalur": "label|n_pos",
+  "nilai_json": 49732
+ },
+ {
+  "kartu": "S3",
+  "klaim": "well = 7",
+  "berkas": "s3a_feasibility.json",
+  "jalur": "label|n_well",
+  "nilai_json": 7
+ },
+ {
+  "kartu": "S3",
+  "klaim": "well tanpa positif = 2",
+  "berkas": "s3a_feasibility.json",
+  "jalur": "label|n_well_tanpa_positif",
+  "nilai_json": 2
+ },
+ {
+  "kartu": "S3",
+  "klaim": "indeks duplikat = 145887",
+  "berkas": "s3a_feasibility.json",
+  "jalur": "identitas|indeks_duplikat",
+  "nilai_json": 145887
+ },
+ {
+  "kartu": "S3",
+  "klaim": "ML fisik presisi median = 0,6496",
+  "berkas": "s3c_ringkas.json",
+  "jalur": "agregat|ml_fisik|precision_median",
+  "nilai_json": 0.6496
+ },
+ {
+  "kartu": "S3",
+  "klaim": "ML fisik recall median = 0,9968",
+  "berkas": "s3c_ringkas.json",
+  "jalur": "agregat|ml_fisik|recall_median",
+  "nilai_json": 0.9968
+ },
+ {
+  "kartu": "S3",
+  "klaim": "ML fisik FAR24 = 110,432",
+  "berkas": "s3c_ringkas.json",
+  "jalur": "agregat|ml_fisik|far24_median_valid",
+  "nilai_json": 110.432
+ },
+ {
+  "kartu": "S4",
+  "klaim": "activity record DDR = 23447",
+  "berkas": "ddr_activity_stats.json",
+  "jalur": "activity|n_record",
+  "nilai_json": 23447
+ },
+ {
+  "kartu": "S4",
+  "klaim": "kode kerja unik = 64",
+  "berkas": "ddr_activity_stats.json",
+  "jalur": "activity|n_kode_unik",
+  "nilai_json": 64
+ },
+ {
+  "kartu": "S4",
+  "klaim": "laporan DDR = 1759",
+  "berkas": "ddr_activity_stats.json",
+  "jalur": "laporan|n_baris",
+  "nilai_json": 1759
+ },
+ {
+  "kartu": "S4",
+  "klaim": "record downtime = 533",
+  "berkas": "ddr_downtime_table.json",
+  "jalur": "record|n_record",
+  "nilai_json": 533
+ },
+ {
+  "kartu": "S4",
+  "klaim": "laporan memuat tabel = 325",
+  "berkas": "ddr_downtime_table.json",
+  "jalur": "tabel|n_file_memuat_tabel",
+  "nilai_json": 325
+ },
+ {
+  "kartu": "S4",
+  "klaim": "downtime nol = 533",
+  "berkas": "ddr_downtime_table.json",
+  "jalur": "record|n_downtime_nol",
+  "nilai_json": 533
+ },
+ {
+  "kartu": "S4",
+  "klaim": "label kejadian = 884",
+  "berkas": "labels_duration.json",
+  "jalur": "n_baris",
+  "nilai_json": 884
+ },
+ {
+  "kartu": "S4",
+  "klaim": "total jam label = 1225,0",
+  "berkas": "labels_duration.json",
+  "jalur": "durasi_jam|sum",
+  "nilai_json": 1225.0
+ },
+ {
+  "kartu": "S4",
+  "klaim": "kolom labels = 20",
+  "berkas": "labels_duration.json",
+  "jalur": "sumber|kolom",
+  "nilai_json": 20
+ }
+]
