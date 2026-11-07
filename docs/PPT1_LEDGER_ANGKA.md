@@ -168,6 +168,19 @@ Sumber utama: `docs/evidence/h2o_kontrol.json`, `docs/evidence/baseline_only.jso
 | E07 | Tahap A gagal, B gagal, C berhasil (pr_auc 0,08) | Uji sebab-akibat kegagalan DeepLearning | scratch/uji_dl_sebab.py, scratch/uji_dl_c.py, docs/evidence/dl_klipp99.json | TERUKUR | DIHITUNG-ULANG | jalankan ketiga skrip dengan cluster H2O aktif | Clip p99 per kolom membuat DL konvergen; tanpa itu selalu gagal |
 | E08 | 0 dari 7 run menghasilkan model DeepLearning | Keluarga DL tidak pernah masuk leaderboard | docs/evidence/h2o_kontrol.json (leaderboard tiap sumur) | TERUKUR | DIHITUNG-ULANG | cari awalan `DeepLearning` pada seluruh `leaderboard[].model` | Keluarga DL tidak dapat dipakai pada data mentah |
 
+### 2.F Angka kombinasi kandidat AutoML (7 Nov 2026)
+
+Sumber utama: `docs/evidence/pred/ensemble_hasil.json` dan prediksi mentah `docs/evidence/pred/<sumur>.npz`. Naskah: bagian 6 `docs/PPT1_ABLAT_AUTOML.md`.
+
+| ID | Angka | Konteks | Sumber | Status | Sub | Cara verifikasi | Temuan |
+|---|---|---|---|---|---|---|---|
+| F01 | Median seluruh kandidat 0,1525 lawan RF 0,1392 (+9,6% relatif) | Rata-rata AUPRC 7 sumur, jalur adil (pemilihan hanya dari AUCPR CV internal) | docs/evidence/pred/ensemble_hasil.json bagian `rerata_adil` | TERUKUR | DIHITUNG-ULANG | jalankan `h2o_ensemble_analisis.py` pada npz | Gabungan median mengalahkan RF tuned |
+| F02 | 0,1524 median top-10; 0,1519 rank-average top-5; 0,1472 rata-rata top-10 | Strategi gabungan lain pada jalur yang sama | idem F01 | TERUKUR | DIHITUNG-ULANG | idem F01 | Median dan rank-average hampir seri, keduanya di atas rata-rata biasa |
+| F03 | Leader tunggal 0,1325 (di bawah RF 0,1392) | Kandidat teratas versi AUCPR CV internal | idem F01 kolom `leader_cv` | TERUKUR | DIHITUNG-ULANG | idem F01 | Kegagalan AutoML ada pada pemilihan pemenang, bukan pada kandidatnya |
+| F04 | Menang 5 dari 7 sumur; selisih terburuk −0,0029; terbaik +0,0800 (F-15A) | Median kandidat lawan RF per sumur | idem F01 bagian `per_sumur` | TERUKUR | DIHITUNG-ULANG | bandingkan kolom `median_top20` dan `rf_baseline` | Risiko salah pilih model hilang; leader tunggal bisa jatuh −0,0360 |
+| F05 | 0,1681 (greedy uji) dan 0,1605 (kandidat terbaik per sumur) | Batas atas bila seleksi boleh melihat sumur uji, bukan hasil yang diklaim | idem F01 bagian `rerata_oracle` | TERUKUR | DIHITUNG-ULANG | idem F01 | Sisa ruang perbaikan hanya 0,0156 di atas median adil |
+| F06 | 9 sampai 12 kandidat per sumur | Jumlah model yang sempat dibangun AutoML dalam 600 detik | idem F01 bagian `n_kandidat` | TERUKUR | DIHITUNG-ULANG | kolom `n_kandidat` per sumur | Klaim "kombinasi 100 model" tidak berlaku; yang digabung 9 sampai 12 model |
+
 ## 3. Fokus khusus yang diminta kartu
 
 ### 3.1 FMEA S/O/D/RPN
@@ -238,7 +251,7 @@ Aturan yang mengikat setiap penulisan angka di proposal PPT I:
 - EDM 10.650 `CD_ASSEMBLY_COMP` dan 632 `CD_BHA_COMP_BIT`: belum dihitung ulang.
 - Himpunan angka B3 (lapisan B) dan 402 titik uji: dilaporkan MD, belum saya reproduksi dari JSON.
 - Angka verdict berupa penilaian skenario (55%, 15%) adalah judgement internal, bukan probabilitas terukur.
-- Kombinasi antar kandidat AutoML (rata-rata probabilitas, rank-average, StackedEnsemble) belum diuji pada run ini karena prediksi kandidat non-leader tidak tersimpan; mengujinya butuh run baru yang menyimpan prediksi seluruh kandidat (lihat bagian 9 `docs/PPT1_ABLAT_AUTOML.md`).
+- Stacking berbobot hasil pembelajaran belum diuji; `StackedEnsemble` tidak terbentuk pada AutoML ber-`fold_column`, dan prediksi out-of-fold tingkat fold belum disimpan. Yang sudah diuji: median, rata-rata, rank-average, Borda, dan pembobotan AUCPR CV (F01 sampai F05).
 - Anggaran AutoML lebih panjang dari 600 detik (misalnya 1.800 detik) belum diuji; yang terukur baru 400 dan 600 detik.
 - Korelasi Spearman E04 hanya bertumpu pada 7 titik, jadi arah negatifnya konsisten pada seluruh pasangan, tetapi sebagai estimasi ia lemah.
 
@@ -253,4 +266,6 @@ Aturan yang mengikat setiap penulisan angka di proposal PPT I:
 - `docs/evidence/h2o_kontrol.json` (hasil AutoML 7 sumur: leaderboard internal, prediksi leader, metrik uji, setelan).
 - `docs/evidence/baseline_only.json` (RF, reglog, mayoritas per sumur pada skema leave-one-well-out).
 - `docs/evidence/dl_klipp99.json` (uji C: DeepLearning konvergen setelah clip p99).
-- `docs/PPT1_ABLAT_AUTOML.md` (naskah temuan E01 sampai E08 beserta perintah reproduksi).
+- `docs/PPT1_ABLAT_AUTOML.md` (naskah temuan E01 sampai E08 dan T4 beserta perintah reproduksi).
+- `docs/evidence/pred/ensemble_hasil.json` (hasil seluruh strategi kombinasi, adil dan oracle).
+- `docs/evidence/pred/<sumur>.npz` (skor mentah setiap kandidat AutoML per sumur, 9 sampai 12 kandidat, plus AUCPR CV internal).

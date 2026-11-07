@@ -93,7 +93,48 @@ Jadi model pohon (GBM, XGBoost, DRF, XRT) kebal karena split berbasis peringkat,
 
 Artefak: `docs/evidence/dl_klipp99.json`.
 
-## 6. Perbandingan dengan kombinasi algoritma per engine sebelumnya
+## 6. Temuan T4: menggabungkan kandidat AutoML mengalahkan RF, sedangkan leader tunggal tidak
+
+Temuan T1 dan T2 hanya menguji leader tunggal. Pertanyaan lanjutannya: kalau seluruh kandidat digabung, apakah hasilnya membaik. Untuk itu dijalankan ulang AutoML dengan setelan identik (600 detik, 100 model, `fold_column=wellbore`, seed 42), tetapi skor prediksi **setiap** kandidat disimpan pada sumur uji, bukan hanya leader. Jumlah kandidat yang dihasilkan per sumur 9 sampai 12.
+
+Dua jalur dipisahkan tegas. Jalur **adil**: urutan dan bobot kandidat hanya memakai AUCPR CV internal, sehingga informasi sumur uji tidak pernah masuk ke proses pemilihan. Jalur **oracle**: pemilihan memakai AUPRC sumur uji, hanya dicatat sebagai batas atas yang tidak boleh diklaim sebagai hasil.
+
+**Rata-rata AUPRC di 7 sumur, jalur adil:**
+
+| Strategi kombinasi | Rata-rata AUPRC | Selisih terhadap RF |
+|---|---|---|
+| Median seluruh kandidat (top-20) | **0,1525** | +0,0133 |
+| Median top-10 | 0,1524 | +0,0132 |
+| Rank-average top-5 | 0,1519 | +0,0127 |
+| Rata-rata top-10 | 0,1472 | +0,0080 |
+| Rata-rata seluruh kandidat | 0,1470 | +0,0078 |
+| Borda seluruh kandidat | 0,1454 | +0,0062 |
+| **RF tuned (baseline)** | **0,1392** | 0 |
+| Leader tunggal (pilihan CV) | 0,1325 | −0,0067 |
+| Regresi logistik | 0,1061 | −0,0331 |
+| Lantai mayoritas | 0,0579 | −0,0813 |
+
+Jadi leader tunggal memang kalah dari RF (sesuai T1), tetapi **median dari seluruh kandidat menang dengan selisih +0,0133 AUPRC, atau 9,6 persen relatif**. Rata-rata peringkat (rank-average) dan median memberi hasil hampir sama, dan keduanya mengungguli rata-rata biasa, karena rata-rata mudah ditarik satu model yang terlalu percaya diri.
+
+**Per sumur (median seluruh kandidat lawan RF):**
+
+| Sumur | Median kandidat | RF | Selisih |
+|---|---|---|---|
+| F-14 | 0,0986 | 0,1008 | −0,0022 |
+| F-15A | 0,1748 | 0,0948 | **+0,0800** |
+| F-15_S | 0,1081 | 0,1063 | +0,0018 |
+| F-5 | 0,0341 | 0,0325 | +0,0016 |
+| F-7 | 0,1009 | 0,0884 | +0,0125 |
+| F-9 | 0,4700 | 0,4729 | −0,0029 |
+| F-9_A | 0,0808 | 0,0785 | +0,0023 |
+
+Menang di 5 dari 7 sumur. Yang penting, sifat kesalahannya berbeda: leader tunggal bisa jatuh sampai −0,0360 pada satu sumur, sedangkan median kandidat paling buruk hanya −0,0029. Kombinasi tidak menaikkan semua sumur, tetapi **menghapus risiko salah pilih model** yang menjadi penyakit utama AutoML di data ini. Lonjakan terbesar ada di F-15A (+84 persen relatif), sumur dengan prevalensi terendah (24 positif dari 476 baris), tempat model tunggal paling rapuh.
+
+**Batas atas (oracle, bukan hasil):** pemilihan greedy yang boleh melihat sumur uji mencapai 0,1681, dan kandidat tunggal terbaik per sumur 0,1605. Artinya masih ada ruang 0,0156 di atas median adil bila seleksi bisa disempurnakan, tetapi ruang itu kecil dibanding jarak ke RF dan tidak dapat diambil tanpa informasi sumur uji.
+
+**Kesimpulan operasional:** yang layak dipakai dari AutoML bukan leadernya, melainkan gabungan median seluruh kandidatnya. Ini juga menjelaskan mengapa menambah anggaran tidak menolong pada T1: masalahnya bukan jumlah model, melainkan pemilihan satu pemenang di antara kandidat yang selisihnya di bawah noise.
+
+## 7. Perbandingan dengan kombinasi algoritma per engine sebelumnya
 
 Perbandingan ini **kualitatif, bukan angka mentah**, karena unitnya berbeda: engine lama memakai jendela 1 menit dengan label per engine, sedangkan eksperimen ini memakai per kejadian dengan label bukti kegagalan.
 
@@ -108,14 +149,14 @@ Perbandingan ini **kualitatif, bukan angka mentah**, karena unitnya berbeda: eng
 
 Pola yang sama muncul dua kali dan dua kali independen: pada label langka, head ML berhenti di kelas ranking, sedangkan aturan terkalibrasi per unit yang memberi presisi berguna. Eksperimen ini menambah satu bukti baru: **engine pencarian otomatis dengan anggaran komputasi maksimal pun tidak menyalip RF tuned pada skema LOO yang sama.**
 
-## 7. Implikasi untuk pemilihan algoritma di Bab III
+## 8. Implikasi untuk pemilihan algoritma di Bab III
 
 1. Pemilihan RF tuned sebagai engine utama berstatus **teruji**, bukan preferensi: sudah diadu lawan pencarian otomatis 18 core dan kalah tipis 5 dari 7 sumur.
 2. Rule + persistence + kalibrasi per unit tetap arsitektur yang dipakai pada engine yang labelnya tersedia; AutoML tidak menggantikannya.
 3. Data defect SPPA (5 sel sampai 9,524e+30) masuk daftar perbaikan data: tanpa clip atau drop kolom turunan SPPA, seluruh keluarga model linear dan jaringan saraf tidak dapat dipakai pada dataset ini.
 4. Pernyataan "AutoML lebih baik" dilarang pada Bab IV tanpa skema seleksi yang netral prevalensi; angka yang ada justru mendukung sebaliknya.
 
-## 8. Jejak reproduksi
+## 9. Jejak reproduksi
 
 | Berkas | Isi |
 |---|---|
@@ -135,8 +176,13 @@ Perintah ulang (dengan JAVA_HOME dan cluster H2O berjalan di port 54322):
 ~/.venvs/h2o/bin/python scratch/uji_dl_c.py       # tahap C
 ```
 
-## 9. Yang belum dicek
+## 10. Yang belum dicek
 
-- Belum ada pengujian kombinasi kandidat (ensemble rata-rata probabilitas atau rank-average) pada run ini; leaderboard yang disimpan hanya 5 baris teratas per sumur, sehingga prediksi kandidat non-leader tidak tersimpan. Untuk mengujinya perlu run baru yang menyimpan prediksi seluruh kandidat.
-- Belum diuji apakah `max_runtime_secs` lebih panjang (misalnya 1.800 detik) mengubah hasil; yang terukur baru 400 dan 600 detik.
+- Kombinasi kandidat sudah diuji penuh pada 7 sumur (Temuan T4). Yang belum diuji: bobot hasil pembelajaran (stacking dengan model meta), karena `StackedEnsemble` tidak terbentuk pada AutoML ber-`fold_column`, dan pemilihan subset memakai prediksi out-of-fold tingkat fold (yang tersimpan baru AUCPR CV agregat per kandidat).
+- Belum diuji apakah `max_runtime_secs` lebih panjang (misalnya 1.800 detik) mengubah hasil; yang terukur baru 400, 600, dan 900 detik (900 detik untuk F-9_A saat run pertama kandas).
+
+## 4b. Cara membaca angka kombinasi
+
+- Angka "median seluruh kandidat" dihitung dari 9 sampai 12 kandidat per sumur, jadi bukan gabungan 100 model; AutoML hanya sempat membangun sebanyak itu dalam 600 detik pada 18 core.
+- Tabel "strategi terbaik per sumur" tidak boleh dirata-ratakan sebagai klaim; memilih strategi berdasarkan hasil sumur uji itu sendiri adalah kebocoran. Yang sah diklaim adalah rata-rata satu strategi tetap di seluruh sumur, seperti pada tabel T4.
 - Korelasi Spearman dihitung pada 7 titik, sehingga sebagai estimasi ia lemah; yang kuat adalah arahnya yang negatif pada ketujuh sumur secara berpasangan.
