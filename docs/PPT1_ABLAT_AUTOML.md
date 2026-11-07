@@ -2,9 +2,6 @@
 
 Tanggal: 6 November 2026. Ruang kerja: `/mnt/d/ARCT-9F2`. Status: **TERUKUR** (seluruh angka berasal dari JSON hasil eksekusi, bukan klaim).
 
-Riset pendahuluan: `verification-mandatory` (setiap angka punya jejak berkas dan perintah yang bisa dijalankan ulang).
-Riset pendahuluan: `sequentialthinking` (sequ-mcp, 3 pikiran): pertama memisahkan klaim dari bukti mentah, kedua menguji hipotesis alternatif (salah ukur metrik, salah pemilihan model, salah jumlah fitur), ketiga menyimpulkan hanya pada bagian yang lolos uji.
-
 **Pertanyaan yang dijawab dokumen ini:** apakah detektor pencarian hyperparameter otomatis (H2O AutoML) mengalahkan Random Forest tuned pada data kejadian pengeboran, dan bila tidak, mengapa.
 
 **Bukan untuk menjawab:** rumusan masalah proposal. Dokumen ini bahan pendukung pemilihan algoritma di Bab III, bukan kesimpulan.

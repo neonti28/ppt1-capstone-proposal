@@ -6,12 +6,6 @@
 
 ---
 
-## 0. Riset pendahuluan yang dipakai
-
-- **Riset pendahuluan: riset-dulu-baru-perbaiki**: urutan wajib masalah, riset, tulis opsi dan bukti, baru perbaiki; gate tidak boleh berubah setelah hasil terlihat.
-- **Riset pendahuluan: scientific-critical-thinking**: pisahkan data dari interpretasi, korelasi dari kausalitas, dan nyatakan kekuatan klaim sebanding dengan kekuatan bukti; kegagalan satu hipotesis bukan bukti hipotesis lain benar.
-- **Riset pendahuluan: hypothesis-generation**: objek harus tetap terpisah: observasi, hipotesis, mekanisme, prediksi, penjelasan rival; hipotesis adalah usulan yang harus ditantang, bukan temuan. Setiap hipotesis di dokumen ini diberi prediksi pembeda agar dapat difalsifikasi.
-
 ---
 
 ## 1. Batas masalah dan definisi status

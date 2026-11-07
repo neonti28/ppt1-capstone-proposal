@@ -1,16 +1,8 @@
 # BAB III ANALISIS ALTERNATIF SOLUSI
 
-- Acuan format: Buku Pedoman PPT Tahap I subbab 3.2 Format Proposal, halaman 33 sampai 36
-
 ## Subbab 3.4 Pemilihan Alternatif Solusi dengan MCDM
 
 ### 3.4.1 Dasar perhitungan dan aturan bukti
-
-Riset pendahuluan: `statistical-analysis` - disiplin uji sensitivitas dan larangan menyajikan angka tanpa ketidakpastian. Poin yang dipakai: analisis sensitivitas dipakai untuk menguji apakah kesimpulan bergantung pada asumsi bobot, dan seluruh hitungan disimpan pada skrip yang dapat dijalankan ulang. Dua butir panduan yang relevan adalah "A non-significant result is not evidence of no effect" dan "Make it reproducible"; keduanya diterapkan sebagai kewajiban sembilan skenario dan skrip reproduksi.
-
-Riset pendahuluan: `grounded-citations` - setiap klaim dari sumber luar memakai penanda dan daftar sumber yang dihasilkan mesin, bukan diketik dari ingatan. Poin yang dipakai: DOI ketiga sumber metode diperiksa lewat pencarian web pada 25 Oktober 2026 sebelum ditulis, sedangkan rujukan internal tetap memakai bentuk berkas dan nomor baris.
-
-Riset pendahuluan: `sequentialthinking` (sequ-mcp, enam pikiran) - menetapkan urutan kerja: verifikasi sumber sebelum memakai hasil lama, penolakan AHP karena tidak ada pakar, pemilihan TOPSIS dengan SAW sebagai pembanding, penanganan dua kolom tanpa variasi, penyelesaian pertentangan C8 terhadap subbab 3.3.6 butir 8, dan penetapan batas klaim sebelum menulis.
 
 Aturan bukti yang dipakai pada subbab ini:
 

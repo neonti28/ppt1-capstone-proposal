@@ -2,22 +2,13 @@
 
 ## 3.1 Permasalahan & Alternatif Solusi
 
-- Acuan format: Buku Pedoman PPT Tahap I, subbab 3.2 Format Proposal, halaman 33 sampai 36
 - Acuan BoK: Buku Pedoman PPT Tahap I Tabel 2.1, empat belas IEBoK, selaras IISE ISEBoK 2021
 
-
 ### 3.1.1 Dasar penyusunan dan aturan bukti
-
-Riset pendahuluan: `grounded-citations` - setiap angka pada subbab ini melekat pada sumber yang sudah diekstrak, dan blok bukti memuat kunci jejak berupa berkas dan nomor baris, bukan ingatan.
-
-Riset pendahuluan: `formal-project-documents` - register formal baku tanpa penanda status dalam tanda kurung, tanpa emoji, dan setiap konsep teknis dituliskan sebagai definisi, tujuan, alasan pemilihan, serta batasnya.
-
-Riset pendahuluan: `sequentialthinking` (sequ-mcp, empat pikiran) - inventaris dua puluh dua sumber, uji tiga skema pembagian anggota, verifikasi status eksekusi per solusi, lalu penetapan pembagian berbasis lapisan intervensi (data dan label, formulasi model, sinyal fisik dan operasi).
 
 Sembilan alternatif pada subbab ini disusun dari inventaris solusi yang sudah berkode di dalam proyek, yaitu tiga belas solusi S-A1 sampai S-D4 beserta empat solusi pendukung pada bagian kelas rapuh (S-E1, S-E2, S-F1, S-F2), tiga opsi peningkatan pada dokumen opsi ML, dan dua lever pasca-V9 (6a perbaikan label, 6b kalibrasi ambang per sumur). Seluruh dua puluh dua sumber dipetakan tepat satu kali ke sembilan alternatif, sehingga tidak ada alternatif yang menduplikasi mekanisme alternatif lain, dan tidak ada sumber yang hilang tanpa rumah.
 
 Angka pada seluruh subbab dihitung ulang dari data primer atau berkas hasil eksekusi; angka yang belum terukur disertai isi asumsinya, dasar, alasan dipilih, dan cara mengujinya, dan tidak disamarkan menjadi hasil pengukuran.
-
 
 ### 3.1.2 Kondisi pengikat dan celah teknis yang dirujuk
 

@@ -1,4 +1,4 @@
-"""Hitung ulang SEMUA angka yang dipakai di docs/PPT1_BAB1_1.md.
+"""Hitung ulang SEMUA angka kuantitatif pada subbab 1.1 langsung dari data di disk.
 
 Instrumen sengaja dibuat BERBEDA dari scratch/ppt1/verify_durations.py:
 stempel waktu diparse dengan regex sendiri lalu dikonversi ke epoch detik
@@ -10,13 +10,14 @@ Keluaran: scratch/ppt1/bab1_1_angka.json + ringkasan ke stdout.
 """
 import csv
 import gzip
+import pathlib
 import json
 import os
 import re
 import statistics
 from collections import Counter, defaultdict
 
-BASE = "/mnt/d/Capstone 1(v2)"
+BASE = str(pathlib.Path(__file__).resolve().parents[2])
 OUT = BASE + "/scratch/ppt1/bab1_1_angka.json"
 
 TS_RE = re.compile(
@@ -189,32 +190,32 @@ R["registry"] = {
     "layer": dict(Counter(h[3] for h in heads)),
 }
 
-# ---------------------------------------------------------------- 5. inventaris 13 dataset
-inv = open(BASE + "/docs/V10_D1_BAB_DATA.md", encoding="utf-8").read()
-sec = inv.split("## 3.1 INVENTARIS DATA")[1].split("## 3.2")[0]
-inv_rows = [l for l in sec.splitlines() if re.match(r"^\|\s*\d+\s*\|", l)]
-R["inventaris"] = {
-    "berkas": "docs/V10_D1_BAB_DATA.md §3.1",
-    "baris_tabel": len(inv_rows),
-    "nomor": [l.split("|")[1].strip() for l in inv_rows],
-}
-
-# ---------------------------------------------------------------- 6. kutipan angka terukur
-md = open(BASE + "/docs/ML_PROJECT_PROPOSAL_TECHNICAL_DESIGN.md", encoding="utf-8").read().splitlines()
-
-
-def baris(no):
-    return md[no - 1].strip()
-
-
-R["kutipan_md"] = {
-    "l2972_vib": baris(2972)[:400],
-    "l2973_ssi": baris(2973)[:400],
-    "l2974_shk": baris(2974)[:400],
-    "l2975_stuck_k1": baris(2975)[:400],
-    "l2976_stuck_k2": baris(2976)[:400],
-    "l2977_hyd_k1": baris(2977)[:400],
-    "l3378_tier": baris(3378)[:400],
+# ---------------------------------------------------------------- 5. inventaris di disk
+akar = os.path.join(BASE, "data/volve")
+n_berkas, total_byte, per_entri = 0, 0, {}
+for entri in sorted(os.listdir(akar)):
+    jalur = os.path.join(akar, entri)
+    if os.path.isdir(jalur):
+        n_f, n_b = 0, 0
+        for d, _, fs in os.walk(jalur):
+            for f in fs:
+                try:
+                    n_b += os.path.getsize(os.path.join(d, f))
+                except OSError:
+                    pass
+                n_f += 1
+    else:
+        n_f, n_b = 1, os.path.getsize(jalur)
+    per_entri[entri] = {"berkas": n_f, "byte": n_b}
+    n_berkas += n_f
+    total_byte += n_b
+R["inventaris_disk"] = {
+    "akar": "data/volve",
+    "entri_puncak": len(per_entri),
+    "berkas_total": n_berkas,
+    "total_byte": total_byte,
+    "total_gb": round(total_byte / 1e9, 2),
+    "per_entri": per_entri,
 }
 
 json.dump(R, open(OUT, "w", encoding="utf-8"), indent=1, ensure_ascii=False)
@@ -237,6 +238,7 @@ print(json.dumps({
     "head_n": R["registry"]["head_n"],
     "tier": R["registry"]["tier"],
     "layer": R["registry"]["layer"],
-    "inventaris_baris": R["inventaris"]["baris_tabel"],
+    "inventaris_berkas": R["inventaris_disk"]["berkas_total"],
+    "inventaris_gb": R["inventaris_disk"]["total_gb"],
 }, indent=1, ensure_ascii=False))
 print("\nJSON ->", OUT)

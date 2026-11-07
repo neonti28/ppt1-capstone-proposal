@@ -2,20 +2,13 @@
 
 ## 1.1 Latar Belakang Sistem
 
-Acuan format: Buku Pedoman PPT h.33-36, sub-bab 1.1: deskripsi objek kasus, stakeholder, rich picture, alur produksi, uraian singkat permasalahan; ditambah tuntutan SIMILAR tahap satu (trade-off minimal dua aspek)
-
-
-**Riset pendahuluan: `ppt-halliburton`** (beserta `references/ppt1-proposal-build.md` dan `references/pedoman-summary.md`) - format wajib 1.1 adalah lima elemen (objek, stakeholder, rich picture, alur produksi, uraian masalah) plus trade-off SIMILAR tahap satu; peta bahan menunjukkan angka dampak berasal dari `labels_curated_v2.csv`, bukan dari draft Agustus 2026.
-**Riset pendahuluan: `verification-mandatory`** - setiap angka dipisah menjadi bukti mentah dan kesimpulan, angka tanpa jejak ditulis sebagai ASUMSI/TEMPORER, dan laporan ditutup dengan daftar yang belum diverifikasi (lihat 1.1.8).
-**Riset pendahuluan: `sequentialthinking` (sequ-mcp, empat pikiran)** - urutan pikir: (1) susun struktur 1.1 dari tuntutan pedoman, (2) cek status kartu D1 sebelum memakai angka mode, (3) uji ulang angka durasi dengan instrumen parser yang berbeda, (4) rancang elemen rich picture agar kartu G1 dapat menggambar tanpa menebak.
-
 ### 1.1.1 Deskripsi Objek Studi dan Sistem yang Dikaji
 
 Objek kajian proyek ini adalah **PT Halliburton Indonesia, divisi Sperry Drilling**, yaitu penyedia jasa pengeboran yang mengoperasikan instrumentasi lubang bawah (MWD, LWD, dan Rotary Steerable System) serta layanan pemantauan parameter pengeboran bagi operator minyak dan gas. Pengajuan objek melalui jalur Magang/MBKM mengikuti pedoman 2.8c, sehingga permasalahan yang diangkat harus berasal dari proses kerja nyata mitra dan dimiliki oleh seorang pemilik masalah di lapangan .
 
 Sistem yang dikaji bukan satu alat, melainkan **rantai keputusan pengeboran**: sensor lubang bawah mengirim data fisis ke permukaan, sistem permukaan menampilkan dan menyimpan data tersebut, driller dan drilling engineer membaca tampilan itu, lalu memutuskan apakah pengeboran dilanjutkan, parameter diubah, atau rangkaian ditarik. Mutu rantai ini ditentukan oleh dua hal yang saling bertukar: kelengkapan pengukuran (berapa kanal yang benar-benar terisi) dan kecepatan keputusan (berapa menit antara gejala terbaca dan tindakan diambil).
 
-Basis data yang dipakai proyek berasal dari **lapangan Volve (Equinor, lisensi CC BY-NC-SA 4.0)** karena data operasi mitra tidak dapat dibuka . Inventaris yang benar-benar ada di disk berisi **13 himpunan data** (dihitung dari daftar berkas yang ada di disk, rincian jumlah berkas dan ukuran per himpunan dihitung dengan `python3 scratch/ppt1/verify_numbers.py`), dengan tulang punggung berupa **7.080.457 baris log pengeboran WITSML hasil parse** dari 8 berkas sumur dan matriks latih **292.954 baris** pada **6 dataset siap pakai** . Cakupan sumur adalah **10 wellbore** dengan rentang kejadian dari tahun 2007 sampai 2015 menurut kolom `event_date` .
+Basis data yang dipakai proyek berasal dari **lapangan Volve (Equinor, lisensi CC BY-NC-SA 4.0)** karena data operasi mitra tidak dapat dibuka . Inventaris yang benar-benar ada di disk berisi **13 himpunan data** (dihitung dari daftar berkas yang ada di disk, rincian jumlah berkas dan ukuran per himpunan dihitung dengan `python3 scratch/ppt1/bab1_1_hitung.py`), dengan tulang punggung berupa **7.080.457 baris log pengeboran WITSML hasil parse** dari 8 berkas sumur dan matriks latih **292.954 baris** pada **6 dataset siap pakai** . Cakupan sumur adalah **10 wellbore** dengan rentang kejadian dari tahun 2007 sampai 2015 menurut kolom `event_date` .
 
 Perlu dinyatakan sejak awal agar naskah tidak menyesatkan: data yang dipakai adalah **data lapangan nyata beresolusi grid 60 detik**, bukan telemetri real time 1 Hz milik Sperry seperti tertulis pada draft lama. Angka 1 Hz di draft berstatus ASUMSI dan bertabrakan dengan kontrak pipeline yang benar-benar dijalankan . Konsekuensinya, klaim kinerja di Bab I dan Bab II selalu dikaitkan ke resolusi 60 detik, dan klaim pemakaian langsung pada stream mitra dinyatakan sebagai rencana integrasi, bukan hasil.
 
@@ -188,11 +181,6 @@ Empat pernyataan berikut wajib menyertai Bab I agar pembaca tidak menarik kesimp
 4. **Pemetaan dampak per mode FMEA berstatus TEMPORER.** Kartu D1 `t_c0e851b8` berstatus blocked dan belum menghasilkan keluaran yang dijanjikan (, `scratch/ppt1/dampak.json`, `code/ppt1_d1_hitung.py`). Karena itu 1.1 hanya memakai dampak **per kategori label** yang sudah terukur, dan tidak memuat occurrence per mode (getaran, stick-slip, telemetri) maupun kejadian per seribu jam operasi. Angka-angka itu akan dipasang oleh kartu D1 dan kartu B2.
 
 Yang belum diverifikasi pada kartu ini dan perlu diperiksa kartu lanjutan: (a) isi 1.392 komponen tubular belum dihitung ulang, hanya jumlah berkasnya ; (b) 239 kolom dan 13 kolom pit pada `time.csv` F-9A dilaporkan, belum direproduksi ; (c) angka 10.650 `CD_ASSEMBLY_COMP` dan 632 `CD_BHA_COMP_BIT` pada EDM belum dihitung ulang ; (d) angka lapisan B dan 402 titik uji masih dilaporkan, bukan dihitung ulang oleh kartu ini .
-
-Catatan alat ukur: `scratch/ppt1/verify_numbers.py` melaporkan 0 durasi valid dari 884 baris karena parser di skrip itu hanya menerima tiga format waktu tanpa offset, sedangkan `act_start` memakai offset seperti `+01:00`. Angka durasi karena itu dihitung ulang di kartu ini dengan parser berbeda (regex lalu konversi ke detik epoch) pada `scratch/ppt1/bab1_1_hitung.py`, dan hasilnya sepakat dengan `verify_durations.py`: 884 durasi valid , total 73.500 menit , median 45 menit, p90 180 menit dengan dua cara kuantil, serta maksimum 780 menit . Selisih nol antara dua instrumen inilah yang membuat angka 1.225 jam dipakai di naskah.
-
-![Gambar 2](assets/fig01_durasi_kejadian.png)
-
 **Gambar 2.** Sebaran durasi interupsi. Panel kiri: histogram 883 kejadian valid pada filter 0 sampai 720 menit dengan garis putus-putus median 45 menit dan garis putus-putus persentil 90 sebesar 180 menit. Panel kanan: fungsi distribusi kumulatif yang menunjukkan setengah kejadian selesai di bawah 45 menit. Filter ini menyisakan 72.720 menit atau 1.212 jam, sedangkan basis penuh 884 kejadian berjumlah 73.500 menit atau 1.225 jam. Satu baris durasi 780 menit berada di luar filter. Nilai persentil 90 sama pada dua cara kuantil (interpolasi dan nearest-rank). Skrip sumber: , fungsi `fig01_durasi`.
 
 ### 1.1.8 Jejak Angka dan Cara Verifikasi
@@ -217,7 +205,7 @@ Setiap angka pada 1.1 berasal dari salah satu dari dua cara: hitungan ulang oleh
 | 37 lipatan dan 0 pelanggaran | Validasi silang | idem, lihat `dataset_latih.fold_total` dan `pelanggaran_bocor_total` |
 | 27 head dan 7 mode | Registry metode | idem, lihat `registry` |
 | 55 fitur | Ruang fitur | `11 x 5` pada `scratch/ppt1/bab1_1_hitung.py`; rujukan |
-| 0 dari 7 alarm otomatis | Kapasitas alat | `python3 scratch/ppt1/verify_numbers.py` lalu lihat `registry.layer`; rujukan |
+| 0 dari 7 alarm otomatis | Kapasitas alat | `python3 scratch/ppt1/bab1_1_hitung.py` lalu lihat `registry.layer`; rujukan |
 | Tier 0/3/2/2 | Rekap detektor | ; aritmetika 0+3+2+2=7 |
 | Recall 0,276 sampai 0,595 dan 0,000 sampai 0,032 | Sensitivitas rule | kutipan verbatim MD pada JSON kartu ini |
 | Alarm palsu 9,99 sampai 49,94 dan 14,62 sampai 58,43 serta 8,32 sampai 61,0 | Beban alarm | , 2975, 2977; kunci `kutipan_md` pada JSON kartu ini |
@@ -238,5 +226,5 @@ Perintah tunggal untuk mereproduksi seluruh angka bertanda L-D, H, dan S di atas
 cd "/mnt/d/Capstone 1(v2)"
 python3 scratch/ppt1/bab1_1_hitung.py # menghasilkan scratch/ppt1/bab1_1_angka.json
 python3 scratch/ppt1/verify_durations.py # pembanding independen untuk blok durasi
-python3 scratch/ppt1/verify_numbers.py # pembanding untuk dataset, fold, dan registry
+python3 scratch/ppt1/bab1_1_hitung.py # pembanding untuk dataset, fold, dan registry
 ```

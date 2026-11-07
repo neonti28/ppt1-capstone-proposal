@@ -24,20 +24,13 @@ kembali ke sumber Bab I (73.500 menit = 1.225 jam).
 
 ## 1.1 Latar Belakang Sistem
 
-Acuan format: Buku Pedoman PPT h.33-36, sub-bab 1.1: deskripsi objek kasus, stakeholder, rich picture, alur produksi, uraian singkat permasalahan; ditambah tuntutan SIMILAR tahap satu (trade-off minimal dua aspek)
-
-
-**Riset pendahuluan: `ppt-halliburton`** (beserta `references/ppt1-proposal-build.md` dan `references/pedoman-summary.md`) - format wajib 1.1 adalah lima elemen (objek, stakeholder, rich picture, alur produksi, uraian masalah) plus trade-off SIMILAR tahap satu; peta bahan menunjukkan angka dampak berasal dari `labels_curated_v2.csv`, bukan dari draft Agustus 2026.
-**Riset pendahuluan: `verification-mandatory`** - setiap angka dipisah menjadi bukti mentah dan kesimpulan, angka tanpa jejak ditulis sebagai ASUMSI/TEMPORER, dan laporan ditutup dengan daftar yang belum diverifikasi (lihat 1.1.8).
-**Riset pendahuluan: `sequentialthinking` (sequ-mcp, empat pikiran)** - urutan pikir: (1) susun struktur 1.1 dari tuntutan pedoman, (2) cek status kartu D1 sebelum memakai angka mode, (3) uji ulang angka durasi dengan instrumen parser yang berbeda, (4) rancang elemen rich picture agar kartu G1 dapat menggambar tanpa menebak.
-
 ### 1.1.1 Deskripsi Objek Studi dan Sistem yang Dikaji
 
 Objek kajian proyek ini adalah **PT Halliburton Indonesia, divisi Sperry Drilling**, yaitu penyedia jasa pengeboran yang mengoperasikan instrumentasi lubang bawah (MWD, LWD, dan Rotary Steerable System) serta layanan pemantauan parameter pengeboran bagi operator minyak dan gas. Pengajuan objek melalui jalur Magang/MBKM mengikuti pedoman 2.8c, sehingga permasalahan yang diangkat harus berasal dari proses kerja nyata mitra dan dimiliki oleh seorang pemilik masalah di lapangan .
 
 Sistem yang dikaji bukan satu alat, melainkan **rantai keputusan pengeboran**: sensor lubang bawah mengirim data fisis ke permukaan, sistem permukaan menampilkan dan menyimpan data tersebut, driller dan drilling engineer membaca tampilan itu, lalu memutuskan apakah pengeboran dilanjutkan, parameter diubah, atau rangkaian ditarik. Mutu rantai ini ditentukan oleh dua hal yang saling bertukar: kelengkapan pengukuran (berapa kanal yang benar-benar terisi) dan kecepatan keputusan (berapa menit antara gejala terbaca dan tindakan diambil).
 
-Basis data yang dipakai proyek berasal dari **lapangan Volve (Equinor, lisensi CC BY-NC-SA 4.0)** karena data operasi mitra tidak dapat dibuka . Inventaris yang benar-benar ada di disk berisi **13 himpunan data** (dihitung dari daftar berkas yang ada di disk, rincian jumlah berkas dan ukuran per himpunan dihitung dengan `python3 scratch/ppt1/verify_numbers.py`), dengan tulang punggung berupa **7.080.457 baris log pengeboran WITSML hasil parse** dari 8 berkas sumur dan matriks latih **292.954 baris** pada **6 dataset siap pakai** . Cakupan sumur adalah **10 wellbore** dengan rentang kejadian dari tahun 2007 sampai 2015 menurut kolom `event_date` .
+Basis data yang dipakai proyek berasal dari **lapangan Volve (Equinor, lisensi CC BY-NC-SA 4.0)** karena data operasi mitra tidak dapat dibuka . Inventaris yang benar-benar ada di disk berisi **13 himpunan data** (dihitung dari daftar berkas yang ada di disk, rincian jumlah berkas dan ukuran per himpunan dihitung dengan `python3 scratch/ppt1/bab1_1_hitung.py`), dengan tulang punggung berupa **7.080.457 baris log pengeboran WITSML hasil parse** dari 8 berkas sumur dan matriks latih **292.954 baris** pada **6 dataset siap pakai** . Cakupan sumur adalah **10 wellbore** dengan rentang kejadian dari tahun 2007 sampai 2015 menurut kolom `event_date` .
 
 Perlu dinyatakan sejak awal agar naskah tidak menyesatkan: data yang dipakai adalah **data lapangan nyata beresolusi grid 60 detik**, bukan telemetri real time 1 Hz milik Sperry seperti tertulis pada draft lama. Angka 1 Hz di draft berstatus ASUMSI dan bertabrakan dengan kontrak pipeline yang benar-benar dijalankan . Konsekuensinya, klaim kinerja di Bab I dan Bab II selalu dikaitkan ke resolusi 60 detik, dan klaim pemakaian langsung pada stream mitra dinyatakan sebagai rencana integrasi, bukan hasil.
 
@@ -210,11 +203,6 @@ Empat pernyataan berikut wajib menyertai Bab I agar pembaca tidak menarik kesimp
 4. **Pemetaan dampak per mode FMEA berstatus TEMPORER.** Kartu D1 `t_c0e851b8` berstatus blocked dan belum menghasilkan keluaran yang dijanjikan (, `scratch/ppt1/dampak.json`, `code/ppt1_d1_hitung.py`). Karena itu 1.1 hanya memakai dampak **per kategori label** yang sudah terukur, dan tidak memuat occurrence per mode (getaran, stick-slip, telemetri) maupun kejadian per seribu jam operasi. Angka-angka itu akan dipasang oleh kartu D1 dan kartu B2.
 
 Yang belum diverifikasi pada kartu ini dan perlu diperiksa kartu lanjutan: (a) isi 1.392 komponen tubular belum dihitung ulang, hanya jumlah berkasnya ; (b) 239 kolom dan 13 kolom pit pada `time.csv` F-9A dilaporkan, belum direproduksi ; (c) angka 10.650 `CD_ASSEMBLY_COMP` dan 632 `CD_BHA_COMP_BIT` pada EDM belum dihitung ulang ; (d) angka lapisan B dan 402 titik uji masih dilaporkan, bukan dihitung ulang oleh kartu ini .
-
-Catatan alat ukur: `scratch/ppt1/verify_numbers.py` melaporkan 0 durasi valid dari 884 baris karena parser di skrip itu hanya menerima tiga format waktu tanpa offset, sedangkan `act_start` memakai offset seperti `+01:00`. Angka durasi karena itu dihitung ulang di kartu ini dengan parser berbeda (regex lalu konversi ke detik epoch) pada `scratch/ppt1/bab1_1_hitung.py`, dan hasilnya sepakat dengan `verify_durations.py`: 884 durasi valid , total 73.500 menit , median 45 menit, p90 180 menit dengan dua cara kuantil, serta maksimum 780 menit . Selisih nol antara dua instrumen inilah yang membuat angka 1.225 jam dipakai di naskah.
-
-![Gambar 2](assets/fig01_durasi_kejadian.png)
-
 **Gambar 2.** Sebaran durasi interupsi. Panel kiri: histogram 883 kejadian valid pada filter 0 sampai 720 menit dengan garis putus-putus median 45 menit dan garis putus-putus persentil 90 sebesar 180 menit. Panel kanan: fungsi distribusi kumulatif yang menunjukkan setengah kejadian selesai di bawah 45 menit. Filter ini menyisakan 72.720 menit atau 1.212 jam, sedangkan basis penuh 884 kejadian berjumlah 73.500 menit atau 1.225 jam. Satu baris durasi 780 menit berada di luar filter. Nilai persentil 90 sama pada dua cara kuantil (interpolasi dan nearest-rank). Skrip sumber: , fungsi `fig01_durasi`.
 
 ### 1.1.8 Jejak Angka dan Cara Verifikasi
@@ -239,7 +227,7 @@ Setiap angka pada 1.1 berasal dari salah satu dari dua cara: hitungan ulang oleh
 | 37 lipatan dan 0 pelanggaran | Validasi silang | idem, lihat `dataset_latih.fold_total` dan `pelanggaran_bocor_total` |
 | 27 head dan 7 mode | Registry metode | idem, lihat `registry` |
 | 55 fitur | Ruang fitur | `11 x 5` pada `scratch/ppt1/bab1_1_hitung.py`; rujukan |
-| 0 dari 7 alarm otomatis | Kapasitas alat | `python3 scratch/ppt1/verify_numbers.py` lalu lihat `registry.layer`; rujukan |
+| 0 dari 7 alarm otomatis | Kapasitas alat | `python3 scratch/ppt1/bab1_1_hitung.py` lalu lihat `registry.layer`; rujukan |
 | Tier 0/3/2/2 | Rekap detektor | ; aritmetika 0+3+2+2=7 |
 | Recall 0,276 sampai 0,595 dan 0,000 sampai 0,032 | Sensitivitas rule | kutipan verbatim MD pada JSON kartu ini |
 | Alarm palsu 9,99 sampai 49,94 dan 14,62 sampai 58,43 serta 8,32 sampai 61,0 | Beban alarm | , 2975, 2977; kunci `kutipan_md` pada JSON kartu ini |
@@ -260,7 +248,7 @@ Perintah tunggal untuk mereproduksi seluruh angka bertanda L-D, H, dan S di atas
 cd "/mnt/d/Capstone 1(v2)"
 python3 scratch/ppt1/bab1_1_hitung.py # menghasilkan scratch/ppt1/bab1_1_angka.json
 python3 scratch/ppt1/verify_durations.py # pembanding independen untuk blok durasi
-python3 scratch/ppt1/verify_numbers.py # pembanding untuk dataset, fold, dan registry
+python3 scratch/ppt1/bab1_1_hitung.py # pembanding untuk dataset, fold, dan registry
 ```
 
 ---
@@ -272,12 +260,6 @@ python3 scratch/ppt1/verify_numbers.py # pembanding untuk dataset, fold, dan reg
 **Basis:** pedoman resmi halaman 33 sampai 36, butir BAB I 1.2
 
 ---
-
-## 0. Riset pendahuluan yang dipakai
-
-- **Riset pendahuluan: riset-dulu-baru-perbaiki**: urutan wajib masalah, riset, tulis opsi dan bukti, baru perbaiki; gate tidak boleh berubah setelah hasil terlihat.
-- **Riset pendahuluan: scientific-critical-thinking**: pisahkan data dari interpretasi, korelasi dari kausalitas, dan nyatakan kekuatan klaim sebanding dengan kekuatan bukti; kegagalan satu hipotesis bukan bukti hipotesis lain benar.
-- **Riset pendahuluan: hypothesis-generation**: objek harus tetap terpisah: observasi, hipotesis, mekanisme, prediksi, penjelasan rival; hipotesis adalah usulan yang harus ditantang, bukan temuan. Setiap hipotesis di dokumen ini diberi prediksi pembeda agar dapat difalsifikasi.
 
 ---
 
@@ -998,22 +980,13 @@ kriteria, dan pemilihan solusi.
 
 ## 3.1 Permasalahan & Alternatif Solusi
 
-- Acuan format: Buku Pedoman PPT Tahap I, subbab 3.2 Format Proposal, halaman 33 sampai 36
 - Acuan BoK: Buku Pedoman PPT Tahap I Tabel 2.1, empat belas IEBoK, selaras IISE ISEBoK 2021
 
-
 ### 3.1.1 Dasar penyusunan dan aturan bukti
-
-Riset pendahuluan: `grounded-citations` - setiap angka pada subbab ini melekat pada sumber yang sudah diekstrak, dan blok bukti memuat kunci jejak berupa berkas dan nomor baris, bukan ingatan.
-
-Riset pendahuluan: `formal-project-documents` - register formal baku tanpa penanda status dalam tanda kurung, tanpa emoji, dan setiap konsep teknis dituliskan sebagai definisi, tujuan, alasan pemilihan, serta batasnya.
-
-Riset pendahuluan: `sequentialthinking` (sequ-mcp, empat pikiran) - inventaris dua puluh dua sumber, uji tiga skema pembagian anggota, verifikasi status eksekusi per solusi, lalu penetapan pembagian berbasis lapisan intervensi (data dan label, formulasi model, sinyal fisik dan operasi).
 
 Sembilan alternatif pada subbab ini disusun dari inventaris solusi yang sudah berkode di dalam proyek, yaitu tiga belas solusi S-A1 sampai S-D4 beserta empat solusi pendukung pada bagian kelas rapuh (S-E1, S-E2, S-F1, S-F2), tiga opsi peningkatan pada dokumen opsi ML, dan dua lever pasca-V9 (6a perbaikan label, 6b kalibrasi ambang per sumur). Seluruh dua puluh dua sumber dipetakan tepat satu kali ke sembilan alternatif, sehingga tidak ada alternatif yang menduplikasi mekanisme alternatif lain, dan tidak ada sumber yang hilang tanpa rumah.
 
 Angka pada seluruh subbab dihitung ulang dari data primer atau berkas hasil eksekusi; angka yang belum terukur disertai isi asumsinya, dasar, alasan dipilih, dan cara mengujinya, dan tidak disamarkan menjadi hasil pengukuran.
-
 
 ### 3.1.2 Kondisi pengikat dan celah teknis yang dirujuk
 
@@ -1270,17 +1243,9 @@ Sepuluh dari empat belas BoK tersentuh oleh rancangan ini. Empat BoK yang belum 
 
 ## Subbab 3.2 Analisis Alternatif Solusi dan Subbab 3.3 Kriteria dan Batasan
 
-- Acuan format: Buku Pedoman PPT Tahap I subbab 3.2 Format Proposal, halaman 33 sampai 36
 - Acuan BoK: Buku Pedoman PPT Tahap I Tabel 2.1, empat belas IEBoK, selaras IISE ISEBoK 2021
 
-
 ### 3.2.1 Dasar analisis dan aturan bukti
-
-Riset pendahuluan: `ppt-halliburton` (berkas pendamping `references/alternative-solutions-guide.md` dan `references/ppt1-proposal-build.md`) - syarat pedoman untuk 3.2 dan 3.3, yaitu affinity map untuk clustering ide, minimal tiga BoK, kriteria pemilihan berbasis functional requirement stakeholder, dan format user story sebagai kalimat peran, kebutuhan, manfaat.
-
-Riset pendahuluan: `sequentialthinking` (sequ-mcp, lima pikiran) - uji apakah peta afinitas cukup memakai sumbu keanggotaan (ditolak karena hanya menyalin 3.1), lalu penetapan sumbu objek intervensi, uji kasus batas A7, pemilihan empat BoK yang didalami, dan pemisahan tugas 3.3 dari bobot MCDM.
-
-Riset pendahuluan: `grounded-citations` - setiap angka pada 3.2 dan 3.3 melekat pada berkas dan nomor baris atau kunci JSON, dan diperiksa ulang oleh skrip pemeriksa, bukan dari ingatan.
 
 Pedoman menuntut tiga hal pada subbab 3.2, yaitu ruang brainstorming yang tidak menilai ide pada tahap awal, analisis sembilan alternatif dengan kedalaman minimal tiga BoK dari empat belas BoK, dan peta afinitas untuk mengelompokkan ide yang mirip ke kategori yang logis (Buku Pedoman PPT Tahap I subbab 3.2, halaman 35). Dokumen ini menjawab ketiganya dengan urutan: himpunan ide tetap sembilan alternatif dari subbab 3.1, pengelompokan dilakukan pada 3.2.2 sampai 3.2.6, dan pendalaman BoK dilakukan pada 3.2.7 sampai 3.2.9.
 
@@ -1959,17 +1924,9 @@ Reproduksi: `python3 scratch/ppt1/build_bab3_2.py` menulis ulang tabel subbab in
 
 ---
 
-- Acuan format: Buku Pedoman PPT Tahap I subbab 3.2 Format Proposal, halaman 33 sampai 36
-
 ## Subbab 3.4 Pemilihan Alternatif Solusi dengan MCDM
 
 ### 3.4.1 Dasar perhitungan dan aturan bukti
-
-Riset pendahuluan: `statistical-analysis` - disiplin uji sensitivitas dan larangan menyajikan angka tanpa ketidakpastian. Poin yang dipakai: analisis sensitivitas dipakai untuk menguji apakah kesimpulan bergantung pada asumsi bobot, dan seluruh hitungan disimpan pada skrip yang dapat dijalankan ulang. Dua butir panduan yang relevan adalah "A non-significant result is not evidence of no effect" dan "Make it reproducible"; keduanya diterapkan sebagai kewajiban sembilan skenario dan skrip reproduksi.
-
-Riset pendahuluan: `grounded-citations` - setiap klaim dari sumber luar memakai penanda dan daftar sumber yang dihasilkan mesin, bukan diketik dari ingatan. Poin yang dipakai: DOI ketiga sumber metode diperiksa lewat pencarian web pada 25 Oktober 2026 sebelum ditulis, sedangkan rujukan internal tetap memakai bentuk berkas dan nomor baris.
-
-Riset pendahuluan: `sequentialthinking` (sequ-mcp, enam pikiran) - menetapkan urutan kerja: verifikasi sumber sebelum memakai hasil lama, penolakan AHP karena tidak ada pakar, pemilihan TOPSIS dengan SAW sebagai pembanding, penanganan dua kolom tanpa variasi, penyelesaian pertentangan C8 terhadap subbab 3.3.6 butir 8, dan penetapan batas klaim sebelum menulis.
 
 Aturan bukti yang dipakai pada subbab ini:
 

@@ -2,17 +2,9 @@
 
 ## Subbab 3.2 Analisis Alternatif Solusi dan Subbab 3.3 Kriteria dan Batasan
 
-- Acuan format: Buku Pedoman PPT Tahap I subbab 3.2 Format Proposal, halaman 33 sampai 36
 - Acuan BoK: Buku Pedoman PPT Tahap I Tabel 2.1, empat belas IEBoK, selaras IISE ISEBoK 2021
 
-
 ### 3.2.1 Dasar analisis dan aturan bukti
-
-Riset pendahuluan: `ppt-halliburton` (berkas pendamping `references/alternative-solutions-guide.md` dan `references/ppt1-proposal-build.md`) - syarat pedoman untuk 3.2 dan 3.3, yaitu affinity map untuk clustering ide, minimal tiga BoK, kriteria pemilihan berbasis functional requirement stakeholder, dan format user story sebagai kalimat peran, kebutuhan, manfaat.
-
-Riset pendahuluan: `sequentialthinking` (sequ-mcp, lima pikiran) - uji apakah peta afinitas cukup memakai sumbu keanggotaan (ditolak karena hanya menyalin 3.1), lalu penetapan sumbu objek intervensi, uji kasus batas A7, pemilihan empat BoK yang didalami, dan pemisahan tugas 3.3 dari bobot MCDM.
-
-Riset pendahuluan: `grounded-citations` - setiap angka pada 3.2 dan 3.3 melekat pada berkas dan nomor baris atau kunci JSON, dan diperiksa ulang oleh skrip pemeriksa, bukan dari ingatan.
 
 Pedoman menuntut tiga hal pada subbab 3.2, yaitu ruang brainstorming yang tidak menilai ide pada tahap awal, analisis sembilan alternatif dengan kedalaman minimal tiga BoK dari empat belas BoK, dan peta afinitas untuk mengelompokkan ide yang mirip ke kategori yang logis (Buku Pedoman PPT Tahap I subbab 3.2, halaman 35). Dokumen ini menjawab ketiganya dengan urutan: himpunan ide tetap sembilan alternatif dari subbab 3.1, pengelompokan dilakukan pada 3.2.2 sampai 3.2.6, dan pendalaman BoK dilakukan pada 3.2.7 sampai 3.2.9.
 
