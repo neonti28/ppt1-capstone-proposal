@@ -56,9 +56,9 @@ Pertama, kriteria terukur tidak diskalakan ulang menjadi 1 sampai 5. C2 memakai 
 
 Kedua, C1 dan C3 berbentuk rubrik berjangkar karena pertanyaannya bukan besaran, melainkan keadaan pelaksanaan. C1 memakai empat tingkat: 100 bila gate G1 dan G2 lolos, 75 bila mekanisme sudah dieksekusi dan delta terukur positif, 40 bila sudah dieksekusi tanpa delta positif, dan 20 bila belum dieksekusi. C3 memakai tiga tingkat: 100 bila kalibrasi per sumur sudah diuji pada dua sumur atau lebih, 60 bila menambah sumur uji atau memuat rancangan kalibrasi yang belum diuji, dan 30 bila tidak menyentuh portabilitas. Setiap tingkat menunjuk keadaan yang dapat diperiksa pada dokumen proyek, bukan kesan penilai.
 
-Ketiga, C8 tetap berstatus asumsi dan ini dinyatakan terbuka. Subbab 3.3.6 butir 8 menyatakan antarmuka peringatan belum dirancang sehingga C8 belum dapat dinilai untuk alternatif mana pun (). Pada subbab ini C8 tetap diisi dengan tingkat yang dibaca dari niat desain: tingkat 3 untuk alternatif yang rancangan keluarannya berupa satu baris peringatan dengan waktu, keyakinan, dan tindakan, dan tingkat 2 untuk alternatif yang keluarannya masih berupa label, daftar kandidat, atau angka yang perlu ditafsirkan. Konsekuensinya, skenario P7 pada 3.4.8 menolkan bobot C8, sehingga dapat diperiksa apakah keputusan berubah bila kriteria yang belum divalidasi itu dibuang sama sekali.
+Ketiga, C8 tetap berstatus asumsi dan ini dinyatakan terbuka. Subbab 3.3.6 butir 8 menyatakan antarmuka peringatan belum dirancang sehingga C8 belum dapat dinilai untuk alternatif mana pun. Pada subbab ini C8 tetap diisi dengan tingkat yang dibaca dari niat desain: tingkat 3 untuk alternatif yang rancangan keluarannya berupa satu baris peringatan dengan waktu, keyakinan, dan tindakan, dan tingkat 2 untuk alternatif yang keluarannya masih berupa label, daftar kandidat, atau angka yang perlu ditafsirkan. Konsekuensinya, skenario P7 pada 3.4.8 menolkan bobot C8, sehingga dapat diperiksa apakah keputusan berubah bila kriteria yang belum divalidasi itu dibuang sama sekali.
 
-Keempat, tidak ada angka rupiah pada subbab ini. Batasan B6 mengingatkan bahwa tarif rig per jam tidak tersedia pada seluruh 13 dataset (). Karena itu biaya diukur sebagai jumlah wellbore yang harus diproses dan jumlah minggu kerja, bukan rupiah. Dengan begitu tidak ada satu pun nilai pada matriks keputusan yang bersandar pada tarif yang tidak diketahui.
+Keempat, tidak ada angka rupiah pada subbab ini. Batasan B6 mengingatkan bahwa tarif rig per jam tidak tersedia pada seluruh 13 dataset. Karena itu biaya diukur sebagai jumlah wellbore yang harus diproses dan jumlah minggu kerja, bukan rupiah. Dengan begitu tidak ada satu pun nilai pada matriks keputusan yang bersandar pada tarif yang tidak diketahui.
 
 Tabel 3.4.1 Jejak setiap sel matriks keputusan
 
@@ -152,7 +152,7 @@ Bobot tidak ditetapkan sebagai angka bulat. Yang tersedia pada proyek ini adalah
 | R7 | biaya data yang bersifat instrumental | C5 | Sebagian besar parse sudah selesai pada kampanye V9, sehingga kebutuhan data baru hanya membedakan beberapa alternatif. |
 | R8 | kriteria dengan bukti terlemah | C8 | Rubrik C8 disusun pada subbab 3.3 dan belum divalidasi mitra, dan antarmuka peringatan belum dirancang, sehingga C8 belum punya ukuran selain rubrik. Peringkat terakhir menandai kekuatan bukti, bukan ketidakpentingan. |
 
-Aturan dibaca berurutan dari R1 sampai R8: kriteria yang memenuhi aturan lebih awal mendapat peringkat lebih tinggi. Di dalam kelompok batasan keras, dua hal menentukan urutan, yaitu sifat menggugurkan atau tidaknya pelanggaran lebih dahulu, lalu jumlah user story yang bergantung pada kriteria itu menurut  kunci `matriks_us_kriteria`.
+Aturan dibaca berurutan dari R1 sampai R8: kriteria yang memenuhi aturan lebih awal mendapat peringkat lebih tinggi. Di dalam kelompok batasan keras, dua hal menentukan urutan, yaitu sifat menggugurkan atau tidaknya pelanggaran lebih dahulu, lalu jumlah user story yang bergantung pada kriteria itu menurut kunci `matriks_us_kriteria`.
 
 | Peringkat | Kriteria | Aturan | Bobot ROC | Alasan ringkas |
 | --- | --- | --- | --- | --- |
@@ -211,7 +211,7 @@ Daya beda kolom diperiksa sebelum bobot dipakai. Kolom tanpa variasi: C4, C7. Ke
 
 ### 3.4.6 Perhitungan TOPSIS
 
-Lima langkah, seluruhnya dijalankan oleh .
+Lima langkah, seluruhnya dijalankan oleh.
 
 1. Normalisasi vektor per kolom: setiap nilai dibagi akar jumlah kuadrat kolomnya.
 2. Pembobotan: nilai ternormalisasi dikali bobot kriteria.
@@ -261,7 +261,7 @@ Tabel 3.4.5 Kontribusi tiap kriteria pada tiga besar (nilai V sama dengan bobot 
 
 Kontribusi yang menentukan kemenangan A1 adalah C2 sebesar +0,04144, C6 sebesar +0,00957, C8 sebesar +0,00403, sedangkan pada kriteria lain selisihnya nol sehingga A7 tidak unggul pada satu kriteria pun. Dengan kata lain, kemenangan itu berasal dari selisih pada kriteria yang berbobot besar, bukan dari keunggulan menyeluruh.
 
-Perlu dicatat bahwa A1 dan A7 sama-sama bernilai 75 pada C1, karena keduanya sudah dieksekusi dan memberi delta terukur positif, yaitu stuck dengan B1 0,51 sampai 1,00 pada  dan alat bengkel dengan lead time 20 sampai 36 detik pada . Yang memisahkan keduanya adalah kriteria lain, terutama jumlah fold layak, beban kognitif, dan waktu kerja. Penilaian C1 untuk A1 juga tidak seragam antar kelas: pada kelas hyd hasilnya negatif, yaitu nol dari tiga onset menurut , dan itu dicatat terbuka, bukan dirata-ratakan menjadi kemenangan.
+Perlu dicatat bahwa A1 dan A7 sama-sama bernilai 75 pada C1, karena keduanya sudah dieksekusi dan memberi delta terukur positif, yaitu stuck dengan B1 0,51 sampai 1,00 pada dan alat bengkel dengan lead time 20 sampai 36 detik pada. Yang memisahkan keduanya adalah kriteria lain, terutama jumlah fold layak, beban kognitif, dan waktu kerja. Penilaian C1 untuk A1 juga tidak seragam antar kelas: pada kelas hyd hasilnya negatif, yaitu nol dari tiga onset menurut, dan itu dicatat terbuka, bukan dirata-ratakan menjadi kemenangan.
 
 ### 3.4.7 Pembanding SAW
 
@@ -361,7 +361,7 @@ Jumlah kasus adalah 25, yaitu 9 skenario ditambah 16 uji satu per satu. A1 menja
 
 ### 3.4.9 Perbandingan dengan draft lama
 
-Draft 13 Agustus 2026 memilih A1 ML Classifier dipadukan A3 SHAP dashboard, memakai enam kriteria berskala 1 sampai 5 tanpa rubrik dan bobot 0,25, 0,20, 0,15, 0,10, 0,15, 0,15 (). Dua pemeriksaan dilakukan: menghitung ulang jumlah berbobot setiap baris, dan menjalankan TOPSIS sejati pada matriks draft itu sendiri.
+Draft 13 Agustus 2026 memilih A1 ML Classifier dipadukan A3 SHAP dashboard, memakai enam kriteria berskala 1 sampai 5 tanpa rubrik dan bobot 0,25, 0,20, 0,15, 0,10, 0,15, 0,15. Dua pemeriksaan dilakukan: menghitung ulang jumlah berbobot setiap baris, dan menjalankan TOPSIS sejati pada matriks draft itu sendiri.
 
 Tabel 3.4.10 Hitung ulang jumlah berbobot draft lama
 
@@ -402,7 +402,7 @@ Tiga kesimpulan perbandingan, ditulis apa adanya.
 
 Pertama, label juara sama tetapi isinya berbeda, dan ini harus dinyatakan terbuka. Draft memilih A1 yang berarti pengklasifikasi pembelajaran mesin. Pada subbab 3.1, A1 berarti relabeling onset peristiwa, yaitu memindahkan definisi target dari status ke titik masuk peristiwa, dan justru mekanisme itulah yang membuat pengklasifikasi dapat bekerja. Jadi kesamaan huruf A1 bukan kesamaan objek pemilihan. Yang benar-benar sejalan adalah arah: pembelajaran terbimbing di atas label onset dengan keluaran berpengawas manusia.
 
-Kedua, draft menyebut metodenya TOPSIS (), tetapi angka yang ditulis pada tabel draft adalah jumlah berbobot, yaitu skor dikali bobot lalu dijumlahkan. Hitungan itu adalah SAW, bukan TOPSIS. Ketika TOPSIS sejati dijalankan pada matriks yang sama, urutannya berubah: A3 SHAP Dash dan A2 IsoForest bertukar posisi. Juara tidak berubah, tetapi peringkat kedua dan ketiga pada draft bergantung pada metode yang dipakai, dan hal itu tidak terlihat karena draft tidak menulis langkah perhitungannya. Pada subbab ini kedua metode dihitung dan dibandingkan secara terbuka pada 3.4.6 dan 3.4.7.
+Kedua, draft menyebut metodenya TOPSIS, tetapi angka yang ditulis pada tabel draft adalah jumlah berbobot, yaitu skor dikali bobot lalu dijumlahkan. Hitungan itu adalah SAW, bukan TOPSIS. Ketika TOPSIS sejati dijalankan pada matriks yang sama, urutannya berubah: A3 SHAP Dash dan A2 IsoForest bertukar posisi. Juara tidak berubah, tetapi peringkat kedua dan ketiga pada draft bergantung pada metode yang dipakai, dan hal itu tidak terlihat karena draft tidak menulis langkah perhitungannya. Pada subbab ini kedua metode dihitung dan dibandingkan secara terbuka pada 3.4.6 dan 3.4.7.
 
 Ketiga, draft tidak memisahkan alternatif yang sudah dieksekusi dari yang belum. Akibatnya alternatif yang belum dijalankan dapat memperoleh skor 5 pada K1 karena tampak menjanjikan. Pada subbab ini pemisahan itu dilakukan lewat rubrik C1, dan skenario P5 menguji apa yang terjadi bila penalti bukti dihapus: juara tetap A1. Artinya kemenangan A1 bukan akibat pembatasan metode, melainkan bertahan bahkan ketika alternatif yang belum dieksekusi diberi nilai lebih murah hati.
 
@@ -447,8 +447,8 @@ Catatan pembacaan: dua dari tiga pertanyaan riset belum terjawab penuh. Matriks 
 5. Jumlah minggu kerja pada C6 berstatus asumsi untuk setiap alternatif. Yang baku hanya tenggat sembilan minggu menurut Buku Pedoman PPT Tahap I Tabel 3.1 halaman 32.
 6. Tidak ada angka rupiah pada perhitungan ini karena tarif rig tidak tersedia. Konsekuensinya keputusan tidak dapat dinyatakan sebagai penghematan biaya, dan klaim ROI tidak dibuat.
 7. ROC adalah pendekatan bobot, bukan elisitasi. Menurut Kunsch dan Ishizaka, keunggulan ROC bergantung pada cara bobot seharusnya diperoleh, sehingga bila wawancara mitra menghasilkan rasio yang berbeda jauh, perhitungan wajib diulang dengan bobot hasil wawancara itu.
-8. Portabilitas antar sumur belum terukur sesudah kalibrasi. Yang terukur baru sebaran sebelum kalibrasi, yaitu 4,15 sampai 496,09 per 24 jam (), sehingga nilai C3 untuk A2, A8, dan A9 berstatus rubrik tingkat 60, bukan hasil uji.
-9. A7 berada pada peringkat dua dengan koefisien 0,6993, tetapi berada pada domain bengkel, dengan presisi run 0,50 () dan gate G1 nol dari empat alat (). Peringkat dua itu tidak boleh dibaca sebagai kesiapan penerapan di rig.
+8. Portabilitas antar sumur belum terukur sesudah kalibrasi. Yang terukur baru sebaran sebelum kalibrasi, yaitu 4,15 sampai 496,09 per 24 jam, sehingga nilai C3 untuk A2, A8, dan A9 berstatus rubrik tingkat 60, bukan hasil uji.
+9. A7 berada pada peringkat dua dengan koefisien 0,6993, tetapi berada pada domain bengkel, dengan presisi run 0,50 dan gate G1 nol dari empat alat. Peringkat dua itu tidak boleh dibaca sebagai kesiapan penerapan di rig.
 10. Perbandingan dengan draft lama terbatas pada lima alternatif yang ada pada draft, dan dua kriteria draft tidak dapat dipetakan. Perbandingan angka mentah antara kedua dokumen tidak sah.
 
 ### 3.4.12 Lampiran bukti kelas sasaran
@@ -467,7 +467,7 @@ Tabel 3.4.12 Bukti terukur per kelas sasaran
 | bit_wear | A1, A5, A6, A8 | 1,495 pada F-15S gagal tipis | G1 3 dari 4 fold, G2 4 dari 4 fold | Persistence lebih tinggi daripada Random Forest pada 4 dari 4 fold sehingga verdict turun menjadi layak bersyarat |
 | vib | A2, A9 | 1,61 / 2,36 / 3,50 / 1,63 | LULUS penuh pada baseline, direproduksi pada V9 | False alarm rate menyebar 4,15 sampai 496,09 per 24 jam, yaitu rasio 119,6 kali antar sumur |
 
-Dua hal perlu dibaca dari tabel itu. Pertama, menurut  yang mengutip , hanya dua kelas yang berstatus LULUS penuh pada baseline, yaitu vib dan ssi. Meski begitu, tingkat 100 pada C1 belum diberikan kepada alternatif mana pun, karena rubrik C1 menuntut gate lolos untuk mekanisme alternatif itu sendiri: A1 memberi delta terukur positif pada kelas stuck tetapi negatif pada kelas hyd, sedangkan A2 dan A9 yang menyentuh vib, serta A2, A4, dan A5 yang menyentuh ssi, belum menjalankan evaluasi ulang pada kelas-kelas itu. Kedua, jumlah fold berbeda jauh antar kelas, dari dua fold pada stuck sampai tujuh fold pada shk, sehingga C2 terikat pada kelas mana yang disentuh sebuah alternatif.
+Dua hal perlu dibaca dari tabel itu. Pertama, menurut yang mengutip, hanya dua kelas yang berstatus LULUS penuh pada baseline, yaitu vib dan ssi. Meski begitu, tingkat 100 pada C1 belum diberikan kepada alternatif mana pun, karena rubrik C1 menuntut gate lolos untuk mekanisme alternatif itu sendiri: A1 memberi delta terukur positif pada kelas stuck tetapi negatif pada kelas hyd, sedangkan A2 dan A9 yang menyentuh vib, serta A2, A4, dan A5 yang menyentuh ssi, belum menjalankan evaluasi ulang pada kelas-kelas itu. Kedua, jumlah fold berbeda jauh antar kelas, dari dua fold pada stuck sampai tujuh fold pada shk, sehingga C2 terikat pada kelas mana yang disentuh sebuah alternatif.
 
 ![Gambar 5](assets/fig04_auprc_per_engine.png)
 
@@ -479,15 +479,15 @@ Dua hal perlu dibaca dari tabel itu. Pertama, menurut  yang mengutip , hanya dua
 
 ![Gambar 7](assets/fig06_presisi_vs_recall.png)
 
-**Gambar 7.** Presisi terhadap recall tiap head terukur. Anotasi atas head utama `hybrid_rule_and_persistence` pada mode hyd menyebut presisi 0,824 dan recall 0,597, dengan FAR 16,6 per 24 jam pada n = 10.401 window (pos 865, neg 9.536). Garis titik-titik diagonal adalah acuan acak (`presisi = recall`). Skrip gambar 5 sampai 7: .
+**Gambar 7.** Presisi terhadap recall tiap head terukur. Anotasi atas head utama `hybrid_rule_and_persistence` pada mode hyd menyebut presisi 0,824 dan recall 0,597, dengan FAR 16,6 per 24 jam pada n = 10.401 window (pos 865, neg 9.536). Garis titik-titik diagonal adalah acuan acak (`presisi = recall`). Skrip gambar 5 sampai 7:.
 
 Reproduksi:
 
 ```bash
 cd "/mnt/d/Capstone 1(v2)"
-python3 scratch/ppt1/build_mcdm.py        # menulis scratch/ppt1/mcdm.json
-python3 scratch/ppt1/build_doc_mcdm.py    # menulis dokumen ini dari mesin yang sama
-python3 scratch/ppt1/check_mcdm.py        # memeriksa acceptance dan setiap jejak
+python3 scratch/ppt1/build_mcdm.py # menulis scratch/ppt1/mcdm.json
+python3 scratch/ppt1/build_doc_mcdm.py # menulis dokumen ini dari mesin yang sama
+python3 scratch/ppt1/check_mcdm.py # memeriksa acceptance dan setiap jejak
 ```
 
 Pemeriksa `check_mcdm.py` menolak dokumen bila ada angka yang berbeda dari JSON, bila rujukan berkas dan baris tidak ada atau di luar rentang, bila token penanda tidak ditemukan pada baris yang dikutip, bila jumlah skenario kurang dari delapan, dan bila terdapat em-dash atau en-dash. Pemeriksa itu sendiri diuji negatif memakai dokumen yang sengaja dirusak.

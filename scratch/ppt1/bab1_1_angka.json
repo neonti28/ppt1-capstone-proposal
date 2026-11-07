@@ -1,7 +1,7 @@
 {
  "meta": {
   "skrip": "scratch/ppt1/bab1_1_hitung.py",
-  "basis": "/mnt/d/Capstone 1(v2)"
+  "basis": "/mnt/d/ARCT-9F2"
  },
  "labels": {
   "berkas": "data/volve/labels_curated_v2.csv",
@@ -209,32 +209,53 @@
    "L3": 2
   }
  },
- "inventaris": {
-  "berkas": "docs/V10_D1_BAB_DATA.md §3.1",
-  "baris_tabel": 13,
-  "nomor": [
-   "1",
-   "2",
-   "3",
-   "4",
-   "5",
-   "6",
-   "7",
-   "8",
-   "9",
-   "10",
-   "11",
-   "12",
-   "13"
-  ]
- },
- "kutipan_md": {
-  "l2972_vib": "| 1 | **vib** | Getaran lateral BHA melebihi ambang operasional (whirl/GET tinggi) | deteksi **kondisi** (TLead tidak berlaku) | rule ambang + persistence + RF | rule **P 0,868–0,952** (1,10×) · R 0,276–0,595 · **FAR 9,99–49,94** · FP 197; RF **AUPRC 0,441–0,912** (2,07×) · CI memuat prev **0/4** · ΔB vs canary **4/4** · τ0,5 FAR **4,15–496,09 = 119,57×** | **TREN** (RF) + **PERINGATAN-BERPENGAWAS",
-  "l2973_ssi": "| 2 | **ssi** | Stick-slip torsional (putaran drillstring tersendat-lepas) | deteksi **kondisi** | rule definisi SSI + persistence + RF + hybrid | RF **AUPRC 0,015–0,459** (30,36×) · CI memuat prev **3/7 layak** (5/9 all) · ΔB vs prevalensi **7/7**; rule **R 0,000–0,032** · FAR 0,0–7,33 (≤6: 4/9); hybrid **FP 26→7 (−73,1 %)** · ≤rule **7/7** | **TREN** (RF) + **PERINGATAN hemat** (hybrid) | belum ",
-  "l2974_shk": "| 3 | **shk** | Bit bounce / shock risk sedang berlangsung (disfungsi getaran aksial-torsional) | deteksi **anomali** berlangsung | rule display + persistence + RF | rule **FAR 0,670–6,618** (9,87×) → **≤6 di 7/9 well** · P 0,00–0,935 · FP 121; RF **AUPRC 0,0069–0,1929** (28,07×) · CI memuat prev **7/9** · B3 **−212,5×** | **PERINGATAN-BERPENGAWAS** (rule) + **TREN** (RF) | RF jangan sbg alarm (CI",
-  "l2975_stuck_k1": "| 4 | **stuck K-i** | Pipa terjepit (blok status `STUCK_RT` persisten) yaitu konfirmasi, bukan ramalan | deteksi **kondisi** | rule display + persistence + hybrid | rule **P 0,9238–0,9662** (1,05×) · R 0,449–0,599 · FAR 8,32–61,0 (≤6 **0/2**) · FP 49; hanya **2 fold** (F-14, F-9_A) | **PERINGATAN-BERPENGAWAS** (cakupan terbatas) | FAR >6; portabilitas ke well lain **belum terukur** (cakupan 2/9 we",
-  "l2976_stuck_k2": "| 5 | **stuck K-ii** | Akan masuk kondisi terjepit dalam **≤10 menit** (onset 0→1) | prediksi **kejadian** | persistence-EVENT + rule E1 (2-dari-3) + E2 z-stat + RF | persistence-EVENT **B1 0–0,115** · **TLead 4,5–8,5 mnt** (med 7,0; 1,89×) · FAR 0–2,93 · FP 11; RF τ0,5 B1 0–0,045 · TLead 2–159; E2 CI memuat prev **4/4**; anchor absorbed **13/281 = 4,63 %** | **TREN / triage** | B1 jauh dari syara",
-  "l2977_hyd_k1": "| 6 | **hyd K-i** | Anomali hidraulik (tekanan standpipe menyimpang dari pola normal) yaitu konfirmasi status | deteksi **kondisi** | median/MAD pembentuk label + persistence + hybrid | hybrid **P 0,724–0,948** (1,31×) · R 0,52–0,87 · **FAR 14,62–58,43** (4,0×) · **FP 2091→927 (−55,7 %) 9/9**; persistence **CI memuat prev 0/9** (satu-satunya kelas); delay **0–3,5 mnt** | **PERINGATAN-BERPENGAWAS**",
-  "l3378_tier": "| **LAYAK alarm otomatis kritis** | **0 dari 7** | n/a | Syarat alarm (FAR≤1/24jam dgn recall>0 **+** B1≥80% **+** C2/C3) belum tercapai engine mana pun; sebagian karena FAR/B belum diukur, sebagian sudah terukur tapi di atas ambang. |"
+ "inventaris_disk": {
+  "akar": "data/volve",
+  "entri_puncak": 10,
+  "berkas_total": 37572,
+  "total_byte": 27427325748,
+  "total_gb": 27.43,
+  "per_entri": {
+   "ddr.parquet": {
+    "berkas": 1,
+    "byte": 2180278
+   },
+   "external": {
+    "berkas": 17457,
+    "byte": 3421792640
+   },
+   "labels_curated.csv": {
+    "berkas": 1,
+    "byte": 480479
+   },
+   "labels_curated_v2.csv": {
+    "berkas": 1,
+    "byte": 519171
+   },
+   "labels_curated_v2_log.json": {
+    "berkas": 1,
+    "byte": 775
+   },
+   "uncertain_audit_100.csv": {
+    "berkas": 1,
+    "byte": 40383
+   },
+   "usrop_timestamped.csv": {
+    "berkas": 1,
+    "byte": 57699413
+   },
+   "usrop_wellbores_events.csv": {
+    "berkas": 1,
+    "byte": 218119
+   },
+   "witsml_parsed": {
+    "berkas": 22,
+    "byte": 4606652432
+   },
+   "witsml_raw": {
+    "berkas": 20086,
+    "byte": 19337742058
+   }
+  }
  }
 }
