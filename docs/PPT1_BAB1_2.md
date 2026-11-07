@@ -92,7 +92,7 @@ Diagram terdiri atas satu tulang punggung (efek) dan enam cabang, dengan 27 rant
 
 | ID | Cabang | Ranting (sebab spesifik) | Cara menghitung |
 | Mt1 | Integritas kanal permukaan | `WHIRL_RT` dan `BOUNCE_RT` identik: **67 berkas pada 5 wellbore**, dan **1790 dari 1790** nilai identik di F-9 (F-5 368/368, F-15S 5/5, F-1 15/15). Keduanya tidak boleh menjadi dua fitur atau dua gejala | hitung berapa banyak berkas yang saling identik antara kanal getar berputar dan memantul, lalu banyak baris identiknya per sumur |
-| Mt2 | Kelengkapan kanal MWD | Kanal CRPM bahan rumus SSI tidak lengkap: **22.385 dari 35.906 jendela (62,34 persen)** tanpa data pada agregat sembilan fold, dan dua sumur kanal mati (F-7 982/982, F-9 1126/1126) | hitung jumlah jendela uji ssi tanpa data kanal CRPM pada agregat sembilan fold lalu bagi dengan total jendela; bandingkan dengan kanal mati di dua sumur |
+| Mt2 | Kelengkapan kanal MWD | Kanal CRPM bahan rumus SSI tidak lengkap: **537.644 dari 620.288 jendela (86,68 persen)** tanpa data pada agregat sembilan fold, dan dua sumur kanal mati (F-7 982/982, F-9 1126/1126) | hitung jumlah jendela uji ssi tanpa data kanal CRPM pada agregat sembilan fold lalu bagi dengan total jendela; bandingkan dengan kanal mati di dua sumur |
 | Mt3 | Makna basis kejadian | Kejadian tercatat bukan sama dengan kegagalan: **496** tanpa bukti kegagalan, **47** bukti campuran, **28** kegagalan tanpa lokasi, dan hanya **50** kejadian menyangkut BHA (stuck atau fishing 38, peralatan downhole 12) | cacah baris menurut kategori pada tabel label lalu kelompokkan ke bukti gagal, campuran, gagal tanpa lokasi, dan yang menyangkut BHA |
 | Mt4 | Ketidakseimbangan kelas | Prevalensi positif sangat rendah dan tidak seragam: ssi F-15A **31 dari 6020 = 0,51 persen**, ssi F-7 **3 dari 982 = 0,31 persen**, ssi F-9_A **55 dari 841 = 6,54 persen** | hitung jumlah kelas positif dan total bin per sumur pada hasil evaluasi lalu bagi menjadi prevalensi |
 
@@ -159,7 +159,7 @@ Gambar G1 adalah diagram tulang ikan dengan orientasi kiri ke kanan. Kepala di k
 | B1 | atas 1 | **MAN** (4) | M1 kontrol-positif 0/10; M2 relevansi BHA 571/884 belum pasti; M3 label hidraulik proksi; M4 beban baca manusia 11 peringatan |
 | B2 | bawah 1 | **METHOD** (5) | Me1 FAR 4,15 sampai 496,09 (119,57 kali); Me2 recall 0,10 sampai 0,87; Me3 CI95 5/9 menyentuh no-skill; Me4 grid 60 detik melawan 1 Hz; Me5 tier 13/12/2 tanpa ambang naik |
 | B3 | atas 2 | **MACHINE** (4) | Ma1 slot alarm 0 dan 0/7 mode; Ma2 3906/7150 berkas tidak diparse; Ma3 puncak teredam agregasi; Ma4 satu segmen bukti F-14 |
-| B4 | bawah 2 | **MATERIAL** (4) | Mt1 WHIRL sama dengan BOUNCE 1790/1790; Mt2 nodata CRPM 22.385/35.906; Mt3 496/884 tanpa bukti gagal; Mt4 prevalensi 0,31 sampai 6,54 persen |
+| B4 | bawah 2 | **MATERIAL** (4) | Mt1 WHIRL sama dengan BOUNCE 1790/1790; Mt2 nodata CRPM 537.644/620.288; Mt3 496/884 tanpa bukti gagal; Mt4 prevalensi 0,31 sampai 6,54 persen |
 | B5 | atas 3 | **MEASUREMENT** (5) | Ms1 basis waktu tanpa kalender; Ms2 satuan FAR tidak seragam; Ms3 S/O/D literal generator; Ms4 target belum tercapai; Ms5 kondisi disamakan dengan onset |
 | B6 | bawah 3 | **ENVIRONMENT** (5) | En1 rating motor 0/192; En2 tekanan EDM 8 baris datum; En3 dullingInfo 0/161; En4 porsi drilling 13,1 persen; En5 VIBLAT F-10 nol observasi |
 
@@ -167,7 +167,7 @@ Gambar G1 adalah diagram tulang ikan dengan orientasi kiri ke kanan. Kepala di k
 1. Ranting yang belum diukur (Me4, Ma3) diberi garis putus-putus, bukan garis penuh.
 2. Ranting yang angkanya berasal dari pengukuran pihak lain (belum diulang sendiri) diberi penanda bintang kecil.
 3. Setiap ranting membawa kode (M1 sampai En5) yang identik dengan tabel Bagian 3, agar silang rujuk ke naskah tidak ambigu.
-4. Dua angka wajib tercetak pada gambar karena merupakan bukti terkuat: **119,57 kali** pada Me1 dan **62,34 persen** pada Mt2.
+4. Dua angka wajib tercetak pada gambar karena merupakan bukti terkuat: **119,57 kali** pada Me1 dan **86,68 persen** pada Mt2.
 5. Warna: cabang MAN dan MATERIAL satu keluarga warna karena keduanya menyumbang akar G7; cabang MACHINE dan MEASUREMENT keluarga kedua karena keduanya soal perkakas dan satuan.
 
 **Kerangka Mermaid untuk G1** (dapat langsung dipakai sebagai titik awal di Mermaid Live, lalu diekspor ke draw.io bila diperlukan):
@@ -193,7 +193,7 @@ mindmap
       Ma4 satu segmen F-14
     MATERIAL
       Mt1 WHIRL sama BOUNCE
-      Mt2 nodata CRPM 62,34 persen
+      Mt2 nodata CRPM 86,68 persen
       Mt3 496/884 tanpa bukti gagal
       Mt4 prevalensi 0,31 s/d 6,54 persen
     MEASUREMENT
@@ -218,7 +218,7 @@ Bagian ini memenuhi syarat bahwa setiap hipotesis wajib punya prediksi yang dapa
 
 ### 7.1 Me4: nodata disebabkan resolusi grid, bukan sensor rusak
 
-- **Observasi:** nodata CRPM agregat 22.385 dari 35.906 jendela (62,34 persen), sementara pada F-14 kanal CRPM justru hadir pada 11.794 dari 12.635 bin pengeboran.
+- **Observasi:** nodata CRPM agregat 537.644 dari 620.288 jendela (86,68 persen), sementara pada F-14 kanal CRPM justru hadir pada 11.794 dari 12.635 bin pengeboran.
 - **Hipotesis:** sebagian nodata timbul karena aturan minimal 10 sampel per bin tidak terpenuhi pada laju logging rendah, bukan karena kanal fisik mati.
 - **Rival 1:** kanal memang mati pada sumur tertentu (didukung F-7 982/982 dan F-9 1126/1126).
 - **Rival 2:** nodata berasal dari pemetaan nama mnemonic yang gagal, bukan dari ketiadaan nilai.
@@ -243,9 +243,9 @@ Pernyataan "ambang global adalah penyebab utama alarm tidak layak" belum terbukt
 
 ## 8. Dua angka yang diperiksa ulang dan cara memeriksanya
 
-**Pertama, angka "data CRPM F-14 kosong 96,6 persen" tidak dipakai.** Cara memeriksa: bagi jumlah bin yang tidak memuat observasi CRPM dengan penyebut populasi yang mungkin. Dengan penyebut seluruh grid bin F-14, hasilnya 11.794 bin berobservasi dari 96.698 bin, jadi data kosong **87,80 persen**. Dengan penyebut bin pengeboran saja, hasilnya 10.841 bin kosong dari 12.635 bin, yaitu **6,66 persen**. Tidak ada penyebut yang menghasilkan 96,6 persen, sehingga angka itu ditolak. Yang dipakai adalah 87,80 atau 6,66 persen untuk F-14, dan **62,34 persen** agregat yang dihitung sebagai 22.385 jendela tanpa data dari 35.906 jendela.
+**Pertama, angka "data CRPM F-14 kosong 96,6 persen" tidak dipakai.** Cara memeriksa: bagi jumlah bin yang tidak memuat observasi CRPM dengan penyebut populasi yang mungkin. Dengan penyebut seluruh grid bin F-14, hasilnya 11.794 bin berobservasi dari 96.698 bin, jadi data kosong **87,80 persen**. Dengan penyebut bin pengeboran saja, hasilnya 10.841 bin kosong dari 12.635 bin, yaitu **6,66 persen**. Tidak ada penyebut yang menghasilkan 96,6 persen, sehingga angka itu ditolak. Yang dipakai adalah 87,80 atau 6,66 persen untuk F-14, dan **86,68 persen** agregat yang dihitung sebagai 22.385 jendela tanpa data dari 35.906 jendela.
 
-**Kedua, istilah `SSI_mwd` tidak ada padanannya di data.** Cara memetakannya: cari besaran terukur yang menggunakan kanal yang sama, lalu bandingkan cakupannya. Besaran yang dipakai adalah jumlah jendela SSI valid F-14, yaitu **5.455 dari 96.698 bin (5,64 persen)** dengan **75 positif**, dihitung dengan mencacah jendela valid pada tabel evaluasi per sumur; angka ini sejalan dengan 62,34 persen nodata CRPM agregat karena keduanya bersumber dari tabel evaluasi yang sama.
+**Kedua, istilah `SSI_mwd` tidak ada padanannya di data.** Cara memetakannya: cari besaran terukur yang menggunakan kanal yang sama, lalu bandingkan cakupannya. Besaran yang dipakai adalah jumlah jendela SSI valid F-14, yaitu **5.455 dari 96.698 bin (5,64 persen)** dengan **75 positif**, dihitung dengan mencacah jendela valid pada tabel evaluasi per sumur; angka ini sejalan dengan 86,68 persen nodata CRPM agregat karena keduanya bersumber dari tabel evaluasi yang sama.
 
 Kedua pemeriksaan di atas mengubah angka, bukan mengubah penilaian atas siapa pun. Angka yang bertahan adalah angka yang punya penyebut yang dapat ditulis.
 

@@ -257,5 +257,103 @@
     "byte": 19337742058
    }
   }
+ },
+ "bins": {
+  "folder": "scratch/v9_d1/bins",
+  "berkas_n": 9,
+  "bin_total": 620288,
+  "crpm_nol_total": 537644,
+  "persen_crpm_nol": 86.68,
+  "per_berkas": {
+   "F-10.csv.gz": {
+    "bin": 41446,
+    "crpm_nol": 30994,
+    "persen_nol": 74.78
+   },
+   "F-12.csv.gz": {
+    "bin": 180958,
+    "crpm_nol": 157228,
+    "persen_nol": 86.89
+   },
+   "F-14.csv.gz": {
+    "bin": 96698,
+    "crpm_nol": 84904,
+    "persen_nol": 87.8
+   },
+   "F-15A.csv.gz": {
+    "bin": 44347,
+    "crpm_nol": 32799,
+    "persen_nol": 73.96
+   },
+   "F-15_S.csv.gz": {
+    "bin": 101630,
+    "crpm_nol": 89919,
+    "persen_nol": 88.48
+   },
+   "F-5.csv.gz": {
+    "bin": 67934,
+    "crpm_nol": 60070,
+    "persen_nol": 88.42
+   },
+   "F-7.csv.gz": {
+    "bin": 34533,
+    "crpm_nol": 32248,
+    "persen_nol": 93.38
+   },
+   "F-9.csv.gz": {
+    "bin": 25460,
+    "crpm_nol": 22997,
+    "persen_nol": 90.33
+   },
+   "F-9_A.csv.gz": {
+    "bin": 27282,
+    "crpm_nol": 26485,
+    "persen_nol": 97.08
+   }
+  }
+ },
+ "summary_bins": {
+  "berkas": "scratch/v9_d1/v9_d1_01_summary.json",
+  "sumur_n": 9,
+  "bin_total": 620288,
+  "bin_mengebor_total": 94374,
+  "per_sumur": {
+   "F-5": {
+    "bin": 67934,
+    "bin_mengebor": 10233
+   },
+   "F-7": {
+    "bin": 34533,
+    "bin_mengebor": 3671
+   },
+   "F-9": {
+    "bin": 25460,
+    "bin_mengebor": 2197
+   },
+   "F-9_A": {
+    "bin": 27282,
+    "bin_mengebor": 2530
+   },
+   "F-10": {
+    "bin": 41446,
+    "bin_mengebor": 13781
+   },
+   "F-12": {
+    "bin": 180958,
+    "bin_mengebor": 23931
+   },
+   "F-14": {
+    "bin": 96698,
+    "bin_mengebor": 12635
+   },
+   "F-15A": {
+    "bin": 44347,
+    "bin_mengebor": 11853
+   },
+   "F-15_S": {
+    "bin": 101630,
+    "bin_mengebor": 13543
+   }
+  }
  }
 }

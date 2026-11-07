@@ -218,6 +218,40 @@ R["inventaris_disk"] = {
     "per_entri": per_entri,
 }
 
+
+# ---------------------------------------------------------------- 6. bin menit dan kekosongan kanal CRPM
+B = os.path.join(BASE, "scratch/v9_d1/bins")
+tot_bin, tot_kosong, per_bin = 0, 0, {}
+for f in sorted(x for x in os.listdir(B) if x.endswith(".csv.gz")):
+    n = k = 0
+    with gzip.open(os.path.join(B, f), "rt") as fh:
+        r = csv.DictReader(fh)
+        for row in r:
+            n += 1
+            if float(row.get("crpm_n") or 0) == 0:
+                k += 1
+    per_bin[f] = {"bin": n, "crpm_nol": k, "persen_nol": round(k / n * 100, 2) if n else None}
+    tot_bin += n
+    tot_kosong += k
+R["bins"] = {
+    "folder": "scratch/v9_d1/bins",
+    "berkas_n": len(per_bin),
+    "bin_total": tot_bin,
+    "crpm_nol_total": tot_kosong,
+    "persen_crpm_nol": round(tot_kosong / tot_bin * 100, 2) if tot_bin else None,
+    "per_berkas": per_bin,
+}
+
+# ---------------------------------------------------------------- 7. bin per sumur dari ringkasan V9 D1
+s = json.load(open(BASE + "/scratch/v9_d1/v9_d1_01_summary.json", encoding="utf-8"))
+R["summary_bins"] = {
+    "berkas": "scratch/v9_d1/v9_d1_01_summary.json",
+    "sumur_n": len(s["wells"]),
+    "bin_total": sum(v["n_bins"] for v in s["wells"].values()),
+    "bin_mengebor_total": sum(v["n_bins_drill"] for v in s["wells"].values()),
+    "per_sumur": {k: {"bin": v["n_bins"], "bin_mengebor": v["n_bins_drill"]} for k, v in s["wells"].items()},
+}
+
 json.dump(R, open(OUT, "w", encoding="utf-8"), indent=1, ensure_ascii=False)
 
 print(json.dumps({
@@ -240,5 +274,9 @@ print(json.dumps({
     "layer": R["registry"]["layer"],
     "inventaris_berkas": R["inventaris_disk"]["berkas_total"],
     "inventaris_gb": R["inventaris_disk"]["total_gb"],
+    "bin_total": R["bins"]["bin_total"],
+    "crpm_nol": R["bins"]["persen_crpm_nol"],
+    "bin_sumur": R["summary_bins"]["bin_total"],
+    "F14_bin": R["summary_bins"]["per_sumur"].get("F-14"),
 }, indent=1, ensure_ascii=False))
 print("\nJSON ->", OUT)
