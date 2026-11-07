@@ -703,7 +703,7 @@ flowchart LR
   D --> E{Kondisi lubang<br/>terbaca?}
   E -- ya --> F[Drilling lanjut]
   F --> D
-  E -- tidak --> G[Intupsi<br/>611 jam / 388 kejadian]
+  E -- tidak --> G[Interupsi<br/>611 jam / 388 kejadian]
   G --> H[Triaging &<br/>keputusan manual]
   H -- keputusan lambat --> I[Perpanjangan waktu berhenti]
   H -- keputusan cepat --> D
@@ -784,13 +784,13 @@ flowchart LR
   O1((●)) --- O2["Rig up<br/>asal: langkah baku"] --- O3["Drilling<br/>V: 601 jam"]
   O3 --- O4{{"◆ Keputusan:<br/>kondisi terbaca?"}}
   O4 -- ya --> O3
-  O4 -- tidak --> O5["Intupsi<br/>O: 388 kali, 611 jam"]
+  O4 -- tidak --> O5["Interupsi<br/>O: 388 kali, 611 jam"]
   O5 --- O6["Triaging manual<br/>N: belum terukur"]
   O6 --- O7{{"◆ Keputusan<br/>trip / lanjut"}}
   O7 -- trip --> O8["Fishing / ganti BHA<br/>O: 38 kali"]
   O7 -- lanjut --> O3
   O8 --- O3
-  O3 --- O9((○)) ["Completion<br/>serah terima"]
+  O3 --- O9(("○ Completion<br/>serah terima"))
 ```
 
 Keterangan: `●` operasi utama, `○` penyelesaian, `◆` keputusan, `O` kejadian tercatat.
