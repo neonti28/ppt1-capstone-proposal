@@ -1,0 +1,36 @@
+{
+  "keterangan": "Registry angka proyek. Satu angka satu definisi. Setiap kali angka disebut di naskah, definisi, filter, satuan, dan sumbernya harus sama dengan entri ini. Periksa ulang dengan: python3 tools/periksa_angka.py",
+  "aturan": [
+    "Ubah angka hanya lewat registry ini, lalu jalankan tools/periksa_angka.py sampai SELISIH 0, baru sunting naskah.",
+    "Setiap angka yang mirip tetapi berbeda wajib punya entri sendiri beserta medan pembeda, supaya tidak tertukar.",
+    "Angka tanpa sumber otomatis dicatat status manual dan wajib dibaca ulang dari sumbernya sebelum dipakai.",
+    "Naskah tidak memuat nama berkas, path, atau perintah. Jejak berkas ada di docs/INTERNAL_JEJAK_ANGKA.md."
+  ],
+  "angka": [
+    {"id": "kejadian", "nilai": 884, "definisi": "cacah baris tabel label kejadian", "filter": "tanpa filter durasi", "satuan": "kejadian", "sumber": "tabel label kejadian", "status": "otomatis", "pembeda": "angka 883 adalah cacah setelah filter durasi 0 sampai 720 menit"},
+    {"id": "kejadian_720", "nilai": 883, "definisi": "cacah kejadian dengan durasi 0 sampai 720 menit", "filter": "durasi 0 sampai 720 menit", "satuan": "kejadian", "sumber": "tabel label kejadian", "status": "otomatis", "pembeda": "dipakai hanya pada histogram durasi dan fungsi distribusi kumulatif, bukan pada total durasi"},
+    {"id": "wellbore", "nilai": 10, "definisi": "cacah nama sumur berbeda", "filter": "tanpa filter", "satuan": "sumur", "sumber": "tabel label kejadian", "status": "otomatis"},
+    {"id": "total_menit", "nilai": 73500, "definisi": "jumlah selisih waktu selesai dan waktu mulai seluruh kejadian", "filter": "tanpa filter durasi", "satuan": "menit", "sumber": "tabel label kejadian", "status": "otomatis", "pembeda": "nilai sebelum pembulatan 73500,0167; angka 72720 adalah jumlah setelah filter 0 sampai 720 menit"},
+    {"id": "menit_720", "nilai": 72720, "definisi": "jumlah durasi setelah filter 0 sampai 720 menit", "filter": "durasi 0 sampai 720 menit", "satuan": "menit", "sumber": "tabel label kejadian", "status": "otomatis"},
+    {"id": "median_menit", "nilai": 45, "definisi": "rata-rata elemen ke-442 dan ke-443 dari 884 durasi terurut", "filter": "tanpa filter durasi", "satuan": "menit", "sumber": "tabel label kejadian", "status": "otomatis"},
+    {"id": "p90_menit", "nilai": 180, "definisi": "elemen ke-796 dari 884 durasi terurut, cara nearest-rank", "filter": "tanpa filter durasi", "satuan": "menit", "sumber": "tabel label kejadian", "status": "otomatis"},
+    {"id": "maks_menit", "nilai": 780, "definisi": "elemen terakhir daftar durasi terurut", "filter": "tanpa filter durasi", "satuan": "menit", "sumber": "tabel label kejadian", "status": "otomatis"},
+    {"id": "kanal_min", "nilai": 28, "definisi": "cacah kanal terisi sedikitnya 50 persen baris, nilai terkecil antar sumur", "filter": "sembilan sumur yang punya ringkasan mutu kanal", "satuan": "kanal", "sumber": "ringkasan mutu kanal per sumur", "status": "otomatis", "pembeda": "rentang 37 sampai 48 berlaku hanya untuk tujuh sumur uji kendali, bukan seluruh sumur"},
+    {"id": "kanal_max", "nilai": 48, "definisi": "cacah kanal terisi sedikitnya 50 persen baris, nilai terbesar antar sumur", "filter": "sembilan sumur yang punya ringkasan mutu kanal", "satuan": "kanal", "sumber": "ringkasan mutu kanal per sumur", "status": "otomatis"},
+    {"id": "fitur_kolom", "nilai": 480, "definisi": "cacah kolom matriks fitur tanpa kolom target", "filter": "matriks fitur latih per jendela 10 menit", "satuan": "kolom", "sumber": "matriks fitur latih", "status": "otomatis", "pembeda": "dataset latih per kelas hanya 50 sampai 63 kolom, sehingga 480 tidak boleh dikutip dari dataset"},
+    {"id": "fitur_baris", "nilai": 3958, "definisi": "cacah baris matriks fitur", "filter": "matriks fitur latih", "satuan": "jendela", "sumber": "matriks fitur latih", "status": "otomatis"},
+    {"id": "head", "nilai": 27, "definisi": "cacah entri daftar varian metode", "filter": "seluruh mode", "satuan": "head", "sumber": "registry head", "status": "otomatis"},
+    {"id": "human_review", "nilai": 13, "definisi": "cacah head dengan penanda wajib tinjauan bernilai benar", "filter": "seluruh head", "satuan": "head", "sumber": "registry head", "status": "otomatis", "pembeda": "angkanya kebetulan sama dengan cacah head bertier TREN, tetapi besarannya berbeda: penanda tinjauan bukan tingkat kewenangan"},
+    {"id": "tier_tren", "nilai": 13, "definisi": "cacah head bertier TREN", "filter": "seluruh head", "satuan": "head", "sumber": "registry head, kolom tier", "status": "otomatis"},
+    {"id": "tier_peringatan", "nilai": 12, "definisi": "cacah head bertier PERINGATAN-BERPENGAWAS", "filter": "seluruh head", "satuan": "head", "sumber": "registry head, kolom tier", "status": "otomatis"},
+    {"id": "tier_belum", "nilai": 2, "definisi": "cacah head bertier BELUM LAYAK PAKAI", "filter": "seluruh head", "satuan": "head", "sumber": "registry head, kolom tier", "status": "otomatis"},
+    {"id": "lapisan", "nilai": {"L0": 5, "L1": 11, "L2": 9, "L3": 2}, "definisi": "cacah head per lapisan keputusan", "filter": "seluruh head", "satuan": "head", "sumber": "registry head, kolom layer", "status": "otomatis"},
+    {"id": "auto_alarm", "nilai": 0, "definisi": "cacah slot alarm otomatis", "filter": "seluruh head", "satuan": "slot", "sumber": "registry head, medan kpi", "status": "otomatis"},
+    {"id": "lipatan", "nilai": 37, "definisi": "jumlah pasangan dataset dan sumur pada enam dataset", "filter": "hyd 9, shk 9, ssi 9, stuck K-i 2, stuck K-ii 4, vib 4", "satuan": "lipatan", "sumber": "rekap cacah sumur per dataset", "status": "otomatis"},
+    {"id": "dataset_baris", "nilai": 292954, "definisi": "cacah baris enam dataset latih setelah dekompresi dikurangi satu baris header per dataset", "filter": "enam dataset latih", "satuan": "baris", "sumber": "enam dataset latih", "status": "otomatis"},
+    {"id": "kategori", "nilai": [496, 216, 47, 38, 28, 25, 21, 12, 1], "definisi": "frekuensi tiap nilai kolom kategori, diurutkan menurun", "filter": "tanpa filter", "satuan": "kejadian", "sumber": "tabel label kejadian", "status": "otomatis"},
+    {"id": "bha_relevan", "nilai": {"yes": 50, "uncertain": 571, "no": 263}, "definisi": "frekuensi tiap nilai kolom relevansi BHA", "filter": "tanpa filter", "satuan": "kejadian", "sumber": "tabel label kejadian", "status": "otomatis"},
+    {"id": "mode_peringatan", "nilai": 6, "definisi": "cacah mode yang punya sedikitnya satu klaim bertier PERINGATAN-BERPENGAWAS, tier per mode diambil dari klaim tertingginya", "filter": "11 klaim pada tabel ringkas dokumen evaluasi", "satuan": "mode", "sumber": "tabel ringkas dokumen evaluasi lapisan keputusan", "status": "otomatis", "pembeda": "satuannya mode, bukan head dan bukan klaim: 6 mode, 11 klaim, 27 head. Menghitung dari medan klaim pada registry head memberi 3 dan itu salah karena medan itu tidak lengkap"},
+    {"id": "rating_motor", "nilai": "192 dari 192 berkas tanpa rating motor", "definisi": "cacah berkas assembly yang tidak memuat keenam medan rating", "filter": "ekspor berkas assembly dari mitra", "satuan": "berkas", "sumber": "ekspor mitra", "status": "sekunder", "pembeda": "belum diuji ulang terhadap data primer, sehingga wajib disebut sebagai sumber sekunder di naskah"}
+  ]
+}
