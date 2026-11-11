@@ -2,12 +2,14 @@
 # Gerbang commit. Hanya pemeriksa angka yang berhak menolak commit, karena
 # hanya itu yang objektif: angka yang tidak cocok dengan registry selalu salah.
 #
-# Pemeriksa gaya dan isi hanya melapor. Uji pada 2026-11-10 menunjukkan dua
-# cacat yang membuat keduanya tidak layak memblokir:
-#   - positif palsu: paragraf teknis yang benar diblokir hanya karena memakai
-#     frasa "alih-alih", sementara paragraf itu menjelaskan mekanisme sirkularitas;
-#   - positif palsu kedua: sampah yang diberi angka lolos, jadi aturan ini bisa
-#     diakali dengan menaburkan angka, dan itu justru merusak naskah.
+# Pemeriksa gaya, isi, dan entitas hanya melapor. Uji pada 2026-11-10 terhadap
+# label dari pengguna menunjukkan tiga cacat yang membuat ketiganya tidak layak
+# memblokir:
+#   - gerbang frasa: recall 0 dari 10 kalimat yang pengguna sebut sampah;
+#   - gerbang entitas: memblokir 6 user story yang justru diwajibkan, karena
+#     user story memakai kata "saya";
+#   - sampah yang diberi angka lolos gerbang isi, jadi aturan itu bisa diakali
+#     dengan menaburkan angka, dan itu merusak naskah.
 set -e
 cd "$(git rev-parse --show-toplevel)"
 
@@ -21,4 +23,6 @@ echo "--- laporan gaya (tidak memblokir) ---"
 python3 tools/periksa_gaya.py | tail -4 || true
 echo "--- laporan isi (tidak memblokir) ---"
 python3 tools/periksa_isi.py | tail -1 || true
+echo "--- laporan entitas (tidak memblokir) ---"
+python3 tools/periksa_entitas.py | tail -1 || true
 echo "GERBANG: angka lolos"
