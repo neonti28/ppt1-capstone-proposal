@@ -227,6 +227,28 @@ Ketiga trade-off di atas juga menegaskan batas yang jujur: target desain recall 
 
 ### 1.1.6 Uraian Singkat Permasalahan
 
+Lima pernyataan berikut diletakkan paling depan supaya pembaca tahu apa yang dikerjakan sebelum masuk ke angka. Angka pendukungnya ada pada tabel di bawah pernyataan ini, pada 1.1.8, dan rumus serta perintah pengulangnya pada 1.1.9.
+
+**Apa yang dikerjakan.** Proyek ini membangun lapisan bantu keputusan yang mengubah data permukaan pengeboran menjadi peringatan dini untuk tujuh mode kegagalan rangkaian lubang bawah: getaran, stick-slip, hentakan, pipa terjepit, masalah hidraulik, keausan mata bor, dan keausan peralatan. Keluaran yang dijanjikan adalah baris peringatan per jendela menit yang menyebut mode, gejala, lama gejala bertahan, sisa waktu untuk bertindak, tingkat kewenangan, dan tindakan yang disarankan. Keluaran itu tidak menyebut komponen mana yang akan rusak, dan ketiadaan itu disengaja.
+
+**Bagaimana pekerjaan itu dijalankan.** Enam langkah, berurutan. Pertama, deret waktu sepuluh wellbore disamakan ke grid 60 detik, dengan kanal yang terisi sedikitnya 50 persen berkisar 28 sampai 48 per sumur, dan pada tujuh sumur uji kendali berkisar 37 sampai 48. Kedua, 884 kejadian pada laporan harian dibaca satu per satu dan diubah menjadi label awal gejala, bukan label status pada satu jam. Ketiga, setiap jendela menit diwakili 480 fitur turunan kanal permukaan. Keempat, tiap mode diuji melalui beberapa varian metode, dengan total 27 head, dan hasilnya dibandingkan apa adanya. Kelima, seluruh evaluasi memakai skema leave-one-well-out dengan 37 lipatan, sehingga sumur uji tidak pernah ikut berlatih. Keenam, hasil deteksi disusun menjadi lapisan keputusan dengan tiga tingkat kewenangan (tren, peringatan berpengawasan, dan belum layak pakai), anggaran enam pemeriksaan per 24 jam, dan 13 head yang wajib ditinjau manusia. Pada keadaan sekarang, enam dari tujuh mode memiliki sedikitnya satu klaim bertingkat peringatan berpengawasan, mode keausan mata bor baru sampai tingkat tren, dan tidak ada satu pun klaim yang bertingkat alarm otomatis.
+
+**Mengapa arah ini yang dipilih.** Tiga sebab, semuanya bertumpu pada keadaan data dan pada nilai yang bisa dipertanggungjawabkan. Pertama, data tidak memuat komponen penyebab: hanya 50 dari 884 kejadian terverifikasi relevan BHA, 571 berstatus uncertain, dan rating motor tidak ada pada 192 dari 192 berkas tubular menurut ekspor EDM yang belum diuji ulang terhadap data primer sebagaimana dinyatakan pada 1.1.7. Karena itu pertanyaan "komponen mana yang akan rusak" tidak dapat dijawab dengan bahan ini, dan memaksakannya akan menghasilkan klaim tanpa bukti. Kedua, nilai teknisnya terletak pada waktu, bukan pada nama bagian: total waktu terbuang tercatat 73.500 menit atau 1.225 jam, median satu kejadian 45 menit, dan lead time terukur 4,5 sampai 8,5 menit dengan median 7,0 menit pada kelas pipa terjepit. Ketiga, hanya dengan batas yang dinyatakan terbuka hasilnya dapat diperiksa ulang: nol dari 27 head layak dijadikan alarm otomatis, sehingga keluaran proyek dinyatakan sebagai peringatan berpengawasan yang menunggu manusia, bukan alarm.
+
+**Bentuk keluaran yang dijanjikan.** Satu baris per jendela menit yang memicu peringatan, dengan tujuh medan berikut.
+
+| Medan | Isi | Batas yang menyertainya |
+|---|---|---|
+| Mode | Salah satu dari tujuh mode kegagalan | Bukan nama komponen penyebab |
+| Gejala | Kanal dan pola yang menyimpang dari rancangan | Hanya kanal permukaan yang terisi |
+| Lama gejala | Berapa menit gejala bertahan | Bukan durasi kerusakan alat |
+| Sisa waktu | Perkiraan menit sebelum dampak | Baru terukur pada kelas pipa terjepit, bukan janji seragam |
+| Tingkat | Tren, peringatan berpengawasan, atau belum layak pakai | Tidak ada tingkat alarm otomatis |
+| Tindakan | Pemeriksaan yang disarankan | Keputusan tetap pada manusia |
+| Batas | Syarat berlakunya peringatan itu | Dinyatakan pada baris yang sama |
+
+**Apa yang tidak dikerjakan.** Empat hal berikut dinyatakan tertutup agar tidak ditagih sebagai luaran. Proyek ini tidak melaporkan sisa umur pakai sebagai luaran, sebab formulasi survival A6 masih berstatus belum dikerjakan pada 3.1.4.6; proyek ini juga bukan penamaan komponen yang akan gagal, bukan alarm otomatis yang boleh dipercaya tanpa manusia, dan bukan pengganti insinyur pengeboran. Alasan penutupannya ada pada paragraf berikut serta pada 1.1.7 dan 1.4.
+
 Permasalahan utama bukan kerusakan alat tunggal, melainkan **tidak adanya lapisan penalaran yang mengubah data pengeboran menjadi peringatan sebelum dampak terjadi**. Akibatnya, setiap disfungsi baru dikenali setelah ia menjadi waktu terbuang, dan pengetahuan tentangnya hanya tersimpan sebagai catatan kejadian, tidak sebagai aturan pemantauan.
 
 Ukuran dampak yang dapat dipertanggungjawabkan disajikan pada tabel berikut. Semua baris berasal dari hitung ulang pada subbab ini, dan tidak ada baris yang berdiri sebagai perkiraan.
@@ -250,7 +272,9 @@ Dengan bahan tersebut, permasalahan dirumuskan dalam empat pertanyaan yang menja
 
 **RM1.** Bagaimana merancang lapisan peringatan dini yang memakai data pengeboran yang benar-benar tersedia pada grid 60 detik dan kanal yang terisi 37 sampai 48 per sumur, tanpa mengklaim resolusi yang tidak dimiliki?
 **RM2.** Bagaimana memilih titik operasi per mode sehingga peringatan cukup awal untuk ditindaklanjuti, sedangkan beban alarm palsu tetap dapat diterima pengawas, mengingat laju alarm palsu mencapai 0,00 sampai 132,05 per 24 jam antar sumur dan mode?
-**RM3.** Bagaimana menyajikan keluaran yang dapat dijelaskan kepada drilling engineer, sehingga rekomendasi dipakai dan bukan diabaikan, ketika kapasitas alat baru sampai pada peringatan berpengawasan pada 3 dari 7 mode?
+**RM3.** Bagaimana menyajikan keluaran yang dapat dijelaskan kepada drilling engineer, sehingga rekomendasi dipakai dan bukan diabaikan, ketika kapasitas alat baru sampai pada peringatan berpengawasan pada 6 dari 7 mode?
+
+**Cara menghitung angka 6 dari 7 pada RM3.** Satu mode dihitung memenuhi syarat bila sedikitnya satu klaim di dalamnya bertier peringatan berpengawasan pada tabel §1 dokumen evaluasi Layer C, dan tier per mode diambil dari klaim tertingginya. Dengan cara itu enam mode memenuhi: getaran melalui klaim status dengan aturan, stick-slip melalui klaim status dengan gabungan, hentakan melalui klaim status dengan aturan, pipa terjepit melalui klaim status, hidraulik melalui klaim status, dan keausan peralatan melalui klaim regime bengkel. Mode yang tidak memenuhi hanya keausan mata bor, karena satu-satunya klaimnya bertier tren. Tidak ada mode yang mencapai tier alarm otomatis, sebab syarat tiga komponen sekaligus tidak dipenuhi satu klaim pun. Rincian tiap klaim beserta tier dan batasnya ada pada tabel §1 dokumen tersebut.
 
 **RM4.** Sejauh mana disfungsi pengeboran dapat diklasifikasikan dari telemetri permukaan
 yang tersedia, dan seberapa rendah batas deteksinya ketika keparahan gangguan diturunkan
@@ -302,8 +326,9 @@ Tabel ini memuat setiap angka yang dipakai pada 1.1 beserta langkah hitungnya, d
 | 10 entri puncak, 37.572 berkas, 27,43 GB | Penelusuran rekursif folder data: jumlah berkas dan ukuran byte tiap entri puncak dijumlahkan | sama |
 | 10 berkas, 9.935.708 baris mentah, 9.935.698 baris data | Cacah baris tiap berkas log hasil parse, dikurangi satu baris header per berkas | sama |
 | 292.954 baris pada 6 dataset | Cacah baris tiap dataset latih setelah dekompresi, dikurangi satu baris header; rincian hyd_ki 52.509, shk 56.495, ssi 35.906, stuck_k1 5.555, stuck_k2 118.567, vib 23.922 | sama |
-| 37 lipatan, 0 pelanggaran kebocoran | Lipatan dihitung sebagai jumlah pasangan sumur uji pada skema leave-one-well-out; pelanggaran dicacah sebagai baris latih yang fiturnya berasal dari waktu setelah labelnya | sama |
+| 37 lipatan, 0 pelanggaran kebocoran | Lipatan dihitung sebagai jumlah pasangan dataset dan sumur pada enam dataset, yaitu 9+9+9+2+4+4 dengan rincian pada 1.1.9; pelanggaran dicacah sebagai baris latih yang fiturnya berasal dari waktu setelah labelnya | sama |
 | 7 mode, 27 varian metode, tier 13 TREN / 12 PERINGATAN-BERPENGAWAS / 2 BELUM LAYAK PAKAI, lapisan L0 5 / L1 11 / L2 9 / L3 2 | Cacah mode dan varian metode pada daftar metode proyek; tier dan lapisan dihitung dari kolom penandaan tiap varian | sama |
+| 6 dari 7 mode bertier peringatan berpengawasan | Tier diambil dari tabel §1 `docs/V9_EVAL_C_LAYERC.md` per klaim, lalu tier per mode diambil dari klaim tertingginya: getaran, stick-slip, hentakan, pipa terjepit, hidraulik, dan keausan peralatan memenuhi; keausan mata bor hanya tren | 6 dari 7 |
 | 620.288 bin menit, 86,68 persen tanpa CRPM (537.644) | Setiap menit direkam sebagai satu bin; bin tanpa satu pun bacaan CRPM dicacah (kolom jumlah bacaan bernilai nol), per sumur 74,0 sampai 97,1 persen | sama |
 | 96.698 bin dan 12.635 bin mengebor pada F-14 (13,1 persen) | Cacah bin menit pada F-14 dan cacah bin yang berstatus mengebor; perbandingan keduanya 12.635/96.698 | sama |
 | 0,67 persen `SHKRSK_RT` terisi pada F-7 | Cacah baris data getaran F-7 yang kolom `SHKRSK_RT`-nya berisi nilai bukan nol: 3.659 dari 547.500 baris | sama |
@@ -312,6 +337,113 @@ Tabel ini memuat setiap angka yang dipakai pada 1.1 beserta langkah hitungnya, d
 | Laju alarm palsu 0,00 sampai 132,05 per 24 jam antar sumur dan mode | Nilai terkecil dan terbesar dari seluruh laju alarm palsu per fold yang dihitung dengan cara baris di atas | sama |
 | Target recall 0,70 sampai 0,80 dan lead 10 sampai 30 menit | Bukan hasil hitung; sasaran desain yang dinyatakan pada kalimat yang sama | target |
 | Efisiensi lebih dari 15 persen | Klaim vendor, bukan hitungan proyek: rilis pers Halliburton 9 Juli 2026 | sumber vendor |
+
+### 1.1.9 Rumus, Sumber, dan Cara Mengulang Angka 1.1.6
+
+Setiap angka pada 1.1.6 wajib punya tiga hal: rumus atau definisi hitungnya, berkas sumbernya, dan perintah yang dapat dijalankan ulang. Angka yang tidak dapat diulang tidak dipakai sebagai bukti hasil, dan statusnya dinyatakan terbuka pada kolom terakhir tabel di bawah serta pada Lampiran B.
+
+**Rumus dasar yang dipakai di seluruh naskah.**
+
+```
+presisi        = TP / (TP + FP)
+recall         = TP / (TP + FN)
+FAR_24jam      = FP / (n_neg / 60) x 24          jendela 60 detik, n_neg = cacah jendela negatif
+AUPRC          = average_precision_score(y, skor)
+lead (menit)   = t_onset - t_alert               hanya untuk deteksi benar yang mendahului onset
+median         = rata-rata dua nilai tengah setelah data durasi diurutkan
+p90            = elemen ke-ceil(0,9 x n) pada data terurut, cara nearest-rank
+```
+
+Rumus FAR diambil dari konvensi yang tertulis pada `code/v9_i1_pipeline.py` fungsi `seg_metrics`, yaitu alarm palsu per 24 jam operasi negatif pada skala jendela 60 detik.
+
+**Perintah pengulang.** Dijalankan dari akar folder proyek. Semua perintah memakai pustaka standar Python 3, tanpa pustaka tambahan, sehingga dapat diulang pada mesin mana pun yang memiliki Python 3.
+
+```bash
+# 884 kejadian, 73.500 menit, median 45, p90 180, maksimum 780
+python3 - <<'AKHIR'
+import csv, statistics, math
+from datetime import datetime
+r=list(csv.DictReader(open('data/volve/labels_curated_v2.csv',encoding='utf-8')))
+f='%Y-%m-%dT%H:%M:%S%z'
+d=sorted((datetime.strptime(x['act_end'],f)-datetime.strptime(x['act_start'],f)).total_seconds()/60 for x in r)
+n=len(d)
+print(n, round(sum(d),1), statistics.median(d), d[math.ceil(0.9*n)-1], d[-1])
+AKHIR
+
+# kanal terisi sedikitnya 50 persen per sumur
+python3 - <<'AKHIR'
+import json, glob
+for f in sorted(glob.glob('data/volve/witsml_parsed/*.qc.json')):
+    q=json.load(open(f,encoding='utf-8'))
+    print(f.split('/')[-1].replace('.qc.json',''), q['n_channels_ge_50pct'])
+AKHIR
+
+# 37 lipatan, dibaca dari manifest yang disertakan repositori
+python3 - <<'AKHIR'
+import json
+d=json.load(open('docs/evidence/folds_per_dataset.json',encoding='utf-8'))
+for k,v in d['per_dataset'].items(): print(k, v['n_well'])
+print('total', d['total_lipatan'])
+AKHIR
+
+# pembangkit ulang manifest di atas, memerlukan dataset latih pada mesin kerja
+python3 - <<'AKHIR'
+import gzip, csv, glob
+tot=0
+for f in sorted(glob.glob('scratch/v9_d1/datasets/*.csv.gz')):
+    with gzip.open(f,'rt',encoding='utf-8') as fh:
+        w={row['well'] for row in csv.DictReader(fh)}
+    print(f.split('/')[-1], len(w)); tot+=len(w)
+print('total', tot)
+AKHIR
+
+# 27 head dan 13 head wajib tinjauan
+python3 - <<'AKHIR'
+import json
+d=json.load(open('dashboard/data/engine_v9_i1.json',encoding='utf-8'))
+print(len(d['heads']), sum(1 for h in d['heads'] if h['human_review']))
+AKHIR
+
+# 480 fitur
+python3 - <<'AKHIR'
+import zipfile, ast
+b=zipfile.ZipFile('data/predictive/features_timeseries_controls_berdata.npz').read('X.npy')
+off = 10 if b[6]==1 else 12
+hlen = int.from_bytes(b[8:off],'little')
+h=ast.literal_eval(b[off:off+hlen].decode('latin1'))
+print(h['shape'], '-> fitur', h['shape'][1])
+AKHIR
+```
+
+**Berkas yang disertakan dan yang tidak.** Repositori menyertakan salinan kecil yang cukup untuk membuktikan angka pada 1.1.6, yaitu `data/volve/labels_curated_v2.csv`, `data/volve/witsml_parsed/*.qc.json`, `data/predictive/features_timeseries_controls_berdata.npz`, `dashboard/data/engine_v9_i1.json`, dan `docs/evidence/folds_per_dataset.json`. Dataset latih berukuran 66 MB dan data mentah WITSML tidak disertakan karena ukuran dan lisensi, sehingga perintah yang membacanya dijalankan pada mesin kerja proyek, sedangkan pembaca repositori memakai manifest untuk angka lipatan.
+
+**Tabel rumus, sumber, dan status setiap angka pada 1.1.6.**
+
+| Angka | Rumus atau definisi | Sumber | Status |
+|---|---|---|---|
+| 7 mode kegagalan | Cacah nilai unik kolom `engine` pada registry head | `dashboard/data/engine_v9_i1.json`, larik `heads` | terukur |
+| 60 detik | Satu bin per menit, yaitu pembulatan waktu ke bawah pada kelipatan 60 detik, dengan agregasi mode seluruh baris pada satu menit | `code/v9_i1_pipeline.py` | konvensi pipeline |
+| 10 wellbore | Cacah nilai unik kolom `wellbore` | `data/volve/labels_curated_v2.csv` | terukur |
+| 28 sampai 48 kanal, dan 37 sampai 48 pada tujuh sumur uji kendali | Cacah kanal yang isinya sedikitnya 50 persen baris per sumur, yaitu medan `n_channels_ge_50pct`; nilai per sumur F-14 48, F-7 47, F-9_A 45, F-15A 42, F-5 42, F-9 42, F-15_S 37, F-12 28, VAR_F-5_alt 44 | `data/volve/witsml_parsed/*.qc.json` | terukur |
+| 884 kejadian | Cacah baris tabel label setelah baris header | `data/volve/labels_curated_v2.csv` | terukur |
+| 480 fitur | `X.shape[1]` pada matriks fitur, yaitu 480 kolom tanpa kolom target | `data/predictive/features_timeseries_controls_berdata.npz` | terukur |
+| 27 head | Cacah entri registry head | `dashboard/data/engine_v9_i1.json`, larik `heads` | terukur |
+| 37 lipatan | Jumlah pasangan dataset dan sumur: hyd 9, shk 9, ssi 9, stuck K-i 2, stuck K-ii 4, vib 4 | `scratch/v9_d1/datasets/*.csv.gz` | terukur |
+| 6 pemeriksaan per 24 jam | Anggaran desain, turunan 24 dibagi 6 sama dengan 4 jam per pemeriksaan | 3.2.7, dicatat sebagai asumsi D-19 | asumsi |
+| 13 head wajib tinjauan | Cacah head dengan `human_review` bernilai benar | `dashboard/data/engine_v9_i1.json`, larik `heads` | terukur |
+| 3 tingkat kewenangan | Himpunan nilai kolom TIER pada tabel evaluasi, yaitu TREN, PERINGATAN-BERPENGAWAS, dan BELUM LAYAK PAKAI | `docs/V9_EVAL_C_LAYERC.md` tabel 1 | terukur |
+| 50 dari 884 relevan BHA, 571 uncertain, 263 tidak | Frekuensi tiap nilai kolom `bha_relevant`, lalu 50/884 sama dengan 5,66 persen dan 571/884 sama dengan 64,59 persen | `data/volve/labels_curated_v2.csv` | terukur |
+| 192 dari 192 berkas tanpa rating motor | Cacah berkas assembly yang tidak memuat keenam medan rating, yaitu torqueMax, Pmax, rpmMax, powerMax, revPerGallon, dan torque | ekspor EDM, sumber sekunder | sumber sekunder, belum diuji ulang |
+| 73.500 menit atau 1.225 jam | Jumlah selisih `act_end` dan `act_start` dalam menit atas 884 baris; nilai sebelum pembulatan 73.500,0167 | `data/volve/labels_curated_v2.csv` | terukur |
+| median 45 menit | Rata-rata elemen ke-442 dan ke-443 dari 884 durasi terurut | sama | terukur |
+| p90 180 menit | Elemen ke-796 dari 884 durasi terurut, yaitu `ceil(0,9 x 884)` dengan cara nearest-rank | sama | terukur |
+| maksimum 780 menit | Elemen terakhir daftar durasi terurut | sama | terukur |
+| lead 4,5 sampai 8,5 menit dengan median 7,0 | Untuk setiap deteksi benar, `lead = t_onset - t_alert` dalam menit, diambil median per lipatan, lalu rentang antar lipatan 4,5 sampai 8,5 dan median antar lipatan 7,0 | `docs/V9_EVAL_C_LAYERC.md` bagian 2, head `persistence_event` mode pipa terjepit | terukur pada satu kelas |
+| 6 dari 7 mode | Cacah mode yang memiliki sedikitnya satu klaim bertier PERINGATAN-BERPENGAWAS, dengan tier per mode diambil dari klaim tertingginya; yang tidak memenuhi hanya keausan mata bor | `docs/V9_EVAL_C_LAYERC.md` tabel 1 | terukur |
+| 0 dari 27 head bertier alarm otomatis | Cacah klaim bertier ALARM-OTOMATIS pada tabel evaluasi | sama | terukur |
+
+Dua catatan pembacaan. Pertama, angka 73.500 menit pada naskah adalah pembulatan dari 73.500,0167 menit, sehingga selisih satu detik atas 884 kejadian tidak dihitung sebagai perbedaan. Kedua, angka 6 pemeriksaan per 24 jam bukan hasil pengukuran beban kerja, melainkan anggaran desain yang dipilih supaya laju alarm palsu yang dapat diterima manusia tetap terpenuhi, dan karena itu dicatat pada Lampiran B sebagai asumsi D-19.
+
 
 ---
 
@@ -743,9 +875,7 @@ Dua mode terakhir berada pada domain berbeda: `bit_wear` pada rangkaian lubang b
 
 ### 1.5.4 Engine
 
-**Kata engine dipakai hanya untuk mesin atau algoritma**, misalnya *engine* pencarian hyperparameter otomatis (H2O AutoML), *rule engine*, atau *engine* pembelajaran mesin. Kata ini tidak dipakai lagi untuk menyebut mode kegagalan.
-
-, sehingga satu kata menunjuk dua hal sekaligus dan maknanya bergantung konteks. Pada versi ini seluruh penyebutan mode memakai kata "mode", dan penyebutan pelaksana memakai kata "detektor".
+**Kata engine dipakai hanya untuk mesin atau algoritma**, misalnya *engine* pencarian hyperparameter otomatis (H2O AutoML), *rule engine*, atau *engine* pembelajaran mesin. Kata ini tidak dipakai lagi untuk menyebut mode kegagalan. Pada versi sebelumnya kata yang sama dipakai untuk mode sekaligus pelaksana, sehingga satu kata menunjuk dua hal sekaligus dan maknanya bergantung konteks. Pada versi ini seluruh penyebutan mode memakai kata "mode", dan penyebutan pelaksana memakai kata "detektor".
 
 ### 1.5.5 Ringkasan pemakaian
 
@@ -3147,6 +3277,11 @@ sebagai asumsi pada subbab asalnya.
 | A-15 | 3.906 dari 7.150 berkas log tidak terparse, 54,6 persen | 1.2 Ma2 | `docs/PPT1_LEDGER_ANGKA.md` | belum dibungkus; cacah berkas per sumur dibandingkan dengan yang masuk parse |
 | A-16 | WHIRL_RT identik BOUNCE_RT pada 67 berkas di 5 sumur, 1.790 dari 1.790 nilai | 1.2 Mt1 | `scratch/ppt1/verifikasi_bab1_2.py` | `python3 scratch/ppt1/verifikasi_bab1_2.py` |
 | A-17 | sembilan kategori 496, 216, 47, 38, 28, 25, 21, 12, 1; relevansi BHA 50 dan 263 dan 571 | 1.1.6, 1.2 M2 | `data/volve/labels_curated_v2.csv` | `python3 -c "import pandas as pd; d=pd.read_csv('data/volve/labels_curated_v2.csv'); print(d['category'].value_counts()); print(d['bha_relevant'].value_counts())"` |
+| A-18 | 6 dari 7 mode bertier peringatan berpengawasan, 0 mode bertier alarm otomatis | RM3, 1.1.6, 1.1.8 | `docs/V9_EVAL_C_LAYERC.md` tabel §1 | baca kolom TIER tiap klaim pada tabel §1, ambil tier tertinggi per mode, lalu cacah mode yang mencapai peringatan berpengawasan |
+| A-19 | kanal terisi sedikitnya 50 persen: 28 sampai 48 per sumur, dan 37 sampai 48 pada tujuh sumur uji kendali | 1.1.6, 1.1.9 | `data/volve/witsml_parsed/*.qc.json` medan `n_channels_ge_50pct` | baca medan itu pada tiap berkas QC |
+| A-20 | 480 fitur pada matriks fitur | 1.1.6, 1.1.9, 3.5 | `data/predictive/features_timeseries_controls_berdata.npz` | `python3 -c "import numpy as np; print(np.load('data/predictive/features_timeseries_controls_berdata.npz')['X'].shape)"` |
+| A-21 | 37 lipatan sebagai jumlah pasangan dataset dan sumur | 1.1.6, 1.1.8, 1.1.9 | `docs/evidence/folds_per_dataset.json` dan `scratch/v9_d1/datasets/*.csv.gz` | baca `total_lipatan` pada manifest, atau cacah nilai unik kolom `well` tiap dataset lalu dijumlahkan |
+| A-22 | 13 head wajib tinjauan dari 27 head | 1.1.6, 1.1.9 | `dashboard/data/engine_v9_i1.json` larik `heads` | cacah `human_review` bernilai benar |
 
 Baris A-11 sampai A-17 memuat angka lain yang sudah dicocokkan ke sumbernya secara numerik dengan toleransi pembulatan, sehingga selisih penulisan desimal tidak dihitung sebagai perbedaan. Angka yang belum dapat dicocokkan ke sumbernya tidak dimasukkan ke lampiran ini dan tetap dinyatakan terbuka pada subbab aslinya.
 
@@ -3180,6 +3315,7 @@ asumsi yang dipakai di badan argumen tidak luput dari lampiran.
 | D-16 | 3.4.12 Hasil negatif dan batas yang harus dinyatakan | Jumlah minggu kerja pada C6 berstatus asumsi untuk setiap alternatif. |
 | D-17 | 4.3 Batasan yang menyertai kesimpulan | Seluruh angka ekonomi berasal dari publikasi luar dan berlabel ASUMSI sesuai 1.4.3. |
 | D-18 | 4.4 Saran | Daftar ini dibuat dengan menyisir seluruh naskah, sehingga tidak ada asumsi yang dipakai di badan argumen tetapi luput dari lampiran ini. |
+| D-19 | 1.1.6 dan 1.1.9 | Anggaran enam pemeriksaan per 24 jam, setara satu pemeriksaan setiap empat jam, adalah anggaran desain yang belum diukur terhadap beban kerja kru. |
 
 # DAFTAR PUSTAKA
 

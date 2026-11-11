@@ -1,0 +1,74 @@
+{
+  "keterangan": "Cacah sumur unik per dataset latih. Jumlah seluruh n_well adalah jumlah lipatan leave-one-well-out.",
+  "sumber": "scratch/v9_d1/datasets/*.csv.gz, kolom well",
+  "per_dataset": {
+    "hyd_ki.csv.gz": {
+      "n_well": 9,
+      "well": [
+        "F-10",
+        "F-12",
+        "F-14",
+        "F-15A",
+        "F-15_S",
+        "F-5",
+        "F-7",
+        "F-9",
+        "F-9_A"
+      ]
+    },
+    "shk.csv.gz": {
+      "n_well": 9,
+      "well": [
+        "F-10",
+        "F-12",
+        "F-14",
+        "F-15A",
+        "F-15_S",
+        "F-5",
+        "F-7",
+        "F-9",
+        "F-9_A"
+      ]
+    },
+    "ssi.csv.gz": {
+      "n_well": 9,
+      "well": [
+        "F-10",
+        "F-12",
+        "F-14",
+        "F-15A",
+        "F-15_S",
+        "F-5",
+        "F-7",
+        "F-9",
+        "F-9_A"
+      ]
+    },
+    "stuck_k1.csv.gz": {
+      "n_well": 2,
+      "well": [
+        "F-14",
+        "F-9_A"
+      ]
+    },
+    "stuck_k2.csv.gz": {
+      "n_well": 4,
+      "well": [
+        "F-10",
+        "F-14",
+        "F-9",
+        "F-9_A"
+      ]
+    },
+    "vib.csv.gz": {
+      "n_well": 4,
+      "well": [
+        "F-14",
+        "F-15A",
+        "F-15_S",
+        "F-5"
+      ]
+    }
+  },
+  "total_lipatan": 37
+}
