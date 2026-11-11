@@ -245,7 +245,7 @@ Lima pernyataan berikut diletakkan paling depan supaya pembaca tahu apa yang dik
 
 Permasalahan utama bukan kerusakan alat tunggal, melainkan **tidak adanya lapisan penalaran yang mengubah data pengeboran menjadi peringatan sebelum dampak terjadi**. Akibatnya, setiap disfungsi baru dikenali setelah ia menjadi waktu terbuang, dan pengetahuan tentangnya hanya tersimpan sebagai catatan kejadian, tidak sebagai aturan pemantauan.
 
-Ukuran dampak yang dapat dipertanggungjawabkan disajikan pada tabel berikut. Semua baris berasal dari hitung ulang pada subbab ini, dan tidak ada baris yang berdiri sebagai perkiraan.
+Ukuran dampak disajikan pada tabel berikut.
 
 | Dimensi dampak | Angka | Cara membaca yang benar |
 |---|---|---|
@@ -1403,9 +1403,8 @@ Sembilan dari empat belas BoK tersentuh oleh rancangan ini. Lima BoK yang tidak 
 5. **Angka 0,99 pada klasifikasi disfungsi bukan batas deteksi.** Seluruh run gangguan pada
    data simulasi dibangkitkan dengan parameter yang terpisah 3 sampai 10 kali dari kondisi
    normal, sehingga macro-F1 0,9925 mengukur pemisahan kasus ekstrem dan bukan keparahan
-   terendah yang masih dikenali. Kalimat yang sah adalah "metode teruji memisahkan enam
-   kelas pada keparahan ekstrem", sedangkan kalimat "metode mendeteksi gangguan sekecil
-   apa pun" tidak boleh ditulis sampai kurva keparahan batas diukur seperti direncanakan
+   terendah yang masih dikenali, dan tidak menyatakan kemampuan mendeteksi gangguan
+   sekecil apa pun karena kurva keparahan batas belum diukur
    pada 3.1.8.
 6. **Dua kelas setpoint tidak boleh digabung dalam satu klaim deteksi.** Kelas `low_pump`
    dan `low_rpm` ditentukan oleh setpoint perintah yang terlihat langsung pada telemetri
@@ -1414,10 +1413,9 @@ Sembilan dari empat belas BoK tersentuh oleh rancangan ini. Lima BoK yang tidak 
    dilaporkan terpisah, dan angka empat kelas fisik tanpa keduanya, yaitu macro-F1 0,9950,
    adalah angka yang dipakai untuk klaim kemampuan deteksi.
 7. **Data simulasi bukan bukti lapangan.** Seluruh angka pada 3.1.8 berasal dari simulator
-   telemetri rig milik tim sendiri, sehingga klaim yang sah adalah metode teruji pada data
-   simulasi. Belum ada uji derau sensor dan belum ada transfer ke sumur nyata, sehingga
-   tidak ada kalimat yang boleh menyatakan bahwa alat sudah terbukti pada
-   operasi pengeboran sesungguhnya.
+   telemetri rig milik tim sendiri, sehingga angka itu berlaku pada data simulasi. Belum ada
+   uji derau sensor dan belum ada transfer ke sumur nyata, sehingga alat belum terbukti
+   pada operasi pengeboran sesungguhnya.
 
 ### 3.1.8 Bukti performa klasifikasi disfungsi dan batas deteksi yang harus diukur
 
@@ -2118,7 +2116,7 @@ Sembilan BoK didalami, dan lima BoK tidak diklaim sama sekali. BoK 14 dan BoK 3 
 
 **Standar yang mengikat.** ISO 9241-210:2019 menetapkan persyaratan dan rekomendasi desain berpusat manusia sepanjang daur hidup sistem interaktif. ISO 10075-3:2004 menetapkan persyaratan metode pengukuran beban kerja mental. ISO 6385:2016 menetapkan prinsip perancangan sistem kerja yang membagi tugas antara manusia dan sarana teknis.
 
-**Batas pendalaman.** Belum ada uji pengguna dan belum ada rancangan antarmuka, sehingga C8 belum dapat dinilai dari hasil uji. Klaim yang sah berhenti pada persyaratan rancangan yang dapat diperiksa, bukan pada keterpakaian yang sudah terbukti.
+**Batas pendalaman.** Belum ada uji pengguna dan belum ada rancangan antarmuka, sehingga C8 belum dapat dinilai dari hasil uji, dan yang dapat diperiksa baru persyaratan rancangan, bukan keterpakaian yang terbukti.
 
 **Kegagalan yang terjadi bila BoK ini diabaikan.** Antarmuka yang menampilkan seluruh head sekaligus menciptakan pengabaian menyeluruh, dan itulah alasan keluaran dipisah menjadi empat lapis keputusan.
 
@@ -2146,7 +2144,7 @@ Sembilan BoK didalami, dan lima BoK tidak diklaim sama sekali. BoK 14 dan BoK 3 
 
 **Standar yang mengikat.** IEC 61511-1:2016 menetapkan persyaratan fungsi keselamatan terinstrumentasi untuk industri proses, termasuk bahwa fungsi yang mengemban keselamatan menuntut tingkat integritas yang ditetapkan dan diverifikasi. Karena verifikasi itu tidak ada, keluaran model diposisikan sebagai informasi bagi manusia, bukan pengganti proteksi. API RP 754 edisi ketiga menetapkan indikator kinerja keselamatan proses, dipakai sebagai acuan penimbang kejadian. ISO 31000:2018 menetapkan kerangka proses manajemen risiko yang dipakai untuk menyusun register mode dan batas penerimaan.
 
-**Batas pendalaman.** Tidak ada penetapan tingkat integritas keselamatan, tidak ada penilaian risiko formal oleh pemilik masalah, dan tidak ada klaim penurunan risiko dalam angka. Klaim yang sah adalah bahwa sistem ini tidak boleh dijadikan lapisan proteksi. Klaim yang tidak sah adalah bahwa sistem ini menurunkan risiko sebesar nilai tertentu.
+**Batas pendalaman.** Tidak ada penetapan tingkat integritas keselamatan, tidak ada penilaian risiko formal oleh pemilik masalah, dan tidak ada klaim penurunan risiko dalam angka. Sistem ini karena itu tidak boleh dijadikan lapisan proteksi.
 
 **Kegagalan yang terjadi bila BoK ini diabaikan.** Ambang yang ditetapkan hanya dari akurasi akan memberi ambang paling longgar pada mode berdampak keselamatan, karena mode itu justru berprevalensi rendah dan mahal untuk diuji.
 
@@ -2501,7 +2499,7 @@ Sumber metode, dengan DOI yang sudah diperiksa:
 | Barron, F. H., dan Barrett, B. E. (1996). Decision Quality Using Ranked Attribute Weights. Management Science, 42(11), 1515 sampai 1523. | penurunan bobot kardinal dari urutan prioritas kriteria memakai Rank-Order Centroid | `10.1287/mnsc.42.11.1515` | pencarian web 25 Oktober 2026 menemukan DOI tersebut pada INFORMS, dengan abstrak yang menyatakan ROC lebih akurat daripada formula berbasis urutan lain |
 | Kunsch, P. L., dan Ishizaka, A. (2019). A note on using centroid weights in additive multi-criteria decision analysis. European Journal of Operational Research. | batas pemakaian ROC. Artikel ini menunjukkan keunggulan ROC bergantung pada cara elisitasi bobot, sehingga ROC pada subbab ini wajib disertai uji sensitivitas | `10.1016/j.ejor.2019.02.021` | pencarian web 25 Oktober 2026 menemukan DOI tersebut beserta ringkasan yang menyatakan peringkat kinerja metode bobot pengganti bergantung pada definisi simpleks bobot |
 
-Satu batas pemakaian dinyatakan di depan. Kunsch dan Ishizaka menunjukkan bahwa keunggulan bobot Rank-Order Centroid bergantung pada cara bobot seharusnya diperoleh. Karena itu bobot ROC pada subbab ini bukan bobot final mitra, melainkan bobot terbaik yang dapat dipertanggungjawabkan dari bahan yang ada, dan wajib disertai uji sensitivitas pada 3.4.8.
+Satu batas pemakaian berlaku pada subbab ini. Kunsch dan Ishizaka menunjukkan bahwa keunggulan bobot Rank-Order Centroid bergantung pada cara bobot seharusnya diperoleh. Karena itu bobot ROC pada subbab ini bukan bobot final mitra, melainkan bobot terbaik yang dapat dipertanggungjawabkan dari bahan yang ada, dan wajib disertai uji sensitivitas pada 3.4.8.
 
 ### 3.4.3 Kriteria, arah, dan fungsi nilai
 
@@ -2957,7 +2955,7 @@ Rata-rata AUPRC di 7 sumur, dengan pemilihan kandidat hanya memakai AUCPR CV int
 | Baseline regresi logistik | 0,1061 |
 | Lantai mayoritas | 0,0579 |
 
-Tiga pernyataan yang dapat diklaim dari tabel itu:
+Tiga akibat dari tabel itu:
 
 1. **Leader tunggal AutoML kalah dari Random Forest** (0,1325 lawan 0,1392). Ini menutup klaim bahwa pencarian otomatis lebih baik.
 2. **Gabungan median seluruh kandidat AutoML mengalahkan Random Forest** dengan selisih +0,0133 AUPRC atau 9,6 persen relatif, dan menang pada 5 dari 7 sumur.
