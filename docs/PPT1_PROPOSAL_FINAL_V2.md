@@ -1,7 +1,7 @@
 # PROPOSAL PROYEK PERANCANGAN TERPADU I
 **Sistem Pemantauan Kondisi Lubang Bor Berbasis Dashboard dengan 7 Mode Kegagalan dan 27 Head (Status Advisory)**
 
-Seluruh angka dalam proposal ini dapat dilacak ke cara memperolehnya pada tabel metode di subbab terkait. Sumber data: dataset publik Equinor Volve dengan lisensi CC BY-NC-SA 4.0. Setiap angka yang
+Setiap angka yang dilaporkan dapat dilacak ke cara memperolehnya pada tabel metode di subbab terkait. Sumber data: dataset publik Equinor Volve dengan lisensi CC BY-NC-SA 4.0. Setiap angka yang
 dipakai disertai cara memperolehnya pada tabel metode di subbab yang bersangkutan,
 dan seluruh perhitungan bersumber dari data mentah, bukan dari ringkasan yang sudah
 jadi. Sumber data: dataset publik Equinor Volve dengan lisensi CC BY-NC-SA 4.0.
@@ -154,7 +154,7 @@ Empat loop umpan balik digambar sebagai panah melingkar. Loop operasi menjelaska
 | N2 | Rangkaian bor dan sensor lubang bawah (MWD/LWD/RSS) | Peralatan | BHA, bit, sensor, arah aliran data ke atas | 161 run bhaRun dan 1.392 komponen tubular |
 | N3 | Kanal telemetri lubang bawah | Aliran data | Empat kanal instrumen dan tanda kanal kosong | `VIBLAT_RT`, `SHKRSK_RT`, `STUCK_RT`, `CRPM_RT`; `CRPM` kosong 86,68 persen |
 | N4 | Sensor dan kanal permukaan | Peralatan dan aliran data | Torsi, standpipe, laju alir, hookload, WOB, RPM, ROP | 11 kanal permukaan menjadi dasar 55 fitur |
-| N5 | Historian dan penyimpanan data | Penyimpanan | Berkas WITSML terparse dan folder dataset | 10 CSV, 9.935.708 baris mentah; 37.572 berkas pada 10 entri puncak, 27,43 GB |
+| N5 | Historian dan penyimpanan data | Penyimpanan | Berkas WITSML terparse dan himpunan data latih | 10 CSV, 9.935.708 baris mentah; 37.572 berkas pada 10 entri puncak, 27,43 GB |
 | N6 | Penyeragaman grid dan jendela fitur | Proses | Dua kotak proses: grid 60 detik lalu jendela 10 menit | Konversi grid 60 detik dan jendela `[t0-10, t0)` |
 | N7 | Lapisan deteksi tujuh mode kegagalan (sisipan proyek) | Proses baru | Tujuh kotak kecil atau satu kotak berlabel 7 mode, dengan tiga tingkat keluaran | 7 mode, 27 head, 292.954 baris latih |
 | N8 | Dashboard peringatan dan penjelasan | Antarmuka | Peringatan, tingkat keyakinan, kanal penyebab | Tier alat 0 alarm otomatis, 3 peringatan, 2 bersyarat, 2 tren |
@@ -323,7 +323,7 @@ Tabel ini memuat setiap angka yang dipakai pada 1.1 beserta langkah hitungnya, d
 | 601,1 / 343,5 / 101,5 / 50,5 / 47,3 / 40,2 / 25,8 / 14,0 / 1,2 jam | Jumlah menit per kategori dibagi 60 | sama |
 | 56,1 / 5,7 / 64,6 / 20,6 persen | 496/884, 50/884, 571/884, 182/884 | sama |
 | 49,1 / 28,0 / 3,9 / 5,0 persen | 601,1/1.225, 343,5/1.225, 47,3/1.225, (47,3+14,0)/1.225 | sama |
-| 10 entri puncak, 37.572 berkas, 27,43 GB | Penelusuran rekursif folder data: jumlah berkas dan ukuran byte tiap entri puncak dijumlahkan | sama |
+| 10 entri puncak, 37.572 berkas, 27,43 GB | Penelusuran rekursif data proyek: jumlah berkas dan ukuran byte tiap entri puncak dijumlahkan | sama |
 | 10 berkas, 9.935.708 baris mentah, 9.935.698 baris data | Cacah baris tiap berkas log hasil parse, dikurangi satu baris header per berkas | sama |
 | 292.954 baris pada 6 dataset | Cacah baris tiap dataset latih setelah dekompresi, dikurangi satu baris header; rincian hyd_ki 52.509, shk 56.495, ssi 35.906, stuck_k1 5.555, stuck_k2 118.567, vib 23.922 | sama |
 | 37 lipatan, 0 pelanggaran kebocoran | Lipatan dihitung sebagai jumlah pasangan dataset dan sumur pada enam dataset, yaitu 9+9+9+2+4+4 dengan rincian pada 1.1.9; pelanggaran dicacah sebagai baris latih yang fiturnya berasal dari waktu setelah labelnya | sama |
@@ -381,7 +381,7 @@ Rumus laju alarm palsu mengikuti konvensi evaluasi deteksi, yaitu jumlah alarm p
 | 6 dari 7 mode | Cacah mode yang memiliki sedikitnya satu klaim bertier peringatan berpengawasan, dengan tier per mode diambil dari klaim tertingginya; yang tidak memenuhi hanya keausan mata bor | Tabel evaluasi lapisan keputusan, kolom tingkat kewenangan tiap klaim | terukur |
 | 0 dari 27 head bertier alarm otomatis | Cacah klaim bertier alarm otomatis pada tabel evaluasi | Sama dengan baris di atas | terukur |
 
-Dua catatan pembacaan. Pertama, angka 73.500 menit pada naskah adalah pembulatan dari 73.500,0167 menit, sehingga selisih satu detik atas 884 kejadian tidak dihitung sebagai perbedaan. Kedua, angka 6 pemeriksaan per 24 jam bukan hasil pengukuran beban kerja, melainkan anggaran desain yang dipilih supaya laju alarm palsu yang dapat diterima manusia tetap terpenuhi, dan karena itu dicatat pada Lampiran B sebagai asumsi D-19.
+Dua catatan pembacaan. Pertama, angka 73.500 menit adalah pembulatan dari 73.500,0167 menit, sehingga selisih satu detik atas 884 kejadian tidak dihitung sebagai perbedaan. Kedua, angka 6 pemeriksaan per 24 jam bukan hasil pengukuran beban kerja, melainkan anggaran desain yang dipilih supaya laju alarm palsu yang dapat diterima manusia tetap terpenuhi, dan karena itu dicatat pada Lampiran B sebagai asumsi D-19.
 
 ---
 
@@ -714,14 +714,14 @@ praktis, standar, dan aturan yang berlaku.
 
 ### 1.4.1 Sumber data
 
-Seluruh data yang dianalisis dalam proposal ini berasal dari **dataset publik Equinor
+Seluruh data yang dianalisis berasal dari **dataset publik Equinor
 Volve** yang diperoleh lewat kanal publik penyedia dan digunakan setelah mendapat
 persetujuan dosen pengampu. Terdiri atas telemetri WITSML 10 wellbore dengan 118 kanal
 pada satu wellbore contoh, 884 baris interupsi terkurasi, catatan aktivitas (DDR)
 23.447 baris selama 39.398 jam, serta dokumen akhir sumur (EOWR) yang menjadi sumber
 label kejadian. Seluruh angka dalam proposal dapat direproduksi dari data tersebut.
 
-Proposal ini **tidak memakai, tidak mengutip, dan tidak menyebut** data operasional milik
+Proyek ini **tidak memakai, tidak mengutip, dan tidak menyebut** data operasional milik
 perusahaan mana pun. Data perusahaan tersebut bersifat rahasia dan hanya boleh diakses
 untuk keperluan pembelajaran internal tim di luar dokumen akademik.
 
@@ -744,7 +744,7 @@ jauh dari rentang yang dipakai di sini.
 1. **Kalibrasi per sumur.** Ambang deteksi pada data ini memiliki false alarm rate yang
    menyebar 4,1 sampai 496 per 24 jam antar sumur. Angka yang sama pada sumur lain tidak
    dijamin, sehingga kalibrasi per sumur menjadi prasyarat sebelum alat dipakai.
-2. **Bukan bukti penurunan kerugian.** Proposal ini menawarkan rancangan, bukan klaim
+2. **Bukan bukti penurunan kerugian.** Yang ditawarkan adalah rancangan, bukan klaim
    penghematan. Tidak ada pengurangan NPT yang terukur dalam kondisi nyata pada tahap ini.
 3. **Kelas kegagalan tidak seimbang.** 496 dari 884 baris label adalah operasi wajar
    tanpa bukti kegagalan, dan hanya 50 kejadian yang berlabel relevan BHA. Model untuk
@@ -772,7 +772,7 @@ jauh dari rentang yang dipakai di sini.
 
 ### 1.4.5 Ruang lingkup
 
-Proposal ini berhenti pada tahap **State the Problem dan Investigate** sesuai pedoman.
+Proyek ini berhenti pada tahap **State the Problem dan Investigate** sesuai pedoman.
 Prototipe dashboard disebutkan sebagai bukti kelayakan solusi terpilih, bukan sebagai
 klaim bahwa sistem sudah dipasang atau sudah dipakai di lapangan. Pengujian nyata di
 lingkungan operasi menjadi ruang lingkup Proyek Perancangan Terpadu II.
@@ -813,7 +813,7 @@ Dua mode terakhir berada pada domain berbeda: `bit_wear` pada rangkaian lubang b
 
 ### 1.5.4 Engine
 
-**Kata engine dipakai hanya untuk mesin atau algoritma**, misalnya *engine* pencarian hyperparameter otomatis (H2O AutoML), *rule engine*, atau *engine* pembelajaran mesin. Kata ini tidak dipakai lagi untuk menyebut mode kegagalan. Pada versi sebelumnya kata yang sama dipakai untuk mode sekaligus pelaksana, sehingga satu kata menunjuk dua hal sekaligus dan maknanya bergantung konteks. Pada versi ini seluruh penyebutan mode memakai kata "mode", dan penyebutan pelaksana memakai kata "detektor".
+**Kata engine dipakai hanya untuk mesin atau algoritma**, misalnya *engine* pencarian hyperparameter otomatis (H2O AutoML), *rule engine*, atau *engine* pembelajaran mesin. Kata ini tidak dipakai untuk menyebut mode kegagalan. Untuk mode dipakai kata "mode", dan untuk pelaksana yang menghasilkan peringatan dipakai kata "detektor".
 
 ### 1.5.5 Ringkasan pemakaian
 
@@ -840,7 +840,7 @@ Pedoman 2.3 pada halaman 33 menuntut proposal menjelaskan manfaat bagi industri 
 
 **Bagi keilmuan dan praktik keteknikan.** Sembilan alternatif disusun pada lapisan intervensi yang berbeda, dari mutu label sampai lapisan keputusan, dengan sembilan BoK yang masing-masing membawa standar, angka, dan batas. Susunan ini dapat dipakai ulang pada rig kecil lain yang menghadapi keadaan serupa, yaitu telemetri permukaan tersedia tetapi label peristiwa tidak.
 
-**Luaran yang menyertai.** Pedoman 2.9 pada halaman 28 sampai 30 menuntut empat luaran lain di samping proposal, yaitu poster individu setiap anggota, laporan singkat BoK, dokumen presentasi kelompok, dan publikasi pada paling sedikit satu kanal. Keempatnya bertumpu pada angka dan batas yang sama dengan proposal ini, sehingga tidak boleh memuat klaim yang lebih kuat daripada yang dinyatakan di sini.
+**Luaran yang menyertai.** Pedoman 2.9 pada halaman 28 sampai 30 menuntut empat luaran lain di samping proposal, yaitu poster individu setiap anggota, laporan singkat BoK, dokumen presentasi kelompok, dan publikasi pada paling sedikit satu kanal. Keempatnya bertumpu pada angka dan batas yang sama, sehingga tidak boleh memuat klaim yang lebih kuat daripada yang dinyatakan pada bab ini.
 
 **Batas manfaat yang dinyatakan.** Tidak ada klaim penghematan yang sudah terukur, tidak ada tarif rig per jam yang tersedia, dan tidak ada angka rupiah pada 3.4 yang berasal dari data mitra. Manfaat di atas adalah potensi yang dapat diuji pada PPT II, bukan hasil yang sudah terjadi.
 
@@ -1676,7 +1676,7 @@ keluaran tiap kelas, tersedia pada Lampiran A.
 
 ### 3.2.1 Dasar analisis dan aturan bukti
 
-Pedoman menuntut tiga hal pada subbab 3.2, yaitu ruang brainstorming yang tidak menilai ide pada tahap awal, analisis sembilan alternatif dengan kedalaman minimal tiga BoK dari empat belas BoK, dan peta afinitas untuk mengelompokkan ide yang mirip ke kategori yang logis (Buku Pedoman PPT Tahap I subbab 3.2, halaman 35). Dokumen ini menjawab ketiganya dengan urutan: himpunan ide tetap sembilan alternatif dari subbab 3.1, pengelompokan dilakukan pada 3.2.2 sampai 3.2.6, dan pendalaman BoK dilakukan pada 3.2.7 sampai 3.2.9.
+Pedoman menuntut tiga hal pada subbab 3.2, yaitu ruang brainstorming yang tidak menilai ide pada tahap awal, analisis sembilan alternatif dengan kedalaman minimal tiga BoK dari empat belas BoK, dan peta afinitas untuk mengelompokkan ide yang mirip ke kategori yang logis (Buku Pedoman PPT Tahap I subbab 3.2, halaman 35). Ketiganya dijawab dengan urutan: himpunan ide tetap sembilan alternatif dari subbab 3.1, pengelompokan dilakukan pada 3.2.2 sampai 3.2.6, dan pendalaman BoK dilakukan pada 3.2.7 sampai 3.2.9.
 
 Ruang yang tidak menilai ide pada tahap awal terlihat pada subbab 1.3, yang memuat sembilan
 usulan awal berkode T1 sampai T9 dari tiga anggota tanpa peringkat dan tanpa penilaian
@@ -2957,7 +2957,7 @@ Tabel 3.4.12 Bukti terukur per kelas sasaran
 | bit_wear | A1, A5, A6, A8 | 1,495 pada F-15S gagal tipis | G1 3 dari 4 fold, G2 4 dari 4 fold | Persistence lebih tinggi daripada Random Forest pada 4 dari 4 fold sehingga verdict turun menjadi layak bersyarat |
 | vib | A2, A9 | 1,61 / 2,36 / 3,50 / 1,63 | LULUS penuh pada baseline, direproduksi pada uji utama | False alarm rate menyebar 4,15 sampai 496,09 per 24 jam, yaitu rasio 119,6 kali antar sumur |
 
-Dua hal perlu dibaca dari tabel itu. Pertama, menurut yang mengutip, hanya dua kelas yang berstatus LULUS penuh pada baseline, yaitu vib dan ssi. Meski begitu, tingkat 100 pada C1 belum diberikan kepada alternatif mana pun, karena rubrik C1 menuntut gate lolos untuk mekanisme alternatif itu sendiri: A1 memberi delta terukur positif pada kelas stuck tetapi negatif pada kelas hyd, sedangkan A2 dan A9 yang menyentuh vib, serta A2, A4, dan A5 yang menyentuh ssi, belum menjalankan evaluasi ulang pada kelas-kelas itu. Kedua, jumlah fold berbeda jauh antar kelas, dari dua fold pada stuck sampai tujuh fold pada shk, sehingga C2 terikat pada kelas mana yang disentuh sebuah alternatif.
+Dua hal perlu dibaca dari tabel itu. Pertama, hanya dua kelas yang berstatus lulus penuh pada baseline, yaitu mode getaran dan mode stick-slip. Meski begitu, tingkat 100 pada C1 belum diberikan kepada alternatif mana pun, karena rubrik C1 menuntut gate lolos untuk mekanisme alternatif itu sendiri: A1 memberi delta terukur positif pada kelas stuck tetapi negatif pada kelas hyd, sedangkan A2 dan A9 yang menyentuh vib, serta A2, A4, dan A5 yang menyentuh ssi, belum menjalankan evaluasi ulang pada kelas-kelas itu. Kedua, jumlah fold berbeda jauh antar kelas, dari dua fold pada stuck sampai tujuh fold pada shk, sehingga C2 terikat pada kelas mana yang disentuh sebuah alternatif.
 
 ![Gambar 7](assets/fig04_auprc_per_engine.png)
 
@@ -3190,7 +3190,7 @@ ditulis sebagai hasil.
 
 # LAMPIRAN A. JEJAK ANGKA
 
-Lampiran ini memuat angka yang dipakai di badan proposal beserta bahan hitung dan cara memperolehnya. Bahan dinyatakan sebagai jenis pengamatan dan kolom yang dipakai, bukan sebagai nama berkas, supaya pembaca dapat menilai asal angka tanpa bergantung pada tata letak penyimpanan penulis. Angka yang belum terukur tidak dimasukkan ke tabel ini dan tetap dinyatakan sebagai asumsi pada subbab asalnya.
+Lampiran ini memuat angka yang dipakai di badan proposal beserta bahan hitung dan cara memperolehnya. Bahan dinyatakan sebagai jenis pengamatan dan kolom yang dipakai, supaya pembaca dapat menilai asal angka. Angka yang belum terukur tidak dimasukkan ke tabel ini dan tetap dinyatakan sebagai asumsi pada subbab asalnya.
 
 | ID | Angka | Tempat dipakai | Bahan dan cara memperoleh | Status |
 | --- | --- | --- | --- | --- |
@@ -3217,7 +3217,7 @@ Lampiran ini memuat angka yang dipakai di badan proposal beserta bahan hitung da
 | A-21 | 37 lipatan sebagai jumlah pasangan dataset dan sumur | 1.1.6, 1.1.8, 1.1.9 | Enam dataset latih: cacah nama sumur berbeda tiap dataset, yaitu hyd 9, shk 9, ssi 9, stuck K-i 2, stuck K-ii 4, vib 4, lalu dijumlahkan | terukur |
 | A-22 | 13 head wajib tinjauan dari 27 head | 1.1.6, 1.1.9 | Rekap evaluasi per head: cacah head yang penanda wajib tinjauannya bernilai benar | terukur |
 
-Baris A-11 sampai A-17 memuat angka yang sudah dicocokkan ke bahan hitungnya secara numerik dengan toleransi pembulatan, sehingga selisih penulisan desimal tidak dihitung sebagai perbedaan. Angka yang belum dapat dicocokkan tidak dimasukkan ke lampiran ini dan tetap dinyatakan terbuka pada subbab aslinya.
+Angka pada A-11 sampai A-17 dinyatakan dengan toleransi pembulatan, sehingga selisih penulisan desimal tidak dihitung sebagai perbedaan. Angka yang belum dapat dicocokkan tidak dimasukkan ke lampiran ini dan tetap dinyatakan terbuka pada subbab aslinya.
 
 Catatan pembacaan: A-01 sampai A-06 berasal dari simulator internal dan karena itu hanya berlaku sebagai bukti metode pada data simulasi. A-07 sampai A-22 berasal dari data dan hasil pengolahan proyek sendiri, dan batas klaimnya dinyatakan pada subbab 1.4.4 serta 4.3.
 
@@ -3246,7 +3246,7 @@ asumsi yang dipakai di badan argumen tidak luput dari lampiran.
 | D-15 | 3.4.12 Hasil negatif dan batas yang harus dinyatakan | Bobot berstatus asumsi karena belum ada wawancara mitra. |
 | D-16 | 3.4.12 Hasil negatif dan batas yang harus dinyatakan | Jumlah minggu kerja pada C6 berstatus asumsi untuk setiap alternatif. |
 | D-17 | 4.3 Batasan yang menyertai kesimpulan | Seluruh angka ekonomi berasal dari publikasi luar dan berlabel ASUMSI sesuai 1.4.3. |
-| D-18 | 4.4 Saran | Daftar ini dibuat dengan menyisir seluruh naskah, sehingga tidak ada asumsi yang dipakai di badan argumen tetapi luput dari lampiran ini. |
+| D-18 | 4.4 Saran | Tidak ada asumsi yang dipakai di badan argumen tanpa dicatat di lampiran ini. |
 | D-19 | 1.1.6 dan 1.1.9 | Anggaran enam pemeriksaan per 24 jam, setara satu pemeriksaan setiap empat jam, adalah anggaran desain yang belum diukur terhadap beban kerja kru. |
 
 # DAFTAR PUSTAKA
@@ -3280,7 +3280,7 @@ dipakai dengan pembatasan berikut:
 
 1. **[3] tidak mendukung klaim bahwa dashboard menurunkan NPT.** Yang dibuktikan adalah
    pengaruhnya pada performa operator dan beban kognitif di lingkungan simulasi ruang
-   kendali proses kimia, bukan di rig. Karena itu proposal ini memakai [3] hanya untuk
+   kendali proses kimia, bukan di rig. Karena itu [3] dipakai hanya untuk
    membenarkan bentuk antarmuka dan pembatasan otomatisasi, bukan untuk mengklaim
    penghematan.
 2. **[2] dan [4] dan [5] adalah halaman industri, bukan publikasi peer-review.** Angkanya
