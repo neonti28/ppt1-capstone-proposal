@@ -443,7 +443,7 @@ Diagram terdiri atas satu tulang punggung (efek) dan enam cabang, dengan 27 rant
 
 | ID | Cabang | Ranting (sebab spesifik) | Cara menghitung |
 | --- | --- | --- | --- |
-| M1 | Validitas label buatan manusia | Kontrol-positif stick-slip tidak lulus: **0 dari 10** kontrol-positif stuck gagal, sehingga presisi dan recall kelas stuck dihitung dari basis label yang belum tervalidasi | uji sepuluh kejadian stuck yang seharusnya terdeteksi, lalu hitung berapa yang lolos deteksi; hasilnya nol dari sepuluh lolos |
+| M1 | Validitas label buatan manusia | Kontrol-positif label pipa terjepit tidak lulus: **0 dari 10** kejadian yang seharusnya terdeteksi berhasil dideteksi, sehingga presisi dan recall kelas stuck dihitung dari basis label yang belum tervalidasi | uji sepuluh kejadian stuck yang seharusnya terdeteksi, lalu hitung berapa yang lolos deteksi; hasilnya nol dari sepuluh lolos |
 | M2 | Validitas label buatan manusia | Relevansi BHA tidak diputuskan: **571 dari 884 (64,6 persen)** berstatus `uncertain`, hanya **50 (5,7 persen)** dinyatakan `yes` | hitung jumlah dan proporsi baris relevansi BHA belum pasti serta baris yang yakin relevan, dari 884 baris tabel label |
 | M3 | Validitas label buatan manusia | Label hidraulik K-ii memakai **proksi** perubahan volume pit (ΔV_pit), bukan pengukuran hidraulika lubang bor, sehingga label berisiko sirkular terhadap fitur | teliti definisi label hidraulik pada dokumen capstone teknis dan dokumen peta kapabilitas |
 | M4 | Rantai keputusan manusia | Seluruh keluaran berhenti di manusia: **0 slot alarm otomatis**, **11 peringatan L1** harus dibaca, beban waktu baca insinyur belum pernah diukur | hitung banyak slot alarm otomatis pada ringkasan hasil eksekusi lalu hitung peringatan lapis perantara |
@@ -656,6 +656,28 @@ Masalah yang dipecahkan harus memuat atribut WP1 dan semua atau sebagian atribut
 
 Kesimpulan yang dapat diperiksa: WP1 terpenuhi, lima atribut WP2 sampai WP7 terpenuhi penuh, dan satu atribut terpenuhi sebagian, yaitu WP5. Karena WP1 ditambah semua atau sebagian WP2 sampai WP7 terpenuhi, susunan ini memenuhi syarat tanpa atribut yang diklaim melebihi buktinya. Dasar kelangkaan untuk WP4 bukan pengandaian, melainkan hasil pencarian pustaka yang jumlahnya dapat diulang.
 
+### 1.2.10 Sumber dan pembentukan label
+
+Model pada penelitian ini adalah pengklasifikasi terbimbing: satu baris data adalah satu jendela waktu, dan jawaban benar untuk jendela itu berupa label biner untuk satu mode kegagalan. Label tersebut tidak berasal dari catatan kegagalan fisik mitra, karena catatan itu tidak tersedia pada tahap ini. Label dibentuk dari kanal telemetri terukur melalui aturan tetap yang tertulis dan dapat dijalankan ulang. Praktik ini disebut pelabelan terprogram dalam kerangka pembelajaran terbimbing lemah (Ratner dkk., 2016; Ratner dkk., 2017), dan hasilnya disebut label lemah atau label proksi.
+
+| Mode | Kanal sumber label | Aturan pembentukan label | Status bukti label |
+|---|---|---|---|
+| Getaran | Kanal status getaran dan risiko hentakan MWD | Jendela dinyatakan positif bila kanal status getaran aktif pada jendela yang sama | Label proksi; pada F-10 kanal tercatat hadir tetapi jumlah bin berobservasi nol |
+| Stick-slip | Kanal putaran dan indeks stick-slip | Jendela positif bila kondisi berlangsung dengan indeks minimal 1, bukan pada onset | Label proksi; kanal CRPM kosong pada 86,68 persen bin menit |
+| Hentakan | Kanal risiko hentakan MWD | Jendela positif bila kanal status hentakan aktif pada jendela yang sama | Label proksi; pada F-7 kanal hanya terisi 0,67 persen baris |
+| Pipa terjepit | Kanal status pipa terjepit | Jendela positif setelah titik naik status, dengan dua varian onset, yaitu ketat dan isi maju | Kontrol-positif nol dari sepuluh; arti skala status 0 sampai 3 belum dipastikan |
+| Hidraulik | Residual tekanan standpipe | Jendela positif bila nilai mutlak z residual di atas 2 | Label proksi dan beririsan dengan fitur tekanan; alternatif A8 memakai perubahan volume pit dan selisih laju alir |
+| Keausan mata bor | Energi mekanik spesifik | Jendela positif bila energi mekanik spesifik melewati ambang tinggi yang dikunci | Hanya batas run tersedia; medan keausan fisik tidak ada pada 77 berkas |
+| Keausan peralatan | Riwayat pemakaian alat bengkel | Jendela positif pada batas run bengkel | Domain bengkel, bukan rig |
+
+Aturan pada tabel di atas terbuka untuk diperiksa. Setiap label dapat ditelusuri ke kanal dan ambang asalnya, dan seluruh proses dapat dijalankan ulang dari data mentah.
+
+Mutu label diuji melalui tiga cara. Kontrol-positif pada kejadian yang seharusnya terdeteksi memberi hasil nol dari sepuluh untuk mode pipa terjepit. Audit semantik memeriksa arti skala kanal status lintas sumur. Relevansi BHA baru pasti pada 50 dari 884 kejadian.
+
+Pemisahan kanal label dari kanal fitur tidak selalu berhasil. Label hidraulik berasal dari residual tekanan standpipe yang beririsan dengan fitur tekanan, dan label getaran diturunkan dari kanal yang sama dengan fiturnya. Karena itu angka AUPRC getaran 0,912 mengukur kesesuaian dengan definisi label pada tabel, bukan kinerja terhadap kegagalan fisik, dan batas yang sama berlaku pada seluruh angka kinerja di Bab III dan Bab IV.
+
+Jalur perbaikan disiapkan pada alternatif A8, yaitu mengganti label proksi dengan label turunan fisika: perubahan volume pit dan selisih laju alir untuk hidraulik, serta rasio energi mekanik spesifik untuk keausan mata bor.
+
 ## 1.3 Pembagian Tanggung Jawab dan Titik Kritis
 
 Tim terdiri atas tiga anggota dengan penamaan disamarkan. Pembagian dilakukan per bab, sehingga setiap titik kritis memiliki satu pemilik.
@@ -705,17 +727,13 @@ Volve** yang diperoleh lewat kanal publik penyedia dan digunakan setelah mendapa
 persetujuan dosen pengampu. Terdiri atas telemetri WITSML 10 wellbore dengan 118 kanal
 pada satu wellbore contoh, 884 baris interupsi terkurasi, catatan aktivitas (DDR)
 23.447 baris selama 39.398 jam, serta dokumen akhir sumur (EOWR) yang menjadi sumber
-label kejadian. Seluruh angka dalam proposal dapat direproduksi dari data tersebut.
-
-Proyek ini **tidak memakai, tidak mengutip, dan tidak menyebut** data operasional milik
-perusahaan mana pun. Data perusahaan tersebut bersifat rahasia dan hanya boleh diakses
-untuk keperluan pembelajaran internal tim di luar dokumen akademik.
+label kejadian.
 
 ### 1.4.2 Identitas
 
 Nama perusahaan, divisi, dan lokasi proyek disamarkan. Tim disebut sebagai anggota A, B,
 dan C. Objek kajian dirujuk sebagai "perusahaan layanan pengeboran multinasional" tanpa
-penyebutan nama, agar dokumen dapat diajukan tanpa melanggar perjanjian kerahasiaan.
+penyebutan nama, agar dokumen dapat diajukan tanpa melanggar perjanjian kerahasiaan. Data operasional perusahaan tidak dipakai pada penelitian ini karena bersifat rahasia.
 
 ### 1.4.3 Angka ekonomi
 
@@ -3272,3 +3290,11 @@ dipakai dengan pembatasan berikut:
 
  OpenAlex. (2026). OpenAlex scholarly index, antarmuka pencarian karya.
      https://api.openalex.org
+
+[16] Ratner, A., De Sa, C., Wu, S., Selsam, D., & Ré, C. (2016). Data programming: Creating
+     large training sets, quickly. *Advances in Neural Information Processing Systems*, 29.
+     https://arxiv.org/abs/1605.07723
+
+[17] Ratner, A., Bach, S. H., Ehrenberg, H., Fries, J., Wu, S., & Ré, C. (2017). Snorkel: Rapid
+     training data creation with weak supervision. *Proceedings of the VLDB Endowment*, 11(3).
+     https://arxiv.org/abs/1710.10595
