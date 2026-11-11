@@ -836,7 +836,7 @@ Pedoman 2.3 pada halaman 33 menuntut proposal menjelaskan manfaat bagi industri 
 
 **Bagi pengelolaan alat bengkel.** Empat alat, dua run, dan 469 jendela pada domain bengkel dipakai untuk memutuskan penggantian alat berdasarkan progresi keausan dan peringkat, bukan berdasarkan run yang kebetulan berakhir. Keputusan penggantian yang berpindah dari kalender ke kondisi alat mengurangi penggantian dini tanpa menambah risiko alat gagal di tengah pekerjaan.
 
-**Bagi pemilik masalah sebagai pengguna.** Enam cerita pengguna pada 3.3.3 menetapkan apa yang harus diterima tiap peran, mulai dari insinyur pengeboran yang memerlukan penjelasan sampai pengawas well-control yang memerlukan perilaku konservatif. Kriteria dan batasan pada 3.3 diturunkan dari cerita itu, sehingga pemenang pemilihan alternatif pada 3.4 bukan pilihan yang hanya benar secara statistik.
+**Bagi pemilik masalah sebagai pengguna.** Enam user story pada 3.3.3 menetapkan apa yang harus diterima tiap peran, mulai dari insinyur pengeboran yang memerlukan penjelasan sampai pengawas well-control yang memerlukan perilaku konservatif. Kriteria dan batasan pada 3.3 diturunkan dari cerita itu, sehingga pemenang pemilihan alternatif pada 3.4 bukan pilihan yang hanya benar secara statistik.
 
 **Bagi keilmuan dan praktik keteknikan.** Sembilan alternatif disusun pada lapisan intervensi yang berbeda, dari mutu label sampai lapisan keputusan, dengan sembilan BoK yang masing-masing membawa standar, angka, dan batas. Susunan ini dapat dipakai ulang pada rig kecil lain yang menghadapi keadaan serupa, yaitu telemetri permukaan tersedia tetapi label peristiwa tidak.
 
