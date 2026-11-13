@@ -182,7 +182,7 @@ Empat loop umpan balik digambar sebagai panah melingkar. Loop operasi menjelaska
 | ID | Nama loop | Jalur | Mengapa penting untuk gambar |
 |---|---|---|---|
 | L1 | Loop operasi reaktif | N9 lalu N12 lalu N13 lalu N5 lalu N7 | Menjelaskan akar masalah berulang: deteksi terjadi setelah dampak timbul, dan hasilnya hanya menjadi catatan kejadian baru |
-| L2 | Loop kalibrasi per sumur | N7 lalu N8 lalu N10 lalu N7 | Menjelaskan mengapa ambang global dilarang: laju alarm palsu menyebar 0,00 sampai 132,05 per 24 jam antar sumur dan mode pada mode getaran |
+| L2 | Loop kalibrasi per sumur | N7 lalu N8 lalu N10 lalu N7 | Menjelaskan mengapa ambang global dilarang: laju alarm palsu menyebar 9,99 sampai 49,94 per 24 jam antar sumur pada mode getaran |
 | L3 | Loop mutu label | N13 lalu N5 lalu N6 lalu N7 | Menjelaskan mengapa mutu laporan harian menentukan mutu model, karena 56,1 persen kejadian tidak memuat bukti kegagalan |
 | L4 | Loop keputusan dan verifikasi | N8 lalu N9 lalu N12 lalu N8 | Menutup siklus nilai: keluaran model baru bernilai bila berakhir pada tindakan yang hasilnya terukur |
 
