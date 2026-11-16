@@ -533,39 +533,32 @@ Bab II memuat enam alat analisis dengan satu efek yang sama: kegagalan BHA yang 
 
 ## 2.1 Value Stream Mapping (VSM)
 
-VSM memetakan aliran nilai penanganan satu kegagalan BHA, dari persiapan tool di pangkalan sampai pengeboran berlanjut. Kronologi setiap kejadian disusun dari tabel waktu proses pada 2.1.2 dan OPC pada 2.3. Satuan analisisnya satu kejadian kegagalan, dan setiap tahap dibedakan menjadi tahap yang menambah kemajuan sumur dan tahap yang menunggu.
+VSM memetakan aliran penanganan satu kegagalan BHA dengan dua ukuran yang dibedakan tegas: lead time, yaitu seluruh waktu siklus dari kegagalan terdeteksi sampai pengeboran berlanjut, dan waktu nilai tambah, yaitu bagian dari siklus yang benar-benar menambah kemajuan sumur (Rother & Shook, Learning to See, Lean Enterprise Institute, 2003). Simbol pemetaannya kotak proses untuk setiap langkah kerja, segitiga untuk penantian, garis putus-putus untuk aliran informasi, dan tangga waktu di bawah peta untuk menjumlahkan kedua ukuran.
 
-**Gambar 4. Aliran Nilai Siklus Penanganan Kegagalan BHA**
+Satuan analisisnya satu kejadian kegagalan. Siklus yang dipetakan adalah siklus pemulihan pada skenario deepwater selama 36 jam, dan 2.3 menguraikan urutan kerjanya dengan OPC. Angka pada Gambar 4 dan pada tabel 2.1.1 berasal dari satu peta aliran nilai yang sama, sehingga keduanya tidak mungkin berbeda.
 
-```mermaid
-flowchart LR
-  A["Servis dan uji fungsi<br/>di fasilitas"] --> B["Pengiriman ke rig<br/>tunduk jadwal dan cuaca"]
-  B --> C["Run di dasar sumur"]
-  C --> D{"Kegagalan BHA?"}
-  D -- tidak --> C
-  D -- ya --> E["Deteksi kegagalan<br/>2 sampai 3 jam"]
-  E --> F["POOH<br/>7 sampai 11 jam"]
-  F --> G["Lay down dan make-up<br/>4 sampai 8 jam"]
-  G --> H["Uji fungsi<br/>2 jam"]
-  H --> I["RIH dan reaming<br/>9 sampai 12 jam"]
-  I --> C
-  E -.-> J["Siklus pemulihan mengalikan<br/>spread cost per jam<br/>1.875 sampai 20.000 USD<br/>tanpa kemajuan sumur"]
-  I -.-> J
-```
+**Gambar 4. Peta Aliran Nilai Siklus Pemulihan Sumur, Kondisi Saat Ini (Skenario Deepwater)**
 
-### 2.1.1 Aliran nilai proses penanganan kegagalan BHA
+![Gambar 4. Peta Aliran Nilai Siklus Pemulihan Sumur, Kondisi Saat Ini](assets/fig_vsm_v3.png)
 
-| Tahap | Aktor | Keluaran | Waktu yang tercatat |
-|---|---|---|---|
-| Servis dan uji fungsi tool di fasilitas | Bengkel servis | Tool dinyatakan layak untuk run | Di luar hentian, tetapi menentukan kegagalan dini |
-| Pengiriman ke lokasi | Logistik, kapal atau helikopter | Tool tiba di rig | Bergantung jadwal dan cuaca |
-| Run di dasar sumur | Kru rig, engineer pengukuran | Data pengeboran | Selama run |
-| Deteksi kegagalan | Kru rig | Diagnosis, keputusan penarikan | 2 sampai 3 jam menurut skenario |
-| Penarikan rangkaian (POOH) | Kru rig | BHA rusak di permukaan | 7 sampai 11 jam menurut skenario |
-| Pelepasan dan perakitan pengganti | Kru rig, bengkel | BHA pengganti siap | 4 sampai 8 jam menurut skenario |
-| Uji fungsi | Kru rig | Konfirmasi tool pengganti | 2 jam menurut skenario deepwater |
-| Turun kembali (RIH) dan reaming | Kru rig | Mata bor kembali di dasar sumur | 9 sampai 12 jam menurut skenario |
-| Kembali mengebor | Kru rig | Pengeboran berlanjut | Akhir siklus |
+Gambar 4 menampilkan tujuh kotak proses pada siklus pemulihan. Seluruh 36 jam siklus adalah waktu yang dipakai selagi sumur tidak maju, sehingga waktu nilai tambahnya 0 jam dan keefisienan aliran 0 persen. Tangga waktu pada peta menunjukkan dua tahap dengan porsi terbesar: penarikan rangkaian 11 jam dan turun kembali 9 jam, bersama 55,6 persen dari lead time.
+
+### 2.1.1 Kotak proses, tangga waktu, dan nilai tambah
+
+| No | Kotak proses | Aktor | Keluaran | Waktu siklus (jam) | Waktu nilai tambah sumur (jam) | Porsi lead time |
+|---|---|---|---|---|---|---|
+| 1 | Diagnosis kegagalan | Kru rig, engineer pengukuran | Keputusan menarik rangkaian | 3 | 0 | 8,3 persen |
+| 2 | Penarikan rangkaian | Kru rig | BHA rusak di permukaan | 11 | 0 | 30,6 persen |
+| 3 | Pelepasan dan inspeksi | Kru rig, bengkel | Bagian rusak teridentifikasi | 3 | 0 | 8,3 persen |
+| 4 | Perakitan BHA pengganti | Kru rig, bengkel | Rangkaian pengganti siap | 5 | 0 | 13,9 persen |
+| 5 | Uji fungsi | Kru rig | Tool pengganti dinyatakan bekerja | 2 | 0 | 5,6 persen |
+| 6 | Turun kembali | Kru rig | Rangkaian sampai dasar sumur | 9 | 0 | 25,0 persen |
+| 7 | Reaming dan pemulihan | Kru rig | Pengeboran berlanjut | 3 | 0 | 8,3 persen |
+| | **Jumlah (lead time)** | | | **36** | **0** | **100 persen** |
+
+Tabel 2.1.1 memisahkan dua hal yang pada laporan operasi sering tercampur. Lead time 36 jam adalah seluruh siklus; waktu nilai tambah 0 jam karena selama siklus itu tidak satu meter pun sumur bertambah. Keefisienan aliran, yaitu perbandingan waktu nilai tambah terhadap lead time, karena itu 0 persen, dan seluruh 36 jam berada pada sisi pemborosan yang dihitung sebagai kerugian pada 2.1.2.
+
+Urutan kerja di luar siklus, yaitu servis dan uji fungsi di fasilitas serta pengiriman tool ke rig, tidak masuk tangga waktu ini karena terjadi sebelum kegagalan dan tidak diukur pada kejadian yang dipakai sebagai satuan analisis. Bagian itu dibahas sebagai aliran material dan informasi pada 2.2 dan sebagai urutan operasi pada 2.3.
 
 ### 2.1.2 Tabel waktu proses dan nilai kerugian
 
@@ -578,7 +571,7 @@ flowchart LR
 
 Dua pembacaan menyertai tabel itu. Pertama, NPT resmi dan pemulihan penuh adalah dua besaran berbeda, karena sebagian kontrak hanya mengakui sebagian siklus pemulihan sebagai NPT penyedia layanan, sehingga kedua baris onshore tidak boleh dijumlahkan. Kedua, kerugian langsung pada baris offshore dan deepwater menyertakan biaya perbaikan, mobilisasi, dan bahan yang diperinci pada 1.2.2, sehingga komponennya tidak dihitung dua kali.
 
-Tahap yang paling memboroskan waktu adalah menunggu pengganti dan menempuh kembali dasar sumur, karena keduanya mengalikan seluruh spread cost per jam tanpa kemajuan sumur. Pada operasi deepwater, siklus pemulihan 36 jam setara 720.000 USD pada komponen spread saja, sebelum biaya perbaikan dan penggantian.
+Dua tahap dengan durasi terbesar pada siklus adalah penarikan rangkaian dan turun kembali, masing-masing 11 jam dan 9 jam pada skenario deepwater, dan keduanya mengalikan seluruh spread cost per jam tanpa kemajuan sumur. Pada operasi deepwater, siklus pemulihan 36 jam setara 720.000 USD pada komponen spread saja, sebelum biaya perbaikan dan penggantian.
 
 ## 2.2 Material and Information Flow Chart (MIFC)
 
@@ -865,5 +858,7 @@ Setiap alat dipakai menurut pertanyaan yang dinyatakan pada keluarannya. Penelus
 
 - IEC 62740:2015, Root cause analysis (RCA) - Analysis of causes of failures and other undesired events.
 - IEC 60812:2018, Analysis techniques for failure mode and effects analysis (FMEA and FMECA).
+- Rother, M., & Shook, J. (2003). Learning to See: Value-Stream Mapping to Create Value and Eliminate Muda. Lean Enterprise Institute.
+- ASME. (1979). ASME Y15.3M-1979, Graphic Symbols for Process Charts.
 - Equinor, Volve data set, dataset publik dengan lisensi CC BY-NC-SA 4.0.
 
