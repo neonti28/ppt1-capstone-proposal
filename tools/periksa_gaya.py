@@ -38,6 +38,8 @@ KELAS = {
               r"menjadi karangan|Ketentuan Gambar|Spesifikasi Gambar|"
               r"Di luar batas \||artefak timeline",
     "bukan":  r"\bbukan\b|berbeda dari kendali",
+    "identitas": r"Serco|Sperry|Halliburton|\bPHE\b|ONWJ|LLA-7|Geliga|\bPVD II\b|Saipem|\bENI\b|Duri|"
+                 r"panduan|orkestra|subagent|dokumen kerja internal",
 }
 
 BASELINE = pathlib.Path(__file__).with_name("gaya_baseline.json")

@@ -210,7 +210,7 @@ Tiga keterbatasan bahan menyertai analisis. Dokumen kasus tidak memuat catatan k
 
 Kerugian satu kejadian dihitung dalam empat langkah berurutan. Setiap langkah memakai angka yang sudah berstatus pada 1.1.8 dan 1.2.2, sehingga hasil akhirnya dapat ditelusuri kembali ke sumbernya.
 
-**Langkah 1, lama hentian.** Lama hentian adalah jumlah durasi seluruh tahap siklus pemulihan: diagnosis, persiapan, penarikan rangkaian, pelepasan BHA rusak, perakitan BHA pengganti, uji fungsi, penurunan rangkaian kembali, reaming, dan pemulihan parameter pengeboran. Laporan harian Serco S1-O-15C tanggal 9 Juli 2026 mencatat dua kejadian Directional Tool Failure, masing-masing 3,50 jam dan 1,50 jam, dengan pihak penanggung penyedia layanan, sehingga NPT resminya 5,00 jam. Pemulihan penuh pada kejadian yang sama mencakup seluruh tahap tersebut dan skenarionya 10 jam; kedua angka mengukur hal berbeda dan tidak dijumlahkan.
+**Langkah 1, lama hentian.** Lama hentian adalah jumlah durasi seluruh tahap siklus pemulihan: diagnosis, persiapan, penarikan rangkaian, pelepasan BHA rusak, perakitan BHA pengganti, uji fungsi, penurunan rangkaian kembali, reaming, dan pemulihan parameter pengeboran. Laporan harian sumur S1-O-15C tanggal 9 Juli 2026 mencatat dua kejadian Directional Tool Failure, masing-masing 3,50 jam dan 1,50 jam, dengan pihak penanggung penyedia layanan, sehingga NPT resminya 5,00 jam. Pemulihan penuh pada kejadian yang sama mencakup seluruh tahap tersebut dan skenarionya 10 jam; kedua angka mengukur hal berbeda dan tidak dijumlahkan.
 
 **Langkah 2, spread cost per jam.** Biaya harian gabungan rig, marine, aviasi, layanan aktif, personel, dan logistik dijumlahkan, lalu dibagi 24. Angka yang dipakai: 45.000 USD per hari menjadi 1.875 USD per jam pada operasi darat, 170.000 menjadi 7.083 pada rig jack-up, dan 480.000 menjadi 20.000 pada drillship deepwater.
 
@@ -644,7 +644,7 @@ OPC memecah siklus pemulihan menjadi langkah operasi, inspeksi, dan transportasi
 | Uji fungsi | Inspeksi | 2 jam | Konfirmasi tool pengganti |
 | Turun kembali (RIH) | Operasi | 8 jam | Sampai dasar sumur |
 | Reaming dan pemulihan parameter | Operasi | 1 jam | Kembali ke kondisi mengebor |
-| Total | | 24 jam | Asumsi skenario |
+| Total | | 24 jam | Skenario simulasi |
 
 ### 2.3.2 OPC siklus pemulihan 36 jam pada operasi deepwater
 
@@ -657,7 +657,7 @@ OPC memecah siklus pemulihan menjadi langkah operasi, inspeksi, dan transportasi
 | Uji fungsi | Inspeksi | 2 jam | Termasuk uji telemetri |
 | Turun kembali (RIH) | Operasi | 9 jam | Sampai dasar sumur |
 | Reaming, sirkulasi, pemulihan parameter | Operasi | 3 jam | Kembali ke kondisi mengebor |
-| Total | | 36 jam | Asumsi skenario |
+| Total | | 36 jam | Skenario simulasi |
 
 **Gambar 7. Operation Process Chart Siklus Pemulihan**
 
@@ -866,8 +866,4 @@ Setiap alat dipakai menurut pertanyaan yang dinyatakan pada keluarannya. Penelus
 - IEC 62740:2015, Root cause analysis (RCA) - Analysis of causes of failures and other undesired events.
 - IEC 60812:2018, Analysis techniques for failure mode and effects analysis (FMEA and FMECA).
 - Equinor, Volve data set, dataset publik dengan lisensi CC BY-NC-SA 4.0.
-- Daily Drilling Report sumur Serco S1-O-15C tanggal 9 Juli 2026, dokumen kasus internal.
-- End of Well Report sumur UXA-7, dokumen kasus internal.
-- End of Well Report sumur LLA-7, dokumen kasus internal.
-- End of Well Report sumur Geliga-1, dokumen kasus internal.
 
