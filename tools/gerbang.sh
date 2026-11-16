@@ -13,6 +13,12 @@
 set -e
 cd "$(git rev-parse --show-toplevel)"
 
+if ! out=$(python3 tools/audit_isi.py periksa 2>&1); then
+  echo "$out"
+  echo "GERBANG: isi belum berputusan audit, commit ditolak"
+  exit 1
+fi
+
 if ! out=$(python3 tools/periksa_angka.py 2>&1); then
   echo "$out" | tail -3
   echo "GERBANG: angka tidak konsisten, commit ditolak"

@@ -1,3 +1,5 @@
+> STATUS: DRAF TIDAK BERLAKU. Naskah aktif: docs/PPT1_PROPOSAL_FINAL_V3.md. Subbab 2.1 di berkas ini memakai peta aliran nilai lama dan tidak boleh digabung ke naskah resmi.
+
 # BAB II PENGOLAHAN DATA & ANALISIS
 
 Seluruh isi bab ini bertumpu pada data publik Equinor Volve (884 interupsi terkurasi,

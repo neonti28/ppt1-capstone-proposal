@@ -533,15 +533,15 @@ Bab II memuat enam alat analisis dengan satu efek yang sama: kegagalan BHA yang 
 
 ## 2.1 Value Stream Mapping (VSM)
 
-VSM memetakan aliran penanganan satu kegagalan BHA dengan dua ukuran yang dibedakan tegas: lead time, yaitu seluruh waktu siklus dari kegagalan terdeteksi sampai pengeboran berlanjut, dan waktu nilai tambah, yaitu bagian dari siklus yang benar-benar menambah kemajuan sumur (Rother & Shook, Learning to See, Lean Enterprise Institute, 2003). Simbol pemetaannya kotak proses untuk setiap langkah kerja, segitiga untuk penantian, garis putus-putus untuk aliran informasi, dan tangga waktu di bawah peta untuk menjumlahkan kedua ukuran.
+VSM memetakan aliran penanganan satu kegagalan BHA dengan dua ukuran yang dibedakan tegas: lead time, yaitu seluruh waktu siklus dari kegagalan terdeteksi sampai pengeboran berlanjut, dan waktu nilai tambah, yaitu bagian dari siklus yang benar-benar menambah kemajuan sumur (Rother & Shook, Learning to See, Lean Enterprise Institute, 2003). Gambar memuat ikon pemasok dan pelanggan, kotak kendali operasi, kotak proses dengan kotak data di bawahnya, panah dorong bergaris untuk aliran material, garis tipis lurus untuk aliran informasi beserta frekuensinya, penanda peluang perbaikan pada langkah terlama, dan tangga waktu di bawah peta untuk menjumlahkan kedua ukuran. Segitiga persediaan tidak muncul karena tidak ada persediaan yang terekam antarlangkah.
 
-Satuan analisisnya satu kejadian kegagalan. Siklus yang dipetakan adalah siklus pemulihan pada skenario deepwater selama 36 jam, dan 2.3 menguraikan urutan kerjanya dengan OPC. Angka pada Gambar 4 dan pada tabel 2.1.1 berasal dari satu peta aliran nilai yang sama, sehingga keduanya tidak mungkin berbeda.
+Satuan analisisnya satu kejadian kegagalan. Siklus yang dipetakan adalah siklus pemulihan pada skenario simulasi deepwater selama 36 jam, dan 2.3 menguraikan urutan kerjanya dengan OPC. Angka pada Gambar 4 dan pada tabel 2.1.1 dibaca dari satu berkas data peta yang sama, dan pelaksana tiap langkah pada keduanya identik.
 
 **Gambar 4. Peta Aliran Nilai Siklus Pemulihan Sumur, Kondisi Saat Ini (Skenario Deepwater)**
 
 ![Gambar 4. Peta Aliran Nilai Siklus Pemulihan Sumur, Kondisi Saat Ini](assets/fig_vsm_v3.png)
 
-Gambar 4 menampilkan tujuh kotak proses pada siklus pemulihan. Seluruh 36 jam siklus adalah waktu yang dipakai selagi sumur tidak maju, sehingga waktu nilai tambahnya 0 jam dan keefisienan aliran 0 persen. Tangga waktu pada peta menunjukkan dua tahap dengan porsi terbesar: penarikan rangkaian 11 jam dan turun kembali 9 jam, bersama 55,6 persen dari lead time.
+Gambar 4 menampilkan tujuh kotak proses pada siklus pemulihan. Seluruh 36 jam siklus adalah waktu yang dipakai selagi sumur tidak maju, sehingga waktu nilai tambahnya 0 jam dan efisiensi aliran 0 persen. Tangga waktu pada peta menunjukkan dua tahap dengan porsi terbesar: penarikan rangkaian 11 jam dan turun kembali 9 jam, bersama 55,6 persen dari lead time.
 
 ### 2.1.1 Kotak proses, tangga waktu, dan nilai tambah
 

@@ -41,7 +41,11 @@
         "text": "3 jam"
       },
       "ai": [],
-      "markers": []
+      "markers": [],
+      "actors": [
+        "Kru rig",
+        "engineer pengukuran"
+      ]
     },
     {
       "id": "penarikan",
@@ -56,7 +60,15 @@
         "text": "11 jam"
       },
       "ai": [],
-      "markers": []
+      "markers": [
+        {
+          "kind": "bottleneck",
+          "text": "langkah terlama, 11 jam"
+        }
+      ],
+      "actors": [
+        "Kru rig"
+      ]
     },
     {
       "id": "pelepasan-dan-inspeksi",
@@ -71,7 +83,11 @@
         "text": "3 jam"
       },
       "ai": [],
-      "markers": []
+      "markers": [],
+      "actors": [
+        "Kru rig",
+        "bengkel"
+      ]
     },
     {
       "id": "perakitan-pengganti",
@@ -86,7 +102,11 @@
         "text": "5 jam"
       },
       "ai": [],
-      "markers": []
+      "markers": [],
+      "actors": [
+        "Kru rig",
+        "bengkel"
+      ]
     },
     {
       "id": "uji-fungsi",
@@ -101,7 +121,10 @@
         "text": "2 jam"
       },
       "ai": [],
-      "markers": []
+      "markers": [],
+      "actors": [
+        "Kru rig"
+      ]
     },
     {
       "id": "turun-kembali",
@@ -116,7 +139,15 @@
         "text": "9 jam"
       },
       "ai": [],
-      "markers": []
+      "markers": [
+        {
+          "kind": "bottleneck",
+          "text": "langkah terpanjang kedua, 9 jam"
+        }
+      ],
+      "actors": [
+        "Kru rig"
+      ]
     },
     {
       "id": "reaming-dan-pemulihan",
@@ -131,7 +162,10 @@
         "text": "3 jam"
       },
       "ai": [],
-      "markers": []
+      "markers": [],
+      "actors": [
+        "Kru rig"
+      ]
     }
   ],
   "loops": [],
@@ -149,6 +183,10 @@
     {
       "at": "18:59",
       "text": "Waktu kerja setiap kotak direkam 0 jam karena tidak ada jam yang menambah kemajuan sumur; selisihnya tetap sebagai waktu menunggu."
+    },
+    {
+      "at": "19:34",
+      "text": "Pelaksana per langkah disamakan dengan Tabel 2.1.1; dua langkah terlama ditandai bottleneck agar peta dan gambar memuat penanda yang sama."
     }
   ],
   "ui": {

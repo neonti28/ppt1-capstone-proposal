@@ -22,7 +22,7 @@ standar, dan mana dari sumber industri yang tidak melalui peer-review.
 | Kerangka FMECA dan perhitungan RPN | [6] | Definisi, perencanaan, dan pelaporan FMEA/FMECA; varian criticality memakai severity dan bobot kepentingan | Standar internasional (IEC) |
 | Tahapan proyek berhenti di State the Problem dan Investigate | [7] | Tujuh aktivitas SIMILAR: State, Investigate, Model, Integrate, Launch, Assess, Re-evaluate | Peer-review (jurnal sistem engineering) |
 | Pemilihan solusi dengan TOPSIS | [8] | Metode MADM berbasis jarak ke solusi ideal positif dan negatif | Buku teks rujukan utama (Springer, 1981) |
-| Peta alur nilai dan pemborosan waktu tunggu | [9] | Value stream mapping: memetakan aliran nilai dan mengidentifikasi muda | Buku kerja standar industri (Shingo Award 1999) |
+| Peta alur nilai dan pemborosan waktu tunggu | [9] | Value stream mapping: memetakan aliran nilai dan mengidentifikasi muda | Buku kerja standar industri (Shingo Award; versi 1.4, 2003) |
 | Sumber data dan lisensi | [10] | ≈40.000 berkas, produksi 2008–2016, Equinor Open Data Licence, tanpa registrasi | Sumber primer pemilik data |
 
 ## B. Catatan kejujuran atas dua rujukan kunci
@@ -69,7 +69,7 @@ dipakai dengan pembatasan berikut:
     Applications*. Lecture Notes in Economics and Mathematical Systems, Vol. 186.
     Berlin: Springer-Verlag.
 
-[9] Rother, M., & Shook, J. (1999). *Learning to See: Value Stream Mapping to Add Value
+[9] Rother, M., & Shook, J. (2003). *Learning to See: Value Stream Mapping to Add Value
     and Eliminate Muda*. Cambridge, MA: Lean Enterprise Institute.
 
 [10] Equinor. (2018). Volve field data set. Equinor Open Data Licence.

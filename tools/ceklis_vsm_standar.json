@@ -1,0 +1,19 @@
+{
+  "standar": "Rother, M. & Shook, J. (2003), Learning to See, Lean Enterprise Institute; daftar unsur disusun ulang dari enam sumber simbol VSM yang konsisten (lean.org/diagram guides, University of Washington IE course notes, Smartsheet cheat sheet)",
+  "unsur": [
+    {"nama": "Ikon pemasok (kiri atas, berlabel nama)", "status": "ada", "isinya": "Pangkalan dan bengkel servis"},
+    {"nama": "Ikon pelanggan (kanan atas, berlabel nama)", "status": "ada", "isinya": "Klien dan operator sumur"},
+    {"nama": "Kotak kendali produksi di puncak", "status": "ada", "isinya": "Kendali operasi: kru rig dan engineer pengukuran"},
+    {"nama": "Kotak ketentuan aliran (demand, takt, jam kerja)", "status": "ada", "isinya": "1 kejadian kegagalan, siklus 36 jam, spread cost 20.000 USD per jam (deepwater); takt tidak berlaku pada siklus pemulihan"},
+    {"nama": "Kotak proses kiri ke kanan sesuai urutan produksi", "status": "ada", "isinya": "7 kotak dari tabel 2.3.2"},
+    {"nama": "Kotak data di bawah tiap kotak proses: C/T, C/O, uptime, jumlah operator", "status": "ada sebagian", "isinya": "C/T terisi (3, 11, 3, 5, 2, 9, 3 jam); C/O, uptime, dan cacah operator tidak tercatat pada kasus sehingga ditulis strip, bukan karangan"},
+    {"nama": "Segitiga persediaan antarproses bila ada persediaan", "status": "tidak digambar, sah", "isinya": "Tidak ada persediaan yang terekam antarlangkah; sumber standar: simbol tambahan hanya bila mencerminkan hal nyata"},
+    {"nama": "Panah dorong bergaris (push arrow)", "status": "ada", "isinya": "Antar ketujuh kotak proses"},
+    {"nama": "Ikon pengiriman (shipment) dengan frekuensi", "status": "ada", "isinya": "Pengiriman tool pengganti dari pangkalan ke rig, per kejadian"},
+    {"nama": "Aliran informasi manual (garis tipis lurus) dengan frekuensi", "status": "ada", "isinya": "Keputusan penarikan; permintaan tool pengganti; laporan harian DDR dan BHA tally; First Alert; laporan interupsi layanan"},
+    {"nama": "Aliran informasi elektronik (petir)", "status": "tidak digambar, sah", "isinya": "Tidak ada kanal elektronik yang terekam pada kasus"},
+    {"nama": "Ledakan kaizen pada peluang perbaikan di peta kondisi saat ini", "status": "ada", "isinya": "Pada dua langkah terlama: penarikan 11 jam dan turun kembali 9 jam (55,6 persen lead time)"},
+    {"nama": "Tangga waktu: waktu proses di bawah garis, penantian di atas", "status": "ada", "isinya": "Bawah 36 jam (seluruh durasi langkah); atas 0 (tidak ada antrean terekam)"},
+    {"nama": "Jumlah: lead time, waktu proses, waktu nilai tambah, rasio", "status": "ada", "isinya": "Lead time 36 jam (4,5 hari kerja); waktu proses 36 jam; nilai tambah kemajuan sumur 0 jam; efisiensi aliran 0 persen; nilai tambah diukur dari kemajuan sumur menurut sudut pandang pelanggan"}
+  ]
+}
