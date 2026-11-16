@@ -31,7 +31,7 @@ POLA = {
 
 def main() -> int:
     detail = "--detail" in sys.argv
-    path = pathlib.Path("docs/PPT1_PROPOSAL_FINAL_V2.md")
+    path = pathlib.Path("docs/PPT1_PROPOSAL_FINAL_V3.md")
     baris = path.read_text(encoding="utf-8").split("\n")
     total = 0
     for nama, pola in POLA.items():

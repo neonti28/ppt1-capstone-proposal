@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Gerbang gaya naskah. Menolak tiga jenis kalimat yang tidak menambah isi:
+"""Gerbang gaya naskah V3. Menolak kalimat yang tidak menambah isi bagi pembaca:
 
 1. meta   : kalimat yang mengatur cara menulis atau menilai kalimat lain
             (kalimat yang sah, tidak boleh ditulis, dapat diklaim, keabsahan).
@@ -7,11 +7,12 @@
             sudah saya, pada revisi ini, versi ini, dokumen ini).
 3. retorik: perbandingan yang menghias, bukan membandingkan data
             (bukan X melainkan Y, justru, padahal, sebaliknya, alih-alih).
+4. pagar  : teks yang ditulis untuk pengendali proses, bukan pembaca
+            (pembelaan "ini X, bukan Y", kolom larangan per alat, instruksi
+            skrip gambar, bocoran checklist, kriteria internal, istilah sisa
+            draf lain). Diperiksa juga di baris tabel.
 
-Baris tabel dan butir bukti tidak diperiksa untuk pola retorik, karena di sana
-kontras sering menyatakan keadaan data yang sebenarnya.
-
-Pakai: python3 tools/periksa_gaya.py [--detail=meta|diri|retorik] [--pasang]
+Pakai: python3 tools/periksa_gaya.py [--detail=meta|diri|retorik|pagar] [--pasang]
   --pasang : tulis hitungan sekarang sebagai batas. Commit ditolak bila salah
              satu kelas bertambah di atas batas.
 Kode keluar 1 bila melewati batas.
@@ -30,6 +31,12 @@ KELAS = {
             r"\bdokumen ini\b|\bnaskah ini\b|\bproposal ini\b",
     "retorik": r"\bbukan [^.\n]{2,60}? melainkan\b|\balih-alih\b|\bjustru\b|"
                r"\bpadahal\b|\bsebaliknya\b|\bnyatanya\b|\btetap saja\b",
+    "pagar":  r"bukan daftar keluhan|bukan pertanyaan riset|bukan pilihan gaya|"
+              r"tidak pernah dipakai|tidak akan dipertahankan|dapat digugurkan|"
+              r"Tidak ada satu pun baris|jumlah kanal|dirender oleh|"
+              r"tidak dapat menyimpang|sesuai ketentuan|BoK|terpenuhi oleh|"
+              r"menjadi karangan|Ketentuan Gambar|Spesifikasi Gambar|"
+              r"Di luar batas \||artefak timeline",
 }
 
 BASELINE = pathlib.Path(__file__).with_name("gaya_baseline.json")
@@ -51,7 +58,7 @@ def hitung(baris):
 def main() -> int:
     detail = next((a.split("=", 1)[1] for a in sys.argv[1:] if a.startswith("--detail=")), None)
     pasang = "--pasang" in sys.argv
-    path = pathlib.Path("docs/PPT1_PROPOSAL_FINAL_V2.md")
+    path = pathlib.Path("docs/PPT1_PROPOSAL_FINAL_V3.md")
     baris = path.read_text(encoding="utf-8").split("\n")
     hasil = hitung(baris)
     sekarang = {k: len(v) for k, v in hasil.items()}
