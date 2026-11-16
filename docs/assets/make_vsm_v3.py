@@ -179,7 +179,7 @@ def gambar():
         kotak(ax, x, 5.75, lebar, tinggi, NAMA_BARIS.get(butir["nama"], butir["nama"]),
               ukuran=7.0)
         kotak(ax, x, 4.05, lebar, 1.45,
-              f"C/T {butir['waktu']:.0f} jam\nC/O —\nuptime —\n{butir['pelaksana']}",
+              f"C/T {butir['waktu']:.0f} jam\n{butir['pelaksana']}",
               ukuran=6.0, tebal=0.9, siku=True)
         ax.plot([x + lebar / 2, x + lebar / 2], [5.5, 5.75], color=TINTA, linewidth=0.9, zorder=2)
         if i < len(langkah) - 1:
@@ -246,7 +246,7 @@ def gambar():
             ha="left", va="center")
 
     ax.text(3.35, 0.75,
-            "Besaran yang tidak tercatat pada kejadian ini dan karena itu ditulis strip, bukan angka: waktu ganti (C/O), "
+            "Besaran yang tidak tercatat pada kejadian ini tidak dimuat pada kotak data, yaitu waktu ganti (C/O) dan uptime; "
             "uptime, dan cacah operator per langkah.",
             fontsize=6.6, color=ABU, ha="left", va="center")
 

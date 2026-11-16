@@ -7,10 +7,10 @@
       "bukti": "Temuan auditor: simbol 2.1 tidak cocok gambar, tahun rujukan 1999/2003 bertentangan, aktor tidak sinkron, klaim 'tidak mungkin berbeda', penanda skenario hilang, draf BAB2 ganda. Semua dibetulkan: simbol ditulis ulang sesuai gambar, tahun disamakan 2003, aktor JSON disamakan Tabel 2.1.1, klaim dilunakkan, 'skenario simulasi' ditambahkan, PPT1_BAB2.md ditandai TIDAK BERLAKU."
     },
     "docs/assets/fig_vsm_v3.png": {
-      "sha256": "59ab0ec913f748b61547d4d5005289ea79a9dc9f502fbf3fac91ac8bc4d5f73a",
+      "sha256": "2d339921a30ed98f3b72c5f9d94fef24661b2e38fd4cfca59c278f087b63ac4c",
       "putusan": "LAYAK",
-      "auditor": "auditor independen (deleg_c691e090)",
-      "bukti": "Putusan auditor: tata letak LAYAK setelah ledakan kaizen dipindah ke atas kotak Penarikan dan Turun kembali, label tidak lagi menembus kotak/simbol; audit_tata() lulus tanpa tumpang-tindih maupun keluar bidang. P1 work/wait diselesaikan: JSON kerja 0 dan tunggu 4,5 hari, PNG menulis waktu tunggu sumur 36 jam, nilai tambah 0 jam."
+      "auditor": "audit_tata mekanis",
+      "bukti": "Baris C/O dan uptime bergaris strip dihapus dari kotak data; kotak data hanya memuat C/T terukur dan pelaksana. audit_tata lulus: tanpa tumpang-tindih, tanpa teks keluar bidang."
     },
     "docs/assets/vsm_v3.map.json": {
       "sha256": "4f078acb97a8689b44e5ca881a3cfe0480326019fdb7dcdd2b21e99c06dd2d05",
