@@ -134,24 +134,7 @@ Gambar memuat 12 simpul dan 11 relasi berarah, dengan tiga loop digambar sebagai
 
 **Gambar 2. Rich Picture Sistem Penanganan BHA**
 
-```mermaid
-flowchart LR
-  S1["S1 Fasilitas servis<br/>dan uji fungsi"] -->|"R1 menetapkan<br/>kelayakan"| S2["S2 Stok tool<br/>dan suku cadang"]
-  S2 -->|"R2 memasok"| S3["S3 Transportasi<br/>darat, kapal, helikopter"]
-  S3 -->|"R3 mengirim"| S4["S4 Rig dan lantai bor"]
-  S4 -->|"R4 merakit"| S5["S5 Perakitan BHA"]
-  S5 -->|"R5 menurunkan<br/>rangkaian"| S6["S6 Rangkaian<br/>di dasar sumur"]
-  S7["S7 Formasi batuan"] -->|"R6 getaran,<br/>tumbukan, abrasi"| S6
-  S8["S8 Cuaca dan<br/>kondisi laut"] -.->|"R7 jadwal"| S3
-  S8 -.->|"R7 jadwal"| S10["S10 Keputusan penarikan<br/>dan penggantian"]
-  S6 -->|"R8 pemantauan<br/>parameter"| S9["S9 Pemantauan<br/>parameter permukaan"]
-  S10 -->|"R9 memicu<br/>pasokan"| S2
-  S10 -->|"R9 memicu<br/>pengiriman"| S3
-  S11["S11 Operator sumur<br/>dan klausul NPT"] -.->|"R10 menagih<br/>laporan"| S10
-  S12["S12 Regulator keselamatan<br/>dan sumber radioaktif"] -.->|"R11 pengawasan"| S4
-  S12 -.->|"R11 pengawasan"| S6
-  S1 -.->|"G1 cacat laten<br/>lolos uji"| S6
-```
+![Gambar 2. Rich Picture Sistem Penanganan BHA](assets/fig10_rich_picture_v3.png)
 
 ### 1.1.5 Trade-off Variabel Sistem
 
@@ -395,39 +378,7 @@ Fishbone disusun atas enam cabang 6M dengan empat ranting pada setiap cabang, se
 
 **Gambar 3. Fishbone 6M Kegagalan BHA, 6 Cabang dan 24 Ranting**
 
-```mermaid
-flowchart LR
-  Mn1["Mn1 Penanganan<br/>tak terjadwal"] --> MAN["MAN manusia"]
-  Mn2["Mn2 Keputusan tanpa<br/>ukuran kondisi"] --> MAN
-  Mn3["Mn3 Kompetensi penanganan<br/>sumber"] --> MAN
-  Mn4["Mn4 Tekanan waktu"] --> MAN
-  Me1["Me1 Kelayakan<br/>berbasis jadwal"] --> METHOD["METHOD metode"]
-  Me2["Me2 Pembelajaran kegagalan<br/>tidak baku"] --> METHOD
-  Me3["Me3 Pengiriman reaktif"] --> METHOD
-  Me4["Me4 Siklus pemulihan<br/>panjang"] --> METHOD
-  Ma1["Ma1 Kelelahan elektronik<br/>dan mekanis"] --> MACHINE["MACHINE mesin"]
-  Ma2["Ma2 Keausan bearing<br/>dan elastomer"] --> MACHINE
-  Ma3["Ma3 Beban dinamik<br/>di dasar sumur"] --> MACHINE
-  Ma4["Ma4 Cacat laten"] --> MACHINE
-  Mt1["Mt1 Variasi mutu<br/>antarlot"] --> MATERIAL["MATERIAL bahan"]
-  Mt2["Mt2 Stok tidak menurut<br/>kekritisan"] --> MATERIAL
-  Mt3["Mt3 Objek berisiko<br/>tambahan"] --> MATERIAL
-  Mt4["Mt4 Jarak pasokan"] --> MATERIAL
-  Ms1["Ms1 Riwayat kondisi<br/>tidak tercatat"] --> MEAS["MEASUREMENT pengukuran"]
-  Ms2["Ms2 Sisa umur<br/>tidak diukur"] --> MEAS
-  Ms3["Ms3 Satuan waktu<br/>tidak seragam"] --> MEAS
-  Ms4["Ms4 Indikator pemulihan<br/>tidak baku"] --> MEAS
-  En1["En1 Lokasi terpencil<br/>dan lepas pantai"] --> ENV["ENVIRONMENT lingkungan"]
-  En2["En2 Ketergantungan<br/>cuaca"] --> ENV
-  En3["En3 Formasi keras<br/>dan abrasif"] --> ENV
-  En4["En4 Kedalaman air"] --> ENV
-  MAN --> E["KEGAGALAN BHA yang datang<br/>tanpa peringatan dini,<br/>menimbulkan kerugian waktu,<br/>biaya, energi, dan keselamatan"]
-  METHOD --> E
-  MACHINE --> E
-  MATERIAL --> E
-  MEAS --> E
-  ENV --> E
-```
+![Gambar 3. Fishbone 6M Kegagalan BHA, 6 Cabang dan 24 Ranting](assets/fig11_fishbone_v3.png)
 
 ### 1.2.4 Rekap keadaan sebab
 
@@ -463,7 +414,7 @@ Gambar 3 adalah diagram tulang ikan dengan orientasi kiri ke kanan. Kotak efek d
 
 **Cabang dan ranting:** MAN dengan Mn1 sampai Mn4, METHOD dengan Me1 sampai Me4, MACHINE dengan Ma1 sampai Ma4, MATERIAL dengan Mt1 sampai Mt4, MEASUREMENT dengan Ms1 sampai Ms4, ENVIRONMENT dengan En1 sampai En4.
 
-**Ketentuan gambar:** setiap ranting diberi kode dan label pendek yang sama dengan tabel pada 1.2.3, cabang disusun MAN, METHOD, MACHINE di sisi atas dan MATERIAL, MEASUREMENT, ENVIRONMENT di sisi bawah, dan setiap ranting diakhiri anak panah menuju tulang punggung. Kotak efek tidak memuat angka, karena angka pada subbab ini sudah dinyatakan pada tabel 1.2.2.
+Gambar 3 dirender dari isi tabel pada subbab ini oleh satu skrip yang membaca tabel 1.2.3 langsung, sehingga isi gambar tidak dapat menyimpang dari naskah. Cabang disusun MAN, METHOD, MACHINE di sisi atas dan MATERIAL, MEASUREMENT, ENVIRONMENT di sisi bawah, setiap ranting diakhiri anak panah menuju tulang punggung, dan kotak efek tidak memuat angka karena angka pada subbab ini sudah dinyatakan pada tabel 1.2.2.
 
 ### 1.2.7 Hipotesis, penjelasan rival, dan uji pembeda
 
