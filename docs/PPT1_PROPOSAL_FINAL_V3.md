@@ -135,7 +135,7 @@ Permasalahan yang dikaji adalah kegagalan BHA yang datang tanpa peringatan dini,
 | Durasi hentian satu kejadian, operasi darat | 5,00 jam resmi, 10 jam pemulihan penuh | Laporan harian 9 Juli 2026 dan skenario pemulihan |
 | Durasi hentian satu kejadian, lepas pantai | 24 jam pada rig jack-up dan 36 jam pada drillship deepwater | Skenario siklus pemulihan |
 | Kerugian langsung satu kejadian | 34.375 sampai 43.750 USD darat, 245.000 USD jack-up, 940.000 USD deepwater | Turunan dari durasi dan spread cost |
-| Rasio kerugian antartipe operasi | 5,6 kali untuk perairan dangkal dan 21,5 kali untuk deepwater terhadap darat | Turunan dengan pemulihan penuh darat sebagai dasar |
+| Rasio kerugian antartipe operasi | 5,6 kali untuk perairan dangkal dan sekitar 21,5 kali untuk deepwater terhadap darat | Turunan dengan pemulihan penuh darat sebagai dasar |
 | Komponen kerugian | Waktu non-produktif, biaya harian rig, energi terbuang, risiko keselamatan, kehilangan atau kerusakan tool | Dokumen kasus dan literatur industri |
 | Populasi kejadian interupsi pengeboran publik | 884 kejadian pada 10 wellbore, total 1.225 jam, median 45 menit, p90 180 menit | Dataset publik Equinor Volve, terukur |
 | Kejadian bertanda pipa terjepit dan pemancingan | 38 kejadian dari 884 | Tabel label terkurasi, terukur |
@@ -154,9 +154,11 @@ Empat pertanyaan riset berikut menjadi batas kajian, dan keempatnya dirujuk ulan
 
 **RM4.** Dari tindakan yang mungkin pada RM1 sampai RM3, bagaimana urutan penerapan dipilih dengan kriteria yang dapat diperiksa, sehingga pengendalian yang paling menekan kerugian dijalankan lebih dulu?
 
+Pemilik masalah dinyatakan tegas. Masalah dialami bersama oleh perusahaan layanan pengeboran sebagai penyedia jasa dan operator sumur sebagai pengguna jasa, dan pada kejadian yang dirinci, pihak penanggung hentian ditetapkan klausul kontrak sebagaimana contoh pada 1.2.5.
+
 Keempat pertanyaan itu bukan daftar keluhan. Masing-masing menuntut rancangan, dan jawabannya diuji terhadap empat besaran keberhasilan program: jam hentian akibat kegagalan BHA, biaya hentian per kejadian, energi yang terbuang selama hentian, dan jumlah kejadian berisiko keselamatan yang terkait penarikan rangkaian.
 
-**Kendala yang mengikat, bukan pertanyaan riset.** Empat keadaan berikut membatasi ruang jawaban dan karena itu diletakkan di 1.4, bukan di slot pertanyaan. Pertama, dokumen kasus tidak memuat deret parameter permukaan per kejadian. Kedua, riwayat jam operasi per nomor seri belum lengkap. Ketiga, laju kegagalan komponen per nomor seri belum tersedia. Keempat, sebagian tarif dan durasi pemulihan masih berupa skenario yang menunggu tarif kontrak aktual.
+**Kendala yang mengikat, bukan pertanyaan riset.** Empat keadaan berikut membatasi ruang jawaban dan karena itu diletakkan pada 1.1.7 dan 1.4.4, bukan di slot pertanyaan. Pertama, dokumen kasus tidak memuat deret parameter permukaan per kejadian. Kedua, riwayat jam operasi per nomor seri belum lengkap. Ketiga, laju kegagalan komponen per nomor seri belum tersedia. Keempat, sebagian tarif dan durasi pemulihan masih berupa skenario yang menunggu tarif kontrak aktual.
 
 ### 1.1.7 Batas Data
 
@@ -247,7 +249,7 @@ Satu catatan pembacaan menyertai tabel itu: angka 5,00 jam adalah NPT resmi, sed
 
 Analisis pada subbab ini menjawab satu pertanyaan: mengapa Bottom Hole Assembly (BHA) mengalami kerusakan saat pengeboran tanpa dapat diperkirakan sebelumnya, sehingga menimbulkan kerugian waktu, biaya, energi, dan keselamatan. Efek yang dipetakan adalah kegagalan BHA beserta kerugian yang mengikutinya. Penilaian alternatif solusi tidak termasuk di sini dan dibahas pada Bab III.
 
-### 1.2.1 Batas masalah dan definisi top event
+### 1.2.1 Batas Masalah dan Definisi Top Event
 
 Top event dipecah menjadi dua sisi yang dirujuk dengan kode tetap. TE-A adalah kegagalan fisik BHA di dasar sumur, mencakup pipa terjepit, getaran yang merusak rangkaian, alat lubang bawah berhenti berfungsi, mata bor aus, sambungan mekanis gagal, washout, dan rangkaian tertinggal di sumur. TE-B adalah konsekuensi kegagalan itu, mencakup hentian pengeboran yang panjang, biaya harian rig dan layanan yang tetap berjalan, energi yang terpakai tanpa kemajuan sumur, dan paparan risiko keselamatan bagi kru.
 
@@ -285,6 +287,10 @@ Seluruh angka yang dipakai di subbab ini dibedakan menurut empat status: terukur
 | Kejadian bertanda masalah fluida sumur | 25 dari 884 kejadian | Kategori pada tabel label terkurasi | terukur |
 | Kejadian yang tidak dapat dilokalisasi penyebabnya | 28 dari 884 kejadian | Kategori pada tabel label terkurasi | terukur |
 | Lost rig hours pada kejadian malfungsi tool tanpa hentian | 0 jam | End of Well Report sumur UXA-7, respons resistivitas abnormal sejak 870 ftMD | tercatat |
+| Durasi kejadian terpanjang pada dataset publik | maksimum 780 menit | Durasi terbesar pada tabel label terkurasi | terukur |
+| Cacah sumur dataset publik | 10 wellbore | Cacah nilai berbeda pada kolom sumur tabel label terkurasi | terukur |
+| Biaya perbaikan dan tambahan, kejadian jack-up | 75.000 USD | 50.000 USD perbaikan, 15.000 USD mobilisasi, 10.000 USD bahan | turunan |
+| Biaya perbaikan dan tambahan, kejadian deepwater | 220.000 USD | 150.000 USD perbaikan, 40.000 USD logistik, 30.000 USD bahan | turunan |
 
 Dua pembacaan menyertai tabel itu. Pertama, malfungsi tool tidak selalu menimbulkan hentian, sehingga jumlah kerusakan komponen dan jumlah hentian adalah dua besaran berbeda. Kedua, rasio kerugian antartipe operasi dihitung terhadap pemulihan penuh onshore sebagai nilai dasar 1,0, sehingga offshore perairan dangkal bernilai sekitar 5,6 kali dan deepwater sekitar 21,5 kali.
 
@@ -353,7 +359,7 @@ Fishbone disusun atas enam cabang 6M dengan empat ranting pada setiap cabang, se
 | Cabang | Jumlah ranting | Inti sebab | Akar penyebab yang dibawa |
 |---|---|---|---|
 | MAN | 4 | Penanganan dan keputusan di lantai bor bergantung pada pengalaman, bukan pada ukuran kondisi | A, C |
-| METHOD | 4 | Kelayakan berbasis jadwal dan pemulihan yang menempuh siklus panjang | A, C |
+| METHOD | 4 | Kelayakan berbasis jadwal, pembelajaran kegagalan, dan pemulihan yang menempuh siklus panjang | B, A, C |
 | MACHINE | 4 | Akumulasi kelelahan dan keausan, ditambah cacat laten yang lolos uji | A, B |
 | MATERIAL | 4 | Variasi mutu antarlot dan penempatan stok yang tidak menurut kekritisan | B, C |
 | MEASUREMENT | 4 | Tidak ada catatan kondisi per komponen, tidak ada ukuran sisa umur, satuan waktu tidak seragam | A |
@@ -372,7 +378,7 @@ Akar A menentukan seberapa sering kerusakan terjadi tanpa peringatan, akar B men
 | When | Terjadi selama run di dasar sumur dan diketahui ketika tool berhenti berfungsi atau rangkaian ditarik. Ambang pencatatan satu kejadian sebagai service interruption adalah lebih dari 30 menit | Membaca definisi service interruption pada formulir KPI layanan dan urutan waktu pada laporan harian |
 | Where | Di dasar sumur, dengan pemulihan bergantung pada pangkalan terdekat. Kasus pembanding mencakup operasi darat, rig jack-up dengan kedalaman air 78,4 ft, dan deepwater dengan target sand sekitar 4.922 m | Membaca bagian konteks sumur pada End of Well Report dan program pengeboran |
 | Who | Kru rig, driller, engineer pengukuran, bengkel servis, dan rantai pasok. Pihak yang menanggung hentian ditetapkan klausul kontrak, misalnya penyedia peralatan pengeboran berarah pada kejadian 9 Juli 2026 | Membaca kolom accountable party pada laporan harian dan klausul NPT pada kontrak |
-| How much | Kerugian langsung satu kejadian 34.375 sampai 43.750 USD pada operasi darat, 245.000 USD pada rig jack-up, dan 940.000 USD pada deepwater. Satu kejadian deepwater setara 3,8 kali kejadian perairan dangkal dan 21,5 kali kejadian darat dengan pemulihan penuh sebagai dasar | Menghitung durasi kali spread cost per jam, lalu menambahkan biaya perbaikan, mobilisasi, dan bahan |
+| How much | Kerugian langsung satu kejadian 34.375 sampai 43.750 USD pada operasi darat, 245.000 USD pada rig jack-up, dan 940.000 USD pada deepwater. Satu kejadian deepwater setara 3,8 kali kejadian perairan dangkal dan sekitar 21,5 kali kejadian darat dengan pemulihan penuh sebagai dasar | Menghitung durasi kali spread cost per jam, lalu menambahkan biaya perbaikan, mobilisasi, dan bahan |
 
 ### 1.2.6 Spesifikasi gambar G1
 
@@ -391,27 +397,30 @@ Empat hipotesis berikut masih terbuka, dan setiap hipotesis membawa uji yang dap
 | Hipotesis | Isi | Penjelasan rival | Uji pembeda | Status |
 |---|---|---|---|---|
 | H1 | Kegagalan didahului gejala yang sudah terekam pada parameter permukaan, sehingga gejala itu dapat dikenali sebelum hentian | Kegagalan terjadi mendadak tanpa gejala yang terekam | Bandingkan parameter torsi, tekanan standpipe, laju alir, putaran, dan beban kait pada jendela sebelum kejadian dengan jendela normal pada sumur yang sama di dataset publik | belum diuji, data kasus tidak memuat deret parameter permukaan |
-| H2 | Kegagalan dini pada run tertentu berkaitan dengan uji fungsi yang tidak penuh di fasilitas servis | Kegagalan dini berasal dari variasi mutu komponen, bukan dari uji fungsi | Korelasikan kegagalan dalam 24 jam pertama run dengan jenis uji fungsi yang tercatat pada laporan run | belum diuji, laporan run belum memuat hasil uji fungsi |
+| H2 | Kegagalan dini pada run tertentu berkaitan dengan uji fungsi yang tidak penuh di fasilitas servis | Kegagalan dini berasal dari variasi mutu komponen, bukan dari uji fungsi | Korelasikan kegagalan dalam periode awal run, ditetapkan 24 jam pertama sebagai pilihan desain uji, dengan jenis uji fungsi yang tercatat pada laporan run | belum diuji, laporan run belum memuat hasil uji fungsi |
 | H3 | Kerusakan penanganan dan penyimpanan sebelum run memperpendek umur komponen | Umur komponen ditentukan beban di dasar sumur, dan penanganan tidak berpengaruh | Bandingkan temuan kerusakan fisik saat penerimaan tool di rig dengan jam pakai berikutnya | belum diuji, catatan penerimaan tool tidak tersedia |
 | H4 | Pola kerusakan tidak acak terhadap jam operasi kumulatif | Kerusakan acak terhadap jam operasi | Uji sebaran waktu antar-kerusakan terhadap model laju kegagalan, lalu periksa apakah laju naik terhadap jam kumulatif | belum diuji, riwayat jam kumulatif per nomor seri belum lengkap |
 
 Hubungan antara cacat laten dan kejadian di sumur belum dapat ditetapkan dari dokumen kasus, karena laporan run tidak memuat hasil uji fungsi dan catatan penerimaan tool secara lengkap. Hubungan itu dicatat sebagai hipotesis H2 dan H3.
 
-### 1.2.8 Karakteristik masalah keteknikan yang dipenuhi
+### 1.2.8 Atribut Permasalahan Kompleks yang Dipenuhi
 
-| Atribut | Keadaan pada kasus ini | Letak pemenuhan |
+Atribut yang dipakai menilai kerumitan permasalahan terdiri atas WP1 beserta semua atau sebagian WP2 sampai WP7, dengan keterangan tiap atribut seperti pada tabel berikut.
+
+| Atribut | Keterangan | Keadaan pada kasus ini |
 |---|---|---|
-| WP1 identifikasi masalah | Masalah dinyatakan sebagai kegagalan BHA tanpa peringatan dini beserta kerugian waktu, biaya, energi, dan keselamatan | 1.1 dan 1.2 |
-| WP2 perumusan tujuan dan kriteria | Tujuan diturunkan menjadi empat besaran keberhasilan program: jam hentian, biaya hentian per kejadian, energi terbuang, dan kejadian berisiko keselamatan | 1.2.2 dan Bab III |
-| WP3 pembangkitan alternatif | Alternatif dibangkitkan per akar penyebab dan per sudut kajian | Bab III |
-| WP4 analisis kelangkaan dan kebaruan | Kekhasan kasus terletak pada gabungan lokasi terpencil, tool bersumber radioaktif, dan ketiadaan ukuran kondisi per komponen | 1.4 dan Bab III |
-| WP5 analisis kelayakan | Kelayakan dinilai dari data yang tersedia di lapangan dan standar acuan yang berlaku | Bab III |
-| WP6 pemilihan alternatif | Pemilihan memakai kriteria berbobot dan skenario sensitivitas | Bab III |
-| WP7 perancangan konsep dan rincian | Rancangan konsep dan rincian disusun setelah alternatif terpilih | Bab IV dan PPT II |
+| WP1 kedalaman pengetahuan yang dibutuhkan | Tidak dapat dipecahkan tanpa pengetahuan rekayasa mendalam berbasis fondasi | Menuntut pengetahuan keandalan alat, keselamatan operasi, dan manajemen rantai pasok pada tingkat lanjutan |
+| WP2 rentang persyaratan yang berbenturan | Memuat isu teknis dan non-teknis yang berkonflik dan luas | Jadwal operator, biaya penyedia layanan, keselamatan kru, dan ketentuan regulator saling menekan |
+| WP3 kedalaman analisis yang dibutuhkan | Tanpa solusi yang jelas dan menuntut pemikiran abstrak serta model orisinal | Model biaya siklus kegagalan dan struktur sebab tiga akar penyebab dibangun dari bahan kasus |
+| WP4 keakraban persoalan | Memuat isu yang jarang ditemui | Kombinasi tool bersumber radioaktif, lokasi terpencil, dan ketiadaan catatan kondisi per nomor seri jarang ditemui sebagai satu paket |
+| WP5 luas kode dan standar yang berlaku | Berada di luar cakupan satu kode praktik | Menyentuh IEC 62740:2015, IEC 60812:2018, ketentuan keselamatan sumber radioaktif, dan standar operasi pengeboran |
+| WP6 luas keterlibatan pemangku kepentingan | Memuat kelompok pemangku kepentingan yang beragam | Tujuh kelompok pemangku kepentingan pada 1.1.2 dengan kepentingan yang berbeda |
+| WP7 keterkaitan antarbagian | Masalah tingkat tinggi dengan banyak bagian atau sub masalah | Empat komponen kerugian, enam barrier, dua belas kejadian dasar, dan tiga akar penyebab saling terkait |
 
-Atribut WP1 terpenuhi penuh pada subbab ini. Atribut WP2 sampai WP7 terpenuhi sebagian, dengan letak pemenuhan seperti pada kolom terakhir, dan pemenuhan penuhnya berada pada bab lanjutan.
+Ketujuh atribut hadir pada kasus ini. WP1 terpenuhi penuh pada subbab ini, sedangkan pemenuhan WP2 sampai WP7 diperluas pada Bab III dan Bab IV.
 
 ---
+
 ## 1.3 Pembagian Tanggung Jawab dan Titik Kritis
 
 Tim terdiri atas tiga anggota dengan penamaan disamarkan. Pembagian dilakukan per bab dan per sudut kajian, sehingga setiap titik kritis memiliki satu pemilik.
@@ -424,13 +433,13 @@ Tim terdiri atas tiga anggota dengan penamaan disamarkan. Pembagian dilakukan pe
 
 Sudut kajian keselamatan dipikul ketiga anggota bersama, karena kerusakan BHA serta penanganan sumber radioaktif pada tool LWD menyangkut seluruh anggota tim dan seluruh bab.
 
-**Kontribusi individual.** Setiap anggota mengusulkan empat gagasan awal, sehingga totalnya dua belas gagasan, dan setiap gagasan memetakan ke tiga akar penyebab pada 1.2.4.
+**Kontribusi individual.** Setiap anggota mengusulkan tiga gagasan utama, sehingga totalnya sembilan, dan ketiga anggota bersama menambah tiga usulan keselamatan, sehingga bahan usulan seluruhnya dua belas, setara tiga usulan per sudut kajian. Konsolidasi bahan itu menjadi himpunan alternatif dilakukan pada subbab 3.1 sesuai ketentuan jumlah alternatif pada format proposal.
 
-| Anggota | Empat gagasan awal | Akar penyebab yang dituju |
+| Anggota | Gagasan yang diusulkan | Akar penyebab yang dituju |
 |---|---|---|
-| A | Fasilitas penanganan dan penyimpanan tool terstandar; manajemen energi rig lintas fase; bengkel servis dan stasiun uji di dekat lokasi; pengendalian sumber radioaktif dan penanganan BHA | B pada dua gagasan pertama, A dan C pada dua berikutnya |
-| B | Manajemen siklus hidup tool per nomor seri; analisis kegagalan terstruktur; program proteksi radiasi dengan kontrol akses dan pemantauan dosis; penarikan terencana dengan kontrol risiko lantai bor | A pada dua gagasan pertama, C dan keselamatan pada dua berikutnya |
-| C | Stok penyangga menurut kekritisan; kualifikasi pemasok dan penelusuran lot; logistik terjadwal dengan penempatan awal; kesiapan darurat tool bersumber yang hilang atau terjepit | C pada tiga gagasan pertama, A dan keselamatan pada yang terakhir |
+| A | F1 bengkel servis dan stasiun uji dekat lokasi; F2 manajemen energi rig lintas fase; F3 fasilitas penanganan dan penyimpanan tool terstandar; K1 pengendalian sumber radioaktif dan penanganan BHA | F1 dan F3 menutup B, F2 menutup C, K1 menutup risiko keselamatan dan menopang A serta C |
+| B | Q1 manajemen siklus hidup tool per nomor seri; Q2 pemeliharaan prediktif berbasis data kondisi bawah permukaan; Q3 analisis kegagalan terstruktur; K2 kesiapan darurat tool bersumber yang hilang atau terjepit | Q1, Q2, dan Q3 menutup A, K2 menutup risiko keselamatan |
+| C | S1 stok penyangga menurut kekritisan; S2 kualifikasi pemasok dan penelusuran lot; S3 logistik terjadwal dengan penempatan awal; K3 penarikan terencana dan kontrol risiko lantai bor | S1 dan S3 menutup C, S2 menutup B, K3 menutup A dan risiko keselamatan |
 
 Pemetaan gagasan ke sudut kajian dan ke BoK beserta standar acuannya dilakukan pada subbab 3.1 dan 3.2, karena kedua tabel itu milik Bab III.
 
@@ -458,6 +467,14 @@ Tarif yang dipakai pada 1.1.9 dan Bab II berupa angka acuan awal: tarif pengebor
 
 Lima keterbatasan menyertai hasil kajian. Pertama, enam dari dua belas minimal cut set pada 2.5.3 belum memiliki prekursor yang terekam, sehingga pohon kegagalan menyatakan struktur sebab dan kebutuhan pencatatan, bukan peluang kejadian. Kedua, empat hipotesis pada 1.2.7 belum diuji dan membawa uji pembedanya masing-masing. Ketiga, sebagian durasi dan seluruh tarif spread cost pada Bab II berupa skenario, sehingga kerugian langsung berstatus turunan dari skenario, bukan pengukuran proyek. Keempat, dataset publik memasok sebaran durasi interupsi, tetapi tidak memuat catatan kondisi komponen, sehingga hubungan beban operasi dan kerusakan tidak dapat dihitung per komponen. Kelima, penilaian pada tabel FMECA memakai rubrik dengan dasar per baris, dan nilainya dapat digugurkan baris demi baris bila bahan baru tersedia.
 
+| Jenis batasan | Isi | Letak pembahasan |
+|---|---|---|
+| Teknis | Catatan kondisi komponen per nomor seri belum ada, laju kegagalan komponen belum tersedia | 1.1.7 dan 1.4.4 butir pertama, keempat |
+| Waktu | Sebagian durasi pemulihan berupa skenario | 1.4.4 butir ketiga |
+| Ekonomi | Tarif acuan awal, belum tarif kontrak aktual | 1.4.3 |
+| Keselamatan | Prosedur sumber radioaktif dinilai dari dokumen, bukan dari pengukuran dosis lapangan | 1.4.5 |
+| Lingkungan | Jadwal cuaca tidak dapat dianggarkan pada skenario | 1.4.4 butir ketiga |
+
 ### 1.4.5 Ruang lingkup
 
 Kajian berhenti pada analisis kegagalan, perumusan alternatif, dan pemilihan. Yang tidak dikerjakan pada tahap ini: rancangan rinci implementasi dari alternatif terpilih, penghitungan penghematan yang terukur, pemilihan vendor, dan pengukuran peluang kegagalan komponen. Pemutusan jalur kegagalan yang dijanjikan alternatif terpilih diuji kelayakannya pada Bab III, dan rancangan rinciannya berada pada tahap proyek berikutnya.
@@ -480,9 +497,10 @@ Kajian berhenti pada analisis kegagalan, perumusan alternatif, dan pemilihan. Ya
 | Barrier | Kendali yang seharusnya mencegah kegagalan sampai ke rig, dianalisis pada 2.6 |
 | Minimal cut set | Kombinasi kejadian dasar terkecil yang mampu menghadirkan top event pohon kegagalan |
 | Akar penyebab A, B, C | Tiga akar yang dirumuskan pada 1.2.4 dan dipakai ulang sampai Bab IV |
+| PPT II | Mata kuliah lanjutan Proyek Perancangan Terpadu II, tempat rancangan rinci alternatif terpilih disusun |
 | Anggota A, B, C | Tiga anggota tim dengan pembagian pada 1.3 |
 
-Dua istilah dipakai dengan prefiks agar tidak bermakna ganda. Jumlah kanal pada data publik berarti cacah saluran pengukuran pada satu sumur, dan jumlah kanal terisi sedikitnya 50 persen bin berkisar 28 sampai 48 per sumur. Kejadian tercakup berarti cacah baris kejadian pada tabel label untuk satu sumur, dengan total 884 pada sepuluh wellbore.
+Dua istilah dipakai dengan prefiks agar tidak bermakna ganda. Jumlah kanal pada data publik berarti cacah saluran pengukuran pada satu sumur, dan jumlah kanal yang terekam pada sedikitnya setengah jangka waktu sumur berkisar 28 sampai 48 per sumur. Kejadian tercakup berarti cacah baris kejadian pada tabel label untuk satu sumur, dengan total 884 pada sepuluh wellbore.
 
 ## 1.6 Manfaat bagi Industri dan Pemangku Kepentingan
 
@@ -500,7 +518,7 @@ Manfaat pada tabel itu berstatus potensi yang diuji kelayakannya pada Bab III. T
 ---
 # BAB II PENGOLAHAN DATA DAN ANALISIS
 
-Bab II memuat lima alat analisis dengan satu efek yang sama: kegagalan BHA yang menghentikan pengeboran tanpa peringatan dini. Alat dipilih sesuai pertanyaan yang dijawabnya, dan batas tiap alat dinyatakan pada 2.8. Angka yang dipakai berasal dari tabel 1.2.2 beserta status buktinya, sehingga tidak ada angka baru di bab ini tanpa sumber.
+Bab II memuat enam alat analisis dengan satu efek yang sama: kegagalan BHA yang menghentikan pengeboran tanpa peringatan dini. Alat dipilih sesuai pertanyaan yang dijawabnya, dan batas tiap alat dinyatakan pada 2.8. Angka yang dipakai berasal dari tabel 1.2.2 beserta status buktinya, sehingga tidak ada angka baru di bab ini tanpa sumber.
 
 ## 2.1 Value Stream Mapping (VSM)
 
@@ -513,9 +531,9 @@ VSM memetakan aliran nilai penanganan satu kegagalan BHA, dari persiapan tool di
 | Servis dan uji fungsi tool di fasilitas | Bengkel servis | Tool dinyatakan layak untuk run | Di luar hentian, tetapi menentukan kegagalan dini |
 | Pengiriman ke lokasi | Logistik, kapal atau helikopter | Tool tiba di rig | Bergantung jadwal dan cuaca |
 | Run di dasar sumur | Kru rig, engineer pengukuran | Data pengeboran | Selama run |
-| Deteksi kegagalan | Kru rig | Diagnosis, keputusan penarikan | 2 sampai 5 jam menurut skenario |
+| Deteksi kegagalan | Kru rig | Diagnosis, keputusan penarikan | 2 sampai 3 jam menurut skenario |
 | Penarikan rangkaian (POOH) | Kru rig | BHA rusak di permukaan | 7 sampai 11 jam menurut skenario |
-| Pelepasan dan perakitan pengganti | Kru rig, bengkel | BHA pengganti siap | 4 sampai 5 jam menurut skenario |
+| Pelepasan dan perakitan pengganti | Kru rig, bengkel | BHA pengganti siap | 4 sampai 8 jam menurut skenario |
 | Uji fungsi | Kru rig | Konfirmasi tool pengganti | 2 jam menurut skenario deepwater |
 | Turun kembali (RIH) dan reaming | Kru rig | Mata bor kembali di dasar sumur | 9 sampai 12 jam menurut skenario |
 | Kembali mengebor | Kru rig | Pengeboran berlanjut | Akhir siklus |
@@ -591,7 +609,7 @@ Dua temuan OPC. Pertama, pada kedua siklus tidak ada langkah inspeksi kondisi se
 
 ## 2.4 Failure Modes, Effects, and Criticality Analysis (FMECA)
 
-FMECA memeringkat mode kegagalan BHA menurut keparahan, frekuensi, dan kemampuan mendeteksi sebelum kegagalan terjadi. Struktur skala mengikuti IEC 60812 untuk analisis mode dan efek kegagalan.
+FMECA memeringkat mode kegagalan BHA menurut keparahan, frekuensi, dan kemampuan mendeteksi sebelum kegagalan terjadi. Struktur skala mengikuti IEC 60812:2018 untuk analisis mode dan efek kegagalan.
 
 ### 2.4.1 Skala penilaian yang dipakai
 
@@ -624,8 +642,8 @@ Setiap nilai pada tabel 2.4.2 diberi dasar penilaian pada kolomnya sendiri, sehi
 | Telemetri MWD berhenti | 343 | Prioritas tinggi, penggantian menuntut penarikan penuh |
 | Motor lubang bawah aus | 336 | Prioritas tinggi, keausan menumpuk tanpa catatan |
 | Getaran merusak rangkaian | 336 | Prioritas tinggi, bersambung ke mode lain sebagai penyebab lanjutan |
-| Rotary steerable system berhenti | 320 | Prioritas menengah tinggi |
 | Masalah fluida sumur | 324 | Prioritas menengah tinggi, konsekuensi keselamatan ikut dibaca |
+| Rotary steerable system berhenti | 320 | Prioritas menengah tinggi |
 | Sensor LWD menurun | 288 | Prioritas menengah |
 | Sambungan mekanis gagal | 270 | Prioritas menengah, keparahan tertinggi dengan frekuensi terendah |
 
@@ -668,7 +686,7 @@ Setiap gerbang antara memakai OR, karena setiap kejadian dasarnya mampu menghadi
 | Gerbang | 5, terdiri atas 1 top event dan 4 gerbang antara | Cacah simpul bertingkat gerbang pada tabel 2.5.1 |
 | Kejadian dasar | 12 | Cacah simpul bertingkat kejadian dasar pada tabel 2.5.1 |
 | Minimal cut set | 12, semuanya tunggal | Karena keempat gerbang antara bertipe OR dan top event OR, setiap kejadian dasar menjadi satu cut set sendirian |
-| Cabang | 4, dengan 3 kejadian dasar per cabang | Pembagian gerbang antara |
+| Gerbang antara | 4, dengan 3 kejadian dasar per gerbang | Pembagian pohon |
 
 ### 2.5.3 Pemetaan cut set ke prekursor yang terukur
 
@@ -684,11 +702,11 @@ Setiap gerbang antara memakai OR, karena setiap kejadian dasarnya mampu menghadi
 | BE9 | Mode yang dilindungi proteksi mandiri alat | Tercatat pada dokumen desain alat |
 | BE10, BE11, BE12 | Lama menunggu pengganti per kejadian | Tercatat pada laporan harian dan job ticket |
 
-Pemetaan itu menyatakan batas pohon: enam dari dua belas cut set belum memiliki prekursor yang terekam, sehingga pohon menyatakan struktur sebab dan kebutuhan pencatatan, bukan peluang kejadian. Tidak ada angka peluang pada pohon, karena laju kegagalan komponen per nomor seri belum tersedia, dan setiap angka peluang pada keadaan ini menjadi karangan.
+Baris pertama dan baris BE10 sampai BE12 masing-masing memuat lebih dari satu cut set tunggal, sehingga cacah baris tabel tidak sama dengan cacah cut set. Pemetaan itu menyatakan batas pohon: enam dari dua belas cut set belum memiliki prekursor yang terekam, sehingga pohon menyatakan struktur sebab dan kebutuhan pencatatan, bukan peluang kejadian. Tidak ada angka peluang pada pohon, karena laju kegagalan komponen per nomor seri belum tersedia, dan setiap angka peluang pada keadaan ini menjadi karangan.
 
 ## 2.6 Barrier Analysis
 
-Analisis barrier menjalankan IEC 62740 bagian Annex B.2 pada kasus ini: menghitung kendali yang seharusnya mencegah kegagalan sampai ke rig, lalu menyatakan status tiap kendali. Statusnya tiga: berdiri bila kendali bekerja, lemah bila kendali ada tetapi tidak dapat dievaluasi atau tidak mencakup kasus, dan hilang bila kendali tidak ada.
+Analisis barrier menjalankan IEC 62740:2015 bagian Annex B.2 pada kasus ini: menghitung kendali yang seharusnya mencegah kegagalan sampai ke rig, lalu menyatakan status tiap kendali. Statusnya tiga: berdiri bila kendali bekerja, lemah bila kendali ada tetapi tidak dapat dievaluasi atau tidak mencakup kasus, dan hilang bila kendali tidak ada.
 
 | Kode | Barrier | Fungsi yang diharapkan | Status | Bukti dan akibat |
 |---|---|---|---|---|
@@ -701,17 +719,17 @@ Analisis barrier menjalankan IEC 62740 bagian Annex B.2 pada kasus ini: menghitu
 
 Satu barrier berstatus hilang, yaitu B3, dan lima barrier berstatus lemah dengan penyebab yang dapat dibaca pada kolom bukti. Status hilang dinyatakan berbeda dari gagal, karena B3 tidak pernah dibangun sebagai kendali pada kasus ini, bukan dibangun lalu dilanggar.
 
-Pengisi B3 dicatat sebagai kandidat solusi pada Bab III, dan salah satu kandidatnya adalah pemeliharaan prediktif. Pemilihan dan pemeringkatan kandidat itu berada di Bab III, sehingga analisis pada bab ini berhenti pada status barrier.
+Pengisi B3 dicatat sebagai kandidat solusi pada Bab III, dan salah satu kandidatnya, pada sudut mutu dan keandalan, adalah pemeliharaan prediktif. Pemilihan dan pemeringkatan kandidat itu berada di Bab III, sehingga analisis pada bab ini berhenti pada status barrier.
 
 ## 2.7 Sintesis Akar Penyebab
 
-Tiga alat pada bab ini bertemu pada satu alur penyebab. VSM menunjukkan di mana waktu dan uang terbakar, MIFC menunjukkan informasi apa yang tidak mengalir, OPC menunjukkan langkah pemulihan yang tidak mengandung pengendali sebelum kegagalan, FMECA menunjukkan nilai deteksi yang seragam tinggi pada seluruh mode, dan pohon kegagalan serta barrier menyatakan struktur sebab beserta kendali yang hilang.
+Enam alat pada bab ini bertemu pada satu alur penyebab. VSM menunjukkan di mana waktu dan uang terbakar, MIFC menunjukkan informasi apa yang tidak mengalir, OPC menunjukkan langkah pemulihan yang tidak mengandung pengendali sebelum kegagalan, FMECA menunjukkan nilai deteksi yang seragam tinggi pada seluruh mode, dan pohon kegagalan serta barrier menyatakan struktur sebab beserta kendali yang hilang.
 
 | Akar penyebab | Penjelasan | Ranting fishbone | Cut set | Barrier | Solusi pada Bab III |
 |---|---|---|---|---|---|
-| A. Akumulasi kerusakan komponen tidak dikelola sepanjang siklus hidup | Kelelahan dan keausan menumpuk tanpa catatan per komponen, sehingga kegagalan datang tanpa peringatan dan penyebabnya tidak dipelajari | Ma1, Ma2, Me1, Me2, Ms1, Ms2, Ms3 | BE1, BE2, BE3, BE7 | B1, B3, B6 | Alternatif dari sudut mutu dan keandalan, termasuk pemeliharaan prediktif sebagai satu kandidat |
-| B. Kesiapan tool sebelum run tidak terjamin | Uji fungsi terbatas, penanganan merusak komponen, dan mutu komponen bervariasi antarlot | Mn1, Ma4, Mt1, Ms4 | BE4, BE5, BE6 | B1, B2 | Alternatif dari sudut fasilitas dan mutu pasokan |
-| C. Pemulihan bergantung pada pasokan yang jauh dan reaktif | Pengganti dikirim setelah kerusakan, melalui jalur yang bergantung cuaca, sementara rig terus menanggung biaya dan konsumsi energi | Mn2, Mn4, Me3, Me4, Mt2, Mt4, En1, En2, En4 | BE8, BE10, BE11, BE12 | B4, B5 | Alternatif dari sudut rantai pasok dan fasilitas |
+| A. Akumulasi kerusakan komponen tidak dikelola sepanjang siklus hidup | Kelelahan dan keausan menumpuk tanpa catatan per komponen, sehingga kegagalan datang tanpa peringatan dan penyebabnya tidak dipelajari | Ma1, Ma2, Me2, Mn2, Ms1, Ms2, Ms3 | BE1, BE2, BE3, BE7, BE8 | B1, B3, B6 | Alternatif dari sudut mutu dan keandalan, termasuk pemeliharaan prediktif sebagai satu kandidat |
+| B. Kesiapan tool sebelum run tidak terjamin | Uji fungsi terbatas, penanganan merusak komponen, dan mutu komponen bervariasi antarlot | Ma4, Mt1, Me1, BE9 | BE4, BE5, BE6, BE9 | B1, B2 | Alternatif dari sudut fasilitas dan mutu pasokan |
+| C. Pemulihan bergantung pada pasokan yang jauh dan reaktif | Pengganti dikirim setelah kerusakan, melalui jalur yang bergantung cuaca, sementara rig terus menanggung biaya dan konsumsi energi | Mn1, Mn3, Mn4, Me3, Me4, Mt2, Mt4, En1, En2, En4 | BE10, BE11, BE12 | B4, B5 | Alternatif dari sudut rantai pasok dan fasilitas |
 
 Keempat sifat kegagalan dinyatakan dengan kode berikut pada tiap akar penyebab. P1 lama: hentian memanjang karena pemulihan menempuh siklus penuh, 24 sampai 36 jam menurut skenario. P2 kompleks: kegagalan melibatkan bengkel servis, logistik, kru, dan cuaca pada saat yang sama. P3 mahal: kerugian langsung satu kejadian 34.375 sampai 940.000 USD menurut tipe operasi. P4 tidak terprediksi: tidak ada ukuran kondisi yang terekam, sehingga kejadian datang tanpa peringatan.
 
@@ -721,7 +739,7 @@ Keempat sifat kegagalan dinyatakan dengan kode berikut pada tiap akar penyebab. 
 | B | P3, P4 |
 | C | P1, P2, P3 |
 
-Akar A menerangkan mengapa kegagalan tidak terprediksi dan mengapa kerugian menumpuk, akar B menerangkan mengapa kegagalan mahal karena dibiayai dua kali, sekali saat cacat lolos dan sekali saat diganti, dan akar C menerangkan mengapa hentian lama serta kompleks. Akar penyebab yang tidak menerangkan satu pun dari empat sifat itu tidak akan dipertahankan, dan pada sintesis ini ketiganya menerangkan minimal satu sifat.
+Akar A menerangkan mengapa hentian lama, mengapa kerugian menumpuk, dan mengapa kegagalan tidak terprediksi, akar B menerangkan mengapa kegagalan mahal karena dibiayai dua kali, sekali saat cacat lolos dan sekali saat diganti, dan akar C menerangkan mengapa hentian lama serta kompleks. Akar penyebab yang tidak menerangkan satu pun dari empat sifat itu tidak akan dipertahankan, dan pada sintesis ini ketiganya menerangkan minimal satu sifat.
 
 ## 2.8 Alat yang Dipertimbangkan dan Batas Pemakaiannya
 
@@ -738,3 +756,10 @@ Akar A menerangkan mengapa kegagalan tidak terprediksi dan mengapa kerugian menu
 Batas tersebut menjaga agar tiap alat menjawab pertanyaannya sendiri. Analisis keputusan berbobot tidak dipakai pada bab ini, karena pertanyaannya tentang pemilihan, dan pemilihan berada di Bab III.
 
 ---
+
+# DAFTAR PUSTAKA
+
+- IEC 62740:2015, Root cause analysis (RCA) - Analysis of causes of failures and other undesired events.
+- IEC 60812:2018, Analysis techniques for failure mode and effects analysis (FMEA and FMECA).
+- Equinor, Volve data set, dataset publik dengan lisensi CC BY-NC-SA 4.0.
+
