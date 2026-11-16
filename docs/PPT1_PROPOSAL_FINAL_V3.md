@@ -206,65 +206,51 @@ Tiga keterbatasan bahan menyertai analisis. Dokumen kasus tidak memuat catatan k
 | Ambang 30 menit | Membaca definisi service interruption pada formulir KPI layanan |
 | Lost rig hours 0 | Membaca laporan akhir sumur UXA-7 pada bagian interupsi layanan |
 
-### 1.1.9 Rumus dan Metode Perolehan Angka 1.1.6
+### 1.1.9 Metode Perhitungan Kerugian
 
-Kerugian per kejadian dihitung dengan rumus berikut.
+Kerugian satu kejadian dihitung dalam empat langkah berurutan. Setiap langkah memakai angka yang sudah berstatus pada 1.1.8 dan 1.2.2, sehingga hasil akhirnya dapat ditelusuri kembali ke sumbernya.
 
-```latex
-K = T \, (C_{rig} + C_{E} + Q \cdot P) + C_{ganti}
-```
+**Langkah 1, lama hentian.** Lama hentian adalah jumlah durasi seluruh tahap siklus pemulihan: diagnosis, persiapan, penarikan rangkaian, pelepasan BHA rusak, perakitan BHA pengganti, uji fungsi, penurunan rangkaian kembali, reaming, dan pemulihan parameter pengeboran. Laporan harian Serco S1-O-15C tanggal 9 Juli 2026 mencatat dua kejadian Directional Tool Failure, masing-masing 3,50 jam dan 1,50 jam, dengan pihak penanggung penyedia layanan, sehingga NPT resminya 5,00 jam. Pemulihan penuh pada kejadian yang sama mencakup seluruh tahap tersebut dan skenarionya 10 jam; kedua angka mengukur hal berbeda dan tidak dijumlahkan.
 
-T adalah lama hentian dalam hari, C_rig biaya harian rig dan layanan, C_E biaya energi harian selama hentian, Q laju produksi sumur yang tertunda dalam barel per hari, P harga minyak mentah per barel, dan C_ganti biaya tool pengganti beserta transportasinya.
+**Langkah 2, spread cost per jam.** Biaya harian gabungan rig, marine, aviasi, layanan aktif, personel, dan logistik dijumlahkan, lalu dibagi 24. Angka yang dipakai: 45.000 USD per hari menjadi 1.875 USD per jam pada operasi darat, 170.000 menjadi 7.083 pada rig jack-up, dan 480.000 menjadi 20.000 pada drillship deepwater.
 
-Dari sisi penyedia layanan, nilai hentian dihitung dengan tarif kontrak berikut.
+**Langkah 3, kerugian operasional.** Lama hentian dalam jam dikalikan spread cost per jam. Kejadian darat dengan NPT resmi: 5 jam dikali 1.875 USD sama dengan 9.375 USD. Dengan pemulihan penuh: 10 jam dikali 1.875 USD sama dengan 18.750 USD. Kejadian jack-up: 24 jam dikali 7.083 USD sama dengan 170.000 USD. Kejadian deepwater: 36 jam dikali 20.000 USD sama dengan 720.000 USD.
 
-```latex
-K_{layanan} = T_{jam} \cdot C_{op} + (V \cdot T_{jam}) \cdot r + C_{ganti}
-```
+**Langkah 4, kerugian langsung.** Kerugian operasional ditambah biaya perbaikan dan biaya tambahan berupa mobilisasi, logistik, dan bahan. Kejadian darat: 9.375 ditambah 25.000 sama dengan 34.375 USD pada NPT resmi, dan 18.750 ditambah 25.000 sama dengan 43.750 USD pada pemulihan penuh. Kejadian jack-up: 170.000 ditambah 75.000 sama dengan 245.000 USD. Kejadian deepwater: 720.000 ditambah 220.000 sama dengan 940.000 USD. Dengan dasar darat pemulihan penuh 43.750 USD, rasio jack-up menjadi 5,6 kali dan deepwater 21,5 kali.
 
-T_jam adalah lama hentian dalam jam, C_op operating charge per jam, V laju pengeboran dalam kaki per jam, r tarif per kaki, dan C_ganti biaya tool pengganti beserta transportasinya.
+**Faktor formasi.** Pada formasi yang lebih keras atau tidak stabil, lama hentian dikalikan faktor berikut, sedangkan biaya perbaikan, penggantian, dan mobilisasi tidak dikalikan agar tidak terjadi penghitungan ganda.
 
-Perbandingan antartipe operasi memakai spread cost per jam dan pengali formasi.
-
-```latex
-C_{spread/jam} = \frac{C_{rig} + C_{marine} + C_{aviasi} + C_{layanan\ aktif} + C_{personel} + C_{logistik}}{24}
-```
-
-```latex
-K_{langsung} = T_{downtime} \cdot C_{spread/jam} \cdot M_{formasi} + C_{perbaikan} + C_{tambahan}
-```
-
-M_formasi memperpanjang durasi menurut kondisi batuan, dan hanya dikenakan pada waktu, tidak pada biaya perbaikan, penggantian, maupun mobilisasi, agar tidak terjadi penghitungan ganda.
-
-| Kondisi formasi | M_formasi |
+| Kondisi formasi | Faktor pengali waktu |
 |---|---|
 | Normal dan stabil | 1,00 |
 | Cukup keras atau berlapis-lapis | 1,15 |
 | Keras, abrasif, atau bergetaran tinggi | 1,30 |
 | Tidak stabil, zona kehilangan lumpur, atau tekanan tinggi | 1,50 |
 
-Siklus pemulihan dihitung sebagai penjumlahan tahap berikut.
+**Contoh penerapan faktor.** Kejadian deepwater pada formasi keras: 36 jam dikali 1,30 sama dengan 46,8 jam, kerugian operasional 46,8 dikali 20.000 USD sama dengan 936.000 USD, dan kerugian langsung 936.000 ditambah 220.000 sama dengan 1.156.000 USD, atau sekitar Rp18,5 miliar.
 
-```latex
-T_{siklus} = T_{diagnosis} + T_{persiapan} + T_{POOH} + T_{lay\ down} + T_{make\ up} + T_{uji\ fungsi} + T_{RIH} + T_{ream} + T_{pemulihan\ parameter}
-```
+**Rumus ringkas.** Dengan T lama hentian dalam jam, S spread cost per jam, F faktor formasi, Cp biaya perbaikan, dan Ct biaya tambahan, keempat langkah itu ditulis:
 
-| Angka pada 1.1.6 | Rumus atau definisi | Bahan yang dihitung | Status |
+- S sama dengan jumlah biaya rig, marine, aviasi, layanan aktif, personel, dan logistik, dibagi 24.
+- Kerugian operasional sama dengan T dikali S.
+- Kerugian langsung sama dengan T dikali S dikali F, ditambah Cp, ditambah Ct.
+
+Dari sisi penyedia layanan, nilai hentian mengikuti tarif kontrak: jam hentian dikali operating charge per jam, ditambah kaki pengeboran yang tertunda dikali tarif per kaki, ditambah biaya tool pengganti dan transportasinya. Dengan operating charge 1.000 USD per jam, hentian 24 jam setara 24.000 USD pada komponen itu saja, sebelum kaki pengeboran yang tertunda dan biaya pengganti dihitung.
+
+| Angka pada 1.1.6 | Cara memperoleh | Bahan | Status |
 |---|---|---|---|
 | Durasi 3,50 dan 1,50 jam | Selisih waktu mulai dan selesai tiap kejadian | Laporan harian, kolom waktu kejadian | tercatat |
 | NPT resmi 5,00 jam | Penjumlahan durasi kejadian dengan pihak penanggung penyedia layanan | Laporan harian, kolom pihak penanggung | tercatat |
-| Durasi 10, 24, dan 36 jam | T_siklus per tahap | Skenario siklus pemulihan per tipe operasi | asumsi |
-| Spread cost per hari | Penjumlahan komponen biaya harian | Skenario jarak dan tipe rig | asumsi |
-| Spread cost per jam | C_spread dibagi 24 | Spread cost per hari | turunan |
-| Kerugian operasional | Durasi dikali C_spread per jam | Durasi hentian dan spread cost per jam | turunan |
-| Kerugian langsung | K_langsung dengan M_formasi sama dengan 1,00 | Kerugian operasional, biaya perbaikan, biaya tambahan | turunan |
-| Rasio antartipe operasi | Pembagian kerugian langsung terhadap dasar darat pemulihan penuh | Kerugian langsung tiap tipe | turunan |
+| Durasi 10, 24, dan 36 jam | Penjumlahan tahap siklus pemulihan | Skenario siklus pemulihan per tipe operasi pada panduan RCA | skenario |
+| Spread cost per hari | Penjumlahan komponen biaya harian | Skenario jarak dan tipe rig pada panduan RCA | skenario |
+| Spread cost per jam | Spread cost per hari dibagi 24 | Spread cost per hari | turunan |
+| Kerugian operasional | Lama hentian dikali spread cost per jam | Durasi hentian dan spread cost per jam | turunan |
+| Kerugian langsung | Kerugian operasional ditambah biaya perbaikan dan biaya tambahan | Kerugian operasional, biaya perbaikan, biaya tambahan | turunan |
+| Rasio antartipe operasi | Pembagian kerugian langsung terhadap dasar darat pemulihan penuh | Kerugian langsung tiap tipe operasi | turunan |
 | 884 kejadian, 1.225 jam | Cacah baris dan penjumlahan durasi | Tabel label terkurasi pada dataset publik | terukur |
-| Median, p90, maksimum | Statistik urutan durasi | Durasi seluruh kejadian | terukur |
-| 38, 25, 28 kejadian | Cacah baris per kategori | Tabel label terkurasi kolom kategori | terukur |
+| Median 45 menit, p90 180 menit, maksimum 780 menit | Statistik urutan durasi | Durasi seluruh kejadian | terukur |
+| 38, 25, dan 28 kejadian | Cacah baris per kategori | Tabel label terkurasi kolom kategori | terukur |
 | Lost rig hours 0 | Pembacaan bagian interupsi layanan | Laporan akhir sumur UXA-7 | tercatat |
-
-Satu catatan pembacaan menyertai tabel itu: angka 5,00 jam adalah NPT resmi, sedangkan pemulihan penuh pada kejadian yang sama adalah 10 jam menurut skenario, sehingga kedua angka mengukur dua hal berbeda dan tidak dijumlahkan.
 
 ---
 ## 1.2 Analisis Akar Penyebab Masalah: Fishbone 6M dan 5W1H
@@ -286,23 +272,23 @@ Analisis berhenti pada akar penyebab dan pada pengendali yang seharusnya mencega
 
 ### 1.2.2 Angka dasar dan status buktinya
 
-Seluruh angka yang dipakai di subbab ini dibedakan menurut empat status: terukur bila dihitung ulang dari data mentah dengan langkah yang ditulis, tercatat bila berasal dari laporan atau dokumen kasus, turunan bila merupakan hasil hitung dari angka lain, dan asumsi bila nilainya ditetapkan sebagai skenario.
+Seluruh angka yang dipakai di subbab ini dibedakan menurut lima status: terukur bila dihitung ulang dari data mentah dengan langkah yang ditulis, tercatat bila berasal dari laporan atau dokumen kasus, acuan bila merupakan angka acuan awal pada panduan RCA yang diangkat dari kesepakatan dengan klien, turunan bila merupakan hasil hitung dari angka lain, dan skenario bila nilainya ditetapkan sebagai simulasi yang menunggu tarif dan durasi kontrak aktual.
 
 | Angka | Nilai | Sumber | Status |
 |---|---|---|---|
 | NPT resmi satu kejadian onshore | 5,00 jam, terdiri atas 3,50 jam dan 1,50 jam | Daily Drilling Report sumur S1-O-15C tanggal 9 Juli 2026 | tercatat |
-| Pemulihan penuh kejadian yang sama | 10 jam | Skenario pemulihan yang mencakup POOH, penggantian, uji fungsi, dan RIH | asumsi |
-| Durasi pemulihan offshore rig jack-up | 24 jam | Skenario siklus penarikan pada operasi lepas pantai perairan dangkal | asumsi |
-| Durasi pemulihan deepwater drillship | 36 jam | Skenario siklus penarikan pada operasi lepas pantai dalam | asumsi |
+| Pemulihan penuh kejadian yang sama | 10 jam | Skenario siklus pemulihan pada panduan RCA, mencakup POOH, penggantian, uji fungsi, dan RIH | skenario |
+| Durasi pemulihan offshore rig jack-up | 24 jam | Skenario siklus penarikan operasi lepas pantai perairan dangkal pada panduan RCA | skenario |
+| Durasi pemulihan deepwater drillship | 36 jam | Skenario siklus penarikan operasi lepas pantai dalam pada panduan RCA | skenario |
 | Ambang satu kejadian dihitung sebagai service interruption | lebih dari 30 menit | Formulir KPI layanan pengeboran berarah | tercatat |
-| Spread cost onshore | 45.000 USD per hari, sama dengan 1.875 USD per jam | Skenario land rig, layanan pengeboran, kru, bahan bakar, dan lumpur | asumsi |
-| Spread cost offshore perairan dangkal | 170.000 USD per hari, sama dengan 7.083 USD per jam | Skenario jack-up, marine support, layanan aktif, dan personel | asumsi |
-| Spread cost deepwater | 480.000 USD per hari, sama dengan 20.000 USD per jam | Skenario drillship, marine dan aviasi, layanan aktif, dan personel | asumsi |
+| Spread cost onshore | 45.000 USD per hari, sama dengan 1.875 USD per jam | Skenario land rig, layanan pengeboran, kru, bahan bakar, dan lumpur pada panduan RCA | skenario |
+| Spread cost offshore perairan dangkal | 170.000 USD per hari, sama dengan 7.083 USD per jam | Skenario jack-up, marine support, layanan aktif, dan personel pada panduan RCA | skenario |
+| Spread cost deepwater | 480.000 USD per hari, sama dengan 20.000 USD per jam | Skenario drillship, marine dan aviasi, layanan aktif, dan personel pada panduan RCA | skenario |
 | Kerugian langsung onshore, NPT resmi | 34.375 USD | 5 jam dikali 1.875 USD ditambah 25.000 USD biaya perbaikan dan tambahan | turunan |
 | Kerugian langsung onshore, pemulihan penuh | 43.750 USD | 10 jam dikali 1.875 USD ditambah 25.000 USD | turunan |
 | Kerugian langsung offshore jack-up | 245.000 USD, setara Rp3,92 miliar | 170.000 USD ditambah 50.000 USD perbaikan, 15.000 USD mobilisasi, dan 10.000 USD bahan | turunan |
 | Kerugian langsung deepwater | 940.000 USD, setara Rp15,04 miliar | 720.000 USD ditambah 150.000 USD perbaikan, 40.000 USD logistik, dan 30.000 USD bahan | turunan |
-| Kurs yang dipakai | 1 USD sama dengan Rp16.000 | Asumsi kurs pada skenario | asumsi |
+| Kurs yang dipakai | 1 USD sama dengan Rp16.000 | Kurs pada skenario panduan RCA | skenario |
 | Kejadian interupsi pengeboran pada dataset publik | 884 kejadian pada 10 wellbore, total 1.225 jam, median 45 menit, p90 180 menit | Dataset publik Equinor Volve, tabel label terkurasi | terukur |
 | Kejadian bertanda pipa terjepit dan pemancingan | 38 dari 884 kejadian | Kategori pada tabel label terkurasi | terukur |
 | Kejadian bertanda masalah fluida sumur | 25 dari 884 kejadian | Kategori pada tabel label terkurasi | terukur |
@@ -486,7 +472,7 @@ Nama perusahaan dan divisi mitra disamarkan sebagai perusahaan layanan pengebora
 
 ### 1.4.3 Angka ekonomi
 
-Tarif yang dipakai pada 1.1.9 dan Bab II berupa angka acuan awal: tarif pengeboran per kaki 41 USD pada wilayah dengan batuan relatif lunak, operating charge 1.000 USD per jam, dan biaya tetap per pekerjaan tertentu 21.500 USD. Angka itu berbeda untuk setiap proyek dan wilayah, sehingga seluruh kerugian pada Bab II disajikan sebagai skenario rendah, dasar, dan tinggi, dan diganti tarif kontrak aktual pada penerapan. Kurs yang dipakai 1 USD sama dengan Rp16.000.
+Tarif yang dipakai pada 1.1.9 dan Bab II berupa angka acuan awal pada panduan RCA yang diangkat dari kesepakatan dengan klien: tarif pengeboran per kaki 41 USD pada wilayah dengan batuan relatif lunak, operating charge 1.000 USD per jam, dan biaya tetap per pekerjaan tertentu 21.500 USD. Angka itu berbeda untuk setiap proyek dan wilayah, sehingga seluruh kerugian pada Bab II disajikan sebagai skenario rendah, dasar, dan tinggi, dan diganti tarif kontrak aktual pada penerapan. Kurs yang dipakai 1 USD sama dengan Rp16.000.
 
 ### 1.4.4 Keterbatasan validitas
 
@@ -880,4 +866,9 @@ Setiap alat dipakai menurut pertanyaan yang dinyatakan pada keluarannya. Penelus
 - IEC 62740:2015, Root cause analysis (RCA) - Analysis of causes of failures and other undesired events.
 - IEC 60812:2018, Analysis techniques for failure mode and effects analysis (FMEA and FMECA).
 - Equinor, Volve data set, dataset publik dengan lisensi CC BY-NC-SA 4.0.
+- Panduan Orkestrasi RCA Kerusakan BHA pada Operasi Pengeboran Sperry Drilling, dokumen kerja internal, 2026.
+- Daily Drilling Report sumur Serco S1-O-15C tanggal 9 Juli 2026, dokumen kasus internal.
+- End of Well Report sumur UXA-7, dokumen kasus internal.
+- End of Well Report sumur LLA-7, dokumen kasus internal.
+- End of Well Report sumur Geliga-1, dokumen kasus internal.
 
