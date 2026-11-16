@@ -241,8 +241,8 @@ Dari sisi penyedia layanan, nilai hentian mengikuti tarif kontrak: jam hentian d
 |---|---|---|---|
 | Durasi 3,50 dan 1,50 jam | Selisih waktu mulai dan selesai tiap kejadian | Laporan harian, kolom waktu kejadian | tercatat |
 | NPT resmi 5,00 jam | Penjumlahan durasi kejadian dengan pihak penanggung penyedia layanan | Laporan harian, kolom pihak penanggung | tercatat |
-| Durasi 10, 24, dan 36 jam | Penjumlahan tahap siklus pemulihan | Skenario siklus pemulihan per tipe operasi pada panduan RCA | skenario |
-| Spread cost per hari | Penjumlahan komponen biaya harian | Skenario jarak dan tipe rig pada panduan RCA | skenario |
+| Durasi 10, 24, dan 36 jam | Penjumlahan tahap siklus pemulihan | Skenario siklus pemulihan per tipe operasi | skenario |
+| Spread cost per hari | Penjumlahan komponen biaya harian | Skenario biaya harian per jarak dan tipe rig | skenario |
 | Spread cost per jam | Spread cost per hari dibagi 24 | Spread cost per hari | turunan |
 | Kerugian operasional | Lama hentian dikali spread cost per jam | Durasi hentian dan spread cost per jam | turunan |
 | Kerugian langsung | Kerugian operasional ditambah biaya perbaikan dan biaya tambahan | Kerugian operasional, biaya perbaikan, biaya tambahan | turunan |
@@ -272,23 +272,23 @@ Analisis berhenti pada akar penyebab dan pada pengendali yang seharusnya mencega
 
 ### 1.2.2 Angka dasar dan status buktinya
 
-Seluruh angka yang dipakai di subbab ini dibedakan menurut lima status: terukur bila dihitung ulang dari data mentah dengan langkah yang ditulis, tercatat bila berasal dari laporan atau dokumen kasus, acuan bila merupakan angka acuan awal pada panduan RCA yang diangkat dari kesepakatan dengan klien, turunan bila merupakan hasil hitung dari angka lain, dan skenario bila nilainya ditetapkan sebagai simulasi yang menunggu tarif dan durasi kontrak aktual.
+Seluruh angka yang dipakai di subbab ini dibedakan menurut lima status: terukur bila dihitung ulang dari data mentah dengan langkah yang ditulis, tercatat bila berasal dari laporan atau dokumen kasus, acuan bila merupakan angka acuan awal dari kesepakatan dengan klien, turunan bila merupakan hasil hitung dari angka lain, dan skenario bila nilainya ditetapkan sebagai simulasi biaya dan waktu yang menunggu tarif kontrak aktual.
 
 | Angka | Nilai | Sumber | Status |
 |---|---|---|---|
 | NPT resmi satu kejadian onshore | 5,00 jam, terdiri atas 3,50 jam dan 1,50 jam | Daily Drilling Report sumur S1-O-15C tanggal 9 Juli 2026 | tercatat |
-| Pemulihan penuh kejadian yang sama | 10 jam | Skenario siklus pemulihan pada panduan RCA, mencakup POOH, penggantian, uji fungsi, dan RIH | skenario |
-| Durasi pemulihan offshore rig jack-up | 24 jam | Skenario siklus penarikan operasi lepas pantai perairan dangkal pada panduan RCA | skenario |
-| Durasi pemulihan deepwater drillship | 36 jam | Skenario siklus penarikan operasi lepas pantai dalam pada panduan RCA | skenario |
+| Pemulihan penuh kejadian yang sama | 10 jam | Skenario siklus pemulihan yang mencakup POOH, penggantian, uji fungsi, dan RIH | skenario |
+| Durasi pemulihan offshore rig jack-up | 24 jam | Skenario siklus penarikan operasi lepas pantai perairan dangkal | skenario |
+| Durasi pemulihan deepwater drillship | 36 jam | Skenario siklus penarikan operasi lepas pantai dalam | skenario |
 | Ambang satu kejadian dihitung sebagai service interruption | lebih dari 30 menit | Formulir KPI layanan pengeboran berarah | tercatat |
-| Spread cost onshore | 45.000 USD per hari, sama dengan 1.875 USD per jam | Skenario land rig, layanan pengeboran, kru, bahan bakar, dan lumpur pada panduan RCA | skenario |
-| Spread cost offshore perairan dangkal | 170.000 USD per hari, sama dengan 7.083 USD per jam | Skenario jack-up, marine support, layanan aktif, dan personel pada panduan RCA | skenario |
-| Spread cost deepwater | 480.000 USD per hari, sama dengan 20.000 USD per jam | Skenario drillship, marine dan aviasi, layanan aktif, dan personel pada panduan RCA | skenario |
+| Spread cost onshore | 45.000 USD per hari, sama dengan 1.875 USD per jam | Skenario land rig, layanan pengeboran, kru, bahan bakar, dan lumpur | skenario |
+| Spread cost offshore perairan dangkal | 170.000 USD per hari, sama dengan 7.083 USD per jam | Skenario jack-up, marine support, layanan aktif, dan personel | skenario |
+| Spread cost deepwater | 480.000 USD per hari, sama dengan 20.000 USD per jam | Skenario drillship, marine dan aviasi, layanan aktif, dan personel | skenario |
 | Kerugian langsung onshore, NPT resmi | 34.375 USD | 5 jam dikali 1.875 USD ditambah 25.000 USD biaya perbaikan dan tambahan | turunan |
 | Kerugian langsung onshore, pemulihan penuh | 43.750 USD | 10 jam dikali 1.875 USD ditambah 25.000 USD | turunan |
 | Kerugian langsung offshore jack-up | 245.000 USD, setara Rp3,92 miliar | 170.000 USD ditambah 50.000 USD perbaikan, 15.000 USD mobilisasi, dan 10.000 USD bahan | turunan |
 | Kerugian langsung deepwater | 940.000 USD, setara Rp15,04 miliar | 720.000 USD ditambah 150.000 USD perbaikan, 40.000 USD logistik, dan 30.000 USD bahan | turunan |
-| Kurs yang dipakai | 1 USD sama dengan Rp16.000 | Kurs pada skenario panduan RCA | skenario |
+| Kurs yang dipakai | 1 USD sama dengan Rp16.000 | Kurs pada skenario simulasi | skenario |
 | Kejadian interupsi pengeboran pada dataset publik | 884 kejadian pada 10 wellbore, total 1.225 jam, median 45 menit, p90 180 menit | Dataset publik Equinor Volve, tabel label terkurasi | terukur |
 | Kejadian bertanda pipa terjepit dan pemancingan | 38 dari 884 kejadian | Kategori pada tabel label terkurasi | terukur |
 | Kejadian bertanda masalah fluida sumur | 25 dari 884 kejadian | Kategori pada tabel label terkurasi | terukur |
@@ -472,7 +472,7 @@ Nama perusahaan dan divisi mitra disamarkan sebagai perusahaan layanan pengebora
 
 ### 1.4.3 Angka ekonomi
 
-Tarif yang dipakai pada 1.1.9 dan Bab II berupa angka acuan awal pada panduan RCA yang diangkat dari kesepakatan dengan klien: tarif pengeboran per kaki 41 USD pada wilayah dengan batuan relatif lunak, operating charge 1.000 USD per jam, dan biaya tetap per pekerjaan tertentu 21.500 USD. Angka itu berbeda untuk setiap proyek dan wilayah, sehingga seluruh kerugian pada Bab II disajikan sebagai skenario rendah, dasar, dan tinggi, dan diganti tarif kontrak aktual pada penerapan. Kurs yang dipakai 1 USD sama dengan Rp16.000.
+Tarif yang dipakai pada 1.1.9 dan Bab II berupa angka acuan awal dari kesepakatan dengan klien: tarif pengeboran per kaki 41 USD pada wilayah dengan batuan relatif lunak, operating charge 1.000 USD per jam, dan biaya tetap per pekerjaan tertentu 21.500 USD. Angka itu berbeda untuk setiap proyek dan wilayah, sehingga seluruh kerugian pada Bab II disajikan sebagai skenario rendah, dasar, dan tinggi, dan diganti tarif kontrak aktual pada penerapan. Kurs yang dipakai 1 USD sama dengan Rp16.000.
 
 ### 1.4.4 Keterbatasan validitas
 
@@ -866,7 +866,6 @@ Setiap alat dipakai menurut pertanyaan yang dinyatakan pada keluarannya. Penelus
 - IEC 62740:2015, Root cause analysis (RCA) - Analysis of causes of failures and other undesired events.
 - IEC 60812:2018, Analysis techniques for failure mode and effects analysis (FMEA and FMECA).
 - Equinor, Volve data set, dataset publik dengan lisensi CC BY-NC-SA 4.0.
-- Panduan Orkestrasi RCA Kerusakan BHA pada Operasi Pengeboran Sperry Drilling, dokumen kerja internal, 2026.
 - Daily Drilling Report sumur Serco S1-O-15C tanggal 9 Juli 2026, dokumen kasus internal.
 - End of Well Report sumur UXA-7, dokumen kasus internal.
 - End of Well Report sumur LLA-7, dokumen kasus internal.
