@@ -54,6 +54,24 @@ Alur operasi berjalan enam tahap. Pertama, tool diservis dan diuji fungsi di fas
 
 Alur data pada tabel itu memperlihatkan satu keadaan yang menjadi dasar seluruh bab: informasi kondisi komponen tidak pernah tercatat sebagai deret waktu per nomor seri. Yang tercatat adalah kejadian setelah kerusakan, bukan keadaan komponen yang menuju kerusakan.
 
+**Gambar 1. Alur Operasi Penanganan Satu Siklus Kegagalan BHA**
+
+```mermaid
+flowchart TD
+  A["Servis dan uji fungsi tool<br/>di fasilitas servis"] --> B["Pengiriman ke rig<br/>jalur darat, kapal, atau helikopter"]
+  B --> C["Perakitan BHA<br/>dan turun ke dasar sumur"]
+  C --> D["Pengeboran dan pemantauan<br/>parameter permukaan"]
+  D --> E{"Kegagalan BHA?"}
+  E -- tidak --> D
+  E -- ya --> F["Deteksi kegagalan<br/>dan keputusan penarikan"]
+  F --> G["POOH<br/>rangkaian keluar"]
+  G --> H["Pelepasan BHA rusak<br/>dan perakitan pengganti"]
+  H --> I["Uji fungsi tool pengganti"]
+  I --> J["RIH dan reaming<br/>sampai dasar sumur"]
+  J --> K["Pengeboran berlanjut"]
+  J -.-> L["Selama siklus pemulihan,<br/>spread cost per jam tetap berjalan<br/>1.875 sampai 20.000 USD"]
+```
+
 ### 1.1.4 Rich Picture: Narasi dan Spesifikasi Elemen
 
 #### Narasi
@@ -110,9 +128,30 @@ Rich picture memuat satu rantai peristiwa dari fasilitas servis sampai dasar sum
 | G3 | S3 dan S2 bergantung pada S8 | Henti panjang karena menunggu pengganti |
 | G4 | S10 diambil tanpa ukuran kondisi | Penarikan terjadi setelah kegagalan, bukan sebelum batas tercapai |
 
-#### Ketentuan gambar rich picture
+#### Ketentuan Gambar 2
 
 Gambar memuat 12 simpul dan 11 relasi berarah, dengan tiga loop digambar sebagai panah melingkar dan empat penanda gangguan sebagai tanda seru pada titik yang bersangkutan. Simpul lingkungan S7 dan S8 diletakkan di tepi gambar, dan simpul pihak luar S11 serta S12 diletakkan di sisi kanan sebagai penerima akibat.
+
+**Gambar 2. Rich Picture Sistem Penanganan BHA**
+
+```mermaid
+flowchart LR
+  S1["S1 Fasilitas servis<br/>dan uji fungsi"] -->|"R1 menetapkan<br/>kelayakan"| S2["S2 Stok tool<br/>dan suku cadang"]
+  S2 -->|"R2 memasok"| S3["S3 Transportasi<br/>darat, kapal, helikopter"]
+  S3 -->|"R3 mengirim"| S4["S4 Rig dan lantai bor"]
+  S4 -->|"R4 merakit"| S5["S5 Perakitan BHA"]
+  S5 -->|"R5 menurunkan<br/>rangkaian"| S6["S6 Rangkaian<br/>di dasar sumur"]
+  S7["S7 Formasi batuan"] -->|"R6 getaran,<br/>tumbukan, abrasi"| S6
+  S8["S8 Cuaca dan<br/>kondisi laut"] -.->|"R7 jadwal"| S3
+  S8 -.->|"R7 jadwal"| S10["S10 Keputusan penarikan<br/>dan penggantian"]
+  S6 -->|"R8 pemantauan<br/>parameter"| S9["S9 Pemantauan<br/>parameter permukaan"]
+  S10 -->|"R9 memicu<br/>pasokan"| S2
+  S10 -->|"R9 memicu<br/>pengiriman"| S3
+  S11["S11 Operator sumur<br/>dan klausul NPT"] -.->|"R10 menagih<br/>laporan"| S10
+  S12["S12 Regulator keselamatan<br/>dan sumber radioaktif"] -.->|"R11 pengawasan"| S4
+  S12 -.->|"R11 pengawasan"| S6
+  S1 -.->|"G1 cacat laten<br/>lolos uji"| S6
+```
 
 ### 1.1.5 Trade-off Variabel Sistem
 
@@ -354,6 +393,42 @@ Fishbone disusun atas enam cabang 6M dengan empat ranting pada setiap cabang, se
 | En3 | Formasi keras dan abrasif | Formasi keras, abrasif, dan berlapis-lapis menaikkan getaran, mempercepat keausan, dan memperlama reaming |
 | En4 | Kedalaman air | Semakin dalam air, riser dan drillstring semakin panjang, POOH dan RIH semakin lama, dan dukungan kapal, helikopter, serta ROV semakin besar |
 
+**Gambar 3. Fishbone 6M Kegagalan BHA, 6 Cabang dan 24 Ranting**
+
+```mermaid
+flowchart LR
+  Mn1["Mn1 Penanganan<br/>tak terjadwal"] --> MAN["MAN manusia"]
+  Mn2["Mn2 Keputusan tanpa<br/>ukuran kondisi"] --> MAN
+  Mn3["Mn3 Kompetensi penanganan<br/>sumber"] --> MAN
+  Mn4["Mn4 Tekanan waktu"] --> MAN
+  Me1["Me1 Kelayakan<br/>berbasis jadwal"] --> METHOD["METHOD metode"]
+  Me2["Me2 Pembelajaran kegagalan<br/>tidak baku"] --> METHOD
+  Me3["Me3 Pengiriman reaktif"] --> METHOD
+  Me4["Me4 Siklus pemulihan<br/>panjang"] --> METHOD
+  Ma1["Ma1 Kelelahan elektronik<br/>dan mekanis"] --> MACHINE["MACHINE mesin"]
+  Ma2["Ma2 Keausan bearing<br/>dan elastomer"] --> MACHINE
+  Ma3["Ma3 Beban dinamik<br/>di dasar sumur"] --> MACHINE
+  Ma4["Ma4 Cacat laten"] --> MACHINE
+  Mt1["Mt1 Variasi mutu<br/>antarlot"] --> MATERIAL["MATERIAL bahan"]
+  Mt2["Mt2 Stok tidak menurut<br/>kekritisan"] --> MATERIAL
+  Mt3["Mt3 Objek berisiko<br/>tambahan"] --> MATERIAL
+  Mt4["Mt4 Jarak pasokan"] --> MATERIAL
+  Ms1["Ms1 Riwayat kondisi<br/>tidak tercatat"] --> MEAS["MEASUREMENT pengukuran"]
+  Ms2["Ms2 Sisa umur<br/>tidak diukur"] --> MEAS
+  Ms3["Ms3 Satuan waktu<br/>tidak seragam"] --> MEAS
+  Ms4["Ms4 Indikator pemulihan<br/>tidak baku"] --> MEAS
+  En1["En1 Lokasi terpencil<br/>dan lepas pantai"] --> ENV["ENVIRONMENT lingkungan"]
+  En2["En2 Ketergantungan<br/>cuaca"] --> ENV
+  En3["En3 Formasi keras<br/>dan abrasif"] --> ENV
+  En4["En4 Kedalaman air"] --> ENV
+  MAN --> E["KEGAGALAN BHA yang datang<br/>tanpa peringatan dini,<br/>menimbulkan kerugian waktu,<br/>biaya, energi, dan keselamatan"]
+  METHOD --> E
+  MACHINE --> E
+  MATERIAL --> E
+  MEAS --> E
+  ENV --> E
+```
+
 ### 1.2.4 Rekap keadaan sebab
 
 | Cabang | Jumlah ranting | Inti sebab | Akar penyebab yang dibawa |
@@ -380,9 +455,9 @@ Akar A menentukan seberapa sering kerusakan terjadi tanpa peringatan, akar B men
 | Who | Kru rig, driller, engineer pengukuran, bengkel servis, dan rantai pasok. Pihak yang menanggung hentian ditetapkan klausul kontrak, misalnya penyedia peralatan pengeboran berarah pada kejadian 9 Juli 2026 | Membaca kolom accountable party pada laporan harian dan klausul NPT pada kontrak |
 | How much | Kerugian langsung satu kejadian 34.375 sampai 43.750 USD pada operasi darat, 245.000 USD pada rig jack-up, dan 940.000 USD pada deepwater. Satu kejadian deepwater setara 3,8 kali kejadian perairan dangkal dan sekitar 21,5 kali kejadian darat dengan pemulihan penuh sebagai dasar | Menghitung durasi kali spread cost per jam, lalu menambahkan biaya perbaikan, mobilisasi, dan bahan |
 
-### 1.2.6 Spesifikasi gambar G1
+### 1.2.6 Spesifikasi Gambar 3
 
-Gambar G1 adalah diagram tulang ikan dengan orientasi kiri ke kanan. Kotak efek di kanan memuat pernyataan akibat, tulang punggung horizontal, enam cabang berselang-seling di atas dan di bawah, dan 24 ranting.
+Gambar 3 adalah diagram tulang ikan dengan orientasi kiri ke kanan. Kotak efek di kanan memuat pernyataan akibat, tulang punggung horizontal, enam cabang berselang-seling di atas dan di bawah, dan 24 ranting.
 
 **Kotak efek:** "Kegagalan BHA pada operasi pengeboran yang datang tanpa peringatan dini".
 
@@ -524,6 +599,24 @@ Bab II memuat enam alat analisis dengan satu efek yang sama: kegagalan BHA yang 
 
 VSM memetakan aliran nilai penanganan satu kegagalan BHA, dari persiapan tool di pangkalan sampai pengeboran berlanjut. Kronologi kejadian bersama yang menuntut artefak timeline terpenuhi oleh tabel waktu proses pada 2.1.2 dan OPC pada 2.3. Satuan analisisnya satu kejadian kegagalan, dan setiap tahap dibedakan menjadi tahap yang menambah kemajuan sumur dan tahap yang menunggu.
 
+**Gambar 4. Aliran Nilai Siklus Penanganan Kegagalan BHA**
+
+```mermaid
+flowchart LR
+  A["Servis dan uji fungsi<br/>di fasilitas"] --> B["Pengiriman ke rig<br/>tunduk jadwal dan cuaca"]
+  B --> C["Run di dasar sumur"]
+  C --> D{"Kegagalan BHA?"}
+  D -- tidak --> C
+  D -- ya --> E["Deteksi kegagalan<br/>2 sampai 3 jam"]
+  E --> F["POOH<br/>7 sampai 11 jam"]
+  F --> G["Lay down dan make-up<br/>4 sampai 8 jam"]
+  G --> H["Uji fungsi<br/>2 jam"]
+  H --> I["RIH dan reaming<br/>9 sampai 12 jam"]
+  I --> C
+  E -.-> J["Siklus pemulihan mengalikan<br/>spread cost per jam<br/>1.875 sampai 20.000 USD<br/>tanpa kemajuan sumur"]
+  I -.-> J
+```
+
 ### 2.1.1 Aliran nilai proses penanganan kegagalan BHA
 
 | Tahap | Aktor | Keluaran | Waktu yang tercatat |
@@ -559,6 +652,19 @@ MIFC memetakan dua alur yang berjalan bersamaan pada satu kegagalan BHA: alur fi
 
 Tool bergerak dari bengkel servis ke pangkalan, dari pangkalan ke rig melalui jalur darat, kapal, atau helikopter, dari rig ke dasar sumur saat run, dan kembali ke permukaan saat kegagalan atau saat akhir run. Tool rusak berlanjut ke pengiriman balik, inspeksi, perbaikan, lalu kembali ke stok. Setiap perpindahan menanggung waktu tunggu yang bergantung pada jadwal transportasi dan cuaca.
 
+**Gambar 5. Alur Material Tool pada Satu Siklus**
+
+```mermaid
+flowchart TD
+  M1["Bengkel servis<br/>perbaikan dan uji"] --> M2["Pangkalan<br/>dan stok tool"]
+  M2 --> M3["Transportasi<br/>darat, kapal, helikopter"]
+  M3 --> M4["Rig<br/>lantai bor"]
+  M4 --> M5["Dasar sumur"]
+  M5 -- "kegagalan atau akhir run" --> M6["Kembali<br/>ke permukaan"]
+  M6 --> M7["Pengiriman balik,<br/>inspeksi, perbaikan"]
+  M7 --> M2
+```
+
 ### 2.2.2 Alur informasi
 
 | Dokumen | Informasi yang dibawa | Aliran |
@@ -569,6 +675,18 @@ Tool bergerak dari bengkel servis ke pangkalan, dari pangkalan ke rig melalui ja
 | First Alert dan Equipment Failure Report | Kejadian awal kegagalan, komponen yang rusak | Dari lokasi ke bengkel servis, per kejadian |
 | Repair order dan catatan perbaikan | Temuan inspeksi, suku cadang yang diganti, keputusan scrap | Dari bengkel ke sistem catatan aset |
 | Invoice dan job ticket | Tarif layanan, mobilisasi, alat pengganti, biaya perbaikan | Dari penyedia layanan ke klien, per periode |
+
+**Gambar 6. Alur Informasi Kegagalan dan Putusnya Umpan Balik**
+
+```mermaid
+flowchart TD
+  I1["Laporan run dan BHA tally<br/>per run"] --> I2["Laporan harian<br/>kejadian dan pihak penanggung"]
+  I2 --> I3["Laporan interupsi layanan<br/>pada laporan akhir sumur"]
+  I3 --> I4["Perbaikan tanpa analisis<br/>penyebab yang baku"]
+  I1 -.->|"informasi kondisi komponen<br/>tidak terekam"| I5["Keputusan run berikutnya<br/>tanpa ukuran kondisi"]
+  I5 --> I1
+  I4 -.->|"mekanisme kerusakan<br/>berulang"| I5
+```
 
 ### 2.2.3 Temuan putusnya alur informasi
 
@@ -604,6 +722,19 @@ OPC memecah siklus pemulihan menjadi langkah operasi, inspeksi, dan transportasi
 | Turun kembali (RIH) | Operasi | 9 jam | Sampai dasar sumur |
 | Reaming, sirkulasi, pemulihan parameter | Operasi | 3 jam | Kembali ke kondisi mengebor |
 | Total | | 36 jam | Asumsi skenario |
+
+**Gambar 7. Operation Process Chart Siklus Pemulihan**
+
+```mermaid
+flowchart LR
+  O1(("mulai")) --- O2["O Diagnosis<br/>2 sampai 3 jam"]
+  O2 --- O3["O POOH<br/>7 sampai 11 jam"]
+  O3 --- O4["O Lay down<br/>dan make-up<br/>4 sampai 8 jam"]
+  O4 --- O5{{"I Uji fungsi<br/>2 jam"}}
+  O5 --- O6["O RIH<br/>9 sampai 12 jam"]
+  O6 --- O7["O Reaming dan<br/>pemulihan parameter"]
+  O7 --- O8(("pengeboran<br/>berlanjut"))
+```
 
 Dua temuan OPC. Pertama, pada kedua siklus tidak ada langkah inspeksi kondisi sebelum run yang diturunkan dari catatan umur komponen, sehingga siklus tidak mengandung pengendali sebelum kegagalan, hanya pengendali setelah kegagalan. Kedua, langkah dengan durasi terbesar adalah penarikan dan turun kembali, yang seluruhnya mengalikan spread cost per jam, sehingga setiap jam pemulihan yang bertambah dibayar pada tarif tertinggi siklus.
 
@@ -677,6 +808,34 @@ FTA menjalankan satu pohon dengan satu top event dan kedalaman seragam tiga ting
 | 3 | BE11 | Pengiriman reaktif setelah kerusakan | Kejadian dasar |
 | 3 | BE12 | Jalur pasokan bergantung cuaca | Kejadian dasar |
 
+**Gambar 8. Fault Tree Analysis Kegagalan BHA Tanpa Peringatan Dini**
+
+```mermaid
+flowchart TD
+  T["TOP EVENT: kegagalan BHA<br/>menghentikan pengeboran<br/>tanpa peringatan dini"]
+  T --> ORA{"OR"}
+  ORA --> G1["G1 akumulasi kerusakan<br/>tidak dikelola"]
+  ORA --> G2["G2 kesiapan sebelum run<br/>tidak terjamin"]
+  ORA --> G3["G3 pengendalian deteksi<br/>tidak bekerja"]
+  ORA --> G4["G4 pemulihan<br/>memperbesar kerugian"]
+  G1 --> OR1{"OR"}
+  OR1 --> BE1["BE1 kelelahan dan keausan<br/>tidak tercatat"]
+  OR1 --> BE2["BE2 sisa umur<br/>tidak diukur"]
+  OR1 --> BE3["BE3 analisis kegagalan<br/>tidak baku"]
+  G2 --> OR2{"OR"}
+  OR2 --> BE4["BE4 cacat laten<br/>lolos uji fungsi"]
+  OR2 --> BE5["BE5 kerusakan penanganan<br/>dan penyimpanan"]
+  OR2 --> BE6["BE6 variasi mutu<br/>antarlot"]
+  G3 --> OR3{"OR"}
+  OR3 --> BE7["BE7 gejala tidak diterjemahkan<br/>jadi peringatan"]
+  OR3 --> BE8["BE8 keputusan menunggu<br/>kegagalan"]
+  OR3 --> BE9["BE9 proteksi mandiri<br/>tidak mencakup mode"]
+  G4 --> OR4{"OR"}
+  OR4 --> BE10["BE10 stok tidak menurut<br/>kekritisan"]
+  OR4 --> BE11["BE11 pengiriman<br/>reaktif"]
+  OR4 --> BE12["BE12 jalur bergantung<br/>cuaca"]
+```
+
 Setiap gerbang antara memakai OR, karena setiap kejadian dasarnya mampu menghadirkan top event sendirian, tanpa perlu gabungan dengan kejadian lain pada gerbang yang sama. Kedalaman tiga tingkat dipilih agar setiap cabang dapat dibandingkan antar-cabang, dan tidak ada cabang yang diperdalam tanpa kanal bukti baru.
 
 ### 2.5.2 Hitungan pohon dan minimal cut set
@@ -716,6 +875,17 @@ Analisis barrier menjalankan IEC 62740:2015 bagian Annex B.2 pada kasus ini: men
 | B4 | Keputusan driller | Keputusan menarik atau melanjutkan diambil atas dasar ukuran | lemah | Keputusan diambil tanpa ukuran kondisi, hanya atas pengalaman dan tekanan waktu |
 | B5 | Kesiapan pemulihan | Pengganti tersedia sesuai kekritisan sebelum dibutuhkan | lemah | Stok tidak ditempatkan menurut kekritisan dan pengiriman reaktif, sehingga hentian memanjang |
 | B6 | Loop pembelajaran | Penyebab kegagalan kembali ke prosedur, desain, dan pemasok | lemah | Perbaikan tanpa analisis penyebab baku, sehingga mekanisme yang sama berulang |
+
+**Gambar 9. Status Enam Barrier pada Kasus Kegagalan BHA**
+
+```mermaid
+flowchart LR
+  B1["B1 desain dan<br/>jendela parameter<br/>LEMAH"] --> B3["B3 penerjemahan gejala<br/>menjadi peringatan<br/>HILANG"]
+  B2["B2 proteksi mandiri<br/>alat LEMAH"] --> B3
+  B3 --> B4["B4 keputusan driller<br/>LEMAH"]
+  B3 --> B5["B5 kesiapan pemulihan<br/>LEMAH"]
+  B6["B6 loop pembelajaran<br/>LEMAH"] --> B3
+```
 
 Satu barrier berstatus hilang, yaitu B3, dan lima barrier berstatus lemah dengan penyebab yang dapat dibaca pada kolom bukti. Status hilang dinyatakan berbeda dari gagal, karena B3 tidak pernah dibangun sebagai kendali pada kasus ini, bukan dibangun lalu dilanggar.
 
