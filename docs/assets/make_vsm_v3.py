@@ -246,8 +246,7 @@ def gambar():
             ha="left", va="center")
 
     ax.text(3.35, 0.75,
-            "Besaran yang tidak tercatat pada kejadian ini tidak dimuat pada kotak data, yaitu waktu ganti (C/O) dan uptime; "
-            "uptime, dan cacah operator per langkah.",
+            "Besaran yang tidak tercatat pada kejadian ini tidak dimuat pada kotak data: waktu ganti (C/O), uptime, dan cacah operator per langkah.",
             fontsize=6.6, color=ABU, ha="left", va="center")
 
     temuan = audit_tata(ax, fig)
