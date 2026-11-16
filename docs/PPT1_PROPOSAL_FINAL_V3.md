@@ -522,7 +522,7 @@ Bab II memuat enam alat analisis dengan satu efek yang sama: kegagalan BHA yang 
 
 ## 2.1 Value Stream Mapping (VSM)
 
-VSM memetakan aliran nilai penanganan satu kegagalan BHA, dari persiapan tool di pangkalan sampai pengeboran berlanjut. Satuan analisisnya satu kejadian kegagalan, dan setiap tahap dibedakan menjadi tahap yang menambah kemajuan sumur dan tahap yang menunggu.
+VSM memetakan aliran nilai penanganan satu kegagalan BHA, dari persiapan tool di pangkalan sampai pengeboran berlanjut. Kronologi kejadian bersama yang menuntut artefak timeline terpenuhi oleh tabel waktu proses pada 2.1.2 dan OPC pada 2.3. Satuan analisisnya satu kejadian kegagalan, dan setiap tahap dibedakan menjadi tahap yang menambah kemajuan sumur dan tahap yang menunggu.
 
 ### 2.1.1 Aliran nilai proses penanganan kegagalan BHA
 
@@ -753,7 +753,7 @@ Akar A menerangkan mengapa hentian lama, mengapa kerugian menumpuk, dan mengapa 
 | Barrier analysis | Kendali mana yang hilang atau lemah | Status enam barrier | Mencari sebab fisik |
 | Analisis keputusan berbobot | Dari tindakan yang mungkin, mana yang lebih dulu | Peringkat alternatif | Semua pertanyaan di atas, dan milik Bab III |
 
-Batas tersebut menjaga agar tiap alat menjawab pertanyaannya sendiri. Analisis keputusan berbobot tidak dipakai pada bab ini, karena pertanyaannya tentang pemilihan, dan pemilihan berada di Bab III.
+Batas tersebut menjaga agar tiap alat menjawab pertanyaannya sendiri. Penelusuran mengapa per sudut kajian dipenuhi oleh fishbone dan 5W1H pada 1.2, sehingga pohon mengapa terpisah tidak dibuat lagi. Analisis keputusan berbobot tidak dipakai pada bab ini, karena pertanyaannya tentang pemilihan, dan pemilihan berada di Bab III.
 
 ---
 
