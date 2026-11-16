@@ -37,6 +37,7 @@ KELAS = {
               r"tidak dapat menyimpang|sesuai ketentuan|BoK|terpenuhi oleh|"
               r"menjadi karangan|Ketentuan Gambar|Spesifikasi Gambar|"
               r"Di luar batas \||artefak timeline",
+    "bukan":  r"\bbukan\b|berbeda dari kendali",
 }
 
 BASELINE = pathlib.Path(__file__).with_name("gaya_baseline.json")

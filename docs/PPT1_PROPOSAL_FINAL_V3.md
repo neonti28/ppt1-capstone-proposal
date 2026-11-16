@@ -52,7 +52,7 @@ Alur operasi berjalan enam tahap. Pertama, tool diservis dan diuji fungsi di fas
 | Kegagalan dan penarikan | Kru rig | Laporan harian bagian kejadian tak terjadwal | Waktu mulai dan selesai, jenis kejadian, pihak penanggung, kedalaman gagal |
 | Pemulihan dan pelaporan | Penyedia layanan | Laporan akhir sumur, laporan interupsi layanan | Penyebab kegagalan, dampak operasi, jam rig yang hilang |
 
-Alur data pada tabel itu memperlihatkan satu keadaan yang menjadi dasar seluruh bab: informasi kondisi komponen tidak pernah tercatat sebagai deret waktu per nomor seri. Yang tercatat adalah kejadian setelah kerusakan, bukan keadaan komponen yang menuju kerusakan.
+Alur data pada tabel itu memperlihatkan satu keadaan yang menjadi dasar seluruh bab: informasi kondisi komponen tidak pernah tercatat sebagai deret waktu per nomor seri. Yang terekam adalah kejadian setelah kerusakan terjadi.
 
 **Gambar 1. Alur Operasi Penanganan Satu Siklus Kegagalan BHA**
 
@@ -184,7 +184,7 @@ Masing-masing pertanyaan menuntut rancangan, dan jawabannya diuji terhadap empat
 
 ### 1.1.7 Batas Data
 
-Bahan kajian terdiri atas dua kelompok yang dipakai untuk dua keperluan berbeda. Dokumen operasi internal memasok struktur kejadian, durasi hentian, pihak penanggung, dan komponen biaya. Dataset publik Equinor Volve memasok besaran waktu interupsi pengeboran pada sepuluh wellbore, dan dipakai untuk menggambarkan sebaran durasi, bukan untuk menamai komponen yang rusak.
+Bahan kajian terdiri atas dua kelompok yang dipakai untuk dua keperluan berbeda. Dokumen operasi internal memasok struktur kejadian, durasi hentian, pihak penanggung, dan komponen biaya. Dataset publik Equinor Volve memasok sebaran durasi interupsi pengeboran pada sepuluh wellbore.
 
 Tiga keterbatasan bahan menyertai analisis. Dokumen kasus tidak memuat catatan kondisi komponen sebagai deret waktu, sehingga hubungan antara beban operasi dan kerusakan tidak dapat dihitung per komponen. Laju kegagalan komponen per nomor seri tidak tersedia, sehingga tidak ada angka peluang pada analisis pohon kegagalan. Tarif spread cost dan durasi pemulihan pada Bab II berasal dari skenario yang dibangun dari dokumen kasus, dan nilainya diganti tarif kontrak aktual pada penerapan.
 
@@ -317,7 +317,7 @@ Dua pembacaan menyertai tabel itu. Pertama, malfungsi tool tidak selalu menimbul
 
 ### 1.2.3 Fishbone 6M
 
-Fishbone disusun atas enam cabang 6M dengan empat ranting pada setiap cabang, sehingga jumlah ranting seluruhnya 24. Setiap ranting menyatakan sebab yang menuju efek, bukan keadaan alat yang sedang dirancang.
+Fishbone disusun atas enam cabang 6M dengan empat ranting pada setiap cabang, sehingga jumlah ranting seluruhnya 24. Setiap ranting menyatakan sebab yang menuju efek kegagalan di dasar sumur.
 
 **Kotak efek:** "Kegagalan BHA pada operasi pengeboran yang datang tanpa peringatan dini, sehingga pengeboran berhenti dan menimbulkan kerugian waktu, biaya, energi, dan keselamatan."
 
@@ -452,7 +452,7 @@ Tim terdiri atas tiga anggota dengan penamaan disamarkan. Pembagian dilakukan pe
 
 | Anggota | Tanggung jawab utama | Titik kritis | Bukti penyelesaian |
 |---|---|---|---|
-| A | Bab I: latar belakang sistem, analisis akar penyebab 1.2; sudut kajian fasilitas dan energi | Rumusan masalah dan efek fishbone menyatakan kegagalan BHA, bukan keadaan alat yang sedang dirancang | Fishbone 6M 24 ranting dan 5W1H terbit pada 1.2 dengan tiga akar penyebab berkode |
+| A | Bab I: latar belakang sistem, analisis akar penyebab 1.2; sudut kajian fasilitas dan energi | Rumusan masalah dan efek fishbone menyatakan kegagalan BHA pada operasi pengeboran | Fishbone 6M 24 ranting dan 5W1H terbit pada 1.2 dengan tiga akar penyebab berkode |
 | B | Bab II: VSM, MIFC, OPC, FMECA, FTA, barrier; sudut kajian mutu dan keandalan | Setiap angka memiliki baris sumber dan status bukti | Tabel cara memperoleh angka pada 1.1.8 dan 1.2.2, hitungan pohon pada 2.5.2 |
 | C | Bab III dan Bab IV: alternatif, kriteria, pemilihan, kesimpulan; sudut kajian rantai pasok | Pemenang pemilihan bertahan pada lebih dari satu skenario bobot | Tabel alternatif 12 butir beserta pemetaannya ke tiga akar penyebab |
 
@@ -490,7 +490,7 @@ Tarif yang dipakai pada 1.1.9 dan Bab II berupa angka acuan awal: tarif pengebor
 
 ### 1.4.4 Keterbatasan validitas
 
-Lima keterbatasan menyertai hasil kajian. Pertama, enam dari dua belas minimal cut set pada 2.5.3 belum memiliki prekursor yang terekam, sehingga pohon kegagalan menyatakan struktur sebab dan kebutuhan pencatatan, bukan peluang kejadian. Kedua, empat hipotesis pada 1.2.7 belum diuji dan membawa uji pembedanya masing-masing. Ketiga, sebagian durasi dan seluruh tarif spread cost pada Bab II berupa skenario, sehingga kerugian langsung berstatus turunan dari skenario, bukan pengukuran proyek. Keempat, dataset publik memasok sebaran durasi interupsi, tetapi tidak memuat catatan kondisi komponen, sehingga hubungan beban operasi dan kerusakan tidak dapat dihitung per komponen. Kelima, penilaian pada tabel FMECA memakai rubrik dengan dasar per baris, dan nilainya diperbarui bila bahan baru tersedia.
+Lima keterbatasan menyertai hasil kajian. Pertama, enam dari dua belas minimal cut set pada 2.5.3 belum memiliki prekursor yang terekam, sehingga pohon kegagalan menyatakan struktur sebab dan kebutuhan pencatatan. Kedua, empat hipotesis pada 1.2.7 belum diuji dan membawa uji pembedanya masing-masing. Ketiga, sebagian durasi dan seluruh tarif spread cost pada Bab II berupa skenario, sehingga kerugian langsung berstatus turunan dari skenario. Keempat, dataset publik memasok sebaran durasi interupsi, tetapi tidak memuat catatan kondisi komponen, sehingga hubungan beban operasi dan kerusakan tidak dapat dihitung per komponen. Kelima, penilaian pada tabel FMECA memakai rubrik dengan dasar per baris, dan nilainya diperbarui bila bahan baru tersedia.
 
 | Jenis batasan | Isi | Letak pembahasan |
 |---|---|---|
@@ -835,7 +835,7 @@ flowchart LR
   B6["B6 loop pembelajaran<br/>LEMAH"] --> B3
 ```
 
-Satu barrier berstatus hilang, yaitu B3, dan lima barrier berstatus lemah dengan penyebab yang dapat dibaca pada kolom bukti. Status hilang berarti kendali tidak pernah dibangun pada kasus ini, berbeda dari kendali yang dibangun lalu dilanggar.
+Satu barrier berstatus hilang, yaitu B3, dan lima barrier berstatus lemah dengan penyebab yang dapat dibaca pada kolom bukti. Status hilang berarti kendali tidak pernah dibangun pada kasus ini.
 
 Pengisi B3 dicatat sebagai kandidat solusi pada Bab III; salah satu kandidatnya, pada sudut mutu dan keandalan, adalah pemeliharaan prediktif.
 
